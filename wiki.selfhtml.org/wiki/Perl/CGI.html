@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/CGI by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/CGI – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/CGI","wgTitle":"Perl/CGI","wgCurRevisionId":20879,"wgArticleId":3025,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/CGI","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html4strict {line-height: normal;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html4strict.source-html4strict .de1, .html4strict.source-html4strict .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html4strict.source-html4strict  {font-family:monospace;}
+.html4strict.source-html4strict .imp {font-weight: bold; color: red;}
+.html4strict.source-html4strict li, .html4strict.source-html4strict .li1 {font-weight: normal; vertical-align:top;}
+.html4strict.source-html4strict .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html4strict.source-html4strict .li2 {font-weight: bold; vertical-align:top;}
+.html4strict.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict.source-html4strict .kw3 {color: #000066;}
+.html4strict.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict.source-html4strict .br0 {color: #66cc66;}
+.html4strict.source-html4strict .sy0 {color: #66cc66;}
+.html4strict.source-html4strict .st0 {color: #ff0000;}
+.html4strict.source-html4strict .nu0 {color: #cc66cc;}
+.html4strict.source-html4strict .sc-2 {color: #404040;}
+.html4strict.source-html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict.source-html4strict .sc0 {color: #00bbdd;}
+.html4strict.source-html4strict .sc1 {color: #ddbb00;}
+.html4strict.source-html4strict .sc2 {color: #009900;}
+.html4strict.source-html4strict .ln-xtra, .html4strict.source-html4strict li.ln-xtra, .html4strict.source-html4strict div.ln-xtra {background-color: #ffc;}
+.html4strict.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/CGI" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/CGI&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_CGI skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/CGI</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><ul><li><a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">CGI-Umgebungsvariablen</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Formularverarbeitung" title="Perl/CGI/Formularverarbeitung">CGI-Formularverarbeitung</a>
+</li></ul>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#HTTP-Header_und_Inhalte_senden"><span class="tocnumber">1</span> <span class="toctext">HTTP-Header und Inhalte senden</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Inhalte_senden_.28alternative_Form.29"><span class="tocnumber">1.1</span> <span class="toctext">Inhalte senden (alternative Form)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#CGI-typische_L.C3.B6sungen_in_Perl"><span class="tocnumber">2</span> <span class="toctext">CGI-typische Lösungen in Perl</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Counter_.28Zugriffsz.C3.A4hler.29"><span class="tocnumber">2.1</span> <span class="toctext">Counter (Zugriffszähler)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Form-Mailer"><span class="tocnumber">2.2</span> <span class="toctext">Form-Mailer</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#G.C3.A4stebuch"><span class="tocnumber">2.3</span> <span class="toctext">Gästebuch</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Datenbank-Front-End"><span class="tocnumber">2.4</span> <span class="toctext">Datenbank-Front-End</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: HTTP-Header und Inhalte senden">Bearbeiten</a>]</span> <span class="mw-headline" id="HTTP-Header_und_Inhalte_senden"> HTTP-Header und Inhalte senden </span></h2>
+<p>Ein CGI-Script wird vom Webserver aufgerufen, sobald ihm der anfragende Browser eine Aufforderung dazu etwa durch das Abschicken eines Formulars signalisiert. Dazu kommuniziert zunächst der Browser mit dem Webserver über das HTTP-Protokoll und fordert das Script an. Bei dieser Anforderung kann der Browser auch gleich Daten versenden, die für das CGI-Script gedacht sind, z.B. Daten aus einem ausgefüllten HTML-Formular. Der Webserver entscheidet, ob es sich bei der vom Browser angeforderten Datei um ein CGI-Script handelt und lässt das Script vom Perl-Interpreter ausführen. Während dies geschieht, "wartet" der Browser jedoch auf Daten. Denn wenn der Browser vom Server ein CGI-Script anfordert, ist das für ihn nichts anderes, als ob er eine statische HTML-Datei anfordern würde. Er wartet auf Daten, die der Server sendet und die er (der Browser) als nächstes anzeigen soll. Deshalb muss der Script-Interpreter unmittelbar bei der Auswertung eines CGI-Scripts irgendetwas an den Webserver schicken, damit der es an den wartenden Browser weitersenden kann. Die zu sendenden Daten müssen dabei wieder über das HTTP-Protokoll verschickt werden. Das HTTP-Protokoll verlangt nun für jeden Datenversand einen so genannten HTTP-Header. Das ist eine Art Vorab-Datenpaket mit Informationen zu den nachfolgenden Daten. Damit ein Browser die Daten korrekt interpretieren kann, muss das Script also zunächst die Sendung eines gültigen HTTP-Headers veranlassen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Text</span> <span class="sy0">=</span> <span class="st0">&quot;Hallo Welt&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Hallo Welt&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h1&gt;$Text&lt;/h1&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Für den HTML-Code, den ein Perl-Script als CGI-Script ausgeben lassen soll, ist die Perl-Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#print" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">print</a> geeignet. Zum "Senden" gibt das Perl-Script einfach mit der <code>print</code>-Funktion Daten aus. Die erste dieser <code>print</code>-Anweisungen, die ein CGI-Script enthalten muss, ist jedoch diejenige für den HTTP-Header. Die einfachste Form eines HTTP-Headers besteht schlicht aus dem Befehl <code>Content-type:</code> und der Angabe eines <a href="http://wiki.selfhtml.org/wiki/Referenz:MIME-Typen" title="Referenz:MIME-Typen">MIME-Typs</a> für die nachfolgenden Daten. Da das CGI-Script HTML-Code an den Browser senden will, benutzt es den MIME-Typ für HTML, nämlich <code>text/html</code>. Weiterhin muss ein HTTP-Header <b>zwei</b> abschließende Steuerzeichen für Zeilenumbruch enthalten. In Perl lässt sich ein solcher Zeilenumbruch durch die Zeichenfolge <code>\n</code> erzeugen. Durch die Anweisung:<br /> <code>print "Content-type: text/html\n\n";</code><br /> wird also ein vollständiger HTTP-Header erzeugt, der dem Browser signalisiert, dass Daten vom Typ HTML folgen. Für eine vollständige HTTP-Kommunikation sind freilich noch mehr HTTP-Headerzeilen notwendig; die fehlenden Angaben werden dann von der <a href="http://wiki.selfhtml.org/wiki/Glossar:CGI" title="Glossar:CGI">CGI-Schnittstelle</a> bzw. vom <a href="http://wiki.selfhtml.org/wiki/Webserver" title="Webserver">Webserver</a> ergänzt.
+<p>Anschließend wird mit einzelnen <code>print</code>-Anweisungen eine vollständige kleine HTML-Datei an den Browser gesendet. Bei den einzelnen <code>print</code>-Anweisungen ist am Ende übrigens immer ein Zeilenumbruch-Zeichen <code>\n</code> notiert. Dies hat eher kosmetische Gründe. Dadurch wird im erzeugten HTML-Quelltext jeweils eine neue Zeile begonnen. Wenn diese Steuerzeichen fehlen würden, dann würde Perl den gesamten HTML-Code in eine Textzeile schreiben, und falls Sie sich diesen Quelltext in Ihrem Browser anschauen möchten, sehen Sie einen absatzlosen Brei aus Buchstaben und Zahlen, der sehr schwer lesbar ist. Bei der Variante oben wird der HTML-Quelltext dagegen nach jeder <code>print</code>-Anweisung umbrochen.
+</p>
+Innerhalb der <code>h1</code>-Überschrift wird im obigen Beispiel eine Variable ausgegeben, nämlich der <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalar</a> <code>$Text</code>. Sie können innerhalb von <code>print</code>-Ausgaben einfach solche Variablen einfügen. An der entsprechenden Stelle wird dann der aktuelle Wert der Variablen ausgegeben. Im obigen Beispiel wird dem Skalar <code>$Text</code> weiter oben im Script der Wert <code>Hallo Welt</code> zugewiesen. Dieser Wert wird an der Stelle, wo <code>$Text</code> im auszugebenden HTML-Code notiert ist, eingesetzt.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Inhalte senden (alternative Form)">Bearbeiten</a>]</span> <span class="mw-headline" id="Inhalte_senden_.28alternative_Form.29"> Inhalte senden (alternative Form) </span></h3>
+<p>Die vielen einzelnen <code>print</code>-Anweisungen sind bei längeren Ausgaben lästig. Es gibt deshalb auch eine elegantere Form der Ausgabe größerer HTML-Code-Abschnitte.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Einleitung</span> <span class="sy0">=</span> <span class="st0">&quot;Es geht auch so!&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;$Einleitung&lt;/h1&gt;
+&lt;p&gt;Der Vorteil bei dieser Form ist, dass man viel HTML-Code
+auf einmal erzeugen kann, ohne einen einzigen weiteren print-Befehl
+in Perl zu notieren. Praktisch beispielsweise auch zum Ausgeben
+von JavaScript:&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+document.write(&quot;&lt;p&gt;Und die Adresse dieser HTML-Datenquelle lautet: &quot;);
+document.write(document.URL+&quot;&lt;\/p&gt;&quot;);
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script sendet zunächst mit einer einzelnen <code>print</code>-Anweisung den HTTP-Header. Anschließend wird jedoch eine elegantere Methode benutzt, um größere Mengen HTML-Code zu senden. Dabei wird zunächst die Anweisung <code>print&#160;&lt;&lt;"ENDE";</code> notiert. <code>ENDE</code> ist ein frei vergebbarer Name für einen <b>Endbegrenzer</b>. Ganz unten im Script ist dann noch einmal das Wort <code>ENDE</code> notiert, und zwar alleinstehend in einer Zeile. Alles, was zwischen der einführenden Anweisung und dem alleinstehenden Endbegrenzer steht, wird so wie es da steht an den Browser gesendet. Sinnvoll ist diese Form der Notation, wenn längere Abschnitte HTML-Code gesendet werden sollen. Der HTML-Code kann alles mögliche enthalten, zum Beispiel auch JavaScript-Bereiche, wie im Beispiel gezeigt, aber auch Perl-Variablen! Diese werden interpoliert, d.h. bei der Ausgabe durch ihren Wert ersetzt - allerdings nur, weil <code>print&#160;&lt;&lt;"ENDE";</code> mit doppelten Anführungszeichen notiert wurde. Erlaubt ist auch die Notation mit einfachen Anführungszeichen, also <code>print&#160;&lt;&lt;'ENDE';</code>. In diesem Fall werden keine Perl-Variablen interpoliert (siehe auch: <a href="http://wiki.selfhtml.org/wiki/Perl/Zeichenketten#Regeln_beim_Notieren_von_Zeichenketten" title="Perl/Zeichenketten">Regeln beim Notieren von Zeichenketten</a>). Eine weitere Möglichkeit besteht darin, die Anführungszeichen ganz wegzulassen, also <code>print&#160;&lt;&lt;ENDE;</code>. In diesem Fall gelten dieselben Regeln wie bei der Notation mit doppelten Anführungszeichen.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Hinter dem Endbegrenzer muss in Ihrem Script auf jeden Fall ein Zeilenumbruch notiert werden, gerade auch dann, wenn es sich um die letzte Zeile im Script handelt.</div>
+<p>Eine weitere oft genutzte Möglichkeit, HTTP-Header und HTML-Code an den Browser zu senden, bietet das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul" title="Perl/Module/CGI-Modul">CGI-Modul</a> an. Dieses Modul stellt eigene Methoden bereit, um (X)HTML-Ausgaben zu erzeugen. Zum Senden an den Browser wird aber auch dort die <code>print</code>-Funktion verwendet.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: CGI-typische Lösungen in Perl">Bearbeiten</a>]</span> <span class="mw-headline" id="CGI-typische_L.C3.B6sungen_in_Perl"> CGI-typische Lösungen in Perl </span></h2>
+<p>Perl wurde, anders als etwa <a href="http://wiki.selfhtml.org/wiki/PHP" title="PHP">PHP</a> oder ASP, nicht speziell für Web-Anwendungen konzipiert, sondern als eine offene Programmiersprache für scriptbasierte Lösungen aller Art. Es hat jedoch Eigenschaften, die es als Sprache für CGI-Scripts qualifizieren: dazu gehören die mächtigen Funktionen für Zeichenkettenverarbeitung und Datei-Handling, aber auch die vielen Unix-spezifischen Funktionen, von denen auch in Perl geschriebene CGI-Scripts, die auf typischen Web-Server-Umgebungen wie Linux und <a href="http://wiki.selfhtml.org/wiki/Webserver/Apache" title="Webserver/Apache">Apache</a> zum Einsatz kommen, profitieren können. Durch das Modulkonzept von Perl gibt es mittlerweile außerdem Module, die sich speziell für die Verwendung in CGI-Scripts anbieten - allen voran das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul" title="Perl/Module/CGI-Modul">CGI-Modul</a>, das bei jeder Standard-Installation von Perl zur Verfügung steht. Mit den Möglichkeiten dieses Moduls sollten Sie sich auf jeden Fall näher befassen, wenn Sie CGI-Scripts schreiben.
+</p><p>Wenn Sie noch unsicher sind in Perl und sich nicht in der Lage sehen, eine CGI-Anwendung von Grund auf nach eigenen Vorstellungen zu programmieren, dann können Sie auf zahlreiche Scripts zurückgreifen, die im Web verfügbar sind. Es gibt viele Anbieter, die Freeware-Scripts oder Shareware-Scripts zur Verfügung stellen. Um ein solches Script auf Ihrem Server oder in Ihrer lokalen HTTP-Umgebung zum Laufen zu bekommen und die Anwendung so zu gestalten, dass sie Ihren Vorstellungen entspricht, müssen Sie sich allerdings mit dem Quelltext des Scripts auseinandersetzen und die angewendete Programmierlogik des fremden Script-Entwicklers nachvollziehen können. Wenn Sie Glück haben, ist das Script Ihrer Wahl sauber dokumentiert, und es ist nicht schwer, es für eigene Zwecke anzupassen. Häufig allerdings stoßen Sie in solchen Scriptarchiven auch auf völlig veraltete Angebote! Im Link-Verzeichnis des selfhtml-WIKI finden Sie eine Übersicht mit Anbietern fertiger CGI-Scripts in Perl und anderen Sprachen:
+</p><p><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Linkliste#CGI.2FPerl" title="SELFHTML:Linkliste">Perl/Links</a>
+</p><p>Im folgenden werden einige typische Anwendungsgebiete von CGI-Scripts angeschnitten. Es wird beschrieben, wie der prinzipielle Programmablauf eines entsprechenden Scripts aussieht, und welche Perl-Bestandteile dazu erforderlich sind. Die Beschreibungen enthalten Verweise zu den Stellen, an denen Sie weitere Details finden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Counter (Zugriffszähler)">Bearbeiten</a>]</span> <span class="mw-headline" id="Counter_.28Zugriffsz.C3.A4hler.29"> Counter (Zugriffszähler) </span></h3>
+<p>Ein Counter ist entweder grafisch oder textbasiert. Bei einem grafischen Counter wird das CGI-Script aus HTML heraus mittels eines <code>&lt;img&gt;</code>-Tags aufgerufen - Beispiel (HTML):
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;/cgi-bin/counter.pl&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Counter&quot;</span>&gt;</span></pre></div></div>
+<p>Bei einem textbasierten Counter geschieht der Aufruf meistens mit Hilfe von <a href="http://wiki.selfhtml.org/wiki/Webserver/Server_Side_Includes" title="Webserver/Server Side Includes" class="mw-redirect">Server Side Includes</a> - Beispiel (HTML):
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc-1">&lt;!--#exec cgi=&quot;/cgi-bin/counter.pl&quot;--&gt;</span></pre></div></div>
+<p>Das aufgerufene Script muss dann zuerst die Datei mit dem aktuellen Zählerstand auslesen, den Zählerstand um 1 erhöhen und den neuen Zählerstand wieder in die Datei zurückschreiben. Dafür gibt es in Perl die <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten</a>. Wenn es ein textbasierter Counter ist, kann das Script den Zählerstand z.B. mit einem HTTP-Header mit dem <a href="http://wiki.selfhtml.org/wiki/Referenz:MIME-Typen" title="Referenz:MIME-Typen">MIME-Typ</a> <code>text/html</code> ausgeben, der die Zahl an der Stelle der Server-Side-Include-Anweisung einfügt. Bei einem grafischen Counter muss das Script eine Grafik vom Typ GIF, PNG oder JPEG zurückgeben, da der Browser im <code>&lt;img&gt;</code>-Tag etwas Entsprechendes erwartet. PNG-Grafiken lassen sich dynamisch mit Perl beispielsweise mit dem <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung" title="Perl/Module/Einführung">CPAN-Modul</a> namens <code>GD</code> erzeugen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Form-Mailer">Bearbeiten</a>]</span> <span class="mw-headline" id="Form-Mailer"> Form-Mailer </span></h3>
+<p>Ein Form-Mailer löst das leidige <code>mailto</code>-Problem bei HTML-Formularen. Ein solches Script kann ein beliebiges HTML-Formular verarbeiten und sendet die Daten per E-Mail an einen vorgesehenen Empfänger, in der Regel den Anbieter des Web-Projekts. In HTML wird das Form-Mail-Script einfach als <code>action</code>-Attribut im HTML-Formular angegeben - Beispiel:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">form</span> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;/cgi-bin/formmail.pl&quot;</span> <span class="kw3">method</span><span class="sy0">=</span><span class="st0">&quot;post&quot;</span>&gt;</span></pre></div></div>
+<p>Das Script wird aufgerufen, wenn ein Anwender das Formular absendet. Das Script sollte die <a href="http://wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul#Formularverarbeitung" title="Perl/Module/CGI-Modul">Formularverarbeitung mit dem CGI-Modul</a> nutzen, um die übergebenen Formulardaten einzulesen. Anschließend muss es aus den Daten des Formulars eine E-Mail zusammenbauen. Dazu sind vor allem der <a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren#Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung" title="Perl/Operatoren">Operator für Zeichenkettenverknüpfung</a> und die <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten" title="Perl/Funktionen für Zeichenketten">Funktionen für Zeichenketten</a> von Bedeutung, ferner aber auch Wissen über den Aufbau einer E-Mail und darüber, wie eine E-Mail zu versenden ist. Die typische Anweisungsfolge dazu lautet:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">$Sendmail_Prog</span> <span class="sy0">=</span> <span class="st0">&quot;/usr/lib/sendmail&quot;</span><span class="sy0">;</span>
+<span class="kw3">open</span><span class="br0">&#40;</span>MAIL<span class="sy0">,</span><span class="st0">&quot;|$Sendmail_Prog -t&quot;</span><span class="br0">&#41;</span> <span class="kw1">or</span> <span class="kw3">die</span> <span class="st0">&quot;Mailprogramm konnte nicht gestartet werden<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> MAIL <span class="st0">&quot;To: $mailto<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> MAIL <span class="st0">&quot;Subject: $subject<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> MAIL <span class="st0">&quot;$mailtext<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>MAIL<span class="br0">&#41;</span> <span class="kw1">or</span> <span class="kw3">die</span> <span class="st0">&quot;Fehler beim E-Mail-Versand!&quot;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Wichtig ist bei Anwendung der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a>-Funktion, dass das Programm <code>sendmail</code>, das E-Mails versenden kann, auch tatsächlich verfügbar ist, und zwar unter dem angegebenen Pfad. Der Pfad im Beispiel und die Verfügbarkeit von <code>sendmail</code> beziehen sich auf typische Unix-Rechner. Fragen Sie Ihren Provider gegebenenfalls danach! Die E-Mail selbst wird dann, wie Sie dem Beispiel entnehmen können, mit <code>print</code>-Anweisungen in den bei <code>open</code> benannten Ein-/Ausgabekanal des <code>sendmail</code>-Programms geschrieben - im Beispiel der Kanal mit dem Namen <code>MAIL</code>. Wichtig ist, dass eine E-Mail eine erste Zeile mit <code>To:</code> beginnend und eine weitere mit <code>Subject:</code> beginnend enthält. Vor der Ausgabe des E-Mail-Textes, also der zuvor für die Ausgabe vorbereiteten Formulardaten, müssen zwei Steuerzeichen <code>\n\n</code> stehen, also eine Leerzeile. Die Art und Weise der Datenübergabe kann variieren. Schauen Sie auf jeden Fall in die Anleitungen und FAQs Ihrers Providers und ggf. in die Anleitung des E-Mail-Programms!
+</p><p>Neben dem E-Mail-Versand muss das Script natürlich auch noch eine <a href="#HTTP-Header_und_Inhalte_senden">CGI-notwendige</a> Ausgabe an den Browser senden. Bei einem Form-Mailer ist das sinnvollerweise eine Dank-Seite, die dem Anwender bestätigt, dass sein Formular verarbeitet wurde.
+</p><p><br />
+Im Online-Angebot von SELFHTML aktuell finden Sie einen <a rel="nofollow" class="external text" href="http://aktuell.de.selfhtml.org/tippstricks/cgiperl/form-mail/">Artikel: Einfacher Form-Mailer</a>, der ein vollständiges Beispiel eines Form-Mailers beschreibt.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Gästebuch">Bearbeiten</a>]</span> <span class="mw-headline" id="G.C3.A4stebuch"> Gästebuch </span></h3>
+<p>Es gibt mehrere Wege, ein Gästebuch zu programmieren. Einer besteht darin, die Gästebucheinträge in eine statische HTML-Datei schreiben zu lassen, die angezeigt wird, wenn der Anwender das Gästebuch aufruft. Die Datei könnte ein Formular enthalten, in das der Anwender seinen eigenen Eintrag schreiben kann, sowie die bereits vorhandenen Einträge. Das Script, das das Gästebuch verwaltet, würde dann aufgerufen, wenn der Anwender das Formular mit einem eigenen Eintrag absendet. Dazu ist im einleitenden <code>&lt;form&gt;</code>-Tag ein entsprechender Aufruf notiert - Beispiel:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">form</span> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;/cgi-bin/guestbook.pl&quot;</span> <span class="kw3">method</span><span class="sy0">=</span><span class="st0">&quot;post&quot;</span>&gt;</span></pre></div></div>
+<p>Das Script sollte die <a href="http://wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul#Formularverarbeitung" title="Perl/Module/CGI-Modul">Formularverarbeitung mit dem CGI-Modul</a> nutzen, um die übergebenen Formulardaten einzulesen. Angenommen, das Formular hat zwei Felder: eines für den Namen des Gästebuchschreibers (<code>name="Username"</code>), und eines für den Text (<code>name="Usertext"</code>). Dann wäre nach dem Einlesen mit dem CGI-Modul in Perl beispielsweise mit einem Konstrukt wie <code>$cgi-&gt;param($Username)</code> ein Zugriff auf den Inhalt des Feldes <code>Username</code> möglich.
+</p><p>Weiterhin muss das Script die HTML-Datei mit den bisherigen Einträgen einlesen. Mit der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a>-Funktion beispielsweise lässt sich die Datei dann öffnen und kann danach etwa in einen <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Array</a> eingelesen werden. Jedes Element des Arrays ist dann eine Zeile der HTML-Datei.
+</p><p>Damit das Script sich im eingelesenen HTML-Code zurechtfindet und weiß, wo es die neuen Daten einfügen muss, sollte die Datei an der betreffenden Stelle in einer eigenen Zeile eine "geheime Marke" enthalten, was mit einem HTML-Kommentar lösbar ist - Beispiel:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc-1">&lt;!-- NEU --&gt;</span></pre></div></div>
+<p>Es macht aber auch Sinn, wenn die HTML-Datei vor jedem vorhandenen Eintrag in einer eigenen Zeile noch eine interne Notiz für das Script bereithält. Auch das ist mit Kommentaren möglich. Beispiel eines Eintrags in der HTML-Datei:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc-1">&lt;!-- EINTRAG [Winfried Wachtelmann] [27.07.2001]--&gt;</span>
+<span class="sc2">&lt;<span class="kw2">table</span> <span class="kw3">border</span><span class="sy0">=</span><span class="st0">&quot;1&quot;</span>&gt;&lt;<span class="kw2">tr</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>von:<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;&lt;<span class="kw2">td</span>&gt;</span>Winfried Wachtelmann<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>am:<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;&lt;<span class="kw2">td</span>&gt;</span>27.07.2001<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;&lt;<span class="kw2">tr</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">colspan</span><span class="sy0">=</span><span class="st0">&quot;2&quot;</span>&gt;</span>Diese wunderbare Seite hat mein Leben ver<span class="sc1">&amp;auml;</span>ndert usw.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">table</span>&gt;</span></pre></div></div>
+<p>Das Script tut sich dann leichter mit eventuellem Suchen in der Datei. Um die Formulardaten, die das Script übergeben bekommen und eingelesen hat, einzufügen, muss es aus den Formulardaten erst einmal den für einen Gästebucheintrag üblichen HTML-Code zusammenbauen und die Formulardaten darin einfügen. Im Beispiel würde das Script also eine HTML-Tabelle zusammen- und in den dafür vorgesehenen Zellen die Werte aus den Formulardaten einbauen. Am sinnvollsten ist es, wenn das Script dazu einen Array deklariert und diesem für jede Zeile des HTML-Codes ein Element zuweist mit dem entsprechenden HTML-Code. Am Ende jedes Eintrags im Array sollte ein <code>\n</code> für "neue Zeile" stehen. Dazu benötigen Sie die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays#push" title="Perl/Listen bzw. Arrays">push</a> und den <a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren#Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung" title="Perl/Operatoren">Operator für Zeichenkettenverknüpfung</a> - Beispiel:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">@NeuerEintrag</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeuerEintrag</span><span class="sy0">,</span> <span class="st0">&quot;&lt;!-- EINTRAG [&quot;</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="re0">$Username</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;] [&quot;</span><span class="sy0">.</span><span class="re0">$Datum</span><span class="sy0">.</span><span class="st0">&quot;]--&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeuerEintrag</span><span class="sy0">,</span> <span class="st0">&quot;&lt;table border=<span class="es0">\&quot;</span>1<span class="es0">\&quot;</span>&gt;&lt;tr&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeuerEintrag</span><span class="sy0">,</span> <span class="st0">&quot;&lt;th&gt;von:&lt;/th&gt;&lt;td&gt;&quot;</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="re0">$Username</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;&lt;/td&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeuerEintrag</span><span class="sy0">,</span> <span class="st0">&quot;&lt;th&gt;am:&lt;/th&gt;&lt;td&gt;&quot;</span><span class="sy0">.</span><span class="re0">$Datum</span><span class="sy0">.</span><span class="st0">&quot;&lt;/td&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeuerEintrag</span><span class="sy0">,</span> <span class="st0">&quot;&lt;/tr&gt;&lt;tr&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeuerEintrag</span><span class="sy0">,</span> <span class="st0">&quot;&lt;td colspan=<span class="es0">\&quot;</span>2<span class="es0">\&quot;</span>&gt;&quot;</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="re0">$Usertext</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;&lt;/td&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeuerEintrag</span><span class="sy0">,</span> <span class="st0">&quot;&lt;/tr&gt;&lt;/table&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das in <code>$Datum</code> gespeicherte Tagesdatum muss das Script natürlich zuvor ermitteln. Dazu gibt es die <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit" title="Perl/Funktionen für Datum und Uhrzeit">Funktionen für Datum und Uhrzeit</a>.
+Nun muss das Script den neuen Eintrag einfach an der Stelle in der bisherigen Datei einfügen, wo mit <code>&lt;!--&#160;NEU&#160;--&gt;</code> die Marke zum Einfügen steht. Eine mögliche Variante ist es, einen neuen Array zu bauen, der aus den Zeilen der alten Datei und den Zeilen des neuen Eintrags besteht. Dazu kann das Script in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#foreach-Schleifen" title="Perl/Schleifen">foreach-Schleife</a> den Array mit den Zeilen der eingelesenen Datei abarbeiten und mit Hilfe eines <a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">regulären Ausdrucks</a> nach <code>/^&lt;!-- NEU --&gt;$/</code> suchen und an der betreffenden Stelle den Array mit dem neuen Eintrag einfügen. Der Code könnte etwa so aussehen:</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">@NeueZeilen</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Zeile</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="re0">$Zeile</span> <span class="br0">&#40;</span><span class="re0">@Zeilen</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>               <span class="co1"># @Zeilen = zuvor eingelesene Zeilen der Datei</span>
+  <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Zeile</span> <span class="sy0">=~</span> <span class="co2">/^&lt;!-- NEU --&gt;/</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>        <span class="co1"># Aha, Eintrag hier einfügen</span>
+    <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@NeuerEintrag</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>             <span class="co1"># @NeuerEintrag = zuvor zusammengebaute HTML-Zeilen</span>
+      <span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeueZeilen</span><span class="sy0">,</span><span class="co5">$_</span><span class="br0">&#41;</span><span class="sy0">;</span>              <span class="co1"># Zeile für Zeile hinzufügen</span>
+    <span class="br0">&#125;</span>
+    <span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeueZeilen</span><span class="sy0">,</span><span class="st0">&quot;&lt;!-- NEU --&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1"># fürs nächste mal ...</span>
+  <span class="br0">&#125;</span>
+  <span class="kw1">else</span> <span class="br0">&#123;</span>                                 <span class="co1"># jede alte Zeile, die nicht /^&lt;!-- NEU --&gt;/ enthält</span>
+    <span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@NeueZeilen</span><span class="sy0">,</span><span class="re0">$Zeile</span><span class="br0">&#41;</span><span class="sy0">;</span>            <span class="co1"># einfach in den neuen Array kopieren</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Der neue Array <code>@NeueZeilen</code> enthält dann also die Zeilen der neuen Fassung der Gästebuch-HTML-Datei. Dieser Array muss nun einfach noch in die gleiche Datei zurückgeschrieben werden, die zuvor eingelesen wurde. Das geht mit schreibendem Öffnen mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a> und Beschreiben mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#print" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">print</a> ins Datei-Handle der geöffneten Datei.
+<p>Am Ende darf das Script natürlich nicht vergessen, <a href="#HTTP-Header_und_Inhalte_senden">CGI-notwendige</a> Ausgaben an den Browser zu senden. Am einfachsten ist es wohl, einfach einen HTTP-Kopf und <code>@NeueZeilen</code> auszugeben. Das sind zwei <code>print</code>-Befehle, und schon sieht der Anwender, der das Formular abgesendet hat, das Gästebuch mit seinem eigenen neuen Eintrag.
+</p>
+Natürlich gibt es noch viele weitere wichtige Dinge, die das Gästebuch erledigen sollte. Beispielsweise sollten Dateien, die ein CGI-Script öffnet, grundsätzlich gegen versehentlichen Mehrfachzugriff geschützt werden - denn es könnten ja zwei Anwender gleichzeitig ein Formular mit einem neuen Eintrag absenden. Dann würden sich zwei Prozesse mit dem gleichen Script in die Quere kommen. Das so genannte File-Locking für den Zugriffsschutz geht mit der Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#flock" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">flock</a>.<br /> Weiterhin sollte das Script reagieren, wenn die HTML-Datei mit den Gästebucheinträgen zu groß wird. In diesem Fall könnte das Script einen Teil des Arrays mit älteren Einträgen in eine zweite Datei schreiben und diese in der Datei mit den aktuellen Einträgen verlinken, d.h. also in die erste Datei einen HTML-Link auf die zweite mit einbauen.<br /> Und dann sollte das Script auch prüfen, ob eventuell angegebene mail-Adressen gültig (valide) sind und Benutzernamen nicht aus unsinnigen Zeichenfolgen wie <kbd>@~Der Kobold~@</kbd> bestehen. Solche Aufgaben lassen sich am besten mit <a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">regulären Ausdrücken</a> innerhalb <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen" title="Perl/Bedingte Anweisungen">bedingter Anweisungen</a> lösen.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Datenbank-Front-End">Bearbeiten</a>]</span> <span class="mw-headline" id="Datenbank-Front-End"> Datenbank-Front-End </span></h3>
+<p>Sie brauchen nicht für jede Anwendung, bei der ein Web-Seitenbesucher dynamisch Daten abfragen kann, eine Datenbank. Datenbestände von bis zu ein paar Megabyte Größe, die nicht zu intensiv genutzt werden, lassen sich durchaus auch in Textdateien (z.B. kommasepariert oder in einer <a href="http://wiki.selfhtml.org/wiki/XML" title="XML">XML</a>-Struktur) halten, die dann mit CGI-Scripts in Perl verwaltet werden können. Ein öffentliches "Front-End" (also eine Web-Anwendung) zum Abfragen des Datenbestandes sowie ein nur intern zugängliches Front-End zum Verwalten des Datenbestandes (auch eine Web-Anwendung, die das Hinzufügen, Ändern und Löschen von Datensätzen mittels Formular möglich macht) brauchen Sie sowieso in jedem Fall. Eine richtige Datenbank sollten Sie dann wählen, wenn der Datenbestand sehr intensiv gepflegt wird (sehr viele Änderungen im Datenbestand - ein Fall für "Table-Locking"), oder wenn die Datenstruktur sehr stark relational ist und mit vielen Lookups arbeitet, oder wenn der Datenbestand wirklich sehr groß ist und die Pi-mal-Daumen-Größe von ein paar Megabyte übersteigt. Auf dem Server muss dann natürlich eine entsprechende Datenbank-Software installiert sein - z.B. das beliebte Freeware-Produkt <b>MySQL</b>. Letzteres ist mittlerweile so dominant im Web, dass es für relationale Datenbanken bis zu mittlerer Größe praktisch konkurrenzlos ist. Fragen Sie gegebenenfalls Ihren Provider, ob Ihnen MySQL dort, wo Sie Speicherplatz im WWW gemietet haben, zur Verfügung steht, bzw. berücksichtigen Sie dies bei der Wahl des Providers, wenn Sie eine Datenbankanbindung brauchen. MySQL wird zwar vorwiegend gemeinsam mit <a href="http://wiki.selfhtml.org/wiki/PHP" title="PHP">PHP</a> genutzt, aber über Perl ist es genauso möglich, Datenbank-Front-Ends zu schreiben, die mit MySQL kommunizieren können.
+</p><p>Bevor Sie ein Datenbank-Front-End in Perl schreiben, müssen Sie sich zuerst intensiv mit MySQL, Datenbankschnittstellen und der Abfragesprache SQL auseinandersetzen. Dazu gibt es Dokumentationen und Bücher. Im Link-Verzeichnis des Online-Angebots von SELFHTML finden Sie entsprechende Links:
+</p><p><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Linkliste#Datenbankanbindung" title="SELFHTML:Linkliste">SELFHTML:Linkliste Datenbankanbindung</a>
+</p><p>Dieser kurze Abschnitt hier kann nur einige allgemeine Details aus Sicht von Perl behandeln. In einem Perl-CGI-Script, das mit einer MySQL-Datenbank kommunizieren möchte, müssen zu Beginn Zeilen wie die folgenden stehen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> DBI<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$DB_NAME</span> <span class="sy0">=</span> <span class="st0">&quot;Produkte&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$DB_DSN</span> <span class="sy0">=</span> <span class="st0">&quot;DBI:mysql:database=$DB_NAME&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$DB_USER</span> <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$DB_PASSWD</span> <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$dbh</span> <span class="sy0">=</span> DBI<span class="sy0">-&gt;</span><span class="kw3">connect</span><span class="br0">&#40;</span><span class="re0">$DB_DSN</span><span class="sy0">,</span> <span class="re0">$DB_USER</span><span class="sy0">,</span> <span class="re0">$DB_PASSWD</span><span class="br0">&#41;</span> <span class="kw1">or</span> <span class="kw3">die</span> <span class="st0">&quot;Fehler bei Datenbankverbindung: $!&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment"><code>DBI</code> ist ein <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung" title="Perl/Module/Einführung">CPAN-Modul</a>, das Sie in der Regel benötigen, um mit Perl auf Datenbanken zugreifen zu können. Es stellt eine datenbankunabhängige Schnittstelle zu verschiedenen datenbankabhängigen Treibern dar. Ihr Perl-Script kommuniziert also mit der Datenbank in der Form, dass es die Funktionen bzw. Methoden des DBI-Moduls nutzt.
+<p>Im Beispiel-Code deklariert das Script einige Skalare, die für das Modul und die Zusammenarbeit mit der Datenbank erforderlich sind. <code>$DB_NAME</code> ist der Name der Datenbank. <code>DB_DSN</code> ist eine Information für das DBI-Modul, welcher Treiber zum Verbindungsaufbau mit der Datenbank (im Beispiel: <code>mysql</code>) benutzt und welche Datenbank geöffnet werden soll (im Beispiel die Datenbank, die in <code>$DB_NAME</code> gespeichert ist). Da der SQL-Server von MySQL, der die Datenbankzugriffe und die Ausgabe an extern aufrufende Prozesse überwacht, Daten aus Datenbanken nur gegen Anmeldung mit Benutzerkennwort und Passwort herausrückt, sind diese ebenfalls bei der Datenbankverbindung anzugeben. Im Beispiel erhalten die entsprechenden Skalare <code>$DB_USER</code> und <code>$DB_PASSWD</code> einen leeren Inhalt zugewiesen. Bei autorisierter Nutzung einer Datenbank müssen Sie dort jedoch die Kenndaten eingeben.
+</p>
+Mit <code>DBI-&gt;connect(...)</code> wird die Verbindung zur Datenbank aufgebaut. Der Rückgabewert wird in einer Datenbank-Handle-Variablen gespeichert, im Beispiel <code>$dbh</code>. Über dieses Handle können Sie im weiteren Verlauf des Scripts die Funktionen bzw. Methoden des DBI-Moduls ansprechen, wie in diesem Beispiel:</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">@DB_Felder</span> <span class="sy0">=</span> <span class="re0">$dbh</span><span class="sy0">-&gt;</span><span class="me1">list_fields</span><span class="br0">&#40;</span><span class="st_h">'produktdaten'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$dbh</span><span class="sy0">-&gt;</span><span class="me1">disconnect</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment"><code>list_fields</code> ermittelt die Feldnamen einer bestimmten Tabelle der Datenbank, im Beispiel die der Tabelle <code>produktdaten</code>. Mit <code>$dbh-&gt;disconnect</code> wird eine Datenbankverbindung am Ende wieder geschlossen. Die eigentliche Kommunikation mit der Datenbank erfolgt jedoch über entsprechende SQL-Befehle. Das folgende Beispiel zeigt, wie Sie in einem Perl-Script einen solchen Befehl notieren können und eine anschließende Datenbankabfrage starten:</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">$SQL_Statement</span> <span class="sy0">=</span> <span class="st0">&quot;SELECT nummer, name, beschreibung FROM produktdaten &quot;</span><span class="sy0">.</span>
+                    <span class="st0">&quot;WHERE produktdaten.nummer &gt;= &quot;</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="re0">$von_Nummer</span><span class="br0">&#41;</span><span class="sy0">.</span>
+                    <span class="st0">&quot; AND produktdaten.nummer &lt;= &quot;</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="re0">$bis_Nummer</span><span class="br0">&#41;</span><span class="sy0">.</span>
+                    <span class="st0">&quot; ORDER BY &quot;</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="re0">$sortier_feld</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Abfrage</span> <span class="sy0">=</span> <span class="re0">$dbh</span><span class="sy0">-&gt;</span><span class="me1">prepare</span><span class="br0">&#40;</span><span class="re0">$SQL_Statement</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Abfrage</span><span class="sy0">-&gt;</span><span class="me1">execute</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Datensatz</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Datensatz</span> <span class="sy0">=</span> <span class="re0">$Abfrage</span><span class="sy0">-&gt;</span><span class="me1">fetchrow_array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  DatensatzVerarbeiten<span class="br0">&#40;</span><span class="re0">@Datensatz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Für die Datenbankabfrage müssen Sie einen SQL-Befehl zusammenstellen und in einem Skalar speichern. Dazu müssen Sie die Syntax von SQL kennen. Normalerweise wird es so sein, dass Ihr CGI-Script wie im Beispiel die Parameter der Abfrage aus einem HTML-Formular bezieht, das der Anwender, der das Script mit dem Absenden des Formulars aufgerufen hat, ausgefüllt hat. Dazu sollte das Script die <a href="http://wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul#Formularverarbeitung" title="Perl/Module/CGI-Modul">Formularverarbeitung mit dem CGI-Modul</a> nutzen, um die übergebenen Formulardaten einzulesen. Eine dynamische Konstruktion eines SQL-Befehls aus Formulardaten ist dann wie gezeigt mit dem <a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren#Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung" title="Perl/Operatoren">Operator für Zeichenkettenverknüpfung</a> möglich. Anschließend wird mit <code>$Abfrage = $dbh-&gt;prepare($SQL_Statement)</code> dem DBI-Modul der Abfragewunsch mitgeteilt. Und danach kann dann mit <code>$Abfrage-&gt;execute()</code> der Abfragebefehl gestartet werden. Die Datenbank gibt nun der Reihe nach alle gefundenen Datensätze zurück. Jeder Datensatz besteht aus mehreren Feldern. Jeder Datensatz wird einzeln als <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Array</a> zurückgegeben. In einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#while-Schleifen" title="Perl/Schleifen">while-Schleife</a>, die so lange läuft, wie der Aufruf von <code>$Abfrage-&gt;fetchrow_array()</code> einen neuen Datensatz liefert, wird im Beispiel eine <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutine</a> namens <code>DatensatzVerarbeiten</code> aufgerufen, die als Parameter den aktuellen Datensatz-Array übergeben bekommt. Diese Subroutine könnte beispielsweise den HTML-Code für die Ausgabe eines Datensatzes vorbereiten. Denn abschließend muss das Script natürlich <a href="#HTTP-Header_und_Inhalte_senden">CGI-notwendige</a> Ausgaben zusammenstellen.</div>
+</div>
+<p>Bei der Verwaltung der Datenbank über ein HTML-Formular/Perl-Script-Front-End ist der Vorgang ganz ähnlich, nur mit zusätzlichen SQL-Befehlen zum Hinzufügen oder Zurückschreiben geänderter Datensätze in die Datenbank. Wichtig ist, dass ein solches Front-End für die interne Datenbankpflege gegen öffentliche Zugriffe geschützt ist. Dies kann zweistufig geschehen: zum einen sollte ein solches Front-End-Formular nur in einem <a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess">htaccess</a>-geschützten Verzeichnis liegen, und zum anderen sollte das Formular auch Eingabefelder für Benutzernamen und Passwort zum schreibenden Zugriff auf die Datenbank enthalten.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 387/1000000
+Post‐expand include size: 49073/2097152 bytes
+Template argument size: 47353/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3025-0!*!0!!de-formal!*!* and timestamp 20150301151019 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;oldid=20879">http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;oldid=20879</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FCGI" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/CGI"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/CGI&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/CGI" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/CGI" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/CGI" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/CGI&amp;oldid=20879" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FCGI" title="Spezial:Durchsuchen/Perl-2FCGI">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 17. August 2014 um 19:57 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 8.168-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.079 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/CGI by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

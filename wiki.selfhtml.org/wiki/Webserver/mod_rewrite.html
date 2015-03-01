@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/mod_rewrite by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Webserver/mod rewrite – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Webserver/mod_rewrite","wgTitle":"Webserver/mod rewrite","wgCurRevisionId":24631,"wgArticleId":4723,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webserver"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Webserver/mod_rewrite","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="Webserver/mod rewrite" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Webserver/mod_rewrite&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Webserver_mod_rewrite skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Webserver/mod rewrite</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Webserver" title="Webserver">Webserver</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_-_URLs_manipulieren_mit_mod_rewrite"><span class="tocnumber">1</span> <span class="toctext">Allgemeines - URLs manipulieren mit mod_rewrite</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#RewriteBase_-_Basis_f.C3.BCr_eine_Umleitung_definieren"><span class="tocnumber">2</span> <span class="toctext">RewriteBase - Basis für eine Umleitung definieren</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#RewriteCond_-_Bedingung_f.C3.BCr_eine_Umleitung_definieren"><span class="tocnumber">3</span> <span class="toctext">RewriteCond - Bedingung für eine Umleitung definieren</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Test-String"><span class="tocnumber">3.1</span> <span class="toctext">Test-String</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Bedingung"><span class="tocnumber">3.2</span> <span class="toctext">Bedingung</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Flags"><span class="tocnumber">3.3</span> <span class="toctext">Flags</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#RewriteEngine_-_mod_rewrite_ein-_und_ausschalten"><span class="tocnumber">4</span> <span class="toctext">RewriteEngine - mod_rewrite ein- und ausschalten</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#RewriteLog_-_Log-Datei_f.C3.BCr_mod_rewrite_bestimmen"><span class="tocnumber">5</span> <span class="toctext">RewriteLog - Log-Datei für mod_rewrite bestimmen</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#RewriteLogLevel_-_Art_der_Log-Meldungen_bestimmen"><span class="tocnumber">6</span> <span class="toctext">RewriteLogLevel - Art der Log-Meldungen bestimmen</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#RewriteRule_-_Umleitungen_bestimmen"><span class="tocnumber">7</span> <span class="toctext">RewriteRule - Umleitungen bestimmen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Ausdruck"><span class="tocnumber">7.1</span> <span class="toctext">Ausdruck</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Umleitung"><span class="tocnumber">7.2</span> <span class="toctext">Umleitung</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines - URLs manipulieren mit mod rewrite">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_-_URLs_manipulieren_mit_mod_rewrite">Allgemeines - URLs manipulieren mit mod_rewrite</span></h2>
+<p>mod_rewrite ist ein Modul, das Sie mit Hilfe der LoadModule-Anweisung in Ihrer <a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Die_Konfigurationsdatei_httpd.conf" title="Webserver/Apache"> httpd.conf</a> aktivieren können. Mit diesem Modul sind Sie in der Lage, URLs einfach zu manipulieren. Das heißt, ein Besucher, der eine von Ihrem Server verwaltete URL aufruft, kann beispielsweise automatisch auf eine andere Adresse umgeleitet werden. Um solche Umleitungen zu realisieren, stellt Ihnen <code>mod_rewrite</code> eine Reihe von Anweisungen zur Verfügung, die im folgenden kurz erläutert werden sollen. Sie können solche Regeln an unterschiedlichen Stellen notieren, beispielsweise in einem <a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Die_Container_mit_den_einzelnen_Anweisungen" title="Webserver/Apache"> Directory-Container</a> innerhalb Ihrer <code>httpd.conf</code>, in einem <a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Virtual_Hosts_.28virtuelle_Hosts.29" title="Webserver/Apache"> VirtualHost</a>-Abschnitt oder aber innerhalb einer <a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess</a>-Datei. Von dieser letzten Möglichkeit wird zunehmend Gebrauch gemacht, da immer mehr Provider ihren Kunden den Einsatz solcher Dateien gestatten.
+</p><p>Die Apache-Entwickler selbst betonen, dass <code>mod_rewrite</code> ein "mächtiger Killer" sei: "Mit <code>mod_rewrite</code> schießen Sie sich beim ersten Gebrauch entweder selbst in den Fuß und wollen es dann nie wieder verwenden, oder aber Sie lernen es wegen seiner Power lieben und wollen es Ihr ganzes weiteres Leben nicht mehr missen".
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: mit erweiterter Überschrift
+</div>
+<div class="note-box-text note-box-example-code">
+RewriteEngine on
+RewriteRule (.*)\.html$ /cgi-bin/script.pl?var=$1
+</div>
+</div>
+<p>Das Beispiel bewirkt, dass alle Zugriffe auf .html-Dateien im Basis-Verzeichnis des Webservers auf ein Script umgeleitet werden, wobei der Name der aufgerufenen Datei als Parameter übergeben wird.
+</p><p>Grundsätzlich benötigt man für URL-Manipulationen nur die <code><a href="#RewriteRule_-_Umleitungen_bestimmen">RewriteRule</a></code>-Direktive. Allerdings muss einmal mit <a href="#RewriteEngine_-_mod_rewrite_ein-_und_ausschalten"> Rewrite Engine</a> <code>mod_rewrite</code> eingeschaltet werden. Obwohl es bei den meisten Direktiven egal ist, ob Sie diese in einer Server-Konfigurationsdatei wie die <code>httpd.conf</code> oder in einer <a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess</a>-Datei verwenden, sollten Sie, um Performance-Einbußen zu vermeiden, diese in der Server-Konfiguration verwenden, falls Ihnen das erlaubt ist. Einige Optionen verursachen ähnliche Probleme, weshalb Sie alle Optionen nur mit Bedacht benutzen sollten.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: RewriteBase - Basis für eine Umleitung definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="RewriteBase_-_Basis_f.C3.BCr_eine_Umleitung_definieren">RewriteBase - Basis für eine Umleitung definieren</span></h2>
+<p>Diese Regel darf an folgenden Stellen der Apache-Konfiguration notiert werden:
+</p>
+<ul><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Die_Container_mit_den_einzelnen_Anweisungen" title="Webserver/Apache">  Directory-Container</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess</a>
+</li></ul>
+<p>Sie benötigen <b>RewriteBase</b>, wenn das Verzeichnis, in dem die Umleitung stattfindet, nicht über Ihren eigentlichen (physischen) Namen erreichbar ist (beispielsweise, wenn man einen Alias auf das Verzeichnis gesetzt hat). Sie müssen <code>mod_rewrite</code> dann mitteilen, wie das Verzeichnis erreichbar ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: mit erweiterter Überschrift
+</div>
+<div class="note-box-text note-box-example-code">
+RewriteEngine on
+
+#
+# die Datei liegt im Verzeichnis /abc/def
+# erreichbar ist dieses Verzeichnis aber über /xyz
+# bspw. weil in der httpd.conf folgendes gesetzt wurde:
+# Alias /xyz /abc/def
+#
+
+RewriteBase /xyz
+RewriteRule ^(.*)\.htm$ $1.html # macht alle *.html auch als *.htm erreichbar
+</div>
+</div>
+<p>Da das physische Verzeichnis <code>/abc/def</code> nicht darüber aufgerufen wird, würde, wenn man keine <b>RewriteBase</b> angibt, die <code>RewriteRule</code> nicht funktionieren. Durch diese Angabe macht man <code>mod_rewrite</code> den passenden Alias bekannt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: RewriteCond - Bedingung für eine Umleitung definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="RewriteCond_-_Bedingung_f.C3.BCr_eine_Umleitung_definieren">RewriteCond - Bedingung für eine Umleitung definieren</span></h2>
+<p>Diese Regel darf an folgenden Stellen der Apache-Konfiguration notiert werden: 
+</p>
+<ul><li>Serverkonfiguration allgemein
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Virtual_Hosts_.28virtuelle_Hosts.29" title="Webserver/Apache"> VirtualHost</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Die_Container_mit_den_einzelnen_Anweisungen" title="Webserver/Apache">  Directory-Container</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess</a>
+</li></ul>
+<p><b>RewriteCond</b> beschreibt eine Bedingung, die erfüllt sein muss, damit die <code>RewriteRule</code> ausgeführt wird.
+</p><p>Erwartet als Parameter:
+</p>
+<ul><li><code>Test-String</code> - eine Zeichenkette, die überprüft werden soll
+</li><li><code>Bedingung</code> - beschreibt die Überprüfung, die auf <code>Test-String</code> angewendet werden soll
+</li><li><code>[flags]</code> - Zusätzliche Optionen (optional)
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Test-String">Bearbeiten</a>]</span> <span class="mw-headline" id="Test-String">Test-String</span></h3>
+<p><code>Test-String</code> ist eine Zeichenkette, die neben gewöhnlichem Text auch folgende Konstrukte beinhalten kann:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Nr. </th>
+<th> Test-String </th>
+<th> Erklärung
+</th></tr>
+<tr>
+<td> 1. </td>
+<td> $1 </td>
+<td> Mit $N (1 &lt;= N &lt;= 9) kann man auf zwischengespeicherte Werte der aktuellen RewriteRule-Direktive zugreifen
+</td></tr>
+<tr>
+<td> 2. </td>
+<td>&#160;%2 </td>
+<td> Mit&#160;%N (1 &lt;= N &lt;= 9) kann man auf zwischengespeicherte Werte der letzten RewriteCond-Direktive zugreifen
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Bedingung">Bearbeiten</a>]</span> <span class="mw-headline" id="Bedingung">Bedingung</span></h3>
+<p>Bedingung beschreibt die Bedingung, die auf den Test-String zutreffen muss. Bedingung ist ein Perl-kompatibler <a href="http://wiki.selfhtml.org/wiki/Regulärer_Ausdruck" title="Regulärer Ausdruck">Regulärer Ausdruck</a> (ohne Begrenzerzeichen, '/'). Alternativ können folgende Erweiterungen benutzt werden:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Nr. </th>
+<th> Bedingung </th>
+<th> Erklärung
+</th></tr>
+<tr>
+<td> 1. </td>
+<td> &lt;Vergleichsstring </td>
+<td> 	Der <code>Test-String</code> ist im Alphabet vor dem <code>Vergleichsstring</code>
+</td></tr>
+<tr>
+<td> 2. </td>
+<td> &gt;Vergleichsstring </td>
+<td> 	Der <code>Test-String</code> ist im Alphabet nach dem <code>Vergleichsstring</code>
+</td></tr>
+<tr>
+<td> 3. </td>
+<td>	=Vergleichsstring </td>
+<td> 	<code>Test-String</code> und <code>Vergleichsstring</code> werden auf Gleichheit überprüft. Wenn der <code>Vergleichsstring</code> "" ist, wird geprüft, ob der <code>Test-String</code> leer ist
+</td></tr>
+<tr>
+<td> 4. </td>
+<td> -d </td>
+<td> 	Der <code>Test-String</code> wird als Pfadname interpretiert und es wird überprüft, ob es ein Verzeichnis ist (d: directory, Verzeichnis)
+</td></tr>
+<tr>
+<td> 5. </td>
+<td> -f </td>
+<td> 	Der <code>Test-String</code> wird als Pfadname interpretiert und es wird überprüft, ob es eine reguläre Datei ist (f: file, Datei)
+</td></tr>
+<tr>
+<td> 6. </td>
+<td> -s </td>
+<td> 	Der<code>Test-String</code> wird als Pfadname interpretiert und es wird überprüft, ob es eine reguläre Datei mit einen Inhalt größer als 0 ist (s: size, Größe)
+</td></tr>
+<tr>
+<td> 7. </td>
+<td>	-l </td>
+<td> 	Der <code>Test-String</code> wird als Pfadname interpretiert und es wird überprüft, ob es ein symbolischer Link ist (l: link, Verknüpfung)
+</td></tr>
+<tr>
+<td> 8. </td>
+<td> -F </td>
+<td> 	Der <code>Test-String</code> wird als Pfadname interpretiert und es wird überprüft, ob es eine Datei ist und diese zugänglich ist (inklusive Zugangskontrollen, z.B. mit <a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess</a>)
+</td></tr>
+<tr>
+<td> 9. </td>
+<td> -U </td>
+<td> 	Es wird überprüft, ob <code>Test-String</code> eine gültige URL ist (inklusive Zugangskontrollen, z.B. mit <a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess)</a>
+</td></tr></table>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Allen diesen Ausdrücken kann ein Ausrufezeichen (<code>&#160;! </code>) vorangestellt werden, um die Ausdrücke zu verneinen. Bei den Beispielen (8.-9.) wird ein interner Aufruf auf diese Datei gestartet, deshalb verschlechtern diese Optionen die Server-Performance sehr stark.</div>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Flags">Bearbeiten</a>]</span> <span class="mw-headline" id="Flags">Flags</span></h3>
+<p>Die Angabe von flags ist optional. Damit kann man das Verhalten der <code>RewriteCond</code> beeinflussen. Erlaubt sind folgende Werte:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Nr. </th>
+<th> flag</th>
+<th> Alternative </th>
+<th> Erklärung
+</th></tr>
+<tr>
+<td> 1. </td>
+<td>	NC </td>
+<td>	nocase 	Bei String-Vergleichen wird nicht mehr zwischen Groß- und Kleinschreibung unterschieden
+</td></tr>
+<tr>
+<td>2. </td>
+<td>	OR </td>
+<td>	ornext 	Mit diesem Flag wird die aktuelle Bedingung mit einem logischen ODER mit der nächsten Bedingung verknüpft (Standard ist eine UND-Verknüpfung), das heißt, es braucht nur eine der beiden Bedingungen zuzutreffen.
+</td></tr></table>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Sie können mehrere Flags verwenden, indem Sie diese mit einem Komma (,) trennen.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: RewriteEngine - mod rewrite ein- und ausschalten">Bearbeiten</a>]</span> <span class="mw-headline" id="RewriteEngine_-_mod_rewrite_ein-_und_ausschalten">RewriteEngine - mod_rewrite ein- und ausschalten</span></h2>
+<p>Diese Regel darf an folgenden Stellen der Apache-Konfiguration notiert werden: 
+</p>
+<ul><li>Serverkonfiguration allgemein
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Virtual_Hosts_.28virtuelle_Hosts.29" title="Webserver/Apache"> VirtualHost</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Die_Container_mit_den_einzelnen_Anweisungen" title="Webserver/Apache">  Directory-Container</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess</a>
+</li></ul>
+<p>Mit dieser Direktive schalten Sie <code>mod_rewrite</code> ein. Wenn Sie <code>RewriteEngine</code> auf <code>off</code> stellen, können Sie <code>mod_rewrite</code> nicht benutzen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">
+RewriteEngine on
+</div>
+</div>
+<p>Mit dieser Zeile wird der Webserver angewiesen, <code>mod_rewrite</code> einzuschalten.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: RewriteLog - Log-Datei für mod rewrite bestimmen">Bearbeiten</a>]</span> <span class="mw-headline" id="RewriteLog_-_Log-Datei_f.C3.BCr_mod_rewrite_bestimmen">RewriteLog - Log-Datei für mod_rewrite bestimmen</span></h2>
+<p>Diese Regel darf an folgenden Stellen der Apache-Konfiguration notiert werden: 
+</p>
+<ul><li>Serverkonfiguration allgemein
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Virtual_Hosts_.28virtuelle_Hosts.29" title="Webserver/Apache"> VirtualHost</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Die_Container_mit_den_einzelnen_Anweisungen" title="Webserver/Apache">  Directory-Container</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess</a>
+</li></ul>
+<p>Mit <b>RewriteLog</b> setzen Sie den Namen der Datei, in die <code>mod_rewrite</code> seine Logmeldungen schreibt. Wenn Dateipfad nicht mit einem "/" beginnt, dann wird die Datei relativ zu der Umgebungsvariable <code>ServerRoot</code> gesucht. Diese Anweisung sollte nur einmal in der Server-Konfiguration notiert werden.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie<b>Sicherheitshinweis</b>:
+Sorgen Sie dafür, dass das Verzeichnis, in dem die Log-Datei liegt, nur vom Benutzer, der den Server startet, beschrieben werden kann. Die  <a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.2/de/misc/security_tips.html"></strong> Apache Security Tips</a>] geben Ihnen dazu Hinweise.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: RewriteLogLevel - Art der Log-Meldungen bestimmen">Bearbeiten</a>]</span> <span class="mw-headline" id="RewriteLogLevel_-_Art_der_Log-Meldungen_bestimmen">RewriteLogLevel - Art der Log-Meldungen bestimmen</span></h2>
+<p>Diese Regel darf an folgenden Stellen der Apache-Konfiguration notiert werden: 
+</p>
+<ul><li>Serverkonfiguration allgemein
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Virtual_Hosts_.28virtuelle_Hosts.29" title="Webserver/Apache"> VirtualHost</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache#Die_Container_mit_den_einzelnen_Anweisungen" title="Webserver/Apache">  Directory-Container</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess"> .htaccess</a>
+</li></ul>
+<p>Mit dieser Direktive können Sie angeben, welche Aktionen <code>mod_rewrite</code> protokolliert. Erlaubte Werte für Log-Level sind natürliche Zahlen. Standardmäßig ist <code>RewriteLogLevel</code> auf 0 eingestellt, was bewirkt, dass Apache keine Aktionen von <code>mod_rewrite</code> protokolliert. Ein Wert von 1 bedeutet, dass nur sehr signifikante Meldungen protokolliert werden. Je höher der Wert, desto mehr Meldungen werden ins Protokoll aufgenommen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: mit erweiterter Überschrift
+</div>
+<div class="note-box-text note-box-example-code">
+RewriteLog &quot;/var/www/mod_rewrite.log&quot;
+RewriteLogLevel 2
+</div>
+</div>
+<p>Bei diesem Beispiel wird <code>mod_rewrite</code> angewiesen, Log-Meldungen in die Datei "<code>/var/www/mod_rewrite.log</code>" zu schreiben. Weiterhin wird festgelegt, welche Meldungen protokolliert werden.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Benutzen Sie Werte für Log-Level größer als 2 nur für Debugging-Zwecke, da es den Apache deutlich verlangsamt.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: RewriteRule - Umleitungen bestimmen">Bearbeiten</a>]</span> <span class="mw-headline" id="RewriteRule_-_Umleitungen_bestimmen">RewriteRule - Umleitungen bestimmen</span></h2>
+<p>RewriteRule definiert die eigentliche Umleitung. Sie kann mehrmals vorkommen, dabei ergibt jedes Vorkommnis eine eigene Umleitung. Die Reihenfolge der Umleitungen ist wichtig, da diese in der Reihenfolge ihres Vorkommens angewendet werden.
+</p><p>Erwartet als Parameter:
+</p>
+<ul><li>Ausdruck - beschreibt die URLs, die umgeleitet werden sollen
+</li><li>Umleitung - gibt die Umleitung an
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Ausdruck">Bearbeiten</a>]</span> <span class="mw-headline" id="Ausdruck">Ausdruck</span></h3>
+<p>Ausdruck beschreibt die URLs, die umgeleitet werden. Es ist ein Perl-kompatibler <a href="http://wiki.selfhtml.org/wiki/Regulärer_Ausdruck" title="Regulärer Ausdruck">Regulärer Ausdruck</a> (ohne Begrenzerzeichen, '/'). Vor dem Ausdruck kann zusätzlich ein Ausrufezeichen ('!') stehen, um den Regulären Ausdruck zu negieren.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Umleitung">Bearbeiten</a>]</span> <span class="mw-headline" id="Umleitung">Umleitung</span></h3>
+<p>Umleitung ist die URL, auf die umgeleitet wird, wenn der Ausdruck zutrifft. Neben normalem Text können Sie die gleichen Ausdrücke verwenden, die Sie auch in <code>Test-Strings</code> von <a href="#RewriteCond_-_Bedingung_f.C3.BCr_eine_Umleitung_definieren">RewriteCond</a>-Direktiven benutzen können. Wenn Sie auf Server-Ebene konfigurieren, dann wird die komplette URL ersetzt, auf Verzeichnis-Ebene (in .htaccess bzw. in einem Directory-Container in der zentralen Apache-Konfiguration) wird nur der Pfad ab dem aktuellen Verzeichnis ersetzt. Es werden danach noch alle weiteren <code>RewriteRule</code>-Direktiven abgearbeitet, sodass sich die URL nochmals ändern kann. Wenn Sie für Umleitung den String - angeben, dann wird keine Ersetzung durchgeführt.
+</p><p>Am Ende der <code>RewriteRule</code> können Sie noch optional einige weitere Optionen angeben, welche das Verhalten von <code>mod_rewrite</code> steuern, falls die <code>RewriteRule</code> zutrifft. Diese werden in spitzen Klammern ([ bzw. ]) notiert. Wenn Sie mehrere angeben, trennen Sie diese durch Kommata. Folgende Optionen können Sie angeben:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Nr. </th>
+<th> Option </th>
+<th> Alternative </th>
+<th> Erklärung
+</th></tr>
+<tr>
+<td> 1. </td>
+<td>	redirect </td>
+<td>	R </td>
+<td>	Apache wird angewiesen, eine externe Umleitung mit dem <a href="http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes#3xx:_Umleitung" title="Referenz:HTTP/Antwortcodes"> HTTP-Statuscode 302</a> durchzuführen. Wollen Sie einen anderen Statuscode senden, dann geben Sie ihn nach einem Gleichheitszeichen nach diesem Flag an. Es gibt einige vordefinierte Namen für einige Statuscodes:
+<ul><li>temp (302, MOVED TEMPORARILY), 
+</li><li>permanent (301, MOVED PERMANENTLY) und 
+</li><li>seeother (303, See Other).
+</li></ul>
+</td></tr>
+<tr>
+<td>2. </td>
+<td>	forbidden </td>
+<td>	F </td>
+<td>	Sendet sofort den <a href="http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes#4xx:_Client-Fehler" title="Referenz:HTTP/Antwortcodes"> HTTP-Statuscode 403 (FORBIDDEN)</a> an den Browser.
+</td></tr>
+<tr>
+<td>3. </td>
+<td>	gone </td>
+<td>	G </td>
+<td>	Sendet sofort den <a href="http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes#4xx:_Client-Fehler" title="Referenz:HTTP/Antwortcodes"> HTTP-Statuscode 410 (GONE)</a> an den Browser und markiert diese Seite damit als nicht mehr vorhanden.
+</td></tr>
+<tr>
+<td>4. </td>
+<td>	last </td>
+<td>	L </td>
+<td>	Wenn Sie diese Option angeben, wird nach dieser RewriteRule keine weitere mehr ausgeführt.
+</td></tr>
+<tr>
+<td>5. </td>
+<td>	next </td>
+<td>	N </td>
+<td>	Bewirkt, dass die Abarbeitung der <code>RewriteRule</code>-Direktiven abgebrochen und nochmals gestartet wird. Achten Sie darauf, dass Sie mit dieser Regel keine Endlosschleifen erzeugen.
+</td></tr>
+<tr>
+<td>6. </td>
+<td>	chain </td>
+<td>C </td>
+<td>	Bewirkt, dass die nächste <code>RewriteRule</code> nur ausgewertet wird, falls die aktuelle Regel zutrifft.
+</td></tr>
+<tr>
+<td>7. </td>
+<td>	type= 	</td>
+<td>T= </td>
+<td>	Mit dieser Option können Sie einen bestimmten <a href="http://wiki.selfhtml.org/wiki/Referenz:MIME-Typen" title="Referenz:MIME-Typen"> MIME-Typen</a> bestimmen.
+</td></tr>
+<tr>
+<td>8. </td>
+<td>	nosubreq </td>
+<td>	NS </td>
+<td>	Diese Option bewirkt, dass die Regel übersprungen wird, falls der aktuelle Request ein Sub-Request ist.
+</td></tr>
+<tr>
+<td>9. </td>
+<td>	nocase </td>
+<td>NC </td>
+<td>	Bewirkt, dass bei der Überprüfung auf Gleichheit des Ausdrucks und der URL nicht auf Groß- und Kleinschreibung geachtet wird.
+</td></tr>
+<tr>
+<td>10. </td>
+<td>	qsappend </td>
+<td>	QSA </td>
+<td>	Diese Option müssen Sie angeben, wenn Sie an die Umleitung manuell einen neuen Query-String hängen und den alten dabei nicht komplett ersetzen wollen.
+</td></tr>
+<tr>
+<td>11. </td>
+<td>	noescape </td>
+<td>	NE </td>
+<td>	Standardmäßig werden bestimmte Sonderzeichen von <code>mod_rewrite</code> maskiert. Mit dieser Option schalten Sie dies aus.
+</td></tr>
+<tr>
+<td>12. </td>
+<td>	skip=N </td>
+<td>	S=N </td>
+<td>	Mit dieser Option können Sie die nächsten N <code>RewriteRule</code>-Direktiven überspringen
+</td></tr>
+<tr>
+<td>13. </td>
+<td>	env=VAR:VAL </td>
+<td>	E=VAR:VAL </td>
+<td>	Mit dieser Option können Sie eine Umgebungsvariable erzeugen, hier etwa die Variable <code>VAR</code> mit dem Wert <code>VAL</code>.
+</td></tr>
+<tr>
+<td>14. </td>
+<td>	cookie=NAME:VAL:domain[:lifetime[:path]] </td>
+<td>	CO= </td>
+<td>	Mit dieser Option setzen Sie ein Cookie namens NAME mit dem Wert VAL und Domain als domain. Optional sind die Argumente lifetime (Lebenszeit in Minuten) und path (Pfad des Cookies).
+</td></tr>
+<tr>
+<td>15. </td>
+<td>	proxy </td>
+<td>	P </td>
+<td>	Diese Option sorgt dafür, dass ein Zugriff von dem Apache-Modul <code>mod_proxy</code> aus auf die URL erfolgt. Dazu muss <code>mod_proxy</code> aktiviert und die URL muss valide sein (sie muss unter anderem auf jeden Fall mit <code>http://hostname</code> beginnen).
+</td></tr>
+<tr>
+<td>16. </td>
+<td>	passthrough </td>
+<td>	PT </td>
+<td>	Benutzen Sie diese Option, wenn Sie mehrere URL-&gt;Dateinamen-Übersetzer (wie etwa <code>mod_alias</code> und <code>mod_rewrite</code>) zusammen benutzen.
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 281/1000000
+Post‐expand include size: 4098/2097152 bytes
+Template argument size: 2152/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4723-0!*!0!!de-formal!*!* and timestamp 20150301113155 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;oldid=24631">http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;oldid=24631</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:Webserver" title="Kategorie:Webserver">Webserver</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Webserver%2Fmod+rewrite" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/mod_rewrite"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Webserver/mod_rewrite&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/mod_rewrite" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Webserver/mod_rewrite" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Webserver/mod_rewrite" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Webserver/mod_rewrite&amp;oldid=24631" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Webserver-2Fmod_rewrite" title="Spezial:Durchsuchen/Webserver-2Fmod rewrite">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 25. Dezember 2014 um 19:20 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.732-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.152 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/mod_rewrite by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+</html>

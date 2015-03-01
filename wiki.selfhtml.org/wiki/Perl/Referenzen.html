@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Referenzen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Referenzen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Referenzen","wgTitle":"Perl/Referenzen","wgCurRevisionId":13728,"wgArticleId":1841,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Referenzen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Referenzen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Referenzen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Referenzen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Referenzen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_Referenzen_in_Perl"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu Referenzen in Perl</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Referenzen_auf_Skalare"><span class="tocnumber">2</span> <span class="toctext">Referenzen auf Skalare</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Referenzen_auf_Arrays"><span class="tocnumber">3</span> <span class="toctext">Referenzen auf Arrays</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Referenzen_auf_Hashes"><span class="tocnumber">4</span> <span class="toctext">Referenzen auf Hashes</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Referenzen_auf_Subroutinen"><span class="tocnumber">5</span> <span class="toctext">Referenzen auf Subroutinen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Referenzen_auf_Dateihandles"><span class="tocnumber">6</span> <span class="toctext">Referenzen auf Dateihandles</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Referenzen_auf_Referenzen"><span class="tocnumber">7</span> <span class="toctext">Referenzen auf Referenzen</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu Referenzen in Perl">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_Referenzen_in_Perl"> Allgemeines zu Referenzen in Perl </span></h2>
+<p>Wenn Sie sich in der Sprache C auskennen, wissen Sie, was Zeiger sind, und wie effizient das Programmieren dadurch werden kann. Referenzen sind Zeiger auf andere Inhalte, z.B. auf zuvor definierte Variablen (egal ob <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalare</a>, <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Listen</a> oder <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hashes</a>). Über Referenzen können Sie den Inhalt eines Skalars, einer Liste oder eines Hashs genauso ansprechen wie über den Originalnamen. Ferner können Sie Referenzen auf <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutinen</a> setzen. Referenzen sind Skalare, die aber keine "Nutzwerte" speichern, sondern lediglich Arbeitsspeicheradressen von anderen Variablen oder von Subroutinen.
+</p><p>Für Anfänger ist erst einmal nicht so recht ersichtlich, wozu solche Referenzen oder Zeiger gut sein sollen. Denn die Vorteile der Referenzen liegen zum einen auf einem Gebiet, mit dem Perl einen ansonsten verschont - nämlich der effizienten Arbeitsspeicherverwaltung. Es kostet einfach weniger Arbeitsspeicher und weniger Rechenlast, einer Funktion nicht eine Zeichenkette mit vielen tausend Zeichen zu übergeben, sondern nur eine Referenz auf diese Zeichenkette. Zum anderen sind Referenzen sinnvoll, wenn es darum geht, komplexe Datenstrukturen aufzubauen.
+</p><p>Referenzen werden vor allem auch in der <a href="http://wiki.selfhtml.org/wiki/Perl/Objektorientiertes_Programmieren" title="Perl/Objektorientiertes Programmieren">objektorientierten Programmierung</a> eingesetzt, die mit Perl seit der Version 5 des Perl-Interpreters ebenfalls möglich ist. So erfolgt der Zugriff auf Methoden (Funktionen, Subroutinen) und Eigenschaften (Variablen) eines Objekts über Referenzen. Auch viele moderne Module benutzen diese Technik, und solche Module zu verwenden bedeutet, mit Referenzen zu arbeiten. Deshalb lohnt es auf jeden Fall, sich mit Referenzen zu beschäftigen.
+</p><p>Referenzen in Perl arbeiten anders als etwa im klassischen C. Die berüchtigten "hängenden Zeiger", also Referenzen, die länger leben als das, was mit ihnen referenziert wird, und die in C zu unkontrollierten Programmzuständen führen können, gibt es in Perl nicht. Dort wird der Wert, auf den die Referenz zeigt, solange im Speicher gehalten, wie die letzte Referenz darauf lebt.<br />Unter anderem aus diesem Grund ist eine Zeigerarithmetik (also das Rechnen mit Zeigern), wie sie oftmals in C praktiziert wird, in Perl nicht möglich.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Referenzen auf Skalare">Bearbeiten</a>]</span> <span class="mw-headline" id="Referenzen_auf_Skalare"> Referenzen auf Skalare </span></h2>
+<p>Sie können einen Zeiger auf einen <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalar</a> erzeugen und über diesen Zeiger auf den Skalar und seinen gespeicherten Wert zugreifen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Satz</span> <span class="sy0">=</span> <span class="st0">&quot;HTML - How To Make Love&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Satzzeiger</span> <span class="sy0">=</span> <span class="re0">\$Satz</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Variablentyp und Speicheradresse von <span class="es0">\$</span>Satz: $Satzzeiger&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Inhalt von <span class="es0">\$</span>Satz: ${$Satzzeiger}<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert zunächst einen gewöhnlichen Skalar namens <code>$Satz</code> und initialisiert ihn mit einem Wert. Anschließend wird eine Referenz auf diesen Skalar deklariert. Die Referenz erhält im Beispiel den Namen <code>$Satzzeiger</code>. Es handelt sich dabei von der Syntax her also offensichtlich um einen Skalar. Was diesen Skalar zu einer Referenz macht, ist der Wert, der ihm bei der Initialisierung zugewiesen wird. Der zugewiesene Wert  <code>\$Satz</code> signalisiert Perl durch den anfänglichen Backslash, dass in <code>$Satzzeiger</code> die Referenz auf <code>$Satz</code> gespeichert werden soll. Würde der Backslash fehlen, dann würde <code>$Satzzeiger</code> einfach nur eine Kopie des Wertes von <code>$Satz</code> zugewiesen.
+<p>Das Beispiel erzeugt HTML-Code. Dabei gibt es zwei Informationen aus: einmal den Inhalt von <code>$Satzzeiger</code> (damit man sieht, was in so einer Referenz gespeichert ist - der ausgegebene Wert enthält so etwas wie <code>SCALAR(0xb67d20)</code>), und einmal den Inhalt von <code>$Satz</code>, jedoch nicht über <code>$Satz</code> selber, sondern mit Hilfe der Referenz <code>$Satzzeiger</code>. Der angegebene Beispiel-Code enthält außerdem eine andere kleine Gemeinheit, die zu Verwirrung führen kann: an der Stelle, wo <code>\$Satz</code> innerhalb der <code>print</code>-Anweisung vorkommt, hat der Backslash eine andere Bedeutung als zuvor beim Initialisieren der Referenz! An dieser Stelle dient der Backslash zum <a href="http://wiki.selfhtml.org/wiki/Perl/Zeichenketten#Maskierung" title="Perl/Zeichenketten">Maskieren</a> des Zeichens <code>$</code>. Durch die Maskierung wird erreicht, dass an der Stelle die Zeichenkette <code>$Satz</code> ausgegeben wird und nicht etwa der in <code>$Satz</code> gespeicherte Wert.
+</p>
+Um mit einer Referenz auf den in diesem Skalar gespeicherten Wert zugreifen zu können, müssen Sie die Syntax benutzen wie im Beispiel mit <code>${$Satzzeiger}</code> gezeigt. Die Referenz, in diesem Fall <code>$Satzzeiger</code>, wird dabei in geschweiften Klammern und mit einem zusätzlich vorangestellten Dollarzeichen notiert. <code>${$Satzzeiger}</code> liefert im Beispiel also <code>HTML - How To Make Love</code>.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Syntax zur Dereferenzierung mit der geschweiften Klammer ist die Variante, die immer funktioniert. Perl bietet Ihnen auch hier die Möglichkeit, die Notation abzukürzen. Statt <code>${$Satzzeiger}</code> können Sie auch <code>$$Satzzeiger</code> notieren, wenn es im Kontext eindeutig ist.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Referenzen auf Arrays">Bearbeiten</a>]</span> <span class="mw-headline" id="Referenzen_auf_Arrays"> Referenzen auf Arrays </span></h2>
+<p>Sie können einen Zeiger auf einen <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Array</a> erzeugen und über diesen Zeiger auf den Array und alle seine Elemente zugreifen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Saetze</span> <span class="sy0">=</span> <span class="br0">&#40;</span> <span class="st0">&quot;HTML - How To Make Love. &quot;</span><span class="sy0">,</span>
+               <span class="st0">&quot;XHTML - Extended How To Make Love. &quot;</span><span class="sy0">,</span>
+               <span class="st0">&quot;XML - Extended Making Love.&quot;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Saetzezeiger</span> <span class="sy0">=</span> <span class="re0">\@Saetze</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Variablentyp und Speicheradresse von <span class="es0">\@</span>Saetze: $Saetzezeiger&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Inhalt von <span class="es0">\@</span>Saetze: @{$Saetzezeiger} &lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Inhalt von <span class="es0">\$</span>Saetze[2]: $Saetzezeiger-&gt;[2] &lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird zunächst ein Array namens <code>@Saetze</code> deklariert und mit Anfangswerten initialisiert. Anschließend wird eine Referenz auf diesen Array mit Namen <code>$Saetzezeiger</code> deklariert. Die Referenz selber ist ein Skalar, sichtbar an dem vorangestellten Dollarzeichen. Eine Referenz auf den Array wird dieser Skalar durch den zugewiesenen Wert <code>\@Saetze</code>. Der Backslash vor dem Klammeraffen signalisiert Perl, dass es eine Referenz ist. Würde der Backslash an dieser Stelle fehlen, dann würde in <code>$Saetzezeiger</code> übrigens die Anzahl der Array-Elemente von <code>@Saetze</code> gespeichert!
+<p>Das Beispiel erzeugt HTML-Code und gibt dabei verschiedene Daten aus. In der ersten <code>print</code>-Anweisung wird zum besseren Verständnis der gespeicherte Wert der Referenz <code>$Saetzezeiger</code> ausgegeben - das ist so etwas wie <code>ARRAY(0xb65b28)</code>.<br />Die zweite <code>print</code>-Anweisung gibt den kompletten Inhalt des Arrays aus. Auf den Array als Ganzes wird dabei über die Referenz mit der Syntax <code>@{$Saetzezeiger}</code> zugegriffen. Die Referenz steht also in geschweiften Klammern, und unmittelbar davor ist ein Klammeraffe notiert, der auf die Liste hinweist.<br />In der dritten <code>print</code>-Anweisung wird ein bestimmtes Element von <code>@Saetze</code> ausgegeben, nämlich das dritte Listenelement. Direkt notiert wäre dieses Element mit <code>$Saetze[2]</code> ansprechbar. Im Beispiel wird es jedoch über die Referenz angesprochen, und dabei lautet die Syntax <code>$Saetzezeiger-&gt;[2]</code>. Notiert wird also die Referenz, gefolgt von dem Pfeiloperator <code>-&gt;</code> und dem gewünschten Listenelement in eckigen Klammern. Wichtig ist dabei, dass innerhalb der Zeichenkette <code>$Saetzezeiger-&gt;[2]</code> keine Leerzeichen vorkommen.
+</p>
+Die Backslashes vor <code>\@Saetze</code> und <code>\$Saetze[2]</code> innerhalb der <code>print</code>-Anweisungen haben wie schon im Beispiel zu Skalaren nichts mit Referenzen zu tun, sondern dienen der <a href="http://wiki.selfhtml.org/wiki/Perl/Zeichenketten#Maskierung" title="Perl/Zeichenketten">Maskierung</a>.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wie auch bei Skalarreferenzen bietet Perl Ihnen unterschiedliche Notationsmöglichkeiten. So können Sie statt <code>@{$Saetzezeiger}</code> auch <code>@$Saetzezeiger</code> notieren und statt <code>$Saetzezeiger-&gt;[2]</code> können Sie auch die "Urvariante" <code>${$Saetzezeiger}[2]</code> oder die Variante <code>$$Saetzezeiger[2]</code> verwenden.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Referenzen auf Hashes">Bearbeiten</a>]</span> <span class="mw-headline" id="Referenzen_auf_Hashes"> Referenzen auf Hashes </span></h2>
+<p>Sie können eine Referenz auf einen <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hash</a> erzeugen und über diese Referenz auf den Hash als Ganzes sowie auf dessen einzelne Schlüssel und Werte zugreifen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">%Sprachen</span> <span class="sy0">=</span> <span class="br0">&#40;</span> HTML <span class="sy0">=&gt;</span> <span class="st0">&quot;How To Make Love. &quot;</span><span class="sy0">,</span>
+                 XHTML <span class="sy0">=&gt;</span> <span class="st0">&quot;Extended How To Make Love. &quot;</span><span class="sy0">,</span>
+                 XML <span class="sy0">=&gt;</span> <span class="st0">&quot;Extended Making Love. &quot;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Sprachenzeiger</span> <span class="sy0">=</span> <span class="re0">\%Sprachen</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Variablentyp und Speicheradresse von&#160;%Sprachen: $Sprachenzeiger&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Inhalt von <span class="es0">\%</span>Sprachen: &quot;</span><span class="sy0">,</span> <span class="sy0">%</span><span class="br0">&#123;</span><span class="re0">$Sprachenzeiger</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st0">&quot; &lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Bedeutung von XML: $Sprachenzeiger-&gt;{XML} &lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird zunächst ein Hash namens <code>%Sprachen</code> deklariert und mit Anfangswerten initialisiert. Anschließend wird eine Referenz auf diesen Hash mit Namen <code>$Sprachenzeiger</code> deklariert. Die Referenz selber ist ein Skalar, der durch den zugewiesenen Wert <code>\%Sprachen</code> zur Referenz wird. Der Backslash vor dem Prozentzeichen signalisiert die Referenz auf den Hash.
+Das Beispiel erzeugt HTML-Code und gibt dabei verschiedene Daten aus. In der ersten <code>print</code>-Anweisung wird zum besseren Verständnis der gespeicherte Wert der Referenz <code>$Sprachenzeiger</code> ausgegeben - das ist so etwas wie <code>HASH(0xb65b28)</code>.<br />Die zweite <code>print</code>-Anweisung gibt den kompletten Inhalt des Hashes aus. Auf den Hash als Ganzes wird über die Referenz mit der Syntax <code>%{$Sprachenzeiger}</code> zugegriffen. Die Referenz steht also in geschweiften Klammern, und unmittelbar davor ist ein Prozentzeichen notiert, das auf den Hash hinweist.<br />In der dritten <code>print</code>-Anweisung wird direkt das Hash-Element mit dem Schlüssel <code>XML</code> angesprochen. Direkt notiert wäre dieses Element mit <code>$Sprachen{XML}</code> ansprechbar. Im Beispiel wird es jedoch über die Referenz angesprochen, und dabei lautet die Syntax <code>$Sprachenzeiger-&gt;{XML}</code>. Notiert wird also die Referenz, gefolgt von dem Pfeiloperator <code>-&gt;</code> und dem gewünschten Hash-Schlüssel in geschweiften Klammern. Innerhalb von <code>$Sprachenzeiger-&gt;{XML}</code> dürfen in diesem Kontext (also innerhalb von Zeichenketten) keine Leerzeichen vorkommen.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wie bei Array-Referenzen bietet Perl Ihnen auch hier unterschiedliche Notationsmöglichkeiten. So können Sie wieder statt <code>%{$Sprachenzeiger}</code> auch <code>%$Sprachenzeiger</code> notieren, und statt <code>$Sprachenzeiger-&gt;{XML}</code> können Sie auch die Varianten <code>${$Sprachenzeiger}{XML}</code> oder <code>$$Sprachenzeiger{XML}</code> verwenden.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Referenzen auf Subroutinen">Bearbeiten</a>]</span> <span class="mw-headline" id="Referenzen_auf_Subroutinen"> Referenzen auf Subroutinen </span></h2>
+<p>Sie können eine Referenz auf eine <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutine</a> setzen und über diese Referenz die Subroutine aufrufen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> Zufallswert <span class="br0">&#123;</span>
+ <span class="kw3">return</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="kw3">rand</span><span class="br0">&#40;</span><span class="nu0">1000</span><span class="br0">&#41;</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Ergebnis</span> <span class="sy0">=</span> Zufallswert<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Subroutinenzeiger</span> <span class="sy0">=</span> <span class="re0">\&amp;amp</span><span class="sy0">;</span>Zufallswert<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Referenzergebnis</span> <span class="sy0">=</span> <span class="re0">&amp;amp</span><span class="sy0">;</span><span class="br0">&#123;</span><span class="re0">$Subroutinenzeiger</span><span class="br0">&#125;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Ergebnis: $Ergebnis&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Subroutinenzeiger: $Subroutinenzeiger&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Referenzergebnis: $Referenzergebnis&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird eine Subroutine namens <code>Zufallswert</code> notiert. Diese Subroutine ermittelt mit Hilfe der Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen#rand" title="Perl/Funktionen für Berechnungen">rand</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen#int" title="Perl/Funktionen für Berechnungen">int</a> eine zufällige Ganzzahl zwischen 1 und 1000 und gibt die ermittelte Zahl mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts#return" title="Perl/Funktionen für die Kontrolle des laufenden Scripts">return</a> zurück.
+<p>Mit der Anweisung <code>my $Ergebnis = &amp;Zufallswert();</code> wird die Subroutine aufgerufen. Der Rückgabewert, also eine ermittelte Zufallszahl, wird im Skalar <code>Ergebnis</code> gespeichert.<br />Mit der Anweisung <code>my $Subroutinenzeiger = \&amp;Zufallswert;</code> wird dagegen nur ein Zeiger auf die Subroutine <code>Zufallswert</code> deklariert. Die Funktion wird dabei <b>nicht</b> aufgerufen! Dass es sich um eine Referenz handelt, bewirkt die Syntax <code>\&amp;Zufallswert</code> beim zugewiesenen Wert. Der Backslash am Anfang signalisiert die Referenz und das Ampersand-Zeichen <code>&amp;</code> eine Subroutine. Dahinter folgt der Name der Subroutine.<br />Mit der Anweisung <code>my $Referenzergebnis = &amp;{$Subroutinenzeiger}();</code> wird die Subroutine <code>Zufallswert</code> wieder aufgerufen. Diesmal aber nicht wie in der ersten Anweisung direkt, sondern über die zuvor definierte Referenz. Die Syntax ist dabei so, dass die Referenz in geschweiften Klammern steht und ein Ampersand-Zeichen <code>&amp;</code> vorangestellt bekommt.<br />Die leeren runden Klammern hinter dem Namen der Subroutine sind übrigens nicht zwingend nötig. Der Rückgabewert des zweiten Aufrufs von <code>Zufallswert</code> wird in dem Skalar <code>$Referenzergebnis</code> gespeichert.
+</p>
+Das Beispiel sendet HTML-Code an den Browser und gibt dabei die drei Werte von <code>$Ergebnis</code>, <code>$Subroutinenzeiger</code> und <code>$Referenzergebnis</code> aus. Während die beiden Skalare <code>$Ergebnis</code> und <code>$Referenzergebnis</code> eine Zufallszahl zwischen 1 und 1000 enthalten, ist der Inhalt von <code>$Subroutinenzeiger</code> nur der Zeigertyp und die Arbeitsspeicheradresse, z.B. so etwas wie <code>CODE(0xb65b28)</code>.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Perl bietet Ihnen auch bei der Dereferenzierung von Code-Referenzen unterschiedliche Notationsmöglichkeiten. So können Sie analog zu Skalar- und Array-Referenzen statt <code>&amp;{$Subroutinenzeiger}()</code> auch <code>&amp;$Subroutinenzeiger()</code> oder <code>$Subroutinenzeiger-&gt;()</code> notieren.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Referenzen auf Dateihandles">Bearbeiten</a>]</span> <span class="mw-headline" id="Referenzen_auf_Dateihandles"> Referenzen auf Dateihandles </span></h2>
+<p>Bei <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten</a> haben Sie viel mit Dateihandles zu tun. Dateihandles verhalten sich anders als gewöhnliche Variablen. So können Sie ihnen keine direkten Werte zuweisen, sondern nur die Werte nutzen, die dem Dateihandle bei Bedarf vom Perl-Interpreter selbst zugewiesen werden. Die Werte beinhalten perl-interne Informationen über den <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#Allgemeines" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">Ein-/Ausgabekanal</a>, auf den Sie mittels des Dateihandles zugreifen. Für Sie als Benutzer ist allerdings nur der Name des Handles interessant, um den Rest kümmert sich der Perl-Interpreter selbst.<br />Auf ein solches Dateihandle können Sie ebenfalls eine Referenz setzen. Hier liegt eine weitere Besonderheit gegenüber gewöhnlichen Variablen in Perl: Sie müssen diese Referenz zur Benutzung des Dateihandles nicht explizit dereferenzieren. Das erledigt der Perl-Interpreter automatisch, wenn es notwendig ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">open</span><span class="br0">&#40;</span>DATEI<span class="sy0">,</span> <span class="st0">&quot;&lt;/tmp/server.cfg&quot;</span><span class="br0">&#41;</span> <span class="sy0">||</span> <span class="kw3">die</span> <span class="st0">&quot;nicht gefunden&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$HandleReferenz</span> <span class="sy0">=</span> <span class="re0">\*DATEI</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Zeilen</span> <span class="sy0">=</span> <span class="sy0">&lt;</span><span class="re0">$HandleReferenz</span><span class="sy0">&gt;;</span>
+<span class="kw1">my</span> <span class="re0">$Zeilenzahl</span> <span class="sy0">=</span> <span class="re0">@Zeilen</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$HandleName</span> <span class="sy0">=</span> <span class="sy0">*</span><span class="br0">&#123;</span><span class="re0">$HandleReferenz</span><span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span><span class="re0">$HandleReferenz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;eingelesene Zeilen: $Zeilenzahl&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$HandleReferenz&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$HandleName&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel öffnet mit der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a>-Funktion von Perl eine Datei. Dabei ist <code>DATEI</code> der Name für das Dateihandle, über das auf die Datei zugegriffen wird. Dieser Name ist im Rahmen der <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Regeln_f.C3.BCr_selbst_vergebene_Namen" title="Perl/Einführung in Perl" class="mw-redirect">Regeln zur Namensvergabe</a> frei wählbar, jedoch sollten Sie per Konvention <b>keine</b> Kleinbuchstaben verwenden. Wenn Sie die <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Aufrufm.C3.B6glichkeiten_des_Perl-Interpreters" title="Perl/Einführung in Perl" class="mw-redirect">w-Option</a> des Perl-Interpreters verwenden, erhalten Sie bei unpassend gewählten Namen eine Warnung. Normalerweise könnte anschließend mit einer Anweisung wie <code>my&#160;@Zeilen&#160;=&#160;&lt;DATEI&gt;;</code> der Inhalt der Datei eingelesen werden. Im obigen Beispiel geschieht das Einlesen jedoch indirekt über eine Referenz.<br />Mit der Anweisung <code>my $HandleReferenz = \*DATEI;</code> wird ein Zeiger auf den Namen (bzw. den Eintrag in der perl-internen Symboltabelle) <code>DATEI</code> deklariert. Der Backslash am Anfang der Zuweisung signalisiert die Referenz und das Sternzeichen <code>*</code> einen Symboltabelleneintrag (einen so genannten Typeglob). Dahinter folgt der Name des Dateihandles.<br />Mit <code>my @Zeilen = &lt;$HandleReferenz&gt;;</code> kann der Inhalt der Datei nun über die Referenz auf das Dateihandle eingelesen werden. Statt <code>&lt;DATEI&gt;</code> wird also einfach <code>&lt;$HandleReferenz&gt;</code> notiert. Die Referenz dazu wird vom Perl-Interpreter selbst aufgelöst.<br />Die Anweisung <code>my $Zeilenzahl = @Zeilen;</code> ermittelt die Anzahl der eingelesenen Zeilen zur späteren Kontrollausgabe.<br />In der Anweisung <code>my $HandleName = *{$HandleReferenz};</code> wird die Referenz auf das Dateihandle nochmals explizit dereferenziert. In dieser Notation, also in geschweiften Klammern und mit voranstehendem Sternzeichen, wird der in <code>$HandleReferenz</code> gespeicherte <b>Name</b> des Handles ermittelt, im Beispiel also <code>DATEI</code>. Dabei wird allerdings auch der aktuelle Namensraum (package) mit ermittelt (siehe dazu auch die Perl-Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages#package" title="Perl/Funktionen für Module und Packages">package</a>). Der tatsächlich ermittelte Wert im obigen Beispiel ist <code>*main::DATEI</code>. Dabei ist <code>main</code> einfach der voreingestellte Namensraum von Perl, wenn - wie hier im Beispiel auch - kein anderer Namensraum angegeben wurde. <code>main::DATEI</code> wird als <b>voll qualifizierter Name</b> bezeichnet, da er genau aussagt, in welchem Namensraum <code>DATEI</code> zu finden ist.
+Das Beispiel erzeugt HTML-Code und gibt dabei die ermittelten Werte aus. Der Wert von <code>$HandleReferenz</code> ist so etwas wie <code>GLOB(0xb67968)</code>. Dabei steht <code>GLOB</code> für den Referenztyp "Typeglob".</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Referenzen auf Referenzen">Bearbeiten</a>]</span> <span class="mw-headline" id="Referenzen_auf_Referenzen"> Referenzen auf Referenzen </span></h2>
+<p>Es mag sich zunächst nach einer theoretischen Spielerei anhören, mit Referenzen auf Referenzen zu arbeiten. Bei komplexen Datenstrukturen kann es jedoch durchaus sinnvoll sein, solche Referenzen einzusetzen. Gerade beim Zugriff auf Einzelwerte aus einer solchen komplexen Datenstruktur erreicht Perl eine geradezu klassische Schönheit in der Notation.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Haus</span> <span class="sy0">=</span> <span class="st0">&quot;Einfamilienhaus in Fertigbauweise&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Autos</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;VW&quot;</span><span class="sy0">,</span><span class="st0">&quot;Opel&quot;</span><span class="sy0">,</span><span class="st0">&quot;Audi&quot;</span><span class="sy0">,</span><span class="st0">&quot;Porsche&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">%Familie</span> <span class="sy0">=</span> <span class="br0">&#40;</span>Frau <span class="sy0">=&gt;</span> <span class="st0">&quot;Eva&quot;</span><span class="sy0">,</span> Tochter <span class="sy0">=&gt;</span> <span class="st0">&quot;Anja&quot;</span><span class="sy0">,</span> Sohn <span class="sy0">=&gt;</span> <span class="st0">&quot;Florian&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">%Zeigerhash</span> <span class="sy0">=</span> <span class="br0">&#40;</span>Hauszeiger <span class="sy0">=&gt;</span> <span class="re0">\$Haus</span><span class="sy0">,</span> Autozeiger <span class="sy0">=&gt;</span> <span class="re0">\@Autos</span><span class="sy0">,</span> Familienzeiger <span class="sy0">=&gt;</span> <span class="re0">\%Familie</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Zeiger</span> <span class="sy0">=</span> <span class="re0">\%Zeigerhash</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;(1.) $Zeiger-&gt;{Hauszeiger}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(2.) ${$Zeiger-&gt;{Hauszeiger}}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(3.) $Zeiger-&gt;{Autozeiger}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(4.) @{$Zeiger-&gt;{Autozeiger}}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(5.) $Zeiger-&gt;{Autozeiger}-&gt;[2]&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(6.) $Zeiger-&gt;{Autozeiger}[3]&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(7.) $Zeiger-&gt;{Familienzeiger}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(8.)&quot;</span><span class="sy0">,</span> <span class="sy0">%</span><span class="br0">&#123;</span><span class="re0">$Zeiger</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span>Familienzeiger<span class="br0">&#125;</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(9.) $Zeiger-&gt;{Familienzeiger}-&gt;{Frau}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;(10.) $Zeiger-&gt;{Familienzeiger}{Sohn}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel deklariert zunächst einen Skalar <code>$Haus</code>, einen Array <code>@Autos</code> und einen Hash <code>%Familie</code>. Daraufhin werden Zeiger bzw. Referenzen auf diese Variablen definiert. Da es sich jedoch um eine Serie von Zeigern handelt, werden sie nicht einzeln als Skalare deklariert, sondern in einem Hash namens <code>%Zeigerhash</code>. Jedes Element eines Hashs oder einer Liste kann ja einen Skalar speichern, und da Referenzen Skalare sind, ist es also kein Problem, Hashes oder Listen von Referenzen zu erzeugen. Der Hash im Beispiel erhält als Zuweisung beispielsweise einen Schlüssel namens <code>Hauszeiger</code>, mit dem eine Referenz auf den Skalar <code>Haus</code> verknüpft ist, sichtbar am beginnenden Backslash <code>\$Haus</code>. Ebenso wird es mit den anderen Referenzen innerhalb des Hashes gemacht.
+<p>Nun könnte man ja über die Hashvariable <code>%Zeigerhash</code> auf die Referenzen und ihre Werte zugreifen. Im Beispiel wird jedoch noch ein Skalar namens <code>$Zeiger</code> deklariert, der eine Referenz auf den Hash <code>%Zeigerhash</code> ist, sichtbar an der Notation <code>\%Zeigerhash</code> bei der Zuweisung. <code>$Zeiger</code> ist damit also eine Referenz auf einen Hash aus Referenzen.
+</p><p>Das Beispiel-Script hat damit allerlei Daten beisammen und kann bei der Zusammenstellung von HTML-Code die verschiedensten Werte ausgeben. Der Einfachheit halber erscheinen die Ausgaben nummeriert:
+</p><p><b>(1.)</b> gibt so etwas aus wie: <code>SCALAR(0xb65b7c)</code>, denn <code>$Zeiger-&gt;{Hauszeiger}</code> bedeutet den Wert des Hash-Elements mit dem Schlüssel <code>Hauszeiger</code>, und das ist die Referenz <code>\$Haus</code>.<br />
+<b>(2.)</b> gibt aus: <code>Einfamilienhaus in Fertigbauweise</code>, denn <code>${$Zeiger-&gt;{Hauszeiger&lt;/div&gt;</code> bedeutet den Wert des Wertes vom Hash-Element mit dem Schlüssel <code>Hauszeiger</code>, also letztlich den Wert der Referenz <code>\$Haus</code>. Um den Wert des Wertes zu ermitteln, wird um den Ausdruck aus (1.) einfach noch einmal eine geschweifte Klammer gesetzt und ein <b>Dollarzeichen</b> vorangestellt.<br />
+<b>(3.)</b> gibt so etwas aus wie: <code>ARRAY(0xb65b4c)</code>, denn <code>$Zeiger-&gt;{Autozeiger}</code> bedeutet den Wert des Hash-Elements mit dem Schlüssel <code>Autozeiger</code>, und das ist die Referenz <code>\@Auto</code>.<br />
+<b>(4.)</b> gibt aus: <code>VW Opel Audi Porsche</code>, denn <code>@{$Zeiger-&gt;{Autozeiger
+&lt;/div&gt;</code> bedeutet den Wert des Wertes vom Hash-Element mit dem Schlüssel <code>Autozeiger</code>, also letztlich den Wert der Referenz <code>\@Autos</code>, und das ist die gesamte Liste <code>@Autos</code>. Um den Wert des Wertes zu ermitteln, wird um den Ausdruck aus (3.) einfach noch einmal eine geschweifte Klammer gesetzt und ein <b>Klammeraffe</b> vorangestellt.<br />
+<b>(5.)</b> gibt aus: <code>Audi</code>, denn <code>$Zeiger-&gt;{Autozeiger}-&gt;[2]</code> bedeutet den Wert des dritten Elements des Wertes vom Hash-Element mit dem Schlüssel <code>Autozeiger</code>, also letztlich den dritten Wert der Referenz <code>\@Autos</code>, und das ist das dritte Element von <code>@Autos</code>.<br />
+<b>(6.)</b> gibt aus: <code>Porsche</code>. Dies ist eine verkürzte Schreibweise für das gleiche, was bei (5.) passiert. Es genügt, den ersten Pfeiloperator <code>-&gt;</code> zu notieren.<br />
+<b>(7.)</b> gibt so etwas aus wie: <code>HASH(0xb65b58)</code>, denn <code>$Zeiger-&gt;{Familienzeiger}</code> bedeutet den Wert des Hash-Elements mit dem Schlüssel <code>Familienzeiger</code>, und das ist die Referenz <code>\%Familie</code>.<br />
+<b>(8.)</b> gibt aus: <code>SohnFlorianTochterAnjaFrauEva</code>, denn <code>%{$Zeiger-&gt;{Familienzeiger}}</code> bedeutet den Wert des Wertes vom Hash-Element mit dem Schlüssel <code>Familienzeiger</code>, also letztlich den Wert der Referenz <code>\%Familie</code>, und das ist der gesamte Hash <code>%Familie</code>. Um den Wert des Wertes zu ermitteln, wird um den Ausdruck aus (7.) einfach noch einmal eine geschweifte Klammer gesetzt und ein <b>Prozentzeichen</b> vorangestellt.<br />
+<b>(9.)</b> gibt aus: <code>Eva</code>, denn <code>$Zeiger-&gt;{Familienzeiger}-&gt;{Frau}</code> bedeutet den Wert des Hash-Elements mit dem Schlüsselnamen <code>Frau</code> des Wertes vom Hash-Element mit dem Schlüssel <code>Familienzeiger</code>.<br />
+</p>
+<b>(10.)</b> gibt aus: <code>Florian</code>. Dies ist eine verkürzte Schreibweise für das gleiche, was bei (9.) passiert und hat den gleichen Grund wie bei (6.).</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 442/1000000
+Post‐expand include size: 59328/2097152 bytes
+Template argument size: 55823/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1841-0!*!0!!de-formal!*!* and timestamp 20150301163250 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;oldid=13728">http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;oldid=13728</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FReferenzen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Referenzen"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Referenzen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Referenzen" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Referenzen" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Referenzen" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Referenzen&amp;oldid=13728" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FReferenzen" title="Spezial:Durchsuchen/Perl-2FReferenzen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 15. August 2012 um 07:56 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.123-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.085 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Referenzen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

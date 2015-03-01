@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>XML/XSL/XPath/Einführung – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"XML/XSL/XPath/Einführung","wgTitle":"XML/XSL/XPath/Einführung","wgCurRevisionId":20570,"wgArticleId":1617,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"XML/XSL/XPath/Einführung","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-xml {line-height: normal;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.xml.source-xml .de1, .xml.source-xml .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.xml.source-xml  {font-family:monospace;}
+.xml.source-xml .imp {font-weight: bold; color: red;}
+.xml.source-xml li, .xml.source-xml .li1 {font-weight: normal; vertical-align:top;}
+.xml.source-xml .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.xml.source-xml .li2 {font-weight: bold; vertical-align:top;}
+.xml.source-xml .es0 {color: #000099; font-weight: bold;}
+.xml.source-xml .br0 {color: #66cc66;}
+.xml.source-xml .sy0 {color: #66cc66;}
+.xml.source-xml .st0 {color: #ff0000;}
+.xml.source-xml .nu0 {color: #cc66cc;}
+.xml.source-xml .sc-1 {color: #808080; font-style: italic;}
+.xml.source-xml .sc0 {color: #00bbdd;}
+.xml.source-xml .sc1 {color: #ddbb00;}
+.xml.source-xml .sc2 {color: #339933;}
+.xml.source-xml .sc3 {color: #009900;}
+.xml.source-xml .re0 {color: #000066;}
+.xml.source-xml .re1 {color: #000000; font-weight: bold;}
+.xml.source-xml .re2 {color: #000000; font-weight: bold;}
+.xml.source-xml .ln-xtra, .xml.source-xml li.ln-xtra, .xml.source-xml div.ln-xtra {background-color: #ffc;}
+.xml.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="XML/XSL/XPath/Einführung" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/XML/XSL/XPath/Einf%C3%BChrung&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-XML_XSL_XPath_Einführung skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">XML/XSL/XPath/Einführung</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/XML" title="XML">XML</a> | <a href="http://wiki.selfhtml.org/wiki/XML/XSL" title="XML/XSL">XSL</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Die <b>XML Path Language</b> (XPath) dient dem Adressieren von Knoten in XML Dokumenten und benutzt hierzu Pfaden ähnliche Ausdrücke.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Einfache_Adressierung_von_Elementen_und_Attributen"><span class="tocnumber">1</span> <span class="toctext">Einfache Adressierung von Elementen und Attributen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Knotentypen.2C_Achsen_und_Pfade"><span class="tocnumber">2</span> <span class="toctext">Knotentypen, Achsen und Pfade</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Knotentypen"><span class="tocnumber">2.1</span> <span class="toctext">Knotentypen</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Achsen"><span class="tocnumber">2.2</span> <span class="toctext">Achsen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Einfache_Adressierung_von_Elementen_und_Attributen_2"><span class="tocnumber">3</span> <span class="toctext">Einfache Adressierung von Elementen und Attributen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Knotentypen.2C_Achsen_und_Pfade_2"><span class="tocnumber">4</span> <span class="toctext">Knotentypen, Achsen und Pfade</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Knotentypen_2"><span class="tocnumber">4.1</span> <span class="toctext">Knotentypen</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Achsen_2"><span class="tocnumber">4.2</span> <span class="toctext">Achsen</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Pfade"><span class="tocnumber">4.3</span> <span class="toctext">Pfade</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Ausf.C3.BChrliche_und_verk.C3.BCrzte_Notation"><span class="tocnumber">5</span> <span class="toctext">Ausführliche und verkürzte Notation</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Adressierung_der_Dokumentwurzel"><span class="tocnumber">6</span> <span class="toctext">Adressierung der Dokumentwurzel</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Adressierung_mit_absoluten_Pfadangaben"><span class="tocnumber">7</span> <span class="toctext">Adressierung mit absoluten Pfadangaben</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Adressierung_mit_relativen_Pfadangaben"><span class="tocnumber">8</span> <span class="toctext">Adressierung mit relativen Pfadangaben</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Adressierung_von_Attributen"><span class="tocnumber">9</span> <span class="toctext">Adressierung von Attributen</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Adressierung_mit_Wildcards"><span class="tocnumber">10</span> <span class="toctext">Adressierung mit Wildcards</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Adressierung_mit_Positionsangabe_und_Bedingungen"><span class="tocnumber">11</span> <span class="toctext">Adressierung mit Positionsangabe und Bedingungen</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#XPath-Operatoren"><span class="tocnumber">12</span> <span class="toctext">XPath-Operatoren</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Einfache Adressierung von Elementen und Attributen">Bearbeiten</a>]</span> <span class="mw-headline" id="Einfache_Adressierung_von_Elementen_und_Attributen"> Einfache Adressierung von Elementen und Attributen</span></h2>
+<p>Zur der Adressierung eines Elements wird ein durch '/' getrennter Pfad über alle übergeordneten Elemente angegeben. Bei absoluter Adressierung vom Wurzelelement aus wird der Pfad mit einem '/' eingeleitet.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Datei beispiel1.xml:
+</div>
+<div class="note-box-text note-box-example-code"><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;film&gt;
+    &lt;titel&gt;Metropolis&lt;/titel&gt;
+    &lt;jahr&gt;1927&lt;/jahr&gt;
+    &lt;regie&gt;Fritz Lang&lt;/regie&gt;
+&lt;/film&gt;</pre></div>
+Sowohl der Ausdruck <pre>/film/regie</pre> als auch einfach <pre>regie</pre> adressieren auf obiges Beispiel angewandt den Elementknoten für die Regie des Films.
+</div>
+<p>Zur der Adressierung eines Attributs eines Elements wird dem Pfad auf das betreffende Element der Name des Attributes mittels eines '@' angefügt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Datei beispiel1.xml:
+</div>
+<div class="note-box-text note-box-example-code"><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;film&gt;
+    &lt;titel&gt;Metropolis&lt;/titel&gt;
+    &lt;jahr typ=&quot;Premiere&quot;&gt;1927&lt;/jahr&gt;
+    &lt;regie&gt;Fritz Lang&lt;/regie&gt;
+&lt;/film&gt;</pre></div>
+</div>
+Der Ausdruck <pre>/film/jahr@typ</pre> adressiert auf obiges Beispiel angewandt den Attributknoten den Typ des angegebenen Jahres.
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Knotentypen, Achsen und Pfade">Bearbeiten</a>]</span> <span class="mw-headline" id="Knotentypen.2C_Achsen_und_Pfade">Knotentypen, Achsen und Pfade</span></h2>
+<p>XML-gerechte Dokumente sind wie die Verzeichnis- und Dateistruktur auf einem Datenträger aufgebaut. Dort gibt es ein Wurzelverzeichnis, das Verzeichnisse (Ordner) und Dateien enthalten kann. Jedes untergeordnete Verzeichnis kann wiederum andere Unterverzeichnisse und Dateien enthalten usw. Man spricht dabei auch von Baumstruktur. Auf der Seite <a href="http://wiki.selfhtml.org/wiki/XML/Regeln/Baumstruktur" title="XML/Regeln/Baumstruktur">Baumstruktur und Knoten einer XML-Datei</a> wird dieses Modell einführend beschrieben.
+</p><p>Ebenso, wie man bei der Dateistruktur auf einem Datenträger von Verzeichnissen oder Ordnern, Dateien und Pfadangaben für Dateien spricht, braucht man für die Adressierung von Bestandteilen eines XML-Dokuments eine geeignete Terminologie. Zu diesem Zweck gibt es in XPath verschiedene Knotentypen, Achsen und Pfade. Die Begriffe, die dabei auftauchen, werden im folgenden vorgestellt. Die Begriffe muten zunächst etwas akademisch an, aber zum Verständnis von XPath sind sie wichtig. Entscheidend sind die englischen Originalbegriffe (kursiv geschrieben).
+</p><p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Knotentypen">Bearbeiten</a>]</span> <span class="mw-headline" id="Knotentypen">Knotentypen</span></h3>
+<p>Jeder Bestandteil der Baumstruktur einer XML-Datei wird als Knoten bezeichnet. Da es in XML jedoch durchaus namhaft zu machende Bestandteile wie Elemente, Attribute usw. gibt, wird von entsprechenden Knotenypen gesprochen. Die Knotentypen sind nicht unmittelbar Bestandteil der Adressierungs-Syntax von XPath, doch es ist sinnvoll, die Begriffe zu kennen. XPath unterscheidet 7 Knotentypen:
+</p><p><br />
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Knotentyp  </th>
+<th> Bedeutung
+</th></tr>
+<tr>
+<td>Wurzelknoten<br />(root node) </td>
+<td>	Dies ist die Wurzel eines XML-Dokuments. Der Wurzelknoten ist selbst kein Element, sondern nur die abstrakte Ursprungswurzel der Baumstruktur des Dokuments.
+</td></tr>
+<tr>
+<td>Elementknoten<br />(element node) </td>
+<td> 	Jedes Element (auch das Dokument-Element) stellt aus XPath-Sicht einen Elementknoten dar. Ein Element namens a, bestehend aus dem Anfangs- und End-Tag &lt;a&gt;...&lt;/a&gt;, ist beispielsweise ein element node. Untergeordnete Elemente (auch als Kindelemente bezeichnet) sind ebenfalls element nodes, also beispielsweise ein Element namens b, bestehend aus dem Anfangs- und End-Tag <b>...</b>, das innerhalb von &lt;a&gt;...&lt;/a&gt; vorkommen kann.
+</td></tr>
+<tr>
+<td>Attributknoten<br />(attribute node) </td>
+<td> 	Jedes Attribut, das zu einem Element gehört, wird als Attributknoten bezeichnet. Ein Attribut b="irgendwas", das im Anfangs-Tag eines Elements a vorkommt und dann also in der Form &lt;a b="irgendwas"&gt; notiert wird, gilt als attribute node des Elements a. Der Attributknoten besteht also aus dem Attributnamen und dem zugewiesenen Wert.
+</td></tr>
+<tr>
+<td>Textknoten<br />(text node)  </td>
+<td>	Jeder Zeicheninhalt, der keine anderen Knoten mehr enthält, wird als Textknoten bezeichnet. In einer Notation wie &lt;a b="irgendwas"&gt;und ein kleiner Text&lt;/a&gt; ist der Inhalt des Elements ein text node.
+</td></tr>
+<tr>
+<td>Namensraumknoten<br />(namespace node)  </td>
+<td>	Sowohl Elemente als auch Attribute können Namensraumangaben enthalten, wenn entsprechende Namensräume in eine XML-Datei importiert werden. Ähnlich wie Attributknoten einem Elementknoten zugeordnet sind, sind Namensraumknoten einem Elementknoten oder einem Attributknoten zugeordnet. Bei einer Notation wie &lt;x:a y:b="irgendwas"&gt; sind x und y Namensraumangaben. x ist ein namespace node, der dem Element a zugeordnet ist, und y ein namespace node, der dem Attribut b zugeordnet ist.
+</td></tr>
+<tr>
+<td>Verarbeitungsanweisungsknoten<br />(processing instruction node) </td>
+<td> 	Verarbeitungsanweisungen, die in einem XML-Dokument vorkommen (sie beginnen mit &lt;? und enden mit&#160;?&gt;), stehen außerhalb des eigentlichen Dokumentbaums. Sie stellen aus XPath-Sicht einen eigenen Knotentyp dar, wobei das Ziel der Verarbeitungsanweisung den Namen des Knoten und der Rest den Inhalt des Knotens bildet. In einer Verarbeitungsanweisung wie &lt;?xml-stylesheet type="text/xsl" href="darstellung.xsl"?&gt; ist der Teil xml-stylesheet der Name des Knotens.
+<p>Die XML-Deklaration &lt;?xml version="1.0"?&gt;, die zu Beginn einer XML-Datei notiert werden sollte, ist allerdings keine Verarbeitungsanweisung in diesem Sinne, auch wenn sie syntaktisch genau so aussieht.
+</p>
+</td></tr>
+<tr>
+<td>Kommentarknoten<br />(comment node) </td>
+<td> 	Kommentare, also Inhalte, die in die Zeichenfolgen  eingeschlossen sind, werden als Kommentarknoten bezeichnet. Der Kommentarknoten ist dabei der Inhalt des Kommentars. Bei einem Kommentar wie  ist die Zeichenfolge irgendwas der comment node.
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Achsen">Bearbeiten</a>]</span> <span class="mw-headline" id="Achsen">Achsen</span></h3>
+<p>Die <b>XML Path Language</b> (XPath) dient dem Adressieren von Knoten in XML Dokumenten und benutzt hierzu Pfaden ähnliche Ausdrücke.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Einfache Adressierung von Elementen und Attributen">Bearbeiten</a>]</span> <span class="mw-headline" id="Einfache_Adressierung_von_Elementen_und_Attributen_2"> Einfache Adressierung von Elementen und Attributen</span></h2>
+<p>Zur der Adressierung eines Elements wird ein durch '/' getrennter Pfad über alle übergeordneten Elemente angegeben. Bei absoluter Adressierung vom Wurzelelement aus wird der Pfad mit einem '/' eingeleitet.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Datei beispiel1.xml:
+</div>
+<div class="note-box-text note-box-example-code"><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;film&gt;
+    &lt;titel&gt;Metropolis&lt;/titel&gt;
+    &lt;jahr&gt;1927&lt;/jahr&gt;
+    &lt;regie&gt;Fritz Lang&lt;/regie&gt;
+&lt;/film&gt;</pre></div>
+Sowohl der Ausdruck <pre>/film/regie</pre> als auch einfach <pre>regie</pre> adressieren auf obiges Beispiel angewandt den Elementknoten für die Regie des Films.
+</div>
+<p>Zur der Adressierung eines Attributs eines Elements wird dem Pfad auf das betreffende Element der Name des Attributes mittels eines '@' angefügt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Datei beispiel1.xml:
+</div>
+<div class="note-box-text note-box-example-code"><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;film&gt;
+    &lt;titel&gt;Metropolis&lt;/titel&gt;
+    &lt;jahr typ=&quot;Premiere&quot;&gt;1927&lt;/jahr&gt;
+    &lt;regie&gt;Fritz Lang&lt;/regie&gt;
+&lt;/film&gt;</pre></div>
+</div>
+Der Ausdruck <pre>/film/jahr@typ</pre> adressiert auf obiges Beispiel angewandt den Attributknoten den Typ des angegebenen Jahres.
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Knotentypen, Achsen und Pfade">Bearbeiten</a>]</span> <span class="mw-headline" id="Knotentypen.2C_Achsen_und_Pfade_2">Knotentypen, Achsen und Pfade</span></h2>
+<p>XML-gerechte Dokumente sind wie die Verzeichnis- und Dateistruktur auf einem Datenträger aufgebaut. Dort gibt es ein Wurzelverzeichnis, das Verzeichnisse (Ordner) und Dateien enthalten kann. Jedes untergeordnete Verzeichnis kann wiederum andere Unterverzeichnisse und Dateien enthalten usw. Man spricht dabei auch von Baumstruktur. Auf der Seite <a href="http://wiki.selfhtml.org/wiki/XML/Regeln/Baumstruktur" title="XML/Regeln/Baumstruktur">Baumstruktur und Knoten einer XML-Datei</a> wird dieses Modell einführend beschrieben.
+</p><p>Ebenso, wie man bei der Dateistruktur auf einem Datenträger von Verzeichnissen oder Ordnern, Dateien und Pfadangaben für Dateien spricht, braucht man für die Adressierung von Bestandteilen eines XML-Dokuments eine geeignete Terminologie. Zu diesem Zweck gibt es in XPath verschiedene Knotentypen, Achsen und Pfade. Die Begriffe, die dabei auftauchen, werden im folgenden vorgestellt. Die Begriffe muten zunächst etwas akademisch an, aber zum Verständnis von XPath sind sie wichtig. Entscheidend sind die englischen Originalbegriffe (kursiv geschrieben).
+</p><p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Knotentypen">Bearbeiten</a>]</span> <span class="mw-headline" id="Knotentypen_2">Knotentypen</span></h3>
+<p>Jeder Bestandteil der Baumstruktur einer XML-Datei wird als Knoten bezeichnet. Da es in XML jedoch durchaus namhaft zu machende Bestandteile wie Elemente, Attribute usw. gibt, wird von entsprechenden Knotenypen gesprochen. Die Knotentypen sind nicht unmittelbar Bestandteil der Adressierungs-Syntax von XPath, doch es ist sinnvoll, die Begriffe zu kennen. XPath unterscheidet 7 Knotentypen:
+</p><p><br />
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Knotentyp  </th>
+<th> Bedeutung
+</th></tr>
+<tr>
+<td>Wurzelknoten<br />(root node) </td>
+<td>	Dies ist die Wurzel eines XML-Dokuments. Der Wurzelknoten ist selbst kein Element, sondern nur die abstrakte Ursprungswurzel der Baumstruktur des Dokuments.
+</td></tr>
+<tr>
+<td>Elementknoten<br />(element node) </td>
+<td> 	Jedes Element (auch das Dokument-Element) stellt aus XPath-Sicht einen Elementknoten dar. Ein Element namens a, bestehend aus dem Anfangs- und End-Tag &lt;a&gt;...&lt;/a&gt;, ist beispielsweise ein element node. Untergeordnete Elemente (auch als Kindelemente bezeichnet) sind ebenfalls element nodes, also beispielsweise ein Element namens b, bestehend aus dem Anfangs- und End-Tag <b>...</b>, das innerhalb von &lt;a&gt;...&lt;/a&gt; vorkommen kann.
+</td></tr>
+<tr>
+<td>Attributknoten<br />(attribute node) </td>
+<td> 	Jedes Attribut, das zu einem Element gehört, wird als Attributknoten bezeichnet. Ein Attribut b="irgendwas", das im Anfangs-Tag eines Elements a vorkommt und dann also in der Form &lt;a b="irgendwas"&gt; notiert wird, gilt als attribute node des Elements a. Der Attributknoten besteht also aus dem Attributnamen und dem zugewiesenen Wert.
+</td></tr>
+<tr>
+<td>Textknoten<br />(text node)  </td>
+<td>	Jeder Zeicheninhalt, der keine anderen Knoten mehr enthält, wird als Textknoten bezeichnet. In einer Notation wie &lt;a b="irgendwas"&gt;und ein kleiner Text&lt;/a&gt; ist der Inhalt des Elements ein text node.
+</td></tr>
+<tr>
+<td>Namensraumknoten<br />(namespace node)  </td>
+<td>	Sowohl Elemente als auch Attribute können Namensraumangaben enthalten, wenn entsprechende Namensräume in eine XML-Datei importiert werden. Ähnlich wie Attributknoten einem Elementknoten zugeordnet sind, sind Namensraumknoten einem Elementknoten oder einem Attributknoten zugeordnet. Bei einer Notation wie &lt;x:a y:b="irgendwas"&gt; sind x und y Namensraumangaben. x ist ein namespace node, der dem Element a zugeordnet ist, und y ein namespace node, der dem Attribut b zugeordnet ist.
+</td></tr>
+<tr>
+<td>Verarbeitungsanweisungsknoten<br />(processing instruction node) </td>
+<td> 	Verarbeitungsanweisungen, die in einem XML-Dokument vorkommen (sie beginnen mit &lt;? und enden mit&#160;?&gt;), stehen außerhalb des eigentlichen Dokumentbaums. Sie stellen aus XPath-Sicht einen eigenen Knotentyp dar, wobei das Ziel der Verarbeitungsanweisung den Namen des Knoten und der Rest den Inhalt des Knotens bildet. In einer Verarbeitungsanweisung wie &lt;?xml-stylesheet type="text/xsl" href="darstellung.xsl"?&gt; ist der Teil xml-stylesheet der Name des Knotens.
+<p>Die XML-Deklaration &lt;?xml version="1.0"?&gt;, die zu Beginn einer XML-Datei notiert werden sollte, ist allerdings keine Verarbeitungsanweisung in diesem Sinne, auch wenn sie syntaktisch genau so aussieht.
+</p>
+</td></tr>
+<tr>
+<td>Kommentarknoten<br />(comment node) </td>
+<td> 	Kommentare, also Inhalte, die in die Zeichenfolgen  eingeschlossen sind, werden als Kommentarknoten bezeichnet. Der Kommentarknoten ist dabei der Inhalt des Kommentars. Bei einem Kommentar wie  ist die Zeichenfolge irgendwas der comment node.
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Achsen">Bearbeiten</a>]</span> <span class="mw-headline" id="Achsen_2">Achsen</span></h3>
+<p>Die Baumstruktur eines XML-Dokuments ergibt für die einzelnen Knoten, dass diese verschiedene Beziehungen untereinander haben. So gibt es Knoten, die von anderen Knoten abhängen, und solche, die auf einer gemeinsamen Ebene liegen. Dafür hält XPath verschiedene Begriffe bereit, die aus der Verwandtschaftsterminologie stammen und als Achsen (axes) bezeichnet werden. Die englischen Begriffe (in der folgenden Tabelle kursiv dargestellt) werden auch bei der <a href="#Ausf.C3.BChrliche_und_verk.C3.BCrzte_Notation"> ausführlichen Adressierung</a> verwendet. XPath unterscheidet 13 Achsen:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Achse </th>
+<th> Bedeutung </th>
+<th> Visualisierung
+</th></tr>
+<tr>
+<td> Kind<br />(child) </td>
+<td>Unmittelbar untergeordnete Knoten. In einer Struktur wie <code>&lt;a&gt;<b>...</b>&lt;/a&gt;</code> ist das Element <code>b</code> aus Sicht des Elements <code>a</code> ein child.  </td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_child.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/3/3d/Xml_child.gif/186px-Xml_child.gif" width="186" height="114" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_child.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Kind (child)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Knoten vom Typ child haben Nummern.</div></div></div>
+</td></tr>
+<tr>
+<td> Elternknoten<br />(parent)</td>
+<td> Der unmittelbar übergeordnete Knoten. In einer Struktur wie &lt;a&gt;<b>...</b>&lt;/a&gt; ist das Element a aus Sicht des Elements b ein parent. </td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_parent.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/a/ae/Xml_parent.gif/186px-Xml_parent.gif" width="186" height="110" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_parent.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Elternknoten (parent)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Der Elternknoten hat eine Nummer.</div></div></div>
+</td>
+<td>
+</td></tr>
+<tr>
+<td> Nachkommen<br />(descendant)</td>
+<td> 	Untergeordnete Knoten, auch solche, die weiter als unmittelbar untergeordnet sind. In einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; ist sowohl das Element b als auch das Element c aus Sicht des Elements a ein descendant. 	</td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_descendant.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/c/c4/Xml_descendant.gif/186px-Xml_descendant.gif" width="186" height="110" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_descendant.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Nachkömmling (descendant)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Knoten vom Typ descendant haben Nummern.</div></div></div>
+</td></tr>
+<tr>
+<td> Vorfahr<br />(ancestor)</td>
+<td>	Übergeordnete Knoten, auch solche, die weiter als unmittelbar übergeordnet sind. In einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; ist sowohl das Element b als auch das Element a aus Sicht des Elements c ein ancestor. </td>
+<td><div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_ancestor.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/c/cd/Xml_ancestor.gif/186px-Xml_ancestor.gif" width="186" height="112" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_ancestor.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Vorfahr (ancestor)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Knoten vom Typ ancestor haben Nummern.</div></div></div>
+</td></tr>
+<tr>
+<td> Nachfolgende Knoten<br />(following)</td>
+<td> 	Knoten, die nach dem aktuellen Knoten im restlichen XML-Dokument folgen, unabhängig von der Hierarchie der Knoten (ausgeschlossen Nachkommen-Knoten des aktuellen Knotens). In einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;</b><b>&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; haben aus Sicht des ersten c-Elements das zweite b-Element, das zweite c-Element und dessen Inhalt den Status following. </td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_following.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/4/4a/Xml_following.gif/186px-Xml_following.gif" width="186" height="110" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_following.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Nachfolgende Knoten (following)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Knoten vom Typ following haben Nummern.</div></div></div>
+</td></tr>
+<tr>
+<td> Vorherige Knoten<br />(preceding)</td>
+<td> 	Knoten, die vor dem aktuellen Knoten im XML-Dokument stehen, unabhängig von der Hierarchie der Knoten (ausgeschlossen Vorfahr-Knoten des aktuellen Knotens). In einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; haben aus Sicht des zweiten b-Elements das erste b-Element und dessen Kind-Elemente den Status preceding. 	</td>
+<td><div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_preceding.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/4/42/Xml_preceding.gif/186px-Xml_preceding.gif" width="186" height="110" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_preceding.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Vorherige Knoten (preceding)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Knoten vom Typ preceding haben Nummern.</div></div></div>
+</td></tr>
+<tr>
+<td> Nachfolgende Geschwisterknoten<br />(following-sibling)</td>
+<td>Knoten, die nach dem aktuellen Knoten im restlichen XML-Dokument folgen, und zwar auf der gleichen Hierarchie-Ebene. In einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt;&lt;c&gt;...&lt;/c&gt; hat aus Sicht des ersten c-Elements das zweite c-Element den Status following-sibling, das dritte c-Element dagegen nicht. 	</td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_following_sibling.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/1/19/Xml_following_sibling.gif/186px-Xml_following_sibling.gif" width="186" height="110" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_following_sibling.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Nachfolgende Geschwisterknoten (following-sibling)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Knoten vom Typ following-sibling haben Nummern.</div></div></div>
+</td></tr>
+<tr>
+<td> Vorherige Geschwisterknoten<br />(preceding-sibling)</td>
+<td>Knoten, die vor dem aktuellen Knoten im XML-Dokument stehen, und zwar auf der gleichen Hierarchie-Ebene. In einer Struktur wie &lt;c&gt;...&lt;/c&gt;&lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; hat aus Sicht des dritten c-Elements das zweite c-Element den Status preceding-sibling, das erste c-Element dagegen nicht. 	</td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_preceding_sibling.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/2/2e/Xml_preceding_sibling.gif/186px-Xml_preceding_sibling.gif" width="186" height="110" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_preceding_sibling.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Vorherige Geschwisterknoten (preceding-sibling)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Knoten vom Typ preceding-sibling haben Nummern.</div></div></div>
+</td></tr>
+<tr>
+<td> Attribut<br />(attribute)</td>
+<td> 	Attributknoten eines Elements. Attribute erhalten damit, obwohl auch sie ihren Platz in der Hierarchie einer XML-Dokumentstruktur haben, eine Sonderstellung und werden nicht in das Schema der Begriffe child, parent, descendant und ancestor eingefügt. In einer Struktur wie &lt;a b="irgendwas"&gt; ist b aus Sicht von a ein attribute.
+</td></tr>
+<tr>
+<td> Namensraum<br />(namespace</td>
+<td> 	Zugehöriger Namensraumknoten des aktuellen Elements. In einer Struktur wie &lt;x:a&gt;...&lt;/x:a&gt; ist aus Sicht des a-Elements x der zugehörige namespace.
+</td></tr>
+<tr>
+<td>Der aktuelle Knoten selbst<br />(self)</td>
+<td>	Der aktuelle Knoten. Wenn in einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; vom XSLT-Prozessor gerade das b-Element verarbeitet wird, dann hat dieses in dem Moment den Status self. 	</td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_self.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/1/17/Xml_self.gif/186px-Xml_self.gif" width="186" height="110" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_self.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Der aktuelle Knoten selbst (self)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet und hat eine Nummer.</div></div></div>
+</td></tr>
+<tr>
+<td> Nachkommen oder der aktuelle Knoten selbst<br />(descendant-or-self)</td>
+<td> 	Der aktuelle Knoten oder Nachkommen davon. Wenn in einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; vom XSLT-Prozessor gerade das b-Element verarbeitet wird, dann haben dieses und das nachfolgende c-Element in dem Moment den Status descendant-or-self. 	</td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_descendant_or_self.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/f/f2/Xml_descendant_or_self.gif/186px-Xml_descendant_or_self.gif" width="186" height="110" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_descendant_or_self.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Nachkömmling oder der aktuelle Knoten selbst (descendant-or-self)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Alle betroffenen Knoten haben Nummern.</div></div></div>
+</td></tr>
+<tr>
+<td> Vorfahre oder der aktuelle Knoten selbst<br />(ancestor-or-self)</td>
+<td>Der aktuelle Knoten oder Vorfahren davon. Wenn in einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; vom XSLT-Prozessor gerade das b-Element verarbeitet wird, dann haben dieses und das vorhergehende a-Element in dem Moment den Status ancestor-or-self. 	</td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:188px;"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_ancestor_or_self.gif" class="image"><img alt="" src="http://wiki.selfhtml.org/images/thumb/5/5c/Xml_ancestor_or_self.gif/186px-Xml_ancestor_or_self.gif" width="186" height="112" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiki.selfhtml.org/wiki/Datei:Xml_ancestor_or_self.gif" class="internal" title="vergrößern"><img src="http://wiki.selfhtml.org/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Vorfahr oder der aktuelle Knoten selbst (ancestor-or-self)<br />Der aktuelle Knoten, aus dessen Sicht betrachtet wird, ist blau gekennzeichnet. Alle betroffenen Knoten haben Nummern.</div></div></div>
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Pfade">Bearbeiten</a>]</span> <span class="mw-headline" id="Pfade">Pfade</span></h3>
+<p>XPath stellt zwei syntaktische Mittel bereit, um den Pfad zu einem oder mehreren Knoten zu notieren:
+Notation 	Beschreibung 	Bedeutung
+/ 	einfacher Schrägstrich 	Pfad-Trennzeichen für tatsächliche Namen von Knoten. In einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; lässt sich das c-Element als Pfadangabe in der Form a/b/c darstellen.
+</p>
+<dl><dd><dl><dd> 	doppelter Doppelpunkt 	Pfad-Trennzeichen für Knotenangaben mit Achsen. In einer Struktur wie &lt;a&gt;<b>&lt;c&gt;...&lt;/c&gt;&lt;c&gt;...&lt;/c&gt;</b>&lt;/a&gt; lässt sich das c-Element als Pfadangabe z.B. in der Form a/b/child::c darstellen. Mehr dazu im folgenden Abschnitt.
+</dd></dl>
+</dd></dl>
+<p><br /> 
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Ausführliche und verkürzte Notation">Bearbeiten</a>]</span> <span class="mw-headline" id="Ausf.C3.BChrliche_und_verk.C3.BCrzte_Notation">Ausführliche und verkürzte Notation</span></h2>
+<p>Beim Adressieren von Knoten einer XML-Datenstruktur gibt es Ausdrücke wie <code>/child::person/child::augen/attribute::farbe</code>. Solche Ausdrücke werden als ausführliche Notation bezeichnet, weil sie die vollen Achsenbezeichnungen enthalten. Der Ausdruck <code>/child::person/child::augen/attribute::farbe</code> kann jedoch ebensogut in der Form <code>/person/augen/@farbe</code> notiert werden. Dies ist die verkürzte Notation, die auf die Achsenbezeichnung child:: verzichtet und einige andere Einsparungen erlaubt. In den Beispielen weiter unten werden die beiden Notationsvarianten jeweils parallel gezeigt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Adressierung der Dokumentwurzel">Bearbeiten</a>]</span> <span class="mw-headline" id="Adressierung_der_Dokumentwurzel">Adressierung der Dokumentwurzel</span></h2>
+<p>Jedes XML-Dokument hat eine Wurzel, die auch adressierbar ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;/&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;html<span class="re2">&gt;</span></span><span class="re1">&lt;head<span class="re2">&gt;</span></span><span class="re1">&lt;title<span class="re2">&gt;</span></span></span>Beispiel<span class="sc3"><span class="re1">&lt;/title<span class="re2">&gt;</span></span><span class="re1">&lt;/head<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;body<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:apply-templates</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/body<span class="re2">&gt;</span></span><span class="re1">&lt;/html<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Der Wurzelknoten eines XML-Dokuments wird mit einem einzelnen Schrägstrich (/) adressiert. Im Beispiel wird mit <code>xsl:template</code> ein Template für die XML-Dokumentwurzel definiert. Im match-Attribut wird die Dokumentwurzel adressiert.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Adressierung mit absoluten Pfadangaben">Bearbeiten</a>]</span> <span class="mw-headline" id="Adressierung_mit_absoluten_Pfadangaben">Adressierung mit absoluten Pfadangaben</span></h2>
+<p>Knoten eines XML-Dokuments sind mit Hilfe einer absoluten Pfadangabe adressierbar.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 1 (ausführliche Notation
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;/child::adresse/child::vorname&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;/child::adresse/child::vorname&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 2 (verkürzte Notation)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;/adresse/vorname&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;/adresse/vorname&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Absolute Pfadangaben beginnen mit einem Schrägstrich (/), der die Dokumentwurzel repräsentiert. Weitere Hierarchie-Ebenen werden durch weitere Schrägstriche markiert. Die Knoten, über die der Pfad läuft, werden wie in Beispiel 1 gezeigt durch ihre Achse und den gewünschten Knotennamen bezeichnet, getrennt durch doppelten Doppelpunkt (::). Ebenfalls erlaubt und häufiger verwendet ist allerdings die in Beispiel 2 gezeigte verkürzte Notation ohne Achsenbezeichnungen. Im Beispiel wird mit der <code>xsl:template</code>-Anweisung ein Template für ein Element namens <code>vorname</code> definiert, das ein Kindelement des Elements <code>adresse</code> ist, das wiederum ein Kindelement der Dokumentwurzel ist. Auch im select-Attribut der <code>xsl:value-of</code>-Anweisung wird die Syntax verwendet.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Adressierung mit relativen Pfadangaben">Bearbeiten</a>]</span> <span class="mw-headline" id="Adressierung_mit_relativen_Pfadangaben">Adressierung mit relativen Pfadangaben</span></h2>
+<p>Knoten eines XML-Dokuments sind mit Hilfe einer relativen Pfadangabe adressierbar.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Angenommene XML-Struktur:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;liga<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;liga-eintrag<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;spieler<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/spieler<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;ergebnis<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;punktzahl<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/punktzahl<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;/ergebnis<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/liga-eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/liga<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 1 (ausführliche Notation)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;./child::liga-eintrag/child::ergebnis&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;span</span> <span class="re0">class</span>=<span class="st0">&quot;normal&quot;</span><span class="re2">&gt;</span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;parent::spieler&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/span<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;span</span> <span class="re0">class</span>=<span class="st0">&quot;betont&quot;</span><span class="re2">&gt;</span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;./child::punktzahl&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/span<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 2 (verkürzte Notation)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;liga-eintrag/ergebnis&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;span</span> <span class="re0">class</span>=<span class="st0">&quot;normal&quot;</span><span class="re2">&gt;</span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;../spieler&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/span<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;span</span> <span class="re0">class</span>=<span class="st0">&quot;betont&quot;</span><span class="re2">&gt;</span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;punktzahl&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/span<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel nimmt eine typische verschachtelte Elementstruktur an. Es nimmt an, dass es für das Element <code>liga</code> eine Template-Definition gibt, in der mit der <code>xsl:apply-templates</code>-Anweisung untergeordnete Templates aufgerufen werden. Weiterhin nimmt das Beispiel an, dass für das Element <code>liga-eintrag</code> keine Template-Definition exisitiert, erst wieder für dessen Kindelement <code>ergebnis</code>. Um dieses Element aus Sicht des Großvaterelements <code>liga</code> zu adressieren, ist eine relative Pfadangabe im match-Attribut der  <code>xsl:template</code>-Anweisung nötig. In der ausführlichen Notation lautet diese Pfadangabe <code>./child::liga-eintrag/child::ergebnis</code>, in der verkürzten, leichter lesbaren Notation &lt;code&lt;liga-eintrag/ergebnis&lt;/code&gt;. Die Zeichenfolge ./ (Punkt und Schrägstrich) steht für "aktueller Standpunkt". Diese Zeichenfolge kann auch weggelassen werden. Ansonsten besteht die relative Pfadangabe einfach aus der Folge der hierarchie-bestimmenden Knotennamen. Bei der ausführlichen Notation wird dabei stets noch die Achsenbezeichnung child:: benutzt, während bei der verkürzten Notation die bloßen Knotennamen (im Beispiel die Elementnamen <code>liga-eintrag</code> und <code>ergebnis</code>) genügen. Trennzeichen für Hierarchie-Ebenen ist der einfache Schrägstrich (/).
+</p><p>Innerhalb der Template-Definition für das Element <code>ergebnis</code> wird unter anderem HTML-Code für ein anderes Element der Ausgangsdaten, nämlich für das Element <code>spieler</code> notiert. Dieses Element liegt jedoch auf der gleichen Hierarchie-Ebene wie das aktuelle Element <code>ergebnis</code> (Geschwisterknoten). Um es aus Sicht von <code>ergebnis</code> anzusprechen, muss es über den Umweg des gemeinsamen Elternelements adressiert werden. In der ausführlichen Notation steht dafür die Achsenbezeichnung parent:: zur Verfügung, gefolgt vom Namen des anderen Kindknotens. In der verkürzten Notation genügt die Angabe von zwei Punkten, gefolgt von einem Schrägstrich (../), um den Weg über das Elternelement zu beschreiben.
+</p><p>Für die HTML-Ausgabe des Elements <code>punktzahl</code> wird ebenfalls eine relative Adressierung verwendet. Da das Element <code>punktzahl</code> aus Sicht des aktuellen Elements <code>ergebnis</code> einfach ein Kindelement ist, genügen die Angaben <code>./child::punktzahl</code> (ausführliche Notation) bzw. <code>punktzahl</code> (verkürzte Notation) zur Adressierung.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Adressierung von Attributen">Bearbeiten</a>]</span> <span class="mw-headline" id="Adressierung_von_Attributen">Adressierung von Attributen</span></h2>
+<p>Attribute von Elementen werden in XPath als Attributknoten behandelt und entsprechend adressiert.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 1 (ausführliche Notation)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;./child::augen/attribute::farbe&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;tr<span class="re2">&gt;</span></span><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>Augenfarbe:<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/b<span class="re2">&gt;</span></span><span class="re1">&lt;/td<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/td<span class="re2">&gt;</span></span><span class="re1">&lt;/tr<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 2 (verkürzte Notation)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;augen/@farbe&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;tr<span class="re2">&gt;</span></span><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>Augenfarbe:<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/b<span class="re2">&gt;</span></span><span class="re1">&lt;/td<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/td<span class="re2">&gt;</span></span><span class="re1">&lt;/tr<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel nimmt an, dass es eine XML-Notation &lt;augen farbe="..."&gt; gibt. Für das Attribut wird ein eigenes Template definiert. Dabei wird im HTML-Ergebnisbaum eine zweispaltige Tabellenzeile erzeugt, in der links das statische Wort Augenfarbe: steht, während in der rechten Spalte der Wert des Attributs farbe ausgegeben wird. Das match-Attribut der Template-Definition wird so adressiert, dass das Template von einem Elternelement von augen aus - z.B. von person - aufgerufen werden kann. Der Pfad lautet dann in der ausführlichen Notation ./child::augen/attribute::farbe und in der verkürzten, gebräuchlicheren Notation augen/@farbe. Bei der ausführlichen Notation kommen also die Achsenbezeichnungen child:: (für Kindelement child aus Sicht von person) und attribute:: für die Auswahl von dessen Attribut farbe zum Einsatz. In der verkürzten Notation genügt die relative Angabe des Kindelements augen und der Attributname, angeführt von einem Klammeraffen (@).
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Adressierung mit Wildcards">Bearbeiten</a>]</span> <span class="mw-headline" id="Adressierung_mit_Wildcards">Adressierung mit Wildcards</span></h2>
+<p>Die Adressierung mit Wildcards erlaubt es, mehrere Knoten auf einmal auszuwählen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Angenommene XML-Struktur:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;dateicode<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;signature<span class="re2">&gt;</span></span></span>474946383961<span class="sc3"><span class="re1">&lt;/signature<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;screen-descriptor<span class="re2">&gt;</span></span></span>10000200B30000<span class="sc3"><span class="re1">&lt;/screen-descriptor<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;color-map<span class="re2">&gt;</span></span></span>000000BF000000BF00BFBF00<span class="sc3"><span class="re1">&lt;/color-map<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;extension-block<span class="re2">&gt;</span></span></span>21F90401000000<span class="sc3"><span class="re1">&lt;/extension-block<span class="re2">&gt;</span></span></span>
+ <span class="sc-1">&lt;!-- usw. --&gt;</span>
+<span class="sc3"><span class="re1">&lt;/dateicode<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 1 (ausführliche Notation)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;dateicode&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;child::*&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 2 (verkürzte Notation):
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;dateicode&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;*&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel nimmt an, dass mit Hilfe von XML-Elementen der Aufbau einer Binärdatei (im Beispiel: GIF-Format) beschrieben wird. In der Ausgabe sollen die Inhalte aller Kindelemente von dateicode einfach in einem Rutsch geschrieben werden. In der Template-Definition zu dateicode wird dies im select-Attribut der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of" title="XML/XSL/XSLT/Sprachelemente"> xsl:value-of-Anweisung</a> durch Angabe des Wildcard-Zeichens * (Sternzeichen) erreicht. In der ausführlichen Notation ist die Achsenbezeichnung child:: angegeben, in der verkürzten Notation kann diese entfallen.
+Beachten Sie:
+</p><p>Das Wildcard-Zeichen * (Sternzeichen) wählt nur auf der nächstunteren Hierarchie-Ebene aus. Eine verschärfte Form ist die Zeichenfolge // (zwei Schrägstriche). Damit wird auf allen untergeordneten Hierarchie-Ebenen ausgewählt, egal, wie tief sich der Baum noch verzweigt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Adressierung mit Positionsangabe und Bedingungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Adressierung_mit_Positionsangabe_und_Bedingungen">Adressierung mit Positionsangabe und Bedingungen</span></h2>
+<p>Durch absolute und relative Adressierung ist noch nicht jedes beliebige Element ansprechbar. Angenommen, ein Element namens liste hat 25 Kindelemente namens listeneintrag, dann greift eine Adressierung wie liste/listeneintrag nur auf das erste dieser Elemente zu. Solche Probleme lassen sich zwar auch durch <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:for-each" title="XML/XSL/XSLT/Sprachelemente"> xsl:for-each-Schleifen</a> in den Griff bekommen, doch manchmal wird man auch nur ein bestimmtes der Kindelemente ansprechen wollen, und nicht alle der Reihe nach. Die folgenden Beispiele zeigen Adressierungen mit Positionsangaben und Bedingungen, um bestimmte einzelne Elemente zu adressieren. Dabei kommen zum Teil auch <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen" title="XML/XSL/XPath/Funktionen">XPath-Funktionen</a> zum Einsatz.
+</p><p>Syntax-Bestandteile in eckigen Klammern ([]) gehören ebenfalls zum Inventar der Adressierung mit Positionsangaben und Bedingungen. Solche Bestandteile werden als Prädikate bezeichnet. Viele der folgenden Beispiele verwenden solche Prädikate.
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Beispiel </th>
+<th>Notation </th>
+<th>	Erläuterung
+</th></tr>
+<tr>
+<td>self::liste </td>
+<td>	ausführlich </td>
+<td>	adressiert das aktuelle Element, jedoch nur dann, wenn es vom Typ liste ist.
+</td></tr>
+<tr>
+<td>child::listeneintrag[position() = 3] </td>
+<td>ausführlich </td>
+<td>	adressiert das 3. Kindelement vom Typ listeneintrag mit Hilfe der XPath-Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#.23position.28.29_.28Positionsnummer_des_aktuellen_Knotens_ermitteln.29" title="XML/XSL/XPath/Funktionen">position()</a>.
+</td></tr>
+<tr>
+<td>listeneintrag[3] </td>
+<td>verkürzt </td>
+<td>	adressiert das 3. Kindelement vom Typ listeneintrag.
+</td></tr>
+<tr>
+<td>child::listeneintrag[position() = last()] </td>
+<td>	ausführlich </td>
+<td>adressiert das letzte Kindelement vom Typ listeneintrag mit Hilfe der <a href="http://wiki.selfhtml.org/wiki/XPath/Funktionen#last.28.29_.28Positionsnummer_des_letzten_Knotens_einer_Reihe_ermitteln.29" title="XPath/Funktionen" class="mw-redirect">XPath-Funktion last()</a>.
+</td></tr>
+<tr>
+<td>listeneintrag[last()]</td>
+<td> 	verkürzt</td>
+<td> 	adressiert das letzte Kindelement vom Typ listeneintrag mit Hilfe der <a href="http://wiki.selfhtml.org/wiki/XPath/Funktionen#last.28.29_.28Positionsnummer_des_letzten_Knotens_einer_Reihe_ermitteln.29" title="XPath/Funktionen" class="mw-redirect">XPath-Funktion last()</a>.
+</td></tr>
+<tr>
+<td>listeneintrag[last()-1] </td>
+<td>	verkürzt </td>
+<td>	adressiert das vorletzte Kindelement vom Typ listeneintrag mit Hilfe der <a href="http://wiki.selfhtml.org/wiki/XPath/Funktionen#last.28.29_.28Positionsnummer_des_letzten_Knotens_einer_Reihe_ermitteln.29" title="XPath/Funktionen" class="mw-redirect">XPath-Funktion last()</a>.
+<p>/buch/kapitel[2]/abschnitt[4]/absatz[17] ||	verkürzt ||	adressiert in einem Buch absolut den 17. Absatz des 4. Abschnitts im 2. Kapitel (entsprechende XML-Elementnamen vorausgesetzt).
+</p>
+</td></tr>
+<tr>
+<td>child::augen[attribute::farbe='blau'] </td>
+<td>ausführlich </td>
+<td>	adressiert das Kindelement augen, jedoch nur dann, wenn es ein Attribut farbe mit dem Wert blau hat.
+<p>augen[@farbe='blau'] ||	verkürzt ||	adressiert das Kindelement augen, jedoch nur dann, wenn es ein Attribut farbe mit dem Wert blau hat.
+</p>
+</td></tr>
+<tr>
+<td>child::augen[attribute::farbe and attribute::sehstaerke] </td>
+<td>	ausführlich</td>
+<td> 	adressiert das Kindelement augen, jedoch nur dann, wenn es sowohl ein Attribut farbe als auch ein Attribut sehstaerke hat (egal mit welchen zugewiesenen Werten).
+</td></tr>
+<tr>
+<td>augen[@farbe and @sehstaerke] </td>
+<td>	verkürzt </td>
+<td>	adressiert das Kindelement augen, jedoch nur dann, wenn es sowohl ein Attribut farbe als auch ein Attribut sehstaerke hat (egal mit welchen zugewiesenen Werten).
+</td></tr>
+<tr>
+<td>/child::*[self::inhaltsverzeichnis or self::stichwortverzeichnis]</td>
+<td> 	ausführlich </td>
+<td>	adressiert in einem Buch absolut alle Kindelemente unterhalb der Wurzel, jedoch nur solche, die als Elementnamen inhaltsverzeichnis oder stichwortverzeichnis haben.
+</td></tr>
+<tr>
+<td>. 	</td>
+<td>verkürzt </td>
+<td>	adressiert den aktuellen Knoten.
+</td></tr>
+<tr>
+<td>.. </td>
+<td>	verkürzt </td>
+<td>	adressiert den Elternknoten des aktuellen Knotens.
+</td></tr>
+<tr>
+<td>kapitel//absatz </td>
+<td>	verkürzt </td>
+<td>	adressiert alle Elemente vom Typ absatz, die aus Sicht eines aktuellen Knotens unterhalb von Elementen vom Typ kapitel liegen. Die Syntax // wird auch als
+<p>recursive descent operator bezeichnet. //X bezeichnet das gleiche wie /descendant-or-self::node()/X.
+</p>
+</td></tr>
+<tr>
+<td>buch//kapitel[position() &lt; 5] </td>
+<td>	verkürzt </td>
+<td>	adressiert die ersten vier Kindelemente des Typs kapitel innerhalb eines Elements vom Typ buch.
+</td></tr></table>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: XPath-Operatoren">Bearbeiten</a>]</span> <span class="mw-headline" id="XPath-Operatoren">XPath-Operatoren</span></h2>
+<p>XPath bietet eine Reihe von Operatoren an, die es erlauben, Werte zu vergleichen, Berechnungen durchzuführen, oder Ausdrücke zu bewerten. Solche Operatoren können in Attributen bestimmter <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Einführung" title="XML/XSL/XSLT/Einführung"> XSLT-Elemente vorkommen</a>. Dort helfen sie, Bedingungen zu formulieren, Elementpositionen zu berechnen und anderes mehr. XPath kennt folgende Operatoren:
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Operator </th>
+<th>Bedeutung
+</th></tr>
+<caption> </caption>
+<caption>	Addition
+</caption>
+
+
+<tr>
+<td>* </td>
+<td>	Multiplikation - jedoch nur, wenn vor dem Operator keines der folgenden Zeichen bzw. keine der folgenden Zeichenfolgen steht: @&#160;:: ( [ ) ,
+</td></tr>
+<tr>
+<td>= </td>
+<td>	gleich (Vergleich zweier Werte)
+</td></tr>
+<tr>
+<td>!= </td>
+<td>	ungleich (Vergleich zweier Werte)
+</td></tr>
+<tr>
+<td>&lt; bzw. &lt; </td>
+<td>	kleiner als (Vergleich zweier Werte). Maskierung innerhalb von XSLT erforderlich.
+</td></tr>
+<tr>
+<td>&gt; bzw. &gt; </td>
+<td>	größer als (Vergleich zweier Werte). Maskierung innerhalb von XSLT zu empfehlen.
+</td></tr>
+<tr>
+<td>&lt;= bzw. &lt;= </td>
+<td>kleiner als oder gleich (Vergleich zweier Werte). Maskierung innerhalb von XSLT erforderlich.
+</td></tr>
+<tr>
+<td>&gt;= bzw. &gt;= </td>
+<td>	größer als oder gleich (Vergleich zweier Werte). Maskierung innerhalb von XSLT zu empfehlen.
+</td></tr>
+<tr>
+<td>and </td>
+<td>	logische Und-Verknüpfung (beide Ausdrücke)
+</td></tr>
+<tr>
+<td>or </td>
+<td>	logische Oder-Verknüpfung (einer von beiden Ausdrücken)
+</td></tr>
+<tr>
+<td>div </td>
+<td>	Fließkommateilung
+</td></tr>
+<tr>
+<td>mod </td>
+<td>	Rest der Fließkommateilung
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 744/1000000
+Post‐expand include size: 8443/2097152 bytes
+Template argument size: 5878/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1617-0!*!0!!de-formal!2!* and timestamp 20150301092754 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;oldid=20570">http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;oldid=20570</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=XML%2FXSL%2FXPath%2FEinf%C3%BChrung" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/XML/XSL/XPath/Einführung" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/XML/XSL/XPath/Einführung" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Einf%C3%BChrung&amp;oldid=20570" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/XML-2FXSL-2FXPath-2FEinführung" title="Spezial:Durchsuchen/XML-2FXSL-2FXPath-2FEinführung">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 1. August 2014 um 07:44 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 5.257-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.090 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:20 GMT -->
+</html>

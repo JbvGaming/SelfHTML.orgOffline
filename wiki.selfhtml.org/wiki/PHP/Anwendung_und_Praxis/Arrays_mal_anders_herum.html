@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>PHP/Anwendung und Praxis/Arrays mal anders herum – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum","wgTitle":"PHP/Anwendung und Praxis/Arrays mal anders herum","wgCurRevisionId":23589,"wgArticleId":1420,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-php {line-height: normal;}
+.source-php li, .source-php pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for php
+ * CSS class: source-php, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.php.source-php .de1, .php.source-php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.php.source-php  {font-family:monospace;}
+.php.source-php .imp {font-weight: bold; color: red;}
+.php.source-php li, .php.source-php .li1 {font-weight: normal; vertical-align:top;}
+.php.source-php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php.source-php .li2 {font-weight: bold; vertical-align:top;}
+.php.source-php .kw1 {color: #b1b100;}
+.php.source-php .kw2 {color: #000000; font-weight: bold;}
+.php.source-php .kw3 {color: #990000;}
+.php.source-php .kw4 {color: #009900; font-weight: bold;}
+.php.source-php .co1 {color: #666666; font-style: italic;}
+.php.source-php .co2 {color: #666666; font-style: italic;}
+.php.source-php .co3 {color: #0000cc; font-style: italic;}
+.php.source-php .co4 {color: #009933; font-style: italic;}
+.php.source-php .coMULTI {color: #666666; font-style: italic;}
+.php.source-php .es0 {color: #000099; font-weight: bold;}
+.php.source-php .es1 {color: #000099; font-weight: bold;}
+.php.source-php .es2 {color: #660099; font-weight: bold;}
+.php.source-php .es3 {color: #660099; font-weight: bold;}
+.php.source-php .es4 {color: #006699; font-weight: bold;}
+.php.source-php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php.source-php .es6 {color: #009933; font-weight: bold;}
+.php.source-php .es_h {color: #000099; font-weight: bold;}
+.php.source-php .br0 {color: #009900;}
+.php.source-php .sy0 {color: #339933;}
+.php.source-php .sy1 {color: #000000; font-weight: bold;}
+.php.source-php .st0 {color: #0000ff;}
+.php.source-php .st_h {color: #0000ff;}
+.php.source-php .nu0 {color: #cc66cc;}
+.php.source-php .nu8 {color: #208080;}
+.php.source-php .nu12 {color: #208080;}
+.php.source-php .nu19 {color:#800080;}
+.php.source-php .me1 {color: #004000;}
+.php.source-php .me2 {color: #004000;}
+.php.source-php .re0 {color: #000088;}
+.php.source-php .ln-xtra, .php.source-php li.ln-xtra, .php.source-php div.ln-xtra {background-color: #ffc;}
+.php.source-php span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="PHP/Anwendung und Praxis/Arrays mal anders herum" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-PHP_Anwendung_und_Praxis_Arrays_mal_anders_herum skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">PHP/Anwendung und Praxis/Arrays mal anders herum</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/PHP" title="PHP">PHP</a> | <a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis" title="PHP/Anwendung und Praxis">Anwendung und Praxis</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Sinn_des_Artikels"><span class="tocnumber">1</span> <span class="toctext">Sinn des Artikels</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Grundlagen_Arrays"><span class="tocnumber">2</span> <span class="toctext">Grundlagen Arrays</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Arrays_in_PHP"><span class="tocnumber">2.1</span> <span class="toctext">Arrays in PHP</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Datenstrukturen_planen"><span class="tocnumber">3</span> <span class="toctext">Datenstrukturen planen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#einfache_Variablen"><span class="tocnumber">3.1</span> <span class="toctext">einfache Variablen</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Datensatz_mit_Array"><span class="tocnumber">3.2</span> <span class="toctext">Datensatz mit Array</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Liste_mit_Array"><span class="tocnumber">3.3</span> <span class="toctext">Liste mit Array</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Baumstruktur_mit_Array"><span class="tocnumber">3.4</span> <span class="toctext">Baumstruktur mit Array</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Baum_in_Satzstruktur"><span class="tocnumber">3.4.1</span> <span class="toctext">Baum in Satzstruktur</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Baum_in_Spaltentruktur"><span class="tocnumber">3.4.2</span> <span class="toctext">Baum in Spaltentruktur</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Datenstrukturen_umwandeln"><span class="tocnumber">4</span> <span class="toctext">Datenstrukturen umwandeln</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#N.C3.BCtzliche_Funktionen"><span class="tocnumber">5</span> <span class="toctext">Nützliche Funktionen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Bearbeitungsfunktionen"><span class="tocnumber">5.1</span> <span class="toctext">Bearbeitungsfunktionen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Get-Record-Funktion_.28.C3.A4hnlich_SELECT.29"><span class="tocnumber">5.1.1</span> <span class="toctext">Get-Record-Funktion (ähnlich SELECT)</span></a>
+<ul>
+<li class="toclevel-4 tocsection-15"><a href="#Er.C3.A4uterungen:"><span class="tocnumber">5.1.1.1</span> <span class="toctext">Eräuterungen:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-16"><a href="#Delete-Record-Funktion_.28.C3.A4hnlich_DELETE.29"><span class="tocnumber">5.1.2</span> <span class="toctext">Delete-Record-Funktion (ähnlich DELETE)</span></a>
+<ul>
+<li class="toclevel-4 tocsection-17"><a href="#Er.C3.A4uterungen:_2"><span class="tocnumber">5.1.2.1</span> <span class="toctext">Eräuterungen:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-18"><a href="#Update-Record-Funktion_.28.C3.A4hnlich_UPDATE.29"><span class="tocnumber">5.1.3</span> <span class="toctext">Update-Record-Funktion (ähnlich UPDATE)</span></a>
+<ul>
+<li class="toclevel-4 tocsection-19"><a href="#Er.C3.A4uterungen:_3"><span class="tocnumber">5.1.3.1</span> <span class="toctext">Eräuterungen:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-20"><a href="#Insert-Record-Funktion_.28.C3.A4hnlich_INSERT.2C_REPLACE.2C_ALTER.29"><span class="tocnumber">5.1.4</span> <span class="toctext">Insert-Record-Funktion (ähnlich INSERT, REPLACE, ALTER)</span></a>
+<ul>
+<li class="toclevel-4 tocsection-21"><a href="#Er.C3.A4uterungen:_4"><span class="tocnumber">5.1.4.1</span> <span class="toctext">Eräuterungen:</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#Zeilenarray_zum_Spaltenarray_umbauen"><span class="tocnumber">5.2</span> <span class="toctext">Zeilenarray zum Spaltenarray umbauen</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Diverse_Funktionen"><span class="tocnumber">5.3</span> <span class="toctext">Diverse Funktionen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-24"><a href="#Musterdaten"><span class="tocnumber">5.3.1</span> <span class="toctext">Musterdaten</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Spaltenarray_zum_Zeilenarray_umbauen"><span class="tocnumber">5.3.2</span> <span class="toctext">Spaltenarray zum Zeilenarray umbauen</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Sortierte_Ausgabe"><span class="tocnumber">5.3.3</span> <span class="toctext">Sortierte Ausgabe</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#Funktion_f.C3.BCr_die_einfache_Sortierung"><span class="tocnumber">5.3.4</span> <span class="toctext">Funktion für die einfache Sortierung</span></a>
+<ul>
+<li class="toclevel-4 tocsection-28"><a href="#Erl.C3.A4uterungen"><span class="tocnumber">5.3.4.1</span> <span class="toctext">Erläuterungen</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-29"><a href="#Linearisierung_tiefer_Arrays"><span class="tocnumber">5.4</span> <span class="toctext">Linearisierung tiefer Arrays</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Tiefes_Array_.28Baumstruktur.29_aus_Pfadliste_erstellen"><span class="tocnumber">5.5</span> <span class="toctext">Tiefes Array (Baumstruktur) aus Pfadliste erstellen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#Arrays_und_Dateien"><span class="tocnumber">6</span> <span class="toctext">Arrays und Dateien</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Sinn des Artikels">Bearbeiten</a>]</span> <span class="mw-headline" id="Sinn_des_Artikels">Sinn des Artikels</span></h2>
+<p>Im SelfHTML-Forum wird immer wieder danach gefragt, wie man diverse unterschiedliche Arrays sortieren, wie man sie zum Speichern von Daten/Datensätzen verwenden könne, wie man doppelte Einträge vermeidet, wie man einen bestimmten Wert oder Schlüssel in einer tiefen Struktur findet u.v.m.
+</p><p>Dieser Artikel soll meine Anregungen dazu, es einfach mal "anders herum" anzufangen, aus den vielen Threads des Archivs zusammensammeln, neu strukturieren und damit allen aufgeschlossenen Programmierern verständlich zugänglich machen.
+</p><p>Und wenn sich ein weiterer Autor finden würde, der den "normalen Weg" im Gegensatz dazu darstellen mag, ist er herzlich eingeladen. Programmierung ist immer auch Philosophie.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Grundlagen Arrays">Bearbeiten</a>]</span> <span class="mw-headline" id="Grundlagen_Arrays">Grundlagen Arrays</span></h2>
+<ul><li> was bedeutet überhaupt 'Array' in PHP
+</li><li> Sortierung, Indexierung, Reihenfolge
+</li><li> iterieren per Index
+</li><li> iterieren per Pointer (Reihenfolge in der verketteten Liste)
+</li><li> rekursiver Durchlauf des Arrays
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Arrays in PHP">Bearbeiten</a>]</span> <span class="mw-headline" id="Arrays_in_PHP">Arrays in PHP</span></h3>
+<p>PHP unterscheidet im Wesentlichen drei Datentyp-Klassen
+</p>
+<ul><li> Skalare (nebst boolescher Werte)
+</li><li> Arrays
+</li><li> Objekte
+</li></ul>
+<p>Mit Hilfe von Arrays können sowohl Datenstrukturen als auch Steuerflüsse abgebildet, geordnet und verwaltet werden.
+</p><p>Im Unterschied zu den klassischen speicherorientierten Arrays, bei denen gleiche oder gleichartige Elemente angereiht und über ihren Index direkt adressiert werden können, können wir uns PHP-Arrays eher als verkettete Listen und Baumstrukturen vorstellen. Jedes Element kann andere Eigenschaften haben. Der Index ist Bestandteil des Elementes und hat keinerlei Zusammenhang mit dem physischen Speicherort der zugehörigen Daten.
+</p><p>[Bild: verkettete Liste]
+</p><p>[Bild: Baumstruktur]
+</p><p><br />
+Für die Werte eines Arrays sind alle Datentypen erlaubt, die PHP kennt. Somit ergibt sich bei einem Array von Arrays auch die Baumstruktur. Wie die Datenorganisation intern geregelt ist, soll hier ausdrücklich nicht im Fokus der Betrachtung stehen.
+</p><p>An die eigentlichen Zeiger auf die Elemente lässt uns PHP nicht heran. Sie sind gekapselt. Durch Navigationsfunktionen kann man aber jedes Element der Struktur erreichen. Somit können wir uns auch nicht aus Versehen im Speicher verlaufen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Datenstrukturen planen">Bearbeiten</a>]</span> <span class="mw-headline" id="Datenstrukturen_planen">Datenstrukturen planen</span></h2>
+<ul><li> 'lose' Variablen contra Arrays
+</li><li> Datensatz
+</li><li> Liste
+</li><li> Baum
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: einfache Variablen">Bearbeiten</a>]</span> <span class="mw-headline" id="einfache_Variablen">einfache Variablen</span></h3>
+<p>PHP ist eine gewachsene Scriptsprache für aktive Internetangebote und hat am Anfang alle [?] Werte in einfachen Variablen im Script zur Verfügung gestellt. Einfache Variablen werden nur durch ein vorangestelltes Dollarzeichen vor einem Bezeichner gekennzeichnet. Untereinander haben sie keine Ordnung. 
+</p><p>Es gibt keine benutzerdefinierten Datenstrukturen für Daten, die einen Bezug zueinander haben. 'Struct' oder 'Record' sind PHP fremd. Um Daten aneinander zu binden, stellt PHP den Datentyp 'Array' zur Verfügung.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Datensatz mit Array">Bearbeiten</a>]</span> <span class="mw-headline" id="Datensatz_mit_Array">Datensatz mit Array</span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Liste mit Array">Bearbeiten</a>]</span> <span class="mw-headline" id="Liste_mit_Array">Liste mit Array</span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Baumstruktur mit Array">Bearbeiten</a>]</span> <span class="mw-headline" id="Baumstruktur_mit_Array">Baumstruktur mit Array</span></h3>
+<p>PHP lässt dem Programmierer bei der Verwendung von Arrays jede Freiheit, was die Datentypen der Elemente und die Anzahl der Unterelemente betrifft. Die geplante Struktur muss in keiner Weise regelmäßig ausfallen. 
+</p><p>Beim Umgang mit Massendaten hat man allerdings meistens regelmäßige Strukturen vorliegen. Diese können dann als Bäume abgebildet werden.
+</p><p>Für die hier gemeinten regelmäßigen Bäume kann man zwei Bauarten benutzen:
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Baum in Satzstruktur">Bearbeiten</a>]</span> <span class="mw-headline" id="Baum_in_Satzstruktur">Baum in Satzstruktur</span></h4>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Baum in Spaltentruktur">Bearbeiten</a>]</span> <span class="mw-headline" id="Baum_in_Spaltentruktur">Baum in Spaltentruktur</span></h4>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Datenstrukturen umwandeln">Bearbeiten</a>]</span> <span class="mw-headline" id="Datenstrukturen_umwandeln">Datenstrukturen umwandeln</span></h2>
+<ul><li>Vom Satzarray zum Spaltenarray
+</li></ul>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Nützliche Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="N.C3.BCtzliche_Funktionen">Nützliche Funktionen</span></h2>
+<p>Die folgenden Funktionen stellen Denkansätze dar und sollten nach Belieben weiterentwickelt werden. 
+</p>
+<ul><li> vier universelle Bearbeitungsfunktionen für Spaltenarrays 
+</li><li> Beispiele zum Umgang mit Spaltenarrays
+</li><li> Linearisierung einer Arraystruktur (Erzeugung einer Pfadliste)
+</li><li> Bildung tiefer Arraystrukturen aus einer Pfad-Liste
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Bearbeitungsfunktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Bearbeitungsfunktionen">Bearbeitungsfunktionen</span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Get-Record-Funktion (ähnlich SELECT)">Bearbeiten</a>]</span> <span class="mw-headline" id="Get-Record-Funktion_.28.C3.A4hnlich_SELECT.29">Get-Record-Funktion (ähnlich SELECT)</span></h4>
+<pre>
+#------------------------------------------------------------------------------
+function get_record (&amp;$_data, $recno)
+{
+    $_rec = array();
+
+    foreach ($_data as $colname =&gt; $field)
+    {
+        $_rec[$colname] = isset($_data[$colname][$recno])?$_data[$colname][$recno]:NULL;
+    }
+
+    return $_rec;
+}
+#------------------------------------------------------------------------------
+</pre>
+<h5><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Eräuterungen:">Bearbeiten</a>]</span> <span class="mw-headline" id="Er.C3.A4uterungen:">Eräuterungen:</span></h5>
+<p>Die Funktion übernimmt als Argumente 
+</p>
+<ul><li> <b>&amp;$_data</b>     eine Referenz auf das Daten-Array
+</li><li> <b>$recno</b>      die Datensatznummer (Primary Key) 
+</li></ul>
+<p>In der foreach()-Schleife werden die vorhandenen Spalten gesucht und dann festgestellt, ob es einen Feldwert zur Datensatznummer gibt. Die Treffer werden im Ergebnisarray <b>$_rec</b> gesammelt.
+</p><p>Für den Fall, dass es in einer Spalte keinen Eintrag für den Schlüssel <b>$recno</b> gibt, wird im Ergebnisdatensatz <b>NULL</b> als Wert im zugehörigen Datenfeld eingetragen.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Delete-Record-Funktion (ähnlich DELETE)">Bearbeiten</a>]</span> <span class="mw-headline" id="Delete-Record-Funktion_.28.C3.A4hnlich_DELETE.29">Delete-Record-Funktion (ähnlich DELETE)</span></h4>
+<pre>
+#------------------------------------------------------------------------------
+function delete_record (&amp;$_data, $recno)
+{
+    $cols_deleted = 0;
+
+    foreach ($_data as $colname =&gt; $field)
+    {
+        unset($_data[$colname][$recno]);
+        $cols_deleted++;
+    }
+
+    return $cols_deleted;
+}
+#------------------------------------------------------------------------------
+</pre>
+<h5><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: Eräuterungen:">Bearbeiten</a>]</span> <span class="mw-headline" id="Er.C3.A4uterungen:_2">Eräuterungen:</span></h5>
+<p>Die Funktion übernimmt als Argumente 
+</p>
+<ul><li> <b>&amp;$_data</b>     eine Referenz auf das Daten-Array
+</li><li> <b>$recno</b>      die Datensatznummer (Primary Key) 
+</li></ul>
+<p>In der foreach()-Schleife werden die vorhandenen Spalten gesucht und dann die Feldwerte zur Datensatznummer gelöscht. Die Funktion <b>unset()</b> liefert keinen Fehler, wenn das geforderte Element nicht existiert hat, ein <code>if (isset(...))</code> ist daher nicht notwendig. 
+</p><p>Der Rückgabewert zeigt hier lediglich die Anzahl der gefundenen Spalten an. Diese hat hier aber keinen Aussagewert darüber, ob die Spalte in diesem Datensatz auch belegt war.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Update-Record-Funktion (ähnlich UPDATE)">Bearbeiten</a>]</span> <span class="mw-headline" id="Update-Record-Funktion_.28.C3.A4hnlich_UPDATE.29">Update-Record-Funktion (ähnlich UPDATE)</span></h4>
+<pre>
+#------------------------------------------------------------------------------
+function update_record(&amp;$_data, $recno, $_record, $expand=false)
+{
+    $cols_updated = 0;
+
+    foreach ($_record as $colname =&gt; $data)
+    {
+        if ($expand or isset($_data[$colname][$recno]))
+        {
+            $_data[$colname][$recno] = $data;
+            $cols_updated++;
+        }
+    }
+
+    return $cols_updated;
+}
+#------------------------------------------------------------------------------
+</pre>
+<h5><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: Eräuterungen:">Bearbeiten</a>]</span> <span class="mw-headline" id="Er.C3.A4uterungen:_3">Eräuterungen:</span></h5>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: Insert-Record-Funktion (ähnlich INSERT, REPLACE, ALTER)">Bearbeiten</a>]</span> <span class="mw-headline" id="Insert-Record-Funktion_.28.C3.A4hnlich_INSERT.2C_REPLACE.2C_ALTER.29">Insert-Record-Funktion (ähnlich INSERT, REPLACE, ALTER)</span></h4>
+<pre>
+#------------------------------------------------------------------------------
+function insert_record(&amp;$_data, $recno, $_record, $expand=false, $overwrite=false)
+{
+    $cols_inserted = 0;
+
+    if (!$overwrite)
+    {
+        foreach($_record as $colname =&gt; $data)
+        {
+            if (isset($_data[$colname][$recno]))
+            {
+                return 0;
+            }
+        }
+    }
+
+    foreach ($_record as $colname =&gt; $data)
+    {
+        if ($expand or isset($_data[$colname]))
+        {
+            $_data[$colname][$recno] = $data;
+            $cols_inserted++;
+        }
+    }
+
+    return $cols_inserted;
+}
+#------------------------------------------------------------------------------
+</pre>
+<h5><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: Eräuterungen:">Bearbeiten</a>]</span> <span class="mw-headline" id="Er.C3.A4uterungen:_4">Eräuterungen:</span></h5>
+<p>Die Funktion übernimmt in $_record ein Array mit einem Datensatz und trägt diesen unter der $recno in das Array $_data ein. Bleibt $overwrite==false, wird der Eintrag nur dann vorgenommen, wenn noch kein Index mit dem Wert $recno im Array $_data vorhanden ist. Setzt man $expand==true, werden diejenigen Spalten, die im Datensatz zusätzlich vorhanden sind, in $_data angelegt.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: Zeilenarray zum Spaltenarray umbauen">Bearbeiten</a>]</span> <span class="mw-headline" id="Zeilenarray_zum_Spaltenarray_umbauen">Zeilenarray zum Spaltenarray umbauen</span></h3>
+<pre>
+$_spaltenarr = array();
+
+foreach ($_zeilenarr as $key =&gt; $_record)
+{
+    insert_record($_spaltenarr, $key, $_record, true)
+}
+</pre>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: Diverse Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Diverse_Funktionen"> Diverse Funktionen </span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: Musterdaten">Bearbeiten</a>]</span> <span class="mw-headline" id="Musterdaten"> Musterdaten </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>  <span class="co2">### musterdaten.php ### utf-8 ### ÄÖÜäöü
+</span>
+<span class="re0">$_sparr</span> <span class="sy0">=</span> <span class="kw3">array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'vorname'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'strasse'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'ort'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'date'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'vorname'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Thomas'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Tollwut'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'strasse'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Tollkirschenweg'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'ort'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Torberg'</span><span class="sy0">;</span>
+&#160;
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'vorname'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Michaela'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Mustermann'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'strasse'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Moorhuhnsiedlung'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'ort'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'München'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'telefon'</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'080/555333-0'</span><span class="sy0">;</span>
+&#160;
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'vorname'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Paula'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Pingel'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'strasse'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Prachtallee'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'ort'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Petersburg'</span><span class="sy0">;</span>
+&#160;
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'vorname'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Karel'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Gott'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'strasse'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'An der Stadthalle'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'ort'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Prag'</span><span class="sy0">;</span>
+&#160;
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'vorname'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">5</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Schlomo'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">5</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Freud'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'strasse'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">5</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Universitätspark'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'ort'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">5</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Wien'</span><span class="sy0">;</span>
+<span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'telefon'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">5</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'0815/4711-110'</span><span class="sy0">;</span>
+&#160;
+<span class="sy1">?&gt;</span></pre></div></div></div>
+</div>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=25" title="Abschnitt bearbeiten: Spaltenarray zum Zeilenarray umbauen">Bearbeiten</a>]</span> <span class="mw-headline" id="Spaltenarray_zum_Zeilenarray_umbauen"> Spaltenarray zum Zeilenarray umbauen </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>  <span class="co2">### col2row.php ### utf-8 ### ÄÖÜäöü
+</span>
+<span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'content-type: text/html; Charset=utf-8'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">include</span> musterdaten<span class="sy0">.</span>php<span class="sy0">;</span>
+&#160;
+<span class="co2">#===============================================================================
+</span><span class="kw2">function</span> array_col2row<span class="br0">&#40;</span><span class="re0">$_data</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="re0">$_rows</span> <span class="sy0">=</span> <span class="kw3">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$_data</span> <span class="kw1">as</span> <span class="re0">$col</span> <span class="sy0">=&gt;</span> <span class="re0">$_values</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">is_array</span><span class="br0">&#40;</span><span class="re0">$_values</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+            <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_values</span> <span class="kw1">as</span> <span class="re0">$key</span> <span class="sy0">=&gt;</span> <span class="re0">$param</span><span class="br0">&#41;</span>
+	    <span class="br0">&#123;</span>
+		<span class="re0">$_rows</span><span class="br0">&#91;</span><span class="re0">$key</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="re0">$col</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="re0">$param</span><span class="sy0">;</span>
+	    <span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">return</span> <span class="re0">$_rows</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="co2">#===============================================================================
+</span>
+<span class="kw1">echo</span> <span class="st0">&quot;&lt;pre&gt;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="kw3">print_r</span><span class="br0">&#40;</span>array_col2row<span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st0">&quot;&lt;/pre&gt;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>	
+&#160;
+<span class="sy1">?&gt;</span></pre></div></div></div>
+</div>
+<p><br />
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=26" title="Abschnitt bearbeiten: Sortierte Ausgabe">Bearbeiten</a>]</span> <span class="mw-headline" id="Sortierte_Ausgabe"> Sortierte Ausgabe </span></h4>
+<p><b>Sortier-Typen</b> laut PHP-Handbuch [<a rel="nofollow" class="external autonumber" href="http://de3.php.net/manual/en/function.sort.php">[1]</a>]
+</p>
+<ul><li> SORT_REGULAR - vergleiche Einträge normal (ohne die Typen zu ändern)
+</li><li> SORT_NUMERIC - vergleiche Einträge numerisch
+</li><li> SORT_STRING - vergleiche Einträge als Strings
+</li><li> SORT_LOCALE_STRING - vergleiche Einträge als Strings, basierend auf den aktuellen Locale-Einstellungen. Wurde in PHP 4.4.0 und 5.0.2 hinzugefügt. Es wird die System-Locale benutzt, die mittels setlocale() geändert werden kann.
+</li><li> SORT_NATURAL - Einträge in natürlicher Ordnung sortieren, wie bei natsort()
+</li><li> SORT_FLAG_CASE - Kann kombiniert werden (|, bitweises ODER) mit SORT_STRING oder SORT_NATURAL um Strings  ohne Beachtung von Versalien und Gemeinen zu sortieren.
+</li></ul>
+<p><br />
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>  <span class="co2">### sorted_output.php ### utf-8 ### ÄÖÜäöü
+</span>
+<span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'content-type: text/html; Charset=utf-8'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">include</span> musterdaten<span class="sy0">.</span>php<span class="sy0">;</span>
+&#160;
+<span class="kw1">echo</span> <span class="st0">&quot;&lt;pre&gt;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">asort</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span><span class="sy0">,</span>SORT_NATURAL<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">asort</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'ort'</span><span class="br0">&#93;</span><span class="sy0">,</span>SORT_NATURAL<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">asort</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'strasse'</span><span class="br0">&#93;</span><span class="sy0">,</span>SORT_NATURAL<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">asort</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'vorname'</span><span class="br0">&#93;</span><span class="sy0">,</span>SORT_NATURAL<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+&#160;
+<span class="kw1">echo</span> <span class="st0">&quot;-------------------------------------<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st0">&quot;Ausgabe sortiert nach [name]:<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span> <span class="kw1">as</span> <span class="re0">$key</span> <span class="sy0">=&gt;</span> <span class="re0">$param</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="kw1">echo</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>Satz Nr <span class="es4">$key</span>:<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_sparr</span> <span class="kw1">as</span> <span class="re0">$name</span> <span class="sy0">=&gt;</span> <span class="re0">$_col</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="re0">$name</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="re0">$key</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+            <span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="st0">&quot;[<span class="es4">$name</span>] =&gt; {<span class="es4">$_sparr</span>[<span class="es4">$name</span>][<span class="es4">$key</span>]}&quot;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">echo</span> <span class="st0">&quot;-------------------------------------<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st0">&quot;Ausgabe sortiert nach [vorname]:<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'vorname'</span><span class="br0">&#93;</span> <span class="kw1">as</span> <span class="re0">$key</span> <span class="sy0">=&gt;</span> <span class="re0">$param</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="kw1">echo</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>Satz Nr <span class="es4">$key</span>:<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_sparr</span> <span class="kw1">as</span> <span class="re0">$name</span> <span class="sy0">=&gt;</span> <span class="re0">$_col</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="re0">$name</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="re0">$key</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+            <span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="st0">&quot;[<span class="es4">$name</span>] =&gt; {<span class="es4">$_sparr</span>[<span class="es4">$name</span>][<span class="es4">$key</span>]}&quot;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">echo</span> <span class="st0">&quot;-------------------------------------<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st0">&quot;Ausgabe sortiert nach [ort]:<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="st_h">'ort'</span><span class="br0">&#93;</span> <span class="kw1">as</span> <span class="re0">$key</span> <span class="sy0">=&gt;</span> <span class="re0">$param</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="kw1">echo</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>Satz Nr <span class="es4">$key</span>:<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_sparr</span> <span class="kw1">as</span> <span class="re0">$name</span> <span class="sy0">=&gt;</span> <span class="re0">$_col</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="br0">&#91;</span><span class="re0">$name</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="re0">$key</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+            <span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="st0">&quot;[<span class="es4">$name</span>] =&gt; {<span class="es4">$_sparr</span>[<span class="es4">$name</span>][<span class="es4">$key</span>]}&quot;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">echo</span> <span class="st0">&quot;&lt;/pre&gt;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>	
+&#160;
+<span class="sy1">?&gt;</span></pre></div></div></div>
+</div>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=27" title="Abschnitt bearbeiten: Funktion für die einfache Sortierung">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktion_f.C3.BCr_die_einfache_Sortierung"> Funktion für die einfache Sortierung </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>   <span class="co2">### array_get_sorted.php ### utf-8 ### ÄÖÜäöü
+</span>
+<span class="co2">#===============================================================================
+</span><span class="kw2">function</span> array_get_sortet<span class="br0">&#40;</span><span class="sy0">&amp;</span><span class="re0">$_data</span><span class="sy0">,</span> <span class="re0">$sortkey</span><span class="sy0">,</span> <span class="re0">$sorttype</span> <span class="sy0">=</span> SORT_NATURAL<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_data</span><span class="br0">&#91;</span><span class="re0">$sortkey</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+    <span class="kw3">asort</span><span class="br0">&#40;</span><span class="re0">$_data</span><span class="br0">&#91;</span><span class="re0">$sortkey</span><span class="br0">&#93;</span><span class="sy0">,</span> <span class="re0">$sorttype</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$_sortet</span> <span class="sy0">=</span> <span class="kw4">false</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_data</span><span class="br0">&#91;</span><span class="re0">$sortkey</span><span class="br0">&#93;</span> <span class="kw1">as</span> <span class="re0">$key</span> <span class="sy0">=&gt;</span> <span class="re0">$param</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+	<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$_data</span> <span class="kw1">as</span> <span class="re0">$name</span> <span class="sy0">=&gt;</span> <span class="re0">$_col</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+	    <span class="re0">$_rec</span><span class="br0">&#91;</span><span class="re0">$name</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_data</span><span class="br0">&#91;</span><span class="re0">$name</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="re0">$key</span><span class="br0">&#93;</span><span class="br0">&#41;</span>?<span class="re0">$_data</span><span class="br0">&#91;</span><span class="re0">$name</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="re0">$key</span><span class="br0">&#93;</span><span class="sy0">:</span><span class="kw4">NULL</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re0">$_sortet</span><span class="br0">&#91;</span><span class="re0">$key</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="re0">$_rec</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">return</span> <span class="re0">$_sortet</span><span class="sy0">;</span> 
+<span class="br0">&#125;</span>
+&#160;
+<span class="co2">#===============================================================================
+</span><span class="co2"># php unit test
+</span><span class="co2">#===============================================================================
+</span>
+<span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'content-type: text/html; Charset=utf-8'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">include</span> musterdaten<span class="sy0">.</span>php<span class="sy0">;</span>
+&#160;
+<span class="kw1">echo</span> <span class="st0">&quot;&lt;pre&gt;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="kw3">print_r</span><span class="br0">&#40;</span>array_get_sortet<span class="br0">&#40;</span><span class="re0">$_sparr</span><span class="sy0">,</span> <span class="st_h">'telefon'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st0">&quot;&lt;/pre&gt;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>	
+&#160;
+&#160;
+<span class="sy1">?&gt;</span></pre></div></div></div>
+</div>
+<p><br />
+<b>Ergebnis</b>
+</p>
+<pre>
+Array
+(
+    [2] =&gt; Array
+    (
+        [vorname] =&gt; Michaela
+        [name] =&gt; Mustermann
+        [strasse] =&gt; Moorhuhnsiedlung
+        [ort] =&gt; München
+        [telefon] =&gt; 080/555333-0
+        [date] =&gt; 
+    )
+
+    [5] =&gt; Array
+    (
+        [vorname] =&gt; Schlomo
+        [name] =&gt; Freud
+        [strasse] =&gt; Universitätspark
+        [ort] =&gt; Wien
+        [telefon] =&gt; 0815/4711-110
+        [date] =&gt; 
+    )
+)
+
+
+</pre>
+<h5><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=28" title="Abschnitt bearbeiten: Erläuterungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Erl.C3.A4uterungen"> Erläuterungen </span></h5>
+<p>Führt man mit der Funktion <code>array_get_sorted()</code> eine Sortierung über eine Spalte durch, werden in das Ergebnisarray nur diejenigen Datensätze aufgenommen, die auch ein Element mit dem Bezeichner (Sortierspalte) enthlaten. Einen Wert muss dieses Element nicht enthalten.
+</p><p>Sortiert wird hier die angebene Spalte des Originalarrays, da es als Referenz an die Funktion übergeben wird. Wenn man das nicht will, muss man die Referenzanweisung <b>&amp;</b> aus dem Funktionskopf entfernen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=29" title="Abschnitt bearbeiten: Linearisierung tiefer Arrays">Bearbeiten</a>]</span> <span class="mw-headline" id="Linearisierung_tiefer_Arrays">Linearisierung tiefer Arrays</span></h3>
+<p>Manchmal ist es notwendig, alle Elemente tiefer Baumstrukturen zu kennen. Hierzu kann man die Pfade zu den Elementen auflösen und jeweils als einzeiligen String darstellen. Jedes Element des Baumes bekommt damit eine Zeile in einer Liste.
+</p>
+<pre>
+#------------------------------------------------------------------------------
+    function linearize($_source, &amp;$_target, $path='')
+    {
+        if (is_array($_source))
+        {
+            foreach($_source  as $key =&gt; $val)
+            {
+                linearize($val, &amp;$_target, $path.'.'.$key);
+            }    
+        }
+        else
+        {
+            $_target[] = ltrim($path,'.');
+        }
+    }
+#------------------------------------------------------------------------------
+</pre>
+<p>Aus dem Beispielarray
+</p>
+<pre>
+    $_testarr = array();
+
+    $_testarr['vorname'][0] = 'Hans';
+    $_testarr['vorname'][1] = 'Klaus';
+    $_testarr['vorname'][2] = 'Peter';
+    $_testarr['name']       = 'Mustermann';
+    $_testarr['plz']        = '37444';
+    $_testarr['interessen']['privat'][0] = 'lesen';
+    $_testarr['interessen']['privat'][1] = 'Fußball';
+    $_testarr['interessen']['beruflich'] = 'PHP';
+</pre>
+<p>wird durch Anwendung der obigen Funktion die folgende Liste:
+</p>
+<pre>
+    [0] =&gt; vorname.0
+    [1] =&gt; vorname.1
+    [2] =&gt; vorname.2
+    [3] =&gt; name
+    [4] =&gt; plz
+    [5] =&gt; interessen.privat.0
+    [6] =&gt; interessen.privat.1
+    [7] =&gt; interessen.beruflich
+</pre>
+<p>die wiederum als Array (jedoch nur als "eindimensionales") gespeichert wird.
+</p><p>Selbstverständlich kann man einen anderen "Trenner" benutzten und auch die Werte mit in die Liste aufnehmen. Der Fantasie sind da keine Grenzen gesetzt. Wichtig ist dabei nur, dass der Trenner nicht in den ursprünglichen Bezeichnern vorkommen darf und dass die Werte keine schädlichen Zeichen mehr enthalten. Diese Regeln gelten in ähnlicher Form bei CSV-Dateien.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=30" title="Abschnitt bearbeiten: Tiefes Array (Baumstruktur) aus Pfadliste erstellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Tiefes_Array_.28Baumstruktur.29_aus_Pfadliste_erstellen">Tiefes Array (Baumstruktur) aus Pfadliste erstellen</span></h3>
+<p>Aus einer solchen Zeile der Pfadliste kann mit mit der folgenden Funktion wieder ein tiefes Array erstellen. Durch eine Schleife über die Liste und Addition der tiefen Arrays kann das Gesamtarray wieder erzeugt werden.
+</p><p><br />
+</p>
+<pre>
+#------------------------------------------------------------------------------
+    function make_deep_array($array_pathstr, $value=NULL, $sep='.')
+    {
+        $_arr = array();
+        $array_pathstr = trim($array_pathstr, $sep);
+        $_ref =&amp; $_arr;
+
+        while (strlen($array_pathstr) &gt; 0)
+        {
+            $path = strtok($array_pathstr, $sep); 
+            $array_pathstr = substr($array_pathstr,strlen($path)+1);
+            $_ref[$path] = NULL;
+            $_ref =&amp; $_ref[$path];
+        }
+     
+        $_ref = $value;
+     
+        return $_arr;
+    }
+#------------------------------------------------------------------------------
+</pre>
+<p><br />
+Mit ein wenig Überlegung kann man sich die Funktionen selbstverständlich auch so umbauen, dass nicht nur die Pfade, sondern auch die Werte mit berücksichtigt werden.
+</p><p>Die "Name-Value"-Pärchen kann man dann auch bequem in einer Datei abscpeichern, und so eine incrementelle Serialisierung von Arrays realisieren. Im Gegensatz zu PHPs mit serialize()/unserialize() erzeugten Strukturen, kann man eine derartige Liste auch partiell einlesen und verarbeiten. Die Listen unterliegen aber auch festen Regeln, die man streng beachten muss, wenn man keine Datenverluste erleiden will.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;section=31" title="Abschnitt bearbeiten: Arrays und Dateien">Bearbeiten</a>]</span> <span class="mw-headline" id="Arrays_und_Dateien">Arrays und Dateien</span></h2>
+<p>Über das Holen und Wegschreiben von Daten 
+</p>
+<ul><li> Von CSV zum Spaltenarray und zurück
+</li><li> Serialisierung mit serialize()
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 356/1000000
+Post‐expand include size: 1812/2097152 bytes
+Template argument size: 1144/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1420-0!*!*!!de-formal!*!* and timestamp 20150301052146 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;oldid=23589">http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;oldid=23589</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=PHP%2FAnwendung+und+Praxis%2FArrays+mal+anders+herum" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum&amp;oldid=23589" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/PHP-2FAnwendung_und_Praxis-2FArrays_mal_anders_herum" title="Spezial:Durchsuchen/PHP-2FAnwendung und Praxis-2FArrays mal anders herum">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 31. Oktober 2014 um 03:18 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 3.154-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.107 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/Arrays_mal_anders_herum by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

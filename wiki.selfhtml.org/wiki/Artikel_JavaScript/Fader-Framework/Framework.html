@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Artikel:JavaScript/Fader-Framework/Framework by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Tutorials/Fader-Framework/Framework – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="canonical" href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Framework" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Tutorials/Fader-Framework/Framework","wgTitle":"JavaScript/Tutorials/Fader-Framework/Framework","wgCurRevisionId":21044,"wgArticleId":1113,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Tutorials/Fader-Framework/Framework","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgRedirectedFrom":"Artikel:JavaScript/Fader-Framework/Framework","wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-html4strict {line-height: normal;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html4strict.source-html4strict .de1, .html4strict.source-html4strict .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html4strict.source-html4strict  {font-family:monospace;}
+.html4strict.source-html4strict .imp {font-weight: bold; color: red;}
+.html4strict.source-html4strict li, .html4strict.source-html4strict .li1 {font-weight: normal; vertical-align:top;}
+.html4strict.source-html4strict .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html4strict.source-html4strict .li2 {font-weight: bold; vertical-align:top;}
+.html4strict.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict.source-html4strict .kw3 {color: #000066;}
+.html4strict.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict.source-html4strict .br0 {color: #66cc66;}
+.html4strict.source-html4strict .sy0 {color: #66cc66;}
+.html4strict.source-html4strict .st0 {color: #ff0000;}
+.html4strict.source-html4strict .nu0 {color: #cc66cc;}
+.html4strict.source-html4strict .sc-2 {color: #404040;}
+.html4strict.source-html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict.source-html4strict .sc0 {color: #00bbdd;}
+.html4strict.source-html4strict .sc1 {color: #ddbb00;}
+.html4strict.source-html4strict .sc2 {color: #009900;}
+.html4strict.source-html4strict .ln-xtra, .html4strict.source-html4strict li.ln-xtra, .html4strict.source-html4strict div.ln-xtra {background-color: #ffc;}
+.html4strict.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Tutorials/Fader-Framework/Framework" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Tutorials/Fader-Framework/Framework&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Tutorials_Fader-Framework_Framework skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Tutorials/Fader-Framework/Framework</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/JavaScript" title="JavaScript">JavaScript</a> | <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials" title="JavaScript/Tutorials">Tutorials</a> | <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework" title="JavaScript/Tutorials/Fader-Framework">Fader-Framework</a></span>(Weitergeleitet von <a href="http://wiki.selfhtml.org/index.php?title=Artikel:JavaScript/Fader-Framework/Framework&amp;redirect=no" title="Artikel:JavaScript/Fader-Framework/Framework">Artikel:JavaScript/Fader-Framework/Framework</a>)</div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="note-box note-box-continuation">
+<table class="note-box-text">
+<tr>
+<td><a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/neuer_Ansatz" title="JavaScript/Tutorials/Fader-Framework/neuer Ansatz">← Geänderter Ansatz zur Fader-Erzeugung</a>
+</td>
+<td>
+</td>
+<td> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Projekt_Fader-Framework" title="JavaScript/Tutorials/Fader-Framework/Projekt Fader-Framework">Projekt: Fader-Framework →</a>
+</td></tr></table>
+</div>
+<div class="tocright"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Ein_Framework_zur_Verwaltung_der_Fader-Objekte"><span class="tocnumber">1</span> <span class="toctext">Ein Framework zur Verwaltung der Fader-Objekte</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Eine_CSS-Datei_nachladen"><span class="tocnumber">2</span> <span class="toctext">Eine CSS-Datei nachladen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Autostart_eines_JavaScriptes"><span class="tocnumber">3</span> <span class="toctext">Autostart eines JavaScriptes</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Ein_mit_anderen_Scripten_kompatibler_Autostart"><span class="tocnumber">4</span> <span class="toctext">Ein mit anderen Scripten kompatibler Autostart</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Ger.C3.BCst_des_Framework-Scripts"><span class="tocnumber">5</span> <span class="toctext">Gerüst des Framework-Scripts</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Verschiedene_Zeitlichkeiten_aufl.C3.B6sen"><span class="tocnumber">6</span> <span class="toctext">Verschiedene Zeitlichkeiten auflösen</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Fader_mit_Autostart"><span class="tocnumber">7</span> <span class="toctext">Fader mit Autostart</span></a></li>
+</ul>
+</td></tr></table>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Ein Framework zur Verwaltung der Fader-Objekte">Bearbeiten</a>]</span> <span class="mw-headline" id="Ein_Framework_zur_Verwaltung_der_Fader-Objekte"> Ein Framework zur Verwaltung der Fader-Objekte </span></h2>
+<p>Wenn die Fader-Funktionalität auf mehreren Seiten einer Webpräsenz eingesetzt werden soll, dann ist es sehr umständlich, den JavaScript-Code dafür immer im Kopf einer jeden Datei zu notieren. Auch Änderungen an der Funktionalität lassen sich so nur sehr schwer pflegen. Daher ist es sinnvoll, diese Funktionalität in eine externe Datei auszulagern, die dann bei Bedarf ins Dokument <a href="http://wiki.selfhtml.org/wiki/JavaScript/Einführung#JavaScript-Dateien_in_HTML_referenzieren" title="JavaScript/Einführung"> nachgeladen</a> wird.
+</p><p>Eine solche Vorgehensweise entspräche auch dem Ideal von "<a href="http://wiki.selfhtml.org/wiki/Unobtrusive_JavaScript" title="Unobtrusive JavaScript" class="mw-redirect">unobtrusive JavaScript</a>" (bedeutet in etwa "unaufdringliches" oder "unauffälliges" JavaScript), indem man den JavaScript-Code gänzlich aus dem HTML-Dokument verbannt. Auch wenn das in der Praxis vielleicht nie überall gelingen wird, so lohnt es sich doch in dem Moment, in dem immer wieder benötigte Funktionalitäten zentral bereitgestellt werden. Außerdem gelingt es so viel leichter, JavaScript-Funktionalität als eine zusätzliche "Verhaltens"-Schicht einer Webseite von der reinen Inhaltsschicht und der rein visuellen Präsentationsschicht zu trennen. Der Nachvollziehbarkeit der Beispiele in diesem Artikel wegen wird das aber erst gegen Ende tatsächlich so gehandhabt werden.
+</p><p>Für dieses Projekt wäre es daher ganz praktisch, wenn man eine Rahmenapplikation hätte, die das Handhaben und die Erzeugung der Fader übernehmen, und deren Code außerdem aus einer externen Datei nachladen könnte. Auf diese Weise bräuchte sie vom Browser nur einmal geladen werden, auch wenn sie auf mehreren Unterseiten Verwendung findet. Diese Rahmenapplikation könnte sich dann beim Laden der Seite selbst initialisieren, um sowohl die Fader einzurichten (und vielleicht sogar automatisch zu starten), als auch den benötigten CSS-Code automatisch ins Dokument zu integrieren.
+</p><p>Um alle diese Forderungen zu erfüllen, sind Mechanismen erforderlich, die nun im Einzelnen behandelt werden, bevor sie in einem größeren Rahmen-Objekt (Framework) zusammengefasst werden.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Eine CSS-Datei nachladen">Bearbeiten</a>]</span> <span class="mw-headline" id="Eine_CSS-Datei_nachladen"> Eine CSS-Datei nachladen </span></h2>
+<p>Eine CSS-Datei nachzuladen bedeutet, ein <code>&lt;link&gt;</code>-Element dynamisch zu erstellen, ihm die notwendigen Attribut-Werte zuzuweisen, und es in den <code>&lt;head&gt;</code>-Bereich des Dokuments einzuhängen. Der Browser lädt dann diese Datei nach und aktualisiert die Darstellung des Dokuments.
+</p><p>Die Erzeugung eines neuen HTML-Elements geschieht mit der <code>document</code>-Methode <code><a href="http://wiki.selfhtml.org/wiki/JavaScript/Objekte/DOM/document/createElement" title="JavaScript/Objekte/DOM/document/createElement"> createElement()</a></code>, der als Parameter der Name des Elements (in diesem Fall "link") übergeben wird. Mit der Methode <code><a href="http://wiki.selfhtml.org/wiki/JavaScript/Objekte/DOM/element/appendChild" title="JavaScript/Objekte/DOM/element/appendChild"> appendChild()</a></code> kann das so erzeugte Element einem anderen Element als Kindelement am Ende angefügt werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_CSS_nachladen.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;!doctype html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>CSS-Ressource nachladen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span>&gt;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">        <span class="kw1">function</span> cssNachladen<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">var</span> e <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span><span class="st0">&quot;link&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+            e.<span class="me1">type</span> <span class="sy0">=</span> <span class="st0">&quot;text/css&quot;</span><span class="sy0">;</span>
+            e.<span class="me1">rel</span> <span class="sy0">=</span> <span class="st0">&quot;stylesheet&quot;</span><span class="sy0">;</span>
+            e.<span class="me1">href</span> <span class="sy0">=</span> <span class="st0">&quot;beispiel.css&quot;</span><span class="sy0">;</span>
+            document.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span><span class="st0">&quot;head&quot;</span><span class="br0">&#41;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>e<span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span></pre></div></div><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1">    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+<p><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;&lt;<span class="kw2">body</span>&gt;</span>
+</p>
+<pre>   <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>CSS-Datei nachladen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+   <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Klicken sie auf den Link, um eine CSS-Datei dynamisch nachzuladen!<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+   <span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:cssNachladen()&quot;</span>&gt;</span>nachladen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+</pre>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_CSS_nachladen.html">ansehen …</a></div></div>
+<p>Die Funktion <code>cssNachladen</code>, die durch einen Klick auf den Link aufgerufen wird, erzeugt ein <code>&lt;link&gt;</code>-Elementobjekt und speichert es in der Variablen <code>e</code>. Anschließend werden dem <code>link</code>-Objekt die für ein <code>&lt;link&gt;</code>-Element wichtigen Attribute wie <code>type</code>, <code>rel</code> und <code>href</code> als Objekt-Eigenschaften verliehen. Schlussendlich wird das Element über <code>appendChild</code> an das Ende des <code>&lt;head&gt;</code>-Elements angehängt.
+</p><p>Die Reihenfolge, in der Stylesheets im <code>&lt;head&gt;</code> einer Datei referenziert werden, kann Auswirkungen auf die Darstellung haben. CSS-Regeln einer vorher referenzierten Datei können nämlich durch anderslautende Regeln einer danach referenzierten Datei überschrieben werden.
+</p><p>Im Standardumfang von JavaScript existiert zwar ein Objekt <code>document.body</code>, jedoch kein Objekt <code>document.head</code>, weshalb hier der Umweg über <code>document.getElementsByTagName("head")[0]</code> genommen wurde, um das <code>&lt;head&gt;</code>-Element anzusprechen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Autostart eines JavaScriptes">Bearbeiten</a>]</span> <span class="mw-headline" id="Autostart_eines_JavaScriptes"> Autostart eines JavaScriptes </span></h2>
+<p>Damit sich ein JavaScript nach dem vollständigen Laden der Seite selbst aktiviert, hat man früher im <code>&lt;body&gt;</code>-Element ein <code>onload</code>-Attribut notiert. Dieses enthielt JavaScript-Anweisungen, die nach dem vollständigen Laden der Seite ausgeführt wurden. Das Problem bei dieser Methode ist, dass wieder JavaScript-Code im HTML-Dokument steht, der in externe Dateien ausgelagert werden sollte.
+</p><p>Es gibt eine Eigenschaft des <code>window</code>-Objektes, die auch <code>onload</code> lautet, und in der eine Referenz auf eine Funktion abgelegt werden kann, um denselben Effekt wie das <code>onload</code>-Attribut im <code>&lt;body&gt;</code>-Element zu erreichen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_autostart.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;!doctype html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">meta</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Autostart<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span>&gt;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">        <span class="kw1">function</span> fertig<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            alert<span class="br0">&#40;</span><span class="st0">&quot;Das Laden hat ein Ende!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+&#160;
+        window.<span class="me1">onload</span> <span class="sy0">=</span> fertig<span class="sy0">;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1">    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Autostart<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Nach dem Laden müsste eine Meldung erscheinen.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im script-Bereich wird eine Funktion <code>fertig</code> definiert. Anschließend wird dem <code>window</code>-Objekt in die Eigenschaft <code>onload</code> eine Referenz auf die Funktion <code>fertig</code> gespeichert (man beachte das fehlende Klammernpaar nach <code>fertig</code>!). Dadurch wird erreicht, dass nach dem vollständigen Laden der Seite, die Funktion <code>fertig</code> ausgeführt wird.</div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_autostart.html">ansehen …</a></div></div>
+<p>Wenn Sie <code>window.onload</code> wie im obigen Beispiel verwenden, dann können Sie keine anderen Scripte einbinden, die auch diese Eigenschaft des <code>window</code>-Objektes nutzen, da Sie diesen Scripten die Startmöglichkeit verderben. Wie man es besser machen könnte, wird in einem der folgenden Beispiele behandelt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Ein mit anderen Scripten kompatibler Autostart">Bearbeiten</a>]</span> <span class="mw-headline" id="Ein_mit_anderen_Scripten_kompatibler_Autostart"> Ein mit anderen Scripten kompatibler Autostart </span></h2>
+<p>Wie bereits besprochen, kann ein simples Ändern von <code>window.onload</code> die Funktionalität anderer Scripte empfindlich stören. Darum sollten Sie vorher den Wert aus <code>window.onload</code> in eine Variable "retten", um ihn zu gegebener Zeit auszuführen, damit die Funktionalität anderer Scripte gewahrt bleibt.
+</p><p>Das folgende Beispiel zeigt, wie eine vorherige Funktion in <code>window.onload</code> nicht verloren geht:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> fertig<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    alert<span class="br0">&#40;</span><span class="st0">&quot;Das Laden hat ein Ende!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">var</span> oldWindowOnload <span class="sy0">=</span> window.<span class="me1">onload</span><span class="sy0">;</span>
+&#160;
+window.<span class="me1">onload</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">typeof</span><span class="br0">&#40;</span>oldWindowOnload<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">&quot;function&quot;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        oldWindowOnload<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    fertig<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel wird der Inhalt von <code>window.onload</code> in einer Variablen gespeichert, damit die in <code>window.onload</code> eventuell vorhandene Funktionsreferenz nicht verloren geht. Danach wird <code>window.onload</code> mit einer neuen Funktion gefüllt, die in obigem Code-Beispiel als anonyme Funktion direkt an Ort und Stelle definiert wird. In dieser anonymen Funktion wird zuerst mit dem <code>typeof</code>-Operator geprüft, ob in der Variablen auch wirklich eine Funktionsreferenz enthalten ist, um diese im Bedarfsfalle auszuführen (man beachte das Klammernpaar hinter <code>oldWindowOnload()</code>!). Danach wird die selbstdefinierte Funktion <code>fertig</code> ausgeführt.</div>
+</div>
+<p>Die ursprüngliche Reihenfolge der Funktionen bleibt gewahrt. Die anonyme neue Funktion kapselt sowohl eine bereits vorhandene Funktion als auch die zusätzlich auszuführende Funktion (im obigen Beispiel <code>fertig</code>) in einer Weise, dass die bereits vorhandene Funktion zuerst ausgeführt wird.
+</p><p>Sicherlich ist Ihnen aufgefallen, dass hier die Verwendung einer globalen Variable ebenso problematisch ist, wie sie das schon bei mehreren Fadern auf einer Seite war. Daher eignet sich hier der Einsatz eines Objektes, das den Inhalt von <code>window.onload</code> in einer Eigenschaft aufnimmt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Gerüst des Framework-Scripts">Bearbeiten</a>]</span> <span class="mw-headline" id="Ger.C3.BCst_des_Framework-Scripts"> Gerüst des Framework-Scripts </span></h2>
+<p>Wenn man alle bisherigen Überlegungen zusammenfasst, dann muss ein globales Objekt namens <code>FaderFramework</code> her: Dieses initialisiert sich nach dem Laden der Seite selbst, ist zu anderen Scripts kompatibel (indem es deren Autostart nicht zerstört), bindet eine zugehörige CSS-Datei und enthält eine Methode <code>init</code>, mit der sich Fader erstellen/einrichten lassen. Das sieht dann vorläufig so aus:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_framework1.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;!doctype html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">meta</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Test1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span>&gt;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">        <span class="kw1">var</span> FaderFramework <span class="sy0">=</span> <span class="br0">&#123;</span>
+&#160;
+            oldWinOnLoad<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+&#160;
+            init<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span>einstellungen<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                alert<span class="br0">&#40;</span><span class="st0">&quot;Fader mit &quot;</span>
+                    <span class="sy0">+</span> einstellungen.<span class="me1">images</span>.<span class="me1">length</span>
+                    <span class="sy0">+</span> <span class="st0">&quot; Bildern soll für das Element mit der ID '&quot;</span>
+                    <span class="sy0">+</span> einstellungen.<span class="me1">id</span>
+                    <span class="sy0">+</span> <span class="st0">&quot;' eingerichtet werden!&quot;</span>
+                <span class="br0">&#41;</span><span class="sy0">;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+&#160;
+            start<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">this</span>.<span class="me1">oldWinOnLoad</span> <span class="sy0">=</span> window.<span class="me1">onload</span><span class="sy0">;</span>
+&#160;
+                window.<span class="me1">onload</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">typeof</span><span class="br0">&#40;</span>FaderFramework.<span class="me1">oldWinOnLoad</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">&quot;function&quot;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                        FaderFramework.<span class="me1">oldWinOnLoad</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="br0">&#125;</span>
+                    FaderFramework.<span class="me1">onload</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                <span class="br0">&#125;</span><span class="sy0">;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+&#160;
+            onload<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">var</span> e <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span><span class="st0">&quot;link&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                e.<span class="me1">type</span> <span class="sy0">=</span> <span class="st0">&quot;text/css&quot;</span><span class="sy0">;</span>
+                e.<span class="me1">rel</span> <span class="sy0">=</span> <span class="st0">&quot;stylesheet&quot;</span><span class="sy0">;</span>
+                e.<span class="me1">href</span> <span class="sy0">=</span> <span class="st0">&quot;beispiel.css&quot;</span><span class="sy0">;</span>
+                document.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span><span class="st0">&quot;head&quot;</span><span class="br0">&#41;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>e<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+                alert<span class="br0">&#40;</span><span class="st0">&quot;Ladevorgang beendet.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+        FaderFramework.<span class="me1">start</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1">    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span>&gt;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">        FaderFramework.<span class="me1">init</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+            id<span class="sy0">:</span> <span class="st0">&quot;fader_test_1&quot;</span><span class="sy0">,</span>
+            images<span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">&quot;images/pic1.jpg&quot;</span><span class="sy0">,</span> <span class="st0">&quot;images/pic2.jpg&quot;</span><span class="br0">&#93;</span>
+        <span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1">     <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Test unseres FaderFramework-Objektes<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Unser Objekt startet sich nach dem Laden selbst. Es sollte nach dem Laden eine Meldung erscheinen.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_framework1.html">ansehen …</a></div></div>
+<p>Das Objekt <code>FaderFramework</code> wird als Objekt-Literal notiert. Das neue Objekt bekommt eine Eigenschaft <code>oldWinOnLoad</code> und die drei Methoden <code>init</code>, <code>start</code> sowie <code>onload</code>. Die Methode <code>start</code> richtet den bereits besprochenen Autostart-Mechanismus ein, indem sie <code>window.onload</code> entsprechend manipuliert, damit nach dem Laden der Seite die <code>onload</code>-Methode dieses FaderFramework-Objektes aufgerufen werden wird.
+</p><p>Die <code>init</code>-Methode nimmt Anfragen zum Einrichten neuer Fader-Objekte entgegen und ist hier mit einer vorübergehenden Funktionalität ausgestattet: Sie meldet die wesentlichen Daten, die an sie übermittelt wurden.
+</p><p>Die <code>onload</code>-Methode erzeugt ein neues <code>&lt;link&gt;</code>-Element, welches in den <code>&lt;head&gt;</code> des Dokuments eingebunden wird, damit eine CSS-Datei nachgeladen wird. Als CSS-Datei wird eine Beispiel-Datei benutzt, die lediglich zeigen soll, dass tatsächlich neue CSS-Eigenschaften nachgeladen wurden.
+</p><p>Nach seiner Definition wird das Objekt über <code>start</code> gestartet, damit es den Autostart einrichten kann.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Bei der Notation eines Objektliterals darf - wie bereits besprochen - am Ende einer Aufzählung kein Komma mehr stehen. Deshalb steht z.B. nach <code>oldWinOnLoad</code>, <code>init</code> und <code>start</code> ein Komma, am Ende der Funktionsdefinition von <code>onload</code> jedoch nicht. Dieser Umstand sorgt immer wieder als Fehlerquelle und sollte deshalb von jedem Script-Autor jedesmal peinlich genau überprüft werden.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Verschiedene Zeitlichkeiten auflösen">Bearbeiten</a>]</span> <span class="mw-headline" id="Verschiedene_Zeitlichkeiten_aufl.C3.B6sen"> Verschiedene Zeitlichkeiten auflösen </span></h2>
+<p>Wie im obigen Beispiel zu sehen war, laufen die Teile des Scriptes zu unterschiedlichen Zeiten ab. Beispielsweise finden die <code>init</code>-Aufrufe noch während des Ladevorgangs statt - zu einem Zeitpunkt, an dem sich das Framework-Objekt selbst noch nicht initialisiert hat. Außerdem existiert zu diesem Zeitpunkt das <code>&lt;body&gt;</code>-Element noch nicht, sodass Fader-Objekte noch nicht angelegt werden können, da ein Zugriff auf das HTML-Element mit der angegebenen ID noch nicht möglich ist. Wie löst man nun dieses Problem der unterschiedlichen Zeitlichkeit auf? Es bleibt nur die Lösung, die Aufrufe vorübergehend abzuspeichern, um die tatsächliche Erstellung der Fader-Objekte zu einem späteren Zeitpunkt durchzuführen.
+</p><p>Was soll aber passieren, wenn ein Fader später erstellt werden soll, nachdem der Autostart abgearbeitet wurde und die "vorgemerkten" Fader bereits alle umgesetzt wurden? Ein solches Szenario wäre z.B. denkbar, wenn ein anderes Script Bilder aus einer Galerie ermittelt, um diese Bildergalerie durch eine Slideshow zu ersetzen (oder die Slideshow in einem Pseudofenster anzuzeigen). Hier muss der <code>init</code>-Aufruf so raffiniert reagieren, dass er diese beiden Zeitlichkeiten gleichfalls bewältigen kann.
+</p><p>Unser Framework erhält für diese Anforderungen eine neue Eigenschaft <code>inits</code>, in die die jeweiligen <code>init</code>-Aufrufe während des Ladevorgangs abgelegt werden, um später verarbeitet zu werden. <code>inits</code> wird ein Array werden, in dem die beim Funktionsaufruf von <code>init</code> übertragenen Daten abgelegt werden.
+</p><p>Nach dem Autostart wird diese Eigenschaft wieder entfernt, um dadurch der <code>init</code>-Methode zu signalisieren, dass künftige <code>init</code>-Aufrufe <strong>direkt</strong> in ein Fader-Objekt umzuwandeln sind, anstatt sie in <code>inits</code> nur vorzumerken, was ja nach dem Autostart nicht mehr existieren wird.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_framework2.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;!doctype html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">meta</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Verschiedene Zeitlichkeiten auflösen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span>&gt;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">        <span class="kw1">var</span> FaderFramework <span class="sy0">=</span> <span class="br0">&#123;</span>
+&#160;
+            oldWinOnLoad<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+            inits<span class="sy0">:</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+&#160;
+            init<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span>einstellungen<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">inits</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;Fader (&quot;</span> <span class="sy0">+</span> einstellungen.<span class="me1">id</span> <span class="sy0">+</span> <span class="st0">&quot;) wird vorgemerkt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">this</span>.<span class="me1">inits</span><span class="br0">&#91;</span><span class="kw1">this</span>.<span class="me1">inits</span>.<span class="me1">length</span><span class="br0">&#93;</span> <span class="sy0">=</span> einstellungen<span class="sy0">;</span>
+&#160;
+                <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;Fader (&quot;</span> <span class="sy0">+</span> einstellungen.<span class="me1">id</span> <span class="sy0">+</span> <span class="st0">&quot;) wird nun erzeugt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+&#160;
+            start<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                ...
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+&#160;
+            onload<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">var</span> i<span class="sy0">,</span> fader<span class="sy0">,</span> e <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span><span class="st0">&quot;link&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                ...
+                <span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;Ladevorgang beendet.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+                fader <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">inits</span><span class="sy0">;</span>
+                <span class="kw1">delete</span> <span class="kw1">this</span>.<span class="me1">inits</span><span class="sy0">;</span>
+&#160;
+                <span class="kw1">for</span> <span class="br0">&#40;</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> fader.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    <span class="kw1">this</span>.<span class="me1">init</span><span class="br0">&#40;</span>fader<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+        FaderFramework.<span class="me1">start</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1">         <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span>&gt;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">        FaderFramework.<span class="me1">init</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+            id<span class="sy0">:</span> <span class="st0">&quot;fader_test_1&quot;</span><span class="sy0">,</span>
+            images<span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">&quot;images/pic1.jpg&quot;</span><span class="sy0">,</span> <span class="st0">&quot;images/pic2.jpg&quot;</span><span class="br0">&#93;</span>
+        <span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        FaderFramework.<span class="me1">init</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+            id<span class="sy0">:</span> <span class="st0">&quot;fader_test_2&quot;</span><span class="sy0">,</span>
+            images<span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">&quot;images/pic1.jpg&quot;</span><span class="sy0">,</span> <span class="st0">&quot;images/pic2.jpg&quot;</span><span class="sy0">,</span> <span class="st0">&quot;images/pic3.jpg&quot;</span><span class="br0">&#93;</span>
+        <span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1">         <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Verschiedene Zeitlichkeiten auflösen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Das Framework empfängt während des Ladens der Seite Aufrufe...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span></span>
+<span class="sc2">            <span class="kw3">onclick</span><span class="sy0">=</span><span class="st0">&quot;</span>
+<span class="sc2">                FaderFramework.init({</span>
+<span class="sc2">                    id:'fader_extra',</span>
+<span class="sc2">                    images:['images/pic1.jpg','images/pic2.jpg']</span>
+<span class="sc2">                });</span>
+<span class="sc2">                return false;</span>
+<span class="sc2">            &quot;</span>&gt;</span>Zusätzlichen Fader erzeugen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_framework2.html">ansehen …</a></div></div>
+<p>Die Methode <code>init</code> speichert die übergebenen Daten (ein Objekt) in der Eigenschaft <code>inits</code> des <code>FaderFramework</code>-Objektes - aber nur, wenn diese Eigenschaft auch existiert, was über die <code>if</code>-Verzweigung geprüft wird. Im Funktionscode wird das Schlüsselwort <code>this</code> benutzt, da es zum einen sich auf das Framework-Objekt bezieht, in dem die Methode <code>init</code> definiert ist (an dieser Stelle haben <code>this.inits</code> und <code>FaderFramework.inits</code> denselben Effekt), und da es zum anderen wesentlich kürzer zu schreiben ist und auch die Lesbarkeit verbessert.
+</p><p>Der andere <code>if</code>-Zweig wird dann ausgeführt, wenn es keine Eigenschaft <code>inits</code> (mehr) gibt. An dieser Stelle soll die <code>init</code>-Methode wirklich einen Fader erzeugen lassen, wie in der <code>alert</code>-Meldung noch stellvertretend ausgegeben wird.
+</p><p>Die Methode <code>onload</code> bindet wieder eine CSS-Datei ins Dokument ein und nimmt sich dann jedes Element aus dem <code>inits</code>-Array vor, um damit einen Fader zu erzeugen. Dazu speichert sie zuerst den momentanen Inhalt von <code>inits</code> in der lokalen Variablen <code>fader</code>, um gleich danach die Eigenschaft <code>inits</code>  mit Hilfe des Schlüsselworts <code>delete</code> aus dem <code>FaderFramework</code>-Objekt zu löschen. Dieser Schritt ist notwendig, da gleich danach in der <code>for</code>-Schleife für jeden einzurichtenden Fader die Methode <code>init</code> zum wiederholten Male aufgerufen werden soll, die jetzt aber keine Vormerkungen machen, sondern tatsächlich echte Fader-Objekte erstellen soll, was sie aber nur tun wird, wenn die <code>inits</code>-Eigenschaft nicht mehr im Framework-Objekt existiert.
+</p><p>Über den Link "Zusätzlichen Fader erzeugen" kann nach dem vollständigen Laden der Seite ein weiterer Fader eingerichtet werden, der auf identische Art und Weise über die <code>init</code>-Funktion eingerichtet werden kann.
+</p><p>In diesem Beispiel wird an verschiedenen Stellen stellvertretend nur eine Ausgabe mit <code>alert</code> notiert, da die dafür vorgesehene Konstruktor-Funktion, die <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/neuer_Ansatz#Endlose_Slideshow" title="JavaScript/Tutorials/Fader-Framework/neuer Ansatz">bereits besprochen</a> wurde, den Rahmen dieses Code-Beispiels gesprengt hätte. Das folgende Beispiel wird aber beide Teile zusammenführen.
+</p><p>Wie bereits erwähnt ist das Schlüsselwort <code>this</code> kontextabhängig. In diesem Fall wird in der Methode <code>start</code> eine anonyme Funktion erzeugt und <code>window.onload</code> zugewiesen. Diese anonyme Funktion ist keine Methode von <code>FaderFramework</code>, weshalb man in ihr auch nicht mit <code>this</code> darauf verweisen kann. Darum steht in dieser anonymen Funktion <code>FaderFramework.onload()</code> tatsächlich ausgeschrieben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Fader mit Autostart">Bearbeiten</a>]</span> <span class="mw-headline" id="Fader_mit_Autostart"> Fader mit Autostart </span></h2>
+<p>Damit ist das Framework so weit, dass die <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/neuer_Ansatz#Endlose_Slideshow" title="JavaScript/Tutorials/Fader-Framework/neuer Ansatz">an anderer Stelle erarbeitete Konstruktor-Funktion</a> nun in das Framework-Objekt als eine Methode integriert werden kann. Damit bieten sich gleich noch weitere Möglichkeiten an: Ein Fader braucht nun nicht mehr als Objekt unter <code>window</code> einsortiert zu werden, sondern kann im Framework-Objekt abgespeichert werden. Außerdem kann er nach seiner Erstellung gleich gestartet werden, da das Framework den Fader garantiert erst nach dem vollständigen Laden der Seite erstellt.
+</p><p>Dafür wir ein weiteres Objekt <code>faders</code> als Eigenschaft des Framework-Objektes eingeführt, in dem die einzelnen Fader namentlich abgelegt werden, anstatt wie vorher unter <code>window</code>.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_framework3.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;!doctype html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">meta</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Fader mit Autostart<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span>&gt;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">        <span class="kw1">var</span> FaderFramework <span class="sy0">=</span> <span class="br0">&#123;</span>
+&#160;
+            oldWinOnLoad<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+            inits<span class="sy0">:</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+            faders<span class="sy0">:</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+&#160;
+            init<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span>einstellungen<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">var</span> fader<span class="sy0">;</span>
+&#160;
+                <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">inits</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    <span class="kw1">this</span>.<span class="me1">inits</span><span class="br0">&#91;</span><span class="kw1">this</span>.<span class="me1">inits</span>.<span class="me1">length</span><span class="br0">&#93;</span> <span class="sy0">=</span> einstellungen<span class="sy0">;</span>
+&#160;
+                <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+                    fader <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw1">this</span>.<span class="me1">Fader</span><span class="br0">&#40;</span>einstellungen<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+                    <span class="kw1">if</span> <span class="br0">&#40;</span>fader <span class="sy0">!=</span> <span class="kw2">false</span> <span class="sy0">&amp;&amp;</span> <span class="sy0">!</span><span class="kw1">this</span>.<span class="me1">faders</span><span class="br0">&#91;</span>einstellungen.<span class="me1">id</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                        <span class="kw1">this</span>.<span class="me1">faders</span><span class="br0">&#91;</span>fader.<span class="me1">id</span><span class="br0">&#93;</span> <span class="sy0">=</span> fader<span class="sy0">;</span>
+                        window.<span class="me1">setTimeout</span><span class="br0">&#40;</span><span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> fader.<span class="me1">next</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span><span class="sy0">,</span> fader.<span class="me1">viewTime</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="br0">&#125;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+&#160;
+            start<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                ...
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+&#160;
+            onload<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">var</span> i<span class="sy0">,</span> fader<span class="sy0">,</span> e <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span><span class="st0">&quot;link&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                ...
+&#160;
+                <span class="me1">fader</span> <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">inits</span><span class="sy0">;</span>
+                <span class="kw1">delete</span> <span class="kw1">this</span>.<span class="me1">inits</span><span class="sy0">;</span>
+&#160;
+                <span class="kw1">for</span> <span class="br0">&#40;</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> fader.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    <span class="kw1">this</span>.<span class="me1">init</span><span class="br0">&#40;</span>fader<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+&#160;
+            Fader<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span>einstellungen<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>einstellungen.<span class="me1">id</span> <span class="sy0">||</span> <span class="sy0">!</span>document.<span class="me1">getElementById</span><span class="br0">&#40;</span>einstellungen.<span class="me1">id</span><span class="br0">&#41;</span>
+                    <span class="sy0">||</span> FaderFramework.<span class="me1">faders</span><span class="br0">&#91;</span>einstellungen.<span class="me1">id</span><span class="br0">&#93;</span>
+                    <span class="sy0">||</span> einstellungen.<span class="me1">images</span>.<span class="me1">length</span> <span class="sy0">&lt;</span> <span class="nu0">2</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+                    <span class="kw1">return</span> <span class="kw1">new</span> <span class="kw4">Boolean</span><span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                <span class="br0">&#125;</span>
+&#160;
+                ...
+                <span class="kw1">this</span>.<span class="me1">fade</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span>step<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    ...
+                <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+                <span class="kw1">this</span>.<span class="me1">next</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    ...
+                <span class="br0">&#125;</span><span class="sy0">;</span>
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+        FaderFramework.<span class="me1">start</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1">         <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span>&gt;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">        FaderFramework.<span class="me1">init</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+            id<span class="sy0">:</span> <span class="st0">&quot;fader1&quot;</span><span class="sy0">,</span>
+            images<span class="sy0">:</span> ...
+        <span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1">         <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Fader mit Autostart<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Erster Fader: <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/fliegen4.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Fliegen&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;fader1&quot;</span>&gt;</span>.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Zweiter Fader: <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/berge4.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;in den Bergen&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;fader2&quot;</span>&gt;</span>.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span></span>
+<span class="sc2">            <span class="kw3">onclick</span><span class="sy0">=</span><span class="st0">&quot;</span>
+<span class="sc2">                FaderFramework.init({</span>
+<span class="sc2">                    id:'fader2',</span>
+<span class="sc2">                    images:[</span>
+<span class="sc2">                        'images/berge1.jpg',</span>
+<span class="sc2">                        'images/berge2.jpg',</span>
+<span class="sc2">                        'images/berge3.jpg',</span>
+<span class="sc2">                        'images/berge4.jpg',</span>
+<span class="sc2">                        'images/berge5.jpg',</span>
+<span class="sc2">                        'images/berge6.jpg'</span>
+<span class="sc2">                    ]</span>
+<span class="sc2">                });</span>
+<span class="sc2">                return false;</span>
+<span class="sc2">            &quot;</span>&gt;</span>Zweiten Fader erzeugen und starten<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Fader-Framework_framework3.html">ansehen …</a></div></div>
+<p>Das obige Beispiel vereinigt im Wesentlichen die bisherigen Code-Teile aus dem Framework und dem Konstruktor. Bereits bekannter Code wurde ausgelassen, wesentliche Veränderungen oder Ergänzungen sind hervorgehoben.
+</p><p>In der <code>onload</code>-Methode wird dieses Mal eine CSS-Datei eingebunden, die den CSS-Code enthält, der bereits in einem <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/neuer_Ansatz#Endlose_Slideshow" title="JavaScript/Tutorials/Fader-Framework/neuer Ansatz">vorherigen Beispiel</a> benötigt wurde. Danach werden alle vorgemerkten Initialisierungen aus der Eigenschaft <code>inits</code> in eine lokale Variable <code>faders</code> kopiert und anschließend die Objekteigenschaft <code>inits</code> aus dem Framework-Objekt entfernt.
+</p><p>Innerhalb einer <code>for</code>-Schleife werden dann alle vorgemerkten ursprünglichen <code>init</code>-Aufrufe abgearbeitet, indem sie dieser Methode erneut übermittelt werden. Da nun aber die <code>inits</code>-Eigenschaft im Framework-Objekt nicht mehr existiert, verhält sich die Methode <code>init</code> anders und erstellt nun die Fader-Objekte über den Konstruktor, anstatt sie in der bisherigen Objekteigenschaft <code>inits</code> vorzumerken. Dabei wird der Konstruktor mit den Einstellungen aus den <code>init</code>-Aufrufen "gefüttert". Sollte ein Fader erfolgreich erstellt worden sein, wird er unter seiner ID im Unter-Objekt <code>faders</code> abgelegt und mittels seiner <code>next</code>-Methode gestartet.
+</p><p>Der Konstruktor muss nun einen Fall mehr prüfen, bevor von einer erfolgreichen Erstellung eines Faders ausgegangen werden kann. Sollte nämlich bereits ein Fader mit der übermittelten ID angelegt worden sein, so muss der Konstruktor die Erstellung eines doppelten Faders verhindern und <code>false</code> (als Objekt!) zurückliefern. Daher prüft der Konstruktor, ob es in <code>FaderFramework.faders</code> bereits eine Eigenschaft (ein Fader-Objekt) mit dem Namen der übermittelten ID gibt. Auch hier kann nicht das Schlüsselwort <code>this</code> eingesetzt werden, da <code>this</code> hier auf das neu zu erstellende Fader-Objekt verweist. Daher wurde <code>FaderFramework.faders</code> ausgeschrieben.
+</p><p>Durch einen Klick auf den Link "Zweiten Fader erzeugen und starten" wird ein zweiter Fader erzeugt und gestartet. Da der im <code>onload</code>-Attribut notierte Funktionsaufruf die <code>init</code>-Methode des Frameworks mit passenden Parametern versorgt, wird dieser zweite Fader auch erfolgreich erzeugt, bei einem erneuten Klick jedoch nicht mehr. Hier greift die Prüfung im Konstruktor, die ein erneutes Erstellen eines bereits vorhandenen Faders verhindert.
+</p><p>Wie bereits angesprochen, muss ein Konstruktor immer ein Objekt zurückgeben, denn das ist der Sinn eines Konstruktors. Da in diesem Konstruktor eventuell kein erfolgreiches Fader-Objekt erstellt werden kann, soll "irgendwie" eine entsprechende Rückmeldung seitens des Faders erfolgen. Dazu wird entsprechend der Wert <code>false</code> als Boolean-Objekt zurück übermittelt. Eine simple Prüfung auf <code>!fader</code> (wie beispielsweise auch bei <code>!einstellungen.id</code>) wird aber hier nicht das erwartete Verhalten bewirken. Denn ein Boolean-Objekt wird, nur weil es ein Objekt ist und unabhängig von seinem Wert, in diesem Ausdruck als <code>true</code> gewertet, sodass zusammen mit dem Negations-Operator <code>false</code> herauskäme. Daher muss hier explizit auf <code>fader&#160;!= false</code> (mit einem Ist-gleich-Zeichen!) geprüft werden, denn dabei wird der eigentliche Wert des Boolean-Objektes berücksichtigt.
+</p><p>Da der Konstruktor selbst eine Methode des Framework-Objektes geworden ist, wird er in der <code>init</code>-Funktion entsprechend mit <code>var fader = new this.Fader(einstellungen)</code> aufgerufen.
+</p>
+<div class="note-box note-box-continuation">
+<table class="note-box-text">
+<tr>
+<td><a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/neuer_Ansatz" title="JavaScript/Tutorials/Fader-Framework/neuer Ansatz">← Geänderter Ansatz zur Fader-Erzeugung</a>
+</td>
+<td>
+</td>
+<td> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Projekt_Fader-Framework" title="JavaScript/Tutorials/Fader-Framework/Projekt Fader-Framework">Projekt: Fader-Framework →</a>
+</td></tr></table>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 536/1000000
+Post‐expand include size: 14289/2097152 bytes
+Template argument size: 11317/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1113-0!*!0!!de-formal!*!* and timestamp 20150228230735 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;oldid=21044">http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;oldid=21044</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Artikel%3AJavaScript%2FFader-Framework%2FFramework" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Framework"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Framework" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/JavaScript/Tutorials/Fader-Framework/Framework" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/JavaScript/Tutorials/Fader-Framework/Framework" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Framework&amp;oldid=21044" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/JavaScript-2FTutorials-2FFader-2DFramework-2FFramework" title="Spezial:Durchsuchen/JavaScript-2FTutorials-2FFader-2DFramework-2FFramework">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 28. August 2014 um 20:15 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.581-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.078 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Artikel:JavaScript/Fader-Framework/Framework by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:54 GMT -->
+</html>

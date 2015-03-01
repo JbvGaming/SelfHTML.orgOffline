@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Subroutinen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Subroutinen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Subroutinen","wgTitle":"Perl/Subroutinen","wgCurRevisionId":13919,"wgArticleId":1850,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Subroutinen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Subroutinen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Subroutinen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Subroutinen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Subroutinen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Subroutinen erstellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Subroutinen_erstellen"> Subroutinen erstellen </span></h2>
+<p>Bei komplexeren Perl-Scripts ist es empfehlenswert, bestimmte Programmteile in selbst definierte Unterprogramme oder Funktionen zu verlagern - so genannte Subroutinen. Auf diese Weise können Sie das Script besser strukturieren. Sinnvoll ist das vor allem bei Programmteilen, die im Laufe des Scripts mehrmals ausgeführt werden. Bevor Sie also eine größere Prozedur mehrmals im Script notieren, sollten Sie die entsprechende Prozedur in eine Subroutine stecken und diese Subroutine an der gewünschten Stelle aufrufen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Ergebnis</span> <span class="sy0">=</span> <span class="nu0">1</span> <span class="sy0">+</span> <span class="nu0">2</span> <span class="sy0">*</span> <span class="nu0">3</span> <span class="sy0">+</span> <span class="nu0">4</span> <span class="sy0">*</span> <span class="nu0">5</span> <span class="sy0">+</span> <span class="nu0">6</span> <span class="sy0">*</span> <span class="nu0">7</span> <span class="sy0">+</span> <span class="nu0">8</span> <span class="sy0">*</span> <span class="nu0">9</span><span class="sy0">;</span>
+Ausgabe<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Ergebnis</span> <span class="sy0">=</span> <span class="kw3">sqrt</span><span class="br0">&#40;</span><span class="kw3">sqrt</span><span class="br0">&#40;</span><span class="nu0">81</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+Ausgabe<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+&#160;
+<span class="kw2">sub</span> Ausgabe <span class="br0">&#123;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;Das Ergebnis lautet: &lt;b&gt;$Ergebnis&lt;/b&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird eine Subroutine mit dem Namen <code>Ausgabe</code> erstellt. Eine Subroutine beginnt mit dem Schlüsselwort <code>sub</code>. Dahinter folgt ein frei wählbarer Name, der den <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Regeln_f.C3.BCr_selbst_vergebene_Namen" title="Perl/Einführung in Perl" class="mw-redirect">Namenskonventionen</a> von Perl entsprechen muss. Der gesamte Inhalt der Subroutine muss in <b>geschweiften</b> Klammern stehen. Sie können beliebige und beliebig viele Anweisungen innerhalb der Subroutine notieren.
+Mit ihrem Namen und runden Klammern dahinter rufen Sie eine Subroutine auf. Der Aufruf ist eine eigene Anweisung, muss also wie andere Anweisungen mit einem Semikolon abgeschlossen werden. Im obigen Beispiel kommt zweimal die Anweisung <code>Ausgabe();</code> vor. Dadurch wird die Subroutine mit dem Namen <code>Ausgabe</code> aufgerufen.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Anweisungen in Subroutinen werden nur ausgeführt wenn die Subroutine aufgerufen wird.</div>
+<p>Es ist egal, an welcher Stelle im Script eine Subroutine steht. Sie kann im Prinzip überall stehen. Es ist allerdings sinnvoll, alle Subroutinen optisch getrennt vom direkt ausgeführten Hauptprogramm zu notieren.
+</p><p>Beim Aufruf könnten Sie anstelle von <code>Routine();</code> auch <code>&amp;Routine;</code> oder <code>&amp;Routine();</code> notieren. Die erste Art ist jedoch am empfehlenswertesten, vor allem bei Aufrufen ohne Klammern kann es zu Fehlern kommen.
+</p><p>Wenn Sie - wie im obigen Beispiel - mit <code>use strict;</code> arbeiten, müssen Sie bekanntlich alle Variablen vor ihrer ersten Verwendung deklarieren. Damit wird aber auch der Geltungsbereich einer Variablen eingeschränkt. Eine Subroutine stellt einen eigenen Block und Geltungsbereich dar. Wenn Sie also beispielsweise innerhalb einer Subroutine mit <code>my $Variable=1;</code> eine Variable deklarieren und im Hauptprogramm versuchen, mit <code>print $Variable</code> den Inhalt auszugeben, führt dies zu einer Fehlermeldung, da <code>$Variable</code> im Hauptprogramm nicht bekannt ist. Umgekehrt ist es anders: Variablen, die im Hauptprogramm deklariert sind, sind auch in Subroutinen verfügbar. Im obigen Beispiel wird ja von dieser Möglichkeit Gebrauch gemacht. Generell ist es auch aus diesem Grund bei größeren Scripts sinnvoll, möglichst viel Code mit Variablendeklarationen in Subroutinen zu packen und im Hauptprogramm so wenig Variablendeklarationen wie möglich zu haben. Denn globale Variablen können tendenziell leichter zu logischen Fehlern im Programmablauf führen, da sie nicht so leicht zu kontrollieren sind wie Variablen in begrenzten Subroutinen.
+</p><p>Das Überschreiben von vordefinierten Perl-Funktionen ist ebenfalls möglich. Wenn Sie zum Beispiel die Funktionsweise einer vordefinierten Funktion ergänzen möchten, definieren Sie einfach eine neue Subroutine mit dem entsprechenden Namen. Einige Perl-Module machen von dieser Möglichkeit Gebrauch. Um auf die ursprüngliche Funktion zuzugreifen, setzen Sie einfach ein <code>CORE::</code> vor den Namen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Subroutinen mit Parametern aufrufen">Bearbeiten</a>]</span> <span class="mw-headline" id="Subroutinen_mit_Parametern_aufrufen"> Subroutinen mit Parametern aufrufen </span></h2>
+<p>Beim Aufruf können Sie einer Subroutine Daten übergeben, die von der Subroutine verarbeitet werden sollen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+formatHTML<span class="br0">&#40;</span><span class="st0">&quot;Hallo User&quot;</span><span class="sy0">,</span><span class="st0">&quot;h1&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+formatHTML<span class="br0">&#40;</span><span class="st0">&quot;Dein Browser gibt sich aus als $ENV{HTTP_USER_AGENT}&quot;</span><span class="sy0">,</span><span class="st0">&quot;i&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+&#160;
+<span class="kw2">sub</span> formatHTML <span class="br0">&#123;</span>
+ <span class="kw1">my</span> <span class="re0">$Inhalt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+ <span class="kw1">my</span> <span class="re0">$Format</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;&lt;$Format&gt;$Inhalt&lt;/$Format&gt;&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert eine Subroutine namens <code>formatHTML</code>. Im oberen Teil des Scripts können Sie sehen, wie diese Subroutine aufgerufen wird. Mit dem Aufruf <code>formatHTML("Hallo User","h1");</code> werden der Subroutine zwei Parameter übergeben. Denn die Subroutine soll die Aufgabe haben, aus einem übergebenen Text und einem übergebenen HTML-Elementnamen ein HTML-Konstrukt, bestehend aus Anfangs-Tag, Inhalt und End-Tag auszugeben.
+<p>Die Subroutine erwartet also zwei Parameter. Interessant ist, wie sie die Parameter abfragt. Dazu benutzt sie einfach die Perl-Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#shift" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">shift</a> und weist deren Rückgabewert einem Skalar zu. Um diese Anweisung zu verstehen, ist es wichtig zu wissen, dass Parameter, die einer Subroutine übergeben werden, in der <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen#subroutine_parameters" title="Perl/Vordefinierte Variablen">vordefinierten Variablen</a> <code>@_</code> stehen. Diese Variable enthält die Liste aller Parameter, die der Subroutine übergeben wurden. Der erste Parameter steht dann in <code>$_[0]</code>, der zweite in <code>$_[1]</code> usw. Eleganter ist es jedoch, sich die Parameter mit der <code>shift</code>-Funktion zu holen. Da <code>shift</code> beim Aufruf kein Parameter übergeben wird, wendet die Funktion ihre Arbeit automatisch auf die vordefinierte Variable <code>@_</code> an. Die Funktion entfernt das erste Element der Liste und gibt es zurück. Durch wiederholtes Aufrufen von <code>shift</code> kann sich eine Subroutine also nach und nach alle Parameter abholen, die ihr übergeben wurden.
+</p>
+Die Subroutine im Beispiel holt sich also den ersten Parameter und speichert ihn in <code>$Inhalt</code> und den zweiten in <code>$Format</code>. Dann erzeugt sie eine <code>print</code>-Ausgabe und baut darin das gewünschte HTML-Konstrukt zusammen. Bei jedem Aufruf aus dem Hauptprogramm bewirkt die Subroutine also eine Ausgabe im Browser mit den übergebenen Parametern.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Sie müssen nirgendwo festlegen, wie viele und welche Parameter eine Subroutine übergeben bekommen kann. Eine Subroutine, die nicht weiß, wie viele Parameter sie übergeben bekommt, kann die übergebene Parameterliste beispielsweise mit einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#foreach-Schleifen" title="Perl/Schleifen">foreach-Schleife</a> in der Form <code>foreach(@_)</code> abarbeiten.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Rückgabewerte bei Subroutinen">Bearbeiten</a>]</span> <span class="mw-headline" id="R.C3.BCckgabewerte_bei_Subroutinen"> Rückgabewerte bei Subroutinen </span></h2>
+<p>Subroutinen können Werte zurückgeben. Subroutinen, die Parameter übergeben bekommen, damit etwas tun und die verarbeiteten Daten zurückgeben, entsprechen am ehesten dem, was man unter einer <b>Funktion</b> versteht. Die eingebauten <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen" title="Perl/Funktionen">Perl-Funktionen</a> folgen diesem Schema, aber auch die meisten Subroutinen, die Sie in <a href="http://wiki.selfhtml.org/wiki/Perl/Module" title="Perl/Module">Modulen</a> aufrufen können, arbeiten als Funktionen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> HTMLKopf<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> HTMLCode<span class="br0">&#40;</span><span class="st0">&quot;h1&quot;</span><span class="sy0">,</span><span class="st0">&quot;Hallo!&quot;</span><span class="sy0">,</span><span class="st0">&quot;font-size:24pt; color:red&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> HTMLCode<span class="br0">&#40;</span><span class="st0">&quot;p&quot;</span><span class="sy0">,</span><span class="st0">&quot;Wie geht's?&quot;</span><span class="sy0">,</span><span class="st0">&quot;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> HTMLFuss<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+&#160;
+<span class="kw2">sub</span> HTMLKopf <span class="br0">&#123;</span>
+ <span class="kw1">my</span> <span class="re0">$Kopf</span> <span class="sy0">=</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">.</span>
+  <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">.</span>
+  <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+ <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Kopf</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> HTMLFuss <span class="br0">&#123;</span>
+<span class="kw1">my</span> <span class="re0">$Fuss</span> <span class="sy0">=</span> <span class="st0">&quot;&lt;hr&gt;<span class="es0">\n</span>&lt;script type=<span class="es0">\&quot;</span>text/javascript<span class="es0">\&quot;</span>&gt;&lt;!--<span class="es0">\n</span>&quot;</span><span class="sy0">.</span>
+            <span class="st0">&quot;document.write(<span class="es0">\&quot;</span>URL-Adresse: <span class="es0">\&quot;</span>+document.URL);<span class="es0">\n</span>//--&gt;&lt;/script&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">.</span>
+            <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+ <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Fuss</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> HTMLCode <span class="br0">&#123;</span>
+ <span class="kw1">my</span> <span class="re0">$Tag</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+ <span class="kw1">my</span> <span class="re0">$Inhalt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+ <span class="kw1">my</span> <span class="re0">$Style</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+ <span class="kw1">unless</span><span class="br0">&#40;</span><span class="kw3">defined</span><span class="br0">&#40;</span><span class="re0">$Style</span><span class="br0">&#41;</span> <span class="kw1">and</span> <span class="kw3">length</span><span class="br0">&#40;</span><span class="re0">$Style</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">return</span><span class="br0">&#40;</span><span class="st0">&quot;&lt;$Tag&gt;$Inhalt&lt;/$Tag&gt;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+ <span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw3">return</span><span class="br0">&#40;</span><span class="st0">&quot;&lt;$Tag style=<span class="es0">\&quot;</span>$Style<span class="es0">\&quot;</span>&gt;$Inhalt&lt;/$Tag&gt;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel weitet die Subroutinen-Technik zum Erzeugen von HTML-Code weiter aus. Es gibt insgesamt drei Subroutinen: <code>HTMLKopf</code> und <code>HTMLFuss</code> setzen mit Hilfe des <a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren#Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung" title="Perl/Operatoren">Operators für Zeichenkettenverknüpfung</a> HTML-Code in einem Skalar zusammen. Am Ende wird dieser Skalar mit der Funktion <code>return</code> zurückgegeben.
+<p>Etwas komplexer ist die Subroutine <code>HTMLCode</code>. Sie erwartet drei <a href="#Subroutinen_mit_Parametern_aufrufen">Parameter</a>, nämlich einen für das zu erzeugende HTML-Element, einen für dessen Inhalt, und einen für eventuelle CSS-Eigenschaften zur Formatierung des Elements. Abhängig davon (mit <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen#Bedingte_Anweisungen_mit_unless" title="Perl/Bedingte Anweisungen">unless</a> wird die entsprechende Weiche gestellt), ob der dritte Parameter einen Inhalt hat, wird der gewünschte HTML-Code zusammengesetzt und das gesamte Konstrukt mit <code>return</code> zurückgegeben.
+</p>
+Im Hauptprogramm stehen nur ein paar <code>print</code>-Anweisungen. Die Funktion <code>print</code> ist so leistungsfähig, dass sie als übergebene Parameter für das, was sie ausgeben soll, auch Aufrufe anderer Funktionen oder eigener Subroutinen erlaubt. Genau davon wird im Beispiel Gebrauch gemacht. Ausgegeben wird dabei der <b>Return-Wert</b> der jeweils aufgerufenen Subroutine. Ebenso könnten Sie den Return-Wert natürlich einer Variablen zuordnen oder etwas anderes damit tun.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Subroutinen können alle Arten von Variablen zurückgeben, also neben <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalaren</a> auch <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Listen/Arrays</a>, <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hashes</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Referenzen" title="Perl/Referenzen">Referenzen</a>. Die aufrufende Anweisung muss dafür sorgen, dass der zurückgegebene Wert im richtigen Variablenformat gespeichert wird. Wenn in einer Subroutine namens <code>TeileErmitteln</code> beispielsweise notiert ist:<br /><code>return(@Ermittelte);</code><br />dann könnte eine aufrufende Anweisung etwa lauten:<br /><code>my @Teile = TeileErmitteln();</code><br />Falls Aufrufspeicher und Rückgabewert nicht vom gleichen Typ sind, greift automatisch die Kontext-Bewertung von Perl. Wenn Sie beispielsweise die gleiche Subroutine aufrufen mit:<br /><code>my $Ergebnis = TeileErmitteln();</code><br />Dann ist das, als ob da stünde: <code>$Ergebnis = @Ermittelte</code>. Das Ergebnis besteht in dem Fall darin, dass in <code>$Ergebnis</code> die Anzahl der zurückgegebenen Array-Elemente steht, weil Perl bei einer Liste im skalaren Kontext die Anzahl der Array-Elemente liefert.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 200/1000000
+Post‐expand include size: 22332/2097152 bytes
+Template argument size: 19669/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1850-0!*!0!!*!*!* and timestamp 20150301125242 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;oldid=13919">http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;oldid=13919</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FSubroutinen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Subroutinen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Subroutinen" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Subroutinen" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Subroutinen&amp;oldid=13919" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FSubroutinen" title="Spezial:Durchsuchen/Perl-2FSubroutinen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 13. September 2012 um 10:16 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.509-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.084 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Subroutinen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

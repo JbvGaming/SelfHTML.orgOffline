@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Betriebssystemaufrufe by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Funktionen für Betriebssystemaufrufe – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Funktionen_für_Betriebssystemaufrufe","wgTitle":"Perl/Funktionen für Betriebssystemaufrufe","wgCurRevisionId":13959,"wgArticleId":3104,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Funktionen_für_Betriebssystemaufrufe","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Funktionen für Betriebssystemaufrufe" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Funktionen_für_Betriebssystemaufrufe skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Funktionen für Betriebssystemaufrufe</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_diesen_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu diesen Funktionen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#qx.28....29_-_Andere_Programme.2FScripts_ausf.C3.BChren_und_STDOUT_auffangen"><span class="tocnumber">2</span> <span class="toctext">qx(...) - Andere Programme/Scripts ausführen und STDOUT auffangen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#alarm_-_SIGALARM_in_n_Sekunden_zustellen"><span class="tocnumber">3</span> <span class="toctext">alarm - SIGALARM in n Sekunden zustellen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#exec_-_Fremdprogramm_aufrufen_und_eigenen_Prozess_beenden"><span class="tocnumber">4</span> <span class="toctext">exec - Fremdprogramm aufrufen und eigenen Prozess beenden</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#fork_-_Kindprozess_erzeugen"><span class="tocnumber">5</span> <span class="toctext">fork - Kindprozess erzeugen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#getpgrp_-_Prozessgruppe_einer_Prozessnummer_.28pid.29_ermitteln"><span class="tocnumber">6</span> <span class="toctext">getpgrp - Prozessgruppe einer Prozessnummer (pid) ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#getppid_-_Prozessnummer_.28pid.29_des_Elternprozesses_ermitteln"><span class="tocnumber">7</span> <span class="toctext">getppid - Prozessnummer (pid) des Elternprozesses ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#getpriority_-_Text"><span class="tocnumber">8</span> <span class="toctext">getpriority - Text</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#kill_-_Signal_an_Prozess_senden"><span class="tocnumber">9</span> <span class="toctext">kill - Signal an Prozess senden</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#pipe_-_Pipe_erzeugen"><span class="tocnumber">10</span> <span class="toctext">pipe - Pipe erzeugen</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#setpgrp_-_Prozessgruppe_f.C3.BCr_Prozess_bestimmen"><span class="tocnumber">11</span> <span class="toctext">setpgrp - Prozessgruppe für Prozess bestimmen</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#setpriority_-_Priorit.C3.A4t_eines_Prozesses_oder_Benutzers_setzen"><span class="tocnumber">12</span> <span class="toctext">setpriority - Priorität eines Prozesses oder Benutzers setzen</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#sleep_-_aktuellen_Prozess_anhalten"><span class="tocnumber">13</span> <span class="toctext">sleep - aktuellen Prozess anhalten</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#system_-_Fremdprogramm_aufrufen_und_eigenen_Prozess_erhalten"><span class="tocnumber">14</span> <span class="toctext">system - Fremdprogramm aufrufen und eigenen Prozess erhalten</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#times_-_Laufzeit_des_aktuellen_Prozesses_ermitteln"><span class="tocnumber">15</span> <span class="toctext">times - Laufzeit des aktuellen Prozesses ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#wait_-_auf_das_Ende_eines_Kindprozesses_warten"><span class="tocnumber">16</span> <span class="toctext">wait - auf das Ende eines Kindprozesses warten</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#waitpid_-_auf_das_Ende_eines_Kindprozesses_mit_bestimmter_Prozessnummer_.28pid.29_warten"><span class="tocnumber">17</span> <span class="toctext">waitpid - auf das Ende eines Kindprozesses mit bestimmter Prozessnummer (pid) warten</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu diesen Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_diesen_Funktionen"> Allgemeines zu diesen Funktionen </span></h2>
+<p>Unter "Betriebssystemaufrufe" sind hier Funktionen versammelt, die sich vor allem eng am Konzept der Unix-Betriebssysteme orientieren. Nur wenige der Funktionen sind auf andere Systeme portierbar.
+</p><p>Unix-Systeme verwalten laufende "Programme" in so genannten Prozessen. Jeder Prozess hat eine Prozessnummer (PID). Außerdem gibt es Prozessgruppen. Jeder Prozess gehört zu einer Prozessgruppe. Prozessgruppen haben ebenfalls Nummern. Auch Ihr Perl-Script stellt, wenn es ausgeführt wird, einen solchen Prozess dar, der einer Prozessgruppe angehört. Bei vielen der hier beschriebenen Funktionen können Sie den aktuellen Prozess, also den Ihres Perl-Scripts, durch die "virtuelle" Prozessnummer <code>0</code> ansprechen. Über <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierte Variablen</a> können Sie jedoch auch die tatsächliche Prozessnummer herausfinden und benutzen. Das folgende Beispielscript zeigt die entsprechenden Variablen im Einsatz:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Prozessnummer (PID): &lt;strong&gt;$$&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Reale Benutzergruppe (GID) des Prozesses: &lt;strong&gt;$(&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Effektive Benutzergruppe (GID) des Prozesses: &lt;strong&gt;$)&lt;/strong&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Mit <code>$$</code> sprechen Sie die Nummer des aktuellen Prozesses an. Der Prozess läuft unter einer bestimmten User-ID, die wiederum einer oder mehreren Gruppen angehört. Wenn das Script beispielsweise mit <code>setgid</code> gestartet wurde, enthält die reale Gruppen-ID die Gruppe(n), von der aus gestartet wurde, die effektive Gruppen-ID enthält die Gruppe(n), in die gewechselt wurde (die aktuelle also). Das Beispiel-CGI-Script gibt die entsprechenden Daten aus.
+Weitere wichtige Konzepte der Unix-Betriebssysteme, auf die Sie mit Perl-Funktionen Zugriff haben, sind Alarme, Kindprozesse und die so genannten Pipes. Nähere Informationen dazu finden Sie in der Unix-Fachliteratur.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: qx(...) - Andere Programme/Scripts ausführen und STDOUT auffangen">Bearbeiten</a>]</span> <span class="mw-headline" id="qx.28....29_-_Andere_Programme.2FScripts_ausf.C3.BChren_und_STDOUT_auffangen"> <span id="qx.28....29"></span> qx(...) - Andere Programme/Scripts ausführen und STDOUT auffangen </span></h2>
+<p>Hierbei handelt es sich eigentlich nicht um eine Perl-Funktion, sondern um eine besondere Form des <a href="http://wiki.selfhtml.org/wiki/Perl/Zeichenketten#Regeln_beim_Notieren_von_Zeichenketten" title="Perl/Zeichenketten">Notierens von Zeichenketten</a>. Das <code>qx</code> steht für <i>quoted executable</i>. Die darin eingeschlossene Zeichenkette wird von Perl einfach in einen Kommandozeilenaufruf umgesetzt. Die Standardausgabe des aufgerufenen Kommandos, Fremdprogramms oder Scripts wird aufgefangen und kann in einer Variablen gespeichert werden. Eine andere Möglichkeit, diese Art von ausführbaren Zeichenketten zu notieren, sind die so genannten <i>Backticks</i>. Dabei arbeiten Sie anstelle von <code>qx(irgendein Kommando)</code> mit dem rückwärts gerichteten Accent-Zeichen <code>`</code> und notieren <code>`irgendein Kommando`</code>.
+</p><p>Die Funktionalität der ausführbaren Zeichenketten ist für CGI-Scripts extrem nützlich, um die Ausgaben anderer Prozesse auffangen und an den Browser senden lassen zu können. So lassen sich beispielsweise <a rel="nofollow" class="external text" href="http://de.selfhtml.org/xml/index.htm">XML</a>-Daten mit <a rel="nofollow" class="external text" href="http://de.selfhtml.org/xml/darstellung/xslgrundlagen.htm">XSLT</a> und einem XSLT-Prozessor in HTML übersetzen. Wenn dieser Prozessor seine Ergebnisse auf den <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#Allgemeines_zu_diesen_Funktionen" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">Standardausgabekanal</a> <code>STDOUT</code> schreibt, kann das CGI-Script die Ausgabe auffangen und an den Webserver zur Weiterleitung übergeben. Das folgende Beispiel zeigt dies.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Output</span> <span class="sy0">=</span> <span class="kw3">qx</span><span class="br0">&#40;</span><span class="sy0">/</span>usr<span class="sy0">/</span>bin<span class="sy0">/</span>saxon <span class="sy0">/</span>daten<span class="sy0">/</span>xml<span class="sy0">/</span>kunden<span class="sy0">.</span>xml <span class="sy0">/</span>daten<span class="sy0">/</span>xml<span class="sy0">/</span>kunden<span class="sy0">.</span>xsl<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Output&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Mehr als dieses winzige Script ist nicht nötig, um XML-Daten in HTML-Form an den Webserver zur Übergabe an einen aufrufenden Browser zu senden - sofern ein XSLT-Prozessor die Übersetzungsarbeit leistet. Das Beispiel führt folgendes Kommando aus:<br />
+<p><code>/usr/bin/saxon /daten/xml/kunden.xml /daten/xml/kunden.xsl</code><br />
+</p>
+Dabei ist <code>saxon</code> der Name eines XSLT-Prozessors, also eines ausführbaren Programms. Dieses Programm erwartet im Normalfall zwei Aufrufparameter: erstens die Angabe einer XML-Datei, und zweitens die Angabe einer dazu passenden XSL-Datei mit XSLT-Anweisungen. Saxon übersetzt die XML-Auszeichnungen aufgrund der XSLT-Angaben in HTML-Konstrukte und gibt das Ergebnis, eine vollständige HTML-Datei, auf die Standardausgabe aus. Das Script fängt diese Standardausgabe auf, indem es sie in der Variablen <code>$Output</code> speichert. In dieser Variablen steht also nach dem Saxon-Aufruf der gesamte Inhalt der HTML-Daten. Ein einfacher print-Befehl genügt anschließend, um die gesamten HTML-Daten auszugeben.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Art der Klammerung bei Verwendung von <code>qx</code> ist egal. Sie können auch eckige oder geschweifte Klammern oder Schrägstriche verwenden - von letzteren ist allerdings abzuraten, weil viele Kommandos Pfadangaben benötigen und Sie in diesem Fall alle Schrägstriche bei Pfadangaben maskieren müssten.
+<p>Bei Pfadangaben sollten Sie auch bei <code>qx(...)</code> stets die einfachen Schrägstriche verwenden - auch wenn das Perl-Script unter Windows ausgeführt wird.
+</p><p>Mit Backticks würde der Aufruf des obigen Beispiels lauten:<br />
+<code>my $Output = `/usr/bin/saxon /daten/xml/kunden.xml /daten/xml/kunden.xsl`;</code><br />
+Um die Backticks zu erzeugen, halten Sie auf den meisten Systemen die Shift-Taste gedrückt, tippen einmal auf die Taste mit den französischen Accent-Zeichen und anschließend die Leertaste.
+</p><p>Im Link-Verzeichnis des Online-Angebots von SELFHTML aktuell finden Sie Links zu <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Linkliste" title="SELFHTML:Linkliste">XML-Software</a>. Dort finden Sie ebenso Verweise zu Produkten wie Saxon.
+</p>
+Die hier beschriebene Möglichkeit ist auf alle Kommandos anwendbar, die etwas auf die Standardausgabe <code>STDOUT</code> schreiben, also z.B. auch auf Betriebssystem-Kommandos wie <code>ls</code> (bzw. <code>dir</code>), oder auch auf andere Perl-Scripts. Einige solcher Programme oder Kommandos schreiben ihren Output bei fehlerhaften Aufrufen jedoch nicht auf <code>STDOUT</code>, sondern auf <code>STDERR</code>. Solche Ausgaben werden von den hier beschriebenen ausführbaren Zeichenketten <b>nicht</b> aufgefangen.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: alarm - SIGALARM in n Sekunden zustellen">Bearbeiten</a>]</span> <span class="mw-headline" id="alarm_-_SIGALARM_in_n_Sekunden_zustellen"> <span id="alarm"></span> alarm - SIGALARM in n Sekunden zustellen </span></h2>
+<p>Unix-spezifischer Befehl. Bewirkt, dass der Prozess einen SIGALARM nach einer bestimmten Anzahl Sekunden erhält, wenn z.B. ein kritischer Befehl nicht funktioniert.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die Anzahl Sekunden, bis der Alarm aktiv wird.
+</li></ol>
+<p>Gibt die Anzahl Sekunden zurück, die verstrichen sind.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">eval</span> <span class="br0">&#123;</span>
+  <span class="kw3">local</span> <span class="re0">$SIG</span><span class="br0">&#123;</span>ALRM<span class="br0">&#125;</span> <span class="sy0">=</span> <span class="kw2">sub</span> <span class="br0">&#123;</span> <span class="kw3">die</span> <span class="st0">&quot;Alarm&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+  <span class="kw3">alarm</span><span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">system</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/bin/perl -c /usr/web/myhome/cgi-bin/freelink.pl&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">alarm</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="co5">$@</span> <span class="kw1">and</span> <span class="co5">$@</span> <span class="sy0">!~</span> <span class="co2">/Alarm/</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Problem! 2 Sekunden vergangen!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Alles klar!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie einen "kritischen Systemaufruf" mit Hilfe eines Timeout-Alarms behandeln können. Dazu wird in dem Script zunächst ein für solche Behandlung typischer <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts#eval" title="Perl/Funktionen für die Kontrolle des laufenden Scripts">eval</a>-Block notiert. Darin wird mit der typischen Anweisung:<br />
+<p><code>local $SIG{ALRM} = sub { die "Alarm" };</code><br />
+eine Behandlungsroutine für SIGALARM definiert. Anschließend wird mit <code>alarm(2)</code> ein Timeout von 2 Sekunden definiert, bevor der Alarm aktiv wird. Mit <code>alarm(0)</code> wird der Alarm wieder zurückgesetzt.<br />
+Danach wird versucht, mit <a href="#system">system</a> den Perl-Interpreter aufzurufen, und zwar so, dass er ein bestimmtes Script auf die Gültigkeit seiner Syntax überprüft. Sollte dieser Vorgang mehr als 2 Sekunden dauern, wird der Alarm aktiv.<br />
+</p>
+Mit der Abfrage <code>if ($@ and $@&#160;!~ /Alarm/)</code> wird überprüft, ob der Alarm aktiv wurde. Wenn ja, wird eine entsprechende Meldung ausgegeben. Im <code>else</code>-Zweig kann der Code stehen, der ausgeführt wird, wenn alles in Ordnung war. Im Beispiel wird einfach ebenfalls eine entsprechende Meldung ausgegeben.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Aufrufe mit <a href="#system">system</a> oder <a href="#qx.28....29">qx(...)</a> in Verbindung mit <code>alarm</code> können zu sogenannten Zombies führen. Möglicherweise müssen Sie sie für solche Zwecke mit Hilfe von <a href="#fork">fork</a> und <a href="#exec">exec</a> selbst implementieren.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: exec - Fremdprogramm aufrufen und eigenen Prozess beenden">Bearbeiten</a>]</span> <span class="mw-headline" id="exec_-_Fremdprogramm_aufrufen_und_eigenen_Prozess_beenden"> <span id="exec"></span> exec - Fremdprogramm aufrufen und eigenen Prozess beenden </span></h2>
+<p>Startet einen anderen Prozess und beendet das aktuelle Script. Der aktuelle Prozess wird dabei durch den neuen Prozess vollständig ersetzt. Wenn Sie das aktuelle Script nicht beenden wollen, benutzen Sie <a href="#system">system</a>, <a href="#qx.28....29">qx(...)</a> oder <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a> mit dem Pipe-Zeichen <code>|</code>.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> Kommandozeilenaufruf des gewünschten Programms,
+</li><li> bis <b>n.</b> (optional) Liste mit Aufrufparametern.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw3">exec</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/bin/perl&quot;</span><span class="sy0">,</span><span class="st0">&quot;mystats.pl&quot;</span><span class="br0">&#41;</span> <span class="kw1">if</span> <span class="sy0">-</span>e <span class="st0">&quot;mystats.pl&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel fragt mit Hilfe des [[Perl/Funktionen für Datei- und Verzeichnis-Management#-[x]|Dateitestoperators]] <code>-e</code> ab, ob eine Datei namens <code>mystats.pl</code> im aktuellen Verzeichnis existiert. Wenn ja, wird der Perl-Interpreter (in einem eigenen neuen Prozess) gestartet und führt <code>mystats.pl</code> aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: fork - Kindprozess erzeugen">Bearbeiten</a>]</span> <span class="mw-headline" id="fork_-_Kindprozess_erzeugen"> <span id="fork"></span> fork - Kindprozess erzeugen </span></h2>
+<p>Unix-spezifischer Befehl. Erzeugt eine Kopie des aktuellen Prozesses, die dem aktuellen erzeugenden Prozess untergeordnet ist. Ein Perl-Script kann sich auf diese Weise gabeln (engl. <i>fork</i>) und Daten in zwei getrennten Prozessen verarbeiten. Auf geöffnete Dateien können dabei beide Prozesse zugreifen. Alles übrige, wie Variablen usw., wird vom Elternprozess in den Kindprozess kopiert. Die Variable, die den Rückgabewert von <code>fork</code> speichert, hat jedoch im Elternprozess einen Wert, nämlich die Prozessnummer des Kindprozesses, während sie im Kindprozess den Wert <code>0</code> hat.<br />
+Obwohl <code>fork</code> eigentlich aus der Unix-Welt stammt, lässt sich diese Funktion mittlerweile auch unter ActivePerl für Windows nutzen.
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt die vom Betriebssystem zugewiesene Prozessnummer des Kindprozesses zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="co5">$|</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Eltern_pid</span> <span class="sy0">=</span> <span class="co5">$$</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Kind_pid</span> <span class="sy0">=</span> <span class="kw3">fork</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Kind_pid</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Hier ist der Elternprozess. Der Kindprozess hat die PID &lt;strong&gt;$Kind_pid&lt;/strong&gt;&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">wait</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Eltern_pid</span> <span class="sy0">=</span> <span class="kw3">getppid</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Hier ist der Kindprozess. Der Elternprozess hat die PID &lt;strong&gt;$Eltern_pid&lt;/strong&gt;&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">exit</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erzeugt mit <code>fork</code> einen Kindprozess. Der Rückgabewert der Funktion, die Prozessnummer des Kindprozesses, wird in dem Skalar <code>$Kind_pid</code> gespeichert. Im Beispiel ist daraufhin eine <code>if</code>-Abfrage notiert. Mit <code>if($Kind_pid)</code> wird abgefragt, ob der Skalar <code>$Kind_pid</code> einen Wert ungleich <code>0</code> hat. Ist das der Fall, werden Anweisungen ausgeführt, die zum Elternprozess gehören. Im Beispiel wird eine Meldung ausgegeben, dass sich das Script im Elternprozess befindet. Außerdem wird die Prozessnummer des Kindprozesses ausgegeben. Danach wird mit der Anweisung <a href="#wait">wait</a> gewartet, bis der Kindprozess beendet ist. Im <code>else</code>-Zweig, in den das Script gelangt, wenn <code>Kind_pid</code> den Wert <code>0</code> hat, wird dagegen ausgegeben, dass der Kindprozess aktiv ist. Außerdem wird die Prozessnummer des Elternprozesses ausgegeben. Danach wird der Kindprozess mit der Anweisung <code>exit(0);</code> beendet. Der Elternprozess, der darauf nur gewartet hat, gibt dann noch die letzte Zeile HTML-Code aus.<br />
+Das besondere Verhalten des Scripts, das in zwei Prozessen läuft, zeigt sich im Beispiel darin, dass <b>sowohl</b> der <code>if</code>-Zweig <b>als auch</b> der <code>else</code>-Zweig ausgeführt werden. Das erklärt sich daraus, dass die <code>if</code>-Bedingung für den Elternprozess wahr ist, die <code>else</code>-Alternative dagegen für den Kindprozess.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: getpgrp - Prozessgruppe einer Prozessnummer (pid) ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getpgrp_-_Prozessgruppe_einer_Prozessnummer_.28pid.29_ermitteln"> <span id="getpgrp"></span> getpgrp - Prozessgruppe einer Prozessnummer (pid) ermitteln </span></h2>
+<p>Unix-spezifischer Befehl.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine Prozessnummer, zu der die zugehörige Prozessgruppe ermittelt werden soll. Um die Prozessgruppe des aktuellen Prozesses zu ermitteln, müssen Sie <code>0</code> übergeben.
+</li></ol>
+<p>Gibt die Gruppennummer zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Gruppennummer</span> <span class="sy0">=</span> <span class="kw3">getpgrp</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Prozessgruppe des aktuellen Prozesses ist &lt;strong&gt;$Gruppennummer&lt;/strong&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt die Gruppennummer des aktuellen Prozesses mit <code>getpgrp</code> und gibt HTML-Code mit der ermittelten Nummer aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: getppid - Prozessnummer (pid) des Elternprozesses ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getppid_-_Prozessnummer_.28pid.29_des_Elternprozesses_ermitteln"> <span id="getppid"></span> getppid - Prozessnummer (pid) des Elternprozesses ermitteln </span></h2>
+<p>Unix-spezifischer Befehl.
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt die Prozessnummer (PID) des Elternprozesses des aktuellen Scripts zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Eltern_pid</span> <span class="sy0">=</span> <span class="kw3">getppid</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die PID des Elternprozesses lautet &lt;strong&gt;$Eltern_pid&lt;/strong&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt die PID des Elternprozesses mit <code>getppid</code> und gibt HTML-Code mit der ermittelten Nummer aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: getpriority - Text">Bearbeiten</a>]</span> <span class="mw-headline" id="getpriority_-_Text"> <span id="getpriority"></span> getpriority - Text </span></h2>
+<p>Unix-spezifischer Befehl. Ermittelt die aktuelle Priorität eines Prozesses, einer Prozessgruppe oder eines Benutzers. Prozesse mit höherer Priorität erhalten unter den aktuell laufenden Prozessen mehr Systemressourcen zur Ausführung.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine Angabe dazu, ob Sie die Priorität für einen bestimmten Prozess, eine Prozessgruppe oder einen Benutzer ermitteln wollen. Dazu übergeben Sie am besten eine der Konstanten, die in <code>resource.ph</code> definiert sind (siehe unten).
+</li><li> die Nummer des Prozesses, der Prozessgruppe oder des Benutzers.
+</li></ol>
+<p>Gibt die Priorität des Prozesses, der Prozessgruppe oder des Benutzers als Zahl zurück. Der mögliche Wertebereich ist abhängig vom System.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">require</span> <span class="st0">&quot;resource.ph&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Prio</span> <span class="sy0">=</span> <span class="kw3">getpriority</span><span class="br0">&#40;</span><span class="re0">&amp;PRIO_PROCESS</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Prioritaet des aktuellen Prozesses: $Prio<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt mit <code>getpriority</code> die Priorität des aktuellen Prozesses und gibt diese aus. Dazu wird mit <code>require&#160;"resource.ph"</code> die Kopfdatei eingebunden, die die Definition der folgenden Konstanten enthält:
+<table class="wikitable">
+<tr>
+<th> Konstante:
+</th>
+<th> Bedeutung:
+</th></tr>
+<tr>
+<td> <code>PRIO_PROCESS</code>
+</td>
+<td> Die Priorität eines bestimmten Prozesses ermitteln, dessen Prozessnummer (oder 0 für den aktuellen Prozess) im zweiten Parameter von <code>getpriority</code> angegeben wird.
+</td></tr>
+<tr>
+<td> <code>PRIO_PGRP</code>
+</td>
+<td> Die Priorität einer Prozessgruppe ermitteln, deren Nummer (oder 0 für die aktuelle Prozessgruppe) im zweiten Parameter angegeben wird.
+</td></tr>
+<tr>
+<td> <code>PRIO_USER</code>
+</td>
+<td> Die Priorität eines Benutzers ermitteln, dessen Benutzernummer (UID - oder 0 für den aktuelle Benutzer) im zweiten Parameter angegeben wird.
+</td></tr></table>
+Durch Voranstellen eines <code>&amp;</code>-Zeichens können Sie eine der Konstanten wie im Beispiel gezeigt als ersten Parameter übergeben.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Diese Funktion führt zu einem schweren Fehler, wenn das System keine Prozess- bzw. Benutzerverwaltung im Sinne von Unix kennt.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: kill - Signal an Prozess senden">Bearbeiten</a>]</span> <span class="mw-headline" id="kill_-_Signal_an_Prozess_senden"> <span id="kill"></span> kill - Signal an Prozess senden </span></h2>
+<p>Unix-spezifischer Befehl. Damit können Sie aus einem Perl-Script heraus Signale an andere laufende Prozesse auf dem Rechner senden und diese dadurch beeinflussen. Interessant ist dies vor allem, wenn Sie in Ihrem Perl-Script eigene Kindprozesse erzeugen (siehe <a href="#fork">fork</a>). Eltern- und Kindprozess können dann durch Signale kommunizieren.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> Nummer oder Name einer Konstante (siehe Tabelle weiter unten) des gewünschten Signals (oder Sie übergeben <code>0</code>, um herauszufinden, ob der Prozess mit der nachfolgend übergebenen Prozessnummer noch "am Leben" ist),
+</li><li> bis <b>n.</b> einer oder mehrere Prozesse, an die das Signal gesendet werden soll.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="co5">$|</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Kind_pid</span> <span class="sy0">=</span> <span class="kw3">fork</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">kill</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span><span class="re0">$Kind_pid</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Hier meldet sich ein Prozess&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">kill</span><span class="br0">&#40;</span><span class="st0">&quot;KILL&quot;</span><span class="sy0">,</span><span class="re0">$Kind_pid</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erzeugt mit <a href="#fork">fork</a> einen Kindprozess. Mit <code>if(kill(0,$Kind_pid))</code> wird abgefragt, ob dieser Prozess am Leben ist. Wenn ja, wird ausgegeben, dass sich ein Prozess meldet. Da im Beispiel für den Kindprozess kein eigener Perl-Code notiert ist und Kindprozesse einfach erst mal alles vom Elternprozess kopieren, würden <b>beide</b> Prozesse sich melden und <code>Hier meldet sich ein Prozess</code> ausgeben. Doch im Beispiel wird das verhindert, indem der Elternprozess den Kindprozess mit <code>kill("KILL",$Kind_pid)</code> tötet, bevor dieser die Anweisung mit der Ausgabe der Meldung ausführen kann. Die Meldung wird also insgesamt nur einmal ausgegeben.
+<p>Die folgende Tabelle enthält typische Signale mit Namen, wie Sie sie als ersten Parameter an <code>kill</code> übergeben können. Eine Garantie, dass alle hier aufgelisteten Signale auf jedem Rechner in Perl funktionieren, besteht nicht. Auch die entsprechenden Nummern wurden hier weggelassen, da sie von System zu System schwanken können. Maßgeblich ist letztendlich immer, was auf dem jeweiligen Rechner in der Datei <code>/usr/include/signal.h</code> definiert ist.
+</p>
+<table class="wikitable">
+<tr>
+<th> Name:
+</th>
+<th> Bedeutung:
+</th></tr>
+<tr>
+<td> <code>"HUP"</code>
+</td>
+<td> Ereignis: Verbindung beendet
+</td></tr>
+<tr>
+<td> <code>"INT"</code>
+</td>
+<td> Ereignis: allgemeine Unterbrechung
+</td></tr>
+<tr>
+<td> <code>"QUIT"</code>
+</td>
+<td> Ereignis: Endekennzeichen
+</td></tr>
+<tr>
+<td> <code>"ILL"</code>
+</td>
+<td> Anweisung ist illegal
+</td></tr>
+<tr>
+<td> <code>"TRAP"</code>
+</td>
+<td> Anweisung ist eine "Falle"
+</td></tr>
+<tr>
+<td> <code>"ABRT"</code>
+</td>
+<td> Abbruch
+</td></tr>
+<tr>
+<td> <code>"FPE"</code>
+</td>
+<td> Fehler bei Fließkommaberechnung
+</td></tr>
+<tr>
+<td> <code>"KILL"</code>
+</td>
+<td> Prozess "abschießen" (Unix: kill -9)
+</td></tr>
+<tr>
+<td> <code>"BUS"</code>
+</td>
+<td> Bus-Übertragungsfehler
+</td></tr>
+<tr>
+<td> <code>"SEGV"</code>
+</td>
+<td> Segment-Schutzverletzung im Speicher
+</td></tr>
+<tr>
+<td> <code>"PIPE"</code>
+</td>
+<td> Fehler bei Pipe-Kommunikation
+</td></tr>
+<tr>
+<td> <code>"ALARM"</code>
+</td>
+<td> Allgemeiner Alarm
+</td></tr>
+<tr>
+<td> <code>"TERM"</code>
+</td>
+<td> Beendigung
+</td></tr>
+<tr>
+<td> <code>"USR1"</code>
+</td>
+<td> Benutzerdefiniert 1
+</td></tr>
+<tr>
+<td> <code>"USR2"</code>
+</td>
+<td> Benutzerdefiniert 2
+</td></tr>
+<tr>
+<td> <code>"CHLD"</code>
+</td>
+<td> Signal vom Kindprozess
+</td></tr>
+<tr>
+<td> <code>"PWR"</code>
+</td>
+<td> Stromausfall
+</td></tr>
+<tr>
+<td> <code>"WINCH"</code>
+</td>
+<td> Fenstergröße wurde von einem Hintergrundprozess geändert
+</td></tr>
+<tr>
+<td> <code>"URG"</code>
+</td>
+<td> Dringende Bedingung
+</td></tr>
+<tr>
+<td> <code>"IO"</code>
+</td>
+<td> Asynchrone Ein-/Ausgabe
+</td></tr>
+<tr>
+<td> <code>"STOP"</code>
+</td>
+<td> Prozess anhalten
+</td></tr>
+<tr>
+<td> <code>"TSTP"</code>
+</td>
+<td> Prozess vom Terminal aus anhalten
+</td></tr>
+<tr>
+<td> <code>"CONT"</code>
+</td>
+<td> Angehaltenen Prozess fortführen
+</td></tr>
+<tr>
+<td> <code>"TTIN"</code>
+</td>
+<td> Prozess anhalten durch Lesen vom kontrollierenden Terminal
+</td></tr>
+<tr>
+<td> <code>"TTOU"</code>
+</td>
+<td> Prozess anhalten durch Schreiben auf kontrollierendes Terminal
+</td></tr>
+<tr>
+<td> <code>"VTALARM"</code>
+</td>
+<td> Virtueller Zeittaktgeber abgelaufen
+</td></tr>
+<tr>
+<td> <code>"PROF"</code>
+</td>
+<td> Profil-Zeittaktgeber abgelaufen
+</td></tr>
+<tr>
+<td> <code>"XCPU"</code>
+</td>
+<td> CPU-Belastungsgrenze erreicht
+</td></tr>
+<tr>
+<td> <code>"XSFZ"</code>
+</td>
+<td> Dateigrößengrenze erreicht
+</td></tr></table></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Mit dem folgenden Script können Sie abfragen, welche Signale unter welchen Signalnummern auf Ihrem Server-Rechner konfiguriert sind:
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> Config<span class="sy0">;</span>
+&#160;
+<span class="kw3">defined</span> <span class="re0">$Config</span><span class="br0">&#123;</span>sig_name<span class="br0">&#125;</span> <span class="sy0">||</span> <span class="kw3">die</span> <span class="st0">&quot;Kein Konfigmodul?&quot;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="re0">$name</span> <span class="br0">&#40;</span><span class="kw3">split</span><span class="br0">&#40;</span><span class="st_h">' '</span><span class="sy0">,</span> <span class="re0">$Config</span><span class="br0">&#123;</span>sig_name<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$i</span><span class="sy0">++;</span>
+  <span class="kw3">printf</span> <span class="st0">&quot;%3d)&#160;%s <span class="es0">\t</span>&quot;</span><span class="sy0">,</span> <span class="re0">$i</span><span class="sy0">,</span> <span class="re0">$name</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$i</span> <span class="sy0">%</span> <span class="nu0">5</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: pipe - Pipe erzeugen">Bearbeiten</a>]</span> <span class="mw-headline" id="pipe_-_Pipe_erzeugen"> <span id="pipe"></span> pipe - Pipe erzeugen </span></h2>
+<p>Unix-spezifischer Befehl. Ermöglicht zwei Prozessen, miteinander zu kommunizieren. Eine "Pipe" (Pfeife, Röhre) ist dabei der Kommunikationskanal für die beiden Prozesse. Es gibt einen Kanal zum Schreiben von Daten und einen zum Lesen von Daten. Für beide Kanäle gibt es jeweils ein "Handle". Diese Lese- und Schreib-Handles sind ganz ähnlich den <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#Allgemeines_zu_diesen_Funktionen" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">Datei-Handles</a>. Typischerweise wird eine Pipe eröffnet, bevor mit <a href="#fork">fork</a> ein Kindprozess erzeugt wird. Eltern- und Kindprozess können dann über die geöffnete Pipe Daten austauschen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen eines Lese-Handles (frei vergebbar),
+</li><li> den Namen eines Schreib-Handles (frei vergebbar)
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="co5">$|</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">pipe</span><span class="br0">&#40;</span>LESE_HANDLE<span class="sy0">,</span> SCHREIB_HANDLE<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Kind_pid</span> <span class="sy0">=</span> <span class="kw3">fork</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$Kind_pid</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="kw3">close</span><span class="br0">&#40;</span>LESE_HANDLE<span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="kw1">my</span> <span class="re0">$old_handle</span> <span class="sy0">=</span> <span class="kw3">select</span><span class="br0">&#40;</span>SCHREIB_HANDLE<span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="co5">$|</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+ <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span><span class="sy0">=</span><span class="nu0">1</span><span class="sy0">;</span><span class="re0">$i</span><span class="sy0">&lt;=</span><span class="nu0">5</span><span class="sy0">;</span><span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">sleep</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">print</span> SCHREIB_HANDLE <span class="st0">&quot;$i (gesendet vom Elternprozess)<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+ <span class="kw3">close</span><span class="br0">&#40;</span>SCHREIB_HANDLE<span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="kw3">wait</span><span class="sy0">;</span>
+ <span class="kw3">select</span><span class="br0">&#40;</span><span class="re0">$old_handle</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+ <span class="kw3">close</span><span class="br0">&#40;</span>SCHREIB_HANDLE<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Speicher</span><span class="sy0">;</span>
+ <span class="kw1">while</span><span class="br0">&#40;</span><span class="kw3">defined</span><span class="br0">&#40;</span><span class="re0">$Speicher</span> <span class="sy0">=</span> <span class="re4">&lt;LESE_HANDLE&gt;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="st0">&quot;Empfangen: $Speicher <span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+ <span class="kw3">exit</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erzeugt mit <code>pipe</code> eine Pipe. Über die beiden übergebenen Handle-Namen <code>LESE_HANDLE</code> und <code>SCHREIB_HANDLE</code> ist anschließend der Nachrichtenaustausch zwischen zwei Prozessen möglich. Mit Hilfe von <a href="#fork">fork</a> erzeugt das Script einen Kindprozess. Der Elternprozess läuft im <code>if</code>-Zweig des nachfolgenden Codes, der Kindprozess im <code>else</code>-Zweig. Beim Erzeugen des Kindprozesses wird alles kopiert - außer den beiden Handles aus der Pipe. Diese werden nicht kopiert, bleiben allerdings für beide Prozesse verfügbar. Deshalb muss jeder Prozess erst mal das nicht benötigte Handle mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#close" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">close</a> schließen. Um die Pufferung der Daten abschalten zu können, muss im <code>if</code>-Zweig außerdem mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#select" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">select</a> das Schreib-Handle ausgewählt werden. Alle Anweisungen sowohl des <code>if</code>- als auch des <code>else</code>-Zweiges werden insgesamt fünf mal ausgeführt. Denn in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for" title="Perl/Schleifen">for-Schleife</a>, die von 1 bis 5 zählt, schreibt der Elternprozess, nachdem er zu Testzwecken eine Sekunde lang anhält (siehe <a href="#sleep">sleep</a>), den aktuellen Zählerstand in das Schreib-Handle. Der Kindprozess im <code>else</code>-Zweig kann diese Daten lesen, indem er eine <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#while" title="Perl/Schleifen">while-Schleife</a> verwendet und darin das Lese-Handle ausliest. Zur Kontrolle gibt der Kindprozess aus, was er eingelesen hat.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: setpgrp - Prozessgruppe für Prozess bestimmen">Bearbeiten</a>]</span> <span class="mw-headline" id="setpgrp_-_Prozessgruppe_f.C3.BCr_Prozess_bestimmen"> <span id="setpgrp"></span> setpgrp - Prozessgruppe für Prozess bestimmen </span></h2>
+<p>Unix-spezifischer Befehl. Ordnet einen Prozess einer Prozessgruppe zu.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die Prozessnummer (PID) des gewünschten Prozesses (<code>0</code> für aktuellen Prozess übergeben),
+</li><li> die Nummer der Prozessgruppe, der dieser Prozess zugeordnet werden soll  (<code>0</code> für aktuelle Prozessgruppe übergeben).
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$gruppe_alt</span> <span class="sy0">=</span> <span class="kw3">getpgrp</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Prozessgruppe alt: &lt;strong&gt;$gruppe_alt&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">setpgrp</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$gruppe_neu</span> <span class="sy0">=</span> <span class="kw3">getpgrp</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Prozessgruppe neu: &lt;strong&gt;$gruppe_neu&lt;/strong&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ordnet den aktuellen Prozess der aktuellen Prozessgruppe zu und erzeugt so seine eigene Prozessgruppe. Zum Vergleich wird die aktuelle Prozessgruppe vorher und hinterher ausgelesen und jeweils ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: setpriority - Priorität eines Prozesses oder Benutzers setzen">Bearbeiten</a>]</span> <span class="mw-headline" id="setpriority_-_Priorit.C3.A4t_eines_Prozesses_oder_Benutzers_setzen"> <span id="setpriority"></span> setpriority - Priorität eines Prozesses oder Benutzers setzen </span></h2>
+<p>Unix-spezifischer Befehl. Setzt die aktuelle Priorität eines Prozesses, einer Prozessgruppe oder eines Benutzers. Prozesse mit höherer Priorität erhalten unter den aktuell laufenden Prozessen mehr Systemressourcen zur Ausführung.<br />
+Da diese Funktion "systemkritisch" ist, steht sie auf den meisten Unix-Systemen nur  Benutzern mit root-Kennung zur Verfügung.
+</p><p>Parameter wie bei <a href="#getpriority">getpriority</a>
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">require</span> <span class="st0">&quot;resource.ph&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Prio</span> <span class="sy0">=</span> <span class="kw3">getpriority</span><span class="br0">&#40;</span><span class="re0">&amp;PRIO_PROCESS</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Prio</span> <span class="sy0">+=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw3">setpriority</span> <span class="br0">&#40;</span><span class="re0">&amp;PRIO_PROCESS</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="re0">$Prio</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Neue Prioritaet des aktuellen Prozesses: $Prio<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel liest mit <code>getpriority</code> die Priorität des aktuellen Prozesses ein, erhöht sie anschließend um 1 und setzt dann mit <code>setpriority</code> den neuen Wert. Zur Kontrolle gibt das Script den aktuellen Wert der Priorität aus.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Diese Funktion führt zu einem schweren Fehler, wenn das System keine Prozess- bzw. Benutzerverwaltung im Sinne von Unix kennt.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: sleep - aktuellen Prozess anhalten">Bearbeiten</a>]</span> <span class="mw-headline" id="sleep_-_aktuellen_Prozess_anhalten"> <span id="sleep"></span> sleep - aktuellen Prozess anhalten </span></h2>
+<p>Hält die Ausführung des Scripts für eine bestimmte Anzahl Sekunden an und fährt dann fort.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die Anzahl Sekunden, die angehalten werden soll. Wenn nichts übergeben wird, wird "für ewig" angehalten.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+&#160;
+<span class="kw3">sleep</span><span class="br0">&#40;</span><span class="nu0">10</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">exec</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/bin/perl&quot;</span><span class="sy0">,</span><span class="st0">&quot;aufwachen.pl&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel wartet nach Aufruf von <code>sleep(10)</code> 10 Sekunden und führt dann mit <a href="#exec">exec</a> ein anderes Script aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: system - Fremdprogramm aufrufen und eigenen Prozess erhalten">Bearbeiten</a>]</span> <span class="mw-headline" id="system_-_Fremdprogramm_aufrufen_und_eigenen_Prozess_erhalten"> <span id="system"></span> system - Fremdprogramm aufrufen und eigenen Prozess erhalten </span></h2>
+<p>Ruft ein anderes Programm auf und ermittelt dessen Rückgabewert. Wenn Sie daran interessiert sind, welche Ausgaben das andere Programm erzeugt, sollten Sie die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a> mit dem Zeichen <code>|</code> oder <a href="#qx.28....29">qx(...)</a> bzw. <code>`...`</code> (Backticks) benutzen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine Zeichenkette oder eine Liste. Werden mehrere Parameter, also eine Liste, übergeben, wird der erste Parameter als das auszuführende Programm bzw. Kommando interpretiert, und die übrigen Parameter als Übergabeparameter für das Programm bzw. Kommando.
+</li></ol>
+<p>Gibt den Rückgabewert des ausgeführten Programms oder Kommandos zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$Datei_1</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Datei_2</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">split</span><span class="br0">&#40;</span><span class="co2">/&amp;/</span><span class="sy0">,</span><span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Pfaddatei_1</span> <span class="sy0">=</span> <span class="st0">&quot;/usr/web/daten/alt/&quot;</span><span class="sy0">.</span><span class="re0">$Datei_1</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Pfaddatei_2</span> <span class="sy0">=</span> <span class="st0">&quot;/usr/web/daten/neu/&quot;</span><span class="sy0">.</span><span class="re0">$Datei_2</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Vergleich</span> <span class="sy0">=</span> <span class="kw3">system</span><span class="br0">&#40;</span><span class="st0">&quot;cmp $Pfaddatei_1 $Pfaddatei_2 &gt;/dev/null&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Vergleich</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;tt&gt;$Pfaddatei_1&lt;/tt&gt;&lt;br&gt;und&lt;br&gt;&lt;tt&gt;$Pfaddatei_2&lt;/tt&gt;&lt;br&gt;&lt;strong&gt;sind gleich!&lt;/strong&gt;!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;tt&gt;$Pfaddatei_1&lt;/tt&gt;&lt;br&gt;und&lt;br&gt;&lt;tt&gt;$Pfaddatei_2&lt;/tt&gt;&lt;br&gt;&lt;strong&gt;sind verschieden!&lt;/strong&gt;!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispielscript ermittelt den Inhalt der <a rel="nofollow" class="external text" href="http://de.selfhtml.org/servercgi/cgi/umgebungsvariablen.htm">CGI-Umgebungsvariablen</a> <code>QUERY_STRING</code>, erwartet in dem übergebenen Parameter ein kaufmännisches Und (<code>&amp;</code>) und trennt den Teil davor und den dahinter in die Skalare <code>$Datei_1</code> und <code>$Datei_2</code>. Die beiden Daten werden als Dateien interpretiert. Ein Beispielaufruf des Scripts könnte lauten:<br />
+<p><var>/cgi-bin/script.pl?news.htm&amp;news.htm</var><br />
+</p>
+Das Script hängt die beiden gleichnamigen Dateien an unterschiedliche Pfadnamen auf dem Server und erzeugt damit zwei unterschiedliche Dateipfadangaben in den Skalaren <code>$Pfaddatei_1</code> und <code>$Pfaddatei_2</code>. Mit <code>system</code> wird nun der Shell-Befehl <code>cmp</code> (unter Unix) gestartet, der zwei Dateien daraufhin überprüft, ob sie gleich sind. Dem Befehl werden die beiden Skalare mit den Pfadangaben übergeben. Eine Ausgabe soll der Befehl in diesem Fall nicht erzeugen. Deshalb wird seine Ausgabe nach <code>/dev/null</code> umgeleitet. Der Rückgabewert des <code>system</code>-Aufrufs und damit des <code>cmp</code>-Befehls wird jedoch gespeichert, nämlich im Skalar <code>$Vergleich</code>. Wenn der Wert <code>0</code> ist, sind die verglichenen Dateien gleich, andernfalls unterschiedlich. Diese Information wird zurückgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: times - Laufzeit des aktuellen Prozesses ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="times_-_Laufzeit_des_aktuellen_Prozesses_ermitteln"> <span id="times"></span> times - Laufzeit des aktuellen Prozesses ermitteln </span></h2>
+<p>Ermittelt die Laufzeit eines Prozesses (und, wenn vorhanden, seiner Kindprozesse) von der Erzeugung bis zum Ausführen dieses <code>times</code>-Aufrufs. Ermittelt werden für jeden Prozess jeweils zwei Werte: "user time" und "system time". Während "user time" bezeichnet, wie lange der Prozess selber gelaufen ist, gibt "system time" die Zeit an, wie lange der Prozess das Betriebssystem beschäftigt hat. Die Summe beider Zeiten ist die gesamte verbrauchte CPU-Zeit.<br />
+Die gemessenen Zeiten basieren auf so genannten Uhrenticks. Die Anzahl der Uhrenticks pro Sekunde ist auf Unix-Systemen einstellbar (<code>TICKSPERSEC</code> in der Datei <code>conf.h</code>).
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt eine Liste mit Laufzeiten in Sekunden (Fließkommazahlen mit Angaben zu Sekundenbruchteilen) zurück. Schema:<br />
+<code>($user_time,$system_time[,$user_time_Kind,$system_time_Kind,...])</code>
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$x</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span> <span class="sy0">&lt;</span> <span class="nu0">1000</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$k</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$k</span> <span class="sy0">&lt;</span> <span class="nu0">100</span><span class="sy0">;</span> <span class="re0">$k</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="re0">$x</span> <span class="sy0">=</span> <span class="re0">$i</span> <span class="sy0">*</span> <span class="re0">$k</span> <span class="sy0">/</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$Systemzeit</span><span class="sy0">,</span> <span class="re0">$Userzeit</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">times</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$CPU_Zeit</span> <span class="sy0">=</span> <span class="re0">$Systemzeit</span> <span class="sy0">+</span> <span class="re0">$Userzeit</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;verbrauchte Systemzeit: &lt;strong&gt;$Systemzeit&lt;/strong&gt; Sekunden&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;verbrauchte Userzeit: &lt;strong&gt;$Userzeit&lt;/strong&gt; Sekunden&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;verbrauchte CPU-Zeit: &lt;strong&gt;$CPU_Zeit&lt;/strong&gt; Sekunden<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel enthält zwei verschachtelte <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for" title="Perl/Schleifen">for-Schleifen</a>, in denen sehr viel zu rechnen ist (es werden insgesamt 100.000 Funktionsaufrufe von <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#time" title="Perl/Funktionen für Datum und Uhrzeit">time</a> und Bruchzahlrechnungen durchgeführt). Anschließend ermittelt das Beispiel die benötigten Zeiten. Vom Aufruf der Funktion <code>times</code> werden die ersten beiden Listenelemente, also die für den aktuellen Prozess, in den Skalaren <code>$Systemzeit</code> und <code>$Userzeit</code> festgehalten. Aus der Summe dieser beiden wird noch die CPU-Zeit ermittelt und in <code>$CPU_Zeit</code> gespeichert. Zur Kontrolle gibt das Script die ermittelten Zeiten aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: wait - auf das Ende eines Kindprozesses warten">Bearbeiten</a>]</span> <span class="mw-headline" id="wait_-_auf_das_Ende_eines_Kindprozesses_warten"> <span id="wait"></span> wait - auf das Ende eines Kindprozesses warten </span></h2>
+<p>Unix-spezifischer Befehl.
+</p><p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="co1">#use strict;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="co5">$|</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Kind_pid</span> <span class="sy0">=</span> <span class="kw3">fork</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Kind_pid</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Hier ist der Elternprozess.&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">wait</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Der Kindprozess ist zuende.&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Hier ist der Kindprozess.&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">exit</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erzeugt mit <a href="#fork">fork</a> einen Kindprozess. Mit <code>if($Kind_pid)</code> wird abgefragt, ob der Skalar <code>$Kind_pid</code> einen Wert ungleich <code>0</code> hat. Ist das der Fall, werden Anweisungen ausgeführt, die zum Elternprozess gehören. Im Beispiel wird eine Meldung ausgegeben, dass sich das Script im Elternprozess befindet. Im <code>else</code>-Zweig, in den das Script gelangt, wenn <code>Kind_pid</code> den Wert <code>0</code> hat, wird dagegen ausgegeben, dass der Kindprozess aktiv ist.<br />
+Normalerweise würde erst der <code>if</code>-Zweig abgearbeitet, dann der <code>else</code>-Zweig. Durch die Anweisung <code>wait()</code> im <code>if</code>-Zweig wartet jedoch der Elternprozess auf das Ende des Kindprozesses, bevor er fortfährt. So wird vorher der <code>else</code>-Zweig abgearbeitet, und anschließend die letzte Meldung im <code>if</code>-Zweig ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: waitpid - auf das Ende eines Kindprozesses mit bestimmter Prozessnummer (pid) warten">Bearbeiten</a>]</span> <span class="mw-headline" id="waitpid_-_auf_das_Ende_eines_Kindprozesses_mit_bestimmter_Prozessnummer_.28pid.29_warten"> <span id="waitpid"></span> waitpid - auf das Ende eines Kindprozesses mit bestimmter Prozessnummer (pid) warten </span></h2>
+<p>Unix-spezifischer Befehl. Ruft im Gegensatz zu <a href="#wait">wait</a> direkt das Betriebssystem auf.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> Die Prozessnummer (PID) des gewünschten Kindprozesses.
+</li><li> Schalter (Flags - siehe Tabelle weiter unten)
+</li></ol>
+<p>Gibt die Prozessnummer (PID) des beendeten Prozesses zurück, oder <code>-1</code>, wenn der gewünschte Kindprozess nicht oder nicht mehr existiert. Auf manchen Systemen ist auch der Rückgabewert <code>0</code> möglich - er bedeutet, dass der Kindprozess noch immer läuft (d.h. ein Timeout beim Warten überschritten wurde).
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="co1">#use strict;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw2">use</span> POSIX<span class="sy0">;</span>
+&#160;
+<span class="co5">$|</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Kind_pid</span> <span class="sy0">=</span> <span class="kw3">fork</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Kind_pid</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Hier ist der Elternprozess.&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw2">use</span> POSIX <span class="st0">&quot;:sys_wait_h&quot;</span><span class="sy0">;</span>
+  <span class="kw1">do</span> <span class="br0">&#123;</span>
+    <span class="kw1">my</span> <span class="re0">$Kind_pid</span> <span class="sy0">=</span> <span class="kw3">waitpid</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span><span class="re0">&amp;WNOHANG</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span> <span class="kw1">until</span> <span class="re0">$Kind_pid</span> <span class="sy0">==</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+&#160;
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Der Kindprozess ist zuende.&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Hier ist der Kindprozess.&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">exit</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel tut das gleiche wie jenes bei <a href="#wait">wait</a>. In diesem Fall wird jedoch mit einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#do" title="Perl/Schleifen">do-until-Schleife</a> gewartet, bis der Kindprozess zuende ist. Das ist der Fall, wenn die Funktion <code>waitpid</code> den Rückgabewert <code>-1</code> liefert, der Kindprozess also nicht mehr existiert.
+<p>Der Funktion <code>waitpid</code> wird im Beispiel das Flag <code>&amp;WNOHANG</code> übergeben. Die Konstanten dazu werden im <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>POSIX</code> definiert. Daher ist es erforderlich, dieses Modul so wie im Beispiel mit <code>use&#160;POSIX&#160;":sys_wait_h"</code> einzubinden.<br />
+Die folgende Tabelle listet die Flags auf, die Sie an der Stelle übergeben können.
+</p>
+<table class="wikitable">
+<tr>
+<th> Flag:
+</th>
+<th> Bedeutung:
+</th></tr>
+<tr>
+<td> <code>&amp;WEXITSTATUS</code>
+</td>
+<td> Enthält den Rückgabewert des Kindprozesses (genauer: die untersten 8 Bit, also einen Wert bis maximal 255).
+</td></tr>
+<tr>
+<td> <code>&amp;WIFEXITED</code>
+</td>
+<td> Hat den Wert <code>true</code> oder <code>1</code>, wenn der Kindprozess normal beendet wurde.
+</td></tr>
+<tr>
+<td> <code>&amp;WIFSIGNALED</code>
+</td>
+<td> Hat den Wert <code>true</code> oder <code>1</code>, wenn der Kindprozess durch ein unbeantwortetes Signal beendet wurde.
+</td></tr>
+<tr>
+<td> <code>&amp;WIFSTOPPED</code>
+</td>
+<td> Hat den Wert <code>true</code> oder <code>1</code>, wenn der Kindprozess angehalten wurde.
+</td></tr>
+<tr>
+<td> <code>&amp;WNOHANG</code>
+</td>
+<td> Der aufrufende Prozess wird nicht blockiert, falls der Kindprozess nicht sofort reagiert. In einem solchen Fall wird <code>waitpid()</code> sofort beendet und liefert 0 zurück.
+</td></tr>
+<tr>
+<td> <code>&amp;WSTOPSIG</code>
+</td>
+<td> Die Nummer des Signals, das zum Anhalten des Kindprozesses führte (das Anhalten des Kindprozesses) kann mit <code>&amp;WIFSTOPPED</code> ermittelt werden.
+</td></tr>
+<tr>
+<td> <code>&amp;WTERMSIG</code>
+</td>
+<td> Die Nummer des Signals, das vom Kindprozess nicht beantwortet wurde und deshalb zu dessen Beenden führte (ob dies der Fall ist, kann mit <code>&amp;WIFSIGNALED</code> ermittelt werden.
+</td></tr>
+<tr>
+<td> <code>&amp;WUNTRACED</code>
+</td>
+<td> <code>waitpid()</code> kehrt mit dem Status eines bereits gestoppten Kindprozesses zurück, dessen exit-Rückgabewert aber noch nicht abgefragt wurde.
+</td></tr></table></div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1355/1000000
+Post‐expand include size: 81510/2097152 bytes
+Template argument size: 73974/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3104-0!*!0!!de-formal!*!* and timestamp 20150301150426 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;oldid=13959">http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;oldid=13959</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FFunktionen+f%C3%BCr+Betriebssystemaufrufe" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Betriebssystemaufrufe"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Betriebssystemaufrufe" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Funktionen_für_Betriebssystemaufrufe" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Funktionen_für_Betriebssystemaufrufe" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Betriebssystemaufrufe&amp;oldid=13959" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FFunktionen_für_Betriebssystemaufrufe" title="Spezial:Durchsuchen/Perl-2FFunktionen für Betriebssystemaufrufe">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 16. September 2012 um 19:26 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.521-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.113 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Betriebssystemaufrufe by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

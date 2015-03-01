@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Operatoren by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Operatoren – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Operatoren","wgTitle":"Perl/Operatoren","wgCurRevisionId":13720,"wgArticleId":1849,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Operatoren","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Operatoren" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Operatoren&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Operatoren skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Operatoren</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Zuweisungsoperatoren"><span class="tocnumber">1</span> <span class="toctext">Zuweisungsoperatoren</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Vergleichsoperatoren"><span class="tocnumber">2</span> <span class="toctext">Vergleichsoperatoren</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Berechnungsoperatoren"><span class="tocnumber">3</span> <span class="toctext">Berechnungsoperatoren</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Logische_Operatoren"><span class="tocnumber">4</span> <span class="toctext">Logische Operatoren</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Bit-Operatoren"><span class="tocnumber">5</span> <span class="toctext">Bit-Operatoren</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung"><span class="tocnumber">6</span> <span class="toctext">Operator für Zeichenkettenverknüpfung</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Operator_f.C3.BCr_Zeichenkettenwiederholung"><span class="tocnumber">7</span> <span class="toctext">Operator für Zeichenkettenwiederholung</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Operatorenrangfolge"><span class="tocnumber">8</span> <span class="toctext">Operatorenrangfolge</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Zuweisungsoperatoren">Bearbeiten</a>]</span> <span class="mw-headline" id="Zuweisungsoperatoren"> Zuweisungsoperatoren </span></h2>
+<p>Sie können zum Beispiel einem <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalar</a> einen Wert zuweisen. Der Zuweisungsoperator dafür ist ein Gleichheitszeichen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">$Name</span> <span class="sy0">=</span> <span class="st0">&quot;Josua Piesepampel&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Code</span> <span class="sy0">=</span> <span class="nu0">4711</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Den Skalaren wird mit dem Zuweisungsoperator <code>=</code> jeweils ein Wert zugewiesen.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">$Ausgabe</span> <span class="sy0">=</span> sinn_des_lebens<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> sinn_des_lebens<span class="br0">&#123;</span> <span class="kw3">return</span> <span class="nu0">42</span> <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Sie können auch das Resultat einer Funktion zuweisen.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">$var1</span> <span class="sy0">=</span> <span class="kw1">my</span> <span class="re0">$var2</span> <span class="sy0">=</span> <span class="kw1">my</span> <span class="re0">$var3</span> <span class="sy0">=</span> <span class="st0">&quot;einer für alle&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Sie können auch einen Wert mehreren Variablen zuweisen.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="br0">&#40;</span> <span class="re0">$var1</span> <span class="sy0">,</span> <span class="re0">$var2</span> <span class="sy0">,</span> <span class="re0">$var3</span> <span class="br0">&#41;</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;eins&quot;</span><span class="sy0">,</span> <span class="st0">&quot;zwei&quot;</span><span class="sy0">,</span> <span class="st0">&quot;drei&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@liste</span> <span class="sy0">=</span> <span class="br0">&#40;</span> <span class="re0">$var1</span> <span class="sy0">,</span> <span class="re0">$var2</span> <span class="sy0">,</span> <span class="re0">$var3</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@kopie</span> <span class="sy0">=</span> <span class="re0">@liste</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Listenkontext können Sie jedem Element ein Element der Quellliste zuweisen. Im zweiten Beispiel erhält der Array <code>@liste</code> drei Elemente. Diese Elemente werden im dritten Beispiel <code>@kopie</code> zugewiesen.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Vergleichsoperatoren">Bearbeiten</a>]</span> <span class="mw-headline" id="Vergleichsoperatoren"> Vergleichsoperatoren </span></h2>
+<p>Vergleichsoperatoren brauchen Sie, wenn Sie zwei Werte vergleichen wollen, z.B. den aktuellen Inhalt eines Skalars mit einem fixen Wert.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$SinnDesLebens</span> <span class="sy0">==</span> <span class="nu0">42</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sie haben das Leben verstanden!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$SinnDesLebens</span> <span class="sy0">!=</span> <span class="nu0">42</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sie haben nix kapiert vom Leben!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$SinnDesLebens</span> <span class="sy0">&gt;</span> <span class="nu0">42</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sind Sie wahnsinnig?<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$SinnDesLebens</span> <span class="sy0">&lt;</span> <span class="nu0">42</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sie sind eine Nummer zu klein für das Leben!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Alter</span> <span class="sy0">&gt;=</span> <span class="nu0">18</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sie dürfen selbst diesen Schwachsinn hier sehen!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Alter</span> <span class="sy0">&lt;=</span> <span class="nu0">17</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sie sind nicht mal alt genug für diesen Schwachsinn!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Passwort</span> <span class="kw1">eq</span> <span class="st0">&quot;Hexasex&quot;</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sie haben Zugang zum Sex im hexadezimalen Raum!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Passwort</span> <span class="kw1">ne</span> <span class="st0">&quot;Hexasex&quot;</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Haben Sie lieber eindimensionalen Sex daheim im Bett!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Name</span> <span class="kw1">gt</span> <span class="st0">&quot;Y&quot;</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sie sind aber auch immer der Letzte!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Name</span> <span class="kw1">lt</span> <span class="st0">&quot;B&quot;</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Sie sind aber auch immer der Erste!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Name</span> <span class="kw1">ge</span> <span class="st0">&quot;ZZ Top&quot;</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Ihre Lieblingsband ist ZZ Top oder was ganz Perverses!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Name</span> <span class="kw1">le</span> <span class="st0">&quot;Abba&quot;</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Ihre Lieblingsband ist Abba oder was ganz Perverses!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Alter</span> <span class="sy0">=~</span> <span class="co2">/[^0-9]/</span><span class="br0">&#41;</span>
+ <span class="br0">&#123;</span> <span class="kw3">print</span> <span class="st0">&quot;Das ist ja gar keine Zahl!<span class="es0">\n</span>&quot;</span> <span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Perl unterscheidet Vergleichsoperatoren für Zahlen und für Zeichenketten. Ferner gibt es einen speziellen Operator für Vergleiche mit <a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">regulären Ausdrücken</a>.
+<p>Um abzufragen, ob zwei Zahlen gleich sind, notieren Sie zwei Gleichheitszeichen <code>==</code> nebeneinander.<br />Um abzufragen, ob zwei Zahlen unterschiedlich sind, notieren Sie zwischen beiden Werten die Zeichen <code>!=</code>.<br />Um abzufragen, ob eine Zahl größer oder gleich ist als eine andere, notieren Sie die Zeichen <code>&gt;=</code>.<br />Um abzufragen, ob eine Zahl in jedem Fall größer ist als eine andere, notieren Sie das Zeichen <code>&gt;</code>.<br />Um abzufragen, ob eine Zahl kleiner oder gleich ist als eine andere, notieren Sie die Zeichen <code>&lt;=</code>.<br />Um abzufragen, ob eine Zahl in jedem Fall kleiner ist als eine andere, notieren Sie das Zeichen <code>&lt;</code>.
+</p><p>Um abzufragen, ob zwei Zeichenketten gleich sind, notieren Sie <code>eq</code> zwischen den beiden Werten, die verglichen werden sollen (<i>eq = equal = gleich</i>).<br />Um abzufragen, ob zwei Zeichenketten unterschiedlich sind, notieren Sie <code>ne</code> zwischen den beiden Werten, die verglichen werden sollen (<i>ne = not equal = nicht gleich</i>).<br />Um abzufragen, ob eine erste Zeichenkette alphabetisch weiter hinten liegt als eine zweite, notieren Sie <code>gt</code> zwischen den beiden Werten, die verglichen werden sollen (<i>gt = greater than = größer als</i>).<br />Um abzufragen, ob eine erste Zeichenkette alphabetisch weiter vorne liegt als eine zweite, notieren Sie <code>lt</code> zwischen den beiden Werten, die verglichen werden sollen (<i>lt = less than = kleiner als</i>).<br />Um abzufragen, ob eine erste Zeichenkette alphabetisch gleich ist wie eine zweite oder weiter hinten liegt, notieren Sie <code>ge</code> zwischen den beiden Werten, die verglichen werden sollen (<i>ge = greater or equal = größer oder gleich</i>).<br />Um abzufragen, ob eine erste Zeichenkette alphabetisch gleich ist wie eine zweite oder weiter vorne liegt, notieren Sie <code>le</code> zwischen den beiden Werten, die verglichen werden sollen (<i>le = less or equal = kleiner oder gleich</i>).
+</p>
+Um den Wert eines Skalars, egal ob Zahl oder Zeichenkette, mit einem regulären Ausdruck zu vergleichen (Fachjargon: an einen regulären Ausdruck zu binden), benutzen Sie den Bindungsoperator <code>=~</code>.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Berechnungsoperatoren">Bearbeiten</a>]</span> <span class="mw-headline" id="Berechnungsoperatoren"> Berechnungsoperatoren </span></h2>
+<p>Um mit numerischen Werten Berechnungen durchzuführen, brauchen Sie Berechnungsoperatoren.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="re0">$Hundertlasser</span> <span class="sy0">=</span> <span class="nu0">83</span> <span class="sy0">+</span> <span class="nu0">17</span><span class="sy0">;</span>
+<span class="re0">$Hundertlasser</span> <span class="sy0">=</span> <span class="nu0">113</span> <span class="sy0">-</span> <span class="nu0">13</span><span class="sy0">;</span>
+<span class="re0">$Hundertlasser</span> <span class="sy0">=</span> <span class="nu0">4</span> <span class="sy0">*</span> <span class="nu0">25</span><span class="sy0">;</span>
+<span class="re0">$Hundertlasser</span> <span class="sy0">=</span> <span class="nu0">450</span> <span class="sy0">/</span> <span class="nu0">4.5</span><span class="sy0">;</span>
+<span class="re0">$Hundertlasser</span> <span class="sy0">=</span> <span class="nu0">450</span> <span class="sy0">/</span> <span class="nu0">2</span> <span class="sy0">-</span> <span class="nu0">125</span><span class="sy0">;</span>
+<span class="re0">$Hundertlasser</span> <span class="sy0">=</span> <span class="nu0">10</span> <span class="sy0">*</span> <span class="br0">&#40;</span><span class="nu0">2</span> <span class="sy0">+</span> <span class="nu0">8</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Hundertlasser</span> <span class="sy0">=</span> <span class="nu0">10</span> <span class="sy0">**</span> <span class="nu0">2</span><span class="sy0">;</span>
+<span class="re0">$x</span> <span class="sy0">=</span> <span class="re0">$Hundertlasser</span> <span class="sy0">%</span> <span class="nu0">4</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$x</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="re0">$Hundertlasser</span><span class="sy0">,</span> <span class="st0">&quot; ist ein Schaltjahr<span class="es0">\n</span>&quot;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="co1"># Besondere Notationen:</span>
+&#160;
+<span class="re0">$Zahl</span> <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span>
+<span class="re0">$Zahl</span><span class="sy0">++;</span>      <span class="co1"># $Zahl um 1 erhoehen</span>
+<span class="re0">$Zahl</span><span class="sy0">--;</span>      <span class="co1"># $Zahl um 1 erniedrigen</span>
+<span class="re0">$Zahl</span> <span class="sy0">+=</span> <span class="nu0">10</span><span class="sy0">;</span>  <span class="co1"># $Zahl um 10 erhoehen</span>
+<span class="re0">$Zahl</span> <span class="sy0">-=</span> <span class="nu0">10</span><span class="sy0">;</span>  <span class="co1"># $Zahl um 10 erniedrigen</span>
+<span class="re0">$Zahl</span> <span class="sy0">*=</span> <span class="nu0">10</span><span class="sy0">;</span>  <span class="co1"># $Zahl mit 10 multiplizieren</span>
+<span class="re0">$Zahl</span> <span class="sy0">/=</span> <span class="nu0">10</span><span class="sy0">;</span>  <span class="co1"># $Zahl durch 10 dividieren</span>
+<span class="re0">$Zahl</span> <span class="sy0">%=</span> <span class="nu0">10</span><span class="sy0">;</span>  <span class="co1"># $Zahl durch 10 modulo-dividieren</span>
+<span class="re0">$Zahl</span> <span class="sy0">**=</span> <span class="nu0">2</span><span class="sy0">;</span>  <span class="co1"># $Zahl hoch 2 errechnen</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Mathematische Operatoren notieren Sie mit den dafür üblichen Zeichen. Mit <code>+</code> notieren Sie eine Addition, mit <code>-</code> eine Subtraktion, mit <code>*</code> eine Multiplikation, mit <code>/</code> eine Division, und mit <code>**</code> eine Potenzoperation "x hoch y". Eine Besonderheit stellt der Operator <code>%</code> dar. Damit wird eine so genannte Modulo-Division durchgeführt. Bei einer Modulo-Division werden zwei Werte dividiert. Das Ergebnis ist jedoch im Gegensatz zur normalen Division nur der Restwert der Division. Wenn Sie z.B. <code>13&#160;% 5</code> notieren, erhalten Sie als Ergebnis 3, weil 13 geteilt durch 5 gleich 2 Rest 3 ergibt. Diese 3 ist es, die als Ergebnis einer Modulo-Division herauskommt.
+<p>Sie können mehrere Operationen in Reihe notieren. Dabei gilt die übliche "Punkt-vor-Strich-Regel". Wenn Sie eine andere Regel erzwingen wollen, müssen Sie Klammern verwenden, so wie im obigen Beispiel <code>$Hundertlasser&#160;=&#160;10&#160;*&#160;(2&#160;+&#160;8);</code>.
+</p><p>Die besonderen Notationen, die in den obigen Beispielen vorkommen, können Sie verwenden, wenn Sie Additionen oder Subtraktionen abkürzen wollen:<br /><code>$Zahl++;</code> ist eine Abkürzung für <code>$Zahl = $Zahl + 1;</code><br /><code>$Zahl--;</code> ist eine Abkürzung für <code>$Zahl = $Zahl - 1;</code><br /><code>$Zahl += 10;</code> ist eine Abkürzung für <code>$Zahl = $Zahl + 10;</code><br />usw. bei den gleichartigen Operationen.
+</p>
+Der Operator <code>++</code> wird auch als Inkrementationsoperator bezeichnet, der Operator <code>--</code> als Dekrementationsoperator.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Bei den Operatoren <code>++</code> und <code>--</code> gibt es eine Besonderheit, die auf C bzw. sogar auf die Maschinensprache (Assembler) zurückzuführen ist. Die Operatoren können sowohl vor als auch nach der Variablen notiert werden (also z.B. sowohl <code>$Zahl++</code> als auch <code>++$Zahl</code>). Werden sie davor notiert, wird die Operation ausgeführt, bevor der Ausdruck ausgewertet wird (Fachjargon: Pre-In-/Dekrement). Umgekehrt gilt: wird der Operator nach der Variablen notiert, wird die Operation ausgeführt, nachdem der Ausdruck ausgewertet wurde (Fachjargon: Post-In-/Dekrement). Die Ausgabe des folgenden Codes sollte Sie also nicht überraschen:<br /><code>my $Zahl=1;<br />print $Zahl++;<br />print --$Zahl;</code><br />Es wird zweimal <code>1</code> ausgegeben. Beim ersten Mal, weil <code>$Zahl</code> ausgegeben wird, bevor Eins dazu addiert wird. Beim zweiten Mal, weil Eins subtrahiert wird, bevor <code>$Zahl</code> ausgegeben wird.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Logische Operatoren">Bearbeiten</a>]</span> <span class="mw-headline" id="Logische_Operatoren"> Logische Operatoren </span></h2>
+<p>Logische Operatoren brauchen Sie, um Ausdrücke zu formulieren, die wahr oder falsch sein können. Verwendung finden solche Ausdrücke besonders in Bedingungen für <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen" title="Perl/Bedingte Anweisungen">bedingte Anweisungen</a> oder <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen" title="Perl/Schleifen">Schleifen</a>.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="nu0">1</span> <span class="sy0">&amp;&amp;</span> <span class="re0">$b</span> <span class="sy0">==</span> <span class="nu0">2</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="sy0">...</span><span class="br0">&#125;</span>  <span class="co1"># wenn a = 1 ist und b = 2</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="nu0">1</span> <span class="kw1">and</span> <span class="re0">$b</span> <span class="sy0">==</span> <span class="nu0">2</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="sy0">...</span><span class="br0">&#125;</span> <span class="co1"># wenn a = 1 ist und b = 2</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="nu0">1</span> <span class="sy0">||</span> <span class="re0">$b</span> <span class="sy0">==</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="sy0">...</span><span class="br0">&#125;</span>  <span class="co1"># wenn a = 1 oder b = 1 ist</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="nu0">1</span> <span class="kw1">or</span> <span class="re0">$b</span> <span class="sy0">==</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="sy0">...</span><span class="br0">&#125;</span>  <span class="co1"># wenn a = 1 oder b = 1 ist</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="nu0">1</span> <span class="sy0">^</span> <span class="re0">$b</span> <span class="sy0">==</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="sy0">...</span><span class="br0">&#125;</span>   <span class="co1"># wenn entweder a = 1 oder b = 1 ist</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="nu0">1</span> <span class="kw1">xor</span> <span class="re0">$b</span> <span class="sy0">==</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="sy0">...</span><span class="br0">&#125;</span> <span class="co1"># wenn entweder a = 1 oder b = 1 ist</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span> <span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="sy0">...</span><span class="br0">&#125;</span>         <span class="co1"># nicht a = 2</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">not</span> <span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="sy0">...</span><span class="br0">&#125;</span>       <span class="co1"># nicht a = 2</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Mit dem logischen Operator <code>&amp;&amp;</code> oder dem Wort dafür (<code>and</code>) verknüpfen Sie zwei oder mehrere Bedingungen durch "und", d.h. beide bzw. alle Bedingungen müssen erfüllt sein, damit die gesamte Bedingung erfüllt ist.<br />Mit dem logischen Operator <code>||</code> oder dem Wort dafür (<code>or</code>) verknüpfen Sie zwei oder mehrere Bedingungen inklusiv durch "oder", d.h. es genügt, wenn eine der Bedingungen erfüllt ist, damit die gesamte Bedingung erfüllt ist.<br />Mit dem logischen Operator <code>^</code> oder dem Wortkürzel dafür (<code>xor</code>) verknüpfen Sie zwei oder mehrere Bedingungen exklusiv durch "oder", d.h. es muss entweder die eine oder die andere Bedingungen erfüllt sein, damit die gesamte Bedingung erfüllt ist.<br />Mit dem logischen Operator <code>!</code> oder dem Wortkürzel dafür (<code>not</code>) verneinen Sie eine nachfolgende Bedingung, d.h. Sie fragen nicht, ob die Bedingung wahr ist, sondern ob sie falsch ist.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Bit-Operatoren">Bearbeiten</a>]</span> <span class="mw-headline" id="Bit-Operatoren"> Bit-Operatoren </span></h2>
+<p>Um Bit-Operatoren richtig einzusetzen, müssen Sie viel von computer-internen Speichervorgängen verstehen. Deshalb werden die Bit-Operatoren hier nur kurz erwähnt.
+</p><p><code>&gt;&gt;</code> verschiebt Bits nach rechts<br /><code>&lt;&lt;</code> verschiebt Bits nach links<br /><code>&amp;</code> verknüpft zwei Werte mit einem bitweisen UND<br /><code>|</code> verknüpft zwei Werte mit einem bitweisen ODER<br /><code>^</code> verknüpft zwei Werte mit einem bitweisen Exlusiv-Oder (XOR)<br /><code>~</code> bildet das Komplement eines Wertes (alle Bits kehren sich um)
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Operator für Zeichenkettenverknüpfung">Bearbeiten</a>]</span> <span class="mw-headline" id="Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung"> Operator für Zeichenkettenverknüpfung </span></h2>
+<p>In Perl brauchen Sie nicht wie in manchen anderen Programmiersprachen eine Funktion, um Zeichenketten zu verknüpfen, sondern es gibt einen Operator dafür.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$HTML_Ausgabe</span> <span class="sy0">=</span> <span class="st0">&quot;Die Umgebungsvariable &lt;b&gt;HTTP_USER_AGENT&lt;/b&gt; hat den Wert &lt;b&gt;&quot;</span>
+   <span class="sy0">.</span> <span class="re0">$ENV</span><span class="br0">&#123;</span>HTTP_USER_AGENT<span class="br0">&#125;</span>
+   <span class="sy0">.</span> <span class="st0">&quot;&lt;/b&gt;&lt;br&gt;&quot;</span><span class="sy0">;</span>
+<span class="re0">$HTML_Ausgabe</span> <span class="sy0">.=</span> <span class="st0">&quot;&lt;hr&gt;Ende der Ausgabe&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+  $HTML_Ausgabe  
+&lt;/body&gt;&lt;/html&gt;
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Ein Punkt <code>.</code> ist der Operator, um Zeichenketten miteinander zu verknüpfen. Die verknüpften Zeichenketten können literal sein, also einfach Text enthalten, aber auch eine Variable sein. Im Beispiel-Script sehen Sie einen für CGI-Scripts typischen Anwendungsfall für den Zeichenkettenoperator. Dort wird eine längere HTML-Ausgabe, gespeichert im Skalar <code>$HTML_Ausgabe</code>, aus einzelnen Zeichenketten zusammengebastelt. Unter anderem wird dabei der Wert der Umgebungsvariablen <code>HTTP_USER_AGENT</code>, die Namen und Version des aufrufenden Browsers enthält, mit eingefügt.
+<p>Das Beispiel-Script zeigt in der zweiten Anweisung auch, wie sich neue Zeichenketten an eine bereits vorhandene anhängen lassen. Mit <code>.=</code> wird das, was rechts davon steht, einfach der Variablen zugewiesen, die links davon steht. Die gleiche Anweisung könnten Sie übrigens auch in folgender Langform notieren:<br /><code>$HTML_Ausgabe = $HTML_Ausgabe."&lt;hr&gt;Ende der Ausgabe";</code>
+</p>
+Das Script gibt die zusammengesetzte Zeichenkette mit einer <code>print</code>-Anweisung aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Operator für Zeichenkettenwiederholung">Bearbeiten</a>]</span> <span class="mw-headline" id="Operator_f.C3.BCr_Zeichenkettenwiederholung"> Operator für Zeichenkettenwiederholung </span></h2>
+<p>In Perl können Sie mit <code>x</code> Zeichenketten "multiplizieren".
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw3">print</span> <span class="st0">&quot;A&quot;</span><span class="sy0">.</span><span class="st0">&quot;h&quot;</span> x <span class="nu0">10</span><span class="sy0">,</span> <span class="st0">&quot;!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="co1"># erzeugt die Ausgabe &quot;Ahhhhhhhhhh!&quot;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Notieren Sie den <code>x</code>-Operator hinter der Zeichenkette, die Sie multiplizieren wollen. Hinter dem Operator geben Sie an, wie oft die Zeichenkette wiederholt werden soll.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Operatorenrangfolge">Bearbeiten</a>]</span> <span class="mw-headline" id="Operatorenrangfolge"> Operatorenrangfolge </span></h2>
+<p>Unter den Operatoren von Perl gibt es eine festgelegte Rangordnung. Wenn Sie komplexe Rechenoperationen durchführen oder mehrere Bedingungen miteinander verknüpfen, gilt bei der internen Auflösung solcher komplexen Ausdrücke die folgende Rangordnung:
+</p>
+<ol><li> Rangstufe: <code>++ --</code> (Inkrementieren, Dekrementieren)
+</li><li> Rangstufe: <code>**</code> (Potenzierung)
+</li><li> Rangstufe: <code>! ~</code> (logische und bitweise Negation)
+</li><li> Rangstufe: <code>=~&#160;!~</code> (Bindung an <a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">reguläre Ausdrücke</a>)
+</li><li> Rangstufe: <code>* /&#160;% x</code> (Multiplikation, Division, Modulo-Operation, Zeichenkettenwiederholung)
+</li><li> Rangstufe: <code>+ - .</code> (Addition, Subtraktion, Zeichenkettenaddition)
+</li><li> Rangstufe: <code>&lt;&lt; &gt;&gt;</code> (Verschieben von Bits)
+</li><li> Rangstufe: <code>&lt; &gt; &lt;= &gt;= lt gt le ge</code> (Vergleich größer/kleiner)
+</li><li> Rangstufe: <code>==&#160;!= &lt;=&gt; eq ne cmp ~~</code> (Gleichheit/Ungleichheit)
+</li><li> Rangstufe: <code>&amp;</code> (bitweises UND)
+</li><li> Rangstufe: <code>| ^</code> (bitweises ODER - inklusiv/exklusiv)
+</li><li> Rangstufe: <code>&amp;&amp;</code> (logisches UND)
+</li><li> Rangstufe: <code>||</code> (logisches ODER)
+</li><li> Rangstufe: <code>..</code> (Bereichsdefinition in <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Listen</a>)
+</li><li> Rangstufe: <code>?:</code> (<a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen#Einfache_Entweder-Oder-Abfrage" title="Perl/Bedingte Anweisungen">Entweder-Oder-Bedingung</a>)
+</li><li> Rangstufe: <code>= += -= ~*= /=&#160;%= &amp;= ^= |= </code>  (Zuweisung)
+</li><li> Rangstufe: <code>, =&gt;</code> (Aneinanderreihung)
+</li><li> Rangstufe: <code>not</code> (logische Negation)
+</li><li> Rangstufe: <code>and</code> (logisches UND)
+</li><li> Rangstufe: <code>or xor</code> (logisches ODER (inklusiv/exklusiv)
+</li></ol>
+<p>Mit Hilfe von Klammern können Sie die Rangfolge bei den Operatoren beeinflussen und Ausdrücke so bewerten, wie Sie es wünschen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="re0">$OffizielleStatistik</span> <span class="sy0">=</span> <span class="nu0">3.29</span> <span class="sy0">*</span> <span class="nu0">3</span> <span class="sy0">+</span> <span class="nu0">4.71</span><span class="sy0">;</span>
+<span class="re0">$MeineStatistik</span> <span class="sy0">=</span> <span class="nu0">3.29</span> <span class="sy0">*</span> <span class="br0">&#40;</span><span class="nu0">3</span> <span class="sy0">+</span> <span class="nu0">4.71</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Durch die Klammer wird in dem Beispiel die "Punkt-vor-Strich"-Regel, die auch unter den Berechnungsoperatoren von Perl gilt, aufgehoben.</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 476/1000000
+Post‐expand include size: 35415/2097152 bytes
+Template argument size: 32389/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1849-0!*!0!!de-formal!*!* and timestamp 20150301083815 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;oldid=13720">http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;oldid=13720</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FOperatoren" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Operatoren&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Operatoren" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Operatoren" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Operatoren&amp;oldid=13720" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FOperatoren" title="Spezial:Durchsuchen/Perl-2FOperatoren">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 14. August 2012 um 20:21 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 3.587-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.081 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Operatoren by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

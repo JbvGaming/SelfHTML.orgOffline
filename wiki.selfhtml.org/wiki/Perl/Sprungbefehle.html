@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Sprungbefehle by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Sprungbefehle – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Sprungbefehle","wgTitle":"Perl/Sprungbefehle","wgCurRevisionId":20884,"wgArticleId":1848,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Sprungbefehle","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html5 {line-height: normal;}
+.source-html5 li, .source-html5 pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html5
+ * CSS class: source-html5, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html5.source-html5 .de1, .html5.source-html5 .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html5.source-html5  {font-family:monospace;}
+.html5.source-html5 .imp {font-weight: bold; color: red;}
+.html5.source-html5 li, .html5.source-html5 .li1 {font-weight: normal; vertical-align:top;}
+.html5.source-html5 .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html5.source-html5 .li2 {font-weight: bold; vertical-align:top;}
+.html5.source-html5 .kw2 {color: #000000; font-weight: bold;}
+.html5.source-html5 .kw3 {color: #000066;}
+.html5.source-html5 .es0 {color: #000099; font-weight: bold;}
+.html5.source-html5 .br0 {color: #66cc66;}
+.html5.source-html5 .sy0 {color: #66cc66;}
+.html5.source-html5 .st0 {color: #ff0000;}
+.html5.source-html5 .nu0 {color: #cc66cc;}
+.html5.source-html5 .sc-2 {color: #404040;}
+.html5.source-html5 .sc-1 {color: #808080; font-style: italic;}
+.html5.source-html5 .sc0 {color: #00bbdd;}
+.html5.source-html5 .sc1 {color: #ddbb00;}
+.html5.source-html5 .sc2 {color: #009900;}
+.html5.source-html5 .ln-xtra, .html5.source-html5 li.ln-xtra, .html5.source-html5 div.ln-xtra {background-color: #ffc;}
+.html5.source-html5 span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Sprungbefehle" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Sprungbefehle&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Sprungbefehle skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Sprungbefehle</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#goto"><span class="tocnumber">1</span> <span class="toctext">goto</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#next"><span class="tocnumber">2</span> <span class="toctext">next</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#continue"><span class="tocnumber">3</span> <span class="toctext">continue</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#last"><span class="tocnumber">4</span> <span class="toctext">last</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#redo"><span class="tocnumber">5</span> <span class="toctext">redo</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: goto">Bearbeiten</a>]</span> <span class="mw-headline" id="goto"> goto </span></h2>
+<p>Der Sprungbefehlt <code>goto</code> erlaubt es, jederzeit an eine beliebige andere, bestimmbare Stelle im Script-Ablauf zu springen. Damit stellt er für schlecht geschriebene Programme im "Spagetti-Code" die Ursache dar. Dieser Stil läßt sich durch konsequente Anwendung der strukturierten Programmierung vermeiden. Richtig eingesetzt bietet der <code>goto</code>-Befehl häufig die Möglichkeit, die Verschachtelungstiefe teils drastisch zu reduzieren. Die dadurch flachere Struktur trägt dann zur besseren Übersicht bzw. Lesbarkeit bei und damit auch zu einem wartungsfreundlicheneren Code (wenn der Programmierer weiss was er tut).
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h1&gt;Hallo User&lt;/h1&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">goto</span> MITTEILUNG<span class="sy0">;</span>
+&#160;
+AUFMUNTERUNG<span class="sy0">:</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Das Wetter ist ja so sch&amp;amp;ouml;n, dass man etwas unternehmen kann&lt;/p&gt;&quot;</span><span class="sy0">;</span>
+<span class="kw3">goto</span> ENDE<span class="sy0">;</span>
+&#160;
+MITTEILUNG<span class="sy0">:</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Dieser Service ist zur Zeit nicht verf&amp;amp;uuml;gbar&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">goto</span> AUFMUNTERUNG<span class="sy0">;</span>
+&#160;
+ENDE<span class="sy0">:</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script gibt HTML-Code zurück. Um herauszufinden, welche <code>print</code>-Anweisungen in welcher Reihenfolge ausgegeben werden, müssen Sie den <code>goto</code>-Anweisungen folgen. Bei jeder <code>goto</code>-Anweisung wird eine Sprungmarke, ein so genanntes <b>Label</b> angegeben. Das sind im Beispiel die großgeschriebenen Namen. Unter diesem Namen muss das Label irgendwo im Script existieren, und zwar mit abschließendem Doppelpunkt. Anschließend geht es dann mit der Ausführung des Scripts weiter, wenn das Label angesprungen wird.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: next">Bearbeiten</a>]</span> <span class="mw-headline" id="next"> next </span></h2>
+<p>Der Sprungbefehl <code>next</code> ist zur Verwendung innerhalb von Schleifen gedacht. Der aktuelle Schleifendurchgang wird abgebrochen. Der nächste Schleifendurchgang wird gestartet, und die Schleifenbedingung wird dabei neu ausgewertet.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;table&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">foreach</span> <span class="br0">&#40;</span> <span class="kw3">keys</span> <span class="re0">%ENV</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="co5">$_</span> <span class="sy0">=~</span> <span class="co2">/^HTTP_.*/</span> <span class="kw1">or</span> <span class="kw1">next</span><span class="sy0">;</span>
+   <span class="kw3">print</span> <span class="st0">&quot;&lt;tr&gt;&lt;th&gt;&quot;</span><span class="sy0">,</span> <span class="co5">$_</span><span class="sy0">,</span> <span class="st0">&quot;&lt;/th&gt;&lt;td&gt;&quot;</span><span class="sy0">,</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="co5">$_</span><span class="br0">&#125;</span><span class="sy0">,</span> <span class="st0">&quot;&lt;/td&gt;&lt;/tr&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/table&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-Script gibt <a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">CGI-Umgebungsvariablen</a> aus, jedoch nur solche, die mit <code>HTTP_</code> beginnen. Dazu liest das Script den <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Vordefinierte_Variablen" title="Doku:Perl/Vordefinierte Variablen" class="mw-redirect">vordefinierten</a> Hash <code>%ENV</code> in einer <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Schleifen#Schleifen_bei_Hashes" title="Doku:Perl/Schleifen" class="mw-redirect">Schleife für Hashes</a> ein. Mit einem <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Reguläre_Ausdrücke" title="Doku:Perl/Reguläre Ausdrücke" class="mw-redirect">regulären Ausdruck</a> <code>/^HTTP_.*/</code> als Bedingung, erreicht die Anweisung, dass der nachfolgende <code>print</code>-Befehl nur dann ausgeführt wird, wenn die aktuelle Umgebungsvariable mit <code>HTTP_</code> beginnt. 
+Trifft der Reguläre Ausdruck nicht zu, wird <code>or next</code> evaluiert, also der nächste Schleifendurchgang ausgeführt.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: continue">Bearbeiten</a>]</span> <span class="mw-headline" id="continue"> continue </span></h2>
+<p><code>continue</code> gehört genaugenommen nicht zu den Sprungbefehlen, ist aber eng mit diesen verknüpft, da <code>continue</code> angesprungen wird. Das Schlüsselwort leitet einen eigenen Anweisungsblock ein. Innerhalb dieses Anweisungsblocks, der wie üblich mit <b>geschweiften</b> Klammern <code>{</code> und <code>}</code> markiert wird, können Sie beliebige Anweisungen notieren. Wenn ein solcher <code>continue</code>-Block unmittelbar <b>hinter</b> einem Schleifenblock steht, wird er mit jedem Schleifendurchlauf ebenfalls durchlaufen und dann (außer beim allerersten Durchlauf) direkt vor der Prüfung der Schleifenbedingung ausgeführt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$i</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">$i</span> <span class="sy0">&lt;=</span> <span class="nu0">100</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">next</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$i</span> <span class="sy0">%</span> <span class="nu0">7</span> <span class="sy0">!=</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$i ist durch 7 teilbar&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">continue</span> <span class="br0">&#123;</span>
+     <span class="re0">$i</span><span class="sy0">++;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel gibt alle Zahlen zwischen 1 und 100 aus, die durch 7 teilbar sind. Dabei wird eine <code>while</code>-Schleife verwendet, deren Bedingung abfragt, ob <code>$i</code> kleiner gleich <code>100</code> ist. Da <code>$i</code> mit <code>1</code> initialisiert wird, wird der Schleifenblock also erreicht. Innerhalb des Schleifenblocks wird <code>$i</code> jedoch nicht hochgezählt, was zu einer hoffnungslosen Endlosschleife führen würde. Doch dazu dient im Beispiel der <code>continue</code>-Block, der nach der abschließenden geschweiften Klammer des Schleifenblocks folgt. Innerhalb des <code>continue</code>-Blocks wird <code>$i</code> hochgezählt.
+Innerhalb der Schleife wird mit der Bedingung <code>$i&#160;% 7&#160;!= 0</code> abgefragt, ob der aktuelle Wert von <code>$i</code> durch 7 geteilt den Rest 0 ergibt (siehe Modulo-Division bei den <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Operatoren#Berechnungsoperatoren" title="Doku:Perl/Operatoren" class="mw-redirect">Berechnungsoperatoren</a>). Durch <code>next</code> wird zwar sofort der nächste Schleifendurchgang gestartet, wenn die Zahl nicht ohne Rest durch 7 teilbar ist, doch die Anweisung aus dem <code>continue</code>-Block wird in jedem Fall noch ausgeführt.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: last">Bearbeiten</a>]</span> <span class="mw-headline" id="last"> last </span></h2>
+<p>Der Sprungbefehl <code>last</code> bricht eine Schleife sofort ab.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$jetzt</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$jetzt</span> <span class="sy0">=</span> <span class="kw3">time</span><span class="sy0">;</span>
+  <span class="kw1">last</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$jetzt</span> <span class="sy0">%</span> <span class="nu0">2</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$jetzt <span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-Script ermittelt mit der Funktion <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Funktionen_für_Datum_und_Uhrzeit#time" title="Doku:Perl/Funktionen für Datum und Uhrzeit" class="mw-redirect">time</a> innerhalb einer klassischen Endlosschleife, formuliert mit <code>while(1)</code> ("Bedingung ist immer wahr") den aktuellen Zeitwert in Sekunden und speichert ihn in dem Skalar <code>$jetzt</code>. Mit der Bedingung <code>$i&#160;%&#160;2&#160;==&#160;0</code> wird abgefragt, ob der aktuelle Wert von <code>$jetzt</code> durch 2 geteilt den Rest 0 ergibt (siehe Modulo-Division bei den <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Operatoren#Berechnungsoperatoren" title="Doku:Perl/Operatoren" class="mw-redirect">Berechnungsoperatoren</a>). Ist diese Bedingung der nachgestellten <code>if</code>-Anweisung erfüllt, wird der voranstehende <code>last</code>-Befehl ausgeführt. Die Schleife wird dann abgebrochen. Falls das Script also zu einem Zeitpunkt mit ungeradem Sekundenwert aufgerufen wird, wird so oft der aktuelle Sekundenwert ausgegeben, bis <code>time</code> den nächsthöheren Sekundenwert zurückliefert.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: redo">Bearbeiten</a>]</span> <span class="mw-headline" id="redo"> redo </span></h2>
+<p>Der Sprungbefehl <code>redo</code> wiederholt den aktuellen Schleifendurchlauf einfach noch einmal. Dabei wird die Schleifenbedingung nicht noch einmal ausgewertet.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html5 source-html5"><pre class="de1">das ist \
+eine Datei mit einer Konvention.
+Ein Backslash am Ende \
+einer Zeile bedeutet: \
+keine neue Zeile!</pre></div></div></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">open</span><span class="br0">&#40;</span>FH<span class="sy0">,</span><span class="st0">&quot;&lt;text.txt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Zeilen</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re4">&lt;FH&gt;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">chomp</span><span class="sy0">;</span>
+  <span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">s</span><span class="sy0">/</span>\\<span class="co5">$/</span><span class="sy0">/</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="co5">$_</span> <span class="sy0">.=</span> <span class="re4">&lt;FH&gt;</span><span class="sy0">;</span>
+   <span class="kw1">redo</span> <span class="kw1">unless</span><span class="br0">&#40;</span><span class="kw3">eof</span><span class="br0">&#40;</span>FH<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@Zeilen</span><span class="sy0">,</span><span class="co5">$_</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>FH<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="re0">@Zeilen</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt eine klassische Verwendung von <code>redo</code>. Dabei geht es darum, mehrere Zeilen aufgrund einer Konvention zu einer zusammenzufassen. Die zuvor gezeigte Textdatei enthält zwar fünf Zeilen, aber am Ende sollen daraus nur zwei Zeilen gemacht werden. Zeilen, die mit Backslash enden, sollen in der nächsten Zeile weitergehen.
+<p>Das Script öffnet die Textdatei mit der Funktion <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Doku:Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten" class="mw-redirect">open</a>. In einer <code>while</code>-Schleife liest es die jeweils nächste Zeile der Datei ein. Die Schleifenbedingung ist dabei <code>&lt;FH&gt;</code>. Dies bedeutet: nächste Portion aus der mit dem Datei-Handle <code>FH</code> verbundenen Datei, und zwar im skalaren Kontext. In diesem Kontext wird dann die nächste Zeile der Datei geliefert.
+</p><p>Innerhalb der Schleife wird mit der Funktion <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Funktionen_für_Zeichenketten#chomp" title="Doku:Perl/Funktionen für Zeichenketten" class="mw-redirect">chomp</a> erst einmal das abschließende Zeilenumbruch-Zeichen der aktuellen Zeile entfernt. Dann wird mit dem <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Reguläre_Ausdrücke" title="Doku:Perl/Reguläre Ausdrücke" class="mw-redirect">regulären Ausdruck</a> <code>s/\\$//</code> ein eventuell vorhandener Backslash am Ende der Zeile gesucht und ersetzt. Falls tatsächlich ein Backslash gefunden und ersetzt wurde, ist zugleich die Bedingung für das <code>if</code> wahr, und es wird der davon abhängige Anweisungsblock ausgeführt. In diesem Block wird mit <code>$_&#160;.= &#160;&lt;FH&gt;;</code> die nächste Zeile eingelesen und an die aktuelle angehängt. Benutzt wird dabei die <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Vordefinierte_Variablen" title="Doku:Perl/Vordefinierte Variablen" class="mw-redirect">vordefinierte Variable</a> <code>$_</code> und der <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Operatoren#Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung" title="Doku:Perl/Operatoren" class="mw-redirect">Operator für Zeichenkettenverknüpfung</a> (<code>.</code>). Anschließend wird mit <code>redo</code> wieder an den Beginn der Schleife gesprungen, sofern nicht (<code>unless</code>) das Dateiende (<a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#eof" title="Doku:Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten" class="mw-redirect">eof</a>) erreicht ist.
+</p><p><code>redo</code> bewirkt, dass die Schleifenbedingung nicht neu ausgewertet wird. Es wird also keine nächste Zeile eingelesen. Die Variable <code>$_</code>, auf die sich sowohl die Anweisung <code>chomp;</code> als auch der reguläre Ausdruck beziehen, wurde ja schon innerhalb des <code>if</code>-Blocks mit einem neuen Wert versorgt. Zum Verständnis: mit <code>chomp;</code> ist so viel gemeint wie: <code>chomp($_);</code>, und mit <code>if(s/\\$//)</code> so viel wie: <code>if($_&#160;=~&#160;s/\\$//)</code>. Sowohl das Entfernen des abschließenden Zeilenumbruchs als auch das Bewerten, ob ein abschließender Backslash vorkommt, bezieht sich also implizit auf die vordefinierte Variable <code>$_</code>.
+</p>
+Wenn im Beispiel die <code>if</code>-Bedingung nicht mehr wahr ist, gelangt das Script dorthin, wo mit der Funktion <a href="http://wiki.selfhtml.org/wiki/Doku:Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes" title="Doku:Perl/Funktionen für Listen bzw. Arrays und Hashes" class="mw-redirect">push</a> die aktuelle Zeile dem Array <code>@Zeilen</code> hinzugefügt wird. Darin sind am Ende nur die beiden Zeilen der Datei gespeichert, die per Konvention übrig bleiben sollen. Das Script gibt den Inhalt von <code>@Zeilen</code> am Ende aus.</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 254/1000000
+Post‐expand include size: 29284/2097152 bytes
+Template argument size: 28116/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1848-0!*!0!!de-formal!*!* and timestamp 20150301113109 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;oldid=20884">http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;oldid=20884</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FSprungbefehle" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Sprungbefehle"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Sprungbefehle&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Sprungbefehle" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Sprungbefehle" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Sprungbefehle" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Sprungbefehle&amp;oldid=20884" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FSprungbefehle" title="Spezial:Durchsuchen/Perl-2FSprungbefehle">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 17. August 2014 um 20:11 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.716-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.076 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Sprungbefehle by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

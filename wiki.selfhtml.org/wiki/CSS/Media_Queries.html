@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/CSS/Media_Queries by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:22:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>CSS/Media Queries – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CSS/Media_Queries","wgTitle":"CSS/Media Queries","wgCurRevisionId":26762,"wgArticleId":1893,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CSS"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"CSS/Media_Queries","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-html4strict {line-height: normal;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html4strict.source-html4strict .de1, .html4strict.source-html4strict .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html4strict.source-html4strict  {font-family:monospace;}
+.html4strict.source-html4strict .imp {font-weight: bold; color: red;}
+.html4strict.source-html4strict li, .html4strict.source-html4strict .li1 {font-weight: normal; vertical-align:top;}
+.html4strict.source-html4strict .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html4strict.source-html4strict .li2 {font-weight: bold; vertical-align:top;}
+.html4strict.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict.source-html4strict .kw3 {color: #000066;}
+.html4strict.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict.source-html4strict .br0 {color: #66cc66;}
+.html4strict.source-html4strict .sy0 {color: #66cc66;}
+.html4strict.source-html4strict .st0 {color: #ff0000;}
+.html4strict.source-html4strict .nu0 {color: #cc66cc;}
+.html4strict.source-html4strict .sc-2 {color: #404040;}
+.html4strict.source-html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict.source-html4strict .sc0 {color: #00bbdd;}
+.html4strict.source-html4strict .sc1 {color: #ddbb00;}
+.html4strict.source-html4strict .sc2 {color: #009900;}
+.html4strict.source-html4strict .ln-xtra, .html4strict.source-html4strict li.ln-xtra, .html4strict.source-html4strict div.ln-xtra {background-color: #ffc;}
+.html4strict.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-css {line-height: normal;}
+.source-css li, .source-css pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for css
+ * CSS class: source-css, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.css.source-css .de1, .css.source-css .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.css.source-css  {font-family:monospace;}
+.css.source-css .imp {font-weight: bold; color: red;}
+.css.source-css li, .css.source-css .li1 {font-weight: normal; vertical-align:top;}
+.css.source-css .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.css.source-css .li2 {font-weight: bold; vertical-align:top;}
+.css.source-css .kw1 {color: #000000; font-weight: bold;}
+.css.source-css .kw2 {color: #993333;}
+.css.source-css .co1 {color: #a1a100;}
+.css.source-css .co2 {color: #ff0000; font-style: italic;}
+.css.source-css .coMULTI {color: #808080; font-style: italic;}
+.css.source-css .es0 {color: #000099; font-weight: bold;}
+.css.source-css .es2 {color: #000099; font-weight: bold;}
+.css.source-css .br0 {color: #00AA00;}
+.css.source-css .sy0 {color: #00AA00;}
+.css.source-css .st0 {color: #ff0000;}
+.css.source-css .nu0 {color: #cc66cc;}
+.css.source-css .re0 {color: #cc00cc;}
+.css.source-css .re1 {color: #6666ff;}
+.css.source-css .re2 {color: #3333ff;}
+.css.source-css .re3 {color: #933;}
+.css.source-css .ln-xtra, .css.source-css li.ln-xtra, .css.source-css div.ln-xtra {background-color: #ffc;}
+.css.source-css span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-nowiki {line-height: normal;}
+.source-nowiki li, .source-nowiki pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for nowiki
+ * CSS class: source-nowiki, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.nowiki.source-nowiki .de1, .nowiki.source-nowiki .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.nowiki.source-nowiki  {font-family:monospace;}
+.nowiki.source-nowiki .imp {font-weight: bold; color: red;}
+.nowiki.source-nowiki li, .nowiki.source-nowiki .li1 {font-weight: normal; vertical-align:top;}
+.nowiki.source-nowiki .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.nowiki.source-nowiki .li2 {font-weight: bold; vertical-align:top;}
+.nowiki.source-nowiki .ln-xtra, .nowiki.source-nowiki li.ln-xtra, .nowiki.source-nowiki div.ln-xtra {background-color: #ffc;}
+.nowiki.source-nowiki span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="CSS/Media Queries" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/CSS/Media_Queries&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-CSS_Media_Queries skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">CSS/Media Queries</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../CSS.html" title="CSS">CSS</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Eine Stärke von CSS liegt darin, dass die Darstellung eines Dokuments für verschiedene Ausgabemedien festgelegt werden kann. Die Zuordnung eines Stylesheets zu einem Medium erfolgt mit Hilfe von Medienabfragen (<b>Media Queries</b>).
+</p><p>Als Medienabfrage wird eine Liste von Kriterien bezeichnet, die ein Ausgabemedium erfüllen muss, damit ein Stylesheet zur Verarbeitung eingebunden wird. Medienabfragen bestehen aus einem Medientyp (z.B. Bildschirm oder Drucker), einem Medienmerkmal (z.B. Farbfähigkeit) oder einer Kombination aus beidem. Mithilfe der Kombinationsmöglichkeit können Stylesheets auf eine Vielzahl von Ausgabemedien zugeschnitten werden.
+</p><p>Medienabfragen können an allen Stellen verwendet werden, wo Stylesheets eingebunden werden bzw. dort, wo eine Medienangabe abgefragt wird. Erfüllt das verwendete Ausgabemedium alle Kriterien einer Medienabfrage, so wird das damit verknüpfte Stylesheet eingebunden.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Anwendung"><span class="tocnumber">1</span> <span class="toctext">Anwendung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Einbindung"><span class="tocnumber">1.1</span> <span class="toctext">Einbindung</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Notation"><span class="tocnumber">1.2</span> <span class="toctext">Notation</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Gruppierung_und_Kombination"><span class="tocnumber">1.3</span> <span class="toctext">Gruppierung und Kombination</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Wertangaben_in_Merkmalabfragen"><span class="tocnumber">1.4</span> <span class="toctext">Wertangaben in Merkmalabfragen</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#siehe_auch"><span class="tocnumber">1.5</span> <span class="toctext">siehe auch</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#.C3.9Cbersicht_der_Medientypen"><span class="tocnumber">2</span> <span class="toctext">Übersicht der Medientypen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Einordnung_in_Mediengruppen"><span class="tocnumber">2.1</span> <span class="toctext">Einordnung in Mediengruppen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#.C3.9Cbersicht_der_Medienmerkmale"><span class="tocnumber">3</span> <span class="toctext">Übersicht der Medienmerkmale</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#width"><span class="tocnumber">3.1</span> <span class="toctext">width</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#height"><span class="tocnumber">3.2</span> <span class="toctext">height</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#device-width"><span class="tocnumber">3.3</span> <span class="toctext">device-width</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#device-height"><span class="tocnumber">3.4</span> <span class="toctext">device-height</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#device-pixel-ratio"><span class="tocnumber">3.5</span> <span class="toctext">device-pixel-ratio</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#orientation"><span class="tocnumber">3.6</span> <span class="toctext">orientation</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#aspect-ratio"><span class="tocnumber">3.7</span> <span class="toctext">aspect-ratio</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#device-aspect-ratio"><span class="tocnumber">3.8</span> <span class="toctext">device-aspect-ratio</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#color"><span class="tocnumber">3.9</span> <span class="toctext">color</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#color-index"><span class="tocnumber">3.10</span> <span class="toctext">color-index</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#monochrome"><span class="tocnumber">3.11</span> <span class="toctext">monochrome</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#resolution"><span class="tocnumber">3.12</span> <span class="toctext">resolution</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#scan"><span class="tocnumber">3.13</span> <span class="toctext">scan</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#grid"><span class="tocnumber">3.14</span> <span class="toctext">grid</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#siehe_auch_2"><span class="tocnumber">4</span> <span class="toctext">siehe auch</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Anwendung">Bearbeiten</a>]</span> <span class="mw-headline" id="Anwendung"> Anwendung </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_html4"><a href="../Datei_Iconset.html" class="image" title="HTML 4.0"><img alt="HTML 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_css2"><a href="../Datei_Iconset.html" class="image" title="CSS 2.0"><img alt="CSS 2.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie4"><a href="../Datei_Iconset.html" class="image" title="IE 4"><img alt="IE 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx1"><a href="../Datei_Iconset.html" class="image" title="Firefox 1.0"><img alt="Firefox 1.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op5_12"><a href="../Datei_Iconset.html" class="image" title="Opera 5.12"><img alt="Opera 5.12" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf1_0"><a href="../Datei_Iconset.html" class="image" title="Safari 1.0"><img alt="Safari 1.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_konq3_1"><a href="../Datei_Iconset.html" class="image" title="Konqueror 3.1"><img alt="Konqueror 3.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Die Angabe eines Medientyps erfolgt als einfaches Schlüsselwort, z.B. <code>screen</code>.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wird keine Medienabfrage angegeben oder besteht die angegebene Abfrage nur aus Leerzeichen, so gilt der Standardwert <code>all</code>.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Einbindung">Bearbeiten</a>]</span> <span class="mw-headline" id="Einbindung"> Einbindung </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Medienabfrage im HTML-Dokument
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;bildschirm-stylesheet.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;screen&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;druck-stylesheet.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;print&quot;</span>&gt;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel wird das „Bildschirm-Stylesheet“  mithilfe des <code>link</code>-Elements für Bildschirme eingebunden, das „Druck-Stylesheet“ für Drucker und gleichartige Geräte. (Medientyp <code>print</code>).
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Diese Variante hat den Nachteil, dass in beiden Stylesheets oft dieselben CSS-Regeln definiert werden müssen, da das „Bildschirm-Stylesheet“ nicht für Druck-Ausgaben gilt und umgekehrt. Zudem müssen zwei Ressourcen vom Server übertragen werden.</div></div>
+</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Medienabfrage im HTML-Dokument
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;stylesheet.css&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;druck-stylesheet.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;print&quot;</span>&gt;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel wird das <i>Druck-Stylesheet</i> mit Hilfe des <code>link</code>-Elements für Drucker und gleichartige Geräte eingebunden (Medientyp <code>print</code>). Das Stylesheet <code>stylesheet.css</code> gilt für alle Ausgabemedien. So brauchen in diesem Fall in das „Druck-Stylesheet“ nur die Änderungen gegenüber dem allgemeinen Stylesheet eingetragen werden.
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Auch in diesem Fall müssen zwei Ressourcen übertragen werden.</div></div>
+</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Medienabfrage in der CSS-Ressource
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="css source-css"><pre class="de1"><span class="coMULTI">/* CSS-Regeln für alle Ausgabegeräte */</span>
+<span class="co1">@media print {</span>
+  <span class="coMULTI">/* zusätzliche oder abweichende CSS-Regeln für Drucker */</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel sind die CSS-Regeln für unterschiedliche Ausgabemedien in einer Ressource zusammengefasst.
+<div class="note-box note-box-recommendation-text"><strong>Empfehlung:</strong> Aus Gründen der Performance sollten Sie diese Variante der Einbindung wählen.</div></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Media Queries können nicht in style-Attributen notiert werden.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Notation">Bearbeiten</a>]</span> <span class="mw-headline" id="Notation"> Notation </span></h3>
+<p>Die einzelnen Medientypen werden in einem <a href="#.C3.9Cbersicht_der_Medientypen">nachfolgenden Abschnitt</a> aufgezeigt.
+</p>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op9"><a href="../Datei_Iconset.html" class="image" title="Opera 9.0"><img alt="Opera 9.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_konq4_x"><a href="../Datei_Iconset.html" class="image" title="Konqueror 4.x"><img alt="Konqueror 4.x" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Ein Medienmerkmal wird notiert, indem innerhalb von runden Klammern ein Schlüsselwort notiert wird. Diesem Schlüsselwort folgt optional ein Doppelpunkt sowie eine Längenangabe oder ein weiteres Schlüsselwort.
+</p><p>Mihilfe der vollständigen Notation (z.B. <code>(orientation: landscape)</code>) wird ein zu erfüllendes Kriterium detailliert festgelegt. Die Kurzschreibweise (z.B. <code>(color)</code>) kann verwendet werden, um zu prüfen, ob das angegebene Merkmal von einem Ausgabemedium unterstützt wird. Wird ein Merkmal abgefragt, das der Browser nicht kennt, so wird die Abfrage ignoriert.
+</p><p>Einige Medienmerkmale können mit den Präfixen <code>min-</code> oder <code>max-</code> versehen werden, wodurch ihre Bedeutung um „größer oder gleich“ bzw. „kleiner oder gleich“ erweitert werden kann.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-comment">In diesen Beispielen werden Stylesheets anhand verschiedener Kriterien (und außerdem auf verschiedene Arten) eingebunden.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;kompakt.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;(orientation: portrait)&quot;</span>&gt;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Stylesheet <i>kompakt.css</i> wird eingebunden, wenn die Inhalte auf Seiten im Hochformat ausgegeben werden.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">style</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;(color)&quot;</span>&gt;</span>
+/* Farbangaben. */
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">style</span>&gt;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Die im <code>style</code>-Element angegebenen Farbangaben werden verarbeitet, wenn das Ausgabemedium Farben darstellen kann.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="css source-css"><pre class="de1"><span class="co1">@import 'layout.css' (min-width: 50em);</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Stylesheet <i>layout.css</i> kommt zur Anwendung, wenn der Anzeigebereich des Ausgabemediums mindestens 50em beträgt. Die Einheit <code>em</code> bezieht sich dabei auf die Standardschriftgröße des Browsers.</div>
+</div>
+<p>Die einzelnen Medienmerkmale sowie ihre Browserunterstützung werden in einem <a href="#.C3.9Cbersicht_der_Medienmerkmale">nachfolgenden Abschnitt</a> aufgezeigt.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Gruppierung und Kombination">Bearbeiten</a>]</span> <span class="mw-headline" id="Gruppierung_und_Kombination"> Gruppierung und Kombination </span></h3>
+<p>Mithilfe von Kommata können Medienabfragen gruppiert werden. Gruppierte Abfragen sind voneinander völlig unabhängig. Sobald mindestens eine der Abfragen zutrifft, werden die Deklarationen angewendet.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media print, embossed <span class="br0">&#123;</span> /* Formate für Printmedien. */ <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel wird ein Stylesheet festgelegt, das sowohl für den Medientyp <code>print</code> als auch den Medientyp <code>embossed</code> verwendet werden kann.</div>
+</div>
+<p>Mehrere Medienmerkmale können mit dem Schlüsselwort <code>and</code> (<i>und</i>) verbunden werden. Ein Stylesheet wird nur dann verarbeitet, wenn alle mit <code>and</code> verbundenen Kriterien erfüllt werden. Auch die Verbindung mit einem einzelnen Medientyp ist möglich, muss aber am Anfang der Abfrage notiert werden. Wird eine Typangabe mit einem Merkmal verbunden, das auf dem Medientyp nicht vorkommen kann, z.B. Maßangaben bei Sprachausgabe, so wird die Medienabfrage ignoriert. Andere, mit Komma isolierte Abfragen, sind davon nicht betroffen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>min-width: 30em<span class="br0">&#41;</span> and <span class="br0">&#40;</span>max-width: 60em<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Kompaktes Layout */ <span class="br0">&#125;</span>
+@media print and <span class="br0">&#40;</span>color<span class="br0">&#41;</span>, screen and <span class="br0">&#40;</span>color<span class="br0">&#41;</span>, screen and <span class="br0">&#40;</span>three-dee<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Farbangaben */ <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Schlüsselwort <code>and</code> verbindet verschiedene Kriterien. Das <i>kompakte Layout</i> wird eingebunden, wenn der Ausgabebereich mindestens 30em und höchstens 60em breit ist.
+Kann die Darstellung auf Bildschirmen oder Druckern in Farbe erfolgen, werden die Farbangaben verarbeitet. Beachten Sie, dass die dritte Abfrage im zweiten Beispiel ignoriert wird, da es kein Merkmal mit dem Namen <code>three-dee</code> gibt. Die anderen Abfragen sind davon jedoch nicht beeinträchtigt.</div>
+</div>
+<p>Ist ein Medientyp am Anfang einer Medienabfrage notiert, so kann dieser Angabe das Schlüsselwort <code>only</code> oder das Schlüsselwort <code>not</code> vorangestellt werden.
+</p><p><code>only</code> (<i>nur</i>) erfüllt dabei nur den Zweck, die Medienabfrage vor Browsern zu verstecken, die Medienmerkmale und die damit verbundenen Kombinationsmöglichkeiten nicht unterstützen. Ansonsten wird die Abfrage verarbeitet, als wäre das Schlüsselwort nicht vorhanden.
+</p><p>Wird einer Medienabfrage der Operator <code>not</code> (<i>nicht</i>) vorangestellt, so wird die Abfrage verneint (das bedeutet, dass <code>not</code> gegenüber <code>and</code> nachrangig ist). Andere, beispielweise durch Kommata isolierte Abfragen, werden von dem Schlüsselwort nicht beeinflusst.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media only all and <span class="br0">&#40;</span>min-width: 50em<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Layout */ <span class="br0">&#125;</span>
+@media not all and <span class="br0">&#40;</span>monochrome<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Farben */ <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Dieses Beispiel zeigt, wie das Stylesheet <i>Layout</i> Bildschirmen mit einem mindestens 50em breiten Anzeigebereich zugewiesen wird. Ein Browser, der Medienabfragen versteht, ignoriert das Schlüsselwort <code>only</code>.
+Durch die Verneinung der Abfrage „Medientypen mit Graustufendarstellung“ werden die Farbangaben von allen Medien verwendet, die mit Farbangaben umgehen können.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Wertangaben in Merkmalabfragen">Bearbeiten</a>]</span> <span class="mw-headline" id="Wertangaben_in_Merkmalabfragen"> Wertangaben in Merkmalabfragen </span></h3>
+<p>Innerhalb eines Ausdrucks können Schlüsselwörter und Längenangaben vorkommen. Die Bedeutung der Schlüsselwörter wird in den einzelnen Merkmalen erklärt. Eine Besonderheit betrifft relative Längenangaben wie z.B. <code>em</code> oder <code>ex</code>. Bei der Verarbeitung dieser Werte wird vom Standardwert des Browsers ausgegangen, der vom Benutzer definiert wurde.
+</p><p>Jedes Merkmal kann auch ohne Wertangabe verwendet werden. In diesem Fall wird abgefragt, ob das Merkmal auf dem verwendeten Medium vorhanden ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>width<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Das Ausgabemedium besitzt das Merkmal „Breite“ */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>color<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Das Ausgabemedium besitzt das Merkmal „Farbfähigkeit“ */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: siehe auch">Bearbeiten</a>]</span> <span class="mw-headline" id="siehe_auch"> siehe auch </span></h3>
+<ul><li> <a href="Anwendung_und_Praxis/Tabellen_responsiv_gestalten.html" title="CSS/Anwendung und Praxis/Tabellen responsiv gestalten">CSS/Anwendung und Praxis/Tabellen responsiv gestalten</a>
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Übersicht der Medientypen">Bearbeiten</a>]</span> <span class="mw-headline" id=".C3.9Cbersicht_der_Medientypen"> Übersicht der Medientypen </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_html4"><a href="../Datei_Iconset.html" class="image" title="HTML 4.0"><img alt="HTML 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_css2"><a href="../Datei_Iconset.html" class="image" title="CSS 2.0"><img alt="CSS 2.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Die Angabe eines Medientyps ist die einfachste Form einer Medienabfrage und gleichzeitig Grundlage für spezialisierte Abfragen. Ein Medientyp ist ein Schlüsselwort, dem verschiedene gleichartige Ausgabegeräte zugeordnet werden können. Allerdings gibt es keine feste Definition, welche Geräte einem Medientyp zuzuordnen sind. Die Beschreibung der einzelnen Medientypen wird ausdrücklich als Richtbeschreibung bezeichnet.
+</p><p>Ein Browser darf bei der Verarbeitung von Stylesheets nur einen einzigen Medientyp berücksichtigen. Ein Dokument kann also nicht von zwei Stylesheets, die unterschiedlichen Medientypen zugeordnet wurden, gleichzeitig beeinflusst werden.
+</p>
+<table class="wikitable">
+<caption>Übersicht der Medientypen in CSS
+</caption>
+<tr>
+<th scope="col">Medientyp
+</th>
+<th scope="col">Richtbeschreibung
+</th>
+<th scope="col">Standard und Unterstützung
+</th></tr>
+<tr>
+<th scope="row">all
+</th>
+<td>Alle Ausgabemedien. Dies ist der Standardwert.
+</td>
+<td>
+</td></tr>
+<tr>
+<th scope="row">print
+</th>
+<td>für <a href="Eigenschaften/Druckausgabe.html" title="CSS/Eigenschaften/Druckausgabe">Drucker</a>, die Inhalte sichtbar auf Papier drucken.
+</td>
+<td><ul class="siconset"><li class="sicon sicon_android"><a href="../Datei_Iconset.html" class="image" title="Android"><img alt="Android" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr>
+<tr>
+<th scope="row">screen
+</th>
+<td>(Computer-)Bildschirme
+</td>
+<td><ul class="siconset"><li class="sicon sicon_android"><a href="../Datei_Iconset.html" class="image" title="Android"><img alt="Android" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr>
+<tr>
+<th scope="row">speech
+</th>
+<td>für <a href="Eigenschaften/Sprachausgabe.html" title="CSS/Eigenschaften/Sprachausgabe">Sprachsynthesizer</a> gedacht.<br /> Die Angabe ist für ein zukünftiges CSS-Modul reserviert und wird bisher (Stand September 2014) nicht verwendet,<br /> soll aber den Medientyp „aural“ ersetzen.
+</td>
+<td><ul class="siconset"><li class="sicon sicon_css2_1"><a href="../Datei_Iconset.html" class="image" title="CSS 2.1"><img alt="CSS 2.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr></table>
+<p>Eine Unterscheidung der einzelnen Bildschirme mit Medientypen wie <code>@handheld</code>, <code>@tv</code> und <code>@projection</code> scheiterte sowohl an mangelnder Browserunterstützung im letzten Fall, sowie der Tatsache, dass Smartphones <code>@handheld</code> ignorierten, um zu verhindern, dass anstelle der Standardseite mit allen Informationen nur eine abgespeckte mobile Version geladen wurde. In <a rel="nofollow" class="external text" href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries level 4</a> wurden diese Medientypen deprecated:
+</p>
+<div class="note-box note-box-recommendation-text"><strong>Empfehlung:</strong> 
+Für den Medientyp <code>@screen</code> ist es besser, <a href="../Breakpoint.html" title="Breakpoint">Breakpoints</a> anhand der Eigenschaften wie <a href="Media_Queries.html#width" title="CSS/Media Queries">Bildschirmauflösung</a>, <a href="Media_Queries.html#device-aspect-ratio" title="CSS/Media Queries"> Seitenverhältnis</a>, bzw. der <a href="Media_Queries.html#orientation" title="CSS/Media Queries">Orientation</a>, wie es gerade gehalten wird, zu erstellen. Eine andere Möglichkeit wäre das Auslesen der <a href="../Grundlagen/User-Agent-Kennung.html" title="Grundlagen/User-Agent-Kennung">User-Agent-Kennung</a>, um mobile Geräte zu identifizieren.</div>
+<table class="wikitable">
+<caption>Übersicht der als deprecated deklarierten Medientypen in CSS
+</caption>
+<tr>
+<th scope="col">Medientyp
+</th>
+<th scope="col">Richtbeschreibung
+</th>
+<th scope="col">Standard und Unterstützung
+</th></tr>
+<tr>
+<th scope="row">aural
+</th>
+<td>Ausgabemedien, die sich synthetischer Sprachausgabe bedienen.
+</td>
+<td><ul class="siconset"><li class="sicon sicon_achtung"><a href="../Datei_Iconset.html" class="image" title="Achtung"><img alt="Achtung" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr>
+<tr>
+<th scope="row">braille
+</th>
+<td>Geräte, auf denen die Braille-Schrift (umgangssprachlich „Blindenschrift“) tastbar wiedergegeben werden kann.
+</td>
+<td><ul class="siconset"><li class="sicon sicon_achtung"><a href="../Datei_Iconset.html" class="image" title="Achtung"><img alt="Achtung" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr>
+<tr>
+<th scope="row">embossed
+</th>
+<td>Drucker, die Braille-Schrift tastbar auf Papier einprägen.
+</td>
+<td><ul class="siconset"><li class="sicon sicon_achtung"><a href="../Datei_Iconset.html" class="image" title="Achtung"><img alt="Achtung" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr>
+<tr>
+<th scope="row">handheld
+</th>
+<td>Geräte, die üblicherweise in der Hand gehalten werden, einen kleinen Bildschirm besitzen und über wenig Bandbreite verfügen.
+</td>
+<td><ul class="siconset"><li class="sicon sicon_achtung"><a href="../Datei_Iconset.html" class="image" title="Achtung"><img alt="Achtung" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr>
+<tr>
+<th scope="row">projection
+</th>
+<td>Geräte, die Inhalte projizieren
+</td>
+<td><ul class="siconset"><li class="sicon sicon_achtung"><a href="../Datei_Iconset.html" class="image" title="Achtung"><img alt="Achtung" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op5_12"><a href="../Datei_Iconset.html" class="image" title="Opera 5.12"><img alt="Opera 5.12" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr>
+<tr>
+<th scope="row">tty
+</th>
+<td>Geräte, deren Darstellung über ein Raster definiert wird (z.B. durch nicht-proportionale Schriftarten).
+</td>
+<td><ul class="siconset"><li class="sicon sicon_achtung"><a href="../Datei_Iconset.html" class="image" title="Achtung"><img alt="Achtung" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr>
+<tr>
+<th scope="row">tv
+</th>
+<td>gedacht für Geräte, die Informationen eingeschränkt visuell und akustisch wiedergeben können.
+</td>
+<td><ul class="siconset"><li class="sicon sicon_achtung"><a href="../Datei_Iconset.html" class="image" title="Achtung"><img alt="Achtung" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Einordnung in Mediengruppen">Bearbeiten</a>]</span> <span class="mw-headline" id="Einordnung_in_Mediengruppen"> Einordnung in Mediengruppen </span></h3>
+<p>Eigenschaften in CSS werden nicht nur für ein einzelnes Medium definiert, sondern für mehrere Ausgabemedien. Farbangaben können beispielsweise auf einer Vielzahl von Ausgabemedien verarbeitet werden.
+</p><p>Aus Vereinfachungsgründen fasst CSS daher Medientypen zu Mediengruppen zusammen. Bei der Definition einer Eigenschaft muss so nur auf eine Mediengruppe eingegangen werden, anstatt alle Medientypen einzeln aufzulisten.
+</p><p>Medientypen werden in folgende Gruppen eingeteilt:
+</p>
+<ul><li> <i>fortlaufende</i> oder <i>paginierte</i> (auf Seiten aufgeteilte) Darstellung,
+</li><li> <i>sichtbar</i>, <i>hörbar</i> (Töne, Signale), <i>gesprochen</i> oder <i>fühlbar</i>,
+</li><li> <i>Raster</i>- oder <i>Bitmap</i>-Darstellung (teils bezogen auf die Darstellung von Schriftzeichen),
+</li><li> <i>interaktiv</i> oder <i>statisch</i>,
+</li><li> <i>alle</i> Medientypen.
+</li></ul>
+<table class="wikitable">
+<caption>Beziehung zwischen Medientypen und Mediengruppen
+</caption>
+<tr>
+<th scope="col" rowspan="2">Medientyp
+</th>
+<th scope="col" colspan="4">Mediengruppen
+</th></tr>
+<tr>
+<th scope="col">Aufteilung
+</th>
+<th scope="col">Wahrnehmung
+</th>
+<th scope="col">Darstellung
+</th>
+<th scope="col">Interaktion
+</th></tr>
+<tr>
+<th scope="row">aural
+</th>
+<td>fortlaufend
+</td>
+<td>gesprochen
+</td>
+<td>
+</td>
+<td>beides
+</td></tr>
+<tr>
+<th scope="row">braille
+</th>
+<td>fortlaufend
+</td>
+<td>fühlbar
+</td>
+<td>Raster
+</td>
+<td>beides
+</td></tr>
+<tr>
+<th scope="row">embossed
+</th>
+<td>paginiert
+</td>
+<td>fühlbar
+</td>
+<td>Raster
+</td>
+<td>statisch
+</td></tr>
+<tr>
+<th scope="row">handheld
+</th>
+<td>beides
+</td>
+<td>sichtbar, hörbar, gesprochen
+</td>
+<td>Bitmap
+</td>
+<td>beides
+</td></tr>
+<tr>
+<th scope="row">print
+</th>
+<td>paginiert
+</td>
+<td>sichtbar
+</td>
+<td>Bitmap
+</td>
+<td>statisch
+</td></tr>
+<tr>
+<th scope="row">projection
+</th>
+<td>paginiert
+</td>
+<td>sichtbar
+</td>
+<td>Bitmap
+</td>
+<td>interaktiv
+</td></tr>
+<tr>
+<th scope="row">screen
+</th>
+<td>fortlaufend
+</td>
+<td>sichtbar, hörbar
+</td>
+<td>Bitmap
+</td>
+<td>beides
+</td></tr>
+<tr>
+<th scope="row">speech
+</th>
+<td>fortlaufend
+</td>
+<td>gesprochen
+</td>
+<td>
+</td>
+<td>beides
+</td></tr>
+<tr>
+<th scope="row">tty
+</th>
+<td>fortlaufend
+</td>
+<td>sichtbar
+</td>
+<td>Raster
+</td>
+<td>beides
+</td></tr>
+<tr>
+<th scope="row">tv
+</th>
+<td>beides
+</td>
+<td>sichtbar, hörbar
+</td>
+<td>Bitmap
+</td>
+<td>beides
+</td></tr></table>
+<div class="note-box note-box-attention"><p class="note-box-title">Achtung!</p><div class="note-box-text"> Da die Beschreibung der Medientypen nur informativ ist, handelt es sich auch bei der Einteilung in Mediengruppen mehr um einen Wegweiser als um feste Vorgaben. </div></div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Übersicht der Medienmerkmale">Bearbeiten</a>]</span> <span class="mw-headline" id=".C3.9Cbersicht_der_Medienmerkmale"> Übersicht der Medienmerkmale </span></h2>
+<p>Ein Medienmerkmal beschreibt eine Anforderung an den angegeben Medientyp. Die Abfrage eines Merkmals wird nachfolgend auch Ausdruck genannt. Ein Ausdruck entspricht dem Wert „wahr“, wenn das Kriterium von einem Ausgabemedium erfüllt wird, andernfalls dem Wert „falsch“.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: width">Bearbeiten</a>]</span> <span class="mw-headline" id="width"> width </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op9_50"><a href="../Datei_Iconset.html" class="image" title="Opera 9.50"><img alt="Opera 9.50" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>width</code> (<i>Breite</i>) beschreibt bei fortlaufenden Medien die Breite des Anzeigebereichs (Viewport) und bei paginierten Medien die Breite einer Seite.
+</p>
+<ul><li> abgefragter Wert: Eine positive  Längenangabe.
+</li><li> betrifft: sichtbare und fühlbare Medien.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>width: 60em<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Breite entspricht genau 60em */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>min-width: 50em<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Breite beträgt mindestens 50em */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>max-width: 70em<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Breite beträgt höchstens 70em */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Bei Merkmalen, die sich auf den Anzeigebereich beziehen ist es fast immer sinnvoll, eines der möglichen Präfixe zu verwenden, da die tatsächliche Anzeigebreite beim Benutzer nicht vorhersehbar ist.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: height">Bearbeiten</a>]</span> <span class="mw-headline" id="height"> height </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op9_50"><a href="../Datei_Iconset.html" class="image" title="Opera 9.50"><img alt="Opera 9.50" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>height</code> (<i>Höhe</i>) beschreibt bei fortlaufenden Medien die Höhe des Anzeigebereichs (Viewport) und bei paginierten Medien die Höhe einer Seite.
+</p>
+<ul><li> abgefragter Wert: Eine positive  Längenangabe.
+</li><li> betrifft: sichtbare und fühlbare Medien.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<p>Die Anwendung erfolgt analog zum Merkmal <code>width</code>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: device-width">Bearbeiten</a>]</span> <span class="mw-headline" id="device-width"> device-width </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op9_50"><a href="../Datei_Iconset.html" class="image" title="Opera 9.50"><img alt="Opera 9.50" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>device-width</code> (<i>Geräte-Breite</i>) beschreibt die Breite des Ausgabegerätes, z.B. Breite eines Bildschirms in Pixel.
+</p>
+<ul><li> abgefragter Wert: Eine positive Längenangabe.
+</li><li> betrifft: sichtbare und fühlbare Medien.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>device-width: 800px<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Breite entspricht genau <span class="nu0">800</span> Pixel */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>min-device-width: 800px<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Breite beträgt mindestens 800px */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>max-device-width: 1024px<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Breite beträgt höchstens 1024px */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Auch wenn ein Ausgabegerät bestimmte Abmessungen besitzt, sagt das nichts darüber aus, ob der verfügbare Bereich auch verwendet wird.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: device-height">Bearbeiten</a>]</span> <span class="mw-headline" id="device-height"> device-height </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op9_50"><a href="../Datei_Iconset.html" class="image" title="Opera 9.50"><img alt="Opera 9.50" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>device-height</code> (<i>Geräte-Höhe</i>) beschreibt die Höhe des Ausgabebereichs, z.B. Höhe eines Bildschirms in Pixel.
+</p>
+<ul><li> abgefragter Wert: Eine positive Längenangabe.
+</li><li> betrifft: sichtbare und fühlbare Medien.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<p>Die Anwendung erfolgt analog zum Merkmal <code>device-width</code>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: device-pixel-ratio">Bearbeiten</a>]</span> <span class="mw-headline" id="device-pixel-ratio"> device-pixel-ratio </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_leer"><a href="../Datei_Iconset.html" class="image" title="Leer"><img alt="Leer" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_leer"><a href="../Datei_Iconset.html" class="image" title="Leer"><img alt="Leer" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_leer"><a href="../Datei_Iconset.html" class="image" title="Leer"><img alt="Leer" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_leer"><a href="../Datei_Iconset.html" class="image" title="Leer"><img alt="Leer" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_leer"><a href="../Datei_Iconset.html" class="image" title="Leer"><img alt="Leer" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>device-pixel-ratio</code> (<i>Geräte-Höhe</i>) beschreibt die Anzahl der tatsächlichen Pixel des Ausgabegeräts pro Pixel auf der Webseite.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> <code>device-pixel-ratio</code> entspricht keinem Standard. Deshalb kann die Browserunterstützung auch wieder eingestellt werden.<br />Verwenden Sie stattdessen <code><a href="../Media_queries.html#resolution" title="Media queries" class="mw-redirect">resolution</a></code>.</div>
+<ul><li> <a rel="nofollow" class="external free" href="https://developer.mozilla.org/de/docs/Web/Guide/CSS/Media_Queries#-moz-device-pixel-ratio">https://developer.mozilla.org/de/docs/Web/Guide/CSS/Media_Queries#-moz-device-pixel-ratio</a>
+</li><li> <a rel="nofollow" class="external free" href="http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/">http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/</a>
+</li><li> <a rel="nofollow" class="external free" href="http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html">http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html</a>
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: orientation">Bearbeiten</a>]</span> <span class="mw-headline" id="orientation"> orientation </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10"><a href="../Datei_Iconset.html" class="image" title="Opera 10.0"><img alt="Opera 10.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>orientation</code> (<i>Orientierung</i>) beschreibt das Seitenformat eines Ausgabemediums. Die Orientierung entspricht dem Wert <code>landscape</code> (Querformat), wenn der Wert des Merkmals <code>width</code> größer ist als der Wert des Merkmals <code>height</code>. Andernfalls entspricht die Orientierung dem Wert <code>portrait</code> (Hochformat).
+</p>
+<ul><li> abgefragter Wert: Eines der Schlüsselwörter <code>portrait</code> oder <code>landscape</code>
+</li><li> betrifft: Bitmap-Medientypen.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>orientation: portrait<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Formate für hochformatige Ausgabemedien */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Internet Explorer, Safari und Chrome erkennen bisher (Stand Juli 2011) die Kurzschreibweise <code>(orientation)</code> nicht. Sie sollten dieses Merkmal daher nur in Verbindung mit einem der vorgegebenen Schlüsselwörter verwenden.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: aspect-ratio">Bearbeiten</a>]</span> <span class="mw-headline" id="aspect-ratio"> aspect-ratio </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10"><a href="../Datei_Iconset.html" class="image" title="Opera 10.0"><img alt="Opera 10.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>aspect-ratio</code> (<i>Seitenverhältnis</i>) beschreibt das Verhältnis des Merkmals <code>width</code> zum Merkmal <code>height</code>.
+</p>
+<ul><li> abgefragter Wert: Ein Verhältniswert.
+</li><li> betrifft: Bitmap-Medientypen.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>aspect-ratio: <span class="nu0">4</span>/<span class="nu0">3</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Fall <span class="nu0">1</span> */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>min-aspect-ratio: <span class="nu0">4</span>/<span class="nu0">3</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Fall <span class="nu0">2</span> */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>max-aspect-ratio: <span class="nu0">4</span>/<span class="nu0">3</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Fall <span class="nu0">3</span> */ <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel wird der Verhältniswert 4/3 den Varianten des <code>aspect-ratio</code>-Merkmals zugewiesen. Das Stylesheet wird verarbeitet, wenn das Seitenverhältnis des Anzeigebereichs (Viewport) genau 4 zu 3 entspricht (Fall 1). Das ist z.B. bei einem Anzeigebereich von 492 zu 369 Pixel der Fall.
+Das Stylesheet in Fall 2 wird angewendet, wenn das Seitenverhältnis 4/3 oder höher (z.B. 5/3 oder 6/3) beträgt. Im Fall 3 wird das Stylesheet entsprechend nur verarbeitet, wenn das Seitenverhältnis 4/3 oder geringer ist (z.B. 2/3 oder 1/3).</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: device-aspect-ratio">Bearbeiten</a>]</span> <span class="mw-headline" id="device-aspect-ratio"> device-aspect-ratio </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op9_50"><a href="../Datei_Iconset.html" class="image" title="Opera 9.50"><img alt="Opera 9.50" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>device-aspect-ratio</code> (<i>Geräte-Seitenverhältnis</i>) beschreibt das Verhältnis des Merkmals <code>device-width</code> zum Merkmal <code>device-height</code>.
+</p>
+<ul><li> abgefragter Wert: Ein Verhältniswert.
+</li><li> betrifft: Bitmap-Medientypen.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<p>Die Anwendung erfolgt analog zum Merkmal <code>aspect-ratio</code>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: color">Bearbeiten</a>]</span> <span class="mw-headline" id="color"> color </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10"><a href="../Datei_Iconset.html" class="image" title="Opera 10.0"><img alt="Opera 10.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>color</code> (<i>Farbe</i>) beschreibt die Anzahl der Bits, die ein Gerät pro Farbkomponente (z.B. Rot, Grün oder Blau) verwendet. Kann das Ausgabegerät keine Farben anzeigen, ist der Wert <code>0</code> (Null) zutreffend. Wird für verschiedene Farbkomponenten eine unterschiedliche Anzahl an Bits verwendet, so zählt die niedrigste verwendete Bit-Anzahl des Geräts.
+</p>
+<ul><li> abgefragter Wert: Eine nicht negative Zahl.
+</li><li> betrifft: sichtbare Medientypen.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>color: <span class="nu0">2</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Einfaches Farblayout */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>min-color: <span class="nu0">3</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Komplexes Farblayout */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>max-color: <span class="nu0">2</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Einfaches Farblayout */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: color-index">Bearbeiten</a>]</span> <span class="mw-headline" id="color-index"> color-index </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10"><a href="../Datei_Iconset.html" class="image" title="Opera 10.0"><img alt="Opera 10.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>color-index</code> (<i>Farbindex</i>) beschreibt die Anzahl der Farbdefinitionen in der Farbtabelle des Ausgabemediums. Verfügt das Medium nicht über eine Farbtabelle, ist der Wert <code>0</code> (Null) zutreffend. Üblicherweise besitzen nur Medien eine Farbtabelle, deren Farbfähigkeit eingeschränkt ist.
+</p>
+<ul><li> abgefragter Wert: Eine positive Zahl.
+</li><li> betrifft: sichtbare Medientypen.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>color-index: <span class="nu0">16</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* genau <span class="nu0">16</span> Farben stehen zur Verfügung */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>min-color-index: <span class="nu0">20</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Mindestens <span class="nu0">20</span> Farben stehen zur Verfügung */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>max-color-index: <span class="nu0">256</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Höchstens <span class="nu0">256</span> Farben stehen zur Verfügung */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Einzig der Opera Browser gibt an, eine Farbtabelle zu verwenden.</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Safari und Chrome verstehen die Präfixe <code>min-</code> und <code>max-</code> dieses Merkmals nicht.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: monochrome">Bearbeiten</a>]</span> <span class="mw-headline" id="monochrome"> monochrome </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10"><a href="../Datei_Iconset.html" class="image" title="Opera 10.0"><img alt="Opera 10.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>monochrome</code> (<i>schwarz-weiß</i>) beschreibt die Anzahl der Bits, die zur Beschreibung eines schwarz-weiß-Farbtons verwendet werden. Handelt es sich nicht um ein Gerät, das nur Graustufen darstellen kann (sondern auch Farben), ist der Wert <code>0</code> (Null) zutreffend.
+</p>
+<ul><li> abgefragter Wert: eine positive Zahl.
+</li><li> betrifft: sichtbare Medientypen.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>monochrome: <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* nur schwarz und weiß stehen zur Verfügung */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>min-monochrome: <span class="nu0">4</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Mindestens <span class="nu0">16</span> Graustufen stehen zur Verfügung */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>max-monochrome: <span class="nu0">8</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Höchstens <span class="nu0">256</span> Graustufen stehen zur Verfügung */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: resolution">Bearbeiten</a>]</span> <span class="mw-headline" id="resolution"> resolution </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10"><a href="../Datei_Iconset.html" class="image" title="Opera 10.0"><img alt="Opera 10.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>resolution</code> (<i>Auflösung</i>) beschreibt die Auflösung, also die Dichtigkeit der Bildpunkte auf einem Ausgabemedium. Besitzt das verwendete Ausgabemedium keine rechteckigen Bildpunkte (beispielsweise Drucker), so kann das Merkmal nur in Verbindung mit einem Präfix verwendet werden.
+</p><p>In diesem Fall prüfen Abfragen mit <code>min-resolution</code> die geringstmögliche, Abfragen mit <code>max-resolution</code> die höchstmögliche Dichtigkeit der Bildpunkte des Ausgabemediums ab.
+</p>
+<ul><li> abgefragter Wert: Eine <a href="Wertetypen/Zahlen%2c_Ma%c3%9fe_und_Ma%c3%9feinheiten.html#Aufl.C3.B6sungen" title="CSS/Wertetypen/Zahlen, Maße und Maßeinheiten">Auflösung</a>.
+</li><li> betrifft: Bitmap-Medientypen.
+</li><li> Die Präfixe <code>min-</code> und <code>max-</code> sind erlaubt.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>resolution: 96dpi<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Die Auflösung beträgt <span class="nu0">96</span> Bildpunkte pro Zoll */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>min-resolution: 200dpcm<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Die Auflösung beträgt mindestens <span class="nu0">200</span> Punkte pro Zentimeter */ <span class="br0">&#125;</span>
+@media <span class="br0">&#40;</span>max-resolution: 300dpi<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Die Auflösung beträgt höchstens <span class="nu0">300</span> Punkte pro Zoll */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: scan">Bearbeiten</a>]</span> <span class="mw-headline" id="scan"> scan </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10"><a href="../Datei_Iconset.html" class="image" title="Opera 10.0"><img alt="Opera 10.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>scan</code> (<i>Abtasten</i>) beschreibt den Bildaufbau von Ausgabegeräten des Typs <code>tv</code>. Dieser kann progressiv erfolgen, das entspricht etwa dem Bildaufbau auf einem Computerbildschirm, dann trifft der Wert <code>progressive</code> zu, oder mit Hilfe von Zeilenbildung (d.h. einzelne Bildzeilen werden nach und nach dargestellt), dann trifft der Wert <code>interlace</code> zu.
+</p>
+<ul><li> abgefragter Wert: Eines der Schlüsselwörter <code>progressive</code> oder <code>interlace</code>
+</li><li> betrifft: Medientyp <code>tv</code>
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>scan: progressive<span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Bildschirmlayout */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Der Internet Explorer erkennt bisher (Stand Juli 2011) die Kurzschreibweise <code>(scan)</code> nicht. Es ist stattdessen erforderlich, die ausführliche Schreibweise zu notieren.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: grid">Bearbeiten</a>]</span> <span class="mw-headline" id="grid"> grid </span></h3>
+<ul class="siconset smetadaten"><li class="sicon sicon_css3"><a href="../Datei_Iconset.html" class="image" title="CSS 3.0"><img alt="CSS 3.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10"><a href="../Datei_Iconset.html" class="image" title="Opera 10.0"><img alt="Opera 10.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf4"><a href="../Datei_Iconset.html" class="image" title="Safari 4.0"><img alt="Safari 4.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das Merkmal <code>grid</code> (<i>Raster</i>) beschreibt die Rastereigenschaft von Ausgabemedien. Bei Ausgabegeräten, die Inhalte in einem Raster darstellen, trifft der Wert Eins (<code>1</code>) zu, andernfalls der Wert Null (<code>0</code>).
+</p>
+<ul><li> abgefragter Wert: Eine Zahl (Null oder Eins).
+</li><li> betrifft: sichtbare und fühlbare Medientypen
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">@media <span class="br0">&#40;</span>grid: <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> /* Zahlreiche Schriftformatierungen */ <span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: siehe auch">Bearbeiten</a>]</span> <span class="mw-headline" id="siehe_auch_2"> siehe auch </span></h2>
+<ul><li> <a href="Anwendung_und_Praxis/Print-CSS.html" title="CSS/Anwendung und Praxis/Print-CSS">CSS/Anwendung und Praxis/Print-CSS</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 30634/1000000
+Post‐expand include size: 105118/2097152 bytes
+Template argument size: 26132/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1893-0!*!0!!de-formal!2!* and timestamp 20150301193410 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;oldid=26762">http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;oldid=26762</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Spezial_Kategorien.html" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="../Kategorie_CSS.html" title="Kategorie:CSS">CSS</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=CSS%2FMedia+Queries" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Media_Queries.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="../Diskussion_CSS/Media_Queries.html"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Media_Queries.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/CSS/Media_Queries.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/CSS/Media_Queries.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=CSS/Media_Queries&amp;oldid=26762" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/CSS-2FMedia_Queries.html" title="Spezial:Durchsuchen/CSS-2FMedia Queries">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 27. Februar 2015 um 08:22 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 155.958-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.091 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/CSS/Media_Queries by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:22:37 GMT -->
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Schleifen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Schleifen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Schleifen","wgTitle":"Perl/Schleifen","wgCurRevisionId":22070,"wgArticleId":3102,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Schleifen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Schleifen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Schleifen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Schleifen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Schleifen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#for-Schleifen"><span class="tocnumber">1</span> <span class="toctext">for-Schleifen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#for.28Initialisierung.3B_Schleifen-Bedingung.3B_Continue-Anweisung.29.7B_..._.7D"><span class="tocnumber">1.1</span> <span class="toctext">for(Initialisierung; Schleifen-Bedingung; Continue-Anweisung){ ... }</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#for.28Liste.29.7B....7D"><span class="tocnumber">1.2</span> <span class="toctext">for(Liste){...}</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#foreach-Schleifen"><span class="tocnumber">2</span> <span class="toctext">foreach-Schleifen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#while-Schleifen"><span class="tocnumber">3</span> <span class="toctext">while-Schleifen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#do-Schleifen"><span class="tocnumber">4</span> <span class="toctext">do-Schleifen</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Schleifen_bei_Hashes"><span class="tocnumber">5</span> <span class="toctext">Schleifen bei Hashes</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Block-Labels_zur_Schleifenkontrolle"><span class="tocnumber">6</span> <span class="toctext">Block-Labels zur Schleifenkontrolle</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Rekursion"><span class="tocnumber">7</span> <span class="toctext">Rekursion</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: for-Schleifen">Bearbeiten</a>]</span> <span class="mw-headline" id="for-Schleifen"> <span id="for"></span> for-Schleifen </span></h2>
+<p><code>for</code>-Schleifen in Perl verhalten sich, je nach Zahl ihrer Parameter, verschieden. 
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: for(Initialisierung; Schleifen-Bedingung; Continue-Anweisung){ ... }">Bearbeiten</a>]</span> <span class="mw-headline" id="for.28Initialisierung.3B_Schleifen-Bedingung.3B_Continue-Anweisung.29.7B_..._.7D">for(Initialisierung; Schleifen-Bedingung; Continue-Anweisung){ ... }</span></h3>
+<p>Die Form mit drei Parametern ist aus der Sprache C übernommen und eignet sich für numerisches Iterieren.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Deutsch</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span> Januar Februar März April<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Franzoesisch</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span> janvier fevrier mars avril<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Italienisch</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span> gennaio febbraio marzo aprile<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Englisch</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span> january february march april<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$out</span> <span class="sy0">=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;%-12s&#160;%-12s&#160;%-12s&#160;%-12s<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+      <span class="st0">&quot;Deutsch&quot;</span><span class="sy0">,</span>
+      <span class="st0">&quot;Französisch&quot;</span><span class="sy0">,</span>
+      <span class="st0">&quot;Italienisch&quot;</span><span class="sy0">,</span>
+      <span class="st0">&quot;Englisch&quot;</span><span class="sy0">,</span>
+   <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span> <span class="sy0">&lt;</span> <span class="re0">@Deutsch</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$out</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;%-12s&#160;%-12s&#160;%-12s&#160;%-12s<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+      <span class="re0">$Deutsch</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="sy0">,</span>
+      <span class="re0">$Franzoesisch</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="sy0">,</span>
+      <span class="re0">$Italienisch</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="sy0">,</span>
+      <span class="re0">$Englisch</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="sy0">,</span>
+   <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type:text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span><span class="re0">$out</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script gibt die ersten Vier Monate des Jahres in vier Sprachen aus und listet sie tabellarisch auf.
+<p>Zuerst werden die Monatsnamen in vier Arrays gespeichert.
+Danach folgt eine formatierte Titelzeile für die Ausgabe. (Siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#sprintf" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">sprinf()</a>)
+</p><p>In der for Schleife wird der Iteratier mit <code>my $i=0</code> initialisiert.
+Danach wird bei jedem Durchgang der Schleife zuerst geprüft, ob die Bedingung <code>$i &lt; @Deutsch</code> wahr ist. Da @Deutsch 4 Array-Elemente enthält, wird die Bedingung genau dann falsch, wenn $i=4. Am Ende der Schleife wird durch <code>$i++</code> $i um 1 inkrementiert.
+</p><p>Im Anschluss an das <i>for</i>-Konstrukt folgt ein Anweisungsblock, markiert wie üblich durch geschweifte Klammern <code>{</code> und <code>}</code>. Dazwischen können beliebig viele Anweisungen stehen. Diese Anweisungen werden so oft ausgeführt, wie die Schleife durchlaufen wird. 
+</p><p>Im Beispiel wird die Ausgabe vorbereitet, indem bei jedem Durchgang das Element aus jedem der vier Sprach-Arrays in einen formatierten String geschrieben wird.
+</p>
+Dabei wird der Schleifenzähler <code>$i</code> zur Abfrage des Arrayelements verwendet.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: for(Liste){...}">Bearbeiten</a>]</span> <span class="mw-headline" id="for.28Liste.29.7B....7D">for(Liste){...}</span></h3>
+<p>In der Form mit einem Parameter ist die for-Schleife identisch mit <code>foreach(){}</code>. In dieser Form ist sie nützlich wie folgt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">my</span> <span class="re0">$variable</span> <span class="sy0">=</span> <span class="sy0">&lt;&gt;;</span>
+<span class="kw3">chomp</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="re0">$variable</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="co2">/^q/i</span> <span class="kw1">and</span> quit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="co2">/^s/i</span> <span class="kw1">and</span> save<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="co2">/^v/i</span> <span class="kw1">and</span> verbose<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="co2">/^h/i</span> <span class="kw1">and</span> help<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird die Usereingabe in $variable gespeichert und der linefeed aus der Eingabe entfernt (Siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#chomp_-_letztes_Zeichen_entfernen.2C_sofern_Separator" title="Perl/Funktionen für Zeichenketten">chomp</a>)
+<p>mit <code>for($variable)</code> wird der Wert von $variable im Standard-Schleifen-Alias $_ gespeichert. Dadurch sind sehr kompakt notierte Abfragen möglich.
+</p>
+<code>/^q/i and quit();</code> ist expliziter <code>$_ =~ /^q/i and quit();</code></div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external text" href="http://perldoc.perl.org/perlsyn.html#For-Loops">perldoc perlsyn&#35;For-Loops</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: foreach-Schleifen">Bearbeiten</a>]</span> <span class="mw-headline" id="foreach-Schleifen"> <span id="foreach"></span> foreach-Schleifen </span></h2>
+<p>Diese Sorte Schleifen ist in Perl speziell für das Durchlaufen von Listen und Arrays gedacht. Eine Liste wird dabei Element für Element abgeklappert. Abhängig davon können Sie Anweisungen ausführen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+&#160;
+<span class="kw1">my</span> <span class="re0">@Sachen</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;mein Haus&quot;</span><span class="sy0">,</span><span class="st0">&quot;mein Auto&quot;</span><span class="sy0">,</span><span class="st0">&quot;mein Boot&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@Sachen</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$_&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Schwaechen</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Nikotin&quot;</span><span class="sy0">,</span><span class="st0">&quot;Alkohol&quot;</span><span class="sy0">,</span><span class="st0">&quot;das andere Geschlecht&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Schwaeche</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="re0">$Schwaeche</span> <span class="br0">&#40;</span><span class="re0">@Schwaechen</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Schwaeche&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt zwei leicht abweichende Varianten, mit einer <i>foreach</i>-Schleife umzugehen. In beiden Fällen wird jeweils ein Array deklariert und mit Anfangswerten versehen, einmal <code>@Sachen</code> und einmal <code>@Schwaechen</code>. Hinter dem Schlüsselwort <i>foreach</i> wird in Klammern einfach der Array angegeben. In dem Anweisungsblock, der dahinter in geschweiften Klammern folgt, können beliebig viele Anweisungen stehen.
+<p>Im ersten der obigen Beispiele wird von der vordefinierten Variablen <code>$_</code> Gebrauch gemacht. In ihr ist im Anweisungsblock einer <i>foreach</i>-Schleife stets der aktuelle Wert des Schleifendurchlaufs gespeichert, was in diesem Fall das jeweils aktuelle Element des Arrays <code>@Sachen</code> ist.
+</p>
+Im zweiten Beispiel wird anstelle von <code>$_</code> ein eigener Skalar namens <code>$Schwaeche</code> benutzt. Wenn ein solcher Skalar zwischen dem Schlüsselwort <i>foreach</i> und der Klammer mit dem Array notiert wird, ist im Anweisungsblock in diesem Skalar jeweils der aktuelle Wert des Schleifendurchlaufs enthalten, im zweiten Beispiel also der jeweils aktuelle Wert aus <code>@Schwaechen</code>.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Schlüsselwörter <i>for</i> und <i>foreach</i> besitzen zwar jeweils einen semantisch anderen Hintergrund, sind aber syntaktisch beliebig gegeneinander austauschbar. Perl erkennt selbständig, was für einen Typ Schleife Sie verwenden wollen. So können Sie beispielsweise auch folgendes schreiben:
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw1">for</span><span class="br0">&#40;</span><span class="nu0">1</span> <span class="sy0">..</span> <span class="nu0">1000</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;tausendmal berührt<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div>
+Der Code gibt einfach tausendmal den Text aus, ist aber im Grunde eine <i>foreach</i>-Schleife, welche die Liste der Zahlen von 1 bis 1000 abarbeitet.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: while-Schleifen">Bearbeiten</a>]</span> <span class="mw-headline" id="while-Schleifen"> <span id="while"></span> while-Schleifen </span></h2>
+<p>Diese Art von Schleifen eignet sich, wenn Sie vorher nicht wissen, wie oft die Schleife durchlaufen wird. Sie formulieren einfach eine Bedingung, und die Schleife wird so oft durchlaufen, wie die Bedingung wahr ist. Dass die Bedingung irgendwann falsch und die Schleife beendet wird, dafür müssen Sie im Anweisungsblock, der von der Schleife abhängig ist, selber sorgen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Startzeit</span> <span class="sy0">=</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Endzeit</span> <span class="sy0">=</span> <span class="re0">$Startzeit</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Jetztzeit</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$i</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">while</span> <span class="br0">&#40;</span><span class="re0">$Jetztzeit</span> <span class="sy0">&lt;=</span> <span class="re0">$Endzeit</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$Jetztzeit</span> <span class="sy0">=</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="re0">$i</span><span class="sy0">++;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$i mal durchlaufen&lt;br&gt;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script ermittelt zunächst mit der Perl-Funktion <i>time</i> den aktuellen Zeitpunkt und speichert das Ergebnis im Skalar <code>$Startzeit</code>. Gespeichert wird dabei eine Zahl, nämlich die Anzahl Sekunden vom 1.1.1970, 0.00 Uhr bis zum aktuellen Zeitpunkt. Dann wird ein Skalar <code>$Endzeit</code> deklariert, der einen Wert zugewiesen bekommt, der um 1 höher ist als der von <code>$Startzeit</code>. Zwei weitere Skalare <code>$Jetztzeit</code> und <code>$i</code> werden deklariert und mit 0 initialisiert.
+<p>Die Schleife wird durch das Schlüsselwort <i>while</i> eingeleitet. In Klammern wird eine Bedingung formuliert. Im Beispiel wird die Bedingung "<code>$Jetztzeit</code> kleiner oder gleich <code>$Endzeit</code>" formuliert. Hinter der Bedingung folgt in geschweiften Klammern ein Anweisungsblock mit beliebig vielen Anweisungen. Ausgeführt werden diese Anweisungen so oft, wie die Schleife durchlaufen wird und die Bedingung noch wahr ist.
+</p><p>Die Schleifenbedingung ist im Beispiel ja zunächst auf jeden Fall wahr, da <code>$Jetztzeit</code> mit 0 initialisiert wurde und daher auf jeden Fall kleiner ist als <code>$Endzeit</code>. Innerhalb der Schleife bekommt <code>$Jetztzeit</code> jedoch durch Aufrufen der Funktion <i>time</i> einen neuen Wert zugewiesen, der logischerweise mindestens so hoch ist wie der von <code>$Startzeit</code>. Die Schleife wird dadurch so lange durchlaufen, bis <code>$Jetztzeit</code> durch den <i>time</i>-Aufruf einen Wert zugewiesen bekommt, der größer ist als <code>$Endzeit</code>. Dann wird die Schleife beendet. Wie oft das der Fall ist, wissen Sie natürlich vorher nicht, insofern ist die <i>while</i>-Schleife hier ideal.
+</p>
+Innerhalb der Schleife wird außerdem noch <code>$i</code> als Zählervariable mit <code>$i++</code> jeweils um 1 erhöht. Der aktuelle Wert von <code>$i</code> wird nach Ablauf der Schleife ausgegeben. Im Fenster des aufrufenden Browsers wird man also am Ende sehen können, wie oft die Schleife durchlaufen wurde.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: do-Schleifen">Bearbeiten</a>]</span> <span class="mw-headline" id="do-Schleifen"> <span id="do"></span> do-Schleifen </span></h2>
+<p>Bei <i>while</i>-Schleifen kann es passieren, dass die abhängigen Anweisungen nie ausgeführt werden, nämlich dann, wenn die Schleifenbedingung schon beim ersten Schleifendurchlauf unwahr ist. Eine <i>do</i>-Schleife sorgt dafür, dass die Anweisungen auf jeden Fall einmal ausgeführt werden, da die Bedingung der Schleife erst am Ende abgeprüft wird.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Bedingung</span> <span class="sy0">=</span> <span class="st0">&quot;Abbruch&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Irgendwas</span><span class="sy0">;</span>
+<span class="kw1">do</span> <span class="br0">&#123;</span>
+ <span class="re0">$Irgendwas</span> <span class="sy0">=</span> <span class="re0">$Bedingung</span><span class="sy0">;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;Hier steht $Irgendwas&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> <span class="kw1">until</span> <span class="br0">&#40;</span><span class="re0">$Irgendwas</span> <span class="kw1">eq</span> <span class="re0">$Bedingung</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel demonstriert die typische Funktionsweise einer solchen Schleife. Zunächst wird ein Skalar <code>$Bedingung</code> mit dem Anfangswert <i>Abbruch</i> versehen. Ein weiterer Skalar namens <code>$Irgendwas</code> wird deklariert, erhält aber keinen Wert. Die Schleife wird mit <i>do</i> eingeleitet. Dahinter folgt in geschweiften Klammern ein Anweisungsblock, der beliebig viele Anweisungen enthalten kann. Im Beispiel wird dem Skalar <code>$Irgendwas</code> gleich zu Beginn der Wert von <code>$Bedingung</code> zugewiesen, also <i>Abbruch</i>. Anschließend wird dieser Inhalt zur Kontrolle ausgegeben. Nach der schließenden geschweiften Klammer, die den Anweisungsblock beendet, ist das Wort <i>until</i> notiert und dahinter in Klammern die eigentliche Schleifenbedingung. Im Beispiel wird abgeprüft, ob <code>$Irgendwas</code> und <code>$Bedingung</code> gleich sind, also den gleichen Inhalt haben. Da dies ja innerhalb der Schleife zugewiesen wurde, ist die Schleifenbedingung also erfüllt. Damit wird die Schleife abgebrochen. Denn <i>until</i> ist wie "solange bis" zu lesen. Im Gegensatz zur <i>while</i>-Schleife, deren Anweisungsblock ausgeführt wird, solange die Bedingung wahr ist, wird hier der Anweisungsblock ausgeführt, bis die Schleifenbedingung wahr ist.
+Im Beispiel wird die Schleife einmal durchlaufen, obwohl die Schleifenbedingung gleich im ersten Durchlauf wahr ist. Der Grund ist eben, dass zuerst der abhängige Code ausgeführt und erst dann die Bedingung überprüft wird.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> <i>do</i>-Schleifen sind eigentlich keine echten Schleifen, weshalb dort Sprungbefehle wie <i>last</i>, <i>next</i> und <i>redo</i> nicht funktionieren.</div>
+<p>Es gibt in Perl auch <i>do</i>-Schleifen, deren Bedingung kein <i>until</i>, sondern ein <i>while</i> vorangestellt ist. Dann müssen Sie die Schleifenbedingung negativ formulieren.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Schleifen bei Hashes">Bearbeiten</a>]</span> <span class="mw-headline" id="Schleifen_bei_Hashes"> Schleifen bei Hashes </span></h2>
+<p>So wie sich Arrays prima mit [#foreach-Schleifen| <i>foreach</i>]-Schleifen "traversieren", also Element für Element durchlaufen lassen, besteht dieser Wunsch natürlich auch bei <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hashes</a>. Da ein Hash-Element jedoch immer aus zwei Werten besteht, von denen der erste der Schlüssel ist und der zweite der eigentliche Datenwert, stehen zwei Methoden zur Verfügung, entweder durch den <i>keys</i>-Operator oder den <i>each</i>-Operator.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">%Familie</span> <span class="sy0">=</span> <span class="br0">&#40;</span>Frau <span class="sy0">=&gt;</span> <span class="st0">&quot;Eva&quot;</span><span class="sy0">,</span> Tochter <span class="sy0">=&gt;</span> <span class="st0">&quot;Anja&quot;</span><span class="sy0">,</span> Sohn <span class="sy0">=&gt;</span> <span class="st0">&quot;Florian&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$schluessel</span> <span class="br0">&#40;</span><span class="kw3">keys</span> <span class="re0">%Familie</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="re0">$schluessel</span><span class="sy0">,</span> <span class="st0">&quot; hei&amp;szlig;t &quot;</span><span class="sy0">,</span> <span class="re0">$Familie</span><span class="br0">&#123;</span><span class="re0">$key</span><span class="br0">&#125;</span><span class="sy0">,</span> <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="kw3">keys</span> <span class="re0">%Familie</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="co5">$_</span><span class="sy0">,</span> <span class="st0">&quot; hei&amp;szlig;t &quot;</span><span class="sy0">,</span> <span class="re0">$Familie</span><span class="br0">&#123;</span><span class="co5">$_</span><span class="br0">&#125;</span><span class="sy0">,</span> <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird die Schleife dreimal durchlaufen und gibt solche Sätze aus wie <i>Frau heißt Eva</i>.
+<p>Das Beispiel deklariert einen Hash namens <code>%Familie</code> und weist ihm drei Schlüssel-Wert-Paare zu. Anschließend wird <code>$schluessel</code> als Iterator-Alias definiert. Innerhalb der Schleifenbedingung wird mit <i>keys</i> über alle Hashkeys iteriert. Mit <code>$Familie{$Schluessel}</code> wird der Hashwert ausgegeben.
+</p>
+In einer zweiten Variante wird auf einen expliziten Alias verzichtet und statt dessen der Standard Iterator-Alias <code>S_</code> verwendet und mit <code>$Familie{$_}</code> der Hashwert ausgegeben.</div>
+</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">%Familie</span> <span class="sy0">=</span> <span class="br0">&#40;</span>Frau <span class="sy0">=&gt;</span> <span class="st0">&quot;Eva&quot;</span><span class="sy0">,</span> Tochter <span class="sy0">=&gt;</span> <span class="st0">&quot;Anja&quot;</span><span class="sy0">,</span> Sohn <span class="sy0">=&gt;</span> <span class="st0">&quot;Florian&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Schluessel</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">while</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$Schluessel</span><span class="sy0">,</span> <span class="re0">$Wert</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">each</span><span class="br0">&#40;</span><span class="re0">%Familie</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="re0">$Schluessel</span><span class="sy0">,</span> <span class="st0">&quot; hei&amp;szlig;t &quot;</span><span class="sy0">,</span> <span class="re0">$Wert</span><span class="sy0">,</span> <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">while</span> <span class="br0">&#40;</span><span class="re0">$Schluessel</span> <span class="sy0">=</span> <span class="kw3">each</span><span class="br0">&#40;</span><span class="re0">%Familie</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="re0">$Schluessel</span><span class="sy0">,</span> <span class="st0">&quot; hei&amp;szlig;t &quot;</span><span class="sy0">,</span> <span class="re0">$Familie</span><span class="br0">&#123;</span><span class="re0">$Schluessel</span><span class="br0">&#125;</span><span class="sy0">,</span> <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel deklariert einen Hash namens <code>%Familie</code> und weist ihm drei Schlüssel-Wert-Paare zu. Anschließend werden zwei Skalare <code>$Schluessel</code> und <code>$Wert</code> deklariert, die innerhalb der Schleife benötigt werden. Die Schleife wird als <i>while</i>-Schleife formuliert. Innerhalb der Schleifenbedingung wird jedoch die Perl-Funktion <i>each</i> aufgerufen. Diese liefert wahlweise eine Liste mit zwei Elementen, nämlich dem jeweils nächsten Schlüssel und dem zugehörigen Wert, oder - im skalaren Kontext - nur den jeweils nächsten Schlüssel des übergebenen Hashes.
+<p>Das Beispiel-Script zeigt beide Varianten. In der ersten Variante wird die Liste mit den beiden Elementen in dem Ausdruck <code>($Schluessel, $Wert)</code> gespeichert. <code>$Schluessel</code> enthält dann den jeweils aktuellen Schlüssel des Hashs, und <code>$Wert</code> den zugehörigen Datenwert. Im Beispiel wird die Schleife dreimal durchlaufen und gibt solche Sätze aus wie <i>Frau heißt Eva</i>.
+</p>
+In der zweiten Variante wird die <i>each</i>-Funktion im skalaren Kontext aufgerufen, da der Rückgabewert nur in <code>$Schluessel</code> gespeichert wird. Die innerhalb der Schleife formulierte <i>print</i>-Anweisung gibt daher das Gleiche aus wie in der ersten Variante. Diesmal ist jedoch keine Variable <code>$Wert</code> verfügbar. Über ein Konstrukt wie <code>$Familie{$Schluessel}</code> kann aber auf den jeweils aktuellen Wert zugegriffen werden.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Block-Labels zur Schleifenkontrolle">Bearbeiten</a>]</span> <span class="mw-headline" id="Block-Labels_zur_Schleifenkontrolle"> <span id="label"></span><span id="labels"></span> Block-Labels zur Schleifenkontrolle </span></h2>
+<p>Schleifen können mehrere Schichten haben. Wenn man mit den Funktionen<code>last</code> die Schleife verlassen will oder <code>next</code> eine nächste Iteration initiieren will, in welche Schleife soll gesprungen werden?
+Block-Labels erlauben die Beschriftung einer Schleife.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1">OUTER<span class="sy0">:</span> <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$x</span><span class="sy0">;</span> <span class="re0">$x</span><span class="sy0">&lt;</span><span class="nu0">10</span><span class="sy0">;</span> <span class="re0">$x</span><span class="sy0">++</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+  INNER<span class="sy0">:</span> <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$y</span><span class="sy0">;</span> <span class="re0">$y</span><span class="sy0">&lt;</span><span class="nu0">10</span><span class="sy0">;</span> <span class="re0">$y</span><span class="sy0">++</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="re0">$Bedingung_1</span> <span class="kw1">and</span> <span class="kw1">last</span> INNER<span class="sy0">;</span>
+    <span class="re0">$Bedingung_2</span> <span class="kw1">and</span> <span class="kw1">last</span> OUTER<span class="sy0">;</span>
+    <span class="re0">$Bedingung_3</span> <span class="kw1">and</span> <span class="kw1">next</span> INNER<span class="sy0">;</span>
+    <span class="re0">$Bedingung_4</span> <span class="kw1">and</span> <span class="kw1">next</span> OUTER<span class="sy0">;</span>
+    <span class="co1"># ...</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel liegen zwei Ebenen von Schleifen vor. Jede hat ihr eigenes Label. In Perl kann jeder Block sein eigenes Label erhalten. 
+Im Beispiel können unter verschiedenen Bedingungen die Weiterführung des Programmes kontrolliert definiert werden.</div>
+</div>
+<p>Siehe auch 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://perldoc.perl.org/perlsyn.html#Basic-BLOCKs">perldoc perlsyn&#35;Basic-BLOCKs</a>
+</li><li><a rel="nofollow" class="external text" href="http://perldoc.perl.org/perlfunc.html#next-LABEL">perldoc perlfunc&#35;next-LABEL</a>
+</li><li><a rel="nofollow" class="external text" href="http://perldoc.perl.org/perlfunc.html#last-LABEL">perldoc perlfunc&#35;last-LABEL</a>
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Rekursion">Bearbeiten</a>]</span> <span class="mw-headline" id="Rekursion"> Rekursion </span></h2>
+<p>Rekursion ist dann ein Mittel, wenn man mit Schleifen nicht mehr weiter kommt. Ein typischer Anwendungsfall für Rekursion ist das Traversieren von baumartigen Strukturen. Auf gut Deutsch: wenn Sie beispielsweise einen ganzen Verzeichnisbaum einlesen wollen, ohne die Datei- und Verzeichnisstruktur vorher zu kennen, dann ist das ein typischer Fall für eine rekursive Anwendung. Bei der Rekursion wird eine Subroutine definiert, innerhalb derer es eine Anweisung gibt, die die Subroutine von neuem aufruft. Dadurch entsteht ein Verschachtelungseffekt. Rekursion ist allerdings aus Computersicht nicht ganz unkritisch. Deshalb muss sie sauber programmiert sein.
+</p><p>Das folgende Beispiel zeigt, wie Sie eine Datei- und Verzeichnisstruktur ab einem gegebenen Startverzeichnis einlesen und an den aufrufenden Browser HTML-formatiert übermitteln lassen können. Das Beispiel ist allerdings nicht ganz trivial.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Startverzeichnis</span> <span class="sy0">=</span> <span class="st0">&quot;/var/www/selfhtml.org/de/dokumente/perl&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Alle</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Totalbytes</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$out</span><span class="sy0">;</span>
+&#160;
+Ermitteln<span class="br0">&#40;</span><span class="re0">$Startverzeichnis</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">@Alle</span> <span class="sy0">=</span> <span class="kw3">sort</span><span class="br0">&#40;</span><span class="re0">@Alle</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@Alle</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$out</span> <span class="sy0">.=</span> <span class="co5">$_</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Dateibaum&lt;/h1&gt;
+&lt;pre&gt;Startverzeichnis: &lt;b&gt;$Startverzeichnis&lt;/b&gt;&lt;/pre&gt;
+&lt;hr&gt;&lt;pre&gt;
+$out
+&lt;/pre&gt;&lt;hr&gt;
+&lt;pre&gt;Insgesamt: [$Totalbytes Bytes]&lt;/pre&gt;
+&lt;/body&gt;&lt;/html&gt;
+ENDE</span>
+&#160;
+<span class="kw2">sub</span> Ermitteln <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Verzeichnis</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Eintrag</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Pfadname</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$HTML_Eintrag</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Bytes</span><span class="sy0">;</span>
+  <span class="kw3">local</span> <span class="re0">*DH</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">unless</span> <span class="br0">&#40;</span><span class="kw3">opendir</span><span class="br0">&#40;</span>DH<span class="sy0">,</span> <span class="re0">$Verzeichnis</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw3">return</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw1">while</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="br0">&#40;</span><span class="re0">$Eintrag</span> <span class="sy0">=</span> <span class="kw3">readdir</span><span class="br0">&#40;</span>DH<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">next</span> <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Eintrag</span> <span class="kw1">eq</span> <span class="st0">&quot;.&quot;</span> <span class="kw1">or</span> <span class="re0">$Eintrag</span> <span class="kw1">eq</span> <span class="st0">&quot;..&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$Pfadname</span> <span class="sy0">=</span> <span class="re0">$Verzeichnis</span><span class="sy0">.</span><span class="st0">&quot;/&quot;</span><span class="sy0">.</span><span class="re0">$Eintrag</span><span class="sy0">;</span>
+    <span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">-</span>d <span class="re0">$Pfadname</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="re0">$HTML_Eintrag</span> <span class="sy0">=</span> <span class="re0">$Verzeichnis</span><span class="sy0">.</span><span class="st0">&quot;/&quot;</span><span class="sy0">.</span><span class="re0">$Eintrag</span><span class="sy0">.</span><span class="st0">&quot; [VERZEICHNIS]&quot;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">else</span> <span class="br0">&#123;</span>
+      <span class="re0">$Bytes</span> <span class="sy0">=</span> <span class="sy0">-</span><span class="kw3">s</span> <span class="re0">$Pfadname</span><span class="sy0">;</span>
+      <span class="re0">$Totalbytes</span> <span class="sy0">+=</span> <span class="re0">$Bytes</span><span class="sy0">;</span>
+      <span class="re0">$HTML_Eintrag</span> <span class="sy0">=</span> <span class="re0">$Verzeichnis</span><span class="sy0">.</span><span class="st0">&quot;/&quot;</span><span class="sy0">.</span><span class="re0">$Eintrag</span><span class="sy0">.</span><span class="st0">&quot; [$Bytes Bytes]&quot;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@Alle</span><span class="sy0">,</span> <span class="re0">$HTML_Eintrag</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    Ermitteln<span class="br0">&#40;</span><span class="re0">$Pfadname</span><span class="br0">&#41;</span> <span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">-</span>d <span class="re0">$Pfadname</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw3">closedir</span><span class="br0">&#40;</span>DH<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Zunächst werden drei wichtige Variablen deklariert: <code>$Startverzeichnis</code> speichert das Verzeichnis, ab dem die Suche starten soll, <code>@Alle</code> ist die Liste, in der später die eingelesenen Einträge gespeichert werden, und <code>$Totalbytes</code> ermittelt die Bytezahlen aller Dateien.
+<p>Danach wird mit der HTML-Ausgabe begonnen. Unterhalb davon steht die Anweisung <code>Ermitteln($Startverzeichnis);</code>. Dies ist ein Aufruf der Subroutine <i>Ermitteln</i>, die etwas weiter unten mit <code>sub Ermitteln</code> eingeleitet wird. Diese Subroutine ist zugleich diejenige, die sich in dem Anweisungsblock, den sie einschließt, in ihrer vorletzten Anweisung selbst wieder aufruft und so die Rekursion bewirkt.
+</p><p>Mit der Anweisung <code>Ermitteln($Startverzeichnis);</code> passiert damit das gesamte Einlesen der Datei- und Verzeichnisstruktur. Anschließend wird die Liste mit der Funktion <i>sort</i> alphabetisch sortiert und dann Eintrag für Eintrag aus einer <i>foreach</i>-Schleife heraus ausgegeben.
+</p><p>Das Herzstück des Scripts ist die Subroutine <i>Ermitteln</i>. Darin wird zunächst eine Reihe von Arbeitsvariablen deklariert. Da die Subroutine sich ja selber wieder aufruft, stellt sich die Frage, ob es dabei nicht zu einem Kuddelmuddel mit den Namen der Variablen kommt. Die Antwort ist nein. Denn jedes Ausführen der Subroutine erzeugt eine eigene Instanz der Routine im Arbeitsspeicher, und da die Variablen lokal mit <i>my</i> deklariert sind, bleibt ihre Gültigkeit auf eine Instanz beschränkt.
+Eine offensichtliche Ausnahme bildet die Anweisung <code>local *DH</code>, die das Verzeichnishandle <i>DH</i> lokal deklariert. Da <i>my</i> nicht auf Datei-/Verzeichnishandles (bzw. Typeglobs) angewendet werden kann, wird hier zu dieser Lösung gegriffen, die intern zwar etwas anders arbeitet, aber den gewünschten Effekt hat. Eine andere Variante wäre, das Standardmodul <i>Symbol</i> zu verwenden und sich in jeder Instanz der Subroutine ein neues Verzeichnishandle zu schaffen. Das Verfahren mag "sauberer" erscheinen, ist es aber im Endeffekt nicht. Außerdem ist die Variante mit <i>local</i> bedeutend schneller.
+Die vielen Instanzen der Subroutine bei vielen Verzeichnissen führen aber auch dazu, dass immer mehr Arbeitsspeicher benötigt wird. Das ist ein wichtiger Nachteil der Rekursion. Konstrukte mit vielen rekursiven Selbstaufrufen sollten Sie daher in CGI-Scripts, die auf öffentlichen Webservern sehr häufig und in mehreren Prozessen gleichzeitig aufgerufen werden können, vermeiden.
+</p><p>Die Subroutine <i>Ermitteln</i> erwartet einen Verzeichnispfadnamen, der ihr übergeben wird. Mit <code>$Verzeichnis = shift;</code> wird der übergebene Pfadname im Skalar <code>$Verzeichnis</code> gespeichert (siehe dazu auch die Perl-Funktion <i>shift</i>). Anschließend wird mit der Funktion <i>opendir</i> das übergebene Verzeichnis geöffnet. Seine Einträge werden in einer <i>while</i>-Schleife mit der Funktion <i>readdir</i> eingelesen. Die beiden Einträge mit den Werten <code>.</code> und <code>..</code>, die in jedem Verzeichnis vorkommen und das aktuelle bzw. das übergeordnete Verzeichnis symbolisieren, werden mit dem Sprungbefehl <i>next</i> übersprungen. Andernfalls würde sich die Rekursion in einer Endlosschleife verheddern.
+</p><p>Mit dem Dateitestoperator <code>-d</code> in <code>if(-d $Pfadname)</code> wird abgefragt, ob der jeweils aktuelle Verzeichniseintrag wieder ein Verzeichnis, also ein Unterverzeichnis, ist. Abhängig davon wird ein HTML-Eintrag für die auszugebende Liste vorbereitet. Weiter unten wird dann mit <code>-d</code> noch einmal abgefragt, ob der Eintrag ein Unterverzeichnis ist, und davon abhängig die Subroutine <i>Ermitteln</i> mit dem Unterverzeichnis erneut aufgerufen.
+</p>
+Nachdem die Verzeichnisstruktur abgearbeitet ist und alle Instanzen der Subroutine <i>Ermitteln</i> beendet sind, geht es im oberen Teil des Scripts weiter mit <code>@Alle = sort(@Alle);</code>.</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 632/1000000
+Post‐expand include size: 58203/2097152 bytes
+Template argument size: 54798/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3102-0!*!0!!de-formal!*!* and timestamp 20150301221959 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;oldid=22070">http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;oldid=22070</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FSchleifen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Schleifen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Schleifen" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Schleifen" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Schleifen&amp;oldid=22070" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FSchleifen" title="Spezial:Durchsuchen/Perl-2FSchleifen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 4. Oktober 2014 um 09:49 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 3.560-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.247 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Schleifen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

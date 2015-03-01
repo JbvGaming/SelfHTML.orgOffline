@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Regeln by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Regeln – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Regeln","wgTitle":"JavaScript/Regeln","wgCurRevisionId":20073,"wgArticleId":2349,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["JavaScript"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Regeln","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Regeln" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Regeln&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Regeln skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Regeln</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../JavaScript.html" title="JavaScript">JavaScript</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Anweisungen_notieren"><span class="tocnumber">1</span> <span class="toctext">Anweisungen notieren</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Anweisungsbl.C3.B6cke_notieren"><span class="tocnumber">2</span> <span class="toctext">Anweisungsblöcke notieren</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Selbstvergebene_Namen"><span class="tocnumber">3</span> <span class="toctext">Selbstvergebene Namen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Kommentare_in_JavaScript"><span class="tocnumber">4</span> <span class="toctext">Kommentare in JavaScript</span></a></li>
+<li class="toclevel-1"><a href="#Mehrzeilige_Kommentare"><span class="tocnumber">5</span> <span class="toctext">Mehrzeilige Kommentare</span></a></li>
+<li class="toclevel-1"><a href="#Einzeilige_Kommentare"><span class="tocnumber">6</span> <span class="toctext">Einzeilige Kommentare</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Anweisungen notieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Anweisungen_notieren"> Anweisungen notieren </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_0"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.0"><img alt="JavaScript 1.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>JavaScript besteht letztendlich aus einer kontrollierten Anordnung von <b>Anweisungen</b>.<br />
+Das sind Befehle, die der JavaScript-Interpreter des WWW-Browsers bewertet und in Maschinencode umsetzt, der auf dem Rechner des Anwenders ausführbar ist.
+</p><p>Es gibt einfache und komplexere Anweisungen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 1
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+Zahl = 42;
+</pre></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 2
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+Quadrat = Zahl * Zahl;
+</pre></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 3
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+if (Zahl &gt; 1000) Zahl = 0;
+</pre></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 4
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+alert(&quot;Das Quadrat von &quot; + Zahl + &quot; = &quot; + Ergebnis);
+</pre></div>
+</div>
+<p>Eine Anweisung in JavaScript besteht immer aus einem Befehl, der mit einem Strichpunkt&#160;; oder einem Zeilenumbruch abgeschlossen wird.
+</p>
+<div class="note-box note-box-recommendation-text"><strong>Empfehlung:</strong> 
+In manchen Dokumentationen zu JavaScript wird der Strichpunkt am Ende von einfachen Anweisungen zwar häufig weggelassen,<br /> aber um unnötige Fehler zu vermeiden ist es ratsam, sich von vornherein anzugewöhnen, alle Anweisungen auf diese Weise abzuschließen.</div>
+<p>Eine Anweisung ist zum Beispiel:
+</p>
+<ul><li> wenn Sie einer  <a href="Variable.html" title="JavaScript/Variable">Variablen</a> einen Wert zuweisen, wie in Beispiel <b>1</b>.
+</li><li> wenn Sie mit Variablen oder Werten eine Operation durchführen, wie in Beispiel <b>2</b>.
+</li><li> wenn Sie einen Befehl nur unter bestimmten Bedingungen ausführen, wie in Beispiel <b>3</b> (siehe hierzu die Abschnitte über <a href="Anweisungen.html" title="JavaScript/Anweisungen">bedingte Anweisungen</a> und über <a href="Schleifen.html" title="JavaScript/Schleifen">Schleifen</a>).
+</li><li> wenn Sie eine <a href="Funktionen.html#selbst_definierte_Funktionen" title="JavaScript/Funktionen">selbst definierte Funktion</a> oder eine Objektmethode aufrufen, bzw. wenn Sie eine Objekteigenschaft auslesen oder ändern (siehe hierzu den Abschnitt <a href="Objekte.html" title="JavaScript/Objekte">Objekte, Eigenschaften und Methoden</a>), wie in Beispiel <b>4</b>.
+</li></ul>
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Anweisungsblöcke notieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Anweisungsbl.C3.B6cke_notieren"> Anweisungsblöcke notieren </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_0"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.0"><img alt="JavaScript 1.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Ein <b>Anweisungsblock</b> besteht aus einer oder mehreren Anweisungen, die innerhalb einer übergeordneten Anweisung oder innerhalb einer Funktion stehen.<br />
+So können Anweisungsblöcke beispielsweise unterhalb einer <a href="Anweisungen.html" title="JavaScript/Anweisungen">bedingte Anweisung</a> oder einer <a href="Schleifen.html" title="JavaScript/Schleifen">Schleife</a> stehen.
+</p><p>Auch alle Anweisungen, die innerhalb einer <a href="Funktionen.html" title="JavaScript/Funktionen">selbst definierten Funktion</a> stehen, bilden einen Anweisungsblock.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 1
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+if (Zahl &gt; 1000) {
+    Zahl = 0;
+  Neustart();
+}
+</pre></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 2
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+while (i &lt;= 99) {
+  Quadrat(i);
+  i = i + 1;
+}
+</pre></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 3
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function SageQuadrat (x) {
+  var Ergebnis = x * x;
+    alert(Ergebnis);
+}
+</pre></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 4
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function SagEinmaleins (x) {
+  var Ergebnis = x * x;
+    if(Ergebnis &gt; 100) {
+       Ergebnis = 0;
+       Neustart();
+    }
+  alert(Ergebnis);
+}
+</pre></div>
+</div>
+<p>Ein Anweisungsblock wird durch eine öffnende <b>geschweifte</b> Klammer <code>{ begonnen und durch eine schließende geschweifte Klammer }</code> beendet.<br /> Sie können die geschweiften Klammern jeweils in eine eigene Zeile schreiben, wie in den obigen Beispielen. Es ist aber auch erlaubt, die Klammern in derselben Zeile zu notieren wie die Anweisungen.
+</p><p>Bei bedingten Anweisungen (wie in Beispiel <b>1</b>) oder bei Schleifen (wie in Beispiel <b>2</b>) müssen Sie solche Anweisungsblöcke notieren, sobald mehr als eine Anweisung von der Bedingung oder der Schleifenbedingung abhängig ausgeführt werden soll. Bei Funktionen (wie in Beispiel <b>3</b>) müssen Sie Anfang und Ende der Funktion durch geschweifte Klammern markieren. Alles, was innerhalb der Funktion steht, ist daher ein Anweisungsblock.
+</p><p>Anweisungsblöcke können auch verschachtelt sein, wie in Beispiel <b>4</b> oben.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Selbstvergebene Namen">Bearbeiten</a>]</span> <span class="mw-headline" id="Selbstvergebene_Namen"> Selbstvergebene Namen </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_0"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.0"><img alt="JavaScript 1.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>An vielen Stellen in JavaScript müssen Sie <b>selbst Namen vergeben</b>, zum Beispiel für <b><a href="Konzepte.html" title="JavaScript/Konzepte">selbst definierte Funktionen</a></b>, <b><a href="Konzepte.html" title="JavaScript/Konzepte">eigene Objekte</a></b> oder <b><a href="Variable.html" title="JavaScript/Variable">Variablen</a></b>.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt; Test &lt;/title&gt;
+
+  &lt;script&gt;
+
+    function Schlaue_Frage () {
+      var i = 1;
+      var Eingabe = &quot;&quot;;
+        while (Eingabe&#160;!= &quot;SELFHTML&quot; &amp;&amp; i &lt;= 3) {
+               Eingabe = window.prompt(&quot;Wie heißt diese Dokumentation?&quot;, &quot;&quot;);
+               i++;
+        }
+    }
+
+  &lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;a href=&quot;javascript:Schlaue_Frage()&quot;&gt;wollen Sie eine Frage beantworten?&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>Im Beispiel ist in einem <a href="Einf%c3%bchrung.html#JavaScript-Anweisungen_in_HTML-Tags" title="JavaScript/Einführung">JavaScript-Bereich</a> eine Funktion mit Namen <code>Schlaue_Frage</code> notiert. Darin werden zwei Variablen mit den Namen <code>i</code> und <code>Eingabe</code> deklariert und verwendet. Das Beispiel ruft beim Anklicken des HTML-Verweises die Funktion <code>Schlaue_Frage</code> auf. Darin wird ein Dialogfenster ausgegeben, in dem der Anwender bis zu dreimal auf die Frage antworten kann, wie dieses Dokument heißt. Namen vergeben müssen Sie also recht häufig in JavaScript.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> <br /> Bei selbst vergebenen Namen gelten folgende Regeln:
+<ul><li> sie dürfen keine Leerzeichen enthalten
+</li><li> sie dürfen nur aus Buchstaben und Ziffern bestehen - das erste Zeichen muss ein Buchstabe sein; es sind Groß- und Kleinbuchstaben erlaubt. Groß- und Kleinschreibung werden unterschieden!
+</li><li> sie dürfen keine deutschen Umlaute oder scharfes S enthalten
+</li><li> sie dürfen als einziges Sonderzeichen den Unterstrich "_" enthalten
+</li><li> sie dürfen nicht mit einem <a href="Reservierte_W%c3%b6rter.html" title="JavaScript/Reservierte Wörter">reservierten Wort</a> identisch sein.
+</li></ul>
+<p>Vergeben Sie sprechende Namen, die Ihnen auch ein halbes Jahr, nachdem Sie das Script geschrieben haben, noch signalisieren, welche Bedeutung sie haben.<br />
+</p>
+Es dürfen ruhig auch deutschsprachige Wörter sein, solange die genannten Regeln eingehalten werden.</div>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Kommentare in JavaScript">Bearbeiten</a>]</span> <span class="mw-headline" id="Kommentare_in_JavaScript"> Kommentare in JavaScript </span></h2>
+<p>Abschnitte im Quellcode, die als <b>Kommentar</b> gekennzeichnet sind, werden nicht als ausführbarer Code interpretiert. Sie sind beispielsweise sinnvoll, um interne Angaben zu Autor und Erstellungsdatum in einer Datei zu platzieren oder interne Anmerkungen zu bestimmten Textstellen zu machen. Oft werden auch durch Kommentare am Anfang von Skriptdateien Lizenzvereinbarungen direkt in den Quellcode geschrieben oder es wird einfach der Versionverlauf dokumentiert.
+</p><p>Durch geeignete Kommentare im Quellcode ist es auch möglich, eine Dokumentation oder Nachschlagewerk zu erstellen. Dazu müssen die Kommentarinhalte einer speziellen Syntax folgen, die das Programm zum Erstellen der Dokumentation vorgibt. Es gibt auch Bearbeitungsprogramme, welche Kommentare auswerten und im Editor als Hilfetext anzeigen.
+</p><p>Beim Schreiben und Testen von JavaScript kommt es häufig vor, dass bestimmte Bereiche auskommentiert werden. Hierdurch wird ein Entwicklungsstand nicht einfach verworfen, sondern verbleibt als Kommentar im Quellcode. Kommentare sind im einfachsten Fall ein Erklärungstext im Quellcode. Dies ist der ursprünglichste Verwendungszweck.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Kommentar&amp;action=edit&amp;section=T-1" title="JavaScript/Kommentar">Bearbeiten</a>]</span> <span class="mw-headline" id="Mehrzeilige_Kommentare"> Mehrzeilige Kommentare </span></h2>
+<p>Mehrzeilige Kommentare werden durch die Zeichenfolge <code>/*</code> eingeleitet und durch <code>*/</code> beendet. Alles was zwischen diesen beiden Zeichenfolgen steht, wird nicht als Quellcode interpretiert. Sie dürfen sich über mehrere Zeilen erstrecken. Eine Verschachtelung mehrzeiliger Kommentare ineinander ist nicht erlaubt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"> <span class="coMULTI">/* Programm zur Kreisberechnung
+    Version vom 15.2.2011
+    Autor: Matthias Apsel */</span></pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="coMULTI">/* Falsche Berechnung und auch falsches Auskommentieren durch Verschachtelung
+/* Umrechnung Bogenmaß nach Grad */</span>
+<span class="kw1">function</span> RadianToDegree<span class="br0">&#40;</span>radian<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">return</span> <span class="br0">&#40;</span>radian <span class="sy0">*</span> <span class="nu0">100</span> <span class="sy0">/</span> <span class="kw4">Math</span>.<span class="me1">PI</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="sy0">*/</span>
+&#160;
+<span class="coMULTI">/* Umrechnung Bogenmaß nach Grad */</span>
+<span class="kw1">function</span> RadianToDegree<span class="br0">&#40;</span>radian<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">return</span> <span class="br0">&#40;</span>radian <span class="sy0">*</span> <span class="nu0">180</span> <span class="sy0">/</span> <span class="kw4">Math</span>.<span class="me1">PI</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Dieses Beispiel zeigt die falsche Verwendung mehrzeiliger Kommentare durch Verschachtelung.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Kommentar&amp;action=edit&amp;section=T-2" title="JavaScript/Kommentar">Bearbeiten</a>]</span> <span class="mw-headline" id="Einzeilige_Kommentare"> Einzeilige Kommentare </span></h2>
+<p>Einzeilige Kommentare werden mit <code>//</code> eingeleitet und erstrecken sich bis zum Ende der Zeile. Sie sind gut für kurze Erklärungen geeignet oder um einfach eine Zeile auszukommentieren. Ein großer Vorteil einzeiliger Kommentare ist, dass sie auch innerhalb von mehrzeiligen Kommentaren vorkommen dürfen, weil sie sich syntaktisch nicht überschneiden und erst gar nicht darin erkannt werden. Würde man nur mehrzeilige Kommentare verwenden, dann könnte man nicht einfach größere Passagen, die bereits mehrzeilige Kommentare enthalten, auskommentieren, da mehrzeilige Kommentare nicht verschachtelt werden dürfen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> radius <span class="sy0">=</span> <span class="nu0">6371</span><span class="sy0">;</span>                 <span class="co1">// Mittlerer Erdradius in Kilometer</span>
+<span class="kw1">var</span> umfang <span class="sy0">=</span> <span class="nu0">2</span> <span class="sy0">*</span> <span class="kw4">Math</span>.<span class="me1">PI</span> <span class="sy0">*</span> radius<span class="sy0">;</span> <span class="co1">// Erdumfang</span>
+&#160;
+<span class="co1">// Umrechnung Bogenmaß nach Grad</span>
+<span class="kw1">function</span> RadianToDegree<span class="br0">&#40;</span>radian<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">return</span> <span class="br0">&#40;</span>radian <span class="sy0">*</span> <span class="nu0">180</span> <span class="sy0">/</span> <span class="kw4">Math</span>.<span class="me1">PI</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="co1">// Umrechnung Grad nach Bogenmaß</span>
+<span class="kw1">function</span> DegreeToRadian<span class="br0">&#40;</span>degree<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">return</span> <span class="br0">&#40;</span>degree <span class="sy0">*</span> <span class="kw4">Math</span>.<span class="me1">PI</span> <span class="sy0">/</span> <span class="nu0">180</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="coMULTI">/* Falsche Berechnung
+// Umrechnung Bogenmaß nach Grad
+function RadianToDegree(radian)
+{
+  return (radian * 100 / Math.PI);
+}
+*/</span>
+&#160;
+<span class="co1">// Umrechnung Bogenmaß nach Grad</span>
+<span class="kw1">function</span> RadianToDegree<span class="br0">&#40;</span>radian<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">return</span> <span class="br0">&#40;</span>radian <span class="sy0">*</span> <span class="nu0">180</span> <span class="sy0">/</span> <span class="kw4">Math</span>.<span class="me1">PI</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Dieses Beispiel zeigt, dass man Passagen durch mehrzeilige Kommentare ausblenden kann, auch wenn sie einzeilige Kommentare enthalten.</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 4822/1000000
+Post‐expand include size: 22732/2097152 bytes
+Template argument size: 6265/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:2349-0!*!0!!de-formal!2!* and timestamp 20150301002746 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;oldid=20073">http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;oldid=20073</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Spezial_Kategorien.html" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="../Kategorie_JavaScript.html" title="Kategorie:JavaScript">JavaScript</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FRegeln" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Regeln.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="../Diskussion_JavaScript/Regeln.html"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Regeln.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/JavaScript/Regeln.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Regeln.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Regeln&amp;oldid=20073" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/JavaScript-2FRegeln.html" title="Spezial:Durchsuchen/JavaScript-2FRegeln">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 18. Juli 2014 um 02:09 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 6.607-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.087 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Regeln by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:04 GMT -->
+</html>

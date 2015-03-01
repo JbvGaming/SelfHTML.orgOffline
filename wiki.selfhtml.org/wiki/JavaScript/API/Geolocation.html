@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/API/Geolocation by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/API/Geolocation – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/API/Geolocation","wgTitle":"JavaScript/API/Geolocation","wgCurRevisionId":18099,"wgArticleId":1214,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/API/Geolocation","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/API/Geolocation" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/API/Geolocation&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_API_Geolocation skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/API/Geolocation</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../../JavaScript.html" title="JavaScript">JavaScript</a> | <a href="../API.html" title="JavaScript/API">API</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><ul class="siconset smetadaten"><li class="sicon sicon_html5v"><a href="../../Datei_Iconset.html" class="image" title="HTML5"><img alt="HTML5" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie9"><a href="../../Datei_Iconset.html" class="image" title="IE 9"><img alt="IE 9" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx3_5"><a href="../../Datei_Iconset.html" class="image" title="Firefox 3.5"><img alt="Firefox 3.5" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr5"><a href="../../Datei_Iconset.html" class="image" title="Chrome 5"><img alt="Chrome 5" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf5"><a href="../../Datei_Iconset.html" class="image" title="Safari 5.0"><img alt="Safari 5.0" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_konq5_x"><a href="../../Datei_Iconset.html" class="image" title="Konqueror 5.x"><img alt="Konqueror 5.x" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op10_50"><a href="../../Datei_Iconset.html" class="image" title="Opera 10.50"><img alt="Opera 10.50" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>Die Geolocation API kann verwendet werden, um den Standort des Clienten zu ermitteln, was vor allem für mobile Anwendungen interessant ist. Bestimmt werden kann der Standort entweder via Internetanbindung oder GSM/GPS. Mit den Daten zum Standort können die Genauigkeit der Angaben und Bewegungen aufgezeichnet werden.
+<p>Mittels Google Gears oder einer IP-Datenbank lässt sich der Standort des Clienten ebenfalls ermitteln, ohne dass er vom Browser gefragt wird, ob die Standortdaten übermittelt werden dürfen. Hierdurch lässt sich eine mögliche Verunsicherung des Clienten vermeiden. 
+Dies ist vor allem deshalb sinnvoll, da nur die wenigsten und neusten Browserversionen dieses Feature unterstützen. Ohne Gears oder die Nutzung einer IP-Datenbank würde also bei den meisten Clienten an Stelle der gewünschten Ausgabe ein Fehler auftreten. Allerdings wird Gears nicht mehr weiterentwickelt und von neueren Browsern auch nicht mehr unterstützt, da das Projekt durch HTML5 nicht mehr benötigt wird.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Verf.C3.BCgbarkeit_der_Geolocation_pr.C3.BCfen"><span class="tocnumber">1</span> <span class="toctext">Verfügbarkeit der Geolocation prüfen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Abfragen_der_Position"><span class="tocnumber">2</span> <span class="toctext">Abfragen der Position</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Position_verfolgen"><span class="tocnumber">3</span> <span class="toctext">Position verfolgen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Funktion_f.C3.BCr_den_Position_Callback"><span class="tocnumber">4</span> <span class="toctext">Funktion für den Position Callback</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Error_Callback"><span class="tocnumber">5</span> <span class="toctext">Error Callback</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Weitere_Optionen"><span class="tocnumber">6</span> <span class="toctext">Weitere Optionen</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Links"><span class="tocnumber">7</span> <span class="toctext">Links</span></a></li>
+</ul>
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Verfügbarkeit der Geolocation prüfen">Bearbeiten</a>]</span> <span class="mw-headline" id="Verf.C3.BCgbarkeit_der_Geolocation_pr.C3.BCfen"> Verfügbarkeit der Geolocation prüfen </span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">if</span> <span class="br0">&#40;</span>navigator.<span class="me1">geolocation</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> 
+     <span class="coMULTI">/* code */</span> 
+<span class="br0">&#125;</span></pre></div></div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Abfragen der Position">Bearbeiten</a>]</span> <span class="mw-headline" id="Abfragen_der_Position"> Abfragen der Position </span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">navigator.<span class="me1">geolocation</span>.<span class="me1">getCurrentPosition</span><span class="br0">&#40;</span> <span class="coMULTI">/* position callback */</span> <span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Position verfolgen">Bearbeiten</a>]</span> <span class="mw-headline" id="Position_verfolgen"> Position verfolgen </span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="co1">//Verfolgen beginnen</span>
+<span class="kw1">var</span> watchID <span class="sy0">=</span> navigator.<span class="me1">geolocation</span>.<span class="me1">watchPosition</span><span class="br0">&#40;</span> <span class="coMULTI">/* position callback */</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="co1">//Verfolgen beenden</span>
+navigator.<span class="me1">geolocation</span>.<span class="me1">clearWatch</span><span class="br0">&#40;</span>watchID<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Funktion für den Position Callback">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktion_f.C3.BCr_den_Position_Callback"> Funktion für den Position Callback </span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> positionCallback<span class="br0">&#40;</span>position<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="co1">//wann die Position ermittelt wurde</span>
+     position.<span class="me1">timestamp</span><span class="sy0">;</span>
+&#160;
+     position.<span class="me1">coords</span>.<span class="me1">latitude</span><span class="sy0">;</span> <span class="co1">//dezimal Grad</span>
+     position.<span class="me1">coords</span>.<span class="me1">longitude</span><span class="sy0">;</span> <span class="co1">//dezimal Grad</span>
+     position.<span class="me1">coords</span>.<span class="me1">accuracy</span><span class="sy0">;</span> <span class="co1">//Meter</span>
+&#160;
+     position.<span class="me1">coords</span>.<span class="me1">altitude</span><span class="sy0">;</span> <span class="co1">//Meter</span>
+     position.<span class="me1">coords</span>.<span class="me1">altitudeAccuracy</span><span class="sy0">;</span> <span class="co1">//Meter</span>
+&#160;
+     position.<span class="me1">coords</span>.<span class="me1">speed</span><span class="sy0">;</span> <span class="co1">//Meter pro Sek.</span>
+     position.<span class="me1">coords</span>.<span class="me1">heading</span><span class="sy0">;</span> <span class="co1">//Grad von wahrem Norden</span>
+<span class="br0">&#125;</span></pre></div></div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Error Callback">Bearbeiten</a>]</span> <span class="mw-headline" id="Error_Callback"> Error Callback </span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">navigator.<span class="me1">geolocation</span>.<span class="me1">getCurrentPosition</span><span class="br0">&#40;</span>callback<span class="sy0">,</span> errorCallback<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">//Für Positionsabfrage</span>
+navigator.<span class="me1">geolocation</span>.<span class="me1">watchPosition</span><span class="br0">&#40;</span>callback<span class="sy0">,</span> errorCallback<span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">//Für Verfolgung</span>
+&#160;
+<span class="kw1">function</span> errorCallback<span class="br0">&#40;</span>error<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw1">var</span> err <span class="sy0">=</span> error.<span class="me1">code</span><span class="sy0">;</span>
+&#160;
+     <span class="kw1">switch</span> <span class="br0">&#40;</span>err<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+          <span class="kw1">case</span> error.<span class="me1">PERMISSION_DENIED</span><span class="sy0">:</span> <span class="kw1">break</span><span class="sy0">;</span>
+          <span class="kw1">case</span> error.<span class="me1">POSITION_UNAVAILABLE</span><span class="sy0">:</span> <span class="kw1">break</span><span class="sy0">;</span>
+          <span class="kw1">case</span> error.<span class="me1">TIMEOUT</span><span class="sy0">:</span> <span class="kw1">break</span><span class="sy0">;</span>
+          <span class="kw1">case</span> error.<span class="me1">UNKNOWN_ERROR</span><span class="sy0">:</span> <span class="kw1">break</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>
+&#160;
+     window.<span class="me1">console</span>.<span class="me1">log</span><span class="br0">&#40;</span>error.<span class="me1">message</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Weitere Optionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Weitere_Optionen"> Weitere Optionen </span></h3>
+<dl><dt><code>bool enableHighAccuracy</code>
+</dt><dd>Nutzen der GPS-Ortung aktivieren/deaktivieren. Sie bringt eine bessere Genauigkeit, hat aber höheren Akkuverbrauch zur Folge.
+</dd></dl>
+<dl><dt><code>long timeout  //In Millisekunden</code>
+</dt><dd>Zeit, die man bereit ist, auf ein Callback zu warten.
+</dd></dl>
+<dl><dt><code>long maximumAge //In Millisekunden</code> 
+</dt><dd>Wenn alte Geodaten ausreichend sind, wird auf diese zurückgreifen.
+</dd></dl>
+<p>Von diesen Optionen können ein, zwei oder alle drei wie folgt eingebunden werden, wobei die erste Zeile alle drei Parameter zeigt, die zweite nur einen:
+</p>
+<pre>navigator.geolocation.getCurrentPosition(callback, errorCallback, {enableHighAccuracy:true, timeout:5000, maximumAge:60000});
+navigator.geolocation.watchPosition(callback, errorCallback, {enableHighAccuracy:true});
+</pre>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Links">Bearbeiten</a>]</span> <span class="mw-headline" id="Links"> Links </span></h2>
+<p><a rel="nofollow" class="external text" href="http://www.w3.org/TR/geolocation-API/">W3C-Vorschlag zur Geolocation API</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 1746/1000000
+Post‐expand include size: 4524/2097152 bytes
+Template argument size: 138/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1214-0!*!*!!de-formal!2!* and timestamp 20150301221627 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;oldid=18099">http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;oldid=18099</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FAPI%2FGeolocation" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Geolocation.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/API/Geolocation&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Geolocation.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../../src.selfhtml.org/logo/S-110.png);" href="../../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../../Spezial_Linkliste/JavaScript/API/Geolocation.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/API/Geolocation.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Geolocation&amp;oldid=18099" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../../Spezial_Durchsuchen/JavaScript-2FAPI-2FGeolocation.html" title="Spezial:Durchsuchen/JavaScript-2FAPI-2FGeolocation">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 23. Mai 2014 um 10:08 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 8.543-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.234 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/API/Geolocation by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:49 GMT -->
+</html>

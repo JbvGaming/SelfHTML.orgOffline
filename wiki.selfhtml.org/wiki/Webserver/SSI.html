@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/SSI by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Webserver/SSI – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Webserver/SSI","wgTitle":"Webserver/SSI","wgCurRevisionId":25040,"wgArticleId":1877,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webserver"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Webserver/SSI","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-nowiki {line-height: normal;}
+.source-nowiki li, .source-nowiki pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for nowiki
+ * CSS class: source-nowiki, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.nowiki.source-nowiki .de1, .nowiki.source-nowiki .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.nowiki.source-nowiki  {font-family:monospace;}
+.nowiki.source-nowiki .imp {font-weight: bold; color: red;}
+.nowiki.source-nowiki li, .nowiki.source-nowiki .li1 {font-weight: normal; vertical-align:top;}
+.nowiki.source-nowiki .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.nowiki.source-nowiki .li2 {font-weight: bold; vertical-align:top;}
+.nowiki.source-nowiki .ln-xtra, .nowiki.source-nowiki li.ln-xtra, .nowiki.source-nowiki div.ln-xtra {background-color: #ffc;}
+.nowiki.source-nowiki span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Webserver/SSI" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Webserver/SSI&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Webserver_SSI skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Webserver/SSI</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Webserver" title="Webserver">Webserver</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="tocright"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Beispiel"><span class="tocnumber">1</span> <span class="toctext">Beispiel</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.C3.9Cbersicht_wichtiger_Server_Side_Includes"><span class="tocnumber">2</span> <span class="toctext">Übersicht wichtiger Server Side Includes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#.23printenv"><span class="tocnumber">2.1</span> <span class="toctext">#printenv</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#.23config"><span class="tocnumber">2.2</span> <span class="toctext">#config</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.23echo"><span class="tocnumber">2.3</span> <span class="toctext">#echo</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.23exec"><span class="tocnumber">2.4</span> <span class="toctext">#exec</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.23fsize"><span class="tocnumber">2.5</span> <span class="toctext">#fsize</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.23flastmod"><span class="tocnumber">2.6</span> <span class="toctext">#flastmod</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.23include"><span class="tocnumber">2.7</span> <span class="toctext">#include</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Arbeiten_mit_Variablen"><span class="tocnumber">3</span> <span class="toctext">Arbeiten mit Variablen</span></a></li>
+</ul>
+</td></tr></table>
+</div>
+<p>Mithilfe von <b>Server Side Includes</b> (auch unter der Abkürzung <b><a href="http://wiki.selfhtml.org/wiki/Glossar:SSI" title="Glossar:SSI">SSI</a></b> bekannt) können Sie direkt innerhalb von HTML-Dateien dynamische Informationen, z.B. Datum und Uhrzeit, einbinden. Sie können auch <a href="http://wiki.selfhtml.org/wiki/Glossar:CGI" title="Glossar:CGI">CGI-Programme</a> starten und deren Ausgaben, beispielsweise einen Zählerstand mit der Anzahl von Zugriffen auf die aktuelle Datei, in die HTML-Datei einbinden. Oder Sie geben den aktuellen Inhalt diverser CGI-Umgebungsvariablen direkt in HTML aus - ohne Umweg über ein separates CGI-Script. Server Side Includes sind generell dazu gedacht, kleinere Teile einer HTML-Seite dynamisch einzubinden.
+</p><p>Server Side Includes werden nur ausgeführt, wenn der Web-Browser die HTML-Datei über einen installierten Webserver aufruft, also mit einem URI vom Typ http://…. Voraussetzung ist ferner, dass der installierte Webserver die Server Side Includes unterstützt. Nicht alle Webserver tun das, andere interpretieren nur einen Teil der möglichen Angaben. Wenn der Server keine Server Side Includes kennt, funktionieren die entsprechenden Anweisungen in der HTML-Datei nicht. Beim Austesten mit einem lokal installierten Webserver lesen Sie hierzu bitte in der Dokumentation des Servers nach. Beim Einsatz auf einem öffentlichen Webserver fragen Sie Ihren Provider, ob dessen Webserver die Server Side Includes unterstützt.
+</p><p>Damit ein Webserver sofort erkennt, ob eine HTML-Datei SSI-Anweisungen enthält, ist es üblich, solche HTML-Dateien mit einer speziellen Dateinamenendung zu kennzeichnen. Gewöhnlich lauten die Dateiendungen .shtml, .shtm oder .sht. Die meisten Server ignorieren SSI-Anweisungen, wenn diese in einer gewöhnlichen HTML-Datei mit der Endung .htm oder .html stehen. In der Datei <code><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess">.htaccess</a></code> lassen sich diesbezüglich Einstellungen vornehmen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel"> Beispiel </span></h2>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="nowiki source-nowiki"><pre class="de1">&lt;!doctype HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-<span class="nu0">8</span>&quot;&gt;
+    &lt;title&gt;Dynamisches HTML mit Server Side Includes&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;h1&gt;Dynamisches HTML mit Server Side Includes&lt;/h1&gt;
+   &lt;dl&gt;
+     &lt;dt&gt;Datum/Uhrzeit auf dem Server-Rechner:&lt;/dt&gt;  
+     &lt;dd&gt;&lt;!--#config timefmt=&quot;%d.%m.%Y,&#160;%H.%M&quot; --&gt;&lt;!--#echo var=&quot;DATE_LOCAL&quot; --&gt; Uhr&lt;/dd&gt;
+     &lt;dt&gt;Name dieser HTML-Datei:&lt;/dt&gt;
+     &lt;dd&gt;&lt;!--#echo var=&quot;DOCUMENT_NAME&quot; --&gt;&lt;/dd&gt;
+     &lt;dt&gt;Installierte Server-Software:&lt;/dt&gt;
+     &lt;dd&gt;&lt;!--#echo var=&quot;SERVER_SOFTWARE&quot; --&gt;&lt;/dd&gt;
+     &lt;dt&gt;Ihr Web-Browser:&lt;/dt&gt;
+     &lt;dd&gt;&lt;!--#echo var=&quot;HTTP_USER_AGENT&quot; --&gt;&lt;/dd&gt;
+   &lt;/dl&gt;
+   &lt;h3&gt;Weitere Informationen:&lt;/h3&gt;
+   &lt;!--#exec cgi=&quot;/cgi-bin/plapper.pl&quot; --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre></div></div></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Aha, Sie haben das Script <span class="es0">\&quot;</span>plapper.pl<span class="es0">\&quot;</span> zusätzlich aufgerufen.&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Das ist nett von Ihnen, aber es plappert gar nicht sehr viel.&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Server Side Includes müssen Sie in einem HTML-Dokument innerhalb eines Kommentars notieren. Es gibt verschiedene SSI-Anweisungen, beginnend mit einem Gatterzeichen #. Im obigen Beispiel kommen die Anweisungen #echo und #exec vor. Hinter der Anweisung folgt in der Regel eine Angabe der Art Typ="Wert". Im Zusammenhang mit der Anweisung #echo ist beispielsweise die Angabe var="Variablenname" erlaubt, wobei "Variablenname" ein bestimmter, erlaubter Name sein muss. Es kann sich um Namen von CGI-Umgebungsvariablen handeln oder um spezielle SSI-Variablennamen. Bei der Anweisung #exec, die ein Programm auf dem Server-Rechner ausführt, müssen Sie den Typ des Programms (im obigen Beispiel: cgi) und als Wert die Adresse des ausführbaren Programms (im obigen Beispiel: "/cgi-bin/plapper.pl") angeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Übersicht wichtiger Server Side Includes">Bearbeiten</a>]</span> <span class="mw-headline" id=".C3.9Cbersicht_wichtiger_Server_Side_Includes"> Übersicht wichtiger Server Side Includes </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: #printenv">Bearbeiten</a>]</span> <span class="mw-headline" id=".23printenv"> #printenv </span></h3>
+<p>Mit dem Befehl <code>#printenv</code> (<b>print env</b>ironment, drucke Umgebung) können Sie sich alle definierten Variablen und deren Inhalt anzeigen lassen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: #config">Bearbeiten</a>]</span> <span class="mw-headline" id=".23config"> #config </span></h3>
+<p>Mit dem <code>#config</code>-Befehl können Sie
+</p>
+<ul><li> einen Fehlermeldungstext festlegen,
+</li><li> die Einheit für die Angabe von Dateigrößen bestimmen,
+</li><li> Zeitangaben formatieren.
+</li></ul>
+<dl><dt>errmsg
+</dt></dl>
+<p><code>errmsg</code> ist sinnvoll, um bei nicht anzeigbaren Server Side Includes eine verständliche Fehlermeldung auszugeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#config errmsg=&quot;SSI können nicht ausgeführt werden.&quot; --&gt;</div>
+</div>
+<dl><dt>sizefmt
+</dt></dl>
+<p><code>sizefmt</code> bestimmt das Format für Dateigrößenangaben, z.B. sinnvoll vor dem Gebrauch von #fsize.
+</p><p>Erlaubte Werte:
+</p>
+<ul><li> abbrev, Dateigrößenangaben erfolgen in Kbyte
+</li><li> bytes, Dateigrößenangaben erfolgen in Byte
+</li></ul>
+<dl><dt>timefmt 
+</dt></dl>
+<p><code>timefmt</code>bestimmt das Ausgabeformat für Datums- bzw. Uhrzeitangaben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#config timefmt=&quot;%d.%m.%Y, %H.%M&quot; --&gt;</div>
+</div>
+<p>Erlaubte Platzhalter:
+</p>
+<ul><li>&#160;%a = Wochentag kurz, z.B. sat
+</li><li>&#160;%A = Wochentag lang, z.B. Saturday
+</li><li>&#160;%b = Monat kurz, z.B. Apr
+</li><li>&#160;%B = Monat lang, z.B. April
+</li><li>&#160;%d = Tag im Monat zweistellig, z.B. 09
+</li><li>&#160;%e = Tag im Monat einstellig, z.B. 9
+</li><li>&#160;%H = Uhrzeit 24stündig, z.B. 15
+</li><li>&#160;%I = Uhrzeit 12stündig, z.B. 03
+</li><li>&#160;%j = julianisches Datum, z.B. 278
+</li><li>&#160;%m = Monat als Zahl, z.B. 05
+</li><li>&#160;%M = Minuten nach Stunde, z.B. 07
+</li><li>&#160;%p = bei%I: AM/PM, z.B. PM
+</li><li>&#160;%S = Sekunden, z.B. 01
+</li><li>&#160;%U = Kalenderwoche, z.B. 52
+</li><li>&#160;%w = n-ter Tag der Woche, z.B. 5
+</li><li>&#160;%y = Jahr 2stellig, z.B. 97
+</li><li>&#160;%Y = Jahr 4stellig, z.B. 1997
+</li><li>&#160;%Z = Zeitzone, z.B. MEZ
+</li></ul>
+<p>Mehrere Angaben lassen sich zusammenfassen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#config errmsg=&quot;SSI können nicht ausgeführt werden.&quot; sizefmt=&quot;abbrev&quot; --&gt;</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: #echo">Bearbeiten</a>]</span> <span class="mw-headline" id=".23echo"> #echo </span></h3>
+<p><code>#echo</code> gibt den Inhalt einer Variable aus.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#echo var=&quot;SERVER_NAME&quot; --&gt;
+&lt;!--#echo var=&quot;DATE_LOCAL&quot; --&gt;</div>
+</div>
+<p>Als Variablennamen sind CGI-Umgebungsvariablen, selbst definierte Variablen sowie die folgenden speziellen Variablennamen erlaubt:
+</p>
+<ul><li> DOCUMENT_NAME, Name der HTML-Datei
+</li><li> DOCUMENT_URI, Pfad der HTML-Datei
+</li><li> LAST_MODIFIED, Zeitstempel der HTML-Datei
+</li><li> QUERY_STRING_UNESCAPED, Unkodierter GET-Übergabestring
+</li><li> DATE_LOCAL, Datum/Uhrzeit nach Server
+</li><li> DATE_GMT, Datum/Uhrzeit nach Greenwich-Zeit
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: #exec">Bearbeiten</a>]</span> <span class="mw-headline" id=".23exec"> #exec </span></h3>
+<p><code>#exec</code> gestattet das Ausführen von Programmen oder Skripten auf dem Serverrechner.
+</p>
+<dl><dt>cmd
+</dt></dl>
+<p>Benutzen Sie cmd, um ein beliebiges Programm auf dem Servercomputer zu starten.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#exec cmd=&quot;/prog/search.exe *.html&quot; --&gt;</div>
+<div class="note-box-text note-box-example-comment">Auf dem Servercomputer wird das (fiktive) Programm „search.exe“ gestartet, um nach Dateien mit der Endung „.html“ zu suchen.</div>
+</div>
+<dl><dt>cgi
+</dt></dl>
+<p>Benutzen Sie cgi, um ein CGI-Programm/CGI-Script auf dem Serverrechner auszuführen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#exec cgi=&quot;/cgi-bin/counter.pl&quot; --&gt;</div>
+<div class="note-box-text note-box-example-comment">Auf dem Servercomputer wird das Perl-Script „counter.pl“ gestartet, etwa um Zugriffszahlen zu protokollieren.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Es sollte sich um Programme handeln, die Daten auf die Standardausgabe schreiben. Diese Datenausgaben werden dann direkt in die HTML-Datei geschrieben.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: #fsize">Bearbeiten</a>]</span> <span class="mw-headline" id=".23fsize"> #fsize </span></h3>
+<p><code>#fsize</code> gibt die Größe der angegebenen Datei aus.
+</p>
+<dl><dt>file
+</dt></dl>
+<p>Verwenden Sie <code>file</code> für Pfadangaben auf dem Server-Rechner relativ zur Datei mit den SSI-Anweisungen ...
+</p>
+<dl><dt>virtual
+</dt></dl>
+<p>... und <code>virtual</code> für relative Pfadangaben bezogen auf das Wurzelverzeichnis für Dokumente des Webservers.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#fsize virtual=&quot;/download/selfhtml.zip&quot; --&gt;</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: #flastmod">Bearbeiten</a>]</span> <span class="mw-headline" id=".23flastmod"> #flastmod </span></h3>
+<p><code>#flastmod</code> gibt den Zeitstempel der angegebenen Datei aus.
+</p>
+<dl><dt>file
+</dt></dl>
+<p>Verwenden Sie <code>file</code> für Pfadangaben auf dem Server-Rechner relativ zur Datei mit den SSI-Anweisungen …
+</p>
+<dl><dt>virtual
+</dt></dl>
+<p>… und <code>virtual</code> für relative Pfadangaben bezogen auf das Wurzelverzeichnis für Dokumente des Webservers.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#flastmod file=&quot;index.htm&quot; --&gt;</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: #include">Bearbeiten</a>]</span> <span class="mw-headline" id=".23include"> #include </span></h3>
+<p><code>#include</code> gibt den Inhalt der angegebenen Datei aus.
+</p>
+<dl><dt>file
+</dt></dl>
+<p>Verwenden Sie <code>file</code> für absolute Pfadangaben auf dem Server-Rechner …
+</p>
+<dl><dt>virtual
+</dt></dl>
+<p>… und virtual für relative Pfadangaben bezogen auf das Wurzelverzeichnis für Dokumente des Webservers.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!--#include virtual=&quot;/news/news.htm&quot; --&gt;</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Mit <code>file</code> können Sie nur Dateien angeben, die im selben Verzeichnis oder in Unterverzeichnissen liegen. Bei virtual gibt es diese Begrenzung nicht, da die Angabe auf eine beliebige (zugängliche) Adresse auf dem Server hinweisen kann.</div>
+<p>Findet der Webserver eine SSI-Anweisung, die er ausführen kann, so wird anstelle dieser Anweisung der angeforderte Code in das HTML-Dokument eingebunden. Deshalb sollten Sie nur Dateien mit HTML-Schnipseln einbinden. Üblicherweise erhalten diese die Dateinamenserweiterung inc (für include). Solche inc-Dateien sollten reine Textdateien sein und dürfen beliebigen HTML-Code enthalten - je nachdem, an welcher Stelle einer HTML-Datei Sie den Codeschnipsel einbinden möchten.
+</p><p>Sinnvoll ist dies etwa, um beispielsweise eine für viele Seiten immer gleiche Navigation nur einmal zu erstellen und auch nur an einer Stelle zu pflegen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Arbeiten mit Variablen">Bearbeiten</a>]</span> <span class="mw-headline" id="Arbeiten_mit_Variablen"> Arbeiten mit Variablen </span></h2>
+<p>Selbstverständlich können Sie anstelle von festgelegten Umgebungsvariablen wie SERVER_NAME oder DATE_LOCAL auch eigene Variablen definieren. Das Apache-Modul mod_include, das die Ausführung von SSI überhaupt erst ermöglicht, stellt dafür eine winzige Programmiersprache zur Verfügung. So können Sie beispielsweise mit <code></code> eine Variable definieren und ihr einen beliebigen Wert zuweisen. Es ist ebenfalls möglich, mit einfachen if/else-Festlegungen Bedingungen zu formulieren, die für das Ausführen bestimmter Server Side Includes zutreffen sollen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;h1&gt;Dynamisches HTML mit Server Side Includes&lt;/h1&gt;
+&lt;p&gt;Diese Seite hat keine festgelegten Inhalte, sondern wird vom Server zusammengesetzt.&lt;p&gt;
+&lt;!--#if expr=&quot;$QUERY_STRING = /test/&quot; --&gt;
+  &lt;!--#set var=&quot;param&quot; value=&quot;Sie haben die Seite mit dem test-Parameter aufgerufen.&quot; --&gt;
+  &lt;!--#echo var=&quot;param&quot; --&gt;
+&lt;!--#else --&gt;
+  &lt;!--#include virtual=&quot;test.inc&quot; --&gt;
+&lt;!--#endif --&gt;</div>
+<div class="note-box-text note-box-example-comment">In der ersten Anweisung fragen Sie ab, ob der aufgerufenen URL ein Parameter in der Form <code>?test</code> mitgegeben wurde. Den Namen dieses Parameters müssen Sie innerhalb der SSI-Anweisung selbst in Slashes (Schrägstriche) einfassen, was ungefähr dem entspricht, was Sie von Perl als regulären Ausdruck kennen.
+<p>Nur wenn dies zutrifft, werden die anderen Anweisungen bis <code>&lt;!--#else --&gt;</code> befolgt. Das bedeutet, in der zweiten Anweisung wird die Variablen mit dem Name <code>param</code> festgelegt, die Variable erhält gleichzeitig die Zeichenkette „Sie haben die Seite mit dem test-Parameter aufgerufen.“ als Wert zugewiesen und in der dritten Anweisung wird der Wert der Variablen ausgegeben.
+Die Anweisung <code>&lt;!--#else --&gt;</code> legt fest, dass es eine Alternative geben soll, falls Sie die URL nicht mit einem zusätzlichen Parameter aufgerufen haben. Sie lautet: Binde an dieser Stelle den gesamten Inhalt der Datei <code>test.inc</code> ein.
+</p>
+Mit der letzten Zeile wird die if/else-Konstruktion beendet. Eine solche abschließende Zeile müssen Sie immer angeben.</div>
+</div>
+<p>Mit dem Einsatz von if/else-Abfragen und Variablen in SSI-Anweisungen können Sie die Erscheinungsweise Ihrer Webseite auf vielfältige Weise variieren. Beispielsweise können Sie von Übergabe-Parametern abhängig machen, ob bestimmte Links angezeigt oder ganze Textblöcke überhaupt in die Seite aufgenommen werden sollen. Sie können mehrere Parameter miteinander kombinieren und sich damit ein dynamisches Navigationsmenü zusammenstellen. Sie können den anzuzeigenden Inhalt komplett austauschen lassen usw.
+</p><p>Server Side Includes stellen keine Alternative zu dem dar, was Scriptsprachen wie Perl oder PHP an Möglichkeiten anbieten. Mit SSI können Sie bestehende Dateien nicht verändern, Sie können nichts speichern, nur in geringem Umfang Formulardaten berücksichtigen, keine Berechnungen ausführen lassen und vieles weitere. Aber für die "dynamische" Zusammenstellung von Seiteninhalten bieten SSI einige großartige Perspektiven an, und Sie müssen sich nicht erst mit den oftmals komplexen Programmiertechniken der „großen“ Scriptsprachen befassen.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 546/1000000
+Post‐expand include size: 12653/2097152 bytes
+Template argument size: 9801/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1877-0!*!0!!de-formal!*!* and timestamp 20150228231025 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;oldid=25040">http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;oldid=25040</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:Webserver" title="Kategorie:Webserver">Webserver</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Webserver%2FSSI" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/SSI"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="http://wiki.selfhtml.org/wiki/Diskussion:Webserver/SSI"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/SSI" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Webserver/SSI" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Webserver/SSI" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Webserver/SSI&amp;oldid=25040" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Webserver-2FSSI" title="Spezial:Durchsuchen/Webserver-2FSSI">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 9. Januar 2015 um 19:06 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 9.239-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.072 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/SSI by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+</html>

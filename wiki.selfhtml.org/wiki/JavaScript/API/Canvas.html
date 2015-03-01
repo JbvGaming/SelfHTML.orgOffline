@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/API/Canvas by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/API/Canvas – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/API/Canvas","wgTitle":"JavaScript/API/Canvas","wgCurRevisionId":24333,"wgArticleId":3861,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/API/Canvas","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/API/Canvas" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/API/Canvas&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_API_Canvas skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/API/Canvas</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../../JavaScript.html" title="JavaScript">JavaScript</a> | <a href="../API.html" title="JavaScript/API">API</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Zeichnungen_und_Animationen_erstellen"><span class="tocnumber">1</span> <span class="toctext">Zeichnungen und Animationen erstellen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Globale_Membervariablen"><span class="tocnumber">2</span> <span class="toctext">Globale Membervariablen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Farben"><span class="tocnumber">2.1</span> <span class="toctext">Farben</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Schatten"><span class="tocnumber">2.2</span> <span class="toctext">Schatten</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Rahmenlinien"><span class="tocnumber">2.3</span> <span class="toctext">Rahmenlinien</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Die_Zeichenfunktionen"><span class="tocnumber">3</span> <span class="toctext">Die Zeichenfunktionen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Rechtecke"><span class="tocnumber">3.1</span> <span class="toctext">Rechtecke</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Path"><span class="tocnumber">3.2</span> <span class="toctext">Path</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Textausgabe"><span class="tocnumber">3.3</span> <span class="toctext">Textausgabe</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Bilder"><span class="tocnumber">3.4</span> <span class="toctext">Bilder</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Transformationen"><span class="tocnumber">3.5</span> <span class="toctext">Transformationen</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Pixel-Manipulation"><span class="tocnumber">3.6</span> <span class="toctext">Pixel-Manipulation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Weblinks"><span class="tocnumber">4</span> <span class="toctext">Weblinks</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Zeichnungen und Animationen erstellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Zeichnungen_und_Animationen_erstellen"> Zeichnungen und Animationen erstellen </span></h2>
+<p>Die Implementierung der Canvas-Zeichenoberfläche ähnelt der von Microsoft Windows GUI (Graphics User Interface) und lässt sich formal in folgende Schritte aufteilen:
+</p>
+<ol>
+  <li>Jedes Mal, wenn der Inhalt der Canvas neu gezeichnet werden soll, muss eine zu diesem Zweck entworfene Funktion manuell entweder innerhalb einer anderen Funktion oder durch einen Event-Handler, also z. B. <code>onclick</code> oder <code>onload</code> aufgerufen werden. 
+
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass anderenfalls kein Inhalt in das canvas-Element gezeichnet wird; es wird keine Funktion von selbst aufgerufen, weder beim Laden der Seite noch sonst irgendwann.</div></li>
+  <li>Innerhalb der Funktion muss zu Beginn ein sogenanntes Context-Objekt angefordert werden. Dieses Objekt fungiert als eine Art Mittelsmann und stellt Funktionen zum Zeichnen von Linien, Rechtecken, Kreisen, Bögen, Texten, Bildern, ... bereit. Dabei hängt der konkrete Umfang an Funktionen und deren Benennung vom Typ des Context-Objekts ab. So gibt es zum Beispiel ein Context-Objekt zur Zeichnung von zweidimensionalen Figuren als auch eines für das Arbeiten mit 3D-Objekten.</li>
+  <li>Als Erstes sollte die Oberfläche der Canvas mithilfe einer dementsprechenden Context-Funktion geleert werden. Dies verhindert, dass nach dem Zeichnen noch Überreste des Vorgängerinhalts zu sehen sind.</li>
+  <li>Nun kann die eigentliche Zeichenarbeit beginnen. Dabei sollte darauf geachtet werden, dass eventuelle Farbangaben, zum Beispiel die Füll- oder Rahmenfarbe eines Rechtecks, den eigentlichen Zeichenfunktionen nicht als Argument übergeben, sondern in zentralen Membervariablen abgespeichert und dann bei Bedarf durch diese Funktionen ausgelesen werden. Dies bedeutet, dass vor dem Aufrufen derartiger Funktionen unter Umständen die jeweiligen Membervariablen auf den gewünschten Wert gesetzt werden müssen, um das entsprechende Resultat zu erhalten.</li>
+</ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> drawCanvas<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'mycanvas'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">if</span><span class="br0">&#40;</span>element.<span class="me1">getContext</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> context <span class="sy0">=</span> element.<span class="me1">getContext</span><span class="br0">&#40;</span><span class="st0">'2d'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel wird die JavaScript-Funktion <code>drawCanvas</code> deklariert, deren Aufgabe es ist, den Zeichenbereich des Elements <code>mycanvas</code> mit Inhalt zu füllen. Hierzu wird zuerst das Canvas-Objekt mithilfe dieser ID ermittelt und in der Variable <code>element</code> gespeichert. Danach wird mittels <code>if(element.getContext)</code> geprüft, ob das Canvas-Objekt eine Membervariable mit dem Namen <code>getContext</code> besitzt. Ist dies der Fall, so handelt es sich um einen Canvas-fähigen Browser und die eigentliche Programmierung kann beginnen. Dazu wird die eben geprüfte Eigenschaft <code>getContext</code> (es handelt sich dabei um ein function-Objekt) mit dem Argument <code>2d</code> aufgerufen und der von ihr zurückgegebene Wert in der Variable <code>context</code> abgespeichert. Die Funktion <code>getContext</code> erstellt dabei ein Context-Objekt, dessen Typ durch den ersten Parameter spezifiert wird, in unserem Beispiel ist er also <code>2d</code>. Neben diesem Typ existiert außerdem noch <code>webgl</code>, sein Context-Objekt stellt Funktionen zum Erstellen, Darstellen und Arbeiten mit 3D-Objekten zur Verfügung. Außerdem kann die Funktion auch noch weitere Argumente erhalten, sie hängen vom Typ des Context-Objekts ab und werden bei <code>2d</code> nicht benötigt. Nachdem das Context-Objekt ermittelt wurde, kann die eigentliche Zeichenarbeit (Schritte 3 und 4) begonnen werden.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass bei der Angabe des ersten Parameters auf Groß- und Kleinschreibung geachtet werden muss.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Globale Membervariablen">Bearbeiten</a>]</span> <span class="mw-headline" id="Globale_Membervariablen"> Globale Membervariablen </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Farben">Bearbeiten</a>]</span> <span class="mw-headline" id="Farben"> Farben </span></h3>
+<p>Die von den Canvas-Funktionen verwendete Füll- und Rahmenfarbe wird zentral in den Membervariablen <code>fillStyle</code> (Füllfarbe) und <code>strokeStyle</code> (Rahmenfarbe) gespeichert. Diese können folgende Typen von Inhalt besitzen:
+</p>
+<ul><li> Als String gespeicherte <a href="../../CSS/Wertetypen/Farbangaben.html" title="CSS/Wertetypen/Farbangaben">CSS-konforme Farbangaben</a> z. B. <code>rgba(128, 192, 16, 0.5)</code>, <code>rgb(16, 16, 16)</code>, <code>#668822</code> oder <code>black</code>
+</li><li> Gradient-Objekte zur Darstellung von Farbverläufen
+<ul><li> Lineare Gradient-Objekte können mithilfe der Memberfunktion <code>createLinearGradient(x1, y1, x2, y2)</code> erstellt werden. Diese Funktion erzeugt einen Farbverlauf, der entlang einer gedachten Linie vom Punkt P1(x1 | y1) zum Punkt P2(x2 | y2) verläuft. Dabei legen sogenannte ColorStops fest, an welchen Punkten auf der Gerade der Farbverlauf einen bestimmten Farbwert annehmen muss. Diese ColorStops werden mithilfe der Memberfunktion <code>addColorStop(pos, col)</code> des Gradient-Objekts gesetzt. Das Attribut <code>pos</code> gibt dabei die Entfernung des ColorStops relativ zum Punkt P1 an, sein Wert kann nur zwischen 0 und 1 liegen. Ein Wert von 0 positioniert den ColorStop im Punkt P1, der Wert 0.5 genau in der Mitte und der Wert 1 im Punkt P2. Das <code>col</code>-Attribut gibt schließlich die Farbe des ColorStops an. Der Bereich vor dem ersten bzw. nach dem letzten ColorStop wird dabei in der Farbe des ersten bzw. letzten ColorStops gezeichnet. Bedenken Sie, dass sich der Farbverlauf ähnlich einem Strahl senkrecht zur gedachten Linie ausbreitet, in diese Richtung also "gestreckt" wird.
+</li><li> Radiale Gradient-Objekte werden mithilfe der Memberfunktion <code>createRadialGradient(x1, y1, r1, x2, y2, r2)</code> erstellt und arbeiten fast nach demselben Prinzip wie lineare Gradient-Objekte. Einziger Unterschied ist, dass der Farbverlauf hier vom Umfang des kleinen Kreises K1 zum Umfang des großen Kreises K2 verläuft. Der Inhalt von K1 ist dabei gleich der Farbe des ersten ColorStops und alles außerhalb des Kreises K2 gleich dem letzten ColorStop.
+</li></ul>
+</li><li> Pattern-Objekte erzeugen tapetenähnliche Effekte und können mithilfe der Memberfunktion <code>createPattern(img, type)</code> erstellt werden. <code>img</code> ist dabei entweder ein <code>img</code>, <code>canvas</code> oder <code>video</code>-Element, das als Hintergrund verwendet werden soll. <code>type</code> kann einen der folgenden vier Werte annehmen: <code>repeat</code> (Wiederholung des Bilds in x und y-Richtung), <code>x-repeat</code> (nur in x-Richtung), <code>y-repeat</code> (nur in y-Richtung) oder <code>no-repeat</code> (einmalige Darstellung ohne Bildwiederholung).
+</li></ul>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Schatten">Bearbeiten</a>]</span> <span class="mw-headline" id="Schatten"> Schatten </span></h3>
+<p>Neben einfachen Farbangaben besitzt Canvas außerdem die Fähigkeit, Objekte mit Schatten zu versehen. Das genaue Aussehen solcher Schattens kann dabei mit folgenden Membervariablen bestimmt werden:
+</p>
+<ul><li> <code>shadowColor</code>: Als String gespeicherte CSS-konforme Farbangabe, die als Schattenfarbe verwendet werden soll (Gradient- und Pattern-Objekte sind hier nicht erlaubt).
+</li><li> <code>shadowBlur</code>: Gibt an, wie verwaschen der Schatten wirken soll. Umso größer der Wert, umso unschärfer wirkt der Schatten. Ein Wert von 0 erzeugt eine scharfe Darstellung (für mehr Informationen siehe <a href="../../CSS/Eigenschaften/%c3%a4u%c3%9fere_Gestaltung/box-shadow.html" title="CSS/Eigenschaften/äußere Gestaltung/box-shadow">CSS/box-shadow</a>).
+</li><li> <code>shadowOffsetX</code>: Die Versetzung des Schattens in x-Richtung (weitere Informationen siehe ebenda).
+</li><li> <code>shadowOffsetY</code>: Die Versetzung des Schattens in y-Richtung.
+</li></ul>
+<p>Berücksichtigen Sie, dass diese Membervariablen bei allen Funktionen, die etwas auf das Canvas-Element zeichnen (außer <code>clearRect</code>), bei entsprechendem Wert von <code>shadowColor</code> einen Schatten erzeugen. Konkret sind dies alle Funktionen, die <code>fill</code> oder <code>stroke</code> im Namen tragen.
+</p><p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Rahmenlinien">Bearbeiten</a>]</span> <span class="mw-headline" id="Rahmenlinien"> Rahmenlinien </span></h3>
+<p>Weiterhin ist auch das Aussehen von Linien, wie sie von den Canvas-Funktionen <code>strokeRect</code>, <code>stroke</code> und <code>strokeText</code> (dazu später mehr) erzeugt werden, mit folgenden Membervariablen beeinflussbar. Beachten Sie dabei insbesondere in Verbindung mit <code>stroke</code>, dass nur der Wert der Membervariablen zum Aufrufzeitpunkt von <code>stroke</code> relevant ist, nicht zum Zeitpunkt der Path-Generierung.
+</p>
+<ul><li> <code>lineCap</code> (nur für <code>stroke</code> relevant): Legt fest, welches Aussehen die Enden von Linien haben: <code>butt</code> (Standardeinstellung, keine Veränderung), <code>round</code> (fügt abgerundetes Ende hinzu) und <code>square</code> (fügt ein kleines Quadrat hinzu)
+</li><li> <code>lineJoin</code>: Legt fest, wie die Spitze, die beim Aufeinandertreffen zweier Linien entsteht, angezeigt werden soll: <code>bevel</code> (wird die Spitze aufgrund eines kleinen Winkels sehr lang, wird sie teilweise abgeschnitten), <code>round</code> (abgerundete Spitzen) oder <code>miter</code> (Standardeinstellung, Ecken werden unverändert angezeigt)
+</li><li> <code>lineWidth</code>: Die Breite (Stärke) aller gezeichneten Linien als Integer-Wert
+</li><li> <code>miterLimit</code>: Die maximale Breite der Spitze, die beim Aufeinandertreffen zweier Linien entsteht, als Integer-Wert (nur in Verbindung mit <code>lineJoin = 'miter'</code>, Standardwert: 10). Überschreitet die Breite der Spitze diesen Wert, so wird sie genauso dargestellt wie <code>lineJoin = 'bevel'</code>.
+</li></ul>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Die Zeichenfunktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Zeichenfunktionen"> Die Zeichenfunktionen </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Rechtecke">Bearbeiten</a>]</span> <span class="mw-headline" id="Rechtecke">Rechtecke </span></h3>
+<p>Zur Zeichnung von Rechtecken stellt Canvas drei Funktionen zur Verfügung:
+</p>
+<ul><li> <code>fillRect(x, y, width, height)</code> zeichnet ein ausgefülltes Rechteck ohne Rahmen an die angegebene Position mit den angegebenen Maßen. Als Füllung wird die in <code>fillStyle</code> hinterlegte Information verwendet.
+</li><li> <code>clearRect(x, y, width, height)</code> setzt einen Ausschnitt der Canvas auf seine Ursprungsfarbe zurück (entweder weiß oder die im entsprechenden style-Bereich festgelegte Hintergrundfarbe; Attribute siehe fillRect).
+</li><li> <code>strokeRect(x, y, width, height)</code> zeichnet ein unausgefülltes Rechteck mit Rahmen. Als Rahmenfüllung wird die in <code>strokeStyle</code> hinterlegte Information verwendet (Attribute siehe fillRect).
+</li></ul>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass die Darstellung eines Farbverlaufs nicht von der Größe oder Position des zu zeichnenden Rechtecks abhängt. Farbverläufe werden beim Zeichnen stets unskaliert über das Rechteck gelegt, wobei die obere linke Ecke des Farbverlauf auf der oberen linken Ecke der Canvas liegt.</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">function</span> drawCanvas<span class="br0">&#40;</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'mycanvas'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">if</span><span class="br0">&#40;</span>element.<span class="me1">getContext</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="kw1">var</span> context <span class="sy0">=</span> element.<span class="me1">getContext</span><span class="br0">&#40;</span><span class="st0">'2d'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">var</span> grad <span class="sy0">=</span> context.<span class="me1">createLinearGradient</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      grad.<span class="me1">addColorStop</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="st0">&quot;white&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      grad.<span class="me1">addColorStop</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">&quot;#888888&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      context.<span class="me1">fillStyle</span><span class="sy0">=</span>grad<span class="sy0">;</span>
+      context.<span class="me1">fillRect</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">150</span><span class="sy0">,</span> <span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel wird nach dem Ermitteln des 2D-Context mithilfe der Funktion <code>context.createLinearGradient(0, 0, 0, 30)</code> ein Farbverlauf erzeugt, dessen gedachte Linie senkrecht von oben nach unten verläuft. Diesem Farbverlauf werden danach zwei ColorStops verpasst: der erste befindet sich im Punkt (0 | 0) und legt dort die Farbe Weiß fest, der zwei liegt im Punkt (0 | 30) und definiert dort einen grauen Farbton. Danach wird der so erzeugte Gradient auf die Canvas angewendet, indem er der Membervariable <code>fillStyle</code> zugewiesen wird. Es entsteht ein Rechteck, welches ähnlich wie ein Button gestaltet ist.</div>
+</div>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Path">Bearbeiten</a>]</span> <span class="mw-headline" id="Path"> Path </span></h3>
+<p>Neben Rechtecken ermöglicht es Canvas, beliebige Polygone und Kurven mithilfe sogenannter Paths darzustellen. Ein Path (engl. Pfad) umfasst dabei beliebig viele Punkte sowie Informationen darüber, wie diese mit ihren jeweiligen Nachbarpunkten verbunden sind. Hierzu stehen folgende Memberfunktionen zur Verfügung:
+</p>
+<ul><li> <code>beginPath()</code>: Löscht alle bisher im Path-Objekt gespeicherten Punkte (dies hat keinen Einfluss auf die Zeichenoberfläche der Canvas), sodass ein neuer Path gezeichnet werden kann.
+</li><li> <code>moveTo(x, y)</code>: Setzt den Referenzpunkt, auf den sich Funktionen wie <code>lineTo</code> beziehen, an die Position (x | y), ohne dabei eine Linie zu zeichnen.<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Nachdem die Funktion <code>beginPath()</code> aufgerufen wurde, muss vor dem Ausführen einer Path-Funktion (außer <code>rect</code>) der erste Referenzpunkt mithilfe von <code>moveTo</code> gesetzt werden, da andernfalls die auf <code>beginPath</code> folgende Path-Funktion nicht ausgeführt wird.</div>
+</li><li> <code>lineTo(x, y)</code>: Zeichnet eine Linie vom aktuellen Referenzpunkt zur Position (x | y) und ersetzt danach den Referenzpunkt durch diese Position.
+</li><li> <code>rect(x, y, width, height)</code>: Zeichnet ein Rechteck mit der angegebenen Position und Größe. Der Referenzpunkt wird danach auf die Koordinate (x | y) gesetzt.
+</li><li> <code>arc(x, y, r, w1, w2, dir)</code>: Zeichnet von einem Kreis mit dem Mittelpunkt M(x | y) und Radius <code>r</code> den Teil des Umfangs, der  im Uhrzeigesinn (bzw. im Gegenuhrzeigesinn, sofern <code>dir</code> true ist) zwischen den Winkeln <code>w1</code> und <code>w2</code> liegt. Berücksichtigen Sie dabei, dass die Winkel in der Einheit rad interpretiert werden (ihre Angabe erfolgt jedoch als Float-Werte, nicht als CSS-String). Weiterhin müssen Sie beachten, dass zusätzlich noch eine Linie vom bisherigen Referenzpunkt zum Beginn des Kreisbogens (der zu <code>w1</code> gehörende Punkt) gezogen und danach der Referenzpunkt an die zu <code>w2</code> gehörende Position gesetzt wird.
+</li><li><code>quadraticCurveTo(x1, y1, x2, y2)</code>: Zeichnet eine quadratische Bézierkurve, deren drei Kontrollpunkte der Referenzpunkt, P1(x1 | y1) und P2(x2 | y2) sind (für mehr Informationen über Bézierkurven siehe Weblinks). Der Referenzpunkt wird danach durch P2 ersetzt.
+</li><li> <code>bezierCurveTo(x1, y1, x2, y2, x3, y3)</code>: Zeichnet eine kubische Bézierkurve, deren vier Kontrollpunkte der Referenzpunkt, P1(x1 | y1), P2(x2 | y2) und P3(x3 | y3) sind. Der Referenzpunkt wird danach durch P3 ersetzt.
+</li><li> <code>closePath()</code>: Verbindet den letzten und ersten Punkt des Paths mit einer Linie, letzterer wird danach zum Referenzpunkt.
+</li><li> <code>stroke()</code>: Zeichnet den unausgefüllten Path in das Canvas-Element. Als Rahmenfüllung wird die in <code>strokeStyle</code> hinterlegte Information verwendet.
+</li><li> <code>fill()</code>: Zeichnet den ausgefüllten Path ohne Rahmen. Ist der Path nicht geschlossen, so begrenzt diejenige Gerade die Fläche, die durch Aufrufen der Funktion <code>closePath()</code> entstünde (tatsächlich wird diese Funktion allerdings nicht aufgerufen). Als Füllfarbe wird die in <code>fillStyle</code> hinterlegte Information verwendet.
+</li></ul>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wenn in den vorhergegangenen Funktionsbeschreibungen (mit Ausnahme von <code>stroke</code> und <code>fill</code>) von <i>Zeichnen</i> gesprochen wurde, so ist als Zeichenoberfläche stets das Path-Objekt, nicht das Canvas-Element gemeint. Dies bedeutet, dass lediglich beim Aufrufen von <code>stroke</code> und <code>fill</code> das Path-Objekt tatsächlich auf das Canvas-Element gezeichnet wird.</div>
+<p><br />
+Weiterhin existieren noch einige Funktionen, die Paths zum Prüfen und Begrenzen einsetzen:
+</p>
+<ul><li> <code>save()</code>: Legt ein komplettes Abbild des aktuellen Context-Objekts inklusive Membervariablen und Path an, so dass das Context-Objekt zu einem späteren Zeitpunkt wieder auf den gespeicherten Zustand zurückgesetzt werden kann.
+</li><li> <code>restore()</code>: Stellt den letzten mithilfe der Funktion <code>save</code> gespeicherten Zustand des Context-Objekts wieder her und ersetzt dabei alle Membervariablen und den Path durch das gespeicherte Abbild.<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass der Inhalt des Canvas-Elements beim Verwenden von <code>restore</code> nicht zurückgesetzt wird. Zeichnungen, die seit dem letzten Aufrufen von <code>save</code> getätigt wurden, bleiben demnach erhalten.</div>
+</li><li> <code>clip()</code>: Verwendet den aktuellen Path um den Zeichenbereich einzuschränken. Nach Verwendung von <code>clip</code> zeichnen alle Funktionen, die etwas auf dem Canvas-Element ausgeben (inklusive <code>clearRect</code>) nur noch in den Bereichen, die sich innerhalb des Path-Objekts befinden, so wie es zum Aufrufzeitpunkt beschaffen war. Dabei liegt ein Punkt innerhalb, wenn er beim Aufrufen von <code>fill()</code> mit Farbe ausgefüllt würde. Alle anderen Path-Funktionen sind von dieser Einschränkung nicht betroffen.
+</li><li> <code>isPointInPath(x, y)</code>: Prüft, ob der angegebene Punkt innerhalb des aktuellen Paths liegt. Die Bedingung hierfür ist dabei dieselbe wie bei <code>clip</code>.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> drawCanvas<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'mycanvas'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">if</span><span class="br0">&#40;</span>element.<span class="me1">getContext</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> context <span class="sy0">=</span> element.<span class="me1">getContext</span><span class="br0">&#40;</span><span class="st0">'2d'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    context.<span class="me1">clearRect</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> element.<span class="me1">width</span><span class="sy0">,</span> element.<span class="me1">height</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">beginPath</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">moveTo</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="sy0">,</span> <span class="nu0">80</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">lineTo</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="sy0">,</span> <span class="nu0">20</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">arc</span><span class="br0">&#40;</span><span class="nu0">90</span><span class="sy0">,</span> <span class="nu0">50</span><span class="sy0">,</span> <span class="nu0">30</span><span class="sy0">,</span> <span class="kw4">Math</span>.<span class="me1">PI</span> <span class="sy0">*</span> <span class="nu0">7</span> <span class="sy0">/</span> <span class="nu0">6</span><span class="sy0">,</span> <span class="kw4">Math</span>.<span class="me1">PI</span> <span class="sy0">*</span> <span class="nu0">5</span> <span class="sy0">/</span> <span class="nu0">6</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">closePath</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">strokeStyle</span> <span class="sy0">=</span> <span class="st0">'#000000'</span><span class="sy0">;</span>
+    context.<span class="me1">lineWidth</span> <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+    context.<span class="me1">lineJoin</span> <span class="sy0">=</span> <span class="st0">'round'</span><span class="sy0">;</span>
+    context.<span class="me1">stroke</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div><div class="note-box-text note-box-example-comment">In diesem Beispiel werden mithilfe der Path-Funktionen die Umrisse eines Fisches gezeichnet. Dazu wird das Canvas-Element zuerst geleert, indem <code>clearRect</code> mit den Ausmaßen desselben aufgerufen wird. Außerdem sorgt der darauf folgende Befehl <code>beginPath()</code> dafür, dass alte Path-Informationen (sofern vorhanden) gelöscht werden. Sobald dies geschehen ist, kann der Referenzpunkt durch Aufrufen der Funktion <code>moveTo</code> an das untere Ende der Schwanzflosse gesetzt werden. Als Nächstes folgt die Zeichnung dieser, indem mit <code>lineTo</code> eine Linie zum oberen Punkt der Flosse gezogen wird. Daraufhin sorgt ein Aufruf von <code>arc</code> dafür, dass auch der Rumpf des Fisches entsteht. Hierbei wurden zwei Dinge ausgenutzt: Einerseits kann durch cleveres Verwenden der von <code>arc</code> gezeichneten Linie unnötige Rechnerei zur Ermittlung der Startposition des Rumpfes vermieden werden, andererseits wurde die Tatsache ausgenutzt (und dies ist neu), dass der letzte Parameter von <code>arc</code> optional ist und im Falle der Nichtangabe automatisch mit false belegt wird. Dies bedeutet, dass <code>arc</code>-Funktionsaufrufe ohne letzten Parameter stets in Uhrzeigerichtung gezeichnet werden. Als letzten Teil des Fisches kann nun der untere Bauchbereich gezeichnet werden. Auch hier werden unnötige Code-Verdopplungen durch Abschließen des Paths mithilfe von <code>closePath</code> vermieden. Schließlich werden noch einige Feinjustierungen an den Membervariablen vorgenommen und der Path mit <code>stroke</code> gezeichnet. Das späte Auftreten der Membervariablen soll dabei verdeutlichen, dass lediglich der Zustand dieser zum Aufrufzeitpunkt der Funktion <code>stroke</code> von Bedeutung ist, nicht der beim Erstellen des Paths.</div>
+</div>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Textausgabe">Bearbeiten</a>]</span> <span class="mw-headline" id="Textausgabe"> Textausgabe </span></h3>
+<p>Eine weitere Fähigkeit des Canvas-Objekts ist die Darstellung von Texten. Das Aussehen des von diesen Funktionen gezeichneten Textes wird dabei mit folgenden Membervariablen spezifiziert:
+</p>
+<ul><li> <code>font</code>: Beinhaltet eine als String gespeicherte <a href="../../CSS/Eigenschaften/Schriftformatierung/font.html" title="CSS/Eigenschaften/Schriftformatierung/font">CSS-konforme Font-Angabe</a>, also z. B. <code>italic small-caps bold 12pt / 1.5em Georgia, Arial</code>. Sie wird zum Darstellen des Textes verwendet.
+</li><li> <code>textAlign</code>: Gibt an, wie die x-Koordinate, die den Text-Funktionen übergeben wird, zu interpretieren ist. Mögliche Werte sind: <code>start</code> (der Text beginnt an der angegebenen x-Koordinate), <code>left</code> (identisch mit <code>start</code>), <code>center</code> (der Text wird um die angegebene x-Koordinate herum zentriert ausgegeben), <code>right</code> (der Text endet an der angegebenen x-Koordinate) und <code>end</code> (identisch mit <code>right</code>).
+</li><li> <code>textBaseline</code>: Gibt an, wie die y-Koordinate, die den Text-Funktionen übergeben wird, zu interpretieren ist. Mögliche Werte sind: <code>alphabetic</code> (Standardeinstellung, als Grundlinie des Textes interpretieren), <code>top</code> (als oberen Rand des em-Quadrats interpretieren), <code>hanging</code> (als hängende Grundlinie interpretieren), <code>middle</code> (als Mitte des em-Quadrats interpretieren), <code>ideographic</code> (als ideographische Grundlinie interpretieren) und <code>bottom</code> (als unteren Rand des em-Quadrats interpretieren). Für mehr Informationen über <code>textBaseline</code> siehe Weblinks.<div class="note-box note-box-advice"><p class="note-box-title">Hinweis:</p><div class="note-box-text">Für die meisten nicht-asiatischen Texte werden die Eigenschaften <code>ideographic</code> und <code>hanging</code> nicht benötigt. Für den Rest gilt folgende (nicht exakte) Faustregel: <code>alphabetic</code> (y-Koordinate entspricht der Linie, auf der Buchstaben wie k, x, m und n "stehen"), <code>bottom</code> (entspricht der Linie, auf der Buchstaben wie y, j, g, p oder y enden), <code>middle</code> (entspricht ungefähr der Mittellinie eines C oder X) und <code>top</code> (entspricht der Linie, auf der Großbuchstaben wie T, Z, M oder D enden).</div></div>
+</li></ul>
+<p><br />
+Im Nachfolgenden nun alle Funktionen, die Text auf dem Canvas-Element ausgeben können oder in gewisser Form damit zu tun haben:
+</p>
+<ul><li> <code>strokeText(text, x, y, maxWidth)</code>: Zeichnet einen nicht ausgefüllten Text auf das Canvas-Element. Die x- und y-Koordinaten werden dabei so interpretiert, wie in <code>textAlign</code> und <code>textBaseline</code> angegeben; als Textfarbe wird die in <code>strokeStyle</code> hinterlegte Information verwendet. Weiterhin bedeutet 'nicht ausgefüllt', dass lediglich die Umrisse (also der "Rahmen") der einzelnen Buchstaben und Zeichen dargestellt werden; die gezeichneten Buchstaben wirken also wie aus Drähten geformt. Der Parameter <code>maxWidth</code> ist optional und gibt an, wie breit der dargestellte Text maximal sein darf. Überschreitet die Textlänge diese Angabe, so wird seine Schriftgröße derart angepasst, dass er den gegebenen Raum optimal ausnutzt.
+</li><li> <code>fillText(text, x, y, maxWidth)</code>: Die Verwendung dieser Funktion ist identisch mit der von <code>strokeText</code>, jedoch wird der Text ausgefüllt gezeichnet; als Füllfarbe wird die in <code>fillStyle</code> hinterlegte Information verwendet.
+</li><li> <code>measureText(text)</code>: Gibt ein Objekt zurück, dessen Membervariable <code>width</code> die Breite des übergebenen Textes spezifiziert, die dieser hätte, wenn er auf das Canvas-Element mit den aktuellen Einstellungen gezeichnet würde.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> drawCanvas<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'mycanvas'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">if</span><span class="br0">&#40;</span>element.<span class="me1">getContext</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> context <span class="sy0">=</span> element.<span class="me1">getContext</span><span class="br0">&#40;</span><span class="st0">'2d'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    context.<span class="me1">clearRect</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> element.<span class="me1">width</span><span class="sy0">,</span> element.<span class="me1">height</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">fillStyle</span> <span class="sy0">=</span> <span class="st0">'lightgray'</span><span class="sy0">;</span>
+    context.<span class="me1">strokeStyle</span> <span class="sy0">=</span> <span class="st0">'black'</span><span class="sy0">;</span>
+    context.<span class="me1">font</span> <span class="sy0">=</span> <span class="st0">'40pt Arial'</span><span class="sy0">;</span>
+    context.<span class="me1">textAlign</span> <span class="sy0">=</span> <span class="st0">'center'</span><span class="sy0">;</span>
+    context.<span class="me1">textBaseline</span> <span class="sy0">=</span> <span class="st0">'middle'</span><span class="sy0">;</span>
+    context.<span class="me1">fillText</span><span class="br0">&#40;</span><span class="st0">'Hallo Welt!'</span><span class="sy0">,</span> element.<span class="me1">width</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">,</span> element.<span class="me1">height</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">strokeText</span><span class="br0">&#40;</span><span class="st0">'Hallo Welt!'</span><span class="sy0">,</span> element.<span class="me1">width</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">,</span> element.<span class="me1">height</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div><div class="note-box-text note-box-example-comment">In diesem Beispiel wird der grau ausgefüllte und schwarz umrandete Text 'Hallo Welt!' in der Mitte des Canvas-Elements ausgegeben. Hierzu werden nach dem Anfordern und Leeren des Context-Objekts die für dieses Beispiel relevanten Eigenschaften gesetzt. Insbesondere erhalten die Membervariablen <code>textAlign</code> und <code>textBaseline</code> die Werte <code>center</code> und <code>middle</code>, was dazu führt, dass auszugebender Text sowohl horizontal als auch vertikal um den bei seiner Zeichnung angegebenen Punkt herum zentriert wird. Schließlich folgt die Zeichnung des Textes 'Hallo Welt!' in die Mitte des Canvas-Elements, zuerst ausgefüllt, dann nur als Umriss. Dies sorgt für die gewünschte schwarze Umrandung.</div>
+</div>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Bilder">Bearbeiten</a>]</span> <span class="mw-headline" id="Bilder"> Bilder </span></h3>
+<p>Neben den bereits vorgestellten Funktionen, mit denen geometrische Formen und Flächen auf das Canvas-Element gezeichnet werden können, ist es mit Canvas auch möglich, Bilder darzustellen. Hierfür existiert die Funktion <code>drawImage</code>, die in folgenden drei Varianten vorliegt:
+</p>
+<ul><li> <code>drawImage(img, dx, dy)</code>: Zeichnet ein <code>img</code>, <code>canvas</code> oder <code>video</code>-Element an der angegebenen Position auf das Canvas-Element.
+</li><li> <code>drawImage(img, dx, dy, dwidth, dheight)</code>: Die Funktionsweise dieser Variante ähnelt der ersten. Jedoch wird im Gegensatz zu dieser das zu zeichnende Bild, sofern es nicht die angegebenen Ausmaße <code>dwidth</code> und <code>dheight</code> besitzt, mithilfe einer Vergrößerung oder Verkleinerung auf diese gebracht.
+</li><li> <code>drawImage(img, sx, sy, swidth, sheight, dx, dy, dwidth, dheight)</code>: Die Funktionsweise dieser Variante ähnelt der ersten. Einziger Unterschied ist, dass die Funktion nicht das ganze Bild zeichnet, sondern lediglich denjenigen Teil, der sich innerhalb des durch die Parameter 2 bis 5 aufgespannten Rechtecks befindet. Danach wird der Ausschnitt ebenso wie in Variante 2 auf die Maße <code>dwidth</code> und <code>dheight</code> gebracht, sofern er diese nicht sowieso schon hatte.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> drawCanvas<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'mycanvas'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">if</span><span class="br0">&#40;</span>element.<span class="me1">getContext</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> context <span class="sy0">=</span> element.<span class="me1">getContext</span><span class="br0">&#40;</span><span class="st0">'2d'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">var</span> img <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'myimage'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    context.<span class="me1">clearRect</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> context.<span class="me1">width</span><span class="sy0">,</span> context.<span class="me1">height</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">drawImage</span><span class="br0">&#40;</span>img<span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">drawImage</span><span class="br0">&#40;</span>img<span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> context.<span class="me1">width</span><span class="sy0">,</span> context.<span class="me1">height</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">drawImage</span><span class="br0">&#40;</span>img<span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> img.<span class="me1">width</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">,</span> img.<span class="me1">height</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> context.<span class="me1">width</span><span class="sy0">,</span> context.<span class="me1">height</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div><div class="note-box-text note-box-example-comment">In diesem Beispiel wird dreimal hintereinander dasselbe Bild gezeichnet. Dabei wird, nachdem das Context-Objekt geholt und seine Oberfläche geleert wurde, mithilfe von <code>drawImage</code> das vorher mittels <code>getElementById</code> geholte <code>img</code>-Element auf das Canvas-Element im Punkt (0 | 0) gezeichnet. Danach folgen zwei weitere Zeichnungen desselben Bildes, die jeweils das komplette Canvas-Element ausfüllen. Die zweite dieser Zeichnungen verwendet dabei jedoch nur den Teil des <code>img</code>-Elements, der sich im oberen linken Quadranten des Bildes befindet.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Transformationen">Bearbeiten</a>]</span> <span class="mw-headline" id="Transformationen"> Transformationen </span></h3>
+<p>Eine weitere Möglichkeit der Bildmanipulation stellt die Verwendung von sogenannten Transformationen dar. Eine Transformation (von lat. <i>transformare</i>: <i>umformen</i>, <i>umwandeln</i>) ist dabei ein Muster (die sogenannte Transformationsmatrix), mit dessen Hilfe jedem Ursprungspunkt ein neuer Zielpunkt zugewiesen wird. Mögliche Transformationen sind z.B. die einfache Verschiebung (Translation), Rotation, Streckung (Skalierung) u. Ä.
+</p><p>Zur Verwendung solcher Transformationen stehen folgende Memberfunktionen zur Verfügung:
+</p>
+<ul><li> <code>translate(tx, ty)</code>: Verschiebt alles, was nach dem Aufrufen von <code>translate</code> gezeichnet wird, um die angegebenen Koordinaten. Dies bedeutet, dass allen folgenden x-Koordinaten der Wert <code>tx</code> bzw. allen y-Koordinaten <code>ty</code> hinzuaddiert wird. Wird die Funktion mehrmals aufgerufen, so werden die einzelnen <code>tx</code> bzw. <code>ty</code> addiert. Der Funktionsaufruf ist identisch mit <code>transform(1, 0, 0, 1, tx, ty)</code>.
+</li><li> <code>rotate(w)</code>: Rotiert alles, was nach dem Aufrufen von <code>rotate</code> gezeichnet wird, im Uhrzeigesinn um den hinterlegten Winkel; als Rotationszentrum wird dabei der (evtl. durch <code>translate</code> verschobene) Punkt (0 | 0) angenommen. Berücksichtigen Sie, dass der Winkel in der Einheit rad interpretiert wird (seine Angabe erfolgt jedoch als Float-Wert, nicht als CSS-String). Wird die Funktion mehrmals aufgerufen, so werden die einzelnen <code>w</code> addiert. Der Funktionsaufruf ist identisch mit <code>transform(Math.cos(w), Math.sin(w), -Math.sin(w), Math.cos(w), 0, 0).</code>
+</li><li> <code>scale(kx, ky)</code>: Multipliziert alle x-, y-, width- und height-Angaben, die nach dem Aufrufen von <code>scale</code> den Context-Funktionen übergeben werden. Dabei wird <code>kx</code> mit den x- und width-Angaben, <code>ky</code> mit den y- und height-Angaben multipliziert. Die resultierenden Zeichnungen wirken nach Verwendung von <code>scale</code> (zentrisch) gestreckt. Wird die Funktion mehrmals aufgerufen, so werden die einzelnen <code>kx</code> bzw. <code>ky</code> miteinander multipliziert. Der Funktionsaufruf ist identisch mit <code>transform(kx, 0, 0, ky, 0, 0)</code>.
+</li><li> <code>setTransform(a, b, c, d, e, f)</code>: Löscht alle aktiven Translationen, Rotationen sowie Skalierungen und setzt die Transformationsmatrix auf die übergebenen Werte. Dabei haben <code>a</code> und <code>d</code> den gleichen Effekt wie <code>kx</code> und <code>ky</code> bei <code>scale</code>; die Werte <code>e</code> und <code>f</code> sind mit <code>tx</code> und <code>ty</code> von <code>translate</code> identisch. Mithilfe des Wertes <code>c</code> wird der x-Koordinate das c-Fache der y-Koordinate hinzuaddiert (das Umgekehrte gilt entsprechend für <code>d</code>). Sind die Werte <code>a</code>, <code>b</code>, <code>c</code> und <code>d</code> in spezieller Relation zueinander (z.B. über trigonometrische Funktionen wie <code>sin</code> und <code>cos</code>), wirkt das transformierte Bild rotiert, andernfalls in verschiedenster Weise verzerrt, z.B. erscheinen Rechtecke plötzlich wie Parallelogramme (mehr Informationen zu diesen sogenannten Scherungsfaktoren siehe Weblinks).
+</li><li> <code>transform(a, b, c, d, e, f)</code>: Multipliziert die aktuelle Transformationsmatrix mit einer weiteren Matrix, die durch die übergebenen Argumente spezifiziert wird (genauere Informationen über Matrixmultiplikation siehe Weblinks). Angenommen, die Werte a<sub>alt</sub>, b<sub>alt</sub>, c<sub>alt</sub>, d<sub>alt</sub>, e<sub>alt</sub> und f<sub>alt</sub> sind die aktuellen Werte der Transformationsmatrix. Dann besitzt die Transformationsmatrix nach Aufrufen der Funktion <code>transform(a, b, c, d, e, f)</code> die folgenden Werte:
+<ul><li> a<sub>neu</sub> = a<sub>alt</sub> * a + c<sub>alt</sub> * b (entspricht neuem x-Skalierungswert)
+</li><li> b<sub>neu</sub> = b<sub>alt</sub> * a + d<sub>alt</sub> * b (entspricht neuer y-Scherung)
+</li><li> c<sub>neu</sub> = a<sub>alt</sub> * c + c<sub>alt</sub> * d (entspricht neuer x-Scherung)
+</li><li> d<sub>neu</sub> = b<sub>alt</sub> * c + d<sub>alt</sub> * d (entspricht neuem y-Skalierungswert)
+</li><li> e<sub>neu</sub> = a<sub>alt</sub> * e + c<sub>alt</sub> * f + e<sub>alt</sub> (entspricht neuer x-Verschiebung)
+</li><li> f<sub>neu</sub> = b<sub>alt</sub> * e + d<sub>alt</sub> * f + f<sub>alt</sub> (entspricht neuer y-Verschiebung)
+</li></ul>
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> drawCanvas<span class="br0">&#40;</span>id<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span>id<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">if</span><span class="br0">&#40;</span>element.<span class="me1">getContext</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> context <span class="sy0">=</span> element.<span class="me1">getContext</span><span class="br0">&#40;</span><span class="st0">'2d'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    context.<span class="me1">translate</span><span class="br0">&#40;</span>element.<span class="me1">width</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">,</span> element.<span class="me1">height</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">scale</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">rotate</span><span class="br0">&#40;</span><span class="nu0">45</span> <span class="sy0">*</span> <span class="kw4">Math</span>.<span class="me1">PI</span> <span class="sy0">/</span> <span class="nu0">180</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    context.<span class="me1">strokeRect</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">50</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">50</span><span class="sy0">,</span> <span class="nu0">100</span><span class="sy0">,</span> <span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div><div class="note-box-text note-box-example-comment">In diesem Beispiel wird eine Raute in die Mitte der Canvas gezeichnet. Hierzu wird nach dem Ermitteln des Context-Objekts zuerst die Funktion <code>translate</code> aufgerufen, welche den Ursprung des Koordinatensystems in die Mitte der Canvas verschiebt. Weiterhin bewirkt der darauf folgende Aufruf von <code>scale</code> die Streckung der y-Achse um den Faktor 2. Dadurch wird eine y-Angabe von z.B. 100 auf 200 vergrößert. Abschließend wird das Koordinatensystem noch um 45° im Uhrzeigesinn rotiert, die Formel <code>45 * Math.PI / 180</code> rechnet dabei das Winkelmaß in das notwendige Bogenmaß um. Schließlich wird das eigentliche Rechteck, welches dank der vorangegangenen Transformationen wie eine Raute in der Mitte der Canvas erscheint, gezeichnet.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Pixel-Manipulation">Bearbeiten</a>]</span> <span class="mw-headline" id="Pixel-Manipulation"> Pixel-Manipulation </span></h3>
+<p>Neben den vorangegangenen Funktionen bietet Canvas schließlich noch die Möglichkeit, die einzelnen Pixel der Canvas direkt anzusprechen und sowohl in ihrer Farbe, als auch in ihrem Transparenzwert zu verändern. Hierzu wird ein sogenanntes ImageData-Objekt benötigt, das Informationen über Breite, Höhe und den eigentlichen Daten eines Bildes speichert. In Verbindung mit derartigen Objekten stehen folgende Funktionen zur Verfügung:
+</p>
+<ul><li> <code>createImageData(width, height)</code>: Erzeugt ein neues ImageData-Objekt mit der angegebenen Breite und Höhe und belegt alle Pixel mit dem Wert <code>rgba(0, 0, 0, 0)</code> vor. Berücksichtigen Sie, dass dabei innerhalb des ImageData-Objekts lediglich die als Argumente übergebenen Werte gespeichert werden, jedoch nicht solche Werte, die im jeweiligen Context-Objekt gespeichert sind; dass erzeugte ImageData-Objekt ist demnach lediglich vom Context-Typ (also <code>2d</code>), nicht jedoch vom konkreten Context-Objekt abhängig.
+</li><li> <code>createImageData(imgData)</code>: Erzeugt ein neues ImageData-Objekt mithilfe eines bereits bestehenden. Hierbei werden lediglich die Ausmaße, nicht jedoch der Inhalt von diesem übernommen. Danach wird das neue Objekts vollständig mit der Farbe <code>rgba(0, 0, 0, 0)</code> vorbelegt.
+</li><li> <code>getImageData(x, y, width, height)</code>: Gibt ein ImageData-Objekt zurück, das denjenigen Bereich repräsentiert, der durch die übergebenen Attribute spezifiziert wird. Beachten Sie jedoch, dass die Veränderung des zurückgegebenen Objektes keine Veränderung der Canvas-Zeichenoberfläche mit einschließt, beide sind unabhängig voneinander.
+</li><li> <code>putImageData(imgData, x, y)</code>: Zeichnet das ImageData-Objekt in seiner vollen Größe an der angegebenen Position auf die Canvas. Bereiche, die außerhalb der Canvas liegen, werden dabei nicht gezeichnet.
+</li><li> <code>putImageData(imgData, x, y, dx, dy, dwidth, dheight)</code>: Zeichnet das ImageData-Objekt an die Position (x | y), wobei jedoch nur der Teil sichtbar ist, der sich innerhalb des ImageData-Objekts in demjenigen Rechteck befindet, das durch die letzten vier Parameter aufgespannt wird. Berücksichtigen Sie, dass der innerhalb des Rechtecks liegende Teil des Bildes tatsächlich an der Position (x + dx | y + dy) erscheint, nicht an (x | y).
+</li></ul>
+<p>Um den eigentlichen Inhalt eines ImageData-Objekts zu verändern, stehen die Membervariablen <code>width</code>, <code>height</code> und <code>data</code> zur Verfügung. Letztere speichert die Farbe jedes Punktes mithilfe eines Arrays. Dabei sind die Punkte von oben beginnend jeweils zeilenweise, innerhalb einer Zeile von links nach rechts, im Array abgelegt. Dies bedeutet, dass innerhalb des Arrays zuerst die Pixel von oben links nach oben rechts folgen, danach schließen sich die der zweiten, dritten, usw. Zeile an. Außerdem wird jedes Pixel durch vier Array-Elemente repräsentiert, ihre Werte sind ganzzahlig und liegen zwischen 0 und 255. Sie stellen den Rot-, Grün-, Blau- und Alphawert (in dieser Reihenfolge) dar.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> drawCanvas<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'mycanvas'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">if</span><span class="br0">&#40;</span>element.<span class="me1">getContext</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> context <span class="sy0">=</span> element.<span class="me1">getContext</span><span class="br0">&#40;</span><span class="st0">'2d'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">var</span> imgData<span class="sy0">;</span>
+&#160;
+    context.<span class="me1">fillStyle</span> <span class="sy0">=</span> <span class="st0">'silver'</span><span class="sy0">;</span>
+    context.<span class="me1">fillRect</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> element.<span class="me1">width</span><span class="sy0">,</span> element.<span class="me1">height</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    imgData <span class="sy0">=</span> context.<span class="me1">getImageData</span><span class="br0">&#40;</span><span class="nu0">10</span><span class="sy0">,</span> <span class="nu0">10</span><span class="sy0">,</span> element.<span class="me1">width</span> <span class="sy0">-</span> <span class="nu0">20</span><span class="sy0">,</span> element.<span class="me1">height</span> <span class="sy0">-</span> <span class="nu0">20</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> y <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> y <span class="sy0">&lt;</span> imgData.<span class="me1">height</span><span class="sy0">;</span> y<span class="sy0">++</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> x <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> x <span class="sy0">&lt;</span> imgData.<span class="me1">width</span><span class="sy0">;</span> x<span class="sy0">++</span><span class="br0">&#41;</span>
+      <span class="br0">&#123;</span>
+        imgData.<span class="me1">data</span><span class="br0">&#91;</span><span class="nu0">4</span> <span class="sy0">*</span> <span class="br0">&#40;</span>y <span class="sy0">*</span> imgData.<span class="me1">width</span> <span class="sy0">+</span> x<span class="br0">&#41;</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">255</span><span class="sy0">;</span> <span class="co1">// Rotwert</span>
+        imgData.<span class="me1">data</span><span class="br0">&#91;</span><span class="nu0">4</span> <span class="sy0">*</span> <span class="br0">&#40;</span>y <span class="sy0">*</span> imgData.<span class="me1">width</span> <span class="sy0">+</span> x<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="co1">// Grünwert</span>
+        imgData.<span class="me1">data</span><span class="br0">&#91;</span><span class="nu0">4</span> <span class="sy0">*</span> <span class="br0">&#40;</span>y <span class="sy0">*</span> imgData.<span class="me1">width</span> <span class="sy0">+</span> x<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="nu0">2</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="co1">// Blauwert</span>
+        imgData.<span class="me1">data</span><span class="br0">&#91;</span><span class="nu0">4</span> <span class="sy0">*</span> <span class="br0">&#40;</span>y <span class="sy0">*</span> imgData.<span class="me1">width</span> <span class="sy0">+</span> x<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="nu0">3</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">255</span><span class="sy0">;</span> <span class="co1">// Alphawert</span>
+      <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+    context.<span class="me1">putImageData</span><span class="br0">&#40;</span>imgData<span class="sy0">,</span> <span class="nu0">10</span><span class="sy0">,</span> <span class="nu0">10</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div><div class="note-box-text note-box-example-comment">In diesem Beispiel wird auf die Canvas ein rotes Rechteck eingehüllt in einem silberfarbenen Rahmen gezeichnet. Hierzu wird zuerst, nachdem wie üblich das context-Objekt ermittelt wurde, das silberne Rechteck mithilfe des Funktionsaufrufs <code>context.fillRect(0, 0, canvas.width, canvas.height)</code> über die gesamte Fläche der Canvas mit der vorher eingestellten silbernen Farbe gezeichnet. Danach wird mithilfe von <code>context.getImageData(10, 10, element.width - 20, element.height - 20)</code> ein imageData-Objekt erzeugt, dass den rot auszufüllenden Bereich der gerade eingefärbten Canvas wiederspiegelt. Von diesem Objekt werden dann mithilfe zweier for-Schleifen die einzelnen Pixel angesprochen, hierzu werden seine Membervariablen <code>width</code> und <code>height</code> verwendet. Innerhalb der for-Schleifen werden die x- und y-Koordinaten der umzufärbenden Pixel mithilfe der Formel <code>4 * (y * imgData.width + x)</code> (bzw. ihrer Variationen für Grün-, Blau- und Alphawert) in die Position des entsprechenden Farbwertes des gewünschten Pixels innerhalb des <code>data</code>-Arrays umgerechnet. Daraufhin folgt die Einfärbung dieser Farbwerte in der Farbe <code>rgba(255, 0, 0, 255)</code>, also rot. Die vorgestellte Formel kann dabei immer dann verwendet werden, wenn die x- und y-Koordinaten eines Pixels in dessen Position innerhalb des <code>data</code>-Arrays (bzw. in die Position eines seiner Farbwerte) umgerechnet werden soll. Schließlich wird das so veränderte ImageData-Objekt mithilfe von <code>context.putImageData(imgData, 10, 10)</code> auf die Canvas übertragen. Dies ist nötig, da das Verändern des ImagData-Objekts nicht gleichzeitig auch die Canvas verändert.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Weblinks">Bearbeiten</a>]</span> <span class="mw-headline" id="Weblinks"> Weblinks </span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://www.drweb.de/magazin/html5-canvas-einfacher-zeichnen-mit-fabric-js-49491/">dr.web: HTML5-Canvas: Einfacher zeichnen mit „Fabric.js“</a>
+</li><li>  <a rel="nofollow" class="external text" href="http://www.khronos.org/registry/webgl/specs/latest/">WebGL Specification</a>
+</li><li>  <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Bezier-Kurve">Informationen zu Bézierkurven</a>
+</li><li>  <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en/docs/Drawing_text_using_a_canvas">Visualisierung der Eigenschaft <code>textBaseline</code> (Diagramm oberhalb des Methods-Abschnitts)</a>
+</li><li>  <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Scherung_(Geometrie)">Scherung und Scherungskoeffizienten</a>
+</li><li>  <a rel="nofollow" class="external text" href="http://canvas.quaese.de/index.php?doc_id=22&amp;nav=4,29">Mathematischer Aufbau der Transformationsmatrix</a>
+</li><li>  <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Matrixmultiplikation#Matrizenmultiplikation">Matrizenmultiplikation</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 500/1000000
+Post‐expand include size: 39822/2097152 bytes
+Template argument size: 37516/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3861-0!*!0!!de-formal!*!* and timestamp 20150301112034 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;oldid=24333">http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;oldid=24333</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FAPI%2FCanvas" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Canvas.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/API/Canvas&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Canvas.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../../src.selfhtml.org/logo/S-110.png);" href="../../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../../Spezial_Linkliste/JavaScript/API/Canvas.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/API/Canvas.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/Canvas&amp;oldid=24333" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../../Spezial_Durchsuchen/JavaScript-2FAPI-2FCanvas.html" title="Spezial:Durchsuchen/JavaScript-2FAPI-2FCanvas">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 17. November 2014 um 17:15 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.767-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.085 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/API/Canvas by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:47 GMT -->
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Objektorientiertes_Programmieren by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Objektorientiertes Programmieren – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Objektorientiertes_Programmieren","wgTitle":"Perl/Objektorientiertes Programmieren","wgCurRevisionId":13980,"wgArticleId":1874,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Objektorientiertes_Programmieren","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html5 {line-height: normal;}
+.source-html5 li, .source-html5 pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html5
+ * CSS class: source-html5, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html5.source-html5 .de1, .html5.source-html5 .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html5.source-html5  {font-family:monospace;}
+.html5.source-html5 .imp {font-weight: bold; color: red;}
+.html5.source-html5 li, .html5.source-html5 .li1 {font-weight: normal; vertical-align:top;}
+.html5.source-html5 .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html5.source-html5 .li2 {font-weight: bold; vertical-align:top;}
+.html5.source-html5 .kw2 {color: #000000; font-weight: bold;}
+.html5.source-html5 .kw3 {color: #000066;}
+.html5.source-html5 .es0 {color: #000099; font-weight: bold;}
+.html5.source-html5 .br0 {color: #66cc66;}
+.html5.source-html5 .sy0 {color: #66cc66;}
+.html5.source-html5 .st0 {color: #ff0000;}
+.html5.source-html5 .nu0 {color: #cc66cc;}
+.html5.source-html5 .sc-2 {color: #404040;}
+.html5.source-html5 .sc-1 {color: #808080; font-style: italic;}
+.html5.source-html5 .sc0 {color: #00bbdd;}
+.html5.source-html5 .sc1 {color: #ddbb00;}
+.html5.source-html5 .sc2 {color: #009900;}
+.html5.source-html5 .ln-xtra, .html5.source-html5 li.ln-xtra, .html5.source-html5 div.ln-xtra {background-color: #ffc;}
+.html5.source-html5 span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Objektorientiertes Programmieren" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Objektorientiertes_Programmieren&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Objektorientiertes_Programmieren skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Objektorientiertes Programmieren</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Objektorientierte_Programmierung_.28OOP.29"><span class="tocnumber">1</span> <span class="toctext">Objektorientierte Programmierung (OOP)</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Objektorientierte_Programmierung_in_Perl"><span class="tocnumber">2</span> <span class="toctext">Objektorientierte Programmierung in Perl</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Einfaches_Beispiel:_das_HTMLprint-Objekt"><span class="tocnumber">3</span> <span class="toctext">Einfaches Beispiel: das HTMLprint-Objekt</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Beispiel_mit_Objektdaten:_das_VCard-Objekt"><span class="tocnumber">4</span> <span class="toctext">Beispiel mit Objektdaten: das VCard-Objekt</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Objektorientierte Programmierung (OOP)">Bearbeiten</a>]</span> <span class="mw-headline" id="Objektorientierte_Programmierung_.28OOP.29"> Objektorientierte Programmierung (OOP) </span></h2>
+<p>Vor allem bei größeren Programmiervorhaben ist es wichtig, nicht einfach draufloszuprogrammieren, sondern sich vorher darüber Gedanken zu machen, was die Anwendung können, in welcher Form sie Daten speichern soll, welche Benutzerschnittstellen erforderlich sind usw. In dieser Phase ist es gar nicht wichtig und eher hinderlich, dauernd irgendwelche Quellcode-Fetzen im Kopf zu haben. Besser ist es, vom natürlichen Denken ausgehend die Anwendung zu modellieren.
+</p><p>Das natürliche Denken des modernen Menschen ist aber nicht so "prozedural" ausgerichtet wie die klassische Programmierung. Es vollzieht sich nicht in Sprungadressen und Kontrollstrukturen, sondern wird an größere eigenständige Einheiten (Menschen, Maschinen usw.), die in der Lage sind, Informationen und Fähigkeiten beizusteuern, miteinander zu kommunizieren und dadurch etwas Neues zu schaffen, gebunden.
+</p><p>Auch ein CGI-basiertes Gästebuch lässt sich so denken. Da gibt es beispielsweise einen Formular-Manager, der sich um die Auswertung ausgefüllter HTML-Formulare kümmert, einen Daten-Manager, dessen Aufgabe das zuverlässige und einheitliche Speichern und Einlesen von Daten ist, und einen Konfigurations-Manager, der entscheidet, welche Möglichkeiten des Gästebuchs im konkreten Fall genutzt werden und in welcher Form. Dabei muss der Konfigurations-Manager beispielsweise den Daten-Manager um das Einlesen bestimmter Konfigurationsdaten bitten. Selber darf er das nicht, das ist nun mal Aufgabe des Daten-Managers. Genausowenig darf der Daten-Manager sich einfach die HTML-Formulare holen, die vom Anwender abgesendet wurden. Dafür ist der Formular-Manager zuständig, der dann vielleicht wieder beim Konfigurations-Manager nachfragen muss, wie die Daten weiterzugeben sind, und der Antwort entsprechend die Daten an den Daten-Manager zum Abspeichern weitergibt.
+</p><p>Solche teamfähigen Einheiten werden in der objektorientierten Programmierung als Objekte bezeichnet. Ein Objekt hat Eigenschaften und kann etwas tun. Einige der Eigenschaften und Fähigkeiten stammen von anderen Objekten, die das Objekt selbst eingebunden und damit geerbt hat, und andere wiederum sind ganz eigene und besondere Eigenschaften und Fähigkeiten dieses Objekts.
+</p><p>Diese Dokumentation ist allerdings nicht der Rahmen, um die Theorie der objektorientierten Programmierung auszubreiten. Ein paar wichtige Begriffe sollten Sie trotzdem kennen:
+</p><p><b>Klasse:</b><br />Eine Klasse ist die Summe der programmierten Fähigkeiten eines Objekts. Alles, woraus ein Objekt besteht und was es kann, muss irgendwo programmiert sein. Eine Klasse ist aber "abstrakt" programmiert, sie führt noch keinen konkreten Code aus. So wie man, wenn man an "Handy" denkt, einen bestimmten Begriff von so einem Gerät hat, ist ein konkretes Objekt in der objektorientierten Programmierung nur von seiner Klasse ableitbar. Ein konkretes Objekt hat die Eigenschaften und Fähigkeiten seiner Klasse, so wie man von einem Handy, den man in der Hand hat, sagt, dass es ein Handy ist, weil er die Eigenschaften und Funktionen eines Handys hat, also dem Begriff des Handys entspricht. In einer objektorientierten Anwendung können Sie sagen: für die Aufgabe, die ich lösen möchte, brauche ich erst mal eine bestimmte Klasse, so wie man sagen könnte: für diese Aufgabe brauche ich einen Handy.
+</p><p><b>Instanz:</b><br />Eine Instanz ist ein konkretes Objekt einer bestimmten Klasse. Mit dem Begriff vom Handy allein können Sie noch keine Aufgaben lösen. Sie brauchen ein ganz reales Handy dazu. Genauso brauchen Sie eine ganz reale Instanz einer Klasse, um eine Aufgabe innerhalb Ihrer Anwendung objektorientiert anzupacken. Ihr konkretes Objekt erhält einen individuellen Namen, unter dem Sie es ansprechen können.
+</p><p><b>Eigenschaften und Methoden:</b><br />Von einer Objektinstanz können Sie nicht mehr verlangen als das, wozu das Objekt aufgrund seiner Klasse in der Lage ist. Das, wozu ein Objekt in der Lage ist, ist dadurch festgelegt, was in seiner Klasse programmiert ist. Eigenschaften (auch Attribute genannt) sind Variablen, die Ihnen zur Verfügung stehen, wenn Sie eine Instanz eines Objekts erzeugt haben. Methoden sind Funktionen, die Ihnen eine Objektinstanz zur Verfügung stellt. Eine Instanz der Klasse "Formular-Manager" könnte beispielsweise als Eigenschaft eine Datenstruktur anbieten, in der sie eingelesene Formulardaten bequem zur Verfügung stellt. Als Methoden könnte diese Instanz zum Beispiel Filterfunktionen enthalten, um etwa nur die Daten aus versteckten Formularfeldern anzubieten. In Ihrer Anwendung können Sie dann Eigenschaften und Methoden verwenden, indem Sie auf deren Namen innerhalb einer konkreten Instanz "zeigen". Das ist so, als ob Sie an dem Laptop, den Sie vor sich haben, die Funktion "suche den nächsten ausreichend starken WLAN-Hotspot" anstoßen (eine Methode) und bei gefundenem Hotspot am Display dessen Standort ablesen können (eine Eigenschaft).
+</p><p><b>Konstruktor- und Destruktor-Funktion:</b><br />Eine Konstruktorfunktion übernimmt die Handlung, eine Instanz eines Objektes zu erzeugen. Sie macht gewissermaßen aus dem Begriff von einem Handy ein reales Handy. Nun sind Sie damit unterwegs, und irgendwann brauchen Sie das Handy nicht mehr. Dann ist es nur unnötiges Gepäck. Deshalb können Sie es dann abschalten. Zumindest im Computer ist das sinnvoll, denn dadurch werden wieder Speicher-Ressourcen frei. Zum Abschalten (Zerstören) von Objektinstanzen gibt es daher eine Destruktor-Funktion.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Objektorientierte Programmierung in Perl">Bearbeiten</a>]</span> <span class="mw-headline" id="Objektorientierte_Programmierung_in_Perl"> Objektorientierte Programmierung in Perl </span></h2>
+<p>Der Perl-Interpreter unterstützt objektorientiertes Programmieren seit der Version 5.0. Um eine Klasse zu programmieren, also das, wovon sich eine Objektinstanz ableiten lässt, brauchen Sie in Perl ein eigenes <b>Package</b>, also einen eigenen Namensraum. <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutinen</a>, die innerhalb des Packages notiert sind, sind die Methoden von Objekten dieser Klasse. Auch Objekteigenschaften können Sie innerhalb solcher Methoden auf bestimmte Weise definieren. Packages lassen sich zwar auch innerhalb eines Perl-Scripts definieren (siehe Beispiel zur Perl-Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages#package" title="Perl/Funktionen für Module und Packages">package</a>), aber im Normalfall ist ein Package eine separate Perl-Datei, die keine andere Aufgabe hat als die, in Perl-Scripts "eingebunden" zu werden. Kurzum: ein Package ist in Perl meist ein <a href="http://wiki.selfhtml.org/wiki/Perl/Module" title="Perl/Module">Modul</a> mit der entsprechenden Dateiendung <code>.pm</code>. Von daher haben in Perl modul-orientiertes Programmieren und objektorientiertes Programmieren viel miteinander zu tun.
+</p><p>Ein Package ist allerdings noch nicht automatisch eine Klasse für Objekte. Packages sind lediglich Namensräume und damit das "Klima, in dem Objektklassen gedeihen können". Damit Perl eine Klasse für Objekte als solche erkennt, muss sie als solche definiert und erstellt werden.
+</p><p>Ebenso ist es mit den Objektinstanzen. Zunächst müssen Sie Perl mitteilen, dass Sie eine Instanz eines Objekts erzeugen möchten. Ist das gelungen, können Sie anschließend Eigenschaften und Methoden dieses Objekts über eine bestimmte Syntax ansprechen.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Perl bietet auch weitere Features der objektorientierten Programmierung an, etwa Vererbung und Methodenbindung an Variablen. In diesem einführenden Abschnitt werden solche weiteren Features jedoch nicht behandelt.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Einfaches Beispiel: das HTMLprint-Objekt">Bearbeiten</a>]</span> <span class="mw-headline" id="Einfaches_Beispiel:_das_HTMLprint-Objekt"> Einfaches Beispiel: das HTMLprint-Objekt </span></h2>
+<p>In diesem Beispiel wird gezeigt, wie Sie ein Modul als Objektklasse erstellen, in einem Perl-Script eine Instanz dieses Objekts erzeugen und mit Methoden des Objekts arbeiten. Das Beispiel realisiert ein einfaches Objekt für HTML-Ausgaben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw3">package</span> HTMLprint<span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> <span class="kw2">new</span> <span class="br0">&#123;</span>
+ <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+ <span class="kw1">my</span> <span class="re0">$Referenz</span> <span class="sy0">=</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">;</span>
+ <span class="kw3">bless</span><span class="br0">&#40;</span><span class="re0">$Referenz</span><span class="sy0">,</span><span class="re0">$Objekt</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Referenz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> Anfang <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Titel</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;$Titel&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> Titel <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Ausgabetext</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;h1&gt;$Ausgabetext&lt;/h1&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> Text <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Ausgabetext</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;$Ausgabetext&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> Ende <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="nu0">1</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw2">use</span> HTMLprint<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$html</span> <span class="sy0">=</span> HTMLprint <span class="sy0">-&gt;</span> <span class="kw2">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$html</span><span class="sy0">-&gt;</span><span class="me1">Anfang</span><span class="br0">&#40;</span><span class="st0">&quot;Ganz elegantes Perl&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$html</span><span class="sy0">-&gt;</span><span class="me1">Titel</span><span class="br0">&#40;</span><span class="st0">&quot;Ganz elegantes Perl&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$html</span><span class="sy0">-&gt;</span><span class="me1">Text</span><span class="br0">&#40;</span><span class="st0">&quot;Popeliges HTML, aber sehr modern programmiert!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$html</span><span class="sy0">-&gt;</span><span class="me1">Ende</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Die Moduldatei beginnt einfach mit einer <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages#package" title="Perl/Funktionen für Module und Packages">package</a>-Anweisung, die den Namen des Moduls nennt. Der Name sollte identisch mit dem Vornamen der Moduldatei sein. Wenn die Moduldatei also wie im Beispiel <var>HTMLprint.pm</var> heißt, sollte die Anweisung <code>package&#160;HTMLprint;</code> lauten.
+<p>Die Moduldatei im Beispiel enthält insgesamt fünf Subroutinen. Die erste davon ist die Konstruktorfunktion. Sie erhält üblicherweise den Namen <code>new</code>, könnte aber theoretisch auch einen anderen Namen erhalten. Wie eine Konstruktorfunktion aufgebaut ist, kann von Fall zu Fall variieren. In jedem Fall muss die Konstruktorfunktion jedoch einen Aufruf der Funktion <code>bless</code> enthalten. Diese bindet eine Referenz (einen Zeiger) an eine Klasse, sodass anschließend über diese Referenz auf das Objekt zugegriffen werden kann. Die im obigen Beispiel gezeigte Konstruktorfunktion leistet zwar schon ein wenig mehr als für das Beispiel benötigt wird, doch sie eignet sich in dieser Form einfach gut als Standard-Konstruktorfunktion, bei der man wenig falsch machen kann.
+</p><p>Mit <code>my $Objekt = shift;</code> wird einfach der erste Parameter eingelesen, den die Konstruktorfunktion <code>new</code> übergeben bekommt. Sie bekommt nämlich, wenn sie aufgerufen wird, automatisch als ersten Parameter den Klassennamen übergeben, im Beispiel also den Namen <code>HTMLprint</code>. Das ist im Beispiel der Wert, der anschließend in <code>$Objekt</code> steht.<br />Mit <code>my $Referenz = {};</code> wird eine <a href="http://wiki.selfhtml.org/wiki/Perl/Referenzen" title="Perl/Referenzen">Referenz</a>, also ein Zeiger deklariert. Dieser Zeiger wird benötigt, damit die Funktion <code>bless</code> korrekt bedient werden und den Zeiger an das Objekt binden kann. Nun ist die Frage, wie aus der skalaren Variable <code>$Referenz</code> eine Referenz werden soll. Sie muss sich ja auf irgendetwas beziehen, worauf sie zeigt. Ideal ist für diesen Zweck die Zuweisung <code>{}</code>. Dies ist einfach eine Referenz auf einen leeren unbenannten <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hash</a>. Ideal ist das deshalb, weil dieser Hash auch für die Definition von Objektdaten geeignet ist - was allerdings in diesem ersten einfachen Beispiel noch nicht geschieht. So bleibt es bei dem leeren Hash, und <code>$Referenz</code> ist ein Zeiger.<br />Mit <code>bless($Referenz,$Objekt);</code> wird die nötige Verbindung zwischen Referenz und Objekt hergestellt. Anschließend wird <code>$Referenz</code> zurückgegeben.
+</p><p>Die vier übrigen Subroutinen in der Moduldatei <var>HTMLprint.pm</var> sind sich alle recht ähnlich. Sie erzeugen mit Hilfe von <code>print</code>-Anweisungen HTML-Code. Die Subroutine <code>Anfang</code> schreibt zudem zunächst den nötigen HTTP-Header für HTML-Ausgaben.
+</p><p>Für alle Subroutinen, die als Methoden eines Objekts fungieren, gilt: sie bekommen automatisch mindestens einen Parameter übergeben, und zwar den Zeiger auf das Objekt, der in der Konstruktor-Funktion erzeugt und an das Objekt gebunden wurde. Die Subroutinen im Beispiel benötigen diesen Zeiger nicht. Aber <code>Anfang</code>, <code>Titel</code> und <code>Text</code> erwarten noch einen zweiten ganz gewöhnlichen Parameter, nämlich den Inhalt, den sie in HTML ausgeben sollen. Nun könnten sich die Routinen den Inhalt dieses zweiten Parameters auch direkt mit <code>$_[1]</code> holen. Aber die Notation mit dem Aufruf der <code>shift</code>-Funktion hat den Vorteil, dass die Parameterliste dabei sauber abgearbeitet und der Reihe nach gelöscht wird. Mit dem jeweils zweiten Aufruf von <code>shift</code> kommen die drei erwähnten Subroutinen also an den zweiten Parameter.
+</p><p>Wichtig zu erwähnen ist noch, dass <var>pm</var>-Moduldateien am Ende stets eine einsame Anweisung <code>1;</code> (oder etwas ähnliches) enthalten müssen. Das bedeutet, die Moduldatei gibt einen wahren Wert zurück. Andernfalls würde der Perl-Interpreter einen Fehler melden.
+</p><p>Das eigentliche Perl-Script ist im Beispiel recht einfach. Mit der Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages#use" title="Perl/Funktionen für Module und Packages">use</a> und der Anweisung <code>use&#160;HTMLprint;</code> bindet es die Moduldatei <var>HTMLprint.pm</var> ein. In dieser Form eingebunden, muss sich die <var>HTMLprint.pm</var> entweder im gleichen Verzeichnis befinden wie das Script, oder in einem der zentralen Verzeichnisse, in denen Perl nach Modulen sucht (mehr darüber im Abschnitt <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Speicherorte_f.C3.BCr_Module_und_die_Liste_.40INC" title="Perl/Module/Einführung">Speicherorte für Module und die Liste @INC</a>).
+</p>
+Mit <code>my $html = HTMLprint -&gt; new();</code> wird die Konstruktorfunktion der Moduldatei aufgerufen. Dies ist die entscheidende Anweisung, mit der eine neue Istanz des HTMLprint-Objekts erzeugt wird! Die Anweisung besteht darin, dass ein Skalar, der im Beispiel den Namen <code>$html</code> erhält, deklariert und mit einem Wert initialisiert wird. Der zugewiesene Wert besteht darin, dass der Name der gewünschten Objektklasse, also <code>HTMLprint</code>, mit Hilfe des Zeigeoperators <code>-&gt;</code> auf die Konstruktorfunktion <code>new</code> zeigt. Da die Konstruktorfunktion eine Referenz zurückgibt, die durch den <code>bless</code>-Aufruf an das Objekt gebunden ist, wird <code>$html</code> automatisch zu einer Referenz, also zu einem Zeiger auf die neu erzeugte Objektinstanz. Über <code>$html</code> und den Zeigeoperator <code>-&gt;</code> kann das Script fortan auf die Subroutinen des eingebundenen Moduls zugreifen. Im Objektzusammenhang spricht man allerdings nicht mehr von Subroutinen, sondern von Methoden.<br />Mit einer Anweisung wie <code>$html-&gt;Anfang("Ganz elegantes Perl");</code> greift das Script also auf eine Methode des <code>HTMLprint</code>-Objekts zu, und zwar auf die Objektinstanz, die an den Zeiger <code>$html</code> gebunden ist.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Beispiel mit Objektdaten: das VCard-Objekt">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_mit_Objektdaten:_das_VCard-Objekt"> Beispiel mit Objektdaten: das VCard-Objekt </span></h2>
+<p>Das folgende Beispiel zeigt, wie sich Daten mit Objekten verwalten lassen. Es handelt sich dabei um Adressdaten im international standardisierten <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/VCard">VCard-Format</a> (typische Dateiendung: *.vcf), wie es vom <a rel="nofollow" class="external text" href="http://www.imc.org/">Internet Mail Consortium (IMC)</a> entwickelt und in der <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc2426">RFC 2426</a> beschrieben wird. In der Moduldatei <var>VCard.pm</var> wird die VCard-Klasse mit den Objektdaten und Methoden definiert. Im Hauptscript werden dann zwei Objektinstanzen dieser Klasse angelegt, und die Methoden des Objekts werden ausprobiert.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw3">package</span> VCard<span class="sy0">;</span>
+&#160;
+<span class="re0">$Objekte</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> <span class="kw2">new</span> <span class="br0">&#123;</span>
+ <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+ <span class="kw1">my</span> <span class="re0">$Version</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+ <span class="kw1">my</span> <span class="re0">$Referenz</span> <span class="sy0">=</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">;</span>
+ <span class="kw3">bless</span><span class="br0">&#40;</span><span class="re0">$Referenz</span><span class="sy0">,</span><span class="re0">$Objekt</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="re0">$Objekte</span> <span class="sy0">+=</span> <span class="nu0">1</span><span class="sy0">;</span>
+ <span class="re0">$Referenz</span><span class="sy0">-&gt;</span><span class="me1">VCinit</span><span class="br0">&#40;</span><span class="re0">$Version</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Referenz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> VCinit <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Version</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="re0">$Objekt</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span><span class="kw2">BEGIN</span><span class="br0">&#125;</span> <span class="sy0">=</span> <span class="st0">&quot;VCARD&quot;</span><span class="sy0">;</span>
+  <span class="re0">$Objekt</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span>VERSION<span class="br0">&#125;</span> <span class="sy0">=</span> <span class="re0">$Version</span><span class="sy0">;</span>
+  <span class="re0">$Objekt</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span>END<span class="br0">&#125;</span> <span class="sy0">=</span> <span class="st0">&quot;VCARD&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> VCset <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Schluessel</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="re0">$Objekt</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span><span class="re0">$Schluessel</span><span class="br0">&#125;</span> <span class="sy0">=</span> <span class="re0">$Wert</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> VCget <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Schluessel</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Objekt</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span><span class="re0">$Schluessel</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> VCsave <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Datei</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw3">open</span><span class="br0">&#40;</span>DATEI<span class="sy0">,</span> <span class="st0">&quot;&gt;$Datei&quot;</span><span class="br0">&#41;</span> <span class="kw1">or</span> <span class="kw3">return</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> DATEI <span class="st0">&quot;BEGIN:VCARD<span class="es0">\n</span>VERSION:$Objekt-&gt;{VERSION}<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw1">while</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$Schluessel</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Wert</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">each</span> <span class="sy0">%</span><span class="br0">&#123;</span> <span class="re0">$Objekt</span> <span class="br0">&#125;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">next</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$Schluessel</span> <span class="kw1">eq</span> <span class="st_h">'BEGIN'</span> <span class="kw1">or</span> <span class="re0">$Schluessel</span> <span class="kw1">eq</span> <span class="st_h">'VERSION'</span> <span class="kw1">or</span> <span class="re0">$Schluessel</span> <span class="kw1">eq</span> <span class="st_h">'END'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$Schluessel</span> <span class="sy0">=~</span> <span class="co2">s/_/\;/g</span><span class="sy0">;</span>
+    <span class="kw3">print</span> DATEI <span class="st0">&quot;$Schluessel:$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw3">print</span> DATEI <span class="st0">&quot;END:VCARD<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">close</span><span class="br0">&#40;</span>DATEI<span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Datei</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> VCopen <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Datei</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="re0">$Objekt</span><span class="sy0">-&gt;</span><span class="me1">VCreset</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">open</span><span class="br0">&#40;</span>DATEI<span class="sy0">,</span> <span class="st0">&quot;&lt;$Datei&quot;</span><span class="br0">&#41;</span> <span class="kw1">or</span> <span class="kw3">return</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">@Zeilen</span> <span class="sy0">=</span> <span class="re4">&lt;DATEI&gt;</span><span class="sy0">;</span>
+  <span class="kw3">close</span><span class="br0">&#40;</span>DATEI<span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@Zeilen</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$Schluessel</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Wert</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">split</span><span class="br0">&#40;</span><span class="co2">/:/</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$Schluessel</span> <span class="sy0">=~</span> <span class="co2">s/\;/_/g</span><span class="sy0">;</span>
+    <span class="re0">$Objekt</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span><span class="re0">$Schluessel</span><span class="br0">&#125;</span> <span class="sy0">=</span> <span class="re0">$Wert</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw3">return</span><span class="br0">&#40;</span> <span class="sy0">%</span><span class="br0">&#123;</span> <span class="re0">$Objekt</span> <span class="br0">&#125;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> VCreset <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Objekt</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="sy0">%</span><span class="br0">&#123;</span> <span class="re0">$Objekt</span> <span class="br0">&#125;</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="nu0">1</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw2">use</span> VCard<span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h1&gt;Tests mit dem VCard-Objekt&lt;/h1&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Thilo</span> <span class="sy0">=</span> VCard<span class="sy0">-&gt;</span><span class="kw2">new</span><span class="br0">&#40;</span><span class="st0">&quot;3.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ina</span> <span class="sy0">=</span> VCard<span class="sy0">-&gt;</span><span class="kw2">new</span><span class="br0">&#40;</span><span class="st0">&quot;3.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;&lt;b&gt;Wert der im Modul erzeugte Objekteigenschaft BEGIN:&lt;/b&gt; $Ina-&gt;{BEGIN}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Sicherung</span> <span class="sy0">=</span> <span class="re0">$Ina</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span><span class="kw2">BEGIN</span><span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="re0">$Ina</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span><span class="kw2">BEGIN</span><span class="br0">&#125;</span> <span class="sy0">=</span> <span class="st0">&quot;fangen wir an&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;BEGIN nach der Wert&amp;amp;auml;nderung:&lt;/b&gt; $Ina-&gt;{BEGIN}&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="re0">$Ina</span><span class="sy0">-&gt;</span><span class="br0">&#123;</span><span class="kw2">BEGIN</span><span class="br0">&#125;</span> <span class="sy0">=</span> <span class="re0">$Sicherung</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Da dies aber Unsinn ist, wurde der Wert wieder auf '$Ina-&gt;{BEGIN}' gesetzt.&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCset</span><span class="br0">&#40;</span><span class="st0">&quot;FN&quot;</span><span class="sy0">,</span><span class="st0">&quot;Thilo Teufel&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCset</span><span class="br0">&#40;</span><span class="st0">&quot;TEL_CELL_VOICE&quot;</span><span class="sy0">,</span><span class="st0">&quot;(0170) 398373740&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Ina</span><span class="sy0">-&gt;</span><span class="me1">VCset</span><span class="br0">&#40;</span><span class="st0">&quot;FN&quot;</span><span class="sy0">,</span><span class="st0">&quot;Ina Bikina&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Ina</span><span class="sy0">-&gt;</span><span class="me1">VCset</span><span class="br0">&#40;</span><span class="st0">&quot;EMAIL_PREF_INTERNET&quot;</span><span class="sy0">,</span><span class="st0">&quot;bikina<span class="es0">\@</span>example.org&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;&lt;b&gt;Name:&lt;/b&gt; &quot;</span><span class="sy0">,</span><span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCget</span><span class="br0">&#40;</span><span class="st_h">'FN'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;Handy:&lt;/b&gt; &quot;</span><span class="sy0">,</span><span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCget</span><span class="br0">&#40;</span><span class="st_h">'TEL_CELL_VOICE'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;&lt;b&gt;Name:&lt;/b&gt; &quot;</span><span class="sy0">,</span><span class="re0">$Ina</span><span class="sy0">-&gt;</span><span class="me1">VCget</span><span class="br0">&#40;</span><span class="st_h">'FN'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;Handy:&lt;/b&gt; &quot;</span><span class="sy0">,</span><span class="re0">$Ina</span><span class="sy0">-&gt;</span><span class="me1">VCget</span><span class="br0">&#40;</span><span class="st_h">'EMAIL_PREF_INTERNET'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;&lt;b&gt;Anzahl angelegter Objekte:&lt;/b&gt; $VCard::Objekte &lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$Datei</span> <span class="sy0">=</span> <span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCsave</span><span class="br0">&#40;</span><span class="st0">&quot;/daten/vcard/teufel.vcf&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;VCard von Thilo Teufel in &lt;tt&gt;$Datei&lt;/tt&gt; gespeichert!&lt;br&gt;&quot;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;VCard von Thilo Teufel konnte nicht gespeichert werden!&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCreset</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;&lt;b&gt;Name von Thilo nach Objekt-Reset:&lt;/b&gt; &quot;</span><span class="sy0">,</span><span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCget</span><span class="br0">&#40;</span><span class="st_h">'FN'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;Handy von Thilo nach Objekt-Reset:&lt;/b&gt; &quot;</span><span class="sy0">,</span><span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCget</span><span class="br0">&#40;</span><span class="st_h">'TEL_CELL_VOICE'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCopen</span><span class="br0">&#40;</span><span class="st0">&quot;/daten/vcard/teufel.vcf&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;VCard von Thilo Teufel wieder ge&amp;amp;ouml;ffnet!&lt;br&gt;&quot;</span><span class="sy0">;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;&lt;b&gt;Name von Thilo nach Datei&amp;amp;ouml;ffnen:&lt;/b&gt; &quot;</span><span class="sy0">,</span><span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCget</span><span class="br0">&#40;</span><span class="st_h">'FN'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;Handy von Thilo nach Datei&amp;amp;ouml;ffnen:&lt;/b&gt; &quot;</span><span class="sy0">,</span><span class="re0">$Thilo</span><span class="sy0">-&gt;</span><span class="me1">VCget</span><span class="br0">&#40;</span><span class="st_h">'TEL_CELL_VOICE'</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;VCard von Thilo Teufel konnte nicht ge&amp;amp;ouml;ffnet werden!&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html5 source-html5"><pre class="de1">BEGIN:VCARD
+VERSION:3.0
+TEL;CELL;VOICE:(0170) 398373740
+FN:Thilo Teufel
+END:VCARD</pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Prinzip funktioniert dieses Beispiel genauso wie das Beispiel mit dem <a href="#Einfaches_Beispiel:_das_HTMLprint-Objekt">HTMLprint-Objekt</a> -- deshalb interessieren an dieser Stelle nur diejenigen Dinge, die anders sind als im ersten Beispiel.
+<p>Objektdaten (oder die Eigenschaften eines Objekts) sind Variablen. Es genügt jedoch nicht, solche Variablen einfach irgendwo in der Moduldatei zu deklarieren. Eine Variable wie der Skalar <code>$Objekte</code>, der im Beispiel zu Beginn der Moduldatei <var>VCard.pm</var> deklariert wird und als Zähler für Objektinstanzen dient, gehört <b>nicht</b> zu den Objektdaten! Solche Variablen sind so genannte Klassenvariablen, da sie nur einmal für die gesamte Klasse und für jede Objektinstanz zur Verfügung stehen. Da das Modul genau einmal im Hauptscript eingebunden wird, stehen diese Variablen auch nur in einer einzigen Ausführung zur Verfügung. Das Hauptscript kann mit der Syntax <code>$VCard::Objekte</code> sehr wohl auf den Wert des Skalars <code>$Objekte</code> zugreifen. Aber trotzdem gehört diese Variable nicht zum Objekt. Objektdaten sind vielmehr solche, die bei jeder neuen Instanz eines Objekts immer wieder neu zur Verfügung stehen.
+</p><p>Die einfachste Lösung für Objektdaten ist ein <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hash</a>. In der Konstruktorfunktion <code>new</code> wird ein solcher Hash definiert - mit der Anweisung <code>my&#160;$Referenz&#160;=&#160;{};</code>. Viel zu sehen ist dabei nicht von einem Hash. Doch die leeren geschweiften Klammern symbolisieren einen leeren so genannten anonymen Hash. Dieser Hash ist damit eine Art leerer Behälter, der später Objektdaten aufnehmen kann. Der Grund dafür, dass man in der Regel einen Hash für Objektdaten wählt, ist der, dass ein Hash eine dynamische Anzahl von Daten speichern kann. Ein solcher Hash erlaubt es, Objektdaten sowohl im Modul selbst vorzudefinieren, wie auch Objektdaten im Hauptscript zu definieren (im obigen Beispiel passiert beides). Ein Array könnte das zwar theoretisch auch, aber dann wäre im Hauptscript die Suche nach einem gewünschten Objektdatum schwieriger. Hashes erleichtern den Direktzugriff auf Daten durch die benannten Schlüssel. Durch die Zuweisung des anonymen Hashes an einen Skalar - im Beispiel an <code>$Referenz</code> - wird dieser Skalar eine <a href="http://wiki.selfhtml.org/wiki/Perl/Referenzen" title="Perl/Referenzen">Referenz</a>, also ein Zeiger auf den anonymen Hash. Über diesen Zeiger ist der Zugriff auf den anonymen Hash möglich.
+</p><p>Objektdaten werden erzeugt, indem der zunächst anonyme Hash der Konstruktorfunktion mit Daten angefüllt wird. Im Beispiel geschieht das erstmals in der Subroutine bzw. Methode <code>VCinit</code>. Diese Methode wird bereits in der Konstruktorfunktion <code>new</code> aufgerufen, nämlich mit <code>$Referenz-&gt;VCinit($Version);</code>. Da <code>$Referenz</code> innerhalb der Konstruktorfunktion der Objektzeiger ist, können Sie dort über das Schema <code>$Referenz-&gt;Methode()</code> andere Subroutinen aufrufen, die dadurch an das Objekt gebunden werden. Durch diese Form des Aufrufs bekommen die Subroutinen auch stets automatisch als ersten Parameter einen Zeiger auf das Objekt übergeben, mit dem sie dann arbeiten können. So auch die Methode <code>VCinit</code> im Beispiel. Über den Objektzeiger, den sie sich mit <code>my $Objekt = shift;</code> aus der übergebenen Parameterliste holt, kann sie auf das Objekt und damit auch auf den anonymen Hash zugreifen.
+</p><p>Mit einer Anweisung wie <code>$Objekt-&gt;{BEGIN} = "VCARD";</code> wird eine vorgegebene Objekteigenschaft erzeugt. <code>$Objekt-&gt;{BEGIN}</code> zeigt auf den anonymen Hash und sagt so viel wie: "hiermit erhält der anonyme Hash einen Schlüssel mit Namen <code>BEGIN</code>". Außerdem wird diesem Schlüssel bereits ein Wert zugewiesen, nämlich <code>VCARD</code>. Auf die gleiche Weise werden in <code>VCinit</code> insgesamt drei Objekteigenschaften erzeugt. Die beiden anderen heißen <code>VERSION</code> und <code>END</code>. Der Grund für diese Namen ist im Beispiel, dass diejenigen Namen von Eigenschaften als Schlüsselnamen verwendet werden, die eine Datei vom Typ <var>.vcf</var> enthalten können. Wie so eine Datei aussieht, sehen Sie in der dargestellten vom Beispiel erzeugten Datei <var>teufel.vcf</var>. Alle Zeilen einer VCard-Datei bestehen aus einer Eigenschaft und ihrem Wert, getrennt durch einen Doppelpunkt. Drei Zeilen sollten in jeder vcf-Datei vorkommen: <code>BEGIN:VCARD</code>, <code>VERSION:[Versionsangabe]</code> und <code>END:VCARD</code>. Für diese drei Standardzeilen werden im Beispiel die drei gleichnamigen Objekteigenschaften erzeugt.
+</p><p>Weitere Objekteigenschaften werden im Beispiel im Hauptscript erzeugt. Zunächst muss dazu wieder eine Instanz der VCard-Klasse erzeugt werden. Im Beispiel werden zwei Instanzen erzeugt:<br /><code>my $Thilo = VCard-&gt;new("3.0");<br />my $Ina = VCard-&gt;new("3.0");</code><br />Beim Aufruf der Konstruktorfunktion wird die Versionsnummer für das gewünschte VCard-Format übergeben. Derzeit ist da die Version 3.0 zu notieren.
+</p><p>Nachdem die beiden Objektinstanzen angelegt sind, ist der Zugriff auf sämtliche Objektdaten möglich. Im Hauptscript wird dies zunächst mit dem Objekt für Ina demonstriert. Über den Objektzeiger <code>$Ina</code> ist es möglich, mit <code>$Ina-&gt;{BEGIN}</code> auf den Wert der Objekteigenschaft <code>BEGIN</code> zuzugreifen. Das Script zeigt auch, wie sich der Wert einer solchen vorgegebenen Objekteigenschaft ändern lässt. Das Konstrukt <code>$Ina-&gt;{BEGIN}</code> kann wie ein ganz normaler Skalar behandelt werden.<br />Da bei der objektorientierten Programmierung das Objekt eine abstrakte Einheit ist, dessen Interna Sie als Benutzer des Objekts eigentlich nichts angehen, sollten Sie darauf verzichten, direkt auf Objekteigenschaften zuzugreifen. Erstens ist nämlich nicht gesagt, dass bei einem (beliebigen) Objekt die Daten überhaupt in einem Hash gehalten werden, und zweitens kann sich die interne Datenhaltung über die verschiedenen Versionen des Moduls hinweg ändern.
+</p><p>Das Hauptscript erzeugt aber auch noch weitere neue Objekteigenschaften und versorgt diese mit Werten. Denn eine VCard-Datei soll ja diverse Adressdaten enthalten. Dies ist im Beispiel durch Aufruf der Methode <code>VCset</code> möglich, die in der Moduldatei definiert ist. Mit einer Anweisung wie:<br /><code>$Thilo-&gt;VCset("FN","Thilo Teufel");</code><br />wird für das Objekt von Thilo eine neue Objekteigenschaft namens <code>FN</code> angelegt, die den Wert <code>Thilo Teufel</code> zugewiesen bekommt. Im Beispiel sehen Sie, dass sowohl das Objekt von Thilo als auch das Objekt von Ina die Objekteigenschaft <code>FN</code> erhalten, jeweils mit eigenen Werten. Daran ist sehr schön erkennbar, dass es sich tatsächlich um verschiedene Instanzen des Objekts <code>VCard</code> handelt, wobei jede Instanz ihre eigene Datenwelt hat, ohne dass es Kollisionen mit anderen gleichzeitig existierenden Objektinstanzen gibt.
+</p><p>Während der Aufruf der Methode <code>VCset</code> so weit gut nachvollziehbar ist, ist das, was in der Moduldatei innerhalb dieser Methode geschieht, nicht so leicht zu verstehen. Auch <code>VCset</code> bekommt - wie alle Methoden - als ersten Parameter automatisch den Objektzeiger übergeben. <code>VCset</code> tut nun nichts anderes, als mit <code>$Objekt-&gt;{$Schluessel}&#160;=&#160;$Wert</code> dem anonymen Hash des Objekts einen Schlüsselnamen und einen zugehörigen Wert hinzuzufügen. Beides, also den Schlüsselnamen und den Wert, erwartet die Methode als Parameter - daher auch die voranstehenden Anweisungen wie <code>$Schluessel&#160;=&#160;shift;</code>. Die Aufrufe dieser Methode im Hauptscript übergeben ja auch die geforderten beiden Parameter.
+</p><p>Die übrigen Methoden der Moduldatei sind ganz ähnlich aufgebaut. Sie übernehmen verschiedene Aufgaben, was man mit VCard-Daten so alles anstellen kann:<br /><code>VCget</code> liefert zu einem Schlüssel den zugehörigen Wert. Gut für Abfragen. Genaugenommen ist eine Abfrage im Hauptscript wie <code>$Thilo-&gt;VCget('FN')</code> das gleiche, als ob dort stehen würde <code>$Thilo-&gt;{FN}</code>. Entscheidungen, ob man solche Methoden braucht, gehören einfach zum Design eines Objekts. Um die Programmpflege zu erleichtern, sollten Sie jedoch immer Methoden dafür bereitstellen.<br /><code>VCsave</code> speichert die Daten eines Objekts in eine vcf-Datei nach dem VCF-Standard. Im Script wird diese Funktion einmal aufgerufen und schreibt dabei die Datei <var>teufel.vcf</var>, deren Inhalt ja dargestellt ist.<br /><code>VCopen</code> liest eine beliebige VCF-Datei und speichert deren Inhalt im zugeordneten Objekt. Diese Methode können Sie also etwa verwenden, wenn Sie existierende VCF-Dateien haben, z.B. durch Export aus den Adressdaten eines VCard-fähigen E-Mail-Programms.<code>VCreset</code> löscht alle Daten eines Objekts. Es stellt also den Ursprungszustand des anonymen Hashes wieder her. Benötigt wird diese Methode innerhalb der Moduldatei von <code>VCopen</code>. Aber Sie können diese Methode natürlich auch aus dem Hauptscript aufrufen, um eine Objektinstanz wieder in ihren jungfräulichen Zustand zu versetzen. Im Hauptscript des obigen Beispiels wird dies am Objekt von Thilo demonstriert.
+</p>
+Wenn Sie das VCard-Objekts des Beispiels in der Praxis einsetzen wollen, müssen Sie die VCard-Eigenschaftsnamen kennen. Diese sind beim Internet Mail Consortium dokumentiert. Wichtig ist, dass Sie ein Semikolon immer durch Unterstrich ersetzen. So wird eine VCard-Eigenschaft wie <code>TEL;CELL;VOICE</code> bei einem Methodenaufruf wie <var>VCset</var> als <code>TEL_CELL_VOICE</code> notiert. Einige der möglichen VCard-Eigenschaften enthalten auch noch andere Zeichen wie <code>=</code> und <code>-</code>. Um diese korrekt zu verarbeiten, müssen Sie die Methoden <code>VCopen</code> und <code>VCsave</code> des Objekts vermutlich noch erweitern, worauf im Beispiel der Einfachheit halber verzichtet wurde.</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 174/1000000
+Post‐expand include size: 65882/2097152 bytes
+Template argument size: 64900/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1874-0!*!0!!de-formal!*!* and timestamp 20150301113110 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;oldid=13980">http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;oldid=13980</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FObjektorientiertes+Programmieren" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Objektorientiertes_Programmieren"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Objektorientiertes_Programmieren&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Objektorientiertes_Programmieren" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Objektorientiertes_Programmieren" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Objektorientiertes_Programmieren" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Objektorientiertes_Programmieren&amp;oldid=13980" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FObjektorientiertes_Programmieren" title="Spezial:Durchsuchen/Perl-2FObjektorientiertes Programmieren">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 16. September 2012 um 19:48 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.922-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.077 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Objektorientiertes_Programmieren by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

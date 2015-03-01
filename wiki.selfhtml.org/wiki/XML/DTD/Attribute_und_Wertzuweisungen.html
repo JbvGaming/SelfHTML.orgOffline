@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/XML/DTD/Attribute_und_Wertzuweisungen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>XML/DTD/Attribute und Wertzuweisungen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"XML/DTD/Attribute_und_Wertzuweisungen","wgTitle":"XML/DTD/Attribute und Wertzuweisungen","wgCurRevisionId":20571,"wgArticleId":4642,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"XML/DTD/Attribute_und_Wertzuweisungen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-xml {line-height: normal;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.xml.source-xml .de1, .xml.source-xml .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.xml.source-xml  {font-family:monospace;}
+.xml.source-xml .imp {font-weight: bold; color: red;}
+.xml.source-xml li, .xml.source-xml .li1 {font-weight: normal; vertical-align:top;}
+.xml.source-xml .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.xml.source-xml .li2 {font-weight: bold; vertical-align:top;}
+.xml.source-xml .es0 {color: #000099; font-weight: bold;}
+.xml.source-xml .br0 {color: #66cc66;}
+.xml.source-xml .sy0 {color: #66cc66;}
+.xml.source-xml .st0 {color: #ff0000;}
+.xml.source-xml .nu0 {color: #cc66cc;}
+.xml.source-xml .sc-1 {color: #808080; font-style: italic;}
+.xml.source-xml .sc0 {color: #00bbdd;}
+.xml.source-xml .sc1 {color: #ddbb00;}
+.xml.source-xml .sc2 {color: #339933;}
+.xml.source-xml .sc3 {color: #009900;}
+.xml.source-xml .re0 {color: #000066;}
+.xml.source-xml .re1 {color: #000000; font-weight: bold;}
+.xml.source-xml .re2 {color: #000000; font-weight: bold;}
+.xml.source-xml .ln-xtra, .xml.source-xml li.ln-xtra, .xml.source-xml div.ln-xtra {background-color: #ffc;}
+.xml.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="XML/DTD/Attribute und Wertzuweisungen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/XML/DTD/Attribute_und_Wertzuweisungen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-XML_DTD_Attribute_und_Wertzuweisungen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">XML/DTD/Attribute und Wertzuweisungen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/XML" title="XML">XML</a> | <a href="http://wiki.selfhtml.org/wiki/XML/DTD" title="XML/DTD">DTD</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Wenn Sie in HTML so etwas notieren wie <code>&lt;p align=&quot;center&quot;&gt;etwas Text&lt;/p&gt;</code>, dann ist <code>&lt;p&gt;</code> das Element, und <code>align</code> ist ein Attribut, das innerhalb des <code>&lt;p&gt;</code>-Elements vorkommen kann. Solche Attribute können Sie in eigenen XML-DTDs für die dort definierten <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln#Elementtypen_mit_Elementinhalt_definieren" title="XML/DTD/Elemente und Verschachtelungsregeln">Elementtypen</a> bestimmen. Bei der Definition eines Attributs geben Sie an, welche Wertzuweisungen dabei möglich sein sollen.
+</p><p>Beim Erstellen von DTDs müssen Sie überlegen, ob es sinnvoll ist, Daten in Attributen zu speichern oder nicht. Für viele Eigenschaften ist es durchaus sinnvoller, eigene Elementtypen zu definieren. So ist "Haarfarbe" beispielsweise eine typische natürliche Eigenschaft einer Person. Wenn nun in der Datenstruktur zur Beschreibung der Person über die Haare nichts weiter als die Haarfarbe berücksichtigt wird, dann genügt es, ein Element wie <code>&lt;haarfarbe&gt;...&lt;/haarfarbe&gt;</code> zu definieren. Wenn aber noch weitere Haareigenschaften berücksichtigt werden sollen, etwa die Haarlänge, dann bietet es sich an, die Datenstruktur so zu definieren, dass es ein Element mit verschiedenen Attributen gibt, z.B. <code>&lt;haar farbe="..." laenge="..."&gt;...&lt;/haar&gt;</code>.
+</p><p>Dabei entsteht aber die Situation, dass die eigentlichen Anwendungsdaten in den Attributen stehen, sodass zwischen Anfangs- und End-Tag des Elements gar keine sinnvollen Zeichendaten mehr möglich sind. Es ist nämlich fraglich, was zwischen dem Einleitungs-Tag <code>&lt;haar farbe="..." laenge="..."&gt;</code> und dem End-Tag <code>&lt;/haar&gt;</code> eigentlich stehen könnte. Sinnvoll ist es daher, nur solche Daten in Attribute zu packen, die vor allem zur reinen Datenverarbeitung dienen. Sind es dagegen Daten, die Inhalt enthalten, der z.B. am Bildschirm ausgegeben werden soll, dann ist es sinnvoller, eigene Elemente dafür zu definieren. So ließe sich die Datenstruktur <code>&lt;haar farbe="..." laenge="..."&gt;...&lt;/haar&gt;</code> beispielsweise auch in der folgenden Form abbilden:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;haar<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;haarfarbe<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/haarfarbe<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;haarlaenge<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/haarlaenge<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/haar<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Schema_zum_Definieren_von_Attributen"><span class="tocnumber">1</span> <span class="toctext">Schema zum Definieren von Attributen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Notwendige_und_optionale_Attribute"><span class="tocnumber">2</span> <span class="toctext">Notwendige und optionale Attribute</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Attribute_mit_Zeichenwert"><span class="tocnumber">3</span> <span class="toctext">Attribute mit Zeichenwert</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Attribute_mit_festen_alternativen_Werten"><span class="tocnumber">4</span> <span class="toctext">Attribute mit festen alternativen Werten</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Attribute_mit_Bezeichnerwert_.28Token.29"><span class="tocnumber">5</span> <span class="toctext">Attribute mit Bezeichnerwert (Token)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Attribute_mit_Identifikationswert"><span class="tocnumber">6</span> <span class="toctext">Attribute mit Identifikationswert</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Attribute_mit_Identifikationsreferenzwert"><span class="tocnumber">7</span> <span class="toctext">Attribute mit Identifikationsreferenzwert</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Attribute_mit_Entity-Wert_.28z.B._f.C3.BCr_externe_Dateireferenzen.29"><span class="tocnumber">8</span> <span class="toctext">Attribute mit Entity-Wert (z.B. für externe Dateireferenzen)</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Attribute_mit_Namenwert"><span class="tocnumber">9</span> <span class="toctext">Attribute mit Namenwert</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Attribute_ohne_Wertzuweisung"><span class="tocnumber">10</span> <span class="toctext">Attribute ohne Wertzuweisung</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Zusammenh.C3.A4ngendes_Beispiel:_Personenbeschreibung"><span class="tocnumber">11</span> <span class="toctext">Zusammenhängendes Beispiel: Personenbeschreibung</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Schema zum Definieren von Attributen">Bearbeiten</a>]</span> <span class="mw-headline" id="Schema_zum_Definieren_von_Attributen">Schema zum Definieren von Attributen</span></h2>
+<p>Attribute werden innerhalb einer DTD nach folgendem Schema notiert:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Schema
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT Elementname <span class="br0">&#40;</span>Inhalt<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST Elementname</span>
+<span class="sc3">   Attributname_1 Inhalt <span class="br0">&#91;</span>#REQUIRED|#IMPLIED|#FIXED <span class="st0">&quot;Wert&quot;</span>|Defaultwert<span class="br0">&#93;</span></span>
+<span class="sc3">   Attributname_n Inhalt <span class="br0">&#91;</span>#REQUIRED|#IMPLIED|#FIXED <span class="st0">&quot;Wert&quot;</span>|Defaultwert<span class="br0">&#93;</span></span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p><br />
+Attribute werden in Abhängigkeit von Elementtypen definiert, d.h. nur für definierte Elementtypen können Sie Attribute definieren.
+</p><p>Die Definition eines Attributs beginnt mit einer öffnenden spitzen Klammer &lt;. Dahinter folgt unmittelbar anschließend ein Ausrufezeichen&#160;! und dahinter, in Großbuchstaben, das Schlüsselwort ATTLIST. Das Wort deutet schon an, dass Sie auch eine ganze Liste von Attributen definieren können. Ein Elementtyp kann beliebig viele Attribute haben. Alle Attribute, die Sie einem Elementtyp zuordnen wollen, notieren Sie in der Attributliste zu diesem Elementtyp. Hinter ATTLIST folgt der Name des Elementtyps, auf den sich die Attribute beziehen. Dieser Elementtyp muss in der DTD definiert sein (siehe <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln" title="XML/DTD/Elemente und Verschachtelungsregeln">Elemente</a>).
+</p><p>Innerhalb der Attributliste ist es zweckmäßig, jede Attribut-Definition in einer eigenen Zeile zu notieren. Jede Attribut-Definition der Attributliste beginnt mit dem Namen des Attributs. Den Namen können Sie frei wählen. Er muss jedoch den <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Bearbeitungsregeln" title="XML/DTD/Bearbeitungsregeln">Regeln für Namen in XML</a> genügen. Hinter dem Namen notieren Sie Angaben zum Inhalt des Elementtyps. Diese Angaben können unterschiedlich sein und regeln, welche Werte ein Attribut haben kann. Schließlich gehört zu jedem Attribut noch eines der Schlüsselwörter #REQUIRED, #IMPLIED bzw. #FIXED mit einem angegebenen Wert, oder ein Defaultwert (mehr dazu im Abschnitt <a href="#Notwendige_und_optionale_Attribute">Notwendige und optionale Attribute</a>).
+</p><p>Abgeschlossen wird die Attributlisten-Definition mit einer schließenden spitzen Klammer &gt;. Die einzelnen Teile jeder Definition werden durch ein oder mehrere Leerzeichen voneinander getrennt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Notwendige und optionale Attribute">Bearbeiten</a>]</span> <span class="mw-headline" id="Notwendige_und_optionale_Attribute">Notwendige und optionale Attribute</span></h2>
+<p>Bei Attributen, die Sie in einer DTD zu einem Elementtyp definieren, müssen Sie stets angeben, ob das Attribut in dem Element vorkommen muss oder vorkommen kann. In HTML ist z.B. das Attribut <code>src</code> im <code>&lt;img&gt;</code>-Element zwingend notwendig. Das Attribut <code>title</code> kann im gleichen Element ebenfalls vorkommen, muss aber nicht.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD ressourcen.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT ressourcen <span class="br0">&#40;</span>ressource<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT ressource <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST ressource</span>
+<span class="sc3">   url            CDATA #REQUIRED</span>
+<span class="sc3">   sprache        CDATA #IMPLIED</span>
+<span class="sc3">   erfasst        CDATA #REQUIRED</span>
+<span class="sc3">   geaendert      CDATA #IMPLIED</span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel definiert als Inhalt für den Dokument-Elementtyp <code>ressourcen</code> einen Elementtyp namens <code>ressource</code>. Zu diesem Elementtyp werden vier Attribute definiert. Zwei dieser vier Attribute, nämlich die mit den Namen <code>url</code> und <code>erfasst</code>, müssen bei der Anwendung des Elementtyps notiert werden. Die beiden anderen, <code>sprache</code> und <code>geaendert</code>, können notiert werden. Notwendige Attribute kennzeichnen Sie durch den Schlüsselbezeichner #REQUIRED, und optionale Attribute durch #IMPLIED. Beide Angaben müssen jeweils am Ende einer Attribut-Definition stehen.
+</p><p>Für alle vier Attribute im Beispiel wird festgelegt, dass der zugewiesene Wert aus Zeichendaten besteht. Dies wird durch das Schlüsselwort CDATA kenntlich gemacht (siehe <a href="#Attribute_mit_Zeichenwert">Attribute mit Zeichenwert</a>).
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer gültigen Anwendung
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE ressourcen SYSTEM &quot;ressourcen.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;ressourcen<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ressource</span> <span class="re0">url</span>=<span class="st0">&quot;http://alpentouren.at/&quot;</span> <span class="re0">erfasst</span>=<span class="st0">&quot;09.11.2000&quot;</span><span class="re2">&gt;</span></span>
+Hypertextuell aufbereitete Beschreibung etlicher Rad-Touren über Alpenpässe
+<span class="sc3"><span class="re1">&lt;/ressource<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ressource</span> <span class="re0">url</span>=<span class="st0">&quot;http://www.planetbike.co.nz/&quot;</span> <span class="re0">erfasst</span>=<span class="st0">&quot;10.12.2000&quot;</span></span>
+<span class="sc3"> <span class="re0">geaendert</span>=<span class="st0">&quot;16.12.2000&quot;</span> <span class="re0">sprache</span>=<span class="st0">&quot;en&quot;</span><span class="re2">&gt;</span></span>
+Mountain Bike Touren durch Neuseeland
+<span class="sc3"><span class="re1">&lt;/ressource<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/ressourcen<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel werden zwei Elemente des Typs <code>ressource</code> notiert. Beim ersten Element werden nur die beiden notwendigen Attribute <code>url</code> und <code>erfasst</code> notiert, im zweiten Element dagegen alle vier definierten Attribute.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Attribute mit Zeichenwert">Bearbeiten</a>]</span> <span class="mw-headline" id="Attribute_mit_Zeichenwert">Attribute mit Zeichenwert</span></h2>
+<p>Jedes Attribut muss in XML eine Wertzuweisung erhalten. In vielen Fällen ist der zugewiesene Wert nicht auf einen bestimmten Wertebereich eingeschränkt, sondern kann eine unbestimmte Anzahl möglicher Werte haben. Das ist zum Beispiel der Fall, wenn das Attribut eine Kurzbeschreibung, einen numerischen Wert, einen prozentualen Wert oder eine Maßangabe enthält. Solche Attribute werden Attribute mit Zeichenwert genannt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD autos.dtd:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT autos <span class="br0">&#40;</span>auto<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT auto EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST auto</span>
+<span class="sc3">   typ CDATA #REQUIRED</span>
+<span class="sc3">   bj  CDATA #REQUIRED</span>
+<span class="sc3">   km  CDATA #REQUIRED</span>
+<span class="sc3">   ps  CDATA #REQUIRED</span>
+<span class="sc3">   vb  CDATA #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird ein Elementtyp ohne Inhalt namens <code>auto</code> definiert. Dem Elementtyp werden fünf <a href="#Notwendige_und_optionale_Attribute">Notwendige Attribute</a> zugeordnet. Alle enthalten Zeichenwert. Für diesen Wert-Typ müssen Sie hinter dem Attributnamen als Attributinhalt den Schlüsselbezeichner CDATA angeben. Zeichenwert ist eine beliebige und beliebig lange Zeichenfolge, also Text, Zahlen, und Sonderzeichen. CDATA ist eine Abkürzung für character data, zu deutsch Zeichendaten).
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer gültigen Anwendung
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE autos SYSTEM &quot;autos.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;autos<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;auto</span> <span class="re0">typ</span>=<span class="st0">&quot;AUDI 80&quot;</span> <span class="re0">bj</span>=<span class="st0">&quot;1992&quot;</span> <span class="re0">km</span>=<span class="st0">&quot;125000&quot;</span> <span class="re0">ps</span>=<span class="st0">&quot;90&quot;</span> <span class="re0">vb</span>=<span class="st0">&quot;12500 DM&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/autos<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Dem Element <code>auto</code> werden im Anwendungsbeispiel alle definierten Attribute zugewiesen. Egal ob Zeichenketten, Zahlen oder Mischformen - alle Wertzuweisungen fallen unter das, was in XML durch CDATA abgedeckt ist.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Was als Wertzuweisung in den Attributen steht, ist bei CDATA egal. Um nur bestimmte Wertzuweisungen zu erlauben, können Sie <a href="#Attribute_mit_festen_alternativen_Werten"> Attribute mit festen alternativen Werten</a> definieren.
+Innerhalb von Wertzuweisungen an Attribute können Sie auch das Apostroph-Zeichen ' und das Anführungszeichen " verwenden. Diese beiden Zeichen müssen Sie dann aber unbedingt maskieren, nämlich in der Form &#39; für ' und &quot; für ".</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Attribute mit festen alternativen Werten">Bearbeiten</a>]</span> <span class="mw-headline" id="Attribute_mit_festen_alternativen_Werten">Attribute mit festen alternativen Werten</span></h2>
+<p>Aus HTML sind Ihnen vermutlich viele Attribute bekannt, die nur bestimmte Werte zulassen. So lässt das Attribut <code>text-align</code> in den Elementen, in denen es vorkommen kann, nur Werte wie <code>left, center, right</code> und <code>justify</code> zu. Solche Attribute mit bestimmten erlaubten Wertzuweisungen können Sie auch in XML definieren.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD hotels.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT hotels <span class="br0">&#40;</span>hotel<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT hotel <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST hotel</span>
+<span class="sc3">   name            CDATA               #REQUIRED</span>
+<span class="sc3">   klasse          <span class="br0">&#40;</span>I|II|III|IV|V<span class="br0">&#41;</span>     #REQUIRED</span>
+<span class="sc3">   einzelzimmer    <span class="br0">&#40;</span>ja|nein<span class="br0">&#41;</span>           #IMPLIED</span>
+<span class="sc3">   doppelzimmer    <span class="br0">&#40;</span>ja|nein<span class="br0">&#41;</span> <span class="st0">&quot;ja&quot;</span></span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird ein Elementtyp <code>hotel</code> definiert. Dem Elementtyp werden vier Attribute zugeordnet. Das erste ist ein <a href="#.23Notwendige_und_optionale_Attribute">notwendiges Attribut</a> mit <a href="#Attribute_mit_Zeichenwert">Zeichenwert</a>. Die übrigen drei Attribute haben keinen Zeichenwert, sondern erwarten einen Wert von bestimmten möglichen Wertzuweisungen. Die möglichen Werte werden in Klammern notiert und durch das logische "Oder", symbolisiert durch den Senkrechtstrich |, voneinander getrennt. Das Attribut <code>klasse</code> erlaubt auf diese Weise einen der möglichen Werte <code>I, II, III, IV</code> oder <code>V</code>. Die Attribute <code>einzelzimmer</code> und <code>doppelzimmer</code> erlauben die Wertzuweisungen <code>ja</code> oder <code>nein</code>. 
+</p><p>Zusätzlich besteht bei Attributen mit festen alternativen Werten die Möglichkeit, einen dieser Werte als Default-Wert zu definieren. Im Beispiel ist das beim Attribut <code>doppelzimmer</code> der Fall. Dabei wird hinter der Klammer mit den möglichen Wertzuweisungen, durch ein oder mehrere Leerzeichen getrennt und in Anführungszeichen gesetzt, einer der Werte als Default-Wert notiert - im Beispiel der Wert <code>ja</code>. Wenn Sie einen solchen Default-Wert notieren, ist hinterher keine Angabe mehr dazu möglich, ob das Attribut notwendig (#REQUIRED) oder optional (#IMPLIED) ist. Denn der Default-Wert bewirkt, dass das Attribut <code>intern</code> vom Parser als notwendig interpretiert wird. Wenn das Attribut in der Anwendung weggelassen wird, wird automatisch der Default-Wert angenommen.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer gültigen Anwendung
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE hotels SYSTEM &quot;hotels.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;hotels<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;hotel</span> <span class="re0">name</span>=<span class="st0">&quot;Waldesruh&quot;</span> <span class="re0">klasse</span>=<span class="st0">&quot;IV&quot;</span><span class="re2">&gt;</span></span>
+Hotel am Waldesrand gelegen, 150 Betten, ruhig und teuer.
+<span class="sc3"><span class="re1">&lt;/hotel<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;hotel</span> <span class="re0">name</span>=<span class="st0">&quot;Arabesk&quot;</span> <span class="re0">klasse</span>=<span class="st0">&quot;II&quot;</span> <span class="re0">doppelzimmer</span>=<span class="st0">&quot;ja&quot;</span> <span class="re0">einzelzimmer</span>=<span class="st0">&quot;ja&quot;</span><span class="re2">&gt;</span></span>
+Einfaches Stadthotel, 400 Zimmer, annehmbar, ohne besonderen Komfort.
+<span class="sc3"><span class="re1">&lt;/hotel<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;hotel</span> <span class="re0">name</span>=<span class="st0">&quot;Fridolin&quot;</span> <span class="re0">klasse</span>=<span class="st0">&quot;III&quot;</span> <span class="re0">einzelzimmer</span>=<span class="st0">&quot;nein&quot;</span><span class="re2">&gt;</span></span>
+Hotel in zentraler Lage, 100 Betten, angenehm, gute Verkehrsanbindung.
+<span class="sc3"><span class="re1">&lt;/hotel<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/hotels<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel zeigt drei erlaubte Anwendungen des hotel-Elements. Im ersten Fall werden nur die beiden Attribute notiert, die in der DTD als notwendig definiert wurden. Für das Attribut <code>doppelzimmer</code> wird intern der Default-Wert <code>ja</code> interpretiert.
+</p><p>Im zweiten Anwendungsfall wird das Attribut <code>doppelzimmer</code> explizit notiert, und es wird der definierte Default-Wert zugewiesen. Genaugenommen ist diese Angabe überflüssig, weil der Default-Wert die Interpretation bereits abdeckt. Die Notation entspricht etwa der Angabe <code>text-align="left"</code> in HTML, wo die Wertzuweisung <code>left</code> als Default-Wert definiert ist.
+</p><p>Das Attribut <code>einzelzimmer</code>, das als optional (#IMPLIED) definiert ist, erhält im ersten Anwendungsfall gar keinen Wert. Im zweiten Anwendungsfall wird es explizit auf <code>ja</code>, im dritten Anwendungsfall auf <code>nein</code> gesetzt.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wertzuweisungen an Attribute mit festen alternativen Werten dürfen keine Leerzeichen enthalten, also letztlich nicht aus mehr als einem Wort bestehen.</div>
+<p>Es gibt auch die Möglichkeit, für ein Attribut eine bestimmte Wertzuweisung zu erzwingen. Dazu notieren Sie (Beispiel):
+</p><p><code>typ (hotel | motel) #FIXED "hotel"</code>
+</p><p>Durch die Angabe #FIXED erreichen Sie, dass an das Attribut <code>typ</code> keine andere Wertzuweisung als <code>hotel</code> möglich ist, obwohl noch eine andere Möglichkeit definiert ist. Solche Konstrukte können sinnvoll sein, wenn ein Attribut zu einem späteren Zeitpunkt noch andere Werte aufnehmen können, aber schon mal "etabliert" werden soll.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Attribute mit Bezeichnerwert (Token)">Bearbeiten</a>]</span> <span class="mw-headline" id="Attribute_mit_Bezeichnerwert_.28Token.29">Attribute mit Bezeichnerwert (Token)</span></h2>
+<p>Neben Attributen, mit beliebigen Zeichendaten (CDATA) als Wert oder mit festen alternativen Werten gibt es Attribute, die als Wertzuweisung Bezeichnerwerte erwarten. Bezeichnerwerte sind identifizierende Werte wie Namen oder Nummern. Zu dieser Gruppe gehören:
+</p>
+<ul><li><a href="#Attribute_mit_Identifikationswert">Attribute mit Identifikationswert</a>
+</li><li><a href="#Attribute_mit_Identifikationsreferenzwert">Attribute mit Identifikationsreferenzwert</a>
+</li><li><a href="#Attribute_mit_Entity-Wert_.28z.B._f.C3.BCr_externe_Dateireferenzen.29">Attribute mit Entity-Wert (z.B. für externe Dateireferenzen)</a>
+</li><li><a href="#Attribute_mit_Namenwert">Attribute mit nmtoken-Wert (auch für numerische Identifikationen)</a>
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Attribute mit Identifikationswert">Bearbeiten</a>]</span> <span class="mw-headline" id="Attribute_mit_Identifikationswert">Attribute mit Identifikationswert</span></h2>
+<p>XML sieht eine Möglichkeit vor, dem Parser mitzuteilen, dass der zugewiesene Wert eines bestimmten Attributs dokumentweit nur einmal vorkommen darf. Dies ist ein wichtiges Feature vor allem im Hinblick auf Script-Sprachen. Denn nur bei dokumentweit eindeutigen, identifizierenden Werten ist es möglich, ein Element über den Identifikationswert anzusprechen.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD buecher.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT buecher <span class="br0">&#40;</span>buch<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT buch <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST buch</span>
+<span class="sc3">   isbn     ID    #REQUIRED</span>
+<span class="sc3">   titel    CDATA #REQUIRED</span>
+<span class="sc3">   autor    CDATA #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird ein Elementtyp <code>buch</code> definiert. Dem Elementtyp werden drei notwendige Attribute zugeordnet. Zwei davon enthalten Zeichenwert, einer Identifikationswert - nämlich das Attribut <code>isbn</code>. Um ein Attribut mit Identifikationswert zu definieren, notieren Sie bei der Definition anstelle von CDATA den Schlüsselbezeichner ID.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer gültigen Anwendung
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE buecher SYSTEM &quot;buecher.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;buecher<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;buch</span> <span class="re0">isbn</span>=<span class="st0">&quot;nr_3-90193-3949-7&quot;</span> <span class="re0">titel</span>=<span class="st0">&quot;Anbaggern leicht gemacht&quot;</span> <span class="re0">autor</span>=<span class="st0">&quot;Dr. Howtodo&quot;</span><span class="re2">&gt;</span></span>
+Ein Anleitung zwischen Genie und Wahnsinn.
+<span class="sc3"><span class="re1">&lt;/buch<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;buch</span> <span class="re0">isbn</span>=<span class="st0">&quot;nr_3-90193-3950-2&quot;</span> <span class="re0">titel</span>=<span class="st0">&quot;Anbaggern leicht gemacht II&quot;</span> <span class="re0">autor</span>=<span class="st0">&quot;Dr. Howtodo&quot;</span><span class="re2">&gt;</span></span>
+Eine weitere Anleitung zwischen Genie und Wahnsinn.
+<span class="sc3"><span class="re1">&lt;/buch<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/buecher<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel zeigt, wie zwei gleichnamige Elemente, bei denen auch Attribute den gleichen Inhalt haben können, sich doch durch ein als ID definiertes Attribut unterscheiden müssen. Ein Parser, der XML korrekt interpretiert, müsste einen Fehler melden, wenn die Wertzuweisung an das Attribut <code>isbn</code> im zweiten Datensatz "buch" den gleichen Wert hätte wie im ersten.
+Beachten Sie:
+</p><p>Die Wertzuweisungen an ein Attribut vom Typ ID müssen den <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Bearbeitungsregeln" title="XML/DTD/Bearbeitungsregeln">Regeln für Namen</a> entsprechen! Im obigen Beispiel wird den ISBN-Nummern deshalb die Zeichenfolge nr_ vorangestellt, da die eigentliche ISBN-Nummer mit einer Ziffer beginnt, was aber kein gültiger Name wäre.
+</p><p>Der Internet Explorer mit älterem Microsoft XML-Parser akzeptiert zwar den Typ ID, lässt aber trotzdem mehrere gleiche ID-Werte in einem Dokument zu, was nicht dem Sinn der Sache entspricht. Neuere XML-Parser von Microsoft (ab msxml3.dll) verhalten sich dagegen korrekt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Attribute mit Identifikationsreferenzwert">Bearbeiten</a>]</span> <span class="mw-headline" id="Attribute_mit_Identifikationsreferenzwert">Attribute mit Identifikationsreferenzwert</span></h2>
+<p>Wenn Sie für Elementtypen Attribute mit Identifikationswert definieren, können Sie auch Attribute definieren, deren Wert auf ein bestimmtes anderes Element verweist. Auf diese Weise können Sie durch Attribute logische Abhängigkeitsbeziehungen zwischen Elementen definieren.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD liste.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT liste <span class="br0">&#40;</span>eintrag<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT eintrag <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST eintrag</span>
+<span class="sc3">   name              ID                  #REQUIRED</span>
+<span class="sc3">   elterneintrag     IDREF               #IMPLIED</span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird ein Elementtyp <code>eintrag</code> definiert. Dieser Elementtyp könnte zum Beispiel Einträge eines Inhaltsverzeichnisses aufnehmen, das baumartige Kapitelstrukturen definiert. Diese Abhängigkeit wird im Beispiel in der Definition der Attribute ausgedrückt. Der Elementtyp <code>eintrag</code> erhält ein Attribut <code>name</code>, das als Attribut mit Identifikationswert definiert wird. Jedes Element <code>eintrag</code> muss in der Anwendung also einen dokumentweit eindeutigen Wert für <code>name</code> zugewiesen bekommen.
+Ferner wird dem Element <code>eintrag</code> ein Attribut <code>elterneintrag</code> zugeordnet. Der Wert dieses Attributs muss der Definition zufolge der Name eines Eintrags sein, auf den sich das aktuelle Element bezieht. Solche Rückbeziehungen drücken Sie durch den Schlüsselbezeichner IDREF aus. Durch die beiden definierten Attribute ist es nun möglich, eine beliebige Baumstruktur abzubilden.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer gültigen Anwendung:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE liste SYSTEM &quot;liste.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;liste<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;eintrag</span> <span class="re0">name</span>=<span class="st0">&quot;wurzel&quot;</span><span class="re2">&gt;</span></span>Inhalt<span class="sc3"><span class="re1">&lt;/eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;eintrag</span> <span class="re0">name</span>=<span class="st0">&quot;einleitung&quot;</span> <span class="re0">elterneintrag</span>=<span class="st0">&quot;wurzel&quot;</span><span class="re2">&gt;</span></span>eine Einleitung<span class="sc3"><span class="re1">&lt;/eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;eintrag</span> <span class="re0">name</span>=<span class="st0">&quot;geschichte&quot;</span> <span class="re0">elterneintrag</span>=<span class="st0">&quot;einleitung&quot;</span><span class="re2">&gt;</span></span>etwas zur Geschichte<span class="sc3"><span class="re1">&lt;/eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;eintrag</span> <span class="re0">name</span>=<span class="st0">&quot;heute&quot;</span> <span class="re0">elterneintrag</span>=<span class="st0">&quot;einleitung&quot;</span><span class="re2">&gt;</span></span>heutiger Zustand<span class="sc3"><span class="re1">&lt;/eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;eintrag</span> <span class="re0">name</span>=<span class="st0">&quot;schritte&quot;</span> <span class="re0">elterneintrag</span>=<span class="st0">&quot;wurzel&quot;</span><span class="re2">&gt;</span></span>Erste Schritte<span class="sc3"><span class="re1">&lt;/eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;eintrag</span> <span class="re0">name</span>=<span class="st0">&quot;beispiel&quot;</span> <span class="re0">elterneintrag</span>=<span class="st0">&quot;schritte&quot;</span><span class="re2">&gt;</span></span>Ein kleines Beispiel<span class="sc3"><span class="re1">&lt;/eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/liste<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel zeigt, wie Sie allein mit Hilfe der beiden Attribute <code>name</code> (als ID definiert) und <code>elterneintrag</code> (als IDREF definiert) eine Baumstruktur abbilden können. Die Struktur des Beispiels lässt sich optisch so darstellen:
+</p>
+<ul><li>Teil von Inhalt
+<ul><li>Teil von eine Einleitung
+<ul><li>Seite etwas zur Geschichte
+</li><li>Seite heutiger Zustand
+</li></ul>
+</li><li>Teil von Erste Schritte
+<ul><li>Seite Ein kleines Beispiel
+</li></ul>
+</li></ul>
+</li></ul>
+<p>Das Attribut <code>elterneintrag</code> ist im Beispiel als optional (#IMPLIED) definiert. Deshalb darf es z.B. im ersten Eintrag des Beispiels (dem Eintrag mit dem Namen wurzel) entfallen.
+Beachten Sie:
+</p><p>Neben IDREF gibt es beim Definieren von Attributen mit Identifikationsreferenzwert auch noch die Pluralform IDREFS. Dadurch erlauben Sie, dass einem solchen Attribut mehrere eindeutige Bezugswerte zugewiesen werden können. Würde man im obigen Beispiel etwa definieren:
+</p><p><code>elterneintrag IDREFS #REQUIRED</code>
+</p><p>Dann wäre in der Anwendung eine Zuweisung wie diese erlaubt:
+</p><p><code>&lt;eintrag name="schritte" elterneintrag="wurzel einleitung"&gt;Erste Schritte&lt;/eintrag&gt;</code>
+</p><p>Trennen Sie dabei mehrere Zuweisungen durch Leerzeichen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Attribute mit Entity-Wert (z.B. für externe Dateireferenzen)">Bearbeiten</a>]</span> <span class="mw-headline" id="Attribute_mit_Entity-Wert_.28z.B._f.C3.BCr_externe_Dateireferenzen.29">Attribute mit Entity-Wert (z.B. für externe Dateireferenzen)</span></h2>
+<p>Bei Attributen mit Entity-Wert wird in der Anwendung die Wertzuweisung an ein solches Attribut als Name einer definierten <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Entities" title="XML/DTD/Entities">Entity</a> erkannt. Der zugewiesene Wert ist dann nicht der notierte Name, sondern die Definition, die damit verknüpft ist. Diese Möglichkeit ist vor allem deshalb interessant, weil sie in XML die Art und Weise ist, um externe Dateien zu referenzieren. Stellen Sie sich eine Notierung wie <code>&lt;bild quelle="netz.gif"&gt;</code> vor. Um dem Parser mitzuteilen, dass er diesen Attributinhalt nicht einfach als Zeichenfolge, sondern als Referenz einer externen Datei interpretieren soll, ist der Umweg über die als <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Entities#Entities_f.C3.BCr_externe_Ressourcen" title="XML/DTD/Entities">externe Entitiy</a> definierte Referenz erforderlich.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD bild.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!NOTATION gif PUBLIC <span class="st0">&quot;+//ISBN 0-7923-9432-1::Graphic Notation//NOTATION CompuServer Graphic Interchange Format//EN&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ENTITY netz SYSTEM <span class="st0">&quot;netz.gif&quot;</span> NDATA gif<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT bild EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST bild</span>
+<span class="sc3">   quelle            ENTITY              #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Wie Sie sehen, ist das Einbinden einer externen Referenz etwas aufwendig. In der DTD geben Sie sowohl die Quelle der zu referenzierenden Datei an, als auch die Art, wie der entsprechende Dateityp verarbeitet werden sollte. Die Quelle definieren Sie mit der <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Entities#Entities_f.C3.BCr_externe_Ressourcen" title="XML/DTD/Entities">externen Entity-Anweisung</a> (&lt;!ENTITY...&gt;), die Verarbeitung des Dateityps mit der <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Notationen" title="XML/DTD/Notationen">Notation</a>-Anweisung (&lt;!NOTATION...&gt;). Im Beispiel wird dann ein Elementtyp namens <code>bild</code> und dazu ein Attribut namens <code>quelle</code> definiert. Um ein Attribut mit Entity-Wert zu definieren, notieren Sie bei der Definition anstelle von CDATA den Schlüsselbezeichner ENTITY.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer gültigen Anwendung
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE bild SYSTEM &quot;bild.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;bild</span> <span class="re0">quelle</span>=<span class="st0">&quot;netz&quot;</span> <span class="re2">/&gt;</span></span></pre></div></div></div>
+</div>
+<p>Die Anwendung ist ganz einfach: dem Element <code>bild</code> wird beim Attribut <code>quelle</code> ein Name zugewiesen. Dieser Name ist in der DTD als Entity definiert. Durch die Definition als Attribut mit Entity-Wert wird dem Parser mitgeteilt, dass er den zugewiesenen Wert als Namen einer Entity zu interpretieren hat. Bei der Interpretation wird der zugewiesene Wert "netz" durch die damit verbundene Verknüpfung "netz.gif" ersetzt. Durch die Definition als externe Entity (mit SYSTEM) weiß der Parser außerdem, dass dieser Wert die Pfadangabe zu einer anderen Datei darstellt.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Der hier beschriebene Weg ist keine Lösung, wenn Sie erreichen möchten, dass einem Attribut eine beliebige externe Quelle zugewiesen werden kann, wie es etwa in HTML bei <code>&lt;img src=&quot;...&quot;&gt;</code> möglich ist. So etwas kann derzeit in XML gar nicht definiert werden. In XHTML, der XML-gerechten Definition von HTML, ist das src-Attribut des img-Elements schlicht als CDATA definiert. Dass ein Web-Browser dieses Attribut als Aufforderung versteht, an der entsprechenden Stelle die gewünschte Grafik anzuzeigen, ist nur im Web-Browser so programmiert - es steht jedoch nicht in der XHTML-DTD! Wenn Sie also XML-Daten direkt am Bildschirm ausgeben wollen, sind beliebige externe Referenzen ein Problem. Ein möglicher Weg, dieses Problem zu lösen, stellt <a href="http://wiki.selfhtml.org/wiki/XML/XSL" title="XML/XSL">XSLT</a> dar, mit dessen Hilfe Sie XML-Daten vor der Datenausgabe in HTML übersetzen können.
+Neben ENTITY gibt es beim Definieren von Attributen auch noch die Pluralform ENTITIES. Dadurch erlauben Sie, dass einem solchen Attribut mehrere Entity-Namen zugewiesen werden können. Trennen Sie dabei mehrere Zuweisungen durch Leerzeichen.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Attribute mit Namenwert">Bearbeiten</a>]</span> <span class="mw-headline" id="Attribute_mit_Namenwert">Attribute mit Namenwert</span></h2>
+<p>Solche Attribute erwarten als Wert einen Namen, der jedoch im Gegensatz zu <a href="#Attribute_mit_Identifikationswert">Attributen mit Identifikationswert</a> nicht dokumentweit eindeutig sein muss. Der Name darf keine Leerzeichen enthalten und muss mit einem Buchstaben, einer Ziffer oder einem der Zeichen . (Punkt), - (Bindestrich), _ (Unterstrich) oder&#160;: (Doppelpunkt) beginnen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD feiertage.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT feiertage <span class="br0">&#40;</span>feiertag<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT feiertag EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST feiertag</span>
+<span class="sc3">   datum            NMTOKEN              #REQUIRED</span>
+<span class="sc3">   ereignis         CDATA                #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird für ein Element <code>feiertag</code> eine Attributliste mit zwei Attributen <code>datum</code> und <code>ereignis</code> definiert. Das Attribut <code>datum</code> hat dabei Namenwert. Erreicht wird dies durch das Schlüsselwort NMTOKEN.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer gültigen Anwendung
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE feiertage SYSTEM &quot;feiertage.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;feiertage<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;feiertag</span> <span class="re0">datum</span>=<span class="st0">&quot;6.1.&quot;</span> <span class="re0">ereignis</span>=<span class="st0">&quot;Hl. Drei Könige&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;feiertag</span> <span class="re0">datum</span>=<span class="st0">&quot;1.5.&quot;</span> <span class="re0">ereignis</span>=<span class="st0">&quot;Arbeiterfeiertag&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;feiertag</span> <span class="re0">datum</span>=<span class="st0">&quot;25.12.&quot;</span> <span class="re0">ereignis</span>=<span class="st0">&quot;1. Weihnachtstag&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/feiertage<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel definiert drei Feiertage mit Datum und Ereignis. Die Werte der Attribute <code>datum</code> entsprechen durchaus den erlaubten Regeln für den Typ NMTOKEN. In der Praxis wird dieser Typ auch gerne verwendet, um mit numerischen ID-Werten zu arbeiten, da Attribute mit Identifikationswert keine Ziffern am Anfang der Wertzuweisung zulassen.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Neben NMTOKEN gibt es beim Definieren von Attributen auch noch die Pluralform NMTOKENS. Dadurch erlauben Sie, dass einem solchen Attribut mehrere Namen zugewiesen werden können. Trennen Sie dabei mehrere Zuweisungen durch Leerzeichen.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Attribute ohne Wertzuweisung">Bearbeiten</a>]</span> <span class="mw-headline" id="Attribute_ohne_Wertzuweisung">Attribute ohne Wertzuweisung</span></h2>
+<p>Aus HTML kennen Sie vermutlich Konstrukte wie <code>&lt;hr noshade&gt;</code> oder <code>&lt;td nowrap&gt;</code>. Standalone-Attribute ohne Wertzuweisung also. Solche Attribute gibt es in der Syntax von XML nicht. XML sieht vor, dass jedem Attribut ein Wert zugewiesen wird. Jedes Attribut muss bei der Definition mindestens den unbestimmten Inhaltsyp CDATA erhalten. Da Attribute wie <code>noshade</code> eigentlich nichts weiter sind als eine Abkürzung für so etwas wie <code>noshade="yes"</code>, empfiehlt sich bei der Definition solcher Attribute das Arbeiten mit <a href="#Attribute_mit_festen_alternativen_Werten">Attributen mit festen alternativen Werten</a>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Zusammenhängendes Beispiel: Personenbeschreibung">Bearbeiten</a>]</span> <span class="mw-headline" id="Zusammenh.C3.A4ngendes_Beispiel:_Personenbeschreibung">Zusammenhängendes Beispiel: Personenbeschreibung</span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_leer"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Leer"><img alt="Leer" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie5"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="IE 5.0"><img alt="IE 5.0" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx1"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Firefox 1.0"><img alt="Firefox 1.0" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf1_0"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Safari 1.0"><img alt="Safari 1.0" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op5_12"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Opera 5.12"><img alt="Opera 5.12" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Menschen haben viele Eigenschaften, daher scheint eine Personenbeschreibung ein typischer Anwendungsfall für den Einsatz von Attributen zu sein. Doch bei der Umsetzung in XML müssen Sie dabei die Überlegungen berücksichtigen, die im Abschnitt <a href="http://wiki.selfhtml.org/wiki/">Allgemeines zu Attributen</a> besprochen wurden.
+</p><p>Das folgende Beispiel zeigt ein Daten-Design, bei dem alle Nutzdaten in Attributen gespeichert werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD personendatenbank.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT personendatenbank          <span class="br0">&#40;</span>person<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT person          <span class="br0">&#40;</span>bio,sozio<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST person</span>
+<span class="sc3">   name                   CDATA #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT bio             <span class="br0">&#40;</span>augen,haar,haut,gewicht,blutgruppe<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT augen           EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST augen</span>
+<span class="sc3">   farbe                  CDATA #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT haar            EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST haar</span>
+<span class="sc3">   farbe                  CDATA #REQUIRED</span>
+<span class="sc3">   bemerkung              CDATA #IMPLIED</span>
+<span class="sc3"><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT haut            EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST haut</span>
+<span class="sc3">   farbe                  CDATA #REQUIRED</span>
+<span class="sc3">   bemerkung              CDATA #IMPLIED</span>
+<span class="sc3"><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT gewicht         EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST gewicht</span>
+<span class="sc3">   kg                     CDATA #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT blutgruppe      EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST blutgruppe</span>
+<span class="sc3">   typ                    <span class="br0">&#40;</span>A|B|0|AB<span class="br0">&#41;</span> #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT sozio           <span class="br0">&#40;</span>sprache,stand,passport<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT sprache         EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST sprache</span>
+<span class="sc3">   lang                   CDATA #REQUIRED</span>
+<span class="sc3">   kurz                   <span class="br0">&#40;</span>de|en|fr|es|pt|it<span class="br0">&#41;</span> #IMPLIED</span>
+<span class="sc3"><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT stand           EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST stand</span>
+<span class="sc3">   typ                    <span class="br0">&#40;</span>ledig|verheiratet|verwitwet<span class="br0">&#41;</span> #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT passport        EMPTY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ATTLIST passport</span>
+<span class="sc3">   nr                     NMTOKEN #REQUIRED</span>
+<span class="sc3"><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer gültigen Anwendung
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE personendatenbank SYSTEM &quot;personendatenbank.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;personendatenbank<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;person</span> <span class="re0">name</span>=<span class="st0">&quot;Bruno Buddelmann&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;bio<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;augen</span> <span class="re0">farbe</span>=<span class="st0">&quot;graublau&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;haar</span> <span class="re0">farbe</span>=<span class="st0">&quot;blond&quot;</span> <span class="re0">bemerkung</span>=<span class="st0">&quot;hin und wieder getönt&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;haut</span> <span class="re0">farbe</span>=<span class="st0">&quot;weiß&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;gewicht</span> <span class="re0">kg</span>=<span class="st0">&quot;84&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;blutgruppe</span> <span class="re0">typ</span>=<span class="st0">&quot;A&quot;</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/bio<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;sozio<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sprache</span> <span class="re0">lang</span>=<span class="st0">&quot;deutsch&quot;</span> <span class="re0">kurz</span>=<span class="st0">&quot;de&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;stand</span> <span class="re0">typ</span>=<span class="st0">&quot;ledig&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;passport</span> <span class="re0">nr</span>=<span class="st0">&quot;38385409398&quot;</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/sozio<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/person<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/personendatenbank<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Die Beispiel-DTD definiert einen Dokument-Elementtyp <code>personendatenbank</code> der beliebig viele Elemente des Typs <code>person&lt;7code&gt; enthalten kann. Dieser Elementtyp besteht seinerseits aus <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln#Elementtypen_mit_Elementinhalt_definieren" title="XML/DTD/Elemente und Verschachtelungsregeln">Elementinhalt</a>. Ferner erhält der Elementtyp &lt;code&gt;person</code> ein immer erforderliches Attribut <code>name</code>, in dem der Name der Person notiert werden soll. Die beiden Elementtypen <code>bio</code> und <code>sozio</code>, die den Elementinhalt von <code>person</code> darstellen, sind selbst wieder Elementtypen mit Elementinhalt. Der Elementtyp <code>bio</code> besteht aus der festen Elementtypfolge <code>augen,haar,haut,gewicht,blutgruppe</code>, und der Elementtyp <code>sozio</code> aus der festen Elementtypfolge <code>sprache,stand,passport</code>. Auf diese Weise entsteht ein strukturierter Datensatz <code>person</code>.
+</p><p>Die untergeordneten Elementtypen sind ausnahmslos mit dem Schlüsselwort EMPTY als Elemente ohne Inhalt definiert. Es werden jedoch für all diese Elementtypen Attribute definiert, in denen bei der Anwendung Daten gespeichert werden können. Die meisten dieser Attribute werden mit Hilfe des Schlüsselworts REQUIRED als notwendige Attribute definiert, einige mit IMPLIED als optionale Attribute (siehe <a href="#.23Notwendige_und_optionale_Attribute">notwendige und optionale Attribute</a>).
+</p><p>In der Anwendung des Beispiels ist die typische Notation für Tags ohne End-Tags erkennbar (zur Notation solcher Elemente siehe auch den Abschnitt <a href="http://wiki.selfhtml.org/wiki/XML/Regeln/Tags,Attribute,_Wertzuweisungen_und_Kommentare" title="XML/Regeln/Tags,Attribute, Wertzuweisungen und Kommentare">Tags, Attribute und Wertzuweisungen</a>). Die Beispieldatei <code>person.xml</code> enthält im Beispiel genau einen Datensatz <code>person</code>. Die Datei könnte laut DTD-Definition jedoch beliebig viele solcher Datensätze enthalten, wobei jedoch alle Datensätze den gleichen Elementaufbau haben müssen.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Opera, Safari und Firefox beachten die externe DTD nicht.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 2045/1000000
+Post‐expand include size: 17110/2097152 bytes
+Template argument size: 8158/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4642-0!*!0!!de-formal!2!* and timestamp 20150301151111 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;oldid=20571">http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;oldid=20571</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=XML%2FDTD%2FAttribute+und+Wertzuweisungen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/XML/DTD/Attribute_und_Wertzuweisungen"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/XML/DTD/Attribute_und_Wertzuweisungen" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/XML/DTD/Attribute_und_Wertzuweisungen" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/XML/DTD/Attribute_und_Wertzuweisungen" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Attribute_und_Wertzuweisungen&amp;oldid=20571" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/XML-2FDTD-2FAttribute_und_Wertzuweisungen" title="Spezial:Durchsuchen/XML-2FDTD-2FAttribute und Wertzuweisungen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 1. August 2014 um 07:47 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 924-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.116 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/XML/DTD/Attribute_und_Wertzuweisungen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:20 GMT -->
+</html>

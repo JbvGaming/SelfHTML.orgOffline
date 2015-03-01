@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Funktionen für Berechnungen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Funktionen_für_Berechnungen","wgTitle":"Perl/Funktionen für Berechnungen","wgCurRevisionId":20888,"wgArticleId":1886,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Funktionen_für_Berechnungen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Funktionen für Berechnungen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Funktionen_f%C3%BCr_Berechnungen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Funktionen_für_Berechnungen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Funktionen für Berechnungen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_diesen_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu diesen Funktionen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#abs_-_absoluten_Wert_einer_Zahl_ermitteln"><span class="tocnumber">2</span> <span class="toctext">abs - absoluten Wert einer Zahl ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#atan2_-_Arkustangens_eines_Quotienten_ermitteln"><span class="tocnumber">3</span> <span class="toctext">atan2 - Arkustangens eines Quotienten ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#cos_-_Cosinus_einer_Zahl_ermitteln"><span class="tocnumber">4</span> <span class="toctext">cos - Cosinus einer Zahl ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#exp_-_Exponentialwert_einer_Zahl_auf_Basis_der_Zahl_.22e.22_ermitteln"><span class="tocnumber">5</span> <span class="toctext">exp - Exponentialwert einer Zahl auf Basis der Zahl "e" ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#hex_-_Dezimalwert_einer_Hexadezimalzahl_ermitteln"><span class="tocnumber">6</span> <span class="toctext">hex - Dezimalwert einer Hexadezimalzahl ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#int_-_Ganzzahlanteil_einer_Zahl_ermitteln"><span class="tocnumber">7</span> <span class="toctext">int - Ganzzahlanteil einer Zahl ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#log_-_nat.C3.BCrlichen_Logarithmus_einer_Zahl_ermitteln"><span class="tocnumber">8</span> <span class="toctext">log - natürlichen Logarithmus einer Zahl ermitteln</span></a></li>
+<li class="toclevel-1"><a href="#oct_-_Dezimalwert_einer_Oktalzahl_ermitteln"><span class="tocnumber">9</span> <span class="toctext">oct - Dezimalwert einer Oktalzahl ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#rand_-_Zufallswert_ermitteln"><span class="tocnumber">10</span> <span class="toctext">rand - Zufallswert ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#sin_-_Sinus_einer_Zahl_ermitteln"><span class="tocnumber">11</span> <span class="toctext">sin - Sinus einer Zahl ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#sqrt_-_Quadratwurzel_einer_Zahl_ermitteln"><span class="tocnumber">12</span> <span class="toctext">sqrt - Quadratwurzel einer Zahl ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#srand_-_Zufallsberechnung_initialisieren"><span class="tocnumber">13</span> <span class="toctext">srand - Zufallsberechnung initialisieren</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu diesen Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_diesen_Funktionen"> Allgemeines zu diesen Funktionen </span></h2>
+<p>Perl stellt in seinem Kern nur wenige mathematische Funktionen zur Verfügung, da es eher als Sprache für Zeichenketten- und Dateiverarbeitung konzipiert ist. Es gibt jedoch mächtige Module, die Perl auch zu einer mathematisch mächtigen Sprache machen. Beachten Sie neben den hier beschriebenen Funktionen deshalb auch die <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodule</a>, die sich problemlos einbinden lassen und viele weitere interessante Funktionen für mathematisch-naturwissenschaftliche und kaufmännische Berechnungen zur Verfügung stellen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: abs - absoluten Wert einer Zahl ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="abs_-_absoluten_Wert_einer_Zahl_ermitteln"> <span id="abs"></span> abs - absoluten Wert einer Zahl ermitteln</span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> eine beliebige erlaubte Zahl.
+</li></ol>
+<p>Gibt den positiven Wert der Zahl zurück, falls sie negativ ist. Ist die Zahl positiv, wird sie unverändert zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Zahlen</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="nu0">1463.45</span><span class="sy0">,</span><span class="nu0">2038.02</span><span class="sy0">,-</span><span class="nu0">12348.12</span><span class="sy0">,</span><span class="nu0">5671.12</span><span class="sy0">,-</span><span class="nu0">4939.48</span><span class="sy0">,-</span><span class="nu0">1124.09</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;table border=<span class="es0">\&quot;</span>1<span class="es0">\&quot;</span>&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;tr&gt;&lt;th&gt;schwarze Zahlen&lt;/th&gt;&lt;th style=<span class="es0">\&quot;</span>color:red<span class="es0">\&quot;</span>&gt;rote Zahlen&lt;/th&gt;&lt;/tr&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$Zahl</span> <span class="br0">&#40;</span><span class="re0">@Zahlen</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Zahl</span> <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw3">print</span> <span class="st0">&quot;&lt;tr&gt;&lt;td&gt;$Zahl&lt;/td&gt;&lt;td style=<span class="es0">\&quot;</span>color:red<span class="es0">\&quot;</span>&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw1">else</span> <span class="br0">&#123;</span>
+    <span class="kw1">my</span> <span class="re0">$Abszahl</span> <span class="sy0">=</span> <span class="kw3">abs</span><span class="br0">&#40;</span><span class="re0">$Zahl</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw3">print</span> <span class="st0">&quot;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td style=<span class="es0">\&quot;</span>color:red<span class="es0">\&quot;</span>&gt;$Abszahl&lt;/td&gt;&lt;/tr&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/table&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert eine Liste <code>@Zahlen</code>. Einige der Zahlen sind positiv, andere negativ. Anschließend wird HTML-Code ausgegeben. Dabei wird eine Tabelle mit zwei Spalten erzeugt. Links stehen positive (schwarze) Zahlen, rechts negative (rote) Zahlen. Die roten Zahlen sollen ohne das Minusvorzeichen, aber eben in roter Färbung dargestellt werden. Deshalb wird, falls eine Zahl negativ ist, die Funktion <code>abs</code> auf die Zahl angewendet. Das Ergebnis wird in dem Skalar <code>$Abszahl</code> gespeichert und ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: atan2 - Arkustangens eines Quotienten ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="atan2_-_Arkustangens_eines_Quotienten_ermitteln"> <span id="atan2"></span> atan2 - Arkustangens eines Quotienten ermitteln</span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> eine beliebige erlaubte Zahl x,
+</li><li> eine beliebige erlaubte Zahl y.
+</li></ol>
+<p>Gibt den Arkustangens des Quotienten aus x und y zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> constant <span class="br0">&#123;</span> 
+   PI <span class="sy0">=&gt;</span> <span class="nu0">4</span> <span class="sy0">*</span> <span class="kw3">atan2</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span> 
+<span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span> PI<span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In einem rechtwinkligen Dreieck definiert das Verhältnis von Gegenkathete zu Ankathete den Tangens eines Winkels. Für ein gleichschenklig rechtwinkliges Dreieck sind die Basiswinkel 45°, der Tangens von 45° (entspricht pi/4 im Bogenmaß) ist also 1:
+<p>Der Arkustangens ist die Umkehrfunktion: <code>atan2(1,1) = Pi / 4</code>
+</p><p>Das Beispiel erzeugt mit der Funktion <code>atan2</code> die Zahl Pi, da die Winkelmaße im Bogenmaß verwendet werden.
+</p>
+Da man im Verlauf eines Programmes eine solche Zahl gerne als Konstante verwendet, wurde hier das Pragma <code>constant</code> verwendet.</div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/atan2.html">http://perldoc.perl.org/functions/atan2.html</a>
+Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/constant.html">http://perldoc.perl.org/constant.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: cos - Cosinus einer Zahl ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="cos_-_Cosinus_einer_Zahl_ermitteln"> <span id="cos"></span> cos - Cosinus einer Zahl ermitteln</span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> eine beliebige erlaubte Zahl.
+</li></ol>
+<p>Gibt den Cosinus der Zahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> constant <span class="br0">&#123;</span> 
+   PI <span class="sy0">=&gt;</span> <span class="nu0">4</span> <span class="sy0">*</span> <span class="kw3">atan2</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span> 
+<span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$out</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">..</span><span class="nu0">6</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Winkel</span> <span class="sy0">=</span> PI <span class="sy0">*</span> <span class="co5">$_</span><span class="sy0">/</span><span class="nu0">6</span><span class="sy0">;</span>
+  <span class="re0">$out</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st0">&quot;%.3f&#160;:&#160;%.3f<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$Winkel</span> <span class="sy0">,</span> <span class="kw3">cos</span><span class="br0">&#40;</span><span class="re0">$Winkel</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$out</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel speichert zuerst die Zahl PI in einer Konstanten. (Siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen#atan2_-_Arcus_Tangens_von_x_durch_y_ermitteln" title="Perl/Funktionen für Berechnungen">atan2</a>)
+Danach wird für die ersten 180 Grad alle 30 Grad der Bogenwinkel und dessen zugehöriger Cosinus-Wert berechnet, formatiert gespeichert und ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: exp - Exponentialwert einer Zahl auf Basis der Zahl &quot;e&quot; ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="exp_-_Exponentialwert_einer_Zahl_auf_Basis_der_Zahl_.22e.22_ermitteln"> <span id="exp"></span> exp - Exponentialwert einer Zahl auf Basis der Zahl "e" ermitteln</span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> eine beliebige erlaubte Zahl.
+</li></ol>
+<p>Gibt den Exponentialwert der Zahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$x</span> <span class="sy0">=</span> <span class="kw3">exp</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;x = $x<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erzeugt HTML-Code. Dabei wird der Exponentialwert von 1 ermittelt und in dem Skalar <code>$x</code> gespeichert. Das Ergebnis wird ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: hex - Dezimalwert einer Hexadezimalzahl ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="hex_-_Dezimalwert_einer_Hexadezimalzahl_ermitteln"> <span id="hex"></span> hex - Dezimalwert einer Hexadezimalzahl ermitteln</span></h2>
+<p>Konvertiert einen als Zeichenkette vorliegenden Hexadezimalwert in eine entsprechende Dezimalzahl.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine Zeichenkette, die einen gültigen Hexadezimalwert darstellt, also beispielsweise <code>"0xB56A"</code> oder <code>"B56A"</code>.
+</li></ol>
+<p>Gibt den entsprechenden Dezimalwert als numerischen Wert zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Farbe</span> <span class="sy0">=</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$RotwertHex</span> <span class="sy0">=</span> <span class="kw3">substr</span><span class="br0">&#40;</span><span class="re0">$Farbe</span><span class="sy0">,</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$GruenwertHex</span> <span class="sy0">=</span> <span class="kw3">substr</span><span class="br0">&#40;</span><span class="re0">$Farbe</span><span class="sy0">,</span><span class="nu0">2</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$BlauwertHex</span> <span class="sy0">=</span> <span class="kw3">substr</span><span class="br0">&#40;</span><span class="re0">$Farbe</span><span class="sy0">,</span><span class="nu0">4</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$RotwertDez</span> <span class="sy0">=</span> <span class="kw3">hex</span><span class="br0">&#40;</span><span class="re0">$RotwertHex</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$GruenwertDez</span> <span class="sy0">=</span> <span class="kw3">hex</span><span class="br0">&#40;</span><span class="re0">$GruenwertHex</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$BlauwertDez</span> <span class="sy0">=</span> <span class="kw3">hex</span><span class="br0">&#40;</span><span class="re0">$BlauwertHex</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Farbe #$Farbe hat folgende RGB-Anteile:&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Rotwert: $RotwertDez&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Gr&amp;uuml;nwert: $GruenwertDez&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Blauwert: $BlauwertDez&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-CGI-Script erwartet einen Übergabeparameter, der beim Aufruf über einen URI hinter einem Fragezeichen notiert wird. Der Übergabeparameter besteht aus einer HTML-typischen Farbangabe, jedoch ohne das einleitende Gatterzeichen #. Beispiel: <code><a rel="nofollow" class="external free" href="http://localhost/cgi-bin/test.pl?FF9933">http://localhost/cgi-bin/test.pl?FF9933</a></code>.
+Das Beispiel-Script ermittelt den übergebenen Parameter aus der <a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">Umgebungsvariablen</a> QUERY_STRING und speichert den Wert im Skalar <code>$Farbe</code>. Mit Hilfe der Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#substr" title="Perl/Funktionen für Zeichenketten">substr</a> werden die Anteile für Rot, Grün und Blau aus der hexadezimalen Angabe extrahiert. Wenn die übergebene Zahl beispielsweise FF9933 lautet, wird in <code>$RotwertHex</code> der Wert <code>"FF"</code> gespeichert, in <code>$GruenwertHex</code> der Wert <code>"99"</code> und in <code>$BlauwertHex</code> der Wert <code>"33"</code>. Aus diesen Hexadezimalangaben wird durch Anwendung der Funktion <code>hex</code> jeweils der entsprechende dezimale Farbanteil ermittelt. Das Beispiel gibt die ermittelten Farbanteile aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: int - Ganzzahlanteil einer Zahl ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="int_-_Ganzzahlanteil_einer_Zahl_ermitteln"> <span id="int"></span> int - Ganzzahlanteil einer Zahl ermitteln</span></h2>
+<p>Die Funktion dient einerseits dazu, den Ganzzahlanteil einer Kommazahl vom Nachkommateil zu trennen. Andererseits kann sie auch auf Zeichenketten angewendet werden. Dann interpretiert sie die Zeichenkette so lange, bis sie auf ein Zeichen stößt, das nicht mehr numerisch interpretiert werden kann.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine Zahl oder Zeichenkette.
+</li></ol>
+<p>Liefert den als Ganzzahl interpretierbaren Teil der übergebenen Daten zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Ganzzahl</span> <span class="sy0">=</span> <span class="nu0">23</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Kommazahl</span> <span class="sy0">=</span> <span class="nu0">3.1415</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Minuszahl</span> <span class="sy0">=</span> <span class="sy0">-</span><span class="nu0">3.999</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Ganzzahl_Int</span> <span class="sy0">=</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="re0">$Ganzzahl</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Kommazahl_Int</span> <span class="sy0">=</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="re0">$Kommazahl</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Minuszahl_Int</span> <span class="sy0">=</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="re0">$Minuszahl</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Ganzzahl nach Anwendung von int: $Ganzzahl_Int&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Kommazahl nach Anwendung von int: $Kommazahl_Int&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Minuszahl nach Anwendung von int: $Minuszahl_Int<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert verschiedene Skalare: eine normale Ganzzahl, eine Kommazahl und eine negative Zahl, ebenfalls eine Kommazahl. Daraufhin wird auf jeden der Skalare die Funktion <code>int</code> angewendet. Die Rückgabewerte werden in eigenen, neuen Skalaren gespeichert. Zur Kontrolle wird HTML-Code mit den Werten vor und nach Anwendung der <code>int</code>-Funktion ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: log - natürlichen Logarithmus einer Zahl ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="log_-_nat.C3.BCrlichen_Logarithmus_einer_Zahl_ermitteln"> <span id="log"></span> log - natürlichen Logarithmus einer Zahl ermitteln</span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> eine beliebige erlaubte Zahl.
+</li></ol>
+<p>Gibt den natürlichen Logarithmus der Zahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Eins</span> <span class="sy0">=</span> <span class="kw3">log</span><span class="br0">&#40;</span><span class="kw3">exp</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Eins&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird ein Skalar <code>$Eins</code> definiert. Diesem Skalar wird das Ergebnis der Funktion<code>log</code> zugewiesen. Die Zahl, die dieser Funktion übergeben wird, ist im Beispiel der Rückgabewert der Funktion <a href="#exp">exp</a>, angewendet auf die Zahl 1. Da <code>exp</code> die Umkehrfunktion von <code>log</code> ist, ist das Ergebnis des verschachtelten Aufrufs beider Funktionen der Wert 1. Zur Kontrolle wird HTML-Code mit dem Ergebnis ausgegeben.</div>
+</div>
+<h2 id="oct"> <span class="mw-headline" id="oct_-_Dezimalwert_einer_Oktalzahl_ermitteln">oct - Dezimalwert einer Oktalzahl ermitteln</span></h2>
+<p>Konvertiert einen als Zeichenkette vorliegenden Oktalwert in eine entsprechende Dezimalzahl.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine Zeichenkette, die einen gültigen Oktalwert darstellt, also beispielsweise <code>"755"</code> oder <code>"0755"</code>.
+</li></ol>
+<p>Gibt den entsprechenden Dezimalwert als numerischen Wert zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$UnixRechtOct</span> <span class="sy0">=</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$DezRecht</span> <span class="sy0">=</span> <span class="kw3">oct</span><span class="br0">&#40;</span><span class="re0">$UnixRechtOct</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Dezimaldarstellung der Unix-Rechteangabe $UnixRechtOct lautet $DezRecht<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Ein typischer bekannter Anwendungsfall für Oktalwerte sind die Rechtevergaben für User, Group und World im Unix-Dateisystem. Das Beispiel-CGI-Script erwartet so eine typische oktale Rechteangabe und ermittelt daraus den entsprechenden Dezimalwert. Dazu erwartet das Script einen Übergabeparameter, der beim Aufruf über einen URI hinter einem Fragezeichen notiert wird. Der Übergabeparameter besteht aus einem Oktalwert. Beispiel:<br />
+<p><code><a rel="nofollow" class="external free" href="http://localhost/cgi-bin/test.pl?0755">http://localhost/cgi-bin/test.pl?0755</a></code>.
+</p>
+Das Script ermittelt den übergebenen Parameter aus der <a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">CGI-Umgebungsvariablen</a> <code>QUERY_STRING</code> und speichert den Wert im Skalar <code>$UnixRechtOct</code>. Dieser Skalar wird wiederum der Funktion <code>oct</code> übergeben, die eine Dezimalzahl daraus erzeugt, die in <code>$DezRecht</code> gespeichert wird. Zur Kontrolle gibt das Script die beiden Werte aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: rand - Zufallswert ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="rand_-_Zufallswert_ermitteln"> <span id="rand"></span> rand - Zufallswert ermitteln</span></h2>
+<p>Ermittelt eine Zufallszahl zwischen 0 und 1, wenn kein Parameter übergeben wird, oder eine Zufallszahl zwischen 0 inklusive und der Zahl <code>n</code> exklusive, wenn <code>n</code> als Parameter übergeben wird. Das Ergebnis ist eine Gleitpunktzahl.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> (optional) eine Zahl. Wenn angegeben, wird eine Zufallszahl zwischen 0 und dieser Zahl ermittelt, ansonsten zwischen 0 und 1.
+</li></ol>
+<p>Gibt die ermittelte Zufallszahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Zahlen</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span> <span class="sy0">&lt;</span> <span class="nu0">7</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$Zahlen</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="kw3">rand</span><span class="br0">&#40;</span><span class="nu0">49</span><span class="br0">&#41;</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">my</span> <span class="re0">@Lottozahlen</span> <span class="sy0">=</span> <span class="kw3">sort</span><span class="br0">&#40;</span>NummernSort <span class="re0">@Zahlen</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Der Lottotip von Perl lautet:&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Lottozahlen[0], $Lottozahlen[1], $Lottozahlen[2], $Lottozahlen[3], $Lottozahlen[4], $Lottozahlen[5]&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Zusatzzahl lautet: $Lottozahlen[6]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> NummernSort <span class="br0">&#123;</span>
+ <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">&lt;</span> <span class="re0">$b</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span> <span class="kw3">return</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+ <span class="kw1">elsif</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="re0">$b</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span> <span class="kw3">return</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+ <span class="kw1">else</span>
+  <span class="br0">&#123;</span> <span class="kw3">return</span> <span class="nu0">1</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script nimmt Ihnen die Entscheidung ab, sich Lottozahlen auszudenken. Es ermittelt 7 Zahlen (6 plus Zusatzzahl) zwischen 1 und 49. Die Zahlen werden in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for-Schleifen" title="Perl/Schleifen">for-Schleife</a> ermittelt. Damit wirklich ganze Zahlen zwischen 1 und 49 gefunden werden, wird dem Aufruf der <code>rand</code>-Funktion die Zahl 49 als Parameter übergeben. Damit werden jedoch nur Zahlen zwischen 0.0x und 48.9x ermittelt. Durch Hinzuzählen von 1 sind es Zahlen zwischen 1.0x und 49.9x. Indem auf diese gesamte Operation dann noch die Funktion <a href="#int">int</a> angewendet wird, kommen ganze Zahlen zwischen 1 und 49 heraus.<br />
+<p>Um die Zahlen schön sortiert auszugeben, wird noch die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#sort" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">sort</a> angewendet. Da es sich um eine numerische Sortierung handelt, benutzt das Script auch die Hilfsfunktion für numerische Sortierung.<br />
+</p>
+Das Script gibt die ermittelten Lottozahlen aus.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Bei dieser Art von Zufallszahlerzeugung handelt es sich nicht um "echte" Zufallszahlen, sondern um Pseudo-Zufallszahlen, die aufgrund eines Anfangswertes mit Hilfe eines Algorithmus erzeugt werden. Sie können diesen Anfangswert auch selbst bestimmen. Dazu dient die Funktion <a href="#srand">srand</a>.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: sin - Sinus einer Zahl ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="sin_-_Sinus_einer_Zahl_ermitteln"> <span id="sin"></span> sin - Sinus einer Zahl ermitteln</span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> eine beliebige erlaubte Zahl.
+</li></ol>
+<p>Gibt den Sinus der Zahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> constant PI <span class="sy0">=&gt;</span> <span class="nu0">4</span><span class="sy0">*</span> <span class="kw3">atan2</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> tan<span class="br0">&#123;</span>
+   <span class="kw1">my</span> <span class="re0">$Winkel</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+   <span class="kw3">return</span><span class="br0">&#40;</span> <span class="kw3">sin</span><span class="br0">&#40;</span><span class="re0">$Winkel</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw3">cos</span><span class="br0">&#40;</span><span class="re0">$Winkel</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type:text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+   <span class="st0">&quot;Der Tangens von 45 Grad ist: &quot;</span><span class="sy0">,</span> tan<span class="br0">&#40;</span> PI<span class="sy0">/</span><span class="nu0">4</span> <span class="br0">&#41;</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel nutzt die <code>sin</code> und <code>cos</code> Funktionen, um die nicht implementierte tan Funktion zu erstellen. 
+<p>Hierbei gilt: <code>tan = sin / cos</code>.
+</p><p>Um die Funktion zu testen, wird zunächst die Konstante PI definiert (Siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen#atan2_-_Arcus_Tangens_von_x_durch_y_ermitteln" title="Perl/Funktionen für Berechnungen">atan2</a>)
+</p>
+Am Schluss wird tan(45°) ausgegeben. Erwartet wird der Wert "1".</div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/sin.html">http://perldoc.perl.org/functions/sin.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: sqrt - Quadratwurzel einer Zahl ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="sqrt_-_Quadratwurzel_einer_Zahl_ermitteln"> <span id="sqrt"></span> sqrt - Quadratwurzel einer Zahl ermitteln</span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> eine beliebige Zahl größer 0.
+</li></ol>
+<p>Gibt die Quadratwurzel der Zahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$x</span> <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type:text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+	<span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;sqrt(%d)  =&#160;%s<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$x</span><span class="sy0">,</span> <span class="kw3">sqrt</span><span class="br0">&#40;</span><span class="re0">$x</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+	<span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;%d ** 0.5 =&#160;%s<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$x</span><span class="sy0">,</span> <span class="re0">$x</span> <span class="sy0">**</span> <span class="nu0">0.5</span> <span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Die Funktion <code>sqrt($x)</code> ermittelt identische Werte zur Operation <code>$x ** 0.5</code>.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: srand - Zufallsberechnung initialisieren">Bearbeiten</a>]</span> <span class="mw-headline" id="srand_-_Zufallsberechnung_initialisieren"> <span id="srand"></span> srand - Zufallsberechnung initialisieren</span></h2>
+<p>Wenn Sie mit <a href="#rand">rand</a> Zufallszahlen erzeugen, benötigt Perl intern einen Initialisierungswert. Wenn Sie selber keinen Wert angeben, ermittelt Perl automatisch einen. Sie können den Wert jedoch auch selber angeben.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine beliebige erlaubte Ganzzahl bzw. eine Zahl, von der der Ganzzahlanteil verwendet wird.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">srand</span><span class="br0">&#40;</span><span class="nu0">42</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Zufall_1</span> <span class="sy0">=</span> <span class="kw3">rand</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Zufall_2</span> <span class="sy0">=</span> <span class="kw3">rand</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">srand</span><span class="br0">&#40;</span><span class="nu0">42</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Zufall_3</span> <span class="sy0">=</span> <span class="kw3">rand</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Zufall_4</span> <span class="sy0">=</span> <span class="kw3">rand</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Zufall 1: $Zufall_1&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Zufall 2: $Zufall_2&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Zufall 3: $Zufall_3&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Zufall 4: $Zufall_4<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel verdeutlicht die Wirkungsweise von <code>srand</code> und den folgenden Aufrufen von <code>rand</code>. <code>srand</code> wird zweimal mit demselben Wert, nämlich mit der Zahl 42, initialisiert. Anschließend wird jeweils zweimal die Funktion <code>rand</code> aufgerufen, und die ermittelten Zufallswerte werden jeweils in eigenen Skalaren gespeichert. Das Beispiel gibt die vier Skalare aus. Die Werte von <code>$Zufall_1</code> und <code>$Zufall_3</code> sind dabei gleich, ebenso die Werte von <code>$Zufall_2</code> und <code>$Zufall_4</code>. Und das ist kein Zufall, sondern die Folge der Tatsache, dass jede bestimmte <code>srand</code>-Initialisierung die gleiche Serie von Zufallszahlen bei jedem anschließenden <code>rand</code>-Aufruf erzeugt.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> seit Perl 5.004 garantiert Ihnen <code>srand()</code> vorhersagbare Resultate. Verzichten Sie also für Zufallszahlen auf <code>srand()</code>.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/srand.html">http://perldoc.perl.org/functions/srand.html</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 975/1000000
+Post‐expand include size: 35886/2097152 bytes
+Template argument size: 32249/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1886-0!*!0!!de-formal!*!* and timestamp 20150301151022 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;oldid=20888">http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;oldid=20888</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FFunktionen+f%C3%BCr+Berechnungen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Funktionen_für_Berechnungen" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Funktionen_für_Berechnungen" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Berechnungen&amp;oldid=20888" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FFunktionen_für_Berechnungen" title="Spezial:Durchsuchen/Perl-2FFunktionen für Berechnungen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 17. August 2014 um 20:14 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.532-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.087 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Listen bzw. Arrays – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Listen_bzw._Arrays","wgTitle":"Perl/Listen bzw. Arrays","wgCurRevisionId":13750,"wgArticleId":1839,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Listen_bzw._Arrays","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Listen bzw. Arrays" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Listen_bzw._Arrays&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Listen_bzw_Arrays skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Listen bzw. Arrays</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Listen_bzw._Arrays_definieren"><span class="tocnumber">1</span> <span class="toctext">Listen bzw. Arrays definieren</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Auf_einzelne_Listenelemente_zugreifen"><span class="tocnumber">2</span> <span class="toctext">Auf einzelne Listenelemente zugreifen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Mehrdimensionale_Arrays"><span class="tocnumber">3</span> <span class="toctext">Mehrdimensionale Arrays</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Funktionen_und_Operationen_zum_Manipulieren_von_Listen_bzw._Arrays"><span class="tocnumber">4</span> <span class="toctext">Funktionen und Operationen zum Manipulieren von Listen bzw. Arrays</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Listen bzw. Arrays definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Listen_bzw._Arrays_definieren"> Listen bzw. Arrays definieren </span></h2>
+<p><b>Listen</b> sind miteinander verkettete Einzelwerte. Wenn Sie so etwas Zusammengehöriges wie "alle Namen von HTML-Elementen" oder "alle Zeilen einer Datei" speichern wollen, können Sie dies mit Hilfe von Listen tun. Der Variablentyp in Perl, in dem Listen gespeichert werden können, heißt <b>Array</b>.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Daten</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Jana&quot;</span><span class="sy0">,</span><span class="nu0">23</span><span class="sy0">,</span><span class="st0">&quot;Berlin&quot;</span><span class="sy0">,</span><span class="st0">&quot;Abitur&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;pre&gt;@Daten&lt;/pre&gt;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird ein Array namens <code>@Daten</code> deklariert. "Deklaration" bedeutet bei Arrays das gleiche wie bei <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalaren</a>. Ein Array wird in Perl durch das Klammeraffenzeichen <code>@</code> eingeleitet. Dahinter folgt der Name des Arrays. Bei der Deklaration eines Arrays können Sie Anfangswerte zuweisen oder auch nicht. Im obigen Beispiel werden Anfangswerte zugewiesen. Die Einzelwerte werden dabei wie gezeigt in runde Klammern eingeschlossen und untereinander durch Kommata getrennt. Wenn Sie keine Anfangswerte zuweisen wollen, notieren Sie einfach so etwas wie <code>my @Daten;</code> als Anweisung. Im Gegensatz zur Deklaration von Skalaren ohne Wertzuweisung ist die Liste dann nicht "undefiniert", sondern einfach leer.
+<p>Ein Array in Perl kann nur Skalare als Einzelwerte enthalten. Im obigen Beispiel sind die Einzelwerte <code>Jana</code>, <code>Berlin</code> und <code>Abitur</code> Zeichenketten, während <code>23</code> eine Zahl ist.
+</p>
+Das Beispiel sendet HTML-Code an den aufrufenden Browser und gibt dabei einfach die Liste aus.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalare</a>, Listen und <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hashes</a> haben unterschiedliche Namensräume. Variablen wie <code>$name</code>, <code>@name</code> und <code>%name</code> können also problemlos im gleichen Script vorkommen.</div>
+<p>Anstelle von konstanten Daten können Sie auch andere Variablen in eine Liste einfügen. Dann wird der Wert der betreffenden Variablen in die Liste übernommen. Zum Beispiel:<br /><code>my $Alter = 23;</code><br /><code>my @Daten = ("Jana",$Alter,"Berlin","Abitur");</code>
+</p><p>Wenn Sie eine Liste mit auf- oder absteigenden Zahlen oder Buchstaben erzeugen wollen, gibt es dafür eine spezielle Syntax:<br /><code>my @Liste = (1..10);</code> erzeugt eine Liste mit 10 Elementen, nämlich den Zahlen 1 bis 10.<br /><code>my @Liste = ("A".."Z");</code> erzeugt eine Liste mit 26 Elementen, nämlich den Buchstaben von A bis Z.
+</p><p>Wenn Sie eine Liste mit Elementen erzeugen wollen, die keine Leerzeichen enthalten, gibt es dafür ebenfalls eine spezielle Syntax:<br /><code>my @Daten = qw(Jana 23 Berlin Abitur);</code> erzeugt einen Array mit den Elementen <code>Jana</code>, <code>23</code>, <code>Berlin</code> und <code>Abitur</code>. Bei dieser speziellen Syntax können Sie jedoch keine Variablen in die Liste einfügen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Auf einzelne Listenelemente zugreifen">Bearbeiten</a>]</span> <span class="mw-headline" id="Auf_einzelne_Listenelemente_zugreifen"> Auf einzelne Listenelemente zugreifen </span></h2>
+<p>Der Variablentyp für einen einzelnen Wert ist in Perl ein Skalar. Wenn Sie in einem Array auf einen einzelnen darin gespeicherten Wert zugreifen wollen, benutzen Sie also einen "skalaren Kontext". Dies kommt in der Syntax von Perl auch zum Ausdruck.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Daten</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Jana&quot;</span><span class="sy0">,</span><span class="nu0">23</span><span class="sy0">,</span><span class="st0">&quot;Berlin&quot;</span><span class="sy0">,</span><span class="st0">&quot;Abitur&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;$Daten[0] ist $Daten[1] Jahre alt, wohnt in $Daten[2] und hat $Daten[3]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Script wird wieder ein Array <code>@Daten</code> deklariert und mit vier Werten initialisiert. Das Script erzeugt HTML-Code und gibt die Daten aus. Diesmal wird dabei jedoch auf die einzelnen Werte der im Array <code>@Daten</code> gespeicherten Liste zugegriffen. Mit <code>$Daten[0]</code> wird auf das erste Element der Liste zugegriffen, also auf den Wert <code>Jana</code>. Mit <code>$Daten[1]</code> auf das zweite Element, also <code>23</code> usw. Wichtig ist, dass bei 0 zu zählen begonnen wird. Die Zahl, die das <i>n</i>te. Element der Liste angibt, muss in eckigen Klammern stehen. Die Klammern gehören in diesem Kontext (innerhalb von Zeichenketten) zum Variablennamen und müssen direkt hinter dem Namen des Arrays notiert werden (kein Leerraum erlaubt).
+Die Syntax wie in <code>$Daten[0]</code> zeigt mit dem voranstehenden Dollarzeichen, dass der Zugriff auf das Array-Element einen Skalar anfordert, denn Skalare sind immer an dem voranstehenden Dollarzeichen erkennbar.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wenn Sie einen Array namens <code>@Daten</code> haben, können Sie mit der speziellen Notation <code>$#Daten</code> die höchste Indexnummer ermitteln, also die des letzten Listenelements, ohne zu wissen, wie viele Elemente die Liste hat. Angenommen, die Liste <code>@Daten</code> hat 15 Elemente: dann würde <code>$#Daten</code> den Wert 14 liefern. Mit einer Notation wie <code>$Daten[$#Daten]</code> können Sie dann den Wert des letzten Listenelements von <code>@Daten</code> ermitteln. Indem Sie negative Indexnummern verwenden, können Sie auf die Elemente am Ende des Arrays zugreifen. Dabei ist <code>$Daten[-1]</code> das letzte Element, <code>$Daten[-2]</code> das vorletzte usw.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Mehrdimensionale Arrays">Bearbeiten</a>]</span> <span class="mw-headline" id="Mehrdimensionale_Arrays"> Mehrdimensionale Arrays </span></h2>
+<p>Wenn Sie andere Programmiersprachen kennen, sind Ihnen vielleicht schon mehrdimensionale Arrays begegnet. Dies sind Arrays, die Daten in matrixartiger Form speichern. Am einfachsten vorstellbar ist der zweidimensionale Array. Die darin gespeicherten Werte können Sie sich als Tabelle vorstellen. Um ein bestimmtes Element davon anzusprechen, geht man in eine bestimmte Tabellenzeile und von dort aus in eine bestimmte Spalte.
+</p><p>Perl kennt mehrdimensionale Arrays in diesem Sinne nicht, sondern nur Listen, die selbst wieder (Referenzen auf) Listen enthalten können. Dabei sind beliebig tiefe Verschachtelungen erlaubt. Stellen Sie sich jede Unterliste einer Liste als eine Dimension vor.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste_1</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Baumholder&quot;</span><span class="sy0">,</span><span class="st0">&quot;Bernried&quot;</span><span class="sy0">,</span><span class="st0">&quot;Butzbach&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Liste_2</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Berlin&quot;</span><span class="sy0">,</span><span class="st0">&quot;Bremen&quot;</span><span class="sy0">,</span><span class="re0">@Liste_1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Liste_3</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Berlin&quot;</span><span class="sy0">,</span><span class="st0">&quot;Bremen&quot;</span><span class="sy0">,</span><span class="br0">&#91;</span><span class="re0">@Liste_1</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;Liste_2:&lt;/b&gt;&lt;pre&gt;@Liste_2&lt;/pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;Liste_2[4]:&lt;/b&gt;&lt;pre&gt;$Liste_2[4]&lt;/pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;Liste_3&lt;/b&gt;&lt;pre&gt;@Liste_3&lt;/pre&gt;&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;b&gt;Liste_3[2][1]:&lt;/b&gt;&lt;pre&gt;$Liste_3[2][1]&lt;/pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel werden insgesamt drei Listen deklariert und mit Anfangswerten initialisiert. Besonders interessant sind dabei die Listen <code>@Liste_2</code> und <code>@Liste_3</code>. Beide erhalten als jeweils letztes "Element" die komplette Liste <code>@Liste_1</code> zugewiesen (dabei zu beachten: der Array-Name darf nicht in Anführungszeichen stehen). Die Syntax ist dabei nur ganz leicht verschieden: in der Zuweisung bei <code>@Liste_2</code> ist einfach <code>@Liste_1</code> notiert, während in der Zuweisung bei <code>@Liste_3</code> noch eckige Klammern hinzukommen. Dort ist <code>[@Liste_1]</code> notiert. Dieser kleine Unterschied hat Folgen: während nämlich bei <code>@Liste_2</code> die Einzelwerte von <code>@Liste_1</code> einfach hinzugefügt werden, wird durch die eckigen Klammern bei <code>@Liste_3</code> eine neue Unterliste eröffnet.
+<p>Das Beispiel sendet HTML-Code an den aufrufenden Browser, in dem der Unterschied deutlich wird. <code>@Liste_2</code> besteht nun einfach aus fünf Elementen, nämlich <code>Berlin Bremen Baumholder Bernried Butzbach</code>. Eine Notation wie <code>$Liste_2[4]</code> greift auf das fünfte Element, also den Wert <code>Butzbach</code> zu. <code>Liste_3</code> besteht dagegen nunmehr aus drei Elementen, wobei das letzte Element nur eine neue Liste mit eigenen Elementen ist. Bei einer Anweisung wie <code>print&#160;"@Liste_3";</code> gibt Perl als drittes Element so etwas wie z.B. <code>ARRAY(0xb658ac)</code> aus. Das ist einfach eine <a href="http://wiki.selfhtml.org/wiki/Perl/Referenzen" title="Perl/Referenzen">Referenz</a> auf die Unterliste. Um auf die Elemente der zweiten Dimension zuzugreifen, müssen Sie zweifache eckige Klammern verwenden, für jede Dimension eine. Eine Notation wie <code>$Liste_3[2][1]</code> greift über <code>[2]</code> auf das dritte Element von <code>@Liste_3</code> zu und dann noch einmal über <code>[1]</code> auf das zweite Unterelement dieses dritten Elements, das ja eine Liste ist. Zugegriffen wird im Beispiel also auf den Wert <code>Bernried</code>.
+</p>
+Das Beispiel zeigt auch, dass Sie in einer Liste beliebige einzelne Werte und weitere Listen mischen können. Auf das zweite Element der <code>Liste_3</code> greifen Sie mit <code>Liste_3[1]</code> zu. Die Angabe einer zweiten eckigen Klammer ist hier nicht notwendig, da das Element keine Unterliste ist.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Ob ein Array ein- oder mehrdimensional ist, also Unterlisten enthält, können Sie zu jedem Zeitpunkt festlegen. Wenn Sie beispielsweise mit der Anweisung <code>my @Tabelle;</code> einen zunächst undefinierten Array deklarieren, können Sie anschließend problemlos eine Anweisung wie <code>$Tabelle[1][4]&#160;=&#160;27;</code> notieren. Damit erhält der Array <code>@Tabelle</code> automatisch zwei Elemente (mit den Nummern <code>0</code> und <code>1</code>). Element <code>0</code> erhält den undefinierten Wert (<code>undef</code>), und Element <code>1</code> bekommt die Referenz auf eine Liste mit fünf Elementen zugewiesen (<code>0</code> bis <code>4</code>), wovon die ersten vier Elemente den Wert <code>undef</code> erhalten und das fünfte Element den von Ihnen zugewiesenen Wert <code>27</code>.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Funktionen und Operationen zum Manipulieren von Listen bzw. Arrays">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionen_und_Operationen_zum_Manipulieren_von_Listen_bzw._Arrays"> Funktionen und Operationen zum Manipulieren von Listen bzw. Arrays </span></h2>
+<p>Es gibt eine Menge Perl-Funktionen, mit deren Hilfe Sie Listen beeinflussen können. Ein paar wichtige Möglichkeiten sollen hier mit Verweisen auf die Beschreibung der jeweiligen Funktionen genannt werden.
+</p><p><b>Zeichenketten in Listen aufsplitten</b>:<br />Wenn Sie Zeichenketten haben, die bestimmte regelmäßig vorkommende Zeichen enthalten, können Sie diese Zeichen als Trennzeichen behandeln und die Zeichenkette in eine Liste übertragen (z.B. kommagetrennte Werte).Dazu gibt es in Perl die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#split" title="Perl/Funktionen für Zeichenketten">split</a>.
+</p><p><b>Listen zu einer Zeichenkette verknüpfen</b>:<br />Manchmal möchte man auch den umgekehrten Weg gehen. Man hat Daten in einer Liste, möchte diese jedoch wieder als Zeichenkette zusammenfassen.Dazu gibt es in Perl die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#join" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">join</a>.
+</p><p><b>Listenelemente ändern</b>:<br />Durch eine Anweisung wie <code>$Liste[12]&#160;=&#160;"Oliver";</code> weisen Sie dem 13. Element der Liste einen Wert zu. Falls vorher schon ein Wert in diesem Element gespeichert war, wird er durch den neuen Wert ersetzt.
+</p><p><b>Listenelemente hinzufügen</b>:<br />Zum Anhängen von Elementen an Listen bietet Perl die Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#push" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">push</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#unshift" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">unshift</a> an.
+</p><p><b>Listenelemente löschen</b>:<br />Sie können jederzeit so etwas notieren wie <code>$Liste[12]&#160;=&#160;"";</code>. Damit ist der Wert gelöscht (bzw. mit einer leeren Zeichenkette überschrieben), aber das Element besteht weiterhin. Richtig löschen können Sie eine Liste nur von vorne und von hinten. Um Elemente aus dem Array richtig zu entfernen, bietet Perl drei Funktionen an. Die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#pop" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">pop</a> löscht von hinten, also jeweils das letzte Element einer Liste. Die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#shift" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">shift</a> löscht von vorne, d.h. das erste Element wird gelöscht, und alle nachfolgenden rücken einen Indexwert nach vorne. Was also vorher <code>$Liste[7]</code> war, ist hinterher <code>$Liste[6]</code>. Die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#splice" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">splice</a> ermöglicht es, beliebige Elemente aus dem Array zu löschen, also sowohl von vorne wie auch von hinten oder auch aus der Mitte. Wie bei <code>shift</code> rücken dann die nachfolgenden Indexwerte entsprechend nach. Mit <code>splice</code> können Sie auch eine ganze Teilliste eines Arrays durch andere Liste ersetzen oder eine Liste in den Array neu einfügen.
+</p><p><b>Listenelemente sortieren und Reihenfolge umkehren</b>:<br />Sie können eine Liste völlig neu organisieren, indem Sie deren Elemente numerisch oder alphabetisch sortieren. Perl bietet dazu die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#sort" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">sort</a> an. Eine dazu ergänzende interessante Funktion ist auch <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#reverse" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">reverse</a>, die Listenelemente einfach vertauscht. Das erste Element wird dadurch das letzte, das zweite das vorletzte usw. Durch Sortieren und anschließendes Anwenden von <code>reverse</code> kann man also beispielsweise eine absteigende Sortierung erreichen.
+</p><p><b>Anzahl Elemente einer Liste ermitteln</b>:<br />Die Länge einer Liste lässt sich in Perl ganz einfach dadurch ermitteln, dass die Liste im skalaren Kontext interpretiert wird. Hört sich kompliziert an, ist aber ganz einfach. Ein Beispiel:<br /><code>my $Laenge = @Liste;</code><br />Dabei wird im Skalar <code>$Laenge</code> die Anzahl der Elemente des Arrays <code>@Liste</code> gespeichert.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 224/1000000
+Post‐expand include size: 23320/2097152 bytes
+Template argument size: 20422/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1839-0!*!0!!de-formal!*!* and timestamp 20150301221956 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;oldid=13750">http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;oldid=13750</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FListen+bzw.+Arrays" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Listen_bzw._Arrays&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Listen_bzw._Arrays" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Listen_bzw._Arrays" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Listen_bzw._Arrays&amp;oldid=13750" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FListen_bzw._Arrays" title="Spezial:Durchsuchen/Perl-2FListen bzw. Arrays">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 15. August 2012 um 17:16 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.824-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.155 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Module/CPAN-Module by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Module/CPAN-Module – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Module/CPAN-Module","wgTitle":"Perl/Module/CPAN-Module","wgCurRevisionId":13975,"wgArticleId":3111,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Module/CPAN-Module","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="Perl/Module/CPAN-Module" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Module/CPAN-Module&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Module_CPAN-Module skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Module/CPAN-Module</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a> | <a href="http://wiki.selfhtml.org/wiki/Perl/Module" title="Perl/Module">Module</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_den_Modulen_im_CPAN-Verzeichnis"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu den Modulen im CPAN-Verzeichnis</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Adressen_des_CPAN-Verzeichnisses"><span class="tocnumber">2</span> <span class="toctext">Adressen des CPAN-Verzeichnisses</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Kategorien_f.C3.BCr_Module_im_CPAN-Verzeichnis"><span class="tocnumber">3</span> <span class="toctext">Kategorien für Module im CPAN-Verzeichnis</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Module_aus_dem_CPAN-Verzeichnis_downloaden_und_installieren"><span class="tocnumber">4</span> <span class="toctext">Module aus dem CPAN-Verzeichnis downloaden und installieren</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu den Modulen im CPAN-Verzeichnis">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_den_Modulen_im_CPAN-Verzeichnis"> Allgemeines zu den Modulen im CPAN-Verzeichnis </span></h2>
+<p>CPAN steht für <i>Comprehensive Perl Archive Network</i> (zu deutsch in etwa zu übersetzen mit <i>Umfassendes Perl-Archiv Netzwerk</i>). Es ist eine Art offizielle Sammelstelle für Perl-Module. Das CPAN-Verzeichnis enthält tausende von Modulen für alle nur denkbaren Aufgaben, egal ob für Kalenderprogrammierung, mathematische Berechnungen, Textverarbeitung, Datenverschlüsselung oder Internetzugriffe. Das Stöbern im CPAN-Verzeichnis und Besorgen eines geeigneten Moduls kann also viele Stunden und Tage Programmierarbeit sparen. Dazu kommt, dass ein bewährtes Modul meistens schon von Bugs (Fehlern) im Code weitgehend befreit ist und eine Laufstabilität hat, die selbstgeschriebener Code oft erst nach längerer Zeit erreicht.
+</p><p>Module aus dem CPAN-Verzeichnis müssen allerdings - im Gegensatz zu den <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodulen</a> - erst installiert werden, bevor ein Script sie verwenden kann. Wenn ein Script auf einem anderen Rechner laufen soll, müssen CPAN-Module, die in dem Script verwendet werden, auch dort zuerst installiert werden. Dazu müssen Sie die gewünschten Module zunächst downloaden.
+</p><p>Die Module aus dem CPAN-Verzeichnis verfügen in der Regel genau wie die Standardmodule über eine integrierte Dokumentation, die mit <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Moduldokumentationen_lesen_mit_perldoc" title="Perl/Module/Einführung">perldoc</a> lesbar ist.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Adressen des CPAN-Verzeichnisses">Bearbeiten</a>]</span> <span class="mw-headline" id="Adressen_des_CPAN-Verzeichnisses"> Adressen des CPAN-Verzeichnisses </span></h2>
+<p>Das CPAN-Verzeichnis ist wegen der hohen Belastung durch die zahlreichen Perl-Programmierer auf vielen Servern weltweit gespiegelt. Es ist daher ratsam, sich erst einmal über die verfügbaren Server zu informieren. Die offizielle Liste der CPAN-Server finden Sie unter folgender Adresse:
+</p><p><a rel="nofollow" class="external text" href="http://cpan.perl.org/">http://www.perl.com/CPAN/SITES</a>
+</p><p>Die Server, die dort aufgelistet werden, sind überwiegend öffentliche FTP-Server. Die meisten Browser sind in der Lage, die Inhalte von FTP-Sites anzuzeigen. Ansonsten können Sie auch mit Hilfe eines FTP-Programms auf einen solchen Server zugreifen. Im Link-Verzeichnis des Online-Angebots von SELFHTML aktuell finden Sie eine Produktübersicht mit Links zu Anbietern von solchen Programmen:
+</p><p><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Linkliste" title="SELFHTML:Linkliste">SELFHTML-Linkverzeichnis: FTP-Programme</a>
+</p><p>Bei den Spiegelungen des CPAN-Verzeichnisses handelt es sich um öffentliche FTP-Sites. Das bedeutet, dass Sie für die FTP-Verbindung zu dem Server einfach die Serveradresse (Name oder IP-Adresse), als Benutzernamen <i>Anonymous</i> und als Passwort Ihre E-Mail-Adresse angeben.<br />
+Einige der aufgelisteten Server sind jedoch auch HTTP-Server, die für Browser ohne eingebaute FTP-Funktion geeignet sind.
+</p><p>Sie können das CPAN-Verzeichnis aber auch in Form normaler Web-Seiten durchstöbern. Rufen Sie dazu die folgende Adresse auf:
+</p><p><a rel="nofollow" class="external text" href="http://cpan.perl.org/">http://www.perl.com/CPAN/</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Kategorien für Module im CPAN-Verzeichnis">Bearbeiten</a>]</span> <span class="mw-headline" id="Kategorien_f.C3.BCr_Module_im_CPAN-Verzeichnis"> Kategorien für Module im CPAN-Verzeichnis </span></h2>
+<p>Einen guten inhaltlichen Überblick über die verfügbaren Module erhalten Sie, wenn Sie mit einem FTP-Programm im CPAN-Verzeichnis ins Unterverzeichnis <i>modules</i> und dann weiter ins Unterverzeichnis <i>by-category</i> wechseln. Jede Kategorie wird durch ein Unterverzeichnis repräsentiert. Die folgende Tabelle listet die Namen der zum Zeitpunkt der Redaktion dieses Textes verfügbaren Unterverzeichnisse auf und gibt zu jedem Unterverzeichnis einen kurzen Überblick über dessen Inhalt. Dieser Überblick ist allerdings nur ein grober Anhaltspunkt, was in dem jeweiligen Unterverzeichnis zu finden ist. Wenn Sie auf der Suche nach einem Modul für eine bestimmte Aufgabe sind, sollten Sie beim Besuch des CPAN-Verzeichnisses etwas Zeit zum Stöbern und Lesen mitbringen.
+</p><p>Beachten Sie, dass das CPAN-Verzeichnis physikalisch nach Autoren geordnet ist. Die Sortierung nach Kategorien enthält daher nur symbolische Links auf Verzeichnisse und Dateien in anderen Verzeichnissen unterhalb des Verzeichnisses <i>authors</i>. Wenn Sie also ein Verzeichnis oder eine Datei auswählen, wechseln Sie automatisch in ein entfernteres Verzeichnis oder erhalten eine Datei aus einem entfernteren Verzeichnis.
+</p>
+<table class="wikitable">
+<tr>
+<th> Unterverzeichnis
+</th>
+<th> Inhalt
+</th></tr>
+<tr>
+<td> <code>02_Perl_Core_Modules</code>
+</td>
+<td>
+<p>Enthält Module, die zum Kern von Perl gezählt werden. Viele dieser Module gehören mittlerweile auch zu den <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodulen</a> von Perl. Das Verzeichnis enthält aber noch mehr als die Standardmodule. Bei den weiteren Modulen handelt es sich um Anwärter für Standardmodule.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Filter</code> filtert den Quellcode eines Perl-Scripts nach verschiedenen Kriterien, bevor er ausgeführt wird.<br />
+<code>enum</code> erlaubt das Definieren symbolischer Konstanten und damit ein Arbeiten wie mit dem aus C bekannten Datentyp.
+</p>
+</td></tr>
+<tr>
+<td> <code>03_Development_Support</code>
+</td>
+<td>
+<p>Enthält Module, die das Entwickeln von Perl-Scripts und von Modulen unterstützen.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Devel::</code> stellt diverse Tools zur Verfügung, mit deren Hilfe Profiling, Debugging und Laufzeitkontrolle von Perl-Scripts oder Modulen kontrolliert werden können.<br />
+<code>ExtUtils::</code> enthält neben den zu den Standardmodulen gehörenden Modulen noch weitere Module, z.B. einen Perl-Präprozessor.<br />
+<code>CVS::</code> ist eine Schnittstelle zum Versionenverwaltungssystem CVS (<i>concurrent versioning system</i>).
+</p>
+</td></tr>
+<tr>
+<td> <code>04_Operating_System_Interfaces</code>
+</td>
+<td>
+<p>Enthält Module für systemnahe Aufrufe und betriebssystemspezifische Funktionen.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Async::</code> enthält Funktionen für parallele Datenverarbeitung auf Rechnern mit "echtem Multitasking".<br />
+<code>BSD::</code> enthält Funktionen speziell für Berkeley-Unix. Entsprechende Funktionen gibt es unterhalb von <code>MSDOS::</code>, <code>Mac::</code>, , <code>OS2::</code>, <code>Solaris::</code> usw.<br />
+<code>Proc::</code> bietet Funktionen zur Kontrolle laufender Prozesse an.<br />
+<code>Quota</code> erlaubt den Zugriff auf Systemdaten wie verfügbaren Festplattenspeicher, Arbeitsspeicher usw.
+</p>
+</td></tr>
+<tr>
+<td> <code>05_Networking_Devices_IPC</code>
+</td>
+<td>
+<p>Enthält Module für die Netzwerk-Programmierung.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>CORBA</code> enthält Funktionen für die Nutzung der CORBA (<i>Common Object Request Broker Architecture</i>).<br />
+<code>DCE::</code> enthält Module für Sicherheitsfunktionen nach DCE (<i>Distributet Computing Environment</i>).<br />
+<code>IPC::</code> enthält Module, die über die IPC-Standardmodule hinausgehen und Funktionen zur Kommunikation zwischen Prozessen enthalten.<br />
+<code>Net::</code> enthält Module, die über die Net-Standardmodule hinausgehen und Funktionen zur Kommunikation zwischen Prozessen auf verschiedenen Rechnern erlauben, unter anderem für DNS (<i>Domain Name Service</i>) oder Protokolle wie IRC (<i>Internet Relay Chat</i>) oder LDAP.
+</p>
+</td></tr>
+<tr>
+<td> <code>06_Data_Type_Utilities</code>
+</td>
+<td>
+<p>Enthält Module für Datentypen, Datenstrukturen und wichtige Algorithmen.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Algorithms::</code> enthält Module, die mit Hilfe anerkannter Algorithmen arbeiten und Aufgaben realisieren wie das zufällige Auswählen von Daten oder das Berechnen von gerichteten Graphen.<br />
+<code>Array::</code> enthält Module zur Manipulation von Listen.<br />
+<code>Bit::</code> enthält Module zur Manipulation von Bitzeichenketten und für Bit-Operationen.<br />
+<code>Class::</code> enthält Module, die bei der objektorientierten Programmierung unterstützen.<br />
+<code>Data::</code> enthält Module zur Darstellung und Formatierung von Daten.<br />
+<code>Date::</code> enthält Module für Datum- und Zeitrechnung nach verschiedenen Kalendern.<br />
+<code>Graph::</code> enthält Module für Graphenberechnung.<br />
+<code>Math::</code> enthält Module, die über die Math-Standardmodule hinausgehen und mathematische Funktionen bereitstellen, etwa für Fraktalberechnung, Approximationsberechnung, Integralrechnung, Matritzenrechnung und Zufallszahlengenerierung.<br />
+<code>Set::</code> enthält Module zur Implementierung logischer Mengen.<br />
+<code>Statistics::</code> enthält Module für verschiedene Arten statistischer Berechnungen, z.B. für Berechnung von Mittelwerten, Standardabweichung, maximaler Entropie und linearer Progression.<br />
+<code>Tie::</code> enthält Module für verschiedene Bindungen von Variablen an Objekte, z.B. zum Realisieren eines Timers (zeitliche Intervallabfrage), Cache-Verwaltung, Datenbankzugriffe, oder Umleitung des Standardkanals STDERR an ein Programm, z.B. ein E-Mail-Programm.<br />
+<code>Time::</code> enthält Module zur Berechnung von Zeitangaben, z.B. für mikrosekundengenaue Angaben, julianisches Datum und Zeitzonen.<br />
+<code>Tree::</code> enthält Module für baumartige Datenstrukturen, z.B. für B-Bäume oder AVL-Bäume.
+</p>
+</td></tr>
+<tr>
+<td> <code>07_Database_Interfaces</code>
+</td>
+<td>
+<p>Enthält Module für die Kommunikation mit bekannten Datenbanksystemen.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>DBD::</code> enthält Module, die als Treiber für die datenunabhängige Schnittstelle DBI fungieren. Über DBI ist z.B. der Zugriff auf Datenbanksysteme wie Adabas, DB2, Informix, Oracle, Ingres, MySQL, QBase oder Sybase möglich. Auch ODBC-Treiber sind enthalten.<br />
+<code>Metadata::</code> enthält Module, die bekannte Metadatenformate für Suchsysteme unterstützen.
+</p>
+</td></tr>
+<tr>
+<td> <code>08_User_Interfaces</code>
+</td>
+<td>
+<p>Enthält Module zum Programmieren von Benutzeroberflächen mit Perl.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Cdk</code> und <code>Curses</code>: enthalten Funktionen für die bekannte, textmodus-orientierte Benutzeroberfläche <i>Curses</i>.<br />
+<code>Emacs::Lisp</code> bietet eine Schnittstelle zum programmierbaren Texteditor <i>Emacs</i> an.<br />
+<code>Term::</code> enthält Module zur Ansteuerung von textmodus-orientierten Terminals an. Enthalten sind Funktionen für Farbdarstellung, Tastaturkürzel und erweiterte Editierfunktionen.<br />
+<code>Tk::</code> enthält Module, um graphische Oberflächen wie X11 (Unix) oder auch MS Windows zu bedienen.
+</p>
+</td></tr>
+<tr>
+<td> <code>09_Language_Interfaces</code>
+</td>
+<td>
+<p>Enthält Module für die Integration anderer Programmiersprachen in Perl.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>C::</code> enthält Module zur Anbindung von C-Programmen und C-Bibliotheken.<br />
+<code>Java</code> realisiert eine Java-Laufzeitumgebung für Perl.<br />
+<code>Python</code> erlaubt das Einbetten von Perl-Code in Python-Programme.
+</p>
+</td></tr>
+<tr>
+<td> <code>10_File_Names_Systems_Locking</code>
+</td>
+<td>
+<p>Enthält Module für die Verwaltung von Dateisystemen, Dateinamen und Sperren benutzter Dateien.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>File::</code> enthält Module, die über die File-Standardmodule hinausgehen und Funktionen für Backups, Dateibeschreibungen, Dateizugriffszähler oder beschleunigtes Laden von Dateien in den Arbeitsspeicher anbieten.<br />
+<code>FileSys::</code> enthält Module, die Systeminformationen wie z.B. freien Speicherplatz abfragen.
+</p>
+</td></tr>
+<tr>
+<td> <code>11_String_Lang_Text_Proc</code>
+</td>
+<td>
+<p>Enthält Module für die Zeichenkettenverarbeitung und für Textverarbeitung.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Font::</code> enthält Module, die sich mit Schriftartenmetrik und Schriftartformaten wie TrueType und Adobe Fonts befassen.<br />
+<code>Lingua::</code> enthält Module, die sich mit der Semantik und Grammatik natürlicher Sprachen befassen, z.B. Konvertierung von Zahlen in Zahlenwörter, Konjugation von Verben, Pluralbildung von Substantiven usw.<br />
+<code>Parser::</code> enthält Module, die bekannte künstliche Sprachen interpretieren.<br />
+<code>RTF::</code> enthält Module, die das RTF-Format (<i>Rich Text Format</i>) interpretieren und z.B. in Text oder HTML konvertieren.<br />
+<code>SGML::</code> enthält Module zum Parsen von SGML-Dateien.<br />
+<code>String::</code> enthält Module für erweiterte Zeichenkettenverarbeitung, z.B. approximative Suche, Bitzahlermittlung, CRC (<i>Cycling Redundancy Checks</i>) usw.<br />
+<code>Text::</code> enthält Module für zeilenübergreifende Texte und Textformate, z.B. zum Formatieren von Text, zum Parsen von CSV-Dateien (<i>Comma Separated Values</i>) usw.<br />
+<code>XML::</code> enthält Module zum Parsen von XML-Dateien.
+</p>
+</td></tr>
+<tr>
+<td> <code>12_Opt_Arg_Param_Proc</code>
+</td>
+<td>
+<p>Enthält Module zum Auslesen von Konfigurationsdateien.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>ConfigReader</code> liest verschiedene Konfigurationsdateien aus.<br />
+<code>Getopt::</code> enthält Module, die über die Getopt-Standardmodule hinausgehen und Kommandozeilenoptionen beim Aufruf des Perl-Interpreters analysieren.<br />
+<code>IniConf</code> liest Konfigurationsdateien im Windows-typischen ini-Format.
+</p>
+</td></tr>
+<tr>
+<td> <code>13_Internationalization_Locale</code>
+</td>
+<td>
+<p>Enthält Module für das Arbeiten mit internationalen Kodierungen.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Cz::</code> enthält Module zum Verarbeiten tschechischer Texte.<br />
+<code>I18N::</code> enthält Module zum Ordnen von Kodierungsnamen nach IANA-Standard und für Länderkürzel nach <a class="external mw-magiclink-rfc" href="http://tools.ietf.org/html/rfc1766">RFC 1766</a>.<br />
+<code>Locale::</code> enthält Module zur Behandlung sprachlich lokaler Besonderheiten, z.B. Länderidentifikation nach den Länderkürzeln von <a class="external mw-magiclink-rfc" href="http://tools.ietf.org/html/rfc1766">RFC 1766</a> und für Unicode-Kodierung von Texten.
+</p>
+</td></tr>
+<tr>
+<td> <code>14_Security_and_Encryption</code>
+</td>
+<td>
+<p>Enthält Module für die Verschlüsselung von Daten und für Authentifikation. <b>Achtung:</b> Beachten Sie vor dem Download solcher Module eventuell bestehende kryptografische Einschränkungen in Ihrem Land! Der Erwerb von Quellcode mit unerlaubten Verschlüsselungsverfahren kann strafbar sein - leider.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Authen::</code> enthält Module für Authentifikation, z.B. für SecureID/ACE-Karten, MD5-basiertes Challenge-Response-Protokoll oder die SAMBA-Authentifikation an Windows-NT-Servern.<br />
+<code>Crypt::</code> enthält Module für die Datenverschlüsselung, z.B. nach dem Verschlüsselungsstandard DES (<i>Data Encryption Standard</i>), nach MD5-Standard usw.<br />
+<code>PGP::</code> enthält Module zum Ansprechen des PGP-Programms (<i>Pretty Good Privacy</i>).
+</p>
+</td></tr>
+<tr>
+<td> <code>15_World_Wide_Web_HTML_HTTP_CGI</code>
+</td>
+<td>
+<p>Enthält Module für CGI-Scripts, HTTP-Verbindungen und HTML-Erzeugung.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Apache::</code> enthält Module, die zumeist Erweiterungen für das <i>mod_perl</i>-Modul des Apache-Webservers bereitstellen. <i>mod_perl</i> ist ein Perl-Interpreter, der innerhalb eines Apache-Prozesses läuft und das Ausführen von Perl-Scripts im Zusammenhang mit CGI stark beschleunigen kann. Voraussetzung für die Module ist eine Apache-Installation mit <i>mod_perl</i>-Modul. Die Module bieten Funktionen für Authentifikation, Zugang zu den Logging-Funktionen von Apache, Redirects, Server Side Includes, Informationen zum Status einer Verbindung zwischen Server und Browser, Zugriff auf die von Apache ermittelte Anzahl übertragener Bytes und Dateizugriffe usw.<br />
+<code>CGI::</code> enthält Module speziell für CGI-Scripts, die über den Umfang des CGI-Standardmoduls hinausgehen, z.B. Module für das Zwischenspeichern von CGI-Anforderungen in einem Cache, für die Erzeugung von HTML-Code für den Browser, zur Verwaltung serverseitiger verweis-sensitiver Grafiken usw.<br />
+<code>LWP::</code> enthält Module zur Kommunikation mit anderen Webservern, z.B. zum Einlesen von HTML-Dateien, die auf fremden Servern liegen.<br />
+<code>MIME::</code> enthält Module für MIME-Typen. Enthalten sind z.B. Module zum Umwandeln von 8-Bit-Text 7-Bit-Text nach Base64-Standard und zum Parsen von MIME-Angaben.<br />
+<code>Netscape::</code> enthält Netscape-spezifische Module, z.B. zum Analysieren des Cache-Speichers oder der gespeicherten History des Netscape-Browsers.<br />
+<code>URI</code> zerlegt einen URI in seine Einzelzeile.<br />
+<code>WWW::</code> enthält Module für einen einfachen Such-Robot und zur Interaktion zwischen Perl-Script und bekannten Suchmaschinen im Web.
+</p>
+</td></tr>
+<tr>
+<td> <code>16_Server_and_Daemon_Utilities</code>
+</td>
+<td>
+<p>Enthält Module zum Programmieren eigener Server.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Event::</code> enthält Module für Server, die auf Ereignisse reagieren.<br />
+<code>Netserver::</code> enthält Module für verschiedene Server, z.B. für HTTP und SMTP.
+</p>
+</td></tr>
+<tr>
+<td> <code>17_Archiving_and_Compression</code>
+</td>
+<td>
+<p>Enthält Module für die Archivierung und Komprimierung/Dekomprimierung von Dateien in und aus bekannten Packformaten.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Archive::Tar</code> kann tar-Archive, wie sie unter Unix üblich sind, lesen und schreiben.<br />
+<code>Compress::</code> enthält Module für verschiedene Kompressions-Algorithmen für bzip, LZO und Zlib.<br />
+<code>Convert::</code> enthält Konvertierungsmodule, z.B. für Konvertierungen zwischen ASCII- und EBCDIC-Kodierung, zur Konvertierung von Zahlen in bestimmte technische Schreibweisen, zum Dekodieren von UU-kodierten Daten usw.
+</p>
+</td></tr>
+<tr>
+<td> <code>18_Images_Pixmaps_Bitmaps</code>
+</td>
+<td>
+<p>Enthält Module für Bild- und Videoformate.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Chart::</code> enthält Module zum Erzeugen von Linien, Balken und kompletten Darstellungs-Charts und deren Export in eine GIF-Datei.<br />
+<code>Image::</code> enthält Module zum automatischen Download von Grafiken aus dem Netz, zum Auslesen wichtiger Kopfdaten aus Grafikformaten wie GIF, JPEG, PNG, TIFF, XPM, XBM, PGM und PBM, sowie zum Anwenden von Filtern auf Pixelgrafiken, z.B. zum automatischen Drehen einer Grafik oder zum Vergrößern/Verkleinern.<br />
+<code>OpenGL</code> erlaubt den Zugriff auf die OpenGL-Bibliothek, die Funktionen für dreidimensionale Texturen, Projektionen usw. bereitstellt.<br />
+<code>VRML::</code> enthält Module für VRML-Code.
+</p>
+</td></tr>
+<tr>
+<td> <code>19_Mail_and_Usenet_News</code>
+</td>
+<td>
+<p>Enthält Module für E-Mails und den Zugriff auf News-Server.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Mail::</code> enthält Module zum Realisieren eines E-Mail-Clients mit Perl, zum Filtern von E-Mails, und zum Versenden von E-Mails über SMTP (sendmail-Funktion).<br />
+<code>News::</code> enthält Module zum Weiterleiten von E-Mails an eine Newsgroup oder zum Weiterleiten von News an eine E-Mail-Adresse, zum Realisieren eines News-Clients mit Perl, und zum Erzeugen von News-Artikeln.
+</p>
+</td></tr>
+<tr>
+<td> <code>20_Control_Flow_Utilities</code>
+</td>
+<td>
+<p>Enthält Module zur Kontrolle des laufenden Perl-Scripts.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>AtExit</code> stellt eine Funktion bereit, die automatisch beim Beenden eines Scripts aufgerufen wird.<br />
+<code>Memoize</code> beschleunigt das Ausführen von Funktionen und kann Parameter und Rückgabewerte einer Funktion in einer Datei speichern.
+</p>
+</td></tr>
+<tr>
+<td> <code>21_File_Handle_Input_Output</code>
+</td>
+<td>
+<p>Enthält Module für Ein-/Ausgabefunktionen mit Handles.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Expect</code> stellt Funktionen zum Steuern dialogorientierter Programme bei.<br />
+<code>FileHandle::Multi</code> kann in mehrere Ausgabekanäle bzw. Dateien gleichzeitig schreiben.<br />
+<code>IO::</code> enthält neben den IO-Standardmodulen zusätzliche Module, z.B. um Zeichenketten mit Handles zu verknüpfen, oder zum Setzen von stty-Terminalparametern.<br />
+<code>Log::</code> enthält Module zum Lesen und Schreiben von Log-Dateien. So lassen sich z.B. Einträge in die Logfiles des Webservers oder in selbst definierte Logfiles schreiben.
+</p>
+</td></tr>
+<tr>
+<td> <code>22_Microsoft_Windows_Modules</code>
+</td>
+<td>
+<p>Enthält Module für MS-Windows-Systeme ab Windows 95.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Win32::</code> enthält Module für Windows-spezifische Netzwerkfunktionen, für RAS-Server, OLE-Verknüpfungen usw.<br />
+<code>Win32API::</code> enthält Module für den Registry-Zugriff, den Zugriff auf serielle Schnittstellen unter Windows, und für die Laufwerks- und Dateiverwaltung unter Windows.
+</p>
+</td></tr>
+<tr>
+<td> <code>23_Miscellaneous_Modules</code>
+</td>
+<td>
+<p>Enthält Module für verschiedene Aufgaben, die anderweitig nicht einzuordnen sind. Eine Fundgrube also!
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>Agent::</code> enthält Module, mit deren Hilfe sich mit Perl ein intelligenter Software-Assistent realisieren lässt, der bestimmte Aktionen selbständig durchführt, Daten filtert usw.<br />
+<code>Archie::</code> enthält Module zum Abfragen eines Archie-Servers.<br />
+<code>Audio::</code> enthält Module zum Bearbeiten von Audio-Dateien, z.B. WAV-Dateien.<br />
+<code>Business::</code> enthält Module für den Geschäftsverkehr, z.B. für Kreditkartenwesen.<br />
+<code>Games::</code> enthält Module für Spiele, z.B. für Schach.<br />
+<code>MIDI::</code> enthält Module zum Erzeugen und Bearbeiten von MIDI-Dateien mit Hilfe von Perl.<br />
+<code>Watchdog:</code> enthält Module zum Überprüfen, ob Webserver oder MySQL-Datenbankserver noch laufen.
+</p>
+</td></tr>
+<tr>
+<td> <code>24_Commercial_Software_Interfaces</code>
+</td>
+<td>
+<p>Enthält Module für die Kommunikation zwischen Perl-Programmen und kommerziellen Software-Produkten.
+</p><p>Einige interessante Module/Modulgruppen dieses Unterverzeichnisses sind:<br />
+<code>AltaVista::</code> enthält Module für den Zugriff auf die Suchmaschine von AltaVista.<br />
+<code>R3::</code> enthält Module für den Zugriff auf Funktionen des RFCSDK (Software Development Kit des R3-Pakets von SAP).<br />
+<code>Real::</code> enthält ein Modul zum Zugriff auf RealMedia-Datenströme (RealAudio, RealVideo).
+</p>
+</td></tr>
+<tr>
+<td> <code>99_Not_In_Modulelist</code>
+</td>
+<td>
+<p>Enthält Module, die nicht in der offiziellen Modul-Liste des CPAN-Verzeichnisses enthalten sind.
+</p>
+</td></tr></table>
+<p><br />&#160;
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Module aus dem CPAN-Verzeichnis downloaden und installieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_aus_dem_CPAN-Verzeichnis_downloaden_und_installieren"> Module aus dem CPAN-Verzeichnis downloaden und installieren </span></h2>
+<p>Die Verzeichnisse mit Modulen enthalten jeweils zu jedem Modul eine Datei mit der Endung <var>.readme</var> und eine Datei mit der Endung <var>.tar.gz</var>. Die readme-Datei ist eine Textdatei, der Sie vorab Details zum jeweiligen Modul entnehmen können. Die <var>tar.gz</var>-Datei ist eine nach dem GNU-Zip-Verfahren komprimierte tar-Datei, also eine Archivdatei. <var>GZip</var> und <var>tar</var> sind typische Werkzeuge aus der Unix-Welt. Um die Dateien unter anderen Betriebssystemen, etwa unter Windows zu entpacken, benötigen Sie ein Entpack-Programm für <var>gzip</var>-Dateien. Im Link-Verzeichnis des Online-Angebots von SELFHTML aktuell finden Sie eine Produktübersicht mit Links zu Anbietern von solchen Programmen:
+</p><p><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Linkliste" title="SELFHTML:Linkliste">SELFHTML-Linkverzeichnis: Pack- und Entpack-Programme</a>
+</p><p>Auf Unix-Systemen können Sie eine gezippte Archivdatei (im folgenden am Beispiel der Datei <var>Algorithm-SISort-0.10.tar.gz</var>) mit folgendem Befehl entpacken:
+</p><p><code>tar -zxf Algorithm-SISort-0.10.tar.gz</code>
+</p><p>Falls dies nicht funktioniert, sollte der folgende zusammengesetzte Befehl funktionieren:
+</p><p><code>gzip -cd Algorithm-SISort-0.10.tar.gz | tar -xf -</code>
+</p><p>Anschließend befinden sich die entpackten Dateien in einem Unterverzeichnis mit dem gleichen Namen wie das Modul, im Beispiel also etwa einem Verzeichnis namens <var>Algorithm-SISort-0.10</var>.
+</p><p>Wenn Sie das Modul nicht auf dem eigenen Rechner installieren wollen, sondern auf einem Rechner im Internet, wo Sie Web-Speicherplatz gemietet haben, benötigen Sie einen Telnet- oder SSH-Zugang zu dem Rechner, um das Modul dort installieren zu können. Ferner benötigen Sie die Rechte, um in die Modulverzeichnisse von Perl Dateien kopieren zu können. Fragen Sie dazu gegebenenfalls Ihren Provider! Wenn es sich bei dem Server-Rechner um einen Rechner mit einem Unix-Betriebssystem handelt, können Sie die <var>tar.gz</var>-Datei des Moduls zunächst auf Ihren Rechner downloaden, dann auf Ihren Server-Rechner uploaden und die Datei dort am Shell-Prompt, den Sie bei Zugang über Telnet oder SSH erhalten, mit den oben genannten Befehlen entpacken.
+</p><p>Nach dem Entpacken der <var>tar.gz</var>-Datei des Moduls muss das Modul installiert werden. Wechseln Sie dazu in das Verzeichnis der entpackten Dateien. Meistens finden Sie dort eine Datei namens <var>README</var> oder <var>INSTALL</var>, in der unter anderem Informationen zum Installieren des Moduls stehen.
+</p><p>Unter <b>Unix</b> müssen Sie nun am Shell-Prompt folgende Befehle eingeben:
+</p><p><code>perl Makefile.PL</code>
+</p><p>Mit diesem Befehl wird eine Datei mit Installationsinformationen erzeugt. Gegebenenfalls müssen Sie beim Aufruf von <code>perl</code> den Pfad zur ausführbaren Datei des Perl-Interpreters angeben.
+</p><p><code>make</code>
+</p><p>Mit diesem Befehl wird die Installation vorbereitet - die Dateien werden für Ihr System kompiliert.
+</p><p><code>make test</code>
+</p><p>Mit diesem Befehl wird die Installationsvorbereitung getestet. Wenn Sie sicher sind, dass Sie alles richtig konfiguriert haben, können Sie diesen Schritt auch weglassen.
+</p><p><code>make install</code>
+</p><p>Mit diesem Befehl wird die Installation durchgeführt.
+</p><p>Führen Sie diese Befehle unbedingt in der angegebenen Reihenfolge aus, wenn Sie ein Perl-Modul installieren! Das Modul ist dann in einem Modulverzeichnis installiert. Weitere Informationen, wie Sie das Modul benutzen, finden Sie in der hoffentlich vorhandenen Datei <var>README</var> oder <var>INSTALL</var>.
+</p><p>Unter anderen Systemen wie <b>Windows</b>, wo Sie normalerweise Zugang zu allen Verzeichnissen auf dem Rechner haben, kopieren Sie einfach den Inhalt des Unterverzeichnisses <var>lib</var>, das nach dem Entpacken existieren sollte, in das Verzeichnis <var>lib</var> unterhalb des Installationsverzeichnisses von Perl, sofern es sich um ein reines Perl-Modul handelt. Wenn das Modul mit C-Erweiterungen arbeitet, benötigen Sie einen C-Compiler, oder Sie benutzen das in der ActivePerl-Distribution mitgelieferte Tool <var>ppm</var>, um eine bereits kompilierte Version des Moduls zu installieren.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Falls Sie aufgrund fehlender Rechte auf einem Server-Rechner nicht die Möglichkeit haben, Module aus dem CPAN-Verzeichnis in die Modulverzeichnisse von Perl zu installieren, können Sie es auch in ein Verzeichnis Ihrer Wahl installieren. Also in ein Verzeichnis, auf das Sie selber Zugriff haben. Ohne einen Shell-Prompt, wie er bei Telnet oder SSH zur Verfügung steht, kommen Sie jedoch nicht aus.
+<p>Legen Sie dazu zunächst das Verzeichnis mit dem gewünschten Namen an der gewünschten Stelle in Ihrem Verzeichnisbaum an. Stellen Sie danach sicher, dass Sie sich im Verzeichnis des entpackten Perl-Moduls befinden. Geben Sie dann der Reihe nach folgende Befehle ein:
+</p><p><code>
+perl Makefile.PL LIB=[Pfad zum Verzeichnis]<br />
+make<br />
+make test<br />
+make install</code>
+</p><p>Bei <code>[Pfad zum Verzeichnis]</code> müssen Sie das zuvor angelegte Verzeichnis korrekt adressieren. Angenommen, Sie haben die Moduldateien aus Sicht Ihres Homepage-Startverzeichnisses in <var>tmp/Algorithm-SISort-0.10</var> entpackt, und das Modul soll in <var>cgi-bin/perlmodule/Algorithm-SISort-0.10</var> installiert werden. Dann müssen Sie, wenn Sie sich im Verzeichnis <var>tmp/Algorithm-SISort-0.10</var> befinden, eingeben:<br />
+</p>
+<code>perl Makefile.PL LIB=../../cgi-bin/perlmodule/Algorithm-SISort-0.10</code></div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 127/1000000
+Post‐expand include size: 2749/2097152 bytes
+Template argument size: 1292/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3111-0!*!0!!de-formal!*!* and timestamp 20150301222013 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;oldid=13975">http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;oldid=13975</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FModule%2FCPAN-Module" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Module/CPAN-Module"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Module/CPAN-Module&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Module/CPAN-Module" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Module/CPAN-Module" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Module/CPAN-Module" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CPAN-Module&amp;oldid=13975" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FModule-2FCPAN-2DModule" title="Spezial:Durchsuchen/Perl-2FModule-2FCPAN-2DModule">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 16. September 2012 um 19:44 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 4.504-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.169 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Module/CPAN-Module by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

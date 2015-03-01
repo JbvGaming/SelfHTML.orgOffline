@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/htaccess/FAQ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Webserver/htaccess/FAQ – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Webserver/htaccess/FAQ","wgTitle":"Webserver/htaccess/FAQ","wgCurRevisionId":24630,"wgArticleId":4129,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["ToDo","Webserver"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Webserver/htaccess/FAQ","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="Webserver/htaccess/FAQ" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Webserver/htaccess/FAQ&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Webserver_htaccess_FAQ skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Webserver/htaccess/FAQ</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Webserver" title="Webserver">Webserver</a> | <a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess">htaccess</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Auf dieser Seite sind einige häufig wiederkehrende Fragen zum Thema .htaccess mit den (hoffentlich) hilfreichen Antworten gesammelt.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Wie_hei.C3.9Ft_eigentlich_die_.htaccess-Datei.3F"><span class="tocnumber">1</span> <span class="toctext">Wie heißt eigentlich die .htaccess-Datei?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Geht_das_auch_auf_meiner_Homepage.3F"><span class="tocnumber">2</span> <span class="toctext">Geht das auch auf meiner Homepage?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Kann_man_damit_auch_CGI-Anwendungen_sch.C3.BCtzen.3F"><span class="tocnumber">3</span> <span class="toctext">Kann man damit auch CGI-Anwendungen schützen?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Kann_ich_Besucher_von_verschiedenen_IP-Adressen_unterschiedlich_behandeln.3F"><span class="tocnumber">4</span> <span class="toctext">Kann ich Besucher von verschiedenen IP-Adressen unterschiedlich behandeln?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Wie_kann_der_Webserver_eigentlich_diese_per_crypt.28.29_verschl.C3.BCsselten_Passworte_wieder_entschl.C3.BCssen.3F"><span class="tocnumber">5</span> <span class="toctext">Wie kann der Webserver eigentlich diese per crypt() verschlüsselten Passworte wieder entschlüssen?</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Kann_ich_den_Fragetext_des_vom_Browser_angezeigten_Authentifizierung-Dialogs_beeinflussen.3F"><span class="tocnumber">6</span> <span class="toctext">Kann ich den Fragetext des vom Browser angezeigten Authentifizierung-Dialogs beeinflussen?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Wie_kann_der_Webmaster_in_seiner_Konfiguration_features_zur_Verwendung_in_.htaccess_freischalten.3F"><span class="tocnumber">7</span> <span class="toctext">Wie kann der Webmaster in seiner Konfiguration features zur Verwendung in .htaccess freischalten?</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Wie_kann_eine_CGI-Anwendung_die_Authentifikation_eines_Benutzers_auswerten.3F"><span class="tocnumber">8</span> <span class="toctext">Wie kann eine CGI-Anwendung die Authentifikation eines Benutzers auswerten?</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Wie heißt eigentlich die .htaccess-Datei?">Bearbeiten</a>]</span> <span class="mw-headline" id="Wie_hei.C3.9Ft_eigentlich_die_.htaccess-Datei.3F">Wie heißt eigentlich die .htaccess-Datei?</span></h2>
+<p>Ganz allgemein gesagt: So, wie der Webmaster sie in der Direktive AccessFileName genannt hat.
+Vielleicht ist es gar nicht erwünscht, daß der Name einer so wichtigen Datei mit einem Punkt beginnt, also bei bestimmten Verzeichnislisten auf UNIX-Servern ggf. gar nicht angezeigt wird, wenn man etwa beim UNIX-Kommando ls nicht explizit den Operand -a angibt (wie das manche FTP-Clients tun).
+</p><p><code>.htaccess</code> ist lediglich der voreingestellte Defaultwert in der Apache-Konfiguration.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Geht das auch auf meiner Homepage?">Bearbeiten</a>]</span> <span class="mw-headline" id="Geht_das_auch_auf_meiner_Homepage.3F">Geht das auch auf meiner Homepage?</span></h2>
+<p>Das kommt auf die Konfiguration des Webservers an.
+</p><p>Das Konzept von <code>.htaccess</code> bedeutet, daß der Webmaster einen Teil seiner Kontrollmöglichkeiten an einen Benutzer abtritt. Bei den Massenanbietern von Homepages ist generell kaum zu erwarten, daß sie dazu bereit sind - und sei es nur aus Angst, einem Benutzer versehentlich das Recht zu geben, etwas zu tun, was ihren Betrieb mit tausenden von Homepages lahmlegen könnte.
+</p><p>Der Webmaster müßte auf jeden Fall wissen, was er tut - oder er müßte dem Anwender vertrauen. Deshalb wird eine Fähigkeit wie <code>.htaccess</code> vermutlich nur in den etwas teureren Paketen an Web-Speicher enthalten sein - was schade ist, denn wenn man das als Webmaster einmal richtig eingerichtet hat, könnten tausende von Benutzern davon profitieren.
+</p><p>Da bei bestimmten Einstellungen der Server-Konfiguration automatisch <code>.htaccess</code>-Dateien in übergeordneten Verzeichnissen mit geprüft werden müssen, könnte das Ganze bei wirklich hohen Zugriffszahlen auch eine Performance-Frage werden. Auch hier ist der Server für den Massenbetrieb der wahrscheinlichste Kandidat dafür, so eine Fähigkeit nicht anzubieten.
+</p><p>Falls der Provider tatsächlich einen solchen Service anbietet, dann sollte er auch angeben, welche der vielen features von <code>.htaccess</code> er freigeschaltet hat.
+</p><p>Abschließend ist ggf. noch zu beachten, daß der Name <code>.htaccess</code> in der Konfiguration des Webservers einstellbar ist. Im Zweifelsfalle also den Provider nach dem Namen der Datei fragen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Kann man damit auch CGI-Anwendungen schützen?">Bearbeiten</a>]</span> <span class="mw-headline" id="Kann_man_damit_auch_CGI-Anwendungen_sch.C3.BCtzen.3F">Kann man damit auch CGI-Anwendungen schützen?</span></h2>
+<p>Grundsätzlich schon, allerdings ist die Standardserverkonfiguration des Apache so eingestellt, dass cgi-bin nicht durch <code>.htaccess</code> beeinflussbar ist. Falls es Probleme dabei gibt (insbesondere 500 Internal Server Error oder Ausbleiben der Funktionalität), sollte man seinen Provider darauf ansprechen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Kann ich Besucher von verschiedenen IP-Adressen unterschiedlich behandeln?">Bearbeiten</a>]</span> <span class="mw-headline" id="Kann_ich_Besucher_von_verschiedenen_IP-Adressen_unterschiedlich_behandeln.3F">Kann ich Besucher von verschiedenen IP-Adressen unterschiedlich behandeln?</span></h2>
+<p>Die vollständige Fragestellung lautete:
+</p><p>"Wenn mein User von IP xx.yy.zz.* kommt (z. B. aus dem firmeneigenen Netz), dann soll er ohne irgendwelche Abfragen zugreifen dürfen; wenn er aber von einer anderen IP-Adresse aus zugreift, dann soll er sich mit Benutzerkennung und Passwort gegenüber der mit <code>.htaccess</code> definierten Benutzerliste ausweisen müssen."
+</p><p>Im Artikel wurde der Fall beschrieben, daß nur die Kombination aus IP-Adresse, Benutzerkennung und Passwort den Zugriff ermöglichen sollen (satisfy=all - alle Anforderungen müssen erfüllt sein).
+</p><p>Alternativ gibt es auch die Möglichkeit satisfy=any - mindestens eine der Anforderungen muß erfüllt sein. Das bewirkt dann genau den hier gewünschten Effekt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Wie kann der Webserver eigentlich diese per crypt() verschlüsselten Passworte wieder entschlüssen?">Bearbeiten</a>]</span> <span class="mw-headline" id="Wie_kann_der_Webserver_eigentlich_diese_per_crypt.28.29_verschl.C3.BCsselten_Passworte_wieder_entschl.C3.BCssen.3F">Wie kann der Webserver eigentlich diese per crypt() verschlüsselten Passworte wieder entschlüssen?</span></h2>
+<p>Er kann es gar nicht. Zu <code>crypt()</code> gibt es meines Wissens keine Umkehrfunktion. (Gäbe es sie, dann wäre eine Passwortdatei ein lukratives Opfer für Angriffe.)
+</p><p>Er muß es aber auch nicht können. Der Webserver muß lediglich prüfen können, ob das bei der Authentifizierung eingegebene Passwort mit dem gespeicherten Passwort übereinstimmt. Dazu kann er das eingegebene Passwort ebenfalls verschlüsseln und anschließend vergleichen, ob dasselbe Ergebnis dabei herauskommt.
+</p><p>Aus dieser Aussage kann man auf die Sicherheit des Schutzverfahrens schließen: Solange es keinen besseren Weg als Raten gibt, müßte ein potentieller Angreifer alle Passworte einer Länge von bis zu 8 Zeichen ausprobieren, also 2568 oder etwa 1.8*1019 Kombinationen durchprobieren (und für jeden Versuch einen Eintrag in der Protokolldaten des Webservers hinterlassen ...).
+Längere Passworte als 8 Stellen sind zulässig, werden aber von crypt() abgeschnitten.
+</p><p>Die Verschlüsselung unter Verwendung von crypt() führt allerdings zu Ergebnissen, die nicht ausschließlich vom angegebenen Passwort alleine abhängen, sondern außerdem noch von einem der Funktion übergebenen salt, einem zwei Zeichen langen String (damit kann man dann wieder 65536 verschiedene Verschlüsselungsverfahren erhalten - insbesondere kann man zwei mit verschiedenen salts verschlüsselten Passworten nicht ansehen, ob sie identisch sind! Auf diese Weise kann man dasselbe Passwort an verschiedenen Stellen verwenden und verliert ggf. trotzdem nicht sämtliche Schutzmechanismen, falls ein einziger gebrochen wird.)
+Trotzdem weiß der Webserver, wie er das angegebene Passwort verschlüsseln muß: Das salt ist nämlich Bestandteil des verschlüsselten Passworts, und zwar die ersten beiden Zeichen desselben. (Man kann also immerhin erkennen, daß zwei Passworte mit verschiedenen salts erzeugt wurden.)
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Kann ich den Fragetext des vom Browser angezeigten Authentifizierung-Dialogs beeinflussen?">Bearbeiten</a>]</span> <span class="mw-headline" id="Kann_ich_den_Fragetext_des_vom_Browser_angezeigten_Authentifizierung-Dialogs_beeinflussen.3F">Kann ich den Fragetext des vom Browser angezeigten Authentifizierung-Dialogs beeinflussen?</span></h2>
+<p>Meines Wissens nein. Der Fragetext kann in der Webserver-Konfiguration (inklusive .htaccess) nicht spezifiziert werden und ist offenbar gar nicht Bestandteil des Authentifizierungsdialogs zwischen Webserver und Browser.
+</p><p>Es ist vielmehr eine Frage des verwendeten Browsers, wie der angezeigte Fragetext aussieht. Eine kleine Stichprobe, ohne Anspruch auf Vollständigkeit:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Kopfzeile </th>
+<th> Fragetext  </th>
+<th> Browser
+</th></tr>
+<tr>
+<td> Username and Password Required  </td>
+<td> Enter username for &lt;realm&gt; at &lt;hostname&gt;  </td>
+<td> Netscape 3.0 Gold (Englisch)
+</td></tr>
+<tr>
+<td> Benutzername und Kennwort erforderlich </td>
+<td> Benutzernamen eingeben für &lt;realm&gt; bei &lt;hostname&gt;  </td>
+<td> Netscape 4.05 und 4.5 (Deutsch)
+</td></tr>
+<tr>
+<td> Authentifizierung  </td>
+<td> Der Zugriff auf diese Seite erfordert ein Kennwort. Ressource: &lt;realm&gt;  </td>
+<td> Microsoft IE 2.0 (Deutsch)
+</td></tr>
+<tr>
+<td> Geben Sie Benutzernamen und Kennwort ein  </td>
+<td> Si   &lt;URL&gt; Bereich: &lt;realm&gt;  </td>
+<td> Microsoft IE 5.0 (Deutsch)
+</td></tr>
+<tr>
+<td> &lt;url&gt; (abgeschnitten, Box ist zu klein)  </td>
+<td> The document is locked. Please enter username and password to unlock </td>
+<td> Opera 3.5 (Englisch)
+</td></tr></table>
+<div class="note-box note-box-todo"><p class="note-box-title">ToDo:&#160;&#160;&#160;&#160;<span class="note-box-more small">(<a href="http://wiki.selfhtml.org/wiki/Kategorie:ToDo" title="Kategorie:ToDo"><span style="color:#eef;text-decoration:underline">weitere ToDos</span></a>)</span></p><div class="note-box-text"> Browser aktualisieren</div></div> 		
+<p>Nicht nur die Texte, sondern sogar der Informationsgehalt derselben ist also massiv abhängig vom verwendeten Browser. (Opera 3.5 zeigt nicht einmal den Namen des realms an.)
+Was die Sprache angeht, ist dieses individuelle Verhalten sogar sinnvoll: Ein Anwender eines für seine Landessprache konfigurierten Browsers bekommt den Fragetext in einer Form angeboten, die er verstehen kann. Damit muß sich der Webmaster des Servers also schon mal nicht befassen.
+</p><p>Der Internet Explorer bietet in der Version 5.0 zusätzlich die Option an, die eingegebene Kombination von Benutzerkennung und Passwort lokal zu speichern. Bei einem erneuten Zugriff auf denselben realm werden die hierfür zuletzt verwendete Benutzerkennung (im Klartext) sowie das Passwort (angedeutet durch entsprechend viele Sternchen) bereits in den Authentifizierungsdialog eingetragen.
+Das mag für den Anwender bequemer sein - aber es bedeutet natürlich auch, daß ein Eindringling diese Information ggf. irgendwo auf diesem lokalen PC ebenfalls finden könnte.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Wie kann der Webmaster in seiner Konfiguration features zur Verwendung in .htaccess freischalten?">Bearbeiten</a>]</span> <span class="mw-headline" id="Wie_kann_der_Webmaster_in_seiner_Konfiguration_features_zur_Verwendung_in_.htaccess_freischalten.3F">Wie kann der Webmaster in seiner Konfiguration features zur Verwendung in .htaccess freischalten?</span></h2>
+<p>Das Kommando der (als Beispiel verwendeten) Apache-Konfiguration, welches den Funktionsumfang einer .htaccess-Datei regelt, heißt AllowOverride. Hierbei kann der Webmaster eine beliebige Teilmenge der folgenden Schlüsselworte angeben. Jedes Schlüsselwort schaltet die gesamte Gruppe an Rechten für die Verwendung in .htaccess-Dateien frei.
+</p><p>Da das Kommando zur Definition der Rechte eines URL-Baums gehört, kann man in verschiedenen URL-Bäumen problemlos unterschiedlich viele .htaccess-Rechte für seine Anwender freischalten.
+</p><p><b>AuthConfig</b> 	
+</p>
+<ul><li>Definition einer Berechtigungsstruktur, wie im Artikel beschrieben (Definition von Realms, Benutzer- und Passwortdateien sowie Anforderungen für die Authentifizierung). Bewirkt erst zusammen mit Limit die gewünschten Mechanismen.
+</li></ul>
+<p><b>FileInfo</b>
+</p>
+<ul><li> Eigene Definition von MIME-Typen und deren Abbildungen auf Datei-Endungen,
+</li><li> bedingte Verwendung sprachspezifischer Varianten von HTML-Dokumenten,
+</li><li> Definition von Dokumenten als Reaktion auf http-Fehlercodes.
+</li><li> Natürlich wäre CGI-Fähigkeit gerade im Zusammenhang mit der Definition von Fehlerdokumenten schön, weil man dann über eine CGI-Anwendung die entsprechenden Zugriffe protokollieren lassen könnte ... aber statt dessen kann der Provider dem Anwender auch einen Auszug aus den zentralen Log-Dateien anbieten, was ihm die Vergabe des (gefährlichen) CGI-Rechtes erspart.
+</li></ul>
+<p><b>Indexes</b>	
+</p>
+<ul><li>Feineinstellung für intelligentes directory browsing, falls solches erlaubt ist:
+</li><li> selbst definierbare Icons für Dateitypen
+</li><li> eigene Beschreibungstexte für MIME-Typen
+</li><li> Definition des Namens der Indexdatei (index.html etc.)
+</li><li> automatische Kopf- und Fußzeilen-Includedateien für directory-browsing
+</li><li> Liste von nicht anzuzeigenden Dateien (regular expressions!)
+</li></ul>
+<p>Mit geeigneten Einstellungen kann man ganz ohne eigene HTML-Dokumente eine halbwegs komfortable Navigationsfunktion allein über die directory-browsing-Funktion des Webservers organisieren, die dennoch individuell aussieht.
+</p><p><b>Limit </b>	
+</p>
+<ul><li> Zugangskontrolle, wie im Artikel beschrieben (Freigabe der Kommandos allow, deny und order).
+</li><li> Limit alleine ohne AuthConfig erlaubt die Zugangsbeschränkung auf Verzeichnisse nur anhand von durch den Webmaster vordefinierten Rechtestrukturen, nicht aber z. B. die Definition eigener Benutzerkennungen.
+</li></ul>
+<p><b>Options</b>
+</p>
+<ul><li> XBitHack - damit kann man eine Art selbstprogrammierbarer Variante von SSI erzeugen
+</li><li> Options - damit kann man Optionen für das Verhalten des Verzeichnisses setzen, und zwar:
+</li><li> Indexes - erlaubt die Verwendung oder Abschaltung von directory browsing (ansonsten gilt einfach die zentrale Voreinstellung des Servers).
+</li><li> ExecCGI - erlaubt die Definition eigener CGI-Verzeichnisse.
+</li><li> Includes - erlaubt die Verwendung oder Abschaltung von Server Side Includes im vollen Umfang (inklusive ExecCGI!).
+</li><li> IncludesNoCGI- erlaubt die Verwendung oder Abschaltung von Server Side Includes im beschränktem Umfang (ohne ExecCGI!).
+</li><li> MultiViews - erlaubt die Verwendung oder Abschaltung von dynamischen sprachabhänigen Dokumenten.
+</li><li> SymLinks - erlaubt die Verwendung von symbolic links als Verweise auf Dokumente in anderen Verzeichnissen. Elegant, falls man auf Objekte zeigen will, die außerhalb des URL-Baums liegen (z. B. Protokolldateien des Webservers), unterläuft aber damit ggf. bewußt das Verbergen solcher Objekte durch eben diesen URL-Baum.
+</li><li> SymLinksIfOwnerMatch - eingeschränkte Version, erlaubt nur den Verweis auf Objekte derselben Benutzerkennung. Das hier ist die Einstellung, bei welcher der Webmaster wirklich aufpassen muß und besser erst mal nur die entsprechenden Rechte in seiner zentralen Konfiguration definieren sollte (IncludesNoCGI für sich genommen ist ungefährlich und sehr nützlich!).
+</li></ul>
+<p>Wenn man einem Benutzer erlaubt, diese Optionen selbst zu setzen, dann kann dieser alles aus dieser Liste selbst einstellen! Das ist sehr schade, denn es verhindert auch die Freigabe der ungefährlichen Rechte an alle Benutzer (etwa die Entscheidung, ob man directory browsing will oder nicht) und zwingt den Webmaster dazu, dies in seiner zentralen Konfiguration ggf. für verschiedene Benutzer selbst unterschiedlich zu definieren. 
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Wie kann eine CGI-Anwendung die Authentifikation eines Benutzers auswerten?">Bearbeiten</a>]</span> <span class="mw-headline" id="Wie_kann_eine_CGI-Anwendung_die_Authentifikation_eines_Benutzers_auswerten.3F">Wie kann eine CGI-Anwendung die Authentifikation eines Benutzers auswerten?</span></h2>
+<p>In der CGI-Spezifikation ist eine Environment-Variable REMOTE_USER beschrieben, welche die Benutzerkennung einer Authentifizierung der entsprechenden Realm speichern soll. Über diese Variable läßt sich z. B. der Name eines Benutzers protokollieren usw. Hat sich der Anwender nirgendwo anmelden müssen, um auf die URL der CGI-Anwendung zuzugreifen, dann ist der Inhalt dieser Variable natürlich leer.
+</p><p>Der Apache-Webserver hält sich an diese Spezifikation. Leider aber lehrt die Erfahrung, daß sich keineswegs alle Webserver strikt an die CGI-Spezifikation halten. Der Webserver WebSite1.1 für Windows32 nennt diese Variable beispielsweise AUTH_USER!
+Da hilft im Zweifelsfalle nur, ein CGI-Skript zur Ausgabe sämtlicher CGI-Variablen zu installieren und nachzusehen - oder über die CGI-Variable SERVER_SOFTWARE den Namen des Webservers abzufragen, um herauszufinden, welche Environment-Variable man abfragen muß ...
+</p><p>Hat sich ein Anwender innerhalb eines realms erfolgreich angemeldet, dann bleibt ihm seine Identität für die Dauer seiner Browser-Sitzung erhalten - sofern er diese nicht bewußt ändert.
+Wie kann man seine Identität ändern? Indem man auf eine URL desselben realms zugreift, für welche die bisherige Identität kein Zugriffsrecht hat. In diesem Moment wird wieder der ursprüngliche Authentifizierungsdialog gestartet, und der Anwender kann nun eine andere Benutzerkennung und ein passendes Kennwort eingeben - sofern er solches besitzt. In diesem Moment verliert er seine alte Identität - greift er also wieder auf die ursprüngliche URL zu, erfolgt erneut ein Authentifizierungsdialog ...
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 57/1000000
+Post‐expand include size: 340/2097152 bytes
+Template argument size: 31/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4129-0!*!0!!de-formal!*!* and timestamp 20150301113824 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;oldid=24630">http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;oldid=24630</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorien</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:ToDo" title="Kategorie:ToDo">ToDo</a></li><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:Webserver" title="Kategorie:Webserver">Webserver</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Webserver%2Fhtaccess%2FFAQ" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess/FAQ"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Webserver/htaccess/FAQ&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess/FAQ" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Webserver/htaccess/FAQ" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Webserver/htaccess/FAQ" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess/FAQ&amp;oldid=24630" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Webserver-2Fhtaccess-2FFAQ" title="Spezial:Durchsuchen/Webserver-2Fhtaccess-2FFAQ">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 25. Dezember 2014 um 19:19 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 574-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.081 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/htaccess/FAQ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+</html>

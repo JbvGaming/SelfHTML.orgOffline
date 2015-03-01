@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Funktionen für Module und Packages – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Funktionen_für_Module_und_Packages","wgTitle":"Perl/Funktionen für Module und Packages","wgCurRevisionId":13973,"wgArticleId":3108,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Funktionen_für_Module_und_Packages","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Funktionen für Module und Packages" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Funktionen_für_Module_und_Packages skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Funktionen für Module und Packages</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_diesen_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu diesen Funktionen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.40INC_-_die_Liste_der_Pfadnamen_f.C3.BCr_Module"><span class="tocnumber">1.1</span> <span class="toctext">@INC - die Liste der Pfadnamen für Module</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Namensr.C3.A4ume"><span class="tocnumber">1.2</span> <span class="toctext">Namensräume</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Was_ist_besser_-_require_oder_use.3F"><span class="tocnumber">1.3</span> <span class="toctext">Was ist besser - require oder use?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#package_-_Namensraum_eines_Packages_aktivieren"><span class="tocnumber">2</span> <span class="toctext">package - Namensraum eines Packages aktivieren</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#require_-_andere_Perl-Datei_ausf.C3.BChren"><span class="tocnumber">3</span> <span class="toctext">require - andere Perl-Datei ausführen</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#use_-_Modul_einbinden"><span class="tocnumber">4</span> <span class="toctext">use - Modul einbinden</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu diesen Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_diesen_Funktionen"> Allgemeines zu diesen Funktionen </span></h2>
+<p>Um die hier beschriebenen Funktionen besser zu verstehen, sollten Sie das Kapitel über <a href="http://wiki.selfhtml.org/wiki/Perl/Module" title="Perl/Module">Perl-Module</a> lesen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: @INC - die Liste der Pfadnamen für Module">Bearbeiten</a>]</span> <span class="mw-headline" id=".40INC_-_die_Liste_der_Pfadnamen_f.C3.BCr_Module"> <code>@INC</code> - die Liste der Pfadnamen für Module </span></h3>
+<p>Wenn Sie mit <a href="#require">require</a> oder <a href="#use">use</a> eine Moduldatei (Dateien  <code>*.pm</code>) einbinden, sucht Perl die entsprechende Datei entweder im aktuellen Verzeichnis, oder in einem Verzeichnis, das in der Liste für Modulpfadnamen gespeichert ist. Dazu dient die <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierte Variable</a> <code>@INC</code>. Im Abschnitt <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Speicherorte_f.C3.BCr_Module_und_die_Liste_.40INC" title="Perl/Module/Einführung">Speicherorte für Module und die Liste @INC</a> finden Sie ein Beispielscript, mit dessen Hilfe Sie sich den Inhalt von <code>@INC</code> ausgeben lassen können, um die bei Ihnen gültigen Pfade herauszufinden.
+</p><p>Neben der Liste <code>@INC</code> gibt es übrigens auch einen Hash namens <code>%INC</code>. In diesem Hash werden alle bereits geladenen Module gespeichert. Perl verhindert auf diese Weise, dass Module mehrfach geladen werden und dadurch zu unerwünschtem Verhalten im Programmablauf führen. Über derartige Probleme, die in C durch Präprozessoranweisungen wie <code>#ifndef</code> und <code>#define</code> gelöst werden müssen, brauchen Sie sich in Perl also keine Gedanken machen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Namensräume">Bearbeiten</a>]</span> <span class="mw-headline" id="Namensr.C3.A4ume"> Namensräume </span></h3>
+<p>Ein Namensraum heißt in Perl <b>Package</b>. Wenn Sie nichts anderes angeben, befindet sich jede Perl-Datei im package mit dem Namen <code>main</code>. Variablen, die innerhalb einer Perl-Datei ohne weitere Einschränkungen wie <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts#local" title="Perl/Funktionen für die Kontrolle des laufenden Scripts">local</a> oder <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts#my" title="Perl/Funktionen für die Kontrolle des laufenden Scripts">my</a> definiert werden, Namen von Subroutinen usw. gelten global in dieser einen Datei. Mit Hilfe der Funktion <a href="#package">package</a> können Sie eine Perl-Datei in mehrere Packages unterteilen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Was ist besser - require oder use?">Bearbeiten</a>]</span> <span class="mw-headline" id="Was_ist_besser_-_require_oder_use.3F"> Was ist besser - <code>require</code> oder <code>use</code>? </span></h3>
+<p>Die beiden Funktionen <a href="#require">require</a> und <a href="#use">use</a> haben ähnliche Aufgaben, unterscheiden sich jedoch in ihrer Wirkungsweise. <code>require</code> wird zur Laufzeit eines Scripts geladen (und zwar an der Stelle, wo die <code>require</code>-Anweisung steht), während <code>use</code> bereits vorher, zur Kompilierzeit des Scripts, mit eingebunden wird. Bei <code>require</code> wechseln Sie also einfach während der Scriptausführung in ein anderes Script, lassen dieses kompilieren und ausführen, und kehren dann zurück. Bei <code>use</code> dagegen haben Sie nach dem Kompilieren, das Perl vor jedem Ausführen des Scripts durchführt, praktisch ein großes Script, dessen Code sich aus den Sourcen mehrerer Moduldateien zusammensetzt. Das hat Folgen. So werden Syntaxfehler, die in einem mit <code>use</code> eingebundenen Modul enthalten sind, bereits im Vorfeld erkannt, und das Script wird gar nicht erst ausgeführt. Bei <code>require</code> hingegen kann es passieren, dass das Hauptscript fehlerfrei ist, das eingebundene Script jedoch Syntaxfehler enthält. Diese werden jedoch erst erkannt, wenn das Hauptscript bereits läuft. Dadurch können undefinierte Zustände entstehen. Aus heutiger Sicht ist die Verwendung von <code>use</code> in den meisten Fällen vorzuziehen. Allerdings gibt es auch Ausnahmen.
+</p><p>Letztlich ist die Tatsache, dass es heute beide Funktionen gibt, historisch bedingt. <code>require</code> ist älter (wurde schon von Perl 4 interpretiert), während <code>use</code> seit Version 5 zur Verfügung steht. In der 5er-Version wurde das Modulkonzept von Perl stark erweitert und hat erst dort die heute verbreitete Form angenommen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: package - Namensraum eines Packages aktivieren">Bearbeiten</a>]</span> <span class="mw-headline" id="package_-_Namensraum_eines_Packages_aktivieren"> <span id="package"></span> package - Namensraum eines Packages aktivieren </span></h2>
+<p>Mit dieser Funktion bestimmen Sie einen <a href="#Namensr.C3.A4ume">Namensraum</a> als den aktiv gültigen. Der Namensraum bleibt solange aktiv, bis mit einem neuen Aufruf von <code>package</code> ein anderer Namensraum aktiv wird, oder bis die natürliche Grenze eines Namensraums, also der aktuelle Block (etwa eine Subroutine) oder das Dateiende erreicht ist. Auf diese Weise können Sie innerhalb einer Scriptdatei modular arbeiten.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen des Namensraums, oder eine Zahl, die als Versionsnummer interpretiert wird.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<p><a rel="nofollow" class="external text" href="http://de.selfhtml.org/cgi-bin/812/module1.pl">Anzeigebeispiel: So sieht's aus</a> (Zum Aufruf des Scripts ist eine Internet-Verbindung erforderlich)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">package</span> deutsch<span class="sy0">;</span>
+<span class="kw2">use</span> vars <span class="kw3">qw</span><span class="br0">&#40;</span><span class="re0">$Hauptstadt</span> <span class="re0">$Flaeche</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Hauptstadt</span> <span class="sy0">=</span> <span class="st0">&quot;Berlin&quot;</span><span class="sy0">;</span>
+<span class="re0">$Flaeche</span> <span class="sy0">=</span> <span class="st0">&quot;356.910 qm&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">package</span> franzoesisch<span class="sy0">;</span>
+<span class="kw2">use</span> vars <span class="kw3">qw</span><span class="br0">&#40;</span><span class="re0">$Hauptstadt</span> <span class="re0">$Flaeche</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Hauptstadt</span> <span class="sy0">=</span> <span class="st0">&quot;Paris&quot;</span><span class="sy0">;</span>
+<span class="re0">$Flaeche</span> <span class="sy0">=</span> <span class="st0">&quot;551.500 qm&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">package</span> deutsch<span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Die Hauptstadt ist $Hauptstadt und das Land ist $Flaeche gross&lt;/p&gt;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">package</span> franzoesisch<span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Die Hauptstadt ist $Hauptstadt und das Land ist $Flaeche gross&lt;/p&gt;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ruft insgesamt vier mal <code>package</code> auf. Beim ersten mal wird dabei ein neuer Namensraum namens <code>deutsch</code> geschaffen, beim zweiten mal ein neuer Namensraum namens <code>franzoesisch</code>. Beim dritten mal wird der Namensraum <code>deutsch</code> erneut aufgerufen, und ab diesem Befehl kennt das Script nur diejenigen Variablen, Subroutinen usw., die innerhalb des gleichen Namensraums definiert wurden. Ebenso ist es beim vierten mal, wo der Namensraum <code>franzoesisch</code> wieder aufgerufen wird.
+Bei Verwendung von <code>use strict</code> wie im Beispiel müssen die Variablen, die in den beiden ersten Package-Blöcken deklariert werden, allerdings explizit global deklariert werden, um bei späteren Aufrufen des Packages zur Verfügung zu stehen. Um die Deklaration globaler Variablen zu ermöglichen, steht das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>vars</code> zur Verfügung. Im Beispiel sehen Sie, wie dieses Modul eingesetzt wird. Innerhalb eines Packages mit <code>use</code> eingebunden, stehen in der Klammer hinter <code>qw</code> alle Variablennamen des aktuellen Packages, die global, also ohne <code>my</code> davor deklariert werden sollen. Perl meckert dann trotz <code>use strict</code> nicht an den Deklarationen.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Solange nicht mit <code>package</code> ein spezieller Namensraum aktiviert wird, gilt der <b>Default-Namensraum</b> von Perl, der den Namen <code>main</code> hat.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: require - andere Perl-Datei ausführen">Bearbeiten</a>]</span> <span class="mw-headline" id="require_-_andere_Perl-Datei_ausf.C3.BChren"> <span id="require"></span> require - andere Perl-Datei ausführen </span></h2>
+<p>Mit dieser Funktion führen Sie eine beliebige andere Perl-Datei aus. Das andere Script wird an der Stelle, an der der <code>require</code>-Aufruf steht, ausgeführt.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen der einzubindenden Datei, gegebenenfalls mit Pfadnamen (Normalfall), oder eine Zahl, die als Versionsnummer interpretiert wird.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<p><a rel="nofollow" class="external text" href="http://de.selfhtml.org/cgi-bin/812/module2.pl">Anzeigebeispiel: So sieht's aus</a> (Zum Aufruf des Scripts ist eine Internet-Verbindung erforderlich)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">require</span> <span class="st0">&quot;hallo_welt.pl&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<p>(Moduldatei <var>hallo_welt.pl</var>)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw3">print</span> <span class="st0">&quot;Hallo Welt!&quot;</span><span class="sy0">;</span>
+<span class="nu0">1</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie ein "herkömmliches" Perl-Script, das seinen Output auf die Standardausgabe schreibt, in ein CGI-Script einbetten können, sodass der Output an den aufrufenden Browser gesendet werden kann. Im GGI-Script wird mit <code>require "hallo_welt.pl"</code> eine andere Perl-Datei eingebunden. Diese Datei schreibt einfach ein <code>Hallo Welt</code> auf die Standardausgabe. Da es jedoch in ein Script eingebunden ist, das zuvor den üblichen HTTP-Header sendet, gelangt der Output als HTML-Inhalt zum Browser.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Sie können mit <code>require</code> ebenso wie mit <a href="#use">use</a> eine Moduldatei mit der Endung <code>.pm</code> einbinden. In diesem Fall müssen Sie <code>require&#160;Modulname</code> angeben. Perl sucht dann nach einer Datei namens <code>Modulname.pm</code>. Auch die Syntax mit <code>::</code> ist genauso möglich wie bei <code>use</code> (vergleiche dazu den Abschnitt <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Adressierungs-Syntax_beim_Einbinden_von_Modulen" title="Perl/Module/Einführung">Adressierungs-Syntax beim Einbinden von Modulen</a>).
+<p>Eingebundene Perl-Dateien müssen am Ende so etwas wie <code>1;</code> enthalten. Dadurch wird sichergestellt, dass das Modul oder die Modul-Funktion korrekt ausgeführt wird.
+</p>
+Wenn eine eingebundene Datei Subroutinen enthält, können Sie diese so aufrufen, als wären sie im aktuellen Perl-Script notiert.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: use - Modul einbinden">Bearbeiten</a>]</span> <span class="mw-headline" id="use_-_Modul_einbinden"> <span id="use"></span> use - Modul einbinden </span></h2>
+<p>Mit dieser Funktion laden Sie ein Perl-Modul oder bestimmte Funktionen aus einem solchen Modul in ihr Script und können den entsprechenden Perl-Code in Ihrem Script benutzen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen des Moduls (Normalfall), oder eine Zahl, die als Versionsnummer interpretiert wird.
+</li><li> bis <b>n.</b> (optional) weitere, einschränkende Angaben (siehe weiter unten).
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<p><a rel="nofollow" class="external text" href="http://de.selfhtml.org/cgi-bin/812/module3.pl">Anzeigebeispiel: So sieht's aus</a> (Zum Aufruf des Scripts ist eine Internet-Verbindung erforderlich)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> Syntax<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Output</span> <span class="sy0">=</span> html_syntax<span class="br0">&#40;</span><span class="st0">&quot;&lt;h1&gt;So sieht es aus&lt;/h1&gt;&quot;</span><span class="sy0">,</span><span class="st0">&quot;red&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h1&gt;So sieht es aus&lt;/h1&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Output<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<p>(Moduldatei <var>Syntax.pm</var>)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw3">package</span> Syntax<span class="sy0">;</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> vars <span class="kw3">qw</span><span class="br0">&#40;</span><span class="re0">$VERSION</span> <span class="re0">@ISA</span> <span class="re0">@EXPORT</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">require</span> Exporter<span class="sy0">;</span>
+<span class="re0">@ISA</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span>Exporter<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">@EXPORT</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span>html_syntax<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$VERSION</span> <span class="sy0">=</span> <span class="nu0">1.0</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> html_syntax <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$htmlstr</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$color</span> <span class="sy0">=</span> <span class="kw3">shift</span><span class="sy0">;</span>
+  <span class="re0">$htmlstr</span> <span class="sy0">=~</span> <span class="co2">s/\&amp;/&amp;amp;/g</span><span class="sy0">;</span>
+  <span class="re0">$htmlstr</span> <span class="sy0">=~</span> <span class="co2">s/\&quot;/&amp;quot;/g</span><span class="sy0">;</span>
+  <span class="re0">$htmlstr</span> <span class="sy0">=~</span> <span class="co2">s/\&lt;/&amp;lt;/g</span><span class="sy0">;</span>
+  <span class="re0">$htmlstr</span> <span class="sy0">=~</span> <span class="co2">s/\&gt;/&amp;gt;/g</span><span class="sy0">;</span>
+  <span class="re0">$htmlstr</span> <span class="sy0">=~</span> <span class="co2">s/(&amp;lt;)/&lt;span style=\&quot;color:$color\&quot;&gt;$1/g</span><span class="sy0">;</span>
+  <span class="re0">$htmlstr</span> <span class="sy0">=~</span> <span class="co2">s/(&amp;gt;)/$1&lt;\/span&gt;/g</span><span class="sy0">;</span>
+  <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$htmlstr</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="nu0">1</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Komplettbeispiel zeigt ein CGI-Script, in dem ein selbst definiertes Modul verwendet wird, sowie den Code der entsprechenden Moduldatei. Im CGI-Script wird die Moduldatei, die im Beispiel <code>Syntax.pm</code> heißt und im gleichen Verzeichnis wie das CGI-Script oder im Hauptverzeichnis von <code>@INC</code> abgelegt wird, mit <code>use Syntax;</code> eingebunden (vergleichen Sie dazu den Abschnitt <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Adressierungs-Syntax_beim_Einbinden_von_Modulen" title="Perl/Module/Einführung">Adressierungs-Syntax beim Einbinden von Modulen</a>).
+<p>Das Hauptprogramm ruft dann eine Subroutine namens <code>html_syntax()</code> auf und übergibt ihr zwei Parameter, nämlich eine Zeichenkette mit HTML-Code und den Namen einer Farbe (<code>red</code>). Die Subroutine <code>html_syntax()</code> hat die Aufgabe, den übergebenen HTML-Code HTML-gerecht zu maskieren und die HTML-Tags in der angegebenen Farbe auszuzeichnen (also praktisch aus dem übergebenen HTML-Code den Code mit HTML-Syntax-Highlighting darstellbar zu machen). Die Subroutine erzeugt dabei neuen HTML-Code und gibt diesen am Ende zurück. Im Hauptprogramm wird der zurückgegebene Code in der Variablen <code>$Output</code> aufgefangen. Deren Inhalt kann schließlich an den Webserver zur Weitergabe an einen aufrufenden Browser ausgeliefert werden.
+</p><p>Die Subroutine <code>html_syntax()</code> ist im Modul <code>Syntax</code> mit <code>sub&#160;html_syntax</code> definiert. Die Moduldatei enthält zu Beginn noch einige weitere Anweisungen, auf die an dieser Stelle nicht näher eingegangen wird. Lesen Sie dazu den Abschnitt <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Erweiterte_Verwendung_von_use_.28.40EXPORT.2C_.40EXPORT_OK_und_qw.29" title="Perl/Module/Einführung">Erweiterte Verwendung von use (@EXPORT, @EXPORT_OK und qw)</a>.
+</p><p>Die folgende Tabelle zeigt, welche Varianten es gibt, um mit <code>use</code> ein Modul oder bestimmte Teile davon einzubinden:
+</p>
+<table class="wikitable">
+<tr>
+<th> Beispiel:
+</th>
+<th> Erläuterung:
+</th></tr>
+<tr>
+<td> <code>use Beispiel;</code>
+</td>
+<td> Bindet ein Modul namens <code>Beispiel.pm</code> ein, wobei diese Datei entweder im aktuellen Arbeitsverzeichnis oder in einem der Verzeichnisse abgelegt werden muss, die in [[#<code>@INC</code>|@INC]] gespeichert sind. Geben Sie also den Dateinamen ohne die Endung an. Die Endung der Moduldatei muss <code>.pm</code> lauten.
+</td></tr>
+<tr>
+<td> <code>use Beispiel::Spezial;</code>
+</td>
+<td> Bindet ein Modul namens <code>Spezial.pm</code> ein. Dabei löst Perl die <code>::</code>-Syntax als Pfadnamen auf - d.h. es wird eine Datei mit dem Pfadnamen <code>Beispiel/Spezial.pm</code> erwartet. Dies ist ein relativer Pfadname, ausgehend von einem der Verzeichnispfade, die in [[#<code>@INC</code>|@INC]] gespeichert sind.
+</td></tr>
+<tr>
+<td> <code>use CGI::Carp qw(fatalsToBrowser);</code>
+</td>
+<td> Bindet aus dem Verzeichnis <code>CGI</code> das Modul <code>Carp.pm</code> ein. Das Symbol <code>fatalsToBrowser</code> wird der Importliste übergeben. Normalerweise wird es dann in den aktuellen Namensraum importiert, was allerdings - typisch für Perl - gerade bei diesem populären Beispiel nicht der Fall ist. Die Übergabe von <code>fatalsToBrowser</code> löst hier eine Sonderbehandlung aus.
+</td></tr>
+<tr>
+<td> <code>use 5.003;</code>
+</td>
+<td> Script läuft nur weiter, wenn ein Perl-Interpreter installiert ist, der eine Versionsnummer gleich oder höher als 5.003 hat.
+</td></tr></table></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Anweisung:<br />
+<p><code>use Modulname;</code><br />
+ist gleichbedeutend mit:<br />
+<code>BEGIN { require Modulname; import Modulname [Importliste]; }</code><br />
+Die Funktion <code>use</code> leistet also die Summe aus dem, was die Funktion <a href="#require">require</a> in Verbindung mit der Methode <code>import</code> leistet.
+</p><p>Wenn Sie <code>use</code> genau ein Argument übergeben und dieses Argument eine Zahl ist, also z.B. <code>5</code> oder <code>5.003</code>, dann prüft Perl diese Angabe gegen die Versionsnummer des Perl-Interpreters. Ist die Versionsnummer des Perl-Interpreters niedriger als die angegebene Zahl, wird das laufende Script sofort mit einer Fehlermeldung beendet. Dies kann sinnvoll sein, um zu verhindern, dass ein Script weiterläuft, das Code enthält, der höhere Perl-Versionen erfordert.
+</p>
+Module müssen am Ende so etwas wie <code>1;</code> enthalten. Dadurch wird sichergestellt, dass das Modul korrekt eingebunden wird.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 308/1000000
+Post‐expand include size: 28566/2097152 bytes
+Template argument size: 25246/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3108-0!*!0!!de-formal!*!* and timestamp 20150301151030 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;oldid=13973">http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;oldid=13973</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FFunktionen+f%C3%BCr+Module+und+Packages" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Funktionen_für_Module_und_Packages" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Funktionen_für_Module_und_Packages" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Module_und_Packages&amp;oldid=13973" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FFunktionen_für_Module_und_Packages" title="Spezial:Durchsuchen/Perl-2FFunktionen für Module und Packages">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 16. September 2012 um 19:44 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.864-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.103 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

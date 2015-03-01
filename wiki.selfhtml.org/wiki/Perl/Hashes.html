@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Hashes by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Hashes – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Hashes","wgTitle":"Perl/Hashes","wgCurRevisionId":13922,"wgArticleId":1840,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Hashes","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Hashes" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Hashes&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Hashes skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Hashes</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Hashes deklarieren und Werte zuweisen">Bearbeiten</a>]</span> <span class="mw-headline" id="Hashes_deklarieren_und_Werte_zuweisen"> Hashes deklarieren und Werte zuweisen </span></h2>
+<p>Gewöhnliche <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Listen</a> bzw. Arrays bestehen aus einer Reihe von Werten, die über Indexnummern, beginnend bei 0, ansprechbar sind. So ist das 8. Element eines Arrays mit dem Namen <code>@Listenname</code> über <code>$Listenname[7]</code> ansprechbar. Ein assoziativer Array, in Perl als Hash bezeichnet, speichert dagegen pro Element zwei Werte: einen Namen und einen Wert. Werte innerhalb eines Hashs werden dann nicht über Indexnummern angesprochen, sondern über den zugehörigen Namen "assoziiert". Der Name wird daher auch als "Schlüssel" bezeichnet. Über den Schlüssel ist der Zugriff auf die damit verknüpften Daten möglich.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">%Daten</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Name&quot;</span><span class="sy0">,</span><span class="st0">&quot;Jana&quot;</span><span class="sy0">,</span><span class="st0">&quot;Alter&quot;</span><span class="sy0">,</span><span class="nu0">23</span><span class="sy0">,</span><span class="st0">&quot;Ort&quot;</span><span class="sy0">,</span><span class="st0">&quot;Berlin&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">%bessereDaten</span> <span class="sy0">=</span> <span class="br0">&#40;</span>Name <span class="sy0">=&gt;</span> <span class="st0">&quot;Jana&quot;</span><span class="sy0">,</span> Alter <span class="sy0">=&gt;</span> <span class="nu0">23</span><span class="sy0">,</span> Ort <span class="sy0">=&gt;</span> <span class="st0">&quot;Berlin&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;pre&gt;&quot;</span><span class="sy0">,</span><span class="re0">%Daten</span><span class="sy0">,</span><span class="st0">&quot;&lt;/pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;pre&gt;&quot;</span><span class="sy0">,</span><span class="re0">%bessereDaten</span><span class="sy0">,</span><span class="st0">&quot;&lt;/pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel werden zwei Hashes namens <code>%Daten</code> und <code>%bessereDaten</code> deklariert. "Deklaration" bedeutet bei Hashes das gleiche wie bei <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Arrays</a>. Ein Hash wird durch das Prozentzeichen <code>%</code> eingeleitet. Dahinter folgt der Name des Hashes. Bei der Deklaration eines Hashes können Sie Anfangswerte zuweisen oder auch nicht. In beiden obigen Beispielen werden Anfangswerte zugewiesen. Dabei gibt es zwei unterschiedliche Notationsweisen, von denen diejenige, die bei <code>%bessereDaten</code> angewendet wird, die übersichtlichere und daher empfehlenswertere ist. Sie können die Werte wie im ersten Hash gezeigt notieren. Dabei wird wie in einer Liste alles durch Kommata getrennt. Das erste, dritte, fünfte usw. Element bezeichnet jedoch einen Namen, und das zweite, vierte, sechste usw. Element den zugehörigen Wert. In der empfehlenswerteren Notation kommt dies besser zum Ausdruck. Dabei werden die Namen-Wert-Paare durch den Zeigeoperator <code>=&gt;</code> (der hier ein Synonym für das Komma darstellt, weshalb er auch als <i>fat comma</i> bezeichnet wird) getrennt, und Kommata werden nur zwischen den Paaren notiert. Bei der Notationsweise mit dem Operator <code>=&gt;</code> dürfen die Anführungszeichen bei den Namen, also den Schlüsseln, entfallen, wenn sie den Regeln der  <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Regeln_f.C3.BCr_selbst_vergebene_Namen" title="Perl/Einführung in Perl" class="mw-redirect">Namensvergabe</a> genügen. Bei der anderen Notation mit Komma-Trennung zwischen Schlüssel und Wert sind die Anführungszeichen dagegen auch bei den Schlüsseln Pflicht. Die beiden Beispiel-Hashes zeigen diesen Unterschied.
+<p>Wie bei Skalaren und Listen können Sie leere Hashes deklarieren. Eine Anweisung wie <code>my&#160;%Daten;</code> deklariert einen Hash, der jedoch zunächst leer ist.
+</p><p>Wie Listen können auch Hashes bei den eigentlichen Werten nur Skalare enthalten, also Zeichenketten und Referenzen, die Sie auch hier beliebig mischen können. Im obigen Beispiel sind die Einzelwerte <code>Jana</code> und <code>Berlin</code> Zeichenketten, während <code>23</code> eine Zahl ist.
+</p>
+Das Beispiel gibt einfach die beiden Hash-Inhalte aus.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Skalare, Listen und Hashes haben unterschiedliche Namensräume. Variablen wie <code>$name</code>, <code>@name</code> und <code>%name</code> können also problemlos im gleichen Script vorkommen.</div>
+<p>Komplette Hashes, also mit dem Prozentzeichen beginnend, werden innerhalb von Anführungszeichen in <code>print</code>-Anweisungen nicht interpretiert. Um einen Hash komplett auszugeben, so wie im obigen Beispiel, müssen Sie die Technik nutzen, mehrere Einzelwerte mit <code>print</code> auszugeben, die durch Kommata getrennt sind, wie im obigen Beispiel gezeigt.
+</p><p>Anstelle von konstanten Daten können Sie auch andere Variablen in einen Hash einfügen. Zum Beispiel:<br /><code>my $Alter = 23;</code><br /><code>my&#160;%Daten = (Name =&gt; "Jana", Alter =&gt; $Alter);</code>
+</p><p>Hashes lassen sich im Zusammenhang mit CGI-Scripts sehr sinnvoll einsetzen. So ist es beispielsweise möglich, den Datenstrom eines vom Anwender ausgefüllten HTML-Formulars in einen Hash einzulesen, wobei als Hash-Schlüssel jeweils der Feldname des Formularelements gespeichert wird und als Wert der Wert, den der Anwender in dem betreffenden Formularelement eingegeben oder ausgewählt hat.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Auf einzelne Schlüssel und Werte zugreifen">Bearbeiten</a>]</span> <span class="mw-headline" id="Auf_einzelne_Schl.C3.BCssel_und_Werte_zugreifen"> Auf einzelne Schlüssel und Werte zugreifen </span></h2>
+<p>Genau wie bei Listen greifen Sie auf einen Skalar zu, wenn Sie einzelne gespeicherte Werte eines Hashes auslesen oder ihnen Werte zuweisen. Zum Zugriff verwenden Sie den Schlüssel.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">%Daten</span> <span class="sy0">=</span> <span class="br0">&#40;</span>Name <span class="sy0">=&gt;</span> <span class="st0">&quot;Jana&quot;</span><span class="sy0">,</span> Alter <span class="sy0">=&gt;</span> <span class="nu0">23</span><span class="sy0">,</span> Ort <span class="sy0">=&gt;</span> <span class="st0">&quot;Berlin&quot;</span><span class="sy0">,</span> Bildung <span class="sy0">=&gt;</span> <span class="st0">&quot;Abitur&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;$Daten{'Name'} ist $Daten{'Alter'} Jahre alt, wohnt in $Daten{'Ort'} und hat $Daten{'Bildung'}<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Script wird wieder der Hash <code>%Daten</code> deklariert und mit vier Werten initialisiert (diesmal gleich in der besseren Notationsweise). Das Script erzeugt wieder HTML-Code und gibt darin die Daten aus. Diesmal wird dabei jedoch auf die einzelnen Werte des Hashes <code>%Daten</code> zugegriffen. Mit <code>$Daten{'Name'}</code> wird auf jenes Element des Hashes zugegriffen, das den <b>Schlüssel</b> <code>Name</code> hat. Das wie vielte Element im Hash dies ist, brauchen Sie nicht zu wissen. Es genügt, den Schlüssel anzugeben. Damit wird auf den entsprechenden Wert zugegriffen. <code>$Daten{'Name'}</code> greift im Beispiel also auf den Wert <code>Jana</code> zu. Wichtig ist, dass der Schlüssel in <b>geschweiften</b> Klammern stehen muss. Die Klammern gehören in diesem Kontext (innerhalb von Zeichenketten) zum Variablennamen und müssen direkt hinter dem Namen des Hashes notiert werden (kein Leerraum erlaubt).
+Die Syntax wie in <code>$Daten{'Name'}</code> zeigt mit dem voranstehenden Dollarzeichen, dass es sich bei einem Hash-Wert um einen Skalar handelt.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Anstelle von <code>$Daten{'Name'}</code> können Sie auch <code>$Daten{Name}</code> notieren, also ohne Anführungszeichen. Solange in den geschweiften Klammern nichts weiter steht als ein einzelner Schlüssel, der den Regeln der <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Regeln_f.C3.BCr_selbst_vergebene_Namen" title="Perl/Einführung in Perl" class="mw-redirect">Namensvergabe</a> genügt, dürfen die Anführungszeichen entfallen.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Funktionen und Operationen zum Manipulieren von Hashes">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionen_und_Operationen_zum_Manipulieren_von_Hashes"> Funktionen und Operationen zum Manipulieren von Hashes </span></h2>
+<p>Viele Perl-Funktionen gelten für <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">Listen und Hashes</a>, einige davon aber auch nur für Hashes, da das Manipulieren von Hashes einige Besonderheiten aufweist. Ein paar wichtige Möglichkeiten sollen hier mit Verweisen auf die Beschreibung der jeweiligen Funktionen genannt werden.
+</p><p><b>Mit unbekannten Schlüsseln arbeiten</b>:<br />Wenn Sie einen Hash mit Werten initialisieren, kennen Sie natürlich auch die Schlüsselnamen. Aber wenn Sie Daten einlesen - etwa HTML-Formulardaten in einem CGI-Script - dann wissen Sie oft nicht, was in einem Hash, der die Daten aufgenommen hat, alles drinsteht. Um sich erst einmal einen Überblick zu verschaffen, welche Schlüssel eines Hashs eingelesen wurden, können Sie die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#keys" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">keys</a> verwenden. Anschließend haben Sie eine <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Liste</a> mit allen Namen bzw. Schlüsseln des Hashes. Angenommen, Sie haben einen Hash <code>%Daten</code> mit Schlüsseln und Werten, die Ihnen zunächst nicht bekannt sind. Dann können Sie mit einer Anweisung wie <code>@Schluessel&#160;=&#160;keys(%Daten);</code> die Schlüssel ermitteln. Anschließend können Sie beispielsweise über <code>$Daten{$Schluessel[0]}</code> auf den Wert des Hashes zugreifen, der mit dem Namen assoziiert wird, der nun in <code>$Schluessel[0]</code> zu finden ist, ohne den Schlüssel explizit zu kennen.
+</p><p><b>Werte ändern oder hinzufügen</b>:<br />Durch eine Anweisung wie <code>$Daten{Vorname}&#160;=&#160;"Oliver";</code> weisen Sie innerhalb des Hashes <code>%Daten</code> dem Element mit dem Schlüssel <code>Vorname</code> einen Wert zu. Falls bereits ein Schlüssel <code>Vorname</code> in dem Hash existiert, wird dessen bisher gespeicherter Wert durch den neu zugewiesenen Wert ersetzt. Wenn der Schlüssel dagegen noch nicht existiert, wird das Schlüssel-Wert-Paar einfach neu in den Hash aufgenommen. Ändern geht also, indem man einem vorhandenen Schlüssel einen Wert zuweist, und Hinzufügen, indem man einem noch nicht vorhandenen Schlüssel einen Wert zuweist.
+</p><p><b>Schlüssel-Wert-Paar löschen</b>:<br />Zum Löschen eines kompletten Schlüssel-Wert-Paares bietet Perl die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#delete" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">delete</a> an.
+</p><p><b>Kompletten Hash löschen</b>:<br />Zum Löschen aller bisher verwendeten Schlüssel-Wert-Paare initialisieren Sie einfach den Hash neu mit leerem Inhalt: <code>%Daten = ()</code>.
+</p><p><b>Hash-Werte der Reihe nach abarbeiten und sortieren</b>:<br />Hashes werden intern in einer Datenstruktur gespeichert, die für Effizienz bei Schreib- und Lesezugriffen sorgt. Aufgrund dieser Tatsache ist die Reihenfolge der Schlüssel, wie sie beispielsweise von der Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#keys" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">keys</a> geliefert wird, (scheinbar) mehr oder weniger zufällig und stimmt nur in den seltensten Fällen mit der Reihenfolge überein, in der Sie den Hash deklariert haben. Sie haben keine Möglichkeit, diese Reihenfolge zu verändern. Es hält Sie allerdings niemand davon ab, die Hash-Elemente in einer bestimmten Reihenfolge beispielsweise mit einer Schleife zu durchlaufen. So können Sie z.B. mit <code>@sortierteSchluessel = sort keys&#160;%Daten</code> die Schlüssel des Hashes <code>%Daten</code> alphabetisch sortieren und diese sortierte Liste von Schlüsseln dem Array <code>@sortierteSchluessel</code> zuweisen. So eine sortierte Liste von Schlüsseln können Sie anschließend (beispielsweise mit einer Schleife) benutzen, um die einzelnen Hash-Elemente in eben dieser sortierten Reihenfolge zu verarbeiten. Dabei können Sie wahlweise nach Schlüsseln oder nach Werten sortieren. Dazu müssen Sie allerdings ein paar Perl-Funktionen sowie eine Schleife anwenden. Im Abschnitt über Schleifen finden Sie eine Beschreibung zum Thema <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#Schleifen_bei_Hashes" title="Perl/Schleifen">Hashes und Schleifen</a>.
+</p><p><b>Anzahl Schlüssel-Wert-Paare eines Hashs ermitteln</b>:<br />Dies können Sie ebenfalls über die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#keys" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">keys</a> lösen. Mit einer Anweisung wie <code>$Anzahl = keys(%Daten);</code> speichern Sie im Skalar <code>$Anzahl</code> die Anzahl der in <code>%Daten</code> vorhandenen Schlüssel und damit der Schlüssel-Wert-Paare. Denn die Funktion <code>keys</code> gibt, wenn sie im skalaren Kontext aufgerufen wird, die Anzahl der Schlüssel zurück.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 158/1000000
+Post‐expand include size: 15750/2097152 bytes
+Template argument size: 14359/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1840-0!*!0!!*!*!* and timestamp 20150301221957 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;oldid=13922">http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;oldid=13922</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FHashes" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Hashes"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Hashes&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Hashes" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Hashes" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Hashes&amp;oldid=13922" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FHashes" title="Spezial:Durchsuchen/Perl-2FHashes">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 13. September 2012 um 10:16 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.390-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.145 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Hashes by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Organisation_von_JavaScripten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Organisation von JavaScripten – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Organisation_von_JavaScripten","wgTitle":"JavaScript/Organisation von JavaScripten","wgCurRevisionId":20592,"wgArticleId":4138,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Organisation_von_JavaScripten","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Organisation von JavaScripten" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Organisation_von_JavaScripten&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Organisation_von_JavaScripten skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Organisation von JavaScripten</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../JavaScript.html" title="JavaScript">JavaScript</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="note-box note-box-autor">
+<p class="note-box-title">Informationen zum Autor:</p>
+<div class="note-box-text">
+  <div>
+    <div class="note-box-autor-text">Name:</div>
+    <div class="note-box-autor-info">Matthias Schäfer</div>
+    <div class="note-box-autor-text" style="">E-Mail:</div>
+    <div class="note-box-autor-info" style=""><a rel="nofollow" class="external text" href="mailto:zapperlott@gmail.com">zapperlott@gmail.com</a></div>
+    <div class="note-box-autor-text" style="display:none;">Homepage:</div>
+    <div class="note-box-autor-info" style="display:none;">(keine)</div>
+  </div>
+</div>
+</div>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Das_Schichtenmodell:_Trennung_von_Inhaltsstruktur.2C_Pr.C3.A4sentation_und_Verhalten"><span class="tocnumber">1</span> <span class="toctext">Das Schichtenmodell: Trennung von Inhaltsstruktur, Präsentation und Verhalten</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#DOM-Scripting_.28Unobtrusive_JavaScript.29"><span class="tocnumber">1.1</span> <span class="toctext">DOM-Scripting (Unobtrusive JavaScript)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Warum_sind_geordnete_und_strukturierte_Scripte_sinnvoll.3F"><span class="tocnumber">2</span> <span class="toctext">Warum sind geordnete und strukturierte Scripte sinnvoll?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Unstrukturierte_Scripte"><span class="tocnumber">3</span> <span class="toctext">Unstrukturierte Scripte</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Objektstrukturen_mit_Object"><span class="tocnumber">4</span> <span class="toctext">Objektstrukturen mit Object</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Allgemeines_zu_Objekten"><span class="tocnumber">4.1</span> <span class="toctext">Allgemeines zu Objekten</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Object-Objekte"><span class="tocnumber">4.2</span> <span class="toctext">Object-Objekte</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Object-Literale"><span class="tocnumber">5</span> <span class="toctext">Object-Literale</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Object-Methoden_in_anderen_Kontexten_ausf.C3.BChren"><span class="tocnumber">6</span> <span class="toctext">Object-Methoden in anderen Kontexten ausführen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#L.C3.B6sung:_this_vermeiden"><span class="tocnumber">6.1</span> <span class="toctext">Lösung: this vermeiden</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#M.C3.B6glichkeiten_der_Datenspeicherung"><span class="tocnumber">7</span> <span class="toctext">Möglichkeiten der Datenspeicherung</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Eigene_Objekte_mittels_Konstruktoren"><span class="tocnumber">8</span> <span class="toctext">Eigene Objekte mittels Konstruktoren</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Methoden_eigener_Objekte_in_anderen_Kontexten_ausf.C3.BChren"><span class="tocnumber">9</span> <span class="toctext">Methoden eigener Objekte in anderen Kontexten ausführen</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Einf.C3.BChrung_in_Closures"><span class="tocnumber">10</span> <span class="toctext">Einführung in Closures</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Anwendung_von_Closures"><span class="tocnumber">10.1</span> <span class="toctext">Anwendung von Closures</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Closures_zur_Kapselung_bei_Object_und_eigenen_Objekten"><span class="tocnumber">11</span> <span class="toctext">Closures zur Kapselung bei Object und eigenen Objekten</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Ausf.C3.BChrliche_Schreibweise"><span class="tocnumber">11.1</span> <span class="toctext">Ausführliche Schreibweise</span></a></li>
+<li class="toclevel-2"><a href="#Kurzschreibweise"><span class="tocnumber">11.2</span> <span class="toctext">Kurzschreibweise</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Alternativl.C3.B6sungen_zur_Kontext-Problematik:_bind.28.29_und_bindAsEventListener.28.29"><span class="tocnumber">12</span> <span class="toctext">Alternativlösungen zur Kontext-Problematik: bind() und bindAsEventListener()</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Kommentierter_ausf.C3.BChrlicher_Quellcode"><span class="tocnumber">12.1</span> <span class="toctext">Kommentierter ausführlicher Quellcode</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Kurzschreibweise_2"><span class="tocnumber">12.2</span> <span class="toctext">Kurzschreibweise</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Anwendung"><span class="tocnumber">12.3</span> <span class="toctext">Anwendung</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Modularisierung_und_Namensr.C3.A4ume"><span class="tocnumber">13</span> <span class="toctext">Modularisierung und Namensräume</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Ausblick_auf_JavaScript-Frameworks"><span class="tocnumber">14</span> <span class="toctext">Ausblick auf JavaScript-Frameworks</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Literaturhinweise"><span class="tocnumber">15</span> <span class="toctext">Literaturhinweise</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#Einf.C3.BChrung_in_Unobtrusive_JavaScript_und_DOM_Scripting"><span class="tocnumber">15.1</span> <span class="toctext">Einführung in Unobtrusive JavaScript und DOM Scripting</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Programmiertechniken_f.C3.BCr_strukturierte_und_wartbare_Scripte"><span class="tocnumber">15.2</span> <span class="toctext">Programmiertechniken für strukturierte und wartbare Scripte</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Closures"><span class="tocnumber">15.3</span> <span class="toctext">Closures</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Objektorientierte_Programmierung.2C_speziell_Kapselung"><span class="tocnumber">15.4</span> <span class="toctext">Objektorientierte Programmierung, speziell Kapselung</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Das Schichtenmodell: Trennung von Inhaltsstruktur, Präsentation und Verhalten">Bearbeiten</a>]</span> <span class="mw-headline" id="Das_Schichtenmodell:_Trennung_von_Inhaltsstruktur.2C_Pr.C3.A4sentation_und_Verhalten">Das Schichtenmodell: Trennung von Inhaltsstruktur, Präsentation und Verhalten</span></h2>
+<p>Im modernen Webdesign kommt den Webtechniken HTML, CSS und JavaScript jeweils eine bestimmte Rolle zu. HTML soll die Texte sinn- und bedeutungsvoll strukturieren, indem z.B. Überschriften, Listen, Absätze, Datentabellen, zusammenhängende Bereiche sowie wichtige Abschnitte, Zitate usw. als solche ausgezeichnet werden. CSS ist dafür da, die Regeln für Darstellung dieser Inhalte vorzugeben, sei es auf einem Desktop-Bildschirm, auf einem Handheld, auf Papier oder anders.
+</p><p>Um eine Website möglichst effizient und einfach zu entwickeln sowie sie nachträglich mit geringem Aufwand pflegen zu können, sollen diese beiden Aufgaben strikt voneinander getrennt werden: Im HTML-Code werden keine Angaben zur Präsentation gemacht. Im Stylesheet befinden sich demnach alle Angaben zur Präsentation in möglichst effizienter Weise. Dadurch müssen im HTML-Code nur genau soviele Angriffspunkte für CSS-Selektoren gesetzt werden, wie gerade nötig sind (z.B. zusätzliche div- oder span-Elemente sowie id- und class-Attribute). Ein und dasselbe Dokument kann auf diese Weise durch den Wechsel des Stylesheets ein völlig anderes Layout bekommen. Aber auch ganz ohne Stylesheet sind die Inhalte noch sinnvoll strukturiert und die Inhalte zugänglich.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: DOM-Scripting (Unobtrusive JavaScript)">Bearbeiten</a>]</span> <span class="mw-headline" id="DOM-Scripting_.28Unobtrusive_JavaScript.29">DOM-Scripting (Unobtrusive JavaScript)</span></h3>
+<p>JavaScript kommt in diesem Konzept die Aufgabe zu, dem Dokument&#160;»Verhalten«&#160;(Behaviour) hinzuzufügen. Damit ist gemeint, dass das Dokument auf gewisse Anwenderereignisse reagiert und z.B. Änderungen im Dokument vornimmt. Diese Interaktivität wird dem Dokument automatisch hinzugefügt – im HTML-Code sollte sich kein JavaScript in Form von Event-Handler-Attributen befinden (onload, onclick, onmouseover usw.). Stattdessen werden Elemente, denen ein bestimmtes Verhalten hinzugefügt werden soll, z.B. mit einer Klasse markiert. 
+</p><p>Zeitgemäße Scripte werden automatisch beim Ladens des Dokuments aktiv und starten die Ereignisüberwachung an den betreffenden Elementen. Diese Anwendung von JavaScript nennt sich <b>Unobtrusive JavaScript</b>,&#160;»unaufdringliches«&#160;JavaScript, oder auch <b>DOM Scripting</b>.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://blog.selfhtml.org/2005/12/17/javascript-einsatz/?bl_action=show&amp;bl_uri=javascript-einsatz">selfHTML-Blog: sinnvoller JavaScript-Einsatz</a>
+</li><li><a rel="nofollow" class="external text" href="http://blog.selfhtml.org/2006/04/01/dhtml-versus-dom-scripting/?bl_action=show&amp;bl_uri=dhtml-versus-dom-scripting">selfHTML-Blog: DHTML ist tot!</a>
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Warum sind geordnete und strukturierte Scripte sinnvoll?">Bearbeiten</a>]</span> <span class="mw-headline" id="Warum_sind_geordnete_und_strukturierte_Scripte_sinnvoll.3F">Warum sind geordnete und strukturierte Scripte sinnvoll?</span></h2>
+<p>Sobald eine Webseite mittels&#160;»unaufdringlichem«&#160;JavaScript aufgewertet und interaktiver gestaltet wird, entstehen komplexe Scripte. Der Ablauf des Scripts wird in Teilaufgaben geteilt, die verschiedene Funktionen übernehmen. Anstatt ein und denselben Code zu wiederholen, wird er in eine Funktion ausgelagert, die Parameter entgegennehmen kann. Insbesondere das Event-Handling erfordert verschiedene Funktionen, die als Event-Handler dienen oder bei der Verarbeitung von Events helfen.
+</p><p>Um bestimmte Funktionalität umzusetzen, werden meist unzählige Variablen und mehrere Funktionen benutzt – ein zusammenhängendes Script, dessen Teile miteinander arbeiten. In ein Dokument werden gerne mehrere&#160;»unaufdringliche«&#160;Scripte verschiedenen Ursprungs eingebunden. Sie sollen unabhängig voneinander arbeiten, aber auch reibungslos miteinander funktionieren. So stellen sich folgende Fragen:
+</p>
+<ul><li>Wie kann man Scripte klar strukturieren, um zusammenhängende Funktionen übersichtlich zu gruppieren?
+</li><li>Wie kann man wiederverwendbare Scripte schreiben, die einfach und zentral konfigurierbar sind?
+</li><li>Wie kann man Scripte schreiben, die problemlos mit anderen Scripten zusammenarbeiten, ohne dass sie sich gegenseitig dazwischenfunken?
+</li></ul>
+<p>Diese Fragen sind inbesondere dann wichtig, wenn mehrere Personen an einem Script arbeiten, wenn ein Script für andere Webautoren veröffentlicht werden soll oder wenn man selbst sein eigenes Script auch nach einiger Zeit wieder verstehen will.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Unstrukturierte Scripte">Bearbeiten</a>]</span> <span class="mw-headline" id="Unstrukturierte_Scripte">Unstrukturierte Scripte</span></h2>
+<p>Die meisten Scripte, die JavaScript-Programmierer im Netz anbieten, liegen in einer gesonderten Datei vor und sind darüber hinaus unstrukturiert. Es handelt sich um eine äußerlich lose Sammlung von dutzenden globalen Variablen und Funktionen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+var variable1 = &quot;wert&quot;;
+var variable2 = &quot;wert&quot;;
+var variable3 = &quot;wert&quot;;
+
+function funktion1 () {
+    /* ... */
+}
+function funktion2 () {
+    /* ... */
+}
+function funktion3 () {
+    /* ... */
+}</pre></div>
+</div>
+<p>Diese Organisation bringt in der Regel mit sich, dass das Script nicht einfach konfigurierbar, anpassbar und erweiterbar ist. In den wenigsten Fällen sind diese Scripte&#160;»unaufdringlich«, sondern fördern die Vermischung von HTML, CSS und JavaScript. Sie enthalten einerseits selbst&#160;»hartkodierten«, das heißt fest eingebundenen HTML- und CSS-Code und erfordern andererseits große Änderungen im HTML-Dokument.
+</p><p>Manche Scripte sind durch Konfigurationsvariablen anpassbar, die vor den tatsächlichen Code gesetzt werden. Ein Seitenautor, der ein fremdes Script in seine Seite einbaut, kann auf diese Weise auch ohne Kenntnis des Scriptes dessen Verhalten ändern.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+/* Konfigurationsvariablen */
+var konfiguration1 = &quot;anpassbar&quot;;
+var konfiguration2 = &quot;anpassbar&quot;;
+var konfiguration3 = &quot;anpassbar&quot;;
+
+/* Der folgenden Code sollte unverändert bleiben: */
+var variable1 = &quot;wert&quot;;
+var variable2 = &quot;wert&quot;;
+var variable3 = &quot;wert&quot;;
+function funktion1 () { /* ... */ }
+function funktion2 () { /* ... */ }
+function funktion3 () { /* ... */ }</pre></div>
+</div>
+<p>Wird nun ein weiteres Script eingebunden, so ist die Wahrscheinlichkeit hoch, dass es ähnliche Namen für die Variablen und Funktionen verwendet. In diesem Fall kommt es zu unerwünschten Wechselwirkungen, wodurch die beteiligten Scripte nicht mehr ordnungsgemäß funktionieren. Viele Script-Autoren versehen daher alle Bezeichner mit einem Präfix (einer Vorsilbe), der die Zugehörigkeit zu einem bestimmten Script verdeutlicht:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+/* Konfigurationsvariablen */
+var präfix_konfiguration1 = &quot;anpassbar&quot;;
+var präfix_konfiguration2 = &quot;anpassbar&quot;;
+var präfix_konfiguration3 = &quot;anpassbar&quot;;
+
+/* Der folgenden Code sollte unverändert bleiben: */
+var präfix_variable1 = &quot;wert&quot;;
+var präfix_variable2 = &quot;wert&quot;;
+var präfix_variable3 = &quot;wert&quot;;
+function präfix_funktion1 () { /* ... */ }
+function präfix_funktion2 () { /* ... */ }
+function präfix_funktion3 () { /* ... */ }</pre></div>
+</div>
+<p>Damit sind zwar schon wichtige Grundlagen geschaffen, allerdings handelt es sich immer noch um eine Zahl von losen Objekten im globalen Geltungsbereich (Scope).
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Objektstrukturen mit Object">Bearbeiten</a>]</span> <span class="mw-headline" id="Objektstrukturen_mit_Object">Objektstrukturen mit Object</span></h2>
+<p>Sinnvoller ist es, alle Objekte – Variablen und Funktionen sind nichts anderes als Objekte – eines Scripts in einer echten JavaScript-Objektstruktur zu gruppieren. Im globalen Geltungsbereich taucht dann nur noch diese eine Objektstruktur auf, andere globale Variablen oder Funktionen werden nicht belegt. Das Script ist in der Objektstruktur in sich abgeschlossen. Damit sind unerwünschte Wechselwirkungen mit anderen Scripten ausgeschlossen, solange der Bezeichner der Objektstruktur eindeutig ist.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Allgemeines zu Objekten">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_Objekten">Allgemeines zu Objekten</span></h3>
+<p>Ein JavaScript-Objekt ist erst einmal nichts anderes als ein Container für weitere Daten. Ein Objekt ist eine Liste, in dem unter bestimmten Namen gewisse Unterobjekte (auch Member genannt) gespeichert sind. Aus anderen Programmiersprachen ist eine solche Datenstruktur als Hash oder assoziativer Array bekannt. In JavaScript sind alle vorgegebenen Objekte und Methoden in solchen verschachtelten Objektstrukturen organisiert, z.B. <code>window.document.body</code>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Object-Objekte">Bearbeiten</a>]</span> <span class="mw-headline" id="Object-Objekte"><code>Object</code>-Objekte</span></h3>
+<p>In JavaScript gibt es den allgemeinen Objekttyp <code>Object</code>. Vom <code>Object</code>-Prototypen stammen alle anderen JavaScript-Objekte ab. Das heißt, jedes JavaScript-Objekt ist immer auch ein <code>Object</code>-Objekt. <code>Object</code> ist die allgemeine Grundlage, auf der die restlichen, spezifischeren Objekttypen aufbauen.
+</p><p>Für die Organisation von eigenen Scripten bieten sich solche unspezifischen Object-Objekte an. Denn sie sind nichts anderes als Container, in denen man unter einem Namen ein weiteres Objekt speichern kann. Über <code>new Object()</code> lässt sich der <code>Object</code>-Konstruktor aufrufen und ein <code>Object</code>-Objekt erzeugen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>var Container = new Object();
+Container.eigenschaft = &quot;wert&quot;;
+Container.methode = function () {
+    alert(&quot;Container-Eigenschaft: &quot; + this.eigenschaft);
+};
+Container.methode();</pre></div>
+</div>
+<p>Der Name <code>Container</code> ist hier selbstverständlich als Platzhalter gemeint. Sie sollten das <code>Object</code>-Objekt (im Folgenden kurz Object genannt) eindeutig und wiedererkennbar nach der Aufgabe bzw. dem Zweck ihres Scriptes benennen.
+</p><p>Über die gewohnte Schreibweise zum Ansprechen von Unterobjekten werden dem <code>Object</code> weitere Objekte angehängt. Im Beispiel werden dem <code>Object</code> zwei Objekte angehängt, ein String und eine Funktion. Die entstehende Verschachtelung könnte man so illustrieren:
+</p>
+<ul><li><code>Container</code> (Object)
+<ul><li><code>eigenschaft</code> (String)
+</li><li><code>methode</code> (Function)
+</li></ul>
+</li></ul>
+<p>Da die Funktion <code>methode</code> ein Unterobjekt von Container ist, bezeichnet man sie als Methode dieses Objektes. Andere Unterobjekte, die nicht Funktionen sind, bezeichnet man als Eigenschaften.
+</p><p>Durch diese Zugehörigkeits-Beziehung bezieht sich das Schlüsselwort <code>this</code> innerhalb der Methode auf das Objekt, dem die Methode anhängt, im Beispiel Container. Ein Zugriff auf die Eigenschaft namens <code>eigenschaft</code> ist daher über <code>this.eigenschaft</code> möglich.
+</p><p>Auf dieselbe Weise können sich Methoden untereinander ansprechen und aufrufen. Zum Beispiel ließe sich dem Object eine zweite Methode hinzufügen, die die erste aufruft:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+Container.zweiteMethode = function () {
+    this.methode();
+};
+Container.zweiteMethode();
+</pre></div>
+</div>
+<p>Wie ebenfalls aus den Beispielen ersichtlich wird, ist der Zugriff auf die Unterobjekte (Member) des Objects&#160;»von außen«&#160;nur über den Namen des Objects nach dem Schema Objectname.Membername möglich.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Object-Literale">Bearbeiten</a>]</span> <span class="mw-headline" id="Object-Literale">Object-Literale</span></h2>
+<p>JavaScript bietet für das Definieren von Object-Objekten eine Kurzschreibweise an, den sogenannten Object-Literal. Ein Object-Literal beginnt mit einer öffnenden geschweiften Klammer { und endet mit einer schließenden geschweiften Klammer }. Dazwischen befinden sich, durch Kommas getrennt, die Zuweisungen von Namen zu Objekten. Zwischen Name und Objekt wird ein Doppelpunkt notiert. Das Schema ist also: 
+</p><p><code>{ name1&#160;: objekt1, name2&#160;: objekt2, … nameN&#160;: objektN }</code>
+</p><p>Das obige Beispiel-Object lässt sich in der Literalschreibweise so umsetzen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+var Container = {
+    eigenschaft&#160;: &quot;wert&quot;,
+    methode&#160;: function () {
+        alert(&quot;Container-Eigenschaft: &quot; + this.eigenschaft);
+    }
+};
+Container.methode();
+</pre></div>
+</div>
+<p>Mittlerweile bedienen sich unzählige&#160;»unaufdringliche«&#160;Scripte dieser Schreibweise und sie hat sich zu einem Standard gemausert. Insbesondere Christian Heilmann hat sich für diese Schreibweise stark gemacht (<a rel="nofollow" class="external autonumber" href="http://christianheilmann.com/category/object-literal/">[1]</a>), seine Scripte sind gute Beispiele dafür, wie Object-Literale in der Praxis verwendet werden.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Object-Methoden in anderen Kontexten ausführen">Bearbeiten</a>]</span> <span class="mw-headline" id="Object-Methoden_in_anderen_Kontexten_ausf.C3.BChren">Object-Methoden in anderen Kontexten ausführen</span></h2>
+<p>Beim&#160;»unaufdringlichen«&#160;JavaScript ist es meist unerlässlich, dass im Object gespeicherte Methoden als Event-Handler dienen (siehe <a href="Objekte/window/event.html" title="JavaScript/Objekte/window/event" class="mw-redirect">Ereignisüberwachung mit JavaScript programmieren</a>). Dies wirft das Problem auf, dass solche Methoden außerhalb des Object-Kontextes ausgeführt werden, wenn das überwachte Ereignis eintritt.
+</p><p>Außerhalb des Kontextes bedeutet, dass this nicht mehr wie beschrieben auf das Object zeigt, sondern auf das Elementobjekt, dessen Handler ausgelöst wurde. (Siehe <a rel="nofollow" class="external text" href="http://www.quirksmode.org/js/this.html">die Bedeutung des this-Schlüsselwortes beim Event-Handling</a>.) In vielen Fällen aber ist im Event-Handler ein Zugriff auf beide Objekte gewünscht, auf das Elementobjekt sowie auf den Object-Container.
+</p><p>Folgendes Beispiel illustriert das Problem:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+
+var Container = {
+    eigenschaft&#160;: &quot;wert&quot;,
+    methode&#160;: function () {
+        // Funktioniert:
+        alert(
+            &quot;methode wurde aufgerufen\n&quot; +
+            &quot;Container-Eigenschaft: &quot; + this.eigenschaft
+        );
+    },
+    handler&#160;: function (eventobjekt) {
+        if (!eventobjekt)
+            eventobjekt = window.event;
+        // Fehler: this verweist auf das Element, dem der Event-Handler anhängt
+        alert(
+            &quot;handler wurde aufgerufen\n&quot; +
+            &quot;Container-Eigenschaft: &quot; + this.eigenschaft
+        );
+    }
+};
+Container.methode();
+document.getElementById(&quot;button&quot;).onclick = Container.handler;
+</pre></div>
+</div>
+<p>Die Methode <code>handler</code> wird als Handler für das click-Ereignis bei einem Button definiert. Während der Zugriff auf das Object über <code>this</code> beim regulären Aufruf der Methode funktioniert, verweist this in diesem Fall auf das window-Objekt.
+</p><p>Dasselbe Problem tritt auf, wenn eine Methode eine andere Methode desselben Objects mit einer Verzögerung (setTimeout) oder als Intervall (setInterval) aufrufen will. <code>this</code> zeigt dann auf <code>window</code>, da die verzögert aufgerufene Methode im globalen Kontext aufgerufen wird:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+
+var Container = {
+    eigenschaft&#160;: &quot;wert&quot;,
+    methode&#160;: function () {
+        // Funktioniert:
+        alert(
+            &quot;methode wurde aufgerufen\n&quot; +
+            &quot;Container-Eigenschaft: &quot; + this.eigenschaft
+        );
+        window.setTimeout(this.verzögert, 500);
+    },
+    verzögert&#160;: function () {
+        // Fehler: this verweist window
+        alert(
+            &quot;verzögert wurde aufgerufen\n&quot; +
+            &quot;Container-Eigenschaft: &quot; + this.eigenschaft
+        );
+    }
+};
+Container.methode();
+</pre></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Lösung: this vermeiden">Bearbeiten</a>]</span> <span class="mw-headline" id="L.C3.B6sung:_this_vermeiden">Lösung: this vermeiden</span></h3>
+<div class="note-box note-box-recommendation-text"><strong>Empfehlung:</strong>  Eine mögliche Lösung ist, das Object immer explizit über dessen Namen anzusprechen anstatt über <code>this</code>. Dafür existiert die Eigenschaft <a href="Objekte/DOM/event/currentTarget.html" title="JavaScript/Objekte/DOM/event/currentTarget">currentTarget</a> des Event-Objektes.</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+var Container = {
+    eigenschaft&#160;: &quot;wert&quot;,
+    methode&#160;: function () {
+        alert(
+            &quot;methode wurde aufgerufen\n&quot; +
+            &quot;Container-Eigenschaft: &quot; + Container.eigenschaft
+        );
+    },
+    handler&#160;: function (eventobjekt) {
+        if (!eventobjekt)
+            eventobjekt = window.event;
+        alert(
+            &quot;handler wurde aufgerufen\n&quot; +
+            &quot;Event-Objekt: &quot; + eventobjekt + &quot;\n&quot; +
+            &quot;Element, das den Event behandelt: &quot; + this + &quot;\n&quot; +
+            &quot;Container-Eigenschaft: &quot; + Container.eigenschaft
+        );
+    }
+};
+Container.methode();
+document.getElementById(&quot;button&quot;).onclick = Container.handler;
+</pre></div>
+</div>
+<p>In diesem Beispiel wurde <code>this</code> durch Container ersetzt. <code>this</code> wird in der Methode <code>handler</code> verwendet, um auf das Elementobjekt zuzugreifen, bei dessen Handler vom Ereignis ausgelöst wurde.
+</p><p>Das folgende Beispiel zeigt, wie <code>this</code> bei der Benutzung von <code>setTimeout</code> vermieden werden kann:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+var Container = {
+    eigenschaft&#160;: &quot;wert&quot;,
+    methode&#160;: function () {
+        alert(
+            &quot;methode wurde aufgerufen\n&quot; +
+            &quot;Container-Eigenschaft: &quot; + Container.eigenschaft
+        );
+        window.setTimeout(Container.verzögert, 500);
+    },
+    verzögert&#160;: function () {
+        alert(
+            &quot;verzögert wurde aufgerufen\n&quot; +
+            &quot;Container-Eigenschaft: &quot; + Container.eigenschaft
+        );
+    }
+};
+Container.methode();
+</pre></div>
+</div>
+<p>Solange eine Methode nicht in anderen Kontexten ausgeführt wird, kann darin <code>this</code> verwendet werden, um das Object anzusprechen. Aus Gründen der Einheitlichkeit und Einfachheit wurde in den Beispielen immer Container verwendet.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Möglichkeiten der Datenspeicherung">Bearbeiten</a>]</span> <span class="mw-headline" id="M.C3.B6glichkeiten_der_Datenspeicherung">Möglichkeiten der Datenspeicherung</span></h2>
+<p>Das definierte Object, das alle Variablen und Funktionen eines Scriptes kompakt speichert, muss dokumentweit eindeutig sein. Es kann keine weiteren gleichnamigen globalen Objekte geben. Das heißt, es ist nur eine Instanz des Objects möglich.
+</p><p>Bei&#160;»unaufdringlichem«&#160;JavaScript wird gewissen Elementen Interaktivität hinzugefügt. Beispielsweise kann allen Tabellen im Dokument mit der Klasse sortierbar automatisch eine Sortier-Funktionalität hinzugefügt werden. Wenn also mehrere Tabellen sortierbar sind, muss z.B. der jeweilige Sortierstatus irgendwo gespeichert werden. Dazu bieten sich verschiedene Möglichkeiten an:
+</p>
+<ul><li>Das Object könnte dazu einen Array von Objects enthalten, in denen jeweils die Daten für eine Tabelle gespeichert werden.
+</li><li>Alternativ können die Daten nicht am Object, sondern im Dokument selbst in Form von Attributen bzw. Unterobjekten der jeweiligen Elementobjekte gespeichert werden. In JavaScript können nämlich jedem Objekt beliebig Unterobjekte angehängt werden. So gehen viele Scripte vor, in den meisten Fällen ist dies auch der beste Weg, um mit einem dokumentweiten Object auszukommen.
+</li><li>In manchen Fällen ist es sinnvoll, mehrere in ihrer Funktionalität ähnliche Objekte zu haben, die jeweils das Verhalten z.B. eines bestimmten Elementes im Dokument regeln und die jeweiligen Daten gesondert speichern. Eine Object-Struktur als Container eignet sich dafür nicht, denn sie kann nicht ohne Aufwand beliebig dupliziert werden. Für diesen Fall eignen sich Eigene Objekte, deren Grundlagen im folgenden Abschnitt diskutiert werden.
+</li></ul>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Eigene Objekte mittels Konstruktoren">Bearbeiten</a>]</span> <span class="mw-headline" id="Eigene_Objekte_mittels_Konstruktoren">Eigene Objekte mittels Konstruktoren</span></h2>
+<p>Anstatt alle Eigenschaften und Funktionen an ein Object anzuhängen, kann man ein eigenes Objekt erstellen.
+</p><p>Aus anderen Programmiersprachen kennt man das Definieren von eigenen Klassen. In JavaScript gibt es strenggenommen keine Klassen, sondern nur Konstruktor-Funktionen (kurz: Konstruktoren). Der Name stammt vom englischen construct = erzeugen, konstruieren, bauen. Eine Konstruktor-Funktion ist demnach ein Erzeuger neuer Objekte.
+</p><p>Sie werden sich sicher fragen, wie die Syntax zum Notieren von Konstruktoren lautet. Ein Konstruktur ist jedoch keine eigene Sprachstruktur, sondern erst einmal eine ganz normale Funktion. Zu einem Konstruktor wird sie lediglich dadurch, dass sie mit dem Schlüsselwort new aufgerufen wird.
+</p><p>Wenn eine Funktion mit new aufgerufen wird, wird intern ein neues, leeres Object angelegt und die Funktion im Kontext dieses Objektes ausgeführt. Im Konstruktor können diesem neuen Objekt Eigenschaften und Methoden dann über this hinzugefügt werden.
+</p><p>Auch wenn das so entstehende Objekt der Object-Struktur ähnelt, können auf diese Weise unzählige gleiche Abkömmlinge, sogenannte Instanzen erzeugt werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+// Konstruktorfunktion
+function Konstruktor () {
+    // Zugriff auf das neue Objekt über this,
+    // Hinzufügen der Eigenschaften und Methoden
+    this.eigenschaft = &quot;wert&quot;;
+    this.methode = function () {
+        // In den Methoden wird über this auf das Objekt zugegriffen
+        alert(
+            &quot;methode wurde aufgerufen\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + this.eigenschaft
+        );
+    };
+}
+// Erzeuge Instanzen
+var instanz1 = new Konstruktor();
+instanz1.methode();
+var instanz2 = new Konstruktor();
+instanz2.methode();
+// usw.
+</pre></div>
+</div>
+<p>Indem der Konstruktor bestimmte Parameter erhält, können Instanzen mit unterschiedlichen Eigenschaften erzeugt werden. Sie können aber auch im Laufe der Benutzung unterschiedliche Werte bekommen. Der Zugriff&#160;»von außen«&#160;auf sogenannte öffentliche Eigenschaften erfolgt über das bekannte Schema <code>Instanzname.Membername</code>.
+</p><p>Die Bezeichnung eigenes Objekt ist unglücklich und missverständlich, schließlich haben wir mit dem <a href="#Objektstrukturen_mit_Object"> Object-Container</a> ebenfalls ein eigenes Objekt erzeugt. Andere Quellen verwenden den bekannten Begriff Klasse auch für JavaScript-Konstruktoren. Allerdings führt diese Bezeichnung nicht weniger in die Irre, da sich die objektorientierte Programmierung in JavaScript grundlegend von der klassenbasierter Sprachen unterscheidet.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Methoden eigener Objekte in anderen Kontexten ausführen">Bearbeiten</a>]</span> <span class="mw-headline" id="Methoden_eigener_Objekte_in_anderen_Kontexten_ausf.C3.BChren">Methoden eigener Objekte in anderen Kontexten ausführen</span></h2>
+<p>Will man nun eine Methode einer Instanz als Event-Handler nutzen oder sie verzögert aufrufen, tritt das besagte Phänomen auf: Die Methode wird außerhalb des Kontextes der Instanz ausgeführt und this zeigt nicht mehr auf die Instanz. Folgendes Kombinationsbeispiel veranschaulicht das Problem, das sowohl bei der Ereignisüberwachung als auch bei der Nutzung von setTimeout oder setInterval auftritt:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function Konstruktor () {
+    this.eigenschaft = &quot;wert&quot;;
+    this.methode = function () {
+        // Funktioniert:
+        alert(
+            &quot;methode wurde aufgerufen\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + this.eigenschaft
+        );
+        window.setTimeout(this.verzögert, 500);
+    };
+    this.verzögert = function () {
+        // Fehler: this verweist window
+        alert(
+            &quot;verzögert wurde aufgerufen\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + this.eigenschaft
+        );
+    };
+    this.handler = function (eventobjekt) {
+        if (!eventobjekt)
+            eventobjekt = window.event;
+        // Fehler: this verweist auf das Element, dem der Event-Handler anhängt
+        alert(
+            &quot;handler wurde aufgerufen\n&quot; +
+            &quot;Event-Objekt: &quot; + eventobjekt + &quot;\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + this.eigenschaft
+        );
+    };
+    document.getElementById(&quot;button&quot;).onclick = this.handler;
+}
+var instanz = new Konstruktor();
+instanz.methode();
+</pre></div>
+</div>
+<p>Die Lösung dieses Problems ist kompliziert und führt uns auf eine weitere hochinteressante, aber auch schwer zu meisternde Eigenheit der JavaScript-Programmierung, die im Folgenden vorgestellt werden soll.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Einführung in Closures">Bearbeiten</a>]</span> <span class="mw-headline" id="Einf.C3.BChrung_in_Closures">Einführung in Closures</span></h2>
+<p>Eine Closure ist allgemein gesagt eine Funktion, die in einer anderen Funktion notiert wird. Diese verschachtelte, innere Funktion hat Zugriff auf die Variablen des Geltungsbereiches (Scopes) der äußeren Funktion – und zwar über die Ausführung der äußeren Funktion hinaus.
+</p><p>Durch dieses Einschließen der Variablen kann man bestimmte Objekte in Funktionen verfügbar machen, die darin sonst nicht oder nur über Umwege verfügbar wären. Closures werden damit zu einem Allround-Werkzeug in der fortgeschrittenen JavaScript-Programmierung.
+</p><p>Dieses Beispiel erläutert die Variablen-Verfügbarkeit bei verschachtelten Funktionen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+
+function äußerefunktion () {
+    // Definiere eine lokale Variable
+    var variable = &quot;wert&quot;;
+    // Lege eine Funktion als lokale Variable an
+    var innerfunktion = function () {
+        // Obwohl diese Funktion einen eigenen Scope mit sich bringt,
+        // ist die Variable aus dem umgebenden Scope hier verfügbar:
+        alert(&quot;Wert der Variablen aus der äußeren Funktion: &quot; + variable);
+    };
+    // Führe die eben definierte Funktion aus
+    innerfunktion();
+}
+äußerefunktion();
+</pre></div>
+</div>
+<p>Das Beispiel zeigt, dass die innere Funktion Zugriff auf die Variablen der äußeren Funktion hat. Der entscheidende Punkt bei einer Closure ist jedoch ein anderer:
+</p><p>Normalerweise werden alle lokalen Variablen einer Funktion aus dem Speicher gelöscht, nachdem die Funktion beendet wurde. Eine Closure aber führt dazu, dass die Variablen der äußeren Funktion nach deren Ausführung nicht gelöscht werden, sondern im Speicher erhalten bleiben. Die Variablen stehen der inneren Funktion weiterhin über deren ursprüngliche Namen zur Verfügung. Die Variablen werden also eingeschlossen und konserviert – daher der Name&#160;»Closure«.
+</p><p>Auch lange nach dem Ablauf der äußeren Funktion hat die Closure immer noch Zugriff auf deren Variablen – vorausgesetzt, die Closure wird woanders gespeichert und kann dadurch zu einem späteren Zeitpunkt ausgeführt werden. (Im obigen Beispiel ist die innere Funktion nur eine lokale Variable, die zwar Zugriff auf die Variablen der äußeren Funktion hat, aber bei deren Beendigung selbst verfällt.)
+</p><p>Eine Möglichkeit, die innere Funktion zu speichern, ist das Registrieren als Event-Handler. Dabei wird das Funktionobjekt in einer Eigenschaft (hier onclick) eines Elementobjektes gespeichert und bleibt damit über die Ausführung der äußeren Funktion hinweg erhalten:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function äußerefunktion () {
+    var variable = &quot;wert&quot;;
+    // Lege die Closure-Funktion als lokale Variable an
+    var closure = function () {
+        alert(&quot;Wert der Variablen aus der äußeren Funktion: &quot; + variable);
+    };
+    // Speichere die Closure-Funktion als Event-Handler
+    document.getElementById(&quot;button&quot;).onclick = closure;
+}
+äußerefunktion();
+</pre></div>
+</div>
+<p>Bei einem Klick auf das Dokument wird die Closure als Event-Handler ausgeführt. <code>äußerefunktion</code> wird schon längst nicht mehr ausgeführt, aber <code>variable</code> wurde in die Closure eingeschlossen.
+</p><p>Zusammengefasst haben wir folgendes Schema zur Erzeugung einer Closure:
+</p>
+<ul><li>Beginn der Ausführung der äußeren Funktion
+</li><li>Lokale Variablen werden definiert
+</li><li>Innere Funktion wird definiert
+</li><li> Innere Funktion wird außerhalb gespeichert, sodass sie erhalten bleibt
+</li><li>Ende der Ausführung der äußeren Funktion
+</li><li>Unbestimmte Zeit später: Innere Funktion (Closure-Funktion) wird ausgeführt
+</li></ul>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen/Closures&amp;action=edit&amp;section=T-1" title="JavaScript/Funktionen/Closures">Bearbeiten</a>]</span> <span class="mw-headline" id="Anwendung_von_Closures">Anwendung von Closures</span></h3>
+<p>Wie helfen uns Closures nun beim ursprünglichen Problem weiter? Zunächst einmal ist festzustellen, dass beim Erzeugen von eigenen Objekten mit verschachtelte Funktionen gearbeitet wird: Der Konstruktor stellt die äußere Funktion dar und die Methoden, die der Instanz im Konstruktor zugewiesen werden, sind innere Funktionen.
+</p><p>Aus diesem Grund wirken die Methoden als Closures, die die Variablen des Konstruktors einschließen. Im <a href="Organisation_von_JavaScripten.html#Methoden_eigener_Objekte_in_anderen_Kontexten_ausf.C3.BChren" title="JavaScript/Organisation von JavaScripten"> ursprünglichen Beispiel</a> handelt es sich um die Methoden <code>methode, handler</code> und <code>verzögert</code>.
+</p><p>Im Konstruktor kann man daher eine lokale Variable als Referenz auf das Instanzobjekt this anlegen. (Solche lokalen Variablen im Konstruktor werden private Eigenschaften genannt.) Alle Methoden, die der Instanz im Konstruktor hinzugefügt werden, schließen diese Variable ein – sie ist in diesen Methoden auch dann noch verfügbar, wenn sie als Event-Handler oder mit Verzögerung in einem anderen Kontext ausgeführt werden. Folgendes Beispiel demonstriert beide Fälle:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function Konstruktor () {
+    // Äußere Funktion
+
+    // Referenz auf das Instanz-Objekt anlegen
+    var thisObject = this;
+
+    this.eigenschaft = &quot;wert&quot;;
+
+    this.methode = function () {
+        // wirkt als Closure und schließt thisObject ein
+
+        alert(
+            &quot;methode wurde aufgerufen\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + thisObject.eigenschaft
+        );
+        window.setTimeout(thisObject.verzögert, 500);
+    };
+
+    this.verzögert = function () {
+        // wirkt als Closure und schließt thisObject ein
+
+        alert(
+            &quot;verzögert wurde aufgerufen\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + thisObject.eigenschaft
+        );
+    };
+
+    this.handler = function (eventobjekt) {
+        // wirkt als Closure und schließt thisObject ein
+
+        if (!eventobjekt)
+            eventobjekt = window.event;
+        alert(
+            &quot;handler wurde aufgerufen\n&quot; +
+            &quot;Event-Objekt: &quot; + eventobjekt + &quot;\n&quot; +
+            &quot;Element, das den Event behandelt: &quot; + this + &quot;\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + thisObject.eigenschaft
+        );
+    };
+
+    // Hier im Konstruktor sind this und thisObject noch identisch
+    document.getElementById(&quot;button&quot;).onclick = this.handler;
+
+}
+
+var instanz = new Konstruktor();
+instanz.methode();
+</pre></div>
+</div>
+<p>Wichtig ist hier die Unterscheidung zwischen <code>this</code> und <code>thisObject</code>. <code>this</code> zeigt in den drei Methoden <code>methode</code>, <code>verzögert</code> und <code>handler</code> auf drei unterschiedliche Objekte. <code>thisObject</code> hingegen ist die eingeschlossene Variable, die auf das Instanzobjekt zeigt – und zwar in allen drei Methoden.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen/Closures&amp;action=edit&amp;section=T-2" title="JavaScript/Funktionen/Closures">Bearbeiten</a>]</span> <span class="mw-headline" id="Closures_zur_Kapselung_bei_Object_und_eigenen_Objekten">Closures zur Kapselung bei Object und eigenen Objekten</span></h2>
+<p>Bei eigenen Objekten lässt sich festlegen, welche Unterobjekte&#160;»von außen«&#160;eingesehen und geändert werden können. In der Fachsprache wird zwischen öffentlichen und privaten Membern unterschieden. (Member ist hier ein Sammelbegriff für Eigenschaften und Methoden.) Nach außen sollte eine Instanz eine wohlüberlegte und gut dokumentierte Programmierschnittstelle (API) anbieten, in der intern verwendete Variablen und Funktionen nicht vorkommen.
+</p><p>Dieses wichtige Konzept der Kapselung in der objektorientierten Programmierung soll hier nur kurz angeschnitten werden. Einen vollständigeren Einstieg bieten die Quellen in den <a href="Organisation_von_JavaScripten.html#Literaturhinweise" title="JavaScript/Organisation von JavaScripten"> Literaturhinweisen</a>.
+</p><p>Bei den bisher vorgestellten <a href="Organisation_von_JavaScripten.html#Objektstrukturen_mit_Object" title="JavaScript/Organisation von JavaScripten"> Object-Containern</a> sind alle Unterobjekte öffentlich. Über einen Umweg sind auch private Member bei Objects möglich. Das Mittel dazu sind wieder Closures. Das Konzept lautet folgendermaßen:
+</p>
+<ul><li>Man definiert eine Funktion, in deren lokalen Geltungsbereich man die gewünschten privaten Member definiert.
+</li><li> Innerhalb dieser Funktion notiert man wie gehabt das Object-Literal. Die Methoden des Objects haben Zugriff auf die Variablen der äußeren Funktion und schließen diese ein (Closures).
+</li><li>Die Funktion gibt das Object als Rückgabewert zurück.
+</li><li> Das zurückgegebene Object wird wie gewohnt in einer globalen Variable gespeichert, über die es ansprechbar sein soll.
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen/Closures&amp;action=edit&amp;section=T-3" title="JavaScript/Funktionen/Closures">Bearbeiten</a>]</span> <span class="mw-headline" id="Ausf.C3.BChrliche_Schreibweise">Ausführliche Schreibweise</span></h4>
+<p>In der ausführlichen Schreibweise könnte die Umsetzung so aussehen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+
+function erzeugeContainer () {
+
+    // Notiere private Eigenschaften und Methoden
+
+    var privateEigenschaft = &quot;privat&quot;;
+
+    function privateMethode () {
+        window.alert(&quot;privateMethode wurde aufgerufen&quot;);
+        window.alert(&quot;Private Eigenschaft: &quot; + privateEigenschaft);
+        window.alert(&quot;Öffentliche Eigenschaft: &quot; + Container.öffentlicheEigenschaft);
+    }
+
+    // Erzeuge Object mit den öffentlichen Eigenschaften und Methoden
+    var öffentlicheSchnittstelle = {
+
+        öffentlicheEigenschaft&#160;: &quot;öffentlich&quot;,
+
+        öffentlicheMethode1&#160;: function () {
+            // öffentlicheMethode1 wirkt als Closure und
+            // schließt privateEigenschaft und privateMethode ein
+
+            window.alert(&quot;öffentlicheMethode1 wurde aufgerufen&quot;);
+
+            // Zugriff auf private Eigenschaften und Methoden
+            window.alert(&quot;Private Eigenschaft: &quot; + privateEigenschaft);
+            privateMethode();
+
+            // Zugriff auf öffentliche Eigenschaften und Methoden
+            window.alert(&quot;Öffentliche Eigenschaft: &quot; + Container.öffentlicheEigenschaft);
+            Container.öffentlicheMethode2();
+
+        },
+
+        öffentlicheMethode2&#160;: function () {
+            // öffentlicheMethode2 wirkt ebenfalls als Closure und
+            // schließt die privaten Eigenschaften und Methoden ein
+
+            window.alert(&quot;öffentlicheMethode2 wurde aufgerufen&quot;);
+        }
+
+    };
+
+    return öffentlicheSchnittstelle;
+}
+var Container = erzeugeContainer();
+Container.öffentlicheMethode1();
+
+// Ergibt undefined, weil der Zugriff durch die Kapselung unmöglich wird:
+window.alert(&quot;Container.privateMethode von außerhalb: &quot; + Container.privateMethode);
+</pre></div>
+</div>
+<p>Das Object hat schließlich zwei öffentliche Methoden, die ihrerseits Lese- und Schreibzugriff auf die privaten Eigenschaften und Methoden haben. Von außen sind diese privaten Member aber nicht sichtbar.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen/Closures&amp;action=edit&amp;section=T-4" title="JavaScript/Funktionen/Closures">Bearbeiten</a>]</span> <span class="mw-headline" id="Kurzschreibweise">Kurzschreibweise</span></h4>
+<p>Die obige Schreibweise ist absichtlich lang und ausführlich, um das Schema zu vereinheitlichen. In der Praxisanwendung hat sie einen Nachteil: Es muss eine globale Funktion <code>erzeugeContainer</code> geben, die aufgerufen wird. Diese Funktion wollen wir nur einmal ausführen, um das Container-Objekt zu initialisieren. Daher ist es unnötig, eine globale Funktion zu notieren, die über diese Initialisierung hinaus Bestand hat und im globalen Geltungsbereich einen Bezeichner belegt. Es reicht aus, eine anonyme (namenlose) Funktion zu notieren. Dazu nutzen wir einen sogenannten Funktionsausdruck (engl. Function Expression).
+</p><p>Wir haben Funktionsausdrücke schon die ganze Zeit benutzt, wenn wir <code>this.methode = function ( … ) { … };</code> notiert haben. Funktionsausdrücke bilden den Gegenpart zur gewohnten Schreibweise von Funktionen, der sogenannten Funktionsdeklaration (engl. Function Declaration).
+</p><p>Zudem kann die Variable <code>öffentlicheSchnittstelle</code> in der Funktion eingespart werden, indem direkt hinter <code>return</code> das Object-Literal notiert wird. Die Kurzschreibweise lautet des obigen Beispiels lautet demnach:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+
+var Container = (function () {
+    // Definiere eine Funktion mit einem Funktionsausdruck,
+    // durch runde Klammern umschlossen
+
+    var privateEigenschaft = &quot;privat&quot;;
+    function privateMethode () {
+        window.alert(&quot;privateMethode wurde aufgerufen&quot;);
+        window.alert(&quot;Private Eigenschaft: &quot; + privateEigenschaft);
+        window.alert(&quot;Öffentliche Eigenschaft: &quot; + Container.öffentlicheEigenschaft);
+    }
+
+    // Direkt das Object mit der öffentlichen Schnittstelle zurückgeben
+    return {
+        öffentlicheEigenschaft&#160;: &quot;öffentlich&quot;,
+        öffentlicheMethode1&#160;: function () {
+            window.alert(&quot;öffentlicheMethode1 wurde aufgerufen&quot;);
+            window.alert(&quot;Private Eigenschaft: &quot; + privateEigenschaft);
+            privateMethode();
+            window.alert(&quot;Öffentliche Eigenschaft: &quot; + Container.öffentlicheEigenschaft);
+            Container.öffentlicheMethode2();
+        },
+        öffentlicheMethode2&#160;: function () {
+            window.alert(&quot;öffentlicheMethode2 wurde aufgerufen&quot;);
+        }
+    };
+})();
+// Ende des eingeklammerten Funktionsausdrucks, dahinter
+// direkt () zum Aufruf der soeben definierten Funktion
+
+Container.öffentlicheMethode1();
+
+// Ergibt undefined, weil von außen nicht sichtbar:
+window.alert(&quot;Container.privateMethode von außerhalb: &quot; + Container.privateMethode);
+</pre></div>
+</div>
+<p>Diese Schreibweise mag auf den ersten Blick unverständlich scheinen, deshalb noch einmal aufgedröselt:
+</p>
+<ul><li>Definiere einen Funktionsausdruck: <code>function (…) {…}</code>
+</li><li>Dieser alleine ergibt ein Funktionsobjekt. Um den Ausdruck werden Klammern notiert, sodass die Funktion gleich direkt aufgerufen werden kann: ( <code>function (…) {…}</code> )
+</li><li> Das Funktionsobjekt wird nun wie gewohnt mit den Klammern dahinter samt Parameterliste ausgeführt: ( <code>function (…) {…}</code> ) (…)
+</li><li> Der Rückgabewert der ausgeführten Funktion – in diesem Fall ein Object – wird wie üblich gespeichert: <code>var Container = ( function (…) {…} ) (…);</code>
+</li></ul>
+<p>Als Resultat haben wir eine namenlose Funktion notiert, die direkt ausgeführt wird. Ihr Rückgabewert wird gespeichert, die Funktion selbst geht aber verloren – denn sie hat ihren Zweck erfüllt und wir brauchen sie im weiteren Programmverlauf nicht mehr.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Alternativlösungen zur Kontext-Problematik: bind() und bindAsEventListener()">Bearbeiten</a>]</span> <span class="mw-headline" id="Alternativl.C3.B6sungen_zur_Kontext-Problematik:_bind.28.29_und_bindAsEventListener.28.29">Alternativlösungen zur Kontext-Problematik: bind() und bindAsEventListener()</span></h2>
+<p>Für die hier beispielhaft gelösten Probleme gibt es viele andere Lösungsansätze, von einfach bis kompliziert. Die beschriebenen Lösungen sind bewusst einfach gehalten, da sie sich an Einsteiger richten – in diesem Artikel sollen lediglich gewisse ausgewählte Strukturen vorgestellt sowie deren praktische Eigenheiten diskutiert werden. Andere, mächtigere Strukturen sowie allgemeine Objektorientierte Programmierung sind nicht der direkter Gegenstand des Artikels. Die verlinkten Quellen in den <a href="#Literaturhinweise"> Literaturhinweisen</a> beschreiben fortgeschrittene Herangehensweisen sowie grundlegende Einführungen.
+</p><p>Es soll allerdings auf eine verbreitete Technik hingewiesen werden, mit der sich Objektmethoden einfach in bestimmten Kontexten ausführen lassen: Das JavaScript-Framework <a rel="nofollow" class="external text" href="http://prototypejs.org/">Prototype</a> bietet dazu zwei Funktionen namens bind und bindAsEventListener an. Beide werden über prototypische Erweiterung allen Funktionsobjekten hinzugefügt – daraufhin besitzt eine beliebige Funktion namens funktion die Methoden <code>funktion.bind(…)</code> und <code>funktion.bindAsEventListener(…)</code>. Auf die vielfältigen Möglichkeiten der prototypischen Erweiterung, die einen der Grundpfeiler der Objektorientierten Programmierung in JavaScript darstellt, soll an dieser Stelle nicht näher eingegangen werden.
+</p><p>Diese Helfermethoden geben dynamisch erzeugte Funktionsobjekte zurück, die die eigentlichen Funktionen umhüllen. In diesen Wrapper-Funktionen werden die vordefinierten JavaScript-Funktionen <code>apply</code>code&gt; und <code>call</code>code&gt; verwendet, um die eigentlichen Funktionen im Kontext des angegebenen Objektes auszuführen. Die Wrapper-Funktion wirkt als Closures, wodurch ihr die benötigten Objekte zur Verfügung stehen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Kommentierter ausführlicher Quellcode">Bearbeiten</a>]</span> <span class="mw-headline" id="Kommentierter_ausf.C3.BChrlicher_Quellcode">Kommentierter ausführlicher Quellcode</span></h3>
+<p>Die Funktionen bind und bindAsEventListener sehen auführlich und kommentiert so aus:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+// Erweitere alle Funktionsobjekte um eine Methode&#160;»bind«
+// über die prototype-Eigenschaft des Function-Konstruktors.
+Function.prototype.bind = function () {
+
+    // Speichere die gegenwärtige Funktion in&#160;»method«.
+    var method = this;
+
+    // Die Funktion nimmt eine beliebige Anzahl von Parametern entgegen,
+    // auf die über den&#160;»arguments«-Pseudoarray zugegriffen wird.
+    // Wandle&#160;»arguments«&#160;mit einer Helferfunktion in einen echten Array um.
+    var args = $A(arguments);
+
+    // Entnehme dem Array den ersten Parameter. Das ist das Objekt, in
+    // dessen Kontext die Funktion ausgeführt werden soll.
+    //&#160;»args«&#160;enthält nun die restlichen Parameter.
+    var object = args.shift();
+
+    // Notiere einen Funktionsausdruck, der als Closure wirkt.
+    var wrapper = function () {
+
+        // Die Closure schließt&#160;»method«,&#160;»object«&#160;und&#160;»args«&#160;ein.
+        // Rufe die Funktion im Kontext des Objektes&#160;»object«&#160;auf,
+        // reiche dabei die restlichen Parameter durch und
+        // gib den Rückgabewert der Funktion zurück.
+        return method.apply(object, args);
+
+    };
+
+    // Gib die Wrapper-Funktion zurück.
+    return wrapper;
+
+};
+
+// Erweitere alle Funktionsobjekte um eine Methode&#160;»bindAsEventListener«
+// über die prototype-Eigenschaft des Function-Konstruktors.
+Function.prototype.bindAsEventListener = function (object) {
+
+    // Die Funktion nimmt einen Parameter entgegen, der das
+    // Objekt darstellt, in dessen Kontext die gewünschte Funktion
+    // ausgeführt werden soll.
+
+    // Speichere die gegenwärtige Funktion in&#160;»method«.
+    var method = this;
+
+    // Notiere einen Funktionsausdruck, der als Closure wirkt.
+    var wrapper = function (event) {
+        // Die Closure schließt&#160;»method«&#160;und&#160;»object«&#160;ein.
+
+        // Vereinheitliche den Zugriff auf das Event-Objekt.
+        // Dieses wird der Handler-Funktion entweder als Parameter
+        // übergeben (hier&#160;»event«) oder steht im Internet Explorer
+        // unter&#160;»window.event«&#160;zur Verfügung.
+        var eventObject = event || window.event;
+
+        // Rufe die Methode im Kontext des Objektes&#160;»object«&#160;auf und
+        // reiche das Event-Objekt durch.
+        return method.call(object, eventObject);
+
+    };
+
+    // Gib die Wrapper-Funktion zurück.
+    return wrapper;
+};
+</pre></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: Kurzschreibweise">Bearbeiten</a>]</span> <span class="mw-headline" id="Kurzschreibweise_2">Kurzschreibweise</span></h3>
+<p>Ohne Kommentare und Variablen, die bloß der Lesbarkeit dienen, sehen die beiden Funktionen bind und bindAsEventListener wie folgt aus:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+Function.prototype.bind = function () {
+    var method = this, args = $A(arguments), object = args.shift();
+    return function () {
+        return method.apply(object, args);
+    };
+};
+
+Function.prototype.bindAsEventListener = function (object) {
+    var method = this;
+    return function (event) {
+        return method.call(object, event || window.event);
+    }
+}
+
+Der Code für die verwendete Helferfunktion $A, die den arguments-Pseudoarray in einen echten JavaScript-Array umwandelt, lautet:
+
+function $A (iterable) {
+    return Array.prototype.slice.apply(iterable);
+}
+</pre></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Anwendung">Bearbeiten</a>]</span> <span class="mw-headline" id="Anwendung">Anwendung</span></h3>
+<p>Die bind-Methode findet Verwendung bei Timeouts und Intervallen, bindAsEventListener bei Event-Handlern. Der folgenden Code zeigt, wie sich das obige <a href="#Methoden_eigener_Objekte_in_anderen_Kontexten_ausf.C3.BChren"> Kombinationsbeispiel</a> mithilfe von bind und bindAsEventListener umsetzen lässt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function Konstruktor () {
+    this.eigenschaft = &quot;wert&quot;;
+    this.methode = function () {
+        window.setTimeout(this.verzögert.bind(this), 500);
+    };
+    this.verzögert = function () {
+        alert(
+            &quot;verzögert wurde aufgerufen\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + this.eigenschaft
+        );
+    };
+    this.handler = function (eventobjekt) {
+        alert(
+            &quot;handler wurde aufgerufen\n&quot; +
+            &quot;Event-Objekt: &quot; + eventobjekt + &quot;\n&quot; +
+            &quot;Element, das den Event behandelt: &quot; + this.button + &quot;\n&quot; +
+            &quot;Instanz-Eigenschaft: &quot; + this.eigenschaft
+        );
+    };
+    this.button = document.getElementById(&quot;button&quot;);
+    this.button.onclick = this.handler.bindAsEventListener(this);
+}
+var instanz = new Konstruktor();
+instanz.methode();
+</pre></div>
+</div>
+<p>Hier mag zunächst die seltsame Schreibweise this.verzögert.bind(this) und this.handler.bindAsEventHandler(this) irritieren. Diese Aufrufe hüllen verzögert und handler in Closures, sie werden daraufhin im Kontext der Instanz ausgeführt.
+</p><p>Der Unterschied gegenüber der vorherigen, einfacheren <a href="#Einf.C3.BChrung_in_Closures"> Closures-Methode</a> mag zunächst nicht groß scheinen. Allerdings bringen bind und bindAsEventListener eine etwas andere Arbeitsmethode mit sich und sind zugleich vielseitiger. Mittlerweile haben diese Methoden weite Verbreitung auch außerhalb des Prototype-Frameworks gefunden.
+Fallstricke von bindAsEventListener
+</p><p>this zeigt in einer Event-Handler-Funktion üblicherweise auf das Elementobjekt, bei dem der Handler registriert wurde und gerade ausgeführt wird. Bei der Benutzung von bindAsEventListener zeigt this stattdessen auf das auf das Instanzobjekt. Damit der Zugriff auf beide Objekte möglich ist, kann das Element beim Registrieren des Event-Handlers in einer Eigenschaft der Instanz gespeichert werden, im Beispiel this.button.
+</p><p>In manchen Fällen kann man dieses Problem nicht so einfach umgehen. Oftmals ist eine Unterscheidung zwischen dem Element nötig, das bei dem das Ereignis ursprünglich passierte, und dem Element, dessen Handler das Ereignis ausgelöst hat. Der Hintergrund ist folgender: Ein Event steigt im Elementenbaum auf und löst die Handler seiner Eltern-Elementen aus. Dieser Effekt nennt sich Bubbling. Das Ursprungselement ist daher nicht immer identisch mit dem Element, bei dem ein Handler für das jeweilige Ereignis angestoßen wurde.
+</p><p>In standardkonformen Browsern ist eine Unterscheidung zwischen diesen Elementen über die Eigenschaften target und currentTarget des Event-Objektes problemlos möglich. Der Internet Explorer hingegen erlaubt lediglich den Zugriff auf das Ursprungselement des Ereignisses über die Eigenschaft srcElement. Das Element, dessen Handler gerade ausgeführt wird, ist standardmäßig über this ansprechbar. Wenn this nun durch den Einsatz von bindAsEventHandler auf ein anderes Objekt zeigt, dann ist der Zugriff auf das besagte Element nicht mehr browserübergreifend möglich – zumindest nicht mit der oben genannten unmodifizierten Variante von bindAsEventHandler.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: Modularisierung und Namensräume">Bearbeiten</a>]</span> <span class="mw-headline" id="Modularisierung_und_Namensr.C3.A4ume">Modularisierung und Namensräume</span></h2>
+<p>Mittlerweile sind ganze JavaScript-Bibliotheken und -Frameworks entstanden, bestehend aus verschiedenen Modulen und Unterscripten. Bei zunehmender Komplexität ist es nicht mehr praktikabel, dass eine Ansammlung von aufeinander aufbauenden Scripten aus einer losen Ansammlung von Objects oder Konstruktoren bestehen.
+</p><p>Man geht daher dazu über, verwandte und zusammenhängende Objects und Konstruktoren in weitere Object-Container einzuordnen und zu verschachteln. Auf diese Weise entstehen mehrdimensionale Objektstrukturen, oft Module oder Pakete genannt. Einzelne Methoden werden dann über eine Kette von verschachtelten Objekten angesprochen, zum Beispiel YAHOO.util.Dom.methode() bei der <a rel="nofollow" class="external text" href="http://yuilibrary.com/">Yahoo! User Interface Library</a> oder dojo.dom.methode() bei [<a rel="nofollow" class="external text" href="http://dojotoolkit.org/">Dojo</a>].
+</p><p>Wie man an diesen Beispielen sieht, werden die Scripte nicht nur nach Funktionalität, sondern auch nach Zugehörigkeit zur Bibliothek geordnet. Eine Bibliothek besteht damit aus einem riesigen Object, das viele Unterobjekte enthält. Diese Ordnung nach Herkunft wird Namensraum (Namespace) genannt, in den obigen Beispielen YAHOO und dojo.
+</p><p>Bei kleineren zusammenhängenden Scripten lohnt sich ein eigener Namensraum nicht, sobald aber eine größere modularisierte Bibliothek entwickelt wird, bringen Namensräume Ordnung in die Scripte und sorgen dafür, dass sie nicht mit anderen kollidieren können.
+</p><p>Praktisch werden Namensräume über ein Object gelöst, das zunächst mit einem leeren <a href="#Object-Literale"> Object-Literal</a> erzeugt wird. Danach können dem Object Member hinzugefügt werden:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+var Namensraum = {};
+Namensraum.Container = {
+    …
+};
+Namensraum.Konstruktor = function (…) {
+    …
+};
+var instanz = Namensraum.Konstruktor(…);
+</pre></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: Ausblick auf JavaScript-Frameworks">Bearbeiten</a>]</span> <span class="mw-headline" id="Ausblick_auf_JavaScript-Frameworks">Ausblick auf JavaScript-Frameworks</span></h2>
+<p>Wir haben einige grundlegende formale Aspekte der Programmierung von&#160;»unaufdringlichem«&#160;JavaScript betrachtet. Diese bilden ein zuverlässiges Fundament für eine umfangreiche JavaScript-Anwendung.
+</p><p>Außen vor gelassen haben wir Probleme und Aufgaben, die uns immer wieder in der Praxis des DOM Scripting begegnen. Dies sind vor allem:
+</p>
+<ul><li>Effizientes Ansprechen von Elementen im Dokument z.B. über CSS-artige Selektoren
+</li><li>Daran anschließend: Durchlaufen und Durchsuchen von Elementknotenlisten
+</li><li> Zuverlässiges Registrieren und Entfernen von beliebigen Event-Handlern sowie die Kontrolle des Event-Flusses
+</li><li>Browserübergreifender Zugriff auf Event-Eigenschaften wie die Mausposition und Tastendrücke
+</li><li>Aufrufen von Initialisierungs-Funktionen, sobald der DOM-Knotenbaum verfügbar ist, um dem Dokument die gewünschte Interaktivität hinzuzufügen
+</li><li>Einfaches Ändern des DOM-Knotenbaumes, Hinzufügen von neuen Elementen
+</li><li>Ändern der CSS-Eigenschaften von Elementen, Hinzufügen und Entfernen von Klassen, Animationen und Effekte
+</li><li>Browserübergreifender Zugriff auf Eigenschaften des sogenannten Viewports, der Position sowie der Ausmaße eines Elements
+</li><li>Kommunikation mit dem Webserver, um Daten zu übertragen oder nachzuladen, ohne das Dokument zu wechseln (XMLHttpRequest bzw. Ajax)
+</li></ul>
+<p>Mittlerweile werden mehrere JavaScript-Frameworks entwickelt, um diese grundlegenden Aufgaben von DOM Scripting zu lösen. Ziel ist es, dass der JavaScript-Programmierer all diese Aufgaben nicht immer wieder von Hand lösen muss. Anstatt direkt mit dem DOM zu programmieren, führen diese Frameworks zahlreiche Objekte und Methoden als Abstraktionsschicht ein. Diese sind einfacher und intuitiver zu bedienen und nehmen dem Webautor einen Großteil der Arbeit ab.
+</p><p>Trotzdem werden Frameworks wie <a href="../JQuery.html" title="JQuery">jQuery</a>, <a rel="nofollow" class="external text" href="http://prototypejs.org/">Prototype</a> sowie die bereits genannten Dojo und Yahoo UI kritisch betrachtet. Sie legen einen einheitlichen Abstraktionslayer über die Browsereigenheiten, verbergen die tatsächlichen internen Vorgänge und geben vor, jedem einen Einstieg in die schwierige Materie des DOM Scripting zu ermöglichen.
+</p><p>Dabei ist es in vielen Fällen unverzichtbar, die interne Arbeitsweise zu kennen. Hier gilt: Wer die Aufgaben schon einmal&#160;»zu Fuß«&#160;gelöst hat und die Lösungsansätze kennt, steht nicht im Regen, wenn die Abstraktion in der Praxis nicht mehr greifen sollte.
+</p><p>Die meisten Helferscripte, Bibliotheken und Frameworks bedienen sich den vorgestellten Methoden zur Organisation. Die Kenntnis dieser Methoden ist daher nicht nur für das Schreiben von eigenen Scripten hilfreich, sondern auch für die Benutzung und das Verständnis von fremden Scripten.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: Literaturhinweise">Bearbeiten</a>]</span> <span class="mw-headline" id="Literaturhinweise">Literaturhinweise</span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: Einführung in Unobtrusive JavaScript und DOM Scripting">Bearbeiten</a>]</span> <span class="mw-headline" id="Einf.C3.BChrung_in_Unobtrusive_JavaScript_und_DOM_Scripting">Einführung in Unobtrusive JavaScript und DOM Scripting</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://blog.selfhtml.org/2005/12/17/javascript-einsatz/?bl_action=show&amp;bl_uri=javascript-einsatz">Der sinnvolle Einsatz von JavaScript</a>, SELFHTML Weblog
+</li><li><a rel="nofollow" class="external text" href="http://onlinetools.org/articles/unobtrusivejavascript/">Unobtrusive JavaScript</a>, Christian Heilmann
+<ul><li><a rel="nofollow" class="external text" href="http://ichwill.net/">Deutsche Übersetzung:  Barrierefreies JavaScript</a>, Christian Heilmann
+</li></ul>
+</li><li> <a rel="nofollow" class="external text" href="http://icant.co.uk/articles/from-dhtml-to-dom/from-dhtml-to-dom-scripting.html">From DHTML to DOM scripting</a> – an example of how to replace outdated JavaScript techniques, Christian Heilmann
+</li><li><a rel="nofollow" class="external text" href="http://carsonified.com/blog/features/dev/the-importance-of-maintainable-javascript/">The Importance of Maintainable JavaScript</a>, Christian Heilmann
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: Programmiertechniken für strukturierte und wartbare Scripte">Bearbeiten</a>]</span> <span class="mw-headline" id="Programmiertechniken_f.C3.BCr_strukturierte_und_wartbare_Scripte">Programmiertechniken für strukturierte und wartbare Scripte</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://christianheilmann.com/2006/02/16/show-love-to-the-object-literal/">Show love to the object literal</a>, Christian Heilmann
+</li><li><a rel="nofollow" class="external text" href="http://www.dustindiaz.com/namespace-your-javascript/">Namespacing your JavaScript</a>, Dustin Diaz
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: Closures">Bearbeiten</a>]</span> <span class="mw-headline" id="Closures">Closures</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://jibbering.com/faq/notes/closures/Javascript">Closures</a>, Richard Cornford (umfangreich und technisch detailreich, aber für Einsteiger schwer verständlich)
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;section=25" title="Abschnitt bearbeiten: Objektorientierte Programmierung, speziell Kapselung">Bearbeiten</a>]</span> <span class="mw-headline" id="Objektorientierte_Programmierung.2C_speziell_Kapselung">Objektorientierte Programmierung, speziell Kapselung</span></h3>
+<ul><li> <a href="Konzepte.html#Eigene_Objekte_definieren" title="JavaScript/Konzepte">Eigene Objekte definieren</a>, SELFHTML-Wiki
+</li><li> <a rel="nofollow" class="external text" href="http://mckoss.com/jscript/object.htm">Object Oriented Programming in JavaScript</a>, Mike Koss
+</li><li> <a rel="nofollow" class="external text" href="http://www.peterkropff.de/site/javascript/oop.htm">OOP mit JavaScript</a>, Peter Kropff
+</li><li><a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/JavaScript#Eigene_Objekte_definieren">JavaScript: Eigene Objekte definieren, Kapselung, Vererbung über die prototype-Eigenschaft</a>, Wikipedia
+</li><li><a rel="nofollow" class="external text" href="http://www.crockford.com/javascript/private.html">Private Members in JavaScript</a>, Douglas Crockford
+</li></ul>
+<p>JavaScript-Bibliotheken und -Frameworks
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://blog.selfhtml.org/2007/10/20/javascript-bibliotheken/?bl_action=show&amp;bl_uri=javascript-bibliotheken">selfHTML-Blog: JavaScript-Bibliotheken und die jüngere JavaScript-Geschichte</a>, Mathias Schäfer
+</li><li><a rel="nofollow" class="external text" href="http://blog.selfhtml.org/2008/09/04/thesen-javascript-gebrauch/?bl_action=show&amp;bl_uri=thesen-javascript-gebrauch">selfHTML-Blog:Sieben Thesen zum gegenwärtigen JavaScript-Gebrauch</a>, Mathias Schäfer
+</li><li><a rel="nofollow" class="external text" href="http://www.sitepoint.com/javascript-library/">The JavaScript Library World Cup</a>, Dan Webb
+</li><li><a rel="nofollow" class="external text" href="http://www.quirksmode.org/blog/archives/2007/01/again_javascrip.html">Again JavaScript libraries</a>, Peter-Paul Koch (Links und Zusammenfassung der Diskussion)
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1185/1000000
+Post‐expand include size: 19485/2097152 bytes
+Template argument size: 6566/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4138-0!*!0!!de-formal!*!* and timestamp 20150301150338 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;oldid=20592">http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;oldid=20592</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FOrganisation+von+JavaScripten" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Organisation_von_JavaScripten.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Organisation_von_JavaScripten&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Organisation_von_JavaScripten.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/JavaScript/Organisation_von_JavaScripten.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Organisation_von_JavaScripten.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Organisation_von_JavaScripten&amp;oldid=20592" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/JavaScript-2FOrganisation_von_JavaScripten.html" title="Spezial:Durchsuchen/JavaScript-2FOrganisation von JavaScripten">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 1. August 2014 um 19:33 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.310-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.089 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Organisation_von_JavaScripten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:17 GMT -->
+</html>

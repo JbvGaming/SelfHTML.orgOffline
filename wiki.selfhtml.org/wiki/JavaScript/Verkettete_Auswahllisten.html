@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Verkettete_Auswahllisten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Verkettete Auswahllisten – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Verkettete_Auswahllisten","wgTitle":"JavaScript/Verkettete Auswahllisten","wgCurRevisionId":19558,"wgArticleId":4273,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Verkettete_Auswahllisten","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Verkettete Auswahllisten" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Verkettete_Auswahllisten&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Verkettete_Auswahllisten skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Verkettete Auswahllisten</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../JavaScript.html" title="JavaScript">JavaScript</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="tocright"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Warum_dieses_Thema.3F"><span class="tocnumber">1</span> <span class="toctext">Warum dieses Thema?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Beispielimplementierung"><span class="tocnumber">2</span> <span class="toctext">Beispielimplementierung</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Hilfsfunktionen"><span class="tocnumber">3</span> <span class="toctext">Hilfsfunktionen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Die_Callback-Funktion"><span class="tocnumber">4</span> <span class="toctext">Die Callback-Funktion</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Die_Callback-Funktion_im_LinkedSelection-Objekt"><span class="tocnumber">4.1</span> <span class="toctext">Die Callback-Funktion im LinkedSelection-Objekt</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Der_ChangeHandler"><span class="tocnumber">5</span> <span class="toctext">Der ChangeHandler</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Das_Format_der_Optionsdaten"><span class="tocnumber">6</span> <span class="toctext">Das Format der Optionsdaten</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Das_LinkedSelection-Objekt"><span class="tocnumber">7</span> <span class="toctext">Das LinkedSelection-Objekt</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#M.C3.B6gliche_Variationen"><span class="tocnumber">8</span> <span class="toctext">Mögliche Variationen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Datenbeschaffung_per_AJAX"><span class="tocnumber">8.1</span> <span class="toctext">Datenbeschaffung per AJAX</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Datenformatierung_bei_AJAX"><span class="tocnumber">8.2</span> <span class="toctext">Datenformatierung bei AJAX</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Auswahllisten-Objekte_dynamisch_erstellen"><span class="tocnumber">8.3</span> <span class="toctext">Auswahllisten-Objekte dynamisch erstellen</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Auswahllisten_dynamisch_erscheinen_lassen"><span class="tocnumber">8.4</span> <span class="toctext">Auswahllisten dynamisch erscheinen lassen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Hinweise_und_Kurioses"><span class="tocnumber">9</span> <span class="toctext">Hinweise und Kurioses</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Korrekte_Syntax_bei_JSON"><span class="tocnumber">9.1</span> <span class="toctext">Korrekte Syntax bei JSON</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+</div>
+<div class="note-box note-box-autor">
+<p class="note-box-title">Informationen zum Autor:</p>
+<div class="note-box-text">
+  <div>
+    <div class="note-box-autor-text">Name:</div>
+    <div class="note-box-autor-info">Rodney Rehm</div>
+    <div class="note-box-autor-text" style="">E-Mail:</div>
+    <div class="note-box-autor-info" style=""><a rel="nofollow" class="external text" href="mailto:selfhtml@rodneyrehm.de">selfhtml@rodneyrehm.de</a></div>
+    <div class="note-box-autor-text" style="">Homepage:</div>
+    <div class="note-box-autor-info" style=""><a rel="nofollow" class="external text" href="http://rodneyrehm.de/">rodneyrehm.de</a></div>
+  </div>
+</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Bei Fragen zu diesem Beitrag kontaktieren Sie bitte den Autor.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Warum dieses Thema?">Bearbeiten</a>]</span> <span class="mw-headline" id="Warum_dieses_Thema.3F"> Warum dieses Thema? </span></h2>
+<p>Im modernen Webdesign wird immer mehr Wert auf Interaktivität gelegt. Um (statische) Webseiten zu dynamisieren, bietet sich die client-seitige Scriptsprache Javascript an. Für Browser, die diese Technologie unterstützen, lassen sich hilfreiche Erweiterungen programmieren. Verkettete Auswahllisten, bei welchen die Optionen der nächsten Auswahlliste in Abhängigkeit zur getroffenen Auswahl in der vohergehenden Auswahlliste stehen, lassen sich durchaus mit server-seitigen Scripts realisieren. Das macht es jedoch erforderlich, dass das Formular nach jeder änderung der Auswahl an den Server geschickt und vom Server eine neu generierte Seite zurückgeliefert werden muss. Dabei muss je nach Architektur der Webseite auf einige Dinge Rücksicht genommen werden. Gegebenenfalls wurden weitere Formulardaten übermittelt. Oft werden Seiten aus vielen Bausteinen zusammengebastelt. Unzählige Daten wollen zusammengetragen werden (Dateien, Datenbank, Cache). Und so weiter. Kurz: "It's a pain in the ass". Mit ein wenig Javascript kann man diese Auswahlstrecken eleganter, benutzerfreundlicher und schneller realisieren.
+</p><p>Im Beispiel-Code wurde auf moderne Arbeitsweise geachtet. Es kommen DOM-Methoden (statt der möglichen Option-Methoden) zum Einsatz und es werden die Konzepte der objektorientierten Programmierung angewandt, welche für Javascript-Einsteiger vielleicht nicht sofort verständlich sind. Es wird jedoch versucht, möglichst alle verwendeten Konzepte zu erklären - ein kleiner Exkurs in die Welt der objektorientierten Programmierung ist also mit von der Partie.
+</p><p>Nach einem kurzen Blick auf das Endprodukt werden die verwendeten Funktionen und Techniken erläutert. Für den direkten Einsatz des Beispiel-Codes sind lediglich die Bereiche <a href="#Das_Format_der_Optionsdaten">Das Format der Optionsdaten</a>, <a href="#Die_Callback-Funktion">Die Callback-Funktion</a> und die Beispielimplementierung wichtig.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Beispielimplementierung">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispielimplementierung"> Beispielimplementierung </span></h2>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Verkettete_Auswahllisten.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset = &quot;utf-8&quot;&gt;
+&lt;title&gt;Verkettete Auswahllisten Beispiel 1&lt;/title&gt;
+
+&lt;script src=&quot;terminAuswahl.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;LinkedSelection.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+
+/**
+ * Diese Callback-Funktion soll beim Abschliessen der Auswahlstrecke und beim
+ * ändern der Auswahl in einer der Auswahllisten aufgerufen werden.
+ * @param selected ein Array mit den Daten der jeweiligen Auswahllisten
+ *                 (leer, wenn Strecke nicht abgeschlossen)
+ **/
+function ergebnisZeigen( selected )
+{
+  if( selected.length )
+  {
+    /*
+     * Auswahlstrecke wurde beendet
+     */
+
+    // Visualisierung der Auswahlsrecke
+    var sel = '';
+    var val = '';
+    var txt = '';
+    for( var i = 0; i &lt; selected.length; i++ )
+    {
+      sel += ( i&gt;0 ? ' → ' : '') + selected[i].id;
+      val += ( i&gt;0 ? ' → ' : '') + selected[i].value;
+      txt += ( i&gt;0 ? ' → ' : '') + selected[i].text;
+    }
+    var output = '&lt;h3&gt;Gewählte Strecke:&lt;'+'/h3&gt;&lt;h4&gt;IDs der Auswahllisten&lt;'+'/h4&gt;&lt;p&gt;' + sel +
+           '&lt;'+'/p&gt;&lt;h4&gt;Werte der gewählten Optionen&lt;'+'/h4&gt;&lt;p&gt;' + val +
+           '&lt;'+'/p&gt;&lt;h4&gt;Texte (Namen) der gewählten Optionen&lt;'+'/h4&gt;&lt;p&gt;' + txt + '&lt;'+'/p&gt;';
+  }
+  else
+  {
+    /*
+     * Auswahlstrecke wurde noch nicht beendet
+     */
+
+    // Hinweis zur Auswahl in der nächsten Auswahlliste
+    var output = '&lt;p&gt;Wählen Sie eine Option aus der nächste Auswahlliste.&lt;'+'/p&gt;';
+  }
+  var ergebnisObj = document.getElementById( 'ergebnis' ).innerHTML = output;
+};
+
+window.onload = function()
+{
+  var vk = new LinkedSelection( [ 'professor', 'lesung', 'termin' ], ergebnisZeigen, terminAuswahl );
+}
+
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Beispiel 1&lt;/h1&gt;
+
+&lt;p&gt;Bitte wählen Sie in der folgenden Auswahlliste einen Professor&lt;/p&gt;
+
+&lt;p&gt;
+&lt;label id=&quot;professorLabel&quot; for=&quot;professor&quot;&gt;Professor:&lt;/label&gt;
+&lt;select id=&quot;professor&quot;&gt;
+  &lt;option value=&quot;--&quot;&gt;Bitte wählen:&lt;/option&gt;
+  &lt;option value=&quot;p23&quot;&gt;Albers, Alfred&lt;/option&gt;
+  &lt;option value=&quot;p24&quot;&gt;Braun, Berta&lt;/option&gt;
+  &lt;option value=&quot;p25&quot;&gt;Drachenzaun, Doris&lt;/option&gt;
+  &lt;option value=&quot;p26&quot;&gt;Müller, Stephan&lt;/option&gt;
+  &lt;option value=&quot;p27&quot;&gt;Meier, Manfred&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;label id=&quot;lesungLabel&quot; for=&quot;lesung&quot;&gt;Lesung:&lt;/label&gt;
+&lt;select id=&quot;lesung&quot;&gt;
+  &lt;option value=&quot;--&quot;&gt;------&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;label id=&quot;lesungTermin&quot; for=&quot;termin&quot;&gt;Termin:&lt;/label&gt;
+&lt;select id=&quot;termin&quot;&gt;
+  &lt;option value=&quot;--&quot;&gt;------&lt;/option&gt;
+&lt;/select&gt;
+&lt;/p&gt;
+
+&lt;div id=&quot;ergebnis&quot;&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Verkettete_Auswahllisten.html">ansehen …</a></div></div>
+<p>Die wichtigsten Punkte der Einbindung im überblick:
+</p>
+<ul><li> Die Javascript-Datei <var>terminAuswahl.js</var> (Daten für die Auswahllisten) einbinden
+</li><li> Die Javascript-Datei <var>LinkedSelection.js</var> einbinden (
+</li><li> Eine Callback-Funktion definieren
+</li><li> Die Auswahllisten definieren
+</li><li> LinkedSelection instanzieren
+</li></ul>
+<p>Der Kern der verketteten Auswahllisten ist die Datei <var>LinkedSelection.js</var>, in ihr befindet sich das LinkedSelection-Objekt. Um dieses Beispiel in einen produktiven Einsatz zu bringen, braucht diese Datei nicht bearbeitet zu werden. Die Komponenten des LinkedSelection-Objekts werden in den folgenden Bereichen erläutert. Die Datei <var>terminAuswahl.js</var> enthält alle möglichen Optionen für die Auswahllisten. Eine <a href="#Die_Callback-Funktion">Callback-Funktion</a> muss deklariert werden, welche von der Instanz des LinkedSelection-Objekts aufgerufen werden kann, wenn sich an der Auswahl etwas ändert. Die Auswahllisten müssen definiert werden, dabei muss die erste Auswahlliste bereits mit Optionen befüllt werden. Indem wir die Instanzierung des LinkedSelection-Objekts im onload-Handler ausführen, stellen wir sicher, dass die Auswahlstrecke erst gestartet wird, wenn die komplette Seite geladen wurde. Andernfalls könnte das Javascript versuchen, auf die Auswahllisten zuzugreifen, bevor die Deklaration dieser beim Browser angelangt ist. Das LinkedSelection-Objekt erwartet 3 Parameter: ein Array mit den IDs der Auswahllisten, die Callback-Funktion, das Datenobjekt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Hilfsfunktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Hilfsfunktionen"> Hilfsfunktionen </span></h2>
+<p>Es gibt einige Abläufe im Umgang mit Auswahllisten, die sich sehr schön in (wiederverwendbare) Funktionen verpacken lassen. Die im Folgenden vorgestellten Funktionen bedienen sich des Objekts <code>this</code>. <code>this</code> referenziert (zeigt auf) das Objekt, in dessen Kontext die Funktion gerade ausgeführt wird. Die folgenden Hilfsfunktionen funktionieren also nur dann, wenn wir sie den Auswahllisten als neue Objekt-Methoden anfügen. Man darf sich hier nicht in die Irre führen lassen; obwohl die Funktionen nicht in einem Objekt deklariert werden, wird <code>this</code> später auf richtige Objekt zugreifen, nämlich dasjenige Objekt, welchem wir die neuen Funktionen zuweisen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Auslesen des Wertes der aktuell gewählten Option
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> selectedValue <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">options</span><span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">selectedIndex</span> <span class="br0">&#93;</span>.<span class="me1">value</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment"><code>selectedValue</code> gibt den Wert (value) der gewählten Option zurück.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Auslesen des Textes der aktuell gewählten Option
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> selectedText <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">options</span><span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">selectedIndex</span> <span class="br0">&#93;</span>.<span class="me1">text</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment"><code>selectedText</code> gibt statt des Wertes (value), den Namen (text) der gewählten Option zurück.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Auswählen einer Option anhand des Wertes
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> selectByValue <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span> value <span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="kw1">this</span>.<span class="me1">options</span>.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">if</span><span class="br0">&#40;</span> <span class="kw1">this</span>.<span class="me1">options</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">value</span> <span class="sy0">==</span> value <span class="br0">&#41;</span>
+      <span class="kw1">this</span>.<span class="me1">selectedIndex</span> <span class="sy0">=</span> i<span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment"><code>selectByValue</code> durchläuft alle Optionen und selektiert die letzte Option, deren Wert mit dem Parameter <code>value</code> übereinstimmt.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Ersetzen der Optionen
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> replaceOptions <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span> newOptions <span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="co1">// alte Optionen der Auswahlliste löschen</span>
+  <span class="kw1">var</span> opts <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span> <span class="st0">'option'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  while<span class="br0">&#40;</span> opts.<span class="me1">length</span> <span class="sy0">&gt;</span> <span class="nu0">0</span> <span class="br0">&#41;</span>
+    <span class="kw1">this</span>.<span class="me1">removeChild</span><span class="br0">&#40;</span> opts<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// wenn keine neuen Optionen übergeben wurden, default-Option setzen</span>
+  <span class="co1">// andernfalls &quot;Bitte wählen&quot; voranstellen</span>
+  <span class="kw1">if</span><span class="br0">&#40;</span> newOptions.<span class="me1">length</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span>
+    <span class="kw1">this</span>.<span class="me1">addOption</span><span class="br0">&#40;</span> <span class="st0">'--'</span><span class="sy0">,</span> <span class="st0">'------'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">else</span>
+    <span class="kw1">this</span>.<span class="me1">addOption</span><span class="br0">&#40;</span> <span class="st0">'--'</span><span class="sy0">,</span> <span class="st0">'Bitte wählen:'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// neue Optionen in die Auswahlliste schreiben</span>
+  <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> newOptions.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+    <span class="kw1">this</span>.<span class="me1">addOption</span><span class="br0">&#40;</span> newOptions<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> newOptions<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment"><code>replaceOptions</code> erwartet einen Parameter, welcher ein Array sein muss. Jedes Element ist wiederum ein Array mit 2 Elementen. Das erste Element enthält den Wert (value) der Option, das zweite Element den Namen (text). <code>replaceOptions</code> löscht zunächst alle Optionen, die die Auswahlliste besitzt. Das übergebene Array <code>newOptions</code> wird dann durchlaufen und für jedes Element eine neue Option in die Auswahlliste gehängt. Wenn ein leeres Array übergeben wurde, wird die Default-Option (------) gesetzt.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Hinzufügen einer neuen Option
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> addOption <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span> value<span class="sy0">,</span> text <span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> opt <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span> <span class="st0">'option'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  opt.<span class="me1">value</span> <span class="sy0">=</span> value<span class="sy0">;</span>
+  opt.<span class="me1">appendChild</span><span class="br0">&#40;</span> document.<span class="me1">createTextNode</span><span class="br0">&#40;</span> text <span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">this</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span> opt <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment"><code>addOption</code> erwartet zwei Parameter. Der erste wird als Wert der neuen Option gesetzt, der zweite ist der Name der neuen Option.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> <code>this</code> beschreibt (referenziert) das Objekt, in dessen Kontext die Funktion ausgeführt wird. Würde diese Funktion einfach so aufgerufen werden, würde <code>this</code> eine Referenz auf das <code>window</code>-Objekt sein und einen Fehler verursachen, da das <code>window</code>-Objekt nicht über die Attribute <code>options</code> und <code>selectedIndex</code> verfügt. Weisen wir diese Funktionen einer Auswahlliste zu, so ist <code>this</code> eine Referenz auf die Auswahlliste selbst, welche sehr wohl über die genannten Attribute verfügt. <code>var funktionsName = function(){ ... }</code> bewirkt das gleiche wie <code>function funktionsName(){ ... }</code>. Da wir unsere Funktionen aber (sinnvoll) kapseln wollen, wählen wir diese „Privat-Funktion“-Notation.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Die Callback-Funktion">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Callback-Funktion"> Die Callback-Funktion </span></h2>
+<p>Eine Callback-Funktion (Rückruffunktion) unterscheidet sich zunächst nicht von einer normalen Funktion. Im Gegensatz zu anderen Funktionen wird sie jedoch nicht sofort ausgeführt, sondern als Parameter einer anderen Funktion übergeben, um innerhalb dieser benutzt werden zu können.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel zum allgemeinen Einsatz von Callback-Funktionen
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="coMULTI">/*
+ * Eine Funktion, die über das übergebe
+ * Array iteriert und für jedes Element die
+ * Callback-Funktion ausführt
+ */</span>
+<span class="kw1">function</span> fuerJedesElement<span class="br0">&#40;</span> callback<span class="sy0">,</span> array <span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> array.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    callback<span class="br0">&#40;</span> array<span class="br0">&#91;</span>i<span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="coMULTI">/*
+ * eine mögliche Callback-Funktion,
+ * welche das Quadrat aller Werte ausgeben soll
+ */</span>
+<span class="kw1">function</span> callback_quadrat<span class="br0">&#40;</span> wert <span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  alert<span class="br0">&#40;</span> wert<span class="sy0">*</span>wert <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="coMULTI">/*
+ * eine mögliche Callback-Funktion,
+ * welche ein entsprechendes Element aus einem
+ * anderen Array ausgeben soll
+ */</span>
+<span class="kw1">function</span> callback_text<span class="br0">&#40;</span> wert <span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> daten <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span> <span class="st0">'Null'</span><span class="sy0">,</span> <span class="st0">'Eins'</span><span class="sy0">,</span> <span class="st0">'Zwei'</span><span class="sy0">,</span> <span class="st0">'Drei'</span><span class="sy0">,</span> <span class="st0">'Vier'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  alert<span class="br0">&#40;</span> <span class="br0">&#40;</span><span class="sy0">!</span>daten<span class="br0">&#91;</span>wert<span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">?</span> <span class="st0">'unbekannt'</span> <span class="sy0">:</span> daten<span class="br0">&#91;</span>wert<span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="coMULTI">/*
+ * Ausgabe des folgenden Aufrufs:
+ * 0, 1, 4, 9, 16
+ */</span>
+fuerJedesElement<span class="br0">&#40;</span> <span class="sy0">&lt;</span>strong<span class="sy0">&gt;</span>callback_quadrat<span class="sy0">&lt;/</span>strong<span class="sy0">&gt;,</span> <span class="br0">&#91;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="sy0">,</span><span class="nu0">3</span><span class="sy0">,</span><span class="nu0">4</span><span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="coMULTI">/*
+ * Ausgabe des folgenden Aufrufs:
+ * Null, Eins, Zwei, Drei, Vier, unbekannt
+ */</span>
+fuerJedesElement<span class="br0">&#40;</span> <span class="sy0">&lt;</span>strong<span class="sy0">&gt;</span>callback_text<span class="sy0">&lt;/</span>strong<span class="sy0">&gt;,</span> <span class="br0">&#91;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="sy0">,</span><span class="nu0">3</span><span class="sy0">,</span><span class="nu0">4</span><span class="sy0">,</span><span class="nu0">5</span><span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Wir rufen die Funktion <code>fuerJedesElement</code> mit zwei unterschiedlichen Callback-Funktionen auf und erhalten, je nach Funktionsweise der Callback-Funktion, unterschiedliche Resultate. <code>fuerJedesElement</code> durchläuft das übergebene Array und führt die angegebene Callback-Funktion für jedes Element aus.
+</p><p>Für die Anwendung des Callback-Prinzips muss man beachten, dass auch Funktionen in Javascript Objekte sind. Objekte (Variablen) lassen sich als Parameter an Funktionen übergeben und können bspw. andere Funktionen durch eine simple Zuweisung überschreiben.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Die Callback-Funktion im LinkedSelection-Objekt">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Callback-Funktion_im_LinkedSelection-Objekt"> Die Callback-Funktion im LinkedSelection-Objekt </span></h3>
+<p>Das Callback-Prinzip lässt sich wunderbar als Eventhandler einsetzen. In einem Objekt wird eine Funktion registriert, welche ausgeführt wird, wenn irgendwas passiert. Genau dies machen wir uns für unser LinkedSelection-Objekt zu Nutze. Wenn der Benutzer in einer Auswahlliste eine andere Option wählt, soll diese Funktion aufgerufen werden, damit wir entsprechend reagieren können.
+</p><p>Auf den ersten Blick würde es wohl reichen, wenn wir die Callback-Funktion nur dann aufrufen, wenn in der letzten Auswahlliste ein gültiger Wert ausgewählt wird. Wir möchten aber auch reagieren können, wenn der Benutzer die Auswahl in einer vorhergehenden Liste ändert, damit wir die Ausgabe entsprechend anpassen können.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: function ergebnisZeigen
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> ergebnisZeigen<span class="br0">&#40;</span> selected <span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">if</span><span class="br0">&#40;</span> selected.<span class="me1">length</span> <span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="coMULTI">/*
+     * Auswahlstrecke wurde beendet
+     */</span>
+&#160;
+    <span class="co1">// Visualisierung der Auswahlstrecke</span>
+    <span class="kw1">var</span> sel <span class="sy0">=</span> <span class="st0">''</span><span class="sy0">;</span>
+    <span class="kw1">var</span> val <span class="sy0">=</span> <span class="st0">''</span><span class="sy0">;</span>
+    <span class="kw1">var</span> txt <span class="sy0">=</span> <span class="st0">''</span><span class="sy0">;</span>
+    <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> selected.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      sel <span class="sy0">+=</span> <span class="br0">&#40;</span> i<span class="sy0">&gt;</span><span class="nu0">0</span> <span class="sy0">?</span> <span class="st0">' &amp;amp;rarr; '</span> <span class="sy0">:</span> <span class="st0">''</span><span class="br0">&#41;</span> <span class="sy0">+</span> selected<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">id</span><span class="sy0">;</span>
+      val <span class="sy0">+=</span> <span class="br0">&#40;</span> i<span class="sy0">&gt;</span><span class="nu0">0</span> <span class="sy0">?</span> <span class="st0">' &amp;amp;rarr; '</span> <span class="sy0">:</span> <span class="st0">''</span><span class="br0">&#41;</span> <span class="sy0">+</span> selected<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">value</span><span class="sy0">;</span>
+      txt <span class="sy0">+=</span> <span class="br0">&#40;</span> i<span class="sy0">&gt;</span><span class="nu0">0</span> <span class="sy0">?</span> <span class="st0">' &amp;amp;rarr; '</span> <span class="sy0">:</span> <span class="st0">''</span><span class="br0">&#41;</span> <span class="sy0">+</span> selected<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">text</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">var</span> output <span class="sy0">=</span> <span class="st0">'&lt;h3&gt;Gewählte Strecke:&lt;/h3&gt;&lt;h4&gt;IDs der Auswahllisten&lt;/h4&gt;&lt;p&gt;'</span> <span class="sy0">+</span> sel <span class="sy0">+</span>
+           <span class="st0">'&lt;/p&gt;&lt;h4&gt;Werte der gewählten Optionen&lt;/h4&gt;&lt;p&gt;'</span> <span class="sy0">+</span> val <span class="sy0">+</span>
+           <span class="st0">'&lt;/p&gt;&lt;h4&gt;Texte (Namen) der gewählten Optionen&lt;/h4&gt;&lt;p&gt;'</span> <span class="sy0">+</span> txt <span class="sy0">+</span> <span class="st0">'&lt;/p&gt;'</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw1">else</span>
+  <span class="br0">&#123;</span>
+    <span class="coMULTI">/*
+     * Auswahlstrecke wurde noch nicht beendet
+     */</span>
+&#160;
+    <span class="co1">// Hinweis zur Auswahl in der nächsten Auswahlliste</span>
+    <span class="kw1">var</span> output <span class="sy0">=</span> <span class="st0">'&lt;p&gt;Wählen Sie eine Option aus der nächsten Auswahlliste.'</span><span class="sy0">&lt;/</span>p<span class="sy0">&gt;</span><span class="st0">';
+  }
+  var ergebnisObj = document.getElementById( '</span>ergebnis<span class="st0">' ).innerHTML = output;
+};</span></pre></div></div></div>
+</div>
+<p>Die Callback-Funktion wird bei jeder änderung der Auswahl bei egal welcher Auswahlliste der Auswahlstrecke aufgerufen. Wird in der letzten Auswahlliste der Strecke ein gültiger Wert ausgewählt, so wird ein nicht-leeres Array an die Callback-Funktion übergeben. In allen anderen Fällen wird die Callback-Funktion mit einem leeren Array für den Parameter <code>selected</code> aufgerufen. Ist die Anzahl der Elemente in <code>selected</code> 0, so können wir mit Sicherheit sagen, dass die Auswahlstrecke noch nicht komplett durchlaufen wurde und wir eine entsprechende Meldung anzeigen möchten. Ist die Strecke beendet worden, so bekommt die Callback-Funktion ein Array übergeben, welches genau so viele Elemente besitzt, wie es Auswahllisten in der Strecke gibt. Für dieses Beispiel arbeiten wir die Daten für eine Visualisierung auf.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wurde die Auswahlstrecke noch nicht beendet, wird <code>selected</code> ein leeres Array beinhalten.</div>
+<p>Wenn die Auswahlstrecke absolviert wurde, wird für jede Auswahlliste ein Element im Array <code>selected</code> gesetzt. Man könnte das Array auch Referenzen auf die jeweiligen Auswahllisten enthalten lassen, aus Gründen der Datenkapselung möchte man dies jedoch vermeiden. Jedes der Arrayelemente ist ein Objekt mit den folgenden Attributen:
+</p>
+<table border="1">
+<tr>
+<th style="text-align: left;">Attribut
+</th>
+<th style="text-align: left;">Wert
+</th></tr>
+<tr>
+<td><code>id</code>
+</td>
+<td>die ID der Auswahlliste
+</td></tr>
+<tr>
+<td><code>value</code>
+</td>
+<td>der Wert der gewählten Option
+</td></tr>
+<tr>
+<td><code>text</code>
+</td>
+<td>die Bezeichnung der gewählten Option
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Der ChangeHandler">Bearbeiten</a>]</span> <span class="mw-headline" id="Der_ChangeHandler"> Der ChangeHandler </span></h2>
+<p>Ein wesentlicher Teil der verketteten Auswahllisten ist die Fähigkeit, auf die Veränderung der Auswahl zu reagieren. Wenn der Benutzer in einer Auswahlliste eine Option wählt, müssen wir reagieren können, z.B. damit die nächste Auswahlliste mit Optionen befüllt wird. Auswahllisten haben von Haus aus eine Methode namens <code>onchange</code>. Diese wird aufgerufen, sobald die Auswahl geändert wird. <code>onchange</code> können wir eine neue Funktion zuweisen, und zwar nach dem gleichen Prinzip, das bei den Hilfsfunktionen erläutert wurde.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: der ChangeHandler
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> changeHandler <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> value <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">selectedValue</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="co1">// Auf die nächste Auswahlliste folgende Auswahllisten müssen wieder</span>
+    <span class="co1">// in den default-Zustand versetzt werden</span>
+    <span class="kw1">if</span><span class="br0">&#40;</span> <span class="kw1">typeof</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">nextSelect</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">'object'</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">selectID</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> selects.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+        selects<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">replaceOptions</span><span class="br0">&#40;</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="co1">// Abbrechen, wenn ein Dummy-Wert ausgewählt wurde</span>
+    <span class="kw1">if</span><span class="br0">&#40;</span> value <span class="sy0">==</span> <span class="st0">'--'</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="kw1">if</span><span class="br0">&#40;</span> <span class="kw1">this</span>.<span class="me1">selectID</span> <span class="sy0">&lt;</span> selects.<span class="me1">length</span> <span class="br0">&#41;</span>
+        selects<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">selectID</span> <span class="sy0">+</span><span class="nu0">1</span> <span class="br0">&#93;</span>.<span class="me1">replaceOptions</span><span class="br0">&#40;</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="kw1">return</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">if</span><span class="br0">&#40;</span> <span class="kw1">typeof</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">nextSelect</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">'object'</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="coMULTI">/*
+       * nextSelect ist eine Auswahlliste
+       */</span>
+&#160;
+      <span class="co1">// Wenn keine Daten zur gemachten Auswahl zur Verfügung stehen,</span>
+      <span class="co1">// müssen wir sicherstellen, dass wir auf keine nicht vorhandenen Objekte zugreifen.</span>
+      <span class="kw1">if</span><span class="br0">&#40;</span> <span class="sy0">!</span>data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span><span class="br0">&#91;</span> value <span class="br0">&#93;</span> <span class="br0">&#41;</span>
+      <span class="br0">&#123;</span>
+        <span class="kw1">if</span><span class="br0">&#40;</span> <span class="sy0">!</span>data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span> <span class="br0">&#41;</span>
+          data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span> <span class="sy0">=</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+        data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span><span class="br0">&#91;</span> value <span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+&#160;
+      <span class="co1">// Neue Optionen in der nächsten Auswahlliste setzen</span>
+      <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">replaceOptions</span><span class="br0">&#40;</span> data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span><span class="br0">&#91;</span> value <span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="co1">// Wenn die Auswahlstrecke nicht beendet ist, muss die Callback-Funktion</span>
+      <span class="co1">// dennoch aufgerufen werden, damit entsprechend auf änderungen</span>
+      <span class="co1">// reagiert werden kann.</span>
+      callback<span class="br0">&#40;</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">else</span>
+    <span class="br0">&#123;</span>
+      <span class="coMULTI">/*
+       * Die Auswahlstrecke ist absolviert
+       */</span>
+&#160;
+      <span class="co1">// Wahlen der einzelnen Listen in ein Array schreiben um</span>
+      <span class="co1">// dieses an die Callback-Funktion zu übergeben.</span>
+      <span class="kw1">var</span> selected <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> selects.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+      <span class="br0">&#123;</span>
+        selected.<span class="me1">push</span><span class="br0">&#40;</span> <span class="br0">&#123;</span> <span class="st0">'id'</span> <span class="sy0">:</span> selects<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">id</span><span class="sy0">,</span>
+                 <span class="st0">'value'</span><span class="sy0">:</span> selects<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">selectedValue</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                 <span class="st0">'text'</span> <span class="sy0">:</span> selects<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">selectedText</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#125;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      callback<span class="br0">&#40;</span> selected <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Statt für jede Auswahlliste eine eigene <code>onchange</code>-Funktion zu schreiben, bauen wir eine einzige Funktion, die mit allen Auswahllisten gleichermaßen klar kommt. Wenn eine Default-Option (------) gewählt wurde, soll der Vorgang abgebrochen werden. Wenn das Attribut <code>nextSelect</code> keine Referenz auf eine Auswahlliste enthält, ist die Auswahlstrecke absolviert. In diesem Fall müssen alle Auswahllisten durchlaufen und die gewählten Optionen notiert werden. Mit diesen Daten wird dann die Callback-Funktion aufgerufen. Handelt es sich bei <code>nextSelect</code> um ein Objekt (eine Auswahlliste), so muss dieses mit neuen Optionen befüllt werden. Um Aufwand zu sparen, prüfen wir, ob es für die aktuell gewählte Option überhaupt Daten in <code>daten</code> gibt. Wenn nicht, legen wir ein leeres Objekt an, damit die nachfolgenden Funktionen nicht auf nicht-deklarierte Variablen zugreifen. Dank der Initialisierungsfunktion des <a href="#LinkedSelection-Objekt">LinkedSelection-Objekts</a> verfügen alle Auswahllisten über die Methode <code>replaceOptions</code>, welche im Abschnitt  Hilfsfunktionen erläutert wurde. Dieser übergeben wir die relevanten Daten aus dem <code>daten</code>-Objekt. Die Struktur des <code>daten</code>-Objektes wird unter Format der Optionsdaten erklärt. Für folgende Auswahllisten in der Kette müssen möglicherweise bereits geschriebene Optionen zurückgesetzt werden, das erreichen wir durch den simplen Aufruf von <code>.replaceOptions( new Array() );</code>. Wir geben alle Events an die Callback-Funktion weiter, im Falle der nicht vollendeten Auswahlstrecke mit Übergabe eines leeren Arrays}
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die in dieser Funktion nicht deklarierten Attribute <code>nextSelect</code>, <code>data</code> und <code>callback</code> haben ihren Ursprung in der Initialisierungsfunktion des LinkedSelection-Objekts.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Das Format der Optionsdaten">Bearbeiten</a>]</span> <span class="mw-headline" id="Das_Format_der_Optionsdaten"> Das Format der Optionsdaten </span></h2>
+<p>Für dieses Beispiel werden die möglichen Optionen aller Auswahllisten der Auswahlkette in einem JSON-Objekt gespeichert. Dabei werden die folgenden Konventionen umgesetzt:
+</p>
+<ul><li> Alle Optionen der Auswahllisten werden in einem zentralen Objekt notiert.
+</li><li> Alle Optionen einer Auswahlliste werden in einem Objekt notiert, welches den Namen bekommt, den die Auswahlliste als ID gesetzt hat.
+</li><li> Alle Optionen einer Auswahlliste werden in einem Array notiert, dessen Name den Wert der Option der vorhergehenden Auswahlliste bekommt, zu welchem es in Abhängigkeit steht.
+</li><li> Jede Option (Arrayelement) ist wiederum ein (zweielementiges) Array, dessen erstes Element den Wert (value) und das zweite Element den Namen (text) der Option enthält.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: beispielhafte Optionsdaten
+</div>
+<div class="note-box-text note-box-example-code">var terminAuswahl = {
+  'professor' : {
+    'p23' : [<span style="color:white;background-color:green;">'p23'</span>, 'Albers, Alfred']
+  },
+
+  'lesung' : {
+    <span style="color:white;background-color:green;">'p23'</span> : [
+      [<span style="color:white;background-color:red;">'l55'</span>, 'Katzen in der freien Wildbahn'],
+      [<span style="color:white;background-color:orange;">'l56'</span>, 'Katzen im Gefängnis'],
+      [<span style="color:black;background-color:yellow;">'l57'</span>, 'Katzen in Australien']
+    ]
+  },
+
+  'termin' : {
+    <span style="color:white;background-color:red;">'l55'</span> : [
+      ['t123', 'freitags 10 - 12'],
+      ['t124', 'sonntags 18 - 20']
+    ],
+    <span style="color:white;background-color:orange;">'l56'</span> : [
+      ['t125', 'montags 12 - 14'],
+      ['t126', 'dienstags 8 - 10']
+    ],
+    <span style="color:black;background-color:yellow;">'l57'</span> : [
+      ['t127', 'dienstags 10 - 12'],
+      ['t128', 'mittwochs 13 - 15']
+    ]
+  }
+};</div>
+</div>
+<p>Analog zur oben genannten Konvention zur Datenformatierung gibt es das zentrale Datenobjekt <code>terminAuswahl</code>. Die Objekte <code>professor</code>, <code>lesung</code> und <code>termin</code> sind die Pendants zu den Auswahllisten. Die Namen der Objekte stimmen mit den jeweiligen IDs der Auswahllisten (#professor, #lesung, #termin) überein. Diese Objekte umfassen für jede mögliche Wahl in der vorhergehenden Auswahlliste ein Attribut. Die Namen der Attribute sind jeweils die Werte der Optionen in der vorhergehenden Auswahlliste. Hierdurch wird eine Abhängigkeit in einer flachen Hierarchie dargestellt. Die Attribute sind jeweils Arrays, welche die Optionen für die Auswahlliste bereithalten. Jedes dieser Arrays besitzt zwei Elemente, wobei das erste den Wert (value) und das zweite den Namen (text) der Option enthält.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Auswahllisten mit doppelten Optionen, oder mehreren Optionen mit dem gleichen Wert sind mit dieser Struktur nicht möglich. Sollte dies eine Anforderung sein, bieten die <a href="#m.C3.B6gliche_Variationen">Möglichen Variationen</a> einige hilfreiche Ansätze.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Das LinkedSelection-Objekt">Bearbeiten</a>]</span> <span class="mw-headline" id="Das_LinkedSelection-Objekt"> Das LinkedSelection-Objekt </span></h2>
+<p>In modernen Programmen wird sehr viel Wert auf Datenkapselung und Namensräume gelegt. Oft werden Variablen verwendet, auf die nicht direkt von außen zugegriffen werden soll. Möchte man diese Variablen auslesen oder verändern lassen, stellt man entsprechende Funktionen zur Verfügung. Im Großen und Ganzen ist das auch schon die ganze Geschichte der Kapselung. Namensräume sind vorallem dann unerlässlich, wenn viele verschiene Komponenten zusammenspielen müssen. Es könnte sein, dass zwei Komponenten die Funktionen <code>selectedValue</code> besitzen, die aber unterschiedlich funktionieren. Woher soll das Programm wissen, welche der beiden gleichnamigen Funktionen nun die richtige ist? In Javascript können wir uns mittels der Kapselung von Funktionen Namensräume schaffen. Die oben vorgestellten Hilfsfunktionen und der changeHandler sind nur im Kontext der verketteten Auswahllisten brauchbar, weshalb wir sie im Objekt <code>LinkedSelection</code> "verstecken". In den vorhergehenden Abschnitten wurden die einzelnen Komponenten des LinkedSelection-Objekts erläutert. Im folgenden Codeblock wird zudem die Funktion <code>init</code> vorgestellt, welche für das Auffinden und Vorbereiten der Auswahllisten zuständig ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: das LinkedSelection-Objekt
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="coMULTI">/**
+ * LinkedSelection ist ein Klasse zur Steuerung dynamisch verketteter Auswahllisten
+ * @param inputSelects ein Array mit den IDs der Auswahllisten in hierarchischer Reihenfolge
+ *            Bsp: [ 'select1', 'select2', 'select3' ]
+ * @param callback Funktion, welche beim Abschließen (und ändern) der Auswahl aufgerufen werden soll
+ * @param data das Daten-Objekt in JSON
+ *            Bsp: { 'select1':['wert1','text1'], 'select2':['wert5','text5'] }
+ **/</span>
+<span class="kw1">function</span> LinkedSelection<span class="br0">&#40;</span> inputSelects<span class="sy0">,</span> callback<span class="sy0">,</span> data <span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+  <span class="kw1">var</span> self <span class="sy0">=</span> <span class="kw1">this</span><span class="sy0">;</span>        <span class="coMULTI">/* um aus EventHandlern auf diese Instanz zugreifen zu können */</span>
+  <span class="kw1">var</span> selects <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>    <span class="coMULTI">/* Liste der verketteten Auswahllisten */</span>
+&#160;
+  <span class="coMULTI">/**
+   * Die Funktion changeHandler wird dem onchange-Handler jeder Auswahlliste zugewiesen.
+   * Wenn eine gültige Auswahl getroffen wurde, soll entweder die als nächste
+   * Auswahlliste (nextSelect) bekannte Auswahlliste mit Daten befüllt werden,
+   * oder die Callback-Funktion ausgeführt werden.
+   **/</span>
+  <span class="kw1">var</span> changeHandler <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> value <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">selectedValue</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="co1">// Auf die nächste Auswahlliste folgende Auswahllisten müssen wieder</span>
+    <span class="co1">// in den default-Zustand versetzt werden</span>
+    <span class="kw1">if</span><span class="br0">&#40;</span> <span class="kw1">typeof</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">nextSelect</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">'object'</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">selectID</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> selects.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+        selects<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">replaceOptions</span><span class="br0">&#40;</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="co1">// Abbrechen, wenn ein Dummy-Wert ausgewählt wurde</span>
+    <span class="kw1">if</span><span class="br0">&#40;</span> value <span class="sy0">==</span> <span class="st0">'--'</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="kw1">if</span><span class="br0">&#40;</span> <span class="kw1">this</span>.<span class="me1">selectID</span> <span class="sy0">&lt;</span> selects.<span class="me1">length</span> <span class="br0">&#41;</span>
+        selects<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">selectID</span> <span class="sy0">+</span><span class="nu0">1</span> <span class="br0">&#93;</span>.<span class="me1">replaceOptions</span><span class="br0">&#40;</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="kw1">return</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">if</span><span class="br0">&#40;</span> <span class="kw1">typeof</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">nextSelect</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">'object'</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="coMULTI">/*
+       * nextSelect ist eine Auswahlliste
+       */</span>
+&#160;
+      <span class="co1">// Wenn keine Daten zur gemachten Auswahl zur Verfügung stehen,</span>
+      <span class="co1">// müssen wir sicherstellen, dass wir auf keine nicht vorhandenen Objekte zugreifen.</span>
+      <span class="kw1">if</span><span class="br0">&#40;</span> <span class="sy0">!</span>data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span><span class="br0">&#91;</span> value <span class="br0">&#93;</span> <span class="br0">&#41;</span>
+      <span class="br0">&#123;</span>
+        <span class="kw1">if</span><span class="br0">&#40;</span> <span class="sy0">!</span>data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span> <span class="br0">&#41;</span>
+          data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span> <span class="sy0">=</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+        data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span><span class="br0">&#91;</span> value <span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+&#160;
+      <span class="co1">// Neue Optionen in der nächsten Auswahlliste setzen</span>
+      <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">replaceOptions</span><span class="br0">&#40;</span> data<span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">nextSelect</span>.<span class="me1">id</span> <span class="br0">&#93;</span><span class="br0">&#91;</span> value <span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="co1">// Wenn die Auswahlstrecke nicht beendet ist, muss die Callback-Funktion</span>
+      <span class="co1">// dennoch aufgerufen werden, damit entsprechend auf änderungen</span>
+      <span class="co1">// reagiert werden kann.</span>
+      callback<span class="br0">&#40;</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">else</span>
+    <span class="br0">&#123;</span>
+      <span class="coMULTI">/*
+       * Die Auswahlstrecke ist absolviert
+       */</span>
+&#160;
+      <span class="co1">// Auswahlwerte der einzelnen Listen in ein Array schreiben um</span>
+      <span class="co1">// dieses an die Callback-Funktion zu übergeben.</span>
+      <span class="kw1">var</span> selected <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> selects.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+      <span class="br0">&#123;</span>
+        selected.<span class="me1">push</span><span class="br0">&#40;</span> <span class="br0">&#123;</span> <span class="st0">'id'</span> <span class="sy0">:</span> selects<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">id</span><span class="sy0">,</span>
+                 <span class="st0">'value'</span><span class="sy0">:</span> selects<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">selectedValue</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                 <span class="st0">'text'</span> <span class="sy0">:</span> selects<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">selectedText</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#125;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      callback<span class="br0">&#40;</span> selected <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+  <span class="coMULTI">/**
+   * replaceOptions ersetzt die aktuellen Optionen der Auswahlliste durch
+   * die im Array newOptions gelieferten Daten. Wenn ein leeres Array übergeben
+   * wird, wird die default-Option &quot;--&quot; gesetzt.
+   * @param newOptions ein Array mit den neuen Optionen
+   *            Bsp: [ ['value1','text1'], ['value2','text2'], ]
+   **/</span>
+  <span class="kw1">var</span> replaceOptions <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span> newOptions <span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="co1">// alte Optionen der Auswahlliste löschen</span>
+    <span class="kw1">var</span> opts <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span> <span class="st0">'option'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+    while<span class="br0">&#40;</span> opts.<span class="me1">length</span> <span class="sy0">&gt;</span> <span class="nu0">0</span> <span class="br0">&#41;</span>
+      <span class="kw1">this</span>.<span class="me1">removeChild</span><span class="br0">&#40;</span> opts<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="co1">// wenn keine neuen Optionen übergeben wurden, default-Option setzen</span>
+    <span class="co1">// andernfalls &quot;Bitte wählen&quot; voranstellen</span>
+    <span class="kw1">if</span><span class="br0">&#40;</span> newOptions.<span class="me1">length</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span>
+      <span class="kw1">this</span>.<span class="me1">addOption</span><span class="br0">&#40;</span> <span class="st0">'--'</span><span class="sy0">,</span> <span class="st0">'------'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">else</span>
+      <span class="kw1">this</span>.<span class="me1">addOption</span><span class="br0">&#40;</span> <span class="st0">'--'</span><span class="sy0">,</span> <span class="st0">'Bitte wählen:'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="co1">// neue Optionen in die Auswahlliste schreiben</span>
+    <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> newOptions.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+      <span class="kw1">this</span>.<span class="me1">addOption</span><span class="br0">&#40;</span> newOptions<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> newOptions<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+  <span class="coMULTI">/*
+   * Fügt der Auswahlliste eine neue Option hinzu
+   * @param value Wert der neuen Option
+   * @param text Name der neuen Option
+   */</span>
+  <span class="kw1">var</span> addOption <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span> value<span class="sy0">,</span> text <span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> opt <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span> <span class="st0">'option'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+    opt.<span class="me1">value</span> <span class="sy0">=</span> value<span class="sy0">;</span>
+    opt.<span class="me1">appendChild</span><span class="br0">&#40;</span> document.<span class="me1">createTextNode</span><span class="br0">&#40;</span> text <span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span> opt <span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+  <span class="coMULTI">/**
+   * holt den Wert der aktuell gewählten Option
+   * @returns den Value der aktuell gewählten Option
+   **/</span>
+  <span class="kw1">var</span> selectedValue <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">options</span><span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">selectedIndex</span> <span class="br0">&#93;</span>.<span class="me1">value</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+  <span class="coMULTI">/**
+   * holt den Text (Name) der aktuell gewählten Option
+   * @returns den Text der aktuell gewählten Option
+   **/</span>
+  <span class="kw1">var</span> selectedText <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">options</span><span class="br0">&#91;</span> <span class="kw1">this</span>.<span class="me1">selectedIndex</span> <span class="br0">&#93;</span>.<span class="me1">text</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+  <span class="coMULTI">/**
+   * Selektiere die Option mit dem Wert value, wenn keine Option mit dem Wert
+   * value existiert, wird die Auswahl nicht geändert.
+   * @param value der Wert den eine Option haben muss, um ausgewählt zu werden.
+   **/</span>
+  <span class="kw1">var</span> selectByValue <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span> value <span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="kw1">this</span>.<span class="me1">options</span>.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="kw1">if</span><span class="br0">&#40;</span> <span class="kw1">this</span>.<span class="me1">options</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">value</span> <span class="sy0">==</span> value <span class="br0">&#41;</span>
+        <span class="kw1">this</span>.<span class="me1">selectedIndex</span> <span class="sy0">=</span> i<span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span>
+&#160;
+  <span class="coMULTI">/**
+   * Initialisiere den Manager für verkettete Auswahllisten.
+   * Findet Auswahllisten anhand der (per inputSelects) bekannten IDs.
+   * Bestückt die Auswahllisten mit den nötigen Funktionen und Event-Handlern
+   **/</span>
+  <span class="kw1">this</span>.<span class="me1">init</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span>
+    <span class="co1">// bestücke bestehende selects</span>
+    <span class="kw1">for</span><span class="br0">&#40;</span> <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> inputSelects.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span> <span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+      <span class="kw1">var</span> t <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span> inputSelects<span class="br0">&#91;</span>i<span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="co1">// ignoriere falsche IDs</span>
+      <span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span>t<span class="br0">&#41;</span>
+        <span class="kw1">continue</span><span class="sy0">;</span>
+&#160;
+      <span class="co1">// neue Funktionen und Event-Handler zuweisen und in selects registrieren</span>
+      t.<span class="me1">replaceOptions</span> <span class="sy0">=</span> replaceOptions<span class="sy0">;</span>
+      t.<span class="me1">addOption</span> <span class="sy0">=</span> addOption<span class="sy0">;</span>
+      t.<span class="me1">selectedValue</span> <span class="sy0">=</span> selectedValue<span class="sy0">;</span>
+      t.<span class="me1">selectedText</span> <span class="sy0">=</span> selectedText<span class="sy0">;</span>
+      t.<span class="me1">selectByValue</span> <span class="sy0">=</span> selectByValue<span class="sy0">;</span>
+      t.<span class="me1">selectID</span> <span class="sy0">=</span> selects.<span class="me1">length</span><span class="sy0">;</span>
+      t.<span class="me1">onchange</span> <span class="sy0">=</span> changeHandler<span class="sy0">;</span>
+      selects.<span class="me1">push</span><span class="br0">&#40;</span> t <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="co1">// registriere Auswahlliste als nextSelect bei der vorhergehenden</span>
+      <span class="kw1">if</span><span class="br0">&#40;</span> selects.<span class="me1">length</span> <span class="sy0">&gt;</span> <span class="nu0">1</span> <span class="br0">&#41;</span>
+        selects<span class="br0">&#91;</span> selects.<span class="me1">length</span><span class="sy0">-</span><span class="nu0">2</span> <span class="br0">&#93;</span>.<span class="me1">nextSelect</span> <span class="sy0">=</span> t<span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// initialisieren!</span>
+  <span class="kw1">this</span>.<span class="me1">init</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>Bis auf <code>init</code> wurden bereits alle Komponenten in den vorhergehenden Abschnitten dieses Artikels behandelt und erläutert. Die Funktion <code>init</code> wird im <code>LinkedSelection</code>-Objekt als Konstruktor verwendet. D.h. <code>init</code> wird beim Instanzieren des Objekts ausgeführt. Die Funktion durchläuft das übergebene Array, das die IDs der Auswahllisten enthält. Zu jeder ID wird die Auswahlliste im DOM-Baum gesucht. Wird zu einer ID kein Element gefunden, wird sie schlicht ignoriert. Den gefundenen Elementen werden dann die neuen Funktionen <code>replaceOptions</code>, <code>addOption</code>, <code>selectedValue</code>, <code>selectedText</code> und <code>selectByValue</code> angehängt. Das Wichtigste, der <code>changeHandler</code>, wird ebenfalls dem Element (der Auswahlliste) zugewiesen. Jede Auswahlliste muss ihren Nachfolger in der Auswahlkette kennen. Die aktuell behandelte Auswahlliste wird dabei dem Vorgänger im Attribut <code>nextSelect</code> bekannt gemacht, sofern ein Vorgänger existiert. Alle Auswahllisten werden zudem im internen Array <code>selects</code> registriert.
+</p>
+<div class="note-box note-box-recommendation-text"><strong>Empfehlung:</strong> Die vorgestellten Funktionen <code>changeHandler</code> und <code>init</code> setzen auf das Konzept der Closures, welche im Artikel <a href="Organisation_von_JavaScripten.html#Closures_zur_Kapselung_bei_Object_und_eigenen_Objekten" title="JavaScript/Organisation von JavaScripten"> Organisation von JavaScripten</a> ausführlich behandelt werden. Dieser Artikel erläutert auch viele andere z.T. auch hier verwendete Konzepte der modernen Javascript-Programmierung. Nehmen Sie sich die Zeit und schenken Sie den dort vorgestellten Gedanken ein wenig Aufmerksamkeit.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Mögliche Variationen">Bearbeiten</a>]</span> <span class="mw-headline" id="M.C3.B6gliche_Variationen"> Mögliche Variationen </span></h2>
+<p>Das vorgestellte Beispiel verzichtet bewusst auf den Einsatz von AJAX und damit auch auf viele alternative Möglichkeiten der Datenspeicherung. Es ist (vor allem für längere Ketten mit vielen Auswahlmöglichkeiten) sinnvoll, die Daten der Optionen der nächsten Auswahlliste per AJAX zu laden. Das Konzept AJAX hier vorzustellen hätte den Rahmen wohl endgültig gesprengt. Dennoch sollen einige kurze Hinweise gegeben werden, wie das Beispiel mit dynamischen Daten arbeiten kann.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Datenbeschaffung per AJAX">Bearbeiten</a>]</span> <span class="mw-headline" id="Datenbeschaffung_per_AJAX"> Datenbeschaffung per AJAX </span></h3>
+<p>Um die Macht von AJAX nutzen zu können, muss der changeHandler etwas angepasst werden. Statt <code>data</code> als Datenobjekt zu behandeln, könnte <code>data</code> auch eine Funktion sein. Sie würde ähnlich der Callback-Funktion bei der Instanzierung des <code>LinkedSelection</code>-Objektes als Parameter übergeben werden. Diese Funktion würde den HTTP-Request starten. Beim Aufrufen der Funktion könnte neben dem Wert der aktuellen Auswahlliste, die nächste Auswahlliste übergeben werden. Diese wird dann direkt von der HTTP-Response-verarbeitenden Funktion manipuliert werden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Datenformatierung bei AJAX">Bearbeiten</a>]</span> <span class="mw-headline" id="Datenformatierung_bei_AJAX"> Datenformatierung bei AJAX </span></h3>
+<p>Neben zielgenauer Datenbeschaffung bietet AJAX die Möglichkeit, Daten in verschiedenen Formaten zu beschaffen. Es muss nicht unbedingt ein JSON-Objekt sein. XML-Dokumente sind ebenso denkbar wie fertiges HTML, welches einfach per <code>selectObj.innerHTML</code> eingefügt wird.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Auswahllisten-Objekte dynamisch erstellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Auswahllisten-Objekte_dynamisch_erstellen"> Auswahllisten-Objekte dynamisch erstellen </span></h3>
+<p>In diesem Beispiel wird vorausgesetzt, dass alle verwendeten Auswahllisten im HTML-Quelltext notiert und die erste Auswahlliste bereits mit Optionen befüllt wurde. Dynamischer wäre es, würde man die Auswahllisten bei der Ausführung des changeHandlers erstellen. Dadurch würde man sich zwar die Notation der Auswahllisten im HTML-Quelltext ersparen, würde aber die Möglichkeit, Javascript-inkompatible Browser zu unterstützen, verlieren.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Auswahllisten dynamisch erscheinen lassen">Bearbeiten</a>]</span> <span class="mw-headline" id="Auswahllisten_dynamisch_erscheinen_lassen"> Auswahllisten dynamisch erscheinen lassen </span></h3>
+<p>Eine leere Auswahlliste sieht weder besonders schön aus, noch hat sie eine Funktion. Es wäre denkbar die abhängigen (auf die erste Auswahlliste folgenden) Auswahllisten mittels CSS zu verstecken und erst bei Bedarf erscheinen zu lassen. Dies hat zudem einen visuell größeren Effekt, als das simple Nachladen von Optionen. Diese visuellen Effekte sind wichtig, nicht um schön auszusehen, oder gar überladen zu wirken, sondern um den Benutzer auf eine Änderung aufmerksam zu machen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Hinweise und Kurioses">Bearbeiten</a>]</span> <span class="mw-headline" id="Hinweise_und_Kurioses"> Hinweise und Kurioses </span></h2>
+<p>Die folgenden Hinweise beziehen sich nicht nur auf die in diesem Artikel vorgestellten Themen und Beispiele. Es handelt sich Probleme, die meist nicht sonderlich intuitiv sind, aber gerade bei Anfängern öfter für heftige Kopfschmerzen sorgen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Korrekte Syntax bei JSON">Bearbeiten</a>]</span> <span class="mw-headline" id="Korrekte_Syntax_bei_JSON"> Korrekte Syntax bei JSON </span></h3>
+<p>Interessant ist ebenfalls, dass sich Firefox bei JSON-Daten nicht wegen überzähliger Kommas (<code>var data = { 'hello':'world'<strong>,</strong> };</code>) beschwert, wohingegen der Internet Explorer die Ausführung umgehend abbricht. Sind diese Daten (wie in unserem Beispiel oben) in einer eigenen Datei notiert, sucht man den Fehler in Ermangelung einer brauchbaren Fehlermeldung unter Umständen eine lange Zeit. Aus diesem Grund sollte immer peinlich genau darauf geachtet werden, dass sich keine Kommas nach den letzten Elementen der Objekt- und Arraydeklarationen verstecken.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 911/1000000
+Post‐expand include size: 20106/2097152 bytes
+Template argument size: 14408/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4273-0!*!0!!de-formal!*!* and timestamp 20150301150340 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;oldid=19558">http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;oldid=19558</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FVerkettete+Auswahllisten" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Verkettete_Auswahllisten.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Verkettete_Auswahllisten&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Verkettete_Auswahllisten.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/JavaScript/Verkettete_Auswahllisten.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Verkettete_Auswahllisten.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Verkettete_Auswahllisten&amp;oldid=19558" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/JavaScript-2FVerkettete_Auswahllisten.html" title="Spezial:Durchsuchen/JavaScript-2FVerkettete Auswahllisten">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 17. Juni 2014 um 09:00 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 616-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.090 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Verkettete_Auswahllisten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:20 GMT -->
+</html>

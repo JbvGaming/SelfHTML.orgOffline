@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Technische_Ergänzungen/Loginsystem by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>PHP/Anwendung und Praxis/Loginsystem – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="canonical" href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/Loginsystem" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PHP/Anwendung_und_Praxis/Loginsystem","wgTitle":"PHP/Anwendung und Praxis/Loginsystem","wgCurRevisionId":26824,"wgArticleId":2091,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"PHP/Anwendung_und_Praxis/Loginsystem","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgRedirectedFrom":"Technische_Ergänzungen/Loginsystem","wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-php {line-height: normal;}
+.source-php li, .source-php pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for php
+ * CSS class: source-php, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.php.source-php .de1, .php.source-php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.php.source-php  {font-family:monospace;}
+.php.source-php .imp {font-weight: bold; color: red;}
+.php.source-php li, .php.source-php .li1 {font-weight: normal; vertical-align:top;}
+.php.source-php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php.source-php .li2 {font-weight: bold; vertical-align:top;}
+.php.source-php .kw1 {color: #b1b100;}
+.php.source-php .kw2 {color: #000000; font-weight: bold;}
+.php.source-php .kw3 {color: #990000;}
+.php.source-php .kw4 {color: #009900; font-weight: bold;}
+.php.source-php .co1 {color: #666666; font-style: italic;}
+.php.source-php .co2 {color: #666666; font-style: italic;}
+.php.source-php .co3 {color: #0000cc; font-style: italic;}
+.php.source-php .co4 {color: #009933; font-style: italic;}
+.php.source-php .coMULTI {color: #666666; font-style: italic;}
+.php.source-php .es0 {color: #000099; font-weight: bold;}
+.php.source-php .es1 {color: #000099; font-weight: bold;}
+.php.source-php .es2 {color: #660099; font-weight: bold;}
+.php.source-php .es3 {color: #660099; font-weight: bold;}
+.php.source-php .es4 {color: #006699; font-weight: bold;}
+.php.source-php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php.source-php .es6 {color: #009933; font-weight: bold;}
+.php.source-php .es_h {color: #000099; font-weight: bold;}
+.php.source-php .br0 {color: #009900;}
+.php.source-php .sy0 {color: #339933;}
+.php.source-php .sy1 {color: #000000; font-weight: bold;}
+.php.source-php .st0 {color: #0000ff;}
+.php.source-php .st_h {color: #0000ff;}
+.php.source-php .nu0 {color: #cc66cc;}
+.php.source-php .nu8 {color: #208080;}
+.php.source-php .nu12 {color: #208080;}
+.php.source-php .nu19 {color:#800080;}
+.php.source-php .me1 {color: #004000;}
+.php.source-php .me2 {color: #004000;}
+.php.source-php .re0 {color: #000088;}
+.php.source-php .ln-xtra, .php.source-php li.ln-xtra, .php.source-php div.ln-xtra {background-color: #ffc;}
+.php.source-php span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html5 {line-height: normal;}
+.source-html5 li, .source-html5 pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html5
+ * CSS class: source-html5, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html5.source-html5 .de1, .html5.source-html5 .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html5.source-html5  {font-family:monospace;}
+.html5.source-html5 .imp {font-weight: bold; color: red;}
+.html5.source-html5 li, .html5.source-html5 .li1 {font-weight: normal; vertical-align:top;}
+.html5.source-html5 .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html5.source-html5 .li2 {font-weight: bold; vertical-align:top;}
+.html5.source-html5 .kw2 {color: #000000; font-weight: bold;}
+.html5.source-html5 .kw3 {color: #000066;}
+.html5.source-html5 .es0 {color: #000099; font-weight: bold;}
+.html5.source-html5 .br0 {color: #66cc66;}
+.html5.source-html5 .sy0 {color: #66cc66;}
+.html5.source-html5 .st0 {color: #ff0000;}
+.html5.source-html5 .nu0 {color: #cc66cc;}
+.html5.source-html5 .sc-2 {color: #404040;}
+.html5.source-html5 .sc-1 {color: #808080; font-style: italic;}
+.html5.source-html5 .sc0 {color: #00bbdd;}
+.html5.source-html5 .sc1 {color: #ddbb00;}
+.html5.source-html5 .sc2 {color: #009900;}
+.html5.source-html5 .ln-xtra, .html5.source-html5 li.ln-xtra, .html5.source-html5 div.ln-xtra {background-color: #ffc;}
+.html5.source-html5 span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-bash {line-height: normal;}
+.source-bash li, .source-bash pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: source-bash, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bash.source-bash .de1, .bash.source-bash .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.bash.source-bash  {font-family:monospace;}
+.bash.source-bash .imp {font-weight: bold; color: red;}
+.bash.source-bash li, .bash.source-bash .li1 {font-weight: normal; vertical-align:top;}
+.bash.source-bash .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bash.source-bash .li2 {font-weight: bold; vertical-align:top;}
+.bash.source-bash .kw1 {color: #000000; font-weight: bold;}
+.bash.source-bash .kw2 {color: #c20cb9; font-weight: bold;}
+.bash.source-bash .kw3 {color: #7a0874; font-weight: bold;}
+.bash.source-bash .co0 {color: #666666; font-style: italic;}
+.bash.source-bash .co1 {color: #800000;}
+.bash.source-bash .co2 {color: #cc0000; font-style: italic;}
+.bash.source-bash .co3 {color: #000000; font-weight: bold;}
+.bash.source-bash .co4 {color: #666666;}
+.bash.source-bash .es1 {color: #000099; font-weight: bold;}
+.bash.source-bash .es2 {color: #007800;}
+.bash.source-bash .es3 {color: #007800;}
+.bash.source-bash .es4 {color: #007800;}
+.bash.source-bash .es5 {color: #780078;}
+.bash.source-bash .es_h {color: #000099; font-weight: bold;}
+.bash.source-bash .br0 {color: #7a0874; font-weight: bold;}
+.bash.source-bash .sy0 {color: #000000; font-weight: bold;}
+.bash.source-bash .st0 {color: #ff0000;}
+.bash.source-bash .st_h {color: #ff0000;}
+.bash.source-bash .nu0 {color: #000000;}
+.bash.source-bash .re0 {color: #007800;}
+.bash.source-bash .re1 {color: #007800;}
+.bash.source-bash .re2 {color: #007800;}
+.bash.source-bash .re4 {color: #007800;}
+.bash.source-bash .re5 {color: #660033;}
+.bash.source-bash .ln-xtra, .bash.source-bash li.ln-xtra, .bash.source-bash div.ln-xtra {background-color: #ffc;}
+.bash.source-bash span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html4strict {line-height: normal;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html4strict.source-html4strict .de1, .html4strict.source-html4strict .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html4strict.source-html4strict  {font-family:monospace;}
+.html4strict.source-html4strict .imp {font-weight: bold; color: red;}
+.html4strict.source-html4strict li, .html4strict.source-html4strict .li1 {font-weight: normal; vertical-align:top;}
+.html4strict.source-html4strict .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html4strict.source-html4strict .li2 {font-weight: bold; vertical-align:top;}
+.html4strict.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict.source-html4strict .kw3 {color: #000066;}
+.html4strict.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict.source-html4strict .br0 {color: #66cc66;}
+.html4strict.source-html4strict .sy0 {color: #66cc66;}
+.html4strict.source-html4strict .st0 {color: #ff0000;}
+.html4strict.source-html4strict .nu0 {color: #cc66cc;}
+.html4strict.source-html4strict .sc-2 {color: #404040;}
+.html4strict.source-html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict.source-html4strict .sc0 {color: #00bbdd;}
+.html4strict.source-html4strict .sc1 {color: #ddbb00;}
+.html4strict.source-html4strict .sc2 {color: #009900;}
+.html4strict.source-html4strict .ln-xtra, .html4strict.source-html4strict li.ln-xtra, .html4strict.source-html4strict div.ln-xtra {background-color: #ffc;}
+.html4strict.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-apache {line-height: normal;}
+.source-apache li, .source-apache pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for apache
+ * CSS class: source-apache, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.apache.source-apache .de1, .apache.source-apache .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.apache.source-apache  {font-family:monospace;}
+.apache.source-apache .imp {font-weight: bold; color: red;}
+.apache.source-apache li, .apache.source-apache .li1 {font-weight: normal; vertical-align:top;}
+.apache.source-apache .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.apache.source-apache .li2 {font-weight: bold; vertical-align:top;}
+.apache.source-apache .kw1 {color: #00007f;}
+.apache.source-apache .kw2 {color: #0000ff;}
+.apache.source-apache .kw3 {color: #000000; font-weight:bold;}
+.apache.source-apache .co1 {color: #adadad; font-style: italic;}
+.apache.source-apache .es0 {color: #000099; font-weight: bold;}
+.apache.source-apache .br0 {color: #339933;}
+.apache.source-apache .sy0 {color: #008000;}
+.apache.source-apache .st0 {color: #7f007f;}
+.apache.source-apache .nu0 {color: #ff0000;}
+.apache.source-apache .ln-xtra, .apache.source-apache li.ln-xtra, .apache.source-apache div.ln-xtra {background-color: #ffc;}
+.apache.source-apache span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="PHP/Anwendung und Praxis/Loginsystem" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/PHP/Anwendung_und_Praxis/Loginsystem&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-PHP_Anwendung_und_Praxis_Loginsystem skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">PHP/Anwendung und Praxis/Loginsystem</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/PHP" title="PHP">PHP</a> | <a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis" title="PHP/Anwendung und Praxis">Anwendung und Praxis</a></span>(Weitergeleitet von <a href="http://wiki.selfhtml.org/index.php?title=Technische_Erg%C3%A4nzungen/Loginsystem&amp;redirect=no" title="Technische Ergänzungen/Loginsystem">Technische Ergänzungen/Loginsystem</a>)</div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="note-box note-box-info"><p class="note-box-title">Information:</p><div class="note-box-text">Aktualisierung und Erweiterung (Hashen der Passwörter) eines Artikels von Benjamin Wilfing (2005)<div class="note-box note-box-autor">
+<p class="note-box-title">Informationen zum Autor:</p>
+<div class="note-box-text">
+  <div>
+    <div class="note-box-autor-text">Name:</div>
+    <div class="note-box-autor-info">Jörg Reinholz</div>
+    <div class="note-box-autor-text" style="">E-Mail:</div>
+    <div class="note-box-autor-info" style=""><a rel="nofollow" class="external text" href="mailto:joerg.reinholz@fastix.org">joerg.reinholz@fastix.org</a></div>
+    <div class="note-box-autor-text" style="">Homepage:</div>
+    <div class="note-box-autor-info" style=""><a rel="nofollow" class="external text" href="http://www.fastix.org/">fastix.org</a></div>
+  </div>
+</div>
+</div></div></div>
+<p>Wenn man Teile eines Internetauftritts vor neugierigen Augen schützen will, benötigt man ein wirksames System zur Zugangskontrolle. In vielen Fällen bietet sich hier die bekannte HTTP-Authentifizierung an, die man beispielsweise per <code>.htaccess</code>-Datei umsetzen kann. Diese Methode hat aber den Nachteil, dass es auch in modernen Browsern immer noch keine praktikable Möglichkeit gibt, sich wieder abzumelden. Dieser Artikel soll zeigen, wie man Dokumente auf relativ einfache Weise sinnvoll schützen kann. Voraussetzung dafür ist ein Webserver mit PHP-Unterstützung.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Stand_der_Technik"><span class="tocnumber">1</span> <span class="toctext">Stand der Technik</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Aktualit.C3.A4t_des_Artikels"><span class="tocnumber">1.1</span> <span class="toctext">Aktualität des Artikels</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Wozu_das_gut_ist"><span class="tocnumber">1.2</span> <span class="toctext">Wozu das gut ist</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Umsetzung"><span class="tocnumber">2</span> <span class="toctext">Umsetzung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Erst_ein_mal_ein_wenig_.22praktische_Theorie.22:_Passw.C3.B6rter_hashen"><span class="tocnumber">2.1</span> <span class="toctext">Erst ein mal ein wenig "praktische Theorie": Passwörter hashen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Die_Password-Funktionen_seit_PHP_5.5.0"><span class="tocnumber">2.1.1</span> <span class="toctext">Die Password-Funktionen seit PHP 5.5.0</span></a>
+<ul>
+<li class="toclevel-4 tocsection-7"><a href="#So_hashen_Sie_ein_Passwort:"><span class="tocnumber">2.1.1.1</span> <span class="toctext">So hashen Sie ein Passwort:</span></a></li>
+<li class="toclevel-4 tocsection-8"><a href="#So_pr.C3.BCfen_Sie_das_Passwort_gegen_den_Hash:"><span class="tocnumber">2.1.1.2</span> <span class="toctext">So prüfen Sie das Passwort gegen den Hash:</span></a></li>
+<li class="toclevel-4 tocsection-9"><a href="#Ein_stilles_Update_k.C3.B6nnen_Sie_auch_durchf.C3.BChren:"><span class="tocnumber">2.1.1.3</span> <span class="toctext">Ein stilles Update können Sie auch durchführen:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-10"><a href="#Skripte_f.C3.BCr_PHP_5.3_UND_neuer"><span class="tocnumber">2.1.2</span> <span class="toctext">Skripte für PHP 5.3 UND neuer</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Das_Login-System"><span class="tocnumber">3</span> <span class="toctext">Das Login-System</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Die_Ressource_login.php"><span class="tocnumber">3.1</span> <span class="toctext">Die Ressource login.php</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Passwort-Datei_.htpasswd"><span class="tocnumber">3.2</span> <span class="toctext">Passwort-Datei .htpasswd</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Gruppen-Datei_.htgroup"><span class="tocnumber">3.3</span> <span class="toctext">Gruppen-Datei .htgroup</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Die_Ressource_logout.php"><span class="tocnumber">3.4</span> <span class="toctext">Die Ressource logout.php</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Die_Ressource_auth.php"><span class="tocnumber">3.5</span> <span class="toctext">Die Ressource auth.php</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Die_gesch.C3.BCtzte_Datei_index.php"><span class="tocnumber">3.6</span> <span class="toctext">Die geschützte Datei index.php</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Die_gesch.C3.BCtzte_Datei_roots_und_admin.php"><span class="tocnumber">3.7</span> <span class="toctext">Die geschützte Datei roots_und_admin.php</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Die_Ressource_.htdeniedusers"><span class="tocnumber">3.8</span> <span class="toctext">Die Ressource .htdeniedusers</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Die_Datei_bzw._Ressource_auth_config.php"><span class="tocnumber">3.9</span> <span class="toctext">Die Datei bzw. Ressource auth_config.php</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Schutz_von_Ressourcen.2C_welche_keine_PHP-Skripte_sind:"><span class="tocnumber">3.10</span> <span class="toctext">Schutz von Ressourcen, welche keine PHP-Skripte sind:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Hinweis_zu_einer_h.C3.A4ufigen_Fehlerquelle"><span class="tocnumber">4</span> <span class="toctext">Hinweis zu einer häufigen Fehlerquelle</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#Fehlerbild"><span class="tocnumber">4.1</span> <span class="toctext">Fehlerbild</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Abhilfe_und_Vermeidung"><span class="tocnumber">4.2</span> <span class="toctext">Abhilfe und Vermeidung</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Weblinks"><span class="tocnumber">5</span> <span class="toctext">Weblinks</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Stand der Technik">Bearbeiten</a>]</span> <span class="mw-headline" id="Stand_der_Technik"> Stand der Technik </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Aktualität des Artikels">Bearbeiten</a>]</span> <span class="mw-headline" id="Aktualit.C3.A4t_des_Artikels">Aktualität des Artikels</span></h3>
+<p>Da sich Verschlüsselungstechnologien (das Hashen zählt dazu) relativ schnell ändern: Dieser Artikel wurde im Februar 2015 verfasst, die Skripte sollten mit PHP 5.3 und neuer funktionieren, getestet wurde mit PHP 5.3.29 und 5.5.9. Gezeigtes HTML ist Version 5.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Wozu das gut ist">Bearbeiten</a>]</span> <span class="mw-headline" id="Wozu_das_gut_ist">Wozu das gut ist</span></h3>
+<p>Bis vor einigen Jahren hielt man den MD5-Algorhitmus für sicher. Das sind aber nur 16Byte (128Bit) pro Passwort. Nimmt jetzt ein Angreifer eine Liste mit, sagen wir, 1 Milliarde häufiger Passwörter, dann braucht er nur eine Datenbank mit 16 Milliarden Bytes für die Hashes und rund 8 Milliarden Bytes für die Passwörter. Das sind rund 24 Gigabyte (es wird womöglich etwas mehr sein). Das bedeutet aber, dass derartige Tabellen leicht zu speichern sind - denn die passen sogar auf einen billigen USB-Stick. Selbst ein Brute-Force-Angriff (bei dem alle möglichen Passwörter "durchgespielt" werden) ist mit aktueller Rechentechnik leicht möglich. Ein einfaches Hashen mit Verfahren wie MD5 oder sha geht inzwischen so schnell, da ist sogar die Notwendigkeit des Speicherns der "Rainbow-Tables" nicht mehr wirklich nötig, und ohne den Salt könnte man mit selbst auf Konsumer-Systemen speicherbaren Tabellen arbeiten, denn inzwischen haben deren Festplatten die Größe mehrerer Terabytes.
+</p><p>Wenn man in die Presse schaut findet man immer wieder Meldungen, <a rel="nofollow" class="external autonumber" href="http://www.heise.de/security/meldung/Studenten-entdecken-Tausende-offene-Firmen-Datenbanken-im-Internet-2545183.html">[1]</a> dass Datenbanken mit Passwörtern in die Hände von Angreifern gelangt sind - und das Problem betrifft auch große Firmen von denen man meint, die sollten sich die nötige technische Intelligenz eigentlich kaufen können. Das findet aber oft aus Dummheit, Profitgier (oder beidem) nicht statt und dann wundert man sich, wenn interessierte 13-jährige aus einer solchen Datenbank mit "gehashten" Passwörtern zumindest eine Vielzahl der von den Kunden genutzten Klartext-Passwörter ermitteln - und zwar auf einem vom Papa überlassenen, alten Rechner.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Umsetzung">Bearbeiten</a>]</span> <span class="mw-headline" id="Umsetzung"> Umsetzung </span></h2>
+<p><b>(Bitte beachten Sie: Nur in Grundzügen beschrieben und, des Umfanges wegen, nicht fertig vorgestellt wird hier eine Software, mit welcher diese Dateien erstellt oder manipuliert werden können. Für diese wird es aber demnächst einen Download geben.)</b>
+</p><p>Das System wird mittels Sessions (engl. Sitzung) umgesetzt. In PHP ist eine Session im Prinzip eine Datei, die sich im Dateisystem des Webservers befindet. In ihr sind Daten gespeichert, auf die man über das spezielle Array <code>$_SESSION</code> zugreifen kann. Jeder Benutzer, der mit seinem Browser eine Seite aufruft, die Sessions benutzt, bekommt nun vom Server eine einmalige Session-ID zugewiesen, über die er identifiziert werden kann. Dadurch ist es möglich, Daten benutzerbezogen zu speichern, die während einer Sitzung wiederverwendet werden können. Anwendungsmöglichkeiten sind zum Beispiel ein Warenkorb beim Einkaufen im Internet oder eine Administrationsoberfläche für ein Content-Management-System (CMS).
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Erst ein mal ein wenig &quot;praktische Theorie&quot;: Passwörter hashen">Bearbeiten</a>]</span> <span class="mw-headline" id="Erst_ein_mal_ein_wenig_.22praktische_Theorie.22:_Passw.C3.B6rter_hashen"> Erst ein mal ein wenig "praktische Theorie": Passwörter hashen  </span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Die Password-Funktionen seit PHP 5.5.0">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Password-Funktionen_seit_PHP_5.5.0"> Die Password-Funktionen seit PHP 5.5.0 </span></h4>
+<p>Generell ist die neuere Funktion password_hash() anderen wie crypt vorzuziehen. (Wobei crypt sehr wohl schon lange das Hashen mit der "blowfish"-Methode kann.) password_hash() kommt mit den Funktionen password_verify() und password_needs_rehash(). Die Funktion ist grob dargestellt die folgende:
+</p>
+<h5><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: So hashen Sie ein Passwort:">Bearbeiten</a>]</span> <span class="mw-headline" id="So_hashen_Sie_ein_Passwort:">So hashen Sie ein Passwort:</span></h5>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="re0">$hash</span><span class="sy0">=</span>password_hash<span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> PASSWORD_DEFAULT<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<h5><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: So prüfen Sie das Passwort gegen den Hash:">Bearbeiten</a>]</span> <span class="mw-headline" id="So_pr.C3.BCfen_Sie_das_Passwort_gegen_den_Hash:">So prüfen Sie das Passwort gegen den Hash:</span></h5>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw1">if</span> <span class="br0">&#40;</span> password_verify<span class="br0">&#40;</span> <span class="re0">$password</span><span class="sy0">,</span> <span class="re0">$hash</span> <span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="sy0">...</span> <span class="br0">&#125;</span></pre></div></div>
+<h5><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Ein stilles Update können Sie auch durchführen:">Bearbeiten</a>]</span> <span class="mw-headline" id="Ein_stilles_Update_k.C3.B6nnen_Sie_auch_durchf.C3.BChren:">Ein stilles Update können Sie auch durchführen:</span></h5>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw1">if</span> <span class="br0">&#40;</span> password_needs_rehash<span class="br0">&#40;</span><span class="re0">$hash</span><span class="sy0">,</span> PASSWORD_DEFAULT<span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="re0">$newHash</span><span class="sy0">=</span>password_hash<span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> PASSWORD_DEFAULT<span class="br0">&#41;</span><span class="sy0">;</span> <span class="coMULTI">/* neuen Hash speichern /* }</span></pre></div></div>
+<p>Die Funktion password_hash wird einen hash - das ist eine Art "Einweg-Verschlüsselung" mit dem Blowfish-Algorithmus zu erzeugen. Dazu ermittelt diese zunächst einen zufälligen, sogenannten "salt", der immerhin 22 Zeichen lang ist und aus allen Ascii-Buchstaben, den Ziffern und Satzzeichen bestehen darf. Es gibt bei dieser Länge (26+26+10+5)^22 = 14.915.769.363.385.151.583.217.201.855.136.979.828.889 (~1.5 * 10^40) also eine so gewaltige Zahl verschiedener "Salts", dass sich diese nicht speichern lassen. Die dazu gehörende Anzahl an Rainbow-Tables erst recht nicht. Dann wird Folgendes gemacht: Das "salt" wird dem Password vorangestellt und diese Kombination wird mit dem Blowfisch-Algorithmus gehasht. Das "Salzen" und "Hashen" findet dann in der unter "Kosten" angegeben Zahl von Runden statt: steht da 05, dann werden 2^4 (das Minimum), also 16 - steht da aber 31 (das Maximum) dann werden 2.147.483.648 Runden gedreht - was sehr sicher klingt aber leider auch zu lange dauern kann. Der Hash wird wie folgt zurück gegeben: $_METHODE_$_ITERATIONEN_$_SALT_$_EIGENTLICHER_HASH.
+</p><p>Da auf vielen Webservern noch veraltete PHP-Versionen im Einsatz sind und sich das für manchen nicht ändern lässt stelle ich im Folgenden einen Ersatz für die Funktionen vor. Diesen zu benutzen hat den Vorteil, dass die Passwörter (genauer deren Hashes) und Ihre Skripte dann auch das überfällige Update schadlos überstehen.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Skripte für PHP 5.3 UND neuer">Bearbeiten</a>]</span> <span class="mw-headline" id="Skripte_f.C3.BCr_PHP_5.3_UND_neuer"> Skripte für PHP 5.3 UND neuer </span></h4>
+<p>Wenn Sie für Dritte programmieren nicht wissen können, ob die password-Funktionen zur Verfügung stehen, können Sie in dem Fall, dass die Funktion <code>password_hash()</code> nicht existiert, <code>crypt()</code> nehmen und selbst die "Wrapper-Funktionen" <code>password_hash()</code>, <code>password_verify()</code> und <code>password_needs_update()</code> sowie die Konstante <code>PASSWORD_DEFAULT</code> erstellen, die Sie dann genau so benutzen als wenn PHP 5.5. (und neuer) installiert wäre.
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">defined</span><span class="br0">&#40;</span><span class="st_h">'PASSWORD_DEFAULT'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw3">define</span><span class="br0">&#40;</span><span class="st_h">'PASSWORD_DEFAULT'</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">function_exists</span><span class="br0">&#40;</span><span class="st_h">'password_hash'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw2">function</span> create_salt <span class="br0">&#40;</span><span class="re0">$l</span><span class="sy0">=</span><span class="nu0">22</span><span class="sy0">,</span> <span class="re0">$allowed</span><span class="sy0">=</span><span class="st_h">'1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJLKMNOPQRSTUVWXYZ./'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="re0">$salt</span><span class="sy0">=</span><span class="st_h">''</span><span class="sy0">;</span>
+        <span class="kw1">for</span> <span class="br0">&#40;</span> <span class="re0">$i</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span> <span class="sy0">&lt;</span> <span class="re0">$l</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="re0">$salt</span> <span class="sy0">.=</span> <span class="re0">$allowed</span><span class="br0">&#123;</span><span class="kw3">rand</span><span class="br0">&#40;</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="kw3">strlen</span><span class="br0">&#40;</span><span class="re0">$allowed</span><span class="br0">&#41;</span> <span class="sy0">-</span> <span class="nu0">1</span> <span class="br0">&#41;</span><span class="br0">&#125;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+        <span class="kw1">return</span> <span class="re0">$salt</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>
+&#160;
+     <span class="kw2">function</span> password_hash <span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> <span class="re0">$dummy</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="kw1">return</span> <span class="kw3">crypt</span><span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> <span class="st_h">'$2y$10$'</span> <span class="sy0">.</span> create_salt<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">.</span><span class="st_h">'$'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>
+&#160;
+     <span class="kw2">function</span> password_verify <span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> <span class="re0">$hash</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="kw1">return</span> <span class="br0">&#40;</span> <span class="re0">$hash</span><span class="sy0">==</span> <span class="kw3">crypt</span><span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> <span class="re0">$hash</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>
+&#160;
+     <span class="kw2">function</span> password_needs_rehash <span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> <span class="re0">$dummy</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">return</span> <span class="br0">&#40;</span><span class="st_h">'$2y$10$'</span> <span class="sy0">!=</span> <span class="kw3">substr</span><span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">7</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Das Login-System">Bearbeiten</a>]</span> <span class="mw-headline" id="Das_Login-System">Das Login-System</span></h2>
+<p>Das hier beschriebene Loginsystem umfasst die folgenden 8 Dateien 
+</p>
+<ul><li> das Skript <code>login.php</code>,
+</li><li> das Skript <code>logout.php</code>,
+</li><li> das Skript <code>auth.php</code>,
+</li><li> die Apache-spezifische Steuerungs-Datei <code>.htaccess</code>,
+</li><li> das Skript <code>sendFile.php</code> - für das Ausliefern von Dateien, welche keine PHP-Skripte sind
+</li><li> die Ressource <code>.htpasswd</code> - mit den gehashten Passwörtern
+</li><li> die Ressource <code>.htgroup</code> - mit den Gruppen und Benutzern
+</li><li> das Skript bzw. Ressource <code>auth_config.php</code> - das ist einzige Date, welche für die Konfiguration bearbeitet werden muss. (Diese enhält auch schon Voreinstellungen für die Software zur Manipulation der Ressourcen.)
+</li></ul>
+<p>... welche sich hier der Einfachheit halber alle im selben Verzeichnis befinden. (Alle Dateien, die mit '.ht' beginnen sollten sich tunlichst nicht in einem Verzeichnis befindet, dessen Inhalte der Webserver ausliefert - in der Datei <code>auth_config.php</code> ist das dann anders zu konfiguren. Die Vergabe eines mit ".ht" beginnenden Namens ist nur ein Notbehelf. Die Datei <code>login.php</code> beinhaltet sowohl das Formular zum Anmelden als auch die Routinen, um die Benutzerdaten zu verarbeiten und bei erfolgreicher Anmeldung entsprechende Daten in die Session zu speichern. Die Datei <code>logout.php</code> meldet den Benutzer ab, indem sie die Sitzungsdaten zerstört und <code>auth.php</code> enthält die Überprüfung, ob der Benutzer aktuell angemeldet und somit berechtigt ist, das angeforderte Dokument anzusehen. Diese Datei <code>auth.php</code> wird mit <code>require_once</code> in jedes zu schützende Dokument eingebunden, damit bei einem Fehler bei der Einbindung (z.B. durch einen Tippfehler) nicht etwa nur eine Warnung angezeigt wird.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Die Ressource login.php">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Ressource_login.php"> Die Ressource <code>login.php</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: login.php
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>
+  <span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'php_value output_buffering'</span><span class="sy0">,</span> <span class="st_h">'1'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session.use_trans_sid'</span><span class="sy0">,</span> <span class="st_h">'0'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session.use_cookies'</span> <span class="sy0">,</span> <span class="st_h">'1'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session.use_only_cookies'</span> <span class="sy0">,</span> <span class="st_h">'1'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="co2">#Lesen der Konfiguration
+</span>  <span class="kw1">require_once</span><span class="br0">&#40;</span><span class="st_h">'auth_config.php'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+&#160;
+  <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'REQUEST_METHOD'</span><span class="br0">&#93;</span> <span class="sy0">==</span> <span class="st_h">'GET'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    show_login<span class="br0">&#40;</span><span class="st_h">''</span><span class="sy0">,</span> <span class="kw4">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw3">exit</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span> 
+&#160;
+  <span class="co1">// Das Feld mit dem Passwort hat einen zufälligen Name</span>
+  <span class="co1">// damit das Passort nicht gespeichert werden kann.   </span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'password_field_name'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'passwort'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'password_field_name'</span><span class="br0">&#93;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+&#160;
+  <span class="co1">// Simple Eingabeprüfung auf Übertragung des Benutzernamens und des Passwortes:</span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="sy0">!</span> <span class="kw3">isset</span> <span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>   <span class="br0">&#123;</span> show_login<span class="br0">&#40;</span><span class="st_h">''</span><span class="sy0">,</span> <span class="st_h">'Benutzername nicht übertragen.'</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="kw3">exit</span><span class="sy0">;</span> <span class="br0">&#125;</span> 
+  <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="st_h">''</span> <span class="sy0">==</span> <span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span> show_login<span class="br0">&#40;</span><span class="st_h">''</span><span class="sy0">,</span> <span class="st_h">'Benutzername leer.'</span><span class="br0">&#41;</span>            <span class="sy0">;</span> <span class="kw3">exit</span><span class="sy0">;</span> <span class="br0">&#125;</span> 
+  <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="sy0">!</span> <span class="kw3">isset</span> <span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'passwort'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>   <span class="br0">&#123;</span> show_login<span class="br0">&#40;</span><span class="st_h">''</span><span class="sy0">,</span> <span class="st_h">'Passwort nicht übertragen.'</span><span class="br0">&#41;</span>    <span class="sy0">;</span> <span class="kw3">exit</span><span class="sy0">;</span> <span class="br0">&#125;</span> 
+  <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="st_h">''</span> <span class="sy0">==</span> <span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'passwort'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span> show_login<span class="br0">&#40;</span><span class="st_h">''</span><span class="sy0">,</span> <span class="st_h">'Passwort leer.'</span><span class="br0">&#41;</span>                <span class="sy0">;</span> <span class="kw3">exit</span><span class="sy0">;</span> <span class="br0">&#125;</span> 
+&#160;
+  <span class="co1">// Benutzername und Passwort werden überprüft</span>
+&#160;
+  <span class="co1">// Schritt 1: </span>
+  <span class="co1">// Im Beispiel seien die Zugangsdaten in einer Textdatei gespeichert, welche</span>
+  <span class="co1">// im wesentlichen dem Aufbau einer Datei entspricht, wie diese der Apache mit</span>
+  <span class="co1">// der Methode htpasswd verwendet. </span>
+  <span class="co1">// Das wäre hier mit den Benutzernamen foo und bar und dem identischen(!) Passwort</span>
+  <span class="co1">// 'GeHeim' etwas wie:</span>
+&#160;
+  <span class="co1">// foo:$2y$05$AoeUm/2hL5sdySuNuH0CmeSCZN7DneDdmU3thyrFWgiboh3FYQ0ae:weitere Informationen</span>
+  <span class="co1">// bar:$2y$05$9971LHpPxCmZikyi3WqEd.1h8GE6QKfqT4RwS/FDINRqyzLcEHy.C:weitere Informationen</span>
+&#160;
+ <span class="co1">// Weiter wird der Benutzername beim Speichern stets klein geschrieben und man muss absichern,</span>
+ <span class="co1">// dass keine Leerzeichen am Beginn oder Ende des Strings mitgeliefert wurden:</span>
+  <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="kw3">strtolower</span><span class="br0">&#40;</span><span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// Wir kapseln aber das Abholen des Passwortes, damit auch Datenbanken verwendet werden können.</span>
+  <span class="co1">// Dazu muss unten die Funktion  getHashedPassword($username) angepasst werden.</span>
+&#160;
+  <span class="re0">$HashedPassword</span> <span class="sy0">=</span> getHashedPassword<span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">==</span> <span class="re0">$HashedPassword</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span> 
+      show_login<span class="br0">&#40;</span><span class="st_h">''</span><span class="sy0">,</span> <span class="st_h">'Den Benutzer gibt es nicht.'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw3">exit</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="co1">// Schritt 2:  Überprüfen des Passwortes</span>
+  <span class="co1">// leider gibt es noch ältere Installationen als PHP 5.5 - die password_verify() nicht kennen</span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">function_exists</span><span class="br0">&#40;</span><span class="st_h">'password_verify'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="co1">// Wenn es crypt() nicht gibt, dann ist das PHP so alt, dass sicherheitsrelaventes damit</span>
+      <span class="co1">// nicht gemacht werden sollte:</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">function_exists</span><span class="br0">&#40;</span><span class="st_h">'crypt'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>  <span class="co1">// es gibt auch noch ältere ... </span>
+         <span class="kw3">die</span> <span class="br0">&#40;</span><span class="st0">&quot;Sorry: Aber Sie sollten Ihr PHP wirklich updaten!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+&#160;
+      <span class="co1">// Wenn es password_verify() nicht gibt, dann bauen wir eine:</span>
+&#160;
+      <span class="kw2">function</span> password_verify<span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> <span class="re0">$HashedPassword</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="re0">$HashedPassword</span> <span class="sy0">==</span> <span class="kw3">crypt</span><span class="br0">&#40;</span><span class="re0">$password</span><span class="sy0">,</span> <span class="re0">$HashedPassword</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+             <span class="kw1">return</span> <span class="kw4">true</span><span class="sy0">;</span>   
+	 <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+             <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+	 <span class="br0">&#125;</span>
+      <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span> 
+   <span class="co1">// Jetzt können wir also die Funktion &quot;password_verify&quot; in jedem Fall verwenden:</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="sy0">!</span> password_verify <span class="br0">&#40;</span><span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'passwort'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="re0">$HashedPassword</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span> 
+       show_login<span class="br0">&#40;</span><span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="st_h">'Passwort falsch'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+       <span class="kw3">exit</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span> 
+&#160;
+   <span class="co1">// else:</span>
+   <span class="co1">// Registrierung der Daten in der Session und</span>
+   <span class="co1">// Weiterleitung zur geschützten Startseite</span>
+   <span class="kw3">session_start</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>  
+   <span class="kw3">session_unset</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">session_regenerate_id</span><span class="br0">&#40;</span><span class="kw4">true</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+   <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'register_ip'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span>  <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'register_ip'</span><span class="br0">&#93;</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+      <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'ip'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'REMOTE_ADDR'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+   <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span>      <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+   <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'groups'</span><span class="br0">&#93;</span>        <span class="sy0">=</span> getGroups<span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'last_action'</span><span class="br0">&#93;</span>   <span class="sy0">=</span> <span class="kw3">date</span><span class="br0">&#40;</span><span class="st_h">'U'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Location: '</span> <span class="sy0">.</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'REQUEST_SCHEME'</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="st_h">'://'</span> <span class="sy0">.</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'HTTP_HOST'</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="kw3">rtrim</span><span class="br0">&#40;</span><span class="kw3">dirname</span><span class="br0">&#40;</span><span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'SCRIPT_NAME'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="st_h">'/'</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">'/index.php'</span><span class="sy0">,</span> <span class="kw4">true</span><span class="sy0">,</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'SERVER_PROTOCOL'</span><span class="br0">&#93;</span> <span class="sy0">==</span> <span class="st_h">'HTTP/1.1'</span>&#160;? <span class="nu0">303</span> <span class="sy0">:</span> <span class="nu0">302</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">exit</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// benötigte Funktionen</span>
+&#160;
+  <span class="kw2">function</span> getHashedPassword<span class="br0">&#40;</span><span class="re0">$username</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+       <span class="re0">$arRows</span> <span class="sy0">=</span> <span class="kw3">file</span><span class="br0">&#40;</span>PASSWORD_FILE<span class="br0">&#41;</span><span class="sy0">;</span>
+       <span class="kw3">unset</span><span class="br0">&#40;</span><span class="re0">$csv</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// Speicher sparen</span>
+       <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$arRows</span> <span class="kw1">as</span> <span class="re0">$row</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="re0">$row</span><span class="sy0">=</span><span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$row</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// Manche geben gerne Leerzeichen ein...</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="re0">$row</span> <span class="sy0">&amp;&amp;</span> <span class="st_h">'#'</span> <span class="sy0">!=</span> <span class="re0">$row</span><span class="br0">&#123;</span><span class="nu0">0</span><span class="br0">&#125;</span>  <span class="sy0">&amp;&amp;</span> <span class="kw3">strpos</span><span class="br0">&#40;</span><span class="re0">$row</span><span class="sy0">,</span> <span class="st_h">':'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span> 
+            <span class="co1">//Ausschließen von Kommentaren und Leerzeilen sowie Zeilen ohne Trenner</span>
+                <span class="re0">$arPair</span> <span class="sy0">=</span> <span class="kw3">explode</span><span class="br0">&#40;</span>HTPASSWD_SEPARATOR<span class="sy0">,</span> <span class="re0">$row</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// Aufspalten von Benutzername und Passwwort</span>
+                <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$arPair</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="re0">$username</span>  <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                   <span class="kw1">return</span> <span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$arPair</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span>
+       <span class="br0">&#125;</span>
+       <span class="co1">// wenn die Funktion hier noch aktiv ist, dann gibt es den Benutzer nicht;</span>
+       <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+&#160;
+  <span class="kw2">function</span> getGroups<span class="br0">&#40;</span><span class="re0">$username</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="co1">//gibt einen einfachen Array mit allen Gruppen zürück</span>
+    <span class="re0">$r</span><span class="sy0">=</span><span class="kw3">array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$r</span><span class="br0">&#91;</span><span class="st_h">'standard-user'</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="kw4">true</span><span class="sy0">;</span>
+    <span class="re0">$arRows</span> <span class="sy0">=</span> <span class="kw3">file</span><span class="br0">&#40;</span>GROUP_FILE<span class="br0">&#41;</span><span class="sy0">;</span>    
+    <span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">$arRows</span> <span class="kw1">as</span> <span class="re0">$row</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+       <span class="re0">$row</span><span class="sy0">=</span><span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$row</span><span class="br0">&#41;</span><span class="sy0">;</span>
+       <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$row</span> <span class="sy0">!=</span> <span class="st_h">''</span> <span class="sy0">&amp;&amp;</span> <span class="st_h">'#'</span> <span class="sy0">!=</span> <span class="re0">$row</span><span class="br0">&#123;</span><span class="nu0">0</span><span class="br0">&#125;</span> <span class="sy0">&amp;&amp;</span> <span class="kw3">strpos</span><span class="br0">&#40;</span><span class="re0">$row</span><span class="sy0">,</span> <span class="st_h">':'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	  <span class="kw3">list</span><span class="br0">&#40;</span><span class="re0">$group</span><span class="sy0">,</span> <span class="re0">$rest</span><span class="br0">&#41;</span><span class="sy0">=</span><span class="kw3">explode</span><span class="br0">&#40;</span>HTGROUP_SEPARATOR<span class="sy0">,</span> <span class="re0">$row</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	  <span class="re0">$arUsers</span><span class="sy0">=</span><span class="kw3">explode</span><span class="br0">&#40;</span>HTGROUP_USER_SEPARATOR<span class="sy0">,</span> <span class="re0">$rest</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	  <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$arUsers</span> <span class="kw1">as</span> <span class="re0">$s</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	    <span class="re0">$s</span><span class="sy0">=</span><span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$s</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$s</span> <span class="sy0">==</span> <span class="re0">$username</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	      <span class="re0">$r</span><span class="br0">&#91;</span><span class="re0">$group</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="kw4">true</span><span class="sy0">;</span>
+	    <span class="br0">&#125;</span>
+	  <span class="br0">&#125;</span>
+       <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">return</span> <span class="re0">$r</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+&#160;
+  <span class="kw2">function</span> show_login<span class="br0">&#40;</span><span class="re0">$username</span><span class="sy0">=</span><span class="st_h">''</span><span class="sy0">,</span> <span class="re0">$explain</span><span class="sy0">=</span><span class="kw4">false</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$explain</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="re0">$explain</span> <span class="sy0">=</span> <span class="st_h">'&lt;p&gt; (Grund: '</span><span class="sy0">.</span> <span class="re0">$explain</span> <span class="sy0">.</span> <span class="st_h">')&lt;/p&gt;'</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      <span class="re0">$username</span> <span class="sy0">=</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="kw3">str_replace</span><span class="br0">&#40;</span><span class="st_h">'&quot;'</span><span class="sy0">,</span> <span class="st_h">'&amp;quot;'</span><span class="sy0">,</span> <span class="re0">$username</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="co1">// Zufälliger Name für das Passwort-Feld:</span>
+      <span class="re0">$password_field_name</span> <span class="sy0">=</span> <span class="st_h">''</span><span class="sy0">;</span>
+      <span class="re0">$chars</span> <span class="sy0">=</span> <span class="st_h">'abcdefghijklmnopuvwxyzABCDEFGHIJKLMNOPUVWXYZ'</span><span class="sy0">;</span>
+      <span class="re0">$rand_max</span><span class="sy0">=</span> <span class="kw3">strlen</span><span class="br0">&#40;</span><span class="re0">$chars</span><span class="br0">&#41;</span> <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span>
+      <span class="kw1">for</span> <span class="br0">&#40;</span><span class="re0">$i</span><span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">&lt;</span><span class="nu0">10</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="re0">$password_field_name</span> <span class="sy0">.=</span> <span class="re0">$chars</span><span class="br0">&#123;</span><span class="kw3">rand</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="re0">$rand_max</span><span class="br0">&#41;</span><span class="br0">&#125;</span> <span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      <span class="re0">$hostname</span><span class="sy0">=</span><span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'HTTP_HOST'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+      <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Expires: Thu, 01-Jan-70 00:00:01 GMT'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Last-Modified: '</span> <span class="sy0">.</span> <span class="kw3">gmdate</span><span class="br0">&#40;</span><span class="st_h">'D, d M Y H:i:s'</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">' GMT'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Cache-Control: no-store, no-cache, must-revalidate'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Cache-Control: post-check=0, pre-check=0'</span><span class="sy0">,</span> <span class="kw4">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Pragma: no-cache'</span><span class="br0">&#41;</span><span class="sy0">;</span>  
+      <span class="kw1">echo</span> <span class="co3">&lt;&lt;&lt;EOF
+&lt;!doctype html&gt;      
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;$hostname: Geschützter Bereich&lt;/title&gt;
+    &lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bitte anmelden:&lt;/h1&gt;
+    $explain
+    &lt;form action=&quot;login.php&quot; method=&quot;POST&quot;&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Login&lt;/legend&gt;
+        &lt;label for=&quot;&quot;username&quot;&gt;Username: &lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;username&quot; value=&quot;$username&quot; required autofocus&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;label for=&quot;$password_field_name&quot;&gt;Passwort: &lt;input type=&quot;password&quot; name=&quot;$password_field_name&quot; id=&quot;$password_field_name&quot; required&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;label for=&quot;register_ip&quot;&gt;&lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; name=&quot;register_ip&quot; id=&quot;register_ip&quot; value=&quot;1&quot;&gt; Anmeldung an IP-Adresse binden&lt;/label&gt;&lt;br&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Anmelden&quot;&gt;
+      &lt;/fieldset&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;password_field_name&quot; value=&quot;$password_field_name&quot;&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+EOF</span>
+<span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>Der PHP-Programmcode ist für den Anmeldeprozess zuständig. Das in die index.php (und jedes weitere PHP-Skript) includierte <code>auth.php</code> prüft zuerst, ob der Benutzer schon angemeldet ist. Ist das nicht der Fall, wird ein Formular angezeigt, welches Benutzername und Passwort über die Methode <code>POST</code> wieder an die Datei <code>login.php</code> sendet, um dann wiederum weiterverarbeitet zu werden. Hier sind sowohl Benutzername als auch Passwort in einer Datei <code>.htpasswd </code>gespeichert - denkbar wäre aber zum Beispiel auch die Abfrage von Benutzerdaten aus einer Datenbank. Deshalb wurde auch das Holen des gehashten Passwortes in einer Funktion untergebracht. Diese ist hierdurch leicht austauschbar.
+</p><p>Nach dem Abholen des geshashten Passwortes wird das eingegebene Passwort ebenfalls mit der selben Methode und dem selben Salt gehasht und beide Hashs werden verglichen, denn dass eigentliche Passwort kann nicht wieder hergestellt werden, weshalb viele im Zusammenhang von einer "Einwegverschlüsselung" sprechen. Stimmen die Hashes überein, dann wurden Benutzername und Passwort korrekt eingegeben. Der Benutzername wird in der am Anfang des Skripts geöffneten Sessionvariable gespeichert und anhand dieser wieder erkannt. Dieses Konzept ist z.B. auf Gruppen und also nutzerabhängige Berechtigungen erweiterbar.
+</p><p>Aus der Datei <code>.htgroup</code> werden die Gruppen und deren Benutzer ausgelesen. Findet sich in letzteren eine Übereinstimmung, so wird die Gruppe ebenfalls in der Session gespeichert.
+</p><p>Im nächsten Schritt wird der Benutzer auf die Datei <code>index.php</code> weitergeleitet. Dies geschieht mittels der Funktion <code>header('Location: ...')</code>. Da die Location-Anweisung einen vollständigen URI erwartet, man diesen vielleicht aber aus Bequemlichkeit nicht für jedes Projekt ändern will oder den künftigen URI noch nicht kennt, wird er aus Servervariablen zusammengebaut, so dass man nur noch den letzten Teil an seine Bedürfnisse anpassen muss. Im Beispiel befindet sich die Datei <code>index.php</code> im selben Verzeichnis wie <code>login.php</code>.
+</p><p>Waren Benutzername oder Passwort aber falsch, wird wieder das Login-Formular angezeigt - der Benutzer muss aber, falls sein Benutzername korrekt war, nur das Passweort erneut eingeben.
+</p><p>Der HTTP Statuscode <code>303 See Other</code> wird hier aus Gründen der Standardkonformität gesendet: Bei einem Location-Header sendet PHP standardmäßig den Statuscode 302, nur ist hier nicht definiert, ob der nachfolgende Weiterleitungsrequest per POST oder GET getätigt werden soll. HTTP/1.1 wurde daher unter anderem um die Statuscodes 303 und 307 erweitert, die genau das festlegen. Ältere Browser, die nur HTTP/1.0 implementiert haben, bleiben bei der Abfrage nach <code>$_SERVER['SERVER_PROTOCOL']</code> außen vor, bekommen so den obligatorischen Statuscode 302 und reagieren darauf, wie sie programmiert wurden. In fast allen dieser älteren Browser wird die nächste Seite dann per GET angefordert.
+</p><p>Das Login-Formular wird mit dem HTML-Code <code>&lt;meta name="robots" content="noindex"&gt;</code> versehen, damit Suchmaschinen diese das Login-Formular gar nicht erst aufnehmen. Mögliche Angreifer werden also nicht durch Suchmaschinen mit der Information versorgt, dass sich da ein Anmeldeformular befindet. Dieses Vorgehen wird Angriffsversuche nicht unterbinden - ist aber, weil viele Angreifer tatsächlich Suchmaschinen benutzen um Angriffsziele auszumachen, durchaus geeignet um deren Zahl zu reduzieren.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Passwort-Datei .htpasswd">Bearbeiten</a>]</span> <span class="mw-headline" id="Passwort-Datei_.htpasswd"> Passwort-Datei <code>.htpasswd</code> </span></h3>
+<p>Eine Datei mit Benutzernamen und Passwörtern für die hier vorgestellten Skripte sähe (ungefähr) wie folgt aus:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Ressource .htpasswd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html5 source-html5"><pre class="de1">#Benutzer:Hash(Passwort)
+root:$2y$05$koUjHnB4PSch7eCcJtvm0uPbjJPbkO0NnAypgFlqF2TqO/4FLvXL2
+foo:$2y$05$zvl33PexEI9hqPJzw8VIn.CsyLdM5U2.YpITGzB/VF8N.U5VeCIqi</pre></div></div></div>
+</div>
+<p>und würde, weil diese den gleichen Aufbau hat, auch die native Möglichkeit des Apache (ab 2.4!) für die Authentifizierung mit htaccess unterstützen. Wer zudem auf einen Rechner mit einer halbwegs vollständigen Apache 2.4-Installation (mit den Apache-Tools) hat, der kann die Datei auch wie folgt erzeugen:
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="bash source-bash"><pre class="de1"><span class="co4">user@host:~$ </span>htpasswd <span class="re5">-nB</span> foo 
+New password: <span class="br0">&#40;</span>EINGABE: GeHeim<span class="br0">&#41;</span>
+Re-type new password: <span class="br0">&#40;</span>EINGABE: GeHeim<span class="br0">&#41;</span>
+<span class="co4">foo:$</span>2y<span class="re4">$0</span><span class="nu0">5</span><span class="re1">$zvl33PexEI9hqPJzw8VIn</span>.CsyLdM5U2.YpITGzB<span class="sy0">/</span>VF8N.U5VeCIqi
+<span class="co4">user@host:~$</span></pre></div></div></div>
+<p>und ggf. die Ausgabe auch gleich umleiten:
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="bash source-bash"><pre class="de1"><span class="co4">user@host:~$ </span>htpasswd <span class="re5">-nB</span> foo <span class="sy0">&gt;&gt;</span> .htpasswd
+New password: <span class="br0">&#40;</span>EINGABE: GeHeim<span class="br0">&#41;</span>
+Re-type new password: <span class="br0">&#40;</span>EINGABE: GeHeim<span class="br0">&#41;</span>
+<span class="co4">user@host:~$</span></pre></div></div></div>
+<p>Benutzername und gehashtes Passwort stehen dann in der Datei. Weitere werden jeweils angehängt.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Gruppen-Datei .htgroup">Bearbeiten</a>]</span> <span class="mw-headline" id="Gruppen-Datei_.htgroup"> Gruppen-Datei <code>.htgroup</code> </span></h3>
+<p>Eine Datei mit Gruppen und zugehörigen Benutzernamenfür die hier vorgstellten Skripte sähe (ungefähr) wie folgt aus:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Ressource .htgroup
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html5 source-html5"><pre class="de1">#Gruppe:Benutzer,Benutzer ...
+adm:foo,root
+root:bar,root</pre></div></div></div>
+</div>
+<p>Es ist also gut zu erkennen, dass der erste Abschnitt den Gruppenname enthält, dann folgt ein Doppelpunkt und die Liste der Mitglieder. Die hat das Komma als Trenner.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Die Ressource logout.php">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Ressource_logout.php"> Die Ressource <code>logout.php</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Skript logout.php
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>
+  <span class="kw3">session_start</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">session_destroy</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Location: http://'</span> <span class="sy0">.</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'HTTP_HOST'</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="kw3">rtrim</span><span class="br0">&#40;</span><span class="kw3">dirname</span><span class="br0">&#40;</span><span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'SCRIPT_NAME'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="st_h">'/'</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">'/login.php'</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die Datei <code>logout.php</code> ist einzig und allein dafür zuständig, die Session - und damit die Information, dass der Benutzer angemeldet ist - zu zerstören. Danach wird der Benutzer wieder zum Anmeldeformular weitergeleitet.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Die Ressource auth.php">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Ressource_auth.php"> Die Ressource <code>auth.php</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Skript auth.php
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>
+  <span class="kw1">require_once</span><span class="br0">&#40;</span><span class="st_h">'auth_config.php'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">session_start</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="st_h">'https'</span> <span class="sy0">==</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'REQUEST_SCHEME'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw3">session_regenerate_id</span><span class="br0">&#40;</span><span class="kw4">true</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// erneuert die Session-ID,</span>
+                                  <span class="co1">// erschwert Session-Hijacking</span>
+  <span class="br0">&#125;</span>
+&#160;
+  <span class="kw1">if</span> <span class="br0">&#40;</span> 
+           <span class="br0">&#40;</span> <span class="sy0">!</span> <span class="br0">&#40;</span> <span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>
+        or <span class="br0">&#40;</span> <span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'ip'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span>  <span class="sy0">!</span> <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'ip'</span><span class="br0">&#93;</span> <span class="sy0">==</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'REMOTE_ADDR'</span><span class="br0">&#93;</span> <span class="br0">&#41;</span>
+        or <span class="br0">&#40;</span> <span class="br0">&#40;</span><span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'last_action'</span><span class="br0">&#93;</span> <span class="sy0">+</span> SESSION_MAX_IDLE_TIME<span class="br0">&#41;</span> <span class="sy0">&lt;</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>
+  <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Status: 403 Forbidden'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Location: '</span> <span class="sy0">.</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'REQUEST_SCHEME'</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="st_h">'://'</span> <span class="sy0">.</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'HTTP_HOST'</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="kw3">rtrim</span><span class="br0">&#40;</span><span class="kw3">dirname</span><span class="br0">&#40;</span><span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'SCRIPT_NAME'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="st_h">'/'</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">'/login.php'</span><span class="br0">&#41;</span><span class="sy0">;</span>  
+     <span class="kw3">exit</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+&#160;
+&#160;
+  <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">defined</span><span class="br0">&#40;</span><span class="st_h">'NEED_GROUPS'</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="st_h">''</span> <span class="sy0">!=</span> <span class="kw3">trim</span><span class="br0">&#40;</span>NEED_GROUPS<span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> check_user_has_group<span class="br0">&#40;</span>NEED_GROUPS<span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        show_forbidden <span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="kw3">exit</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>  <span class="br0">&#125;</span>
+&#160;
+  <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">defined</span><span class="br0">&#40;</span><span class="st_h">'DENIED_GROUPS'</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="st_h">''</span> <span class="sy0">!=</span> <span class="kw3">trim</span><span class="br0">&#40;</span>DENIED_GROUPS<span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw1">if</span> <span class="br0">&#40;</span>check_user_has_group<span class="br0">&#40;</span>DENIED_GROUPS<span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        show_forbidden <span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="kw3">exit</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>  <span class="br0">&#125;</span>
+&#160;
+  <span class="kw1">if</span> <span class="br0">&#40;</span> check_user_forbidden <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw3">session_destroy</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        show_forbidden <span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="kw3">exit</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+&#160;
+  <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'last_action'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="co1">// Kein Exit, da das aufrufende Skript weiter arbeiten muss!  </span>
+&#160;
+&#160;
+  <span class="co1">// Funktionen:</span>
+&#160;
+  <span class="kw2">function</span> check_user_has_group<span class="br0">&#40;</span><span class="re0">$list</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="re0">$ar</span><span class="sy0">=</span><span class="kw3">explode</span><span class="br0">&#40;</span><span class="st_h">','</span><span class="sy0">,</span> <span class="re0">$list</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$ar</span> <span class="kw1">as</span> <span class="re0">$group</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="re0">$group</span><span class="sy0">=</span><span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$group</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'groups'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="re0">$group</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'groups'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="re0">$group</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	    <span class="kw1">return</span> <span class="kw4">true</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>  <span class="br0">&#125;</span>
+     <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>   
+&#160;
+  <span class="kw2">function</span> check_user_forbidden<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="re0">$ar</span><span class="sy0">=</span><span class="kw3">file</span><span class="br0">&#40;</span>DENIED_USERS_FILE<span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$ar</span> <span class="kw1">as</span> <span class="re0">$line</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="re0">$_SESSION</span><span class="br0">&#91;</span><span class="st_h">'username'</span><span class="br0">&#93;</span> <span class="sy0">==</span> <span class="kw3">trim</span><span class="br0">&#40;</span><span class="re0">$line</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+           <span class="kw1">return</span> <span class="kw4">true</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>  <span class="br0">&#125;</span>
+     <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+&#160;
+  <span class="kw2">function</span> show_forbidden <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'HTTP/1.0 403 Forbidden'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Expires: Thu, 01-Jan-70 00:00:01 GMT'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Last-Modified: '</span> <span class="sy0">.</span> <span class="kw3">gmdate</span><span class="br0">&#40;</span><span class="st_h">'D, d M Y H:i:s'</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">' GMT'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Cache-Control: no-store, no-cache, must-revalidate'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Cache-Control: post-check=0, pre-check=0'</span><span class="sy0">,</span> <span class="kw4">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Pragma: no-cache'</span><span class="br0">&#41;</span><span class="sy0">;</span>  
+     <span class="kw1">print</span> <span class="co3">&lt;&lt;&lt;EOF
+&lt;html&gt;
+  &lt;head&gt;
+     &lt;title&gt;403 Forbidden&lt;/title&gt;
+     &lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;
+     &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;403 Forbidden&lt;/h1&gt;
+    &lt;p&gt;Sie haben kein Recht, dies zu tun.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+EOF</span>
+<span class="sy0">;</span>
+<span class="kw3">exit</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>Dies ist die Ressource, die später in jede zu schützende Seite eingebunden werden muss. Es wird dann immer überprüft, ob die Sessionvariable <code>angemeldet</code> existiert und ihr Wert <code>true</code> ist. Falls das nicht der Fall ist, wird der Benutzer wieder zum Anmeldeformular weitergeleitet. Wichtig ist hier die <code>exit</code>-Anweisung nach der Weiterleitung, damit kein weiterer Code ausgeführt werden kann und das Skript sofort beendet wird.
+</p><p>Weiterhin wird, falls vor dem Aufruf eine Konstante NEED_GROUPS und/oder DENIED_GROUPS mit jweils einer Liste von Gruppen definiert wurde geprüft, ob der Benutzer zugelassen wird. Ist NEED_GROUPS gesetzt, so erhalten die Mitglieder dieser Gruppe Zugriff, es sei denn der User ist auch Mitglieder einer der in DENIED_GROUPS gelisteten Gruppen. Die Ressource <a href="#Die_gesch.C3.BCtzte_Datei_roots_und_admin.php">roots_und_admin.php</a> zeigt, wie das Definieren geht.
+</p><p>Zuletzt wird noch geprüft, ob der identifizierte Benutzer in der als einfache Liste ausgeführten Sperrdatei vorkommt. Trifft dieser oder einer der vorherigen Auschlussgründe nicht zu, wird schlussendlich das aufrunde Skript weiter ausgeführt.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: Die geschützte Datei index.php">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_gesch.C3.BCtzte_Datei_index.php"> Die geschützte Datei <code>index.php</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Skript index.php
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;?php require_once<span class="br0">&#40;</span><span class="st0">'auth.php'</span><span class="br0">&#41;</span>;&#160;?&gt;</span>
+<span class="sc2">&lt;!doctype html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">meta</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Geschützter Bereich<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+  <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Herzlichen Glückwunsch, <span class="sc2">&lt;?php echo htmlspecialchars<span class="br0">&#40;</span>$_SESSION<span class="br0">&#91;</span><span class="st0">'username'</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;&#160;?&gt;</span> <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Sie sind nun angemeldet.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Sie können sich auch wieder <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;logout.php&quot;</span>&gt;</span>abmelden<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></div></div></div>
+</div>
+<p>Die erste und einzige Anweisung, die eine geschützte Seite enthalten muss, ist der Befehl zum Einbinden der Datei <code>auth.php</code>, nämlich mit <code>require</code> in der ersten Zeile. Wenn Sie mehrere Dokumente schützen wollen, müssen Sie diese Zeile einfach am Anfang jeder Datei einfügen. Solange der Benutzer sich nicht explizit abgemeldet hat - ein Link zum Abmelden sollte natürlich immer vorhanden sein - ist keine weitere Eingabe des Passworts nötig.
+</p><p>Doch das geht noch besser. Man kann nämlich auch eine Gruppe definieren, welche den Zugriff haben soll:
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Die geschützte Datei roots und admin.php">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_gesch.C3.BCtzte_Datei_roots_und_admin.php"> Die geschützte Datei <code>roots_und_admin.php</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Skript roots_und_admin.php
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span> <span class="kw3">define</span><span class="br0">&#40;</span><span class="st_h">'NEED_GROUPS'</span><span class="sy0">,</span><span class="st_h">'root,adm'</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="kw1">require_once</span><span class="br0">&#40;</span><span class="st_h">'auth.php'</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="sy1">?&gt;</span>
+&lt;!doctype html&gt;
+...</pre></div></div></div>
+</div>
+<p>Die notwendigen Gruppenmitliedschaften werden also in dem Ausdruck <code lang="php">define('NEED_GROUPS','root,adm')</code> einfach notiert. Hier wären dies die Gruppen "root" und "adm". Wer in diesen Gruppen Mitglied ist, der kann das Skript erfolgreich aufrufen. Für die Feststellung sorgt übrigens die Funktion <code>check_user_has_group()</code> in der <code>auth.php</code>. Diese lässt sich gut nutzen um z.B. einen Link anzubieten oder nicht.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: Die Ressource .htdeniedusers">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Ressource_.htdeniedusers"> Die Ressource <code>.htdeniedusers</code> </span></h3>
+<p>Eine weitere Datei ist diejenige, in welcher die gesperrten Benutzer einfach als Liste notiert werden: Ein Benutzer, eine Zeile:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Ressource .htdeniedusers
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html5 source-html5"><pre class="de1">#denied users per row
+denni</pre></div></div></div>
+</div>
+<p>In der auth.php wird geprüft, ob der Benutzer drin steht. Das macht die Funktion <code lang="php">check_user_forbidden()</code>. Dieses Vorgehen hat den Vorteil, dass der Besucher bei nächsten Aufruf einer geschützten Ressorce auch außen vor bleibt, dass also nicht erst das nächste Login fehlschlägt.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: Die Datei bzw. Ressource auth config.php">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Datei_bzw._Ressource_auth_config.php"> Die Datei bzw. Ressource <code>auth_config.php</code> </span></h3>
+<p>In den Skripten <code>auth.php</code> und <code>login.php</code> und wird zunächst die Ressource <code>auth_config.php</code> geladen. Dies enthält insbesondere <b>einige anpassbare  Voreinstellungen</b>. Das gezeigte Beispiel enhält aber auch schon Voreinstellungen, wie z.B. hinsichtlich der nicht löschbaren Benutzer für die Software, mit welcher die Benutzeradministration erfolgen kann.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Skript auth.config.php
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>
+<span class="co1">// Konfiguration</span>
+  <span class="co1">// Error-Reporting:</span>
+  <span class="co1">// Einstellung für Setup/Entwicklung:</span>
+  <span class="kw3">error_reporting</span><span class="br0">&#40;</span><span class="kw4">E_ALL</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="co1">// Einstellung für Produktionsumgebung/Betrieb:</span>
+  <span class="co2">#error_reporting(NULL);  
+</span>  
+  <span class="co1">// Maximale Spanne der UNTÄTIGKEIT in Sekunden</span>
+  <span class="co1">// 60=1min   300=5min 900=15min 1800=30min 3600=1h</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'SESSION_MAX_IDLE_TIME'</span><span class="sy0">,</span> <span class="nu0">900</span> <span class="br0">&#41;</span><span class="sy0">;</span> 
+&#160;
+  <span class="co1">// Das Verzeichnis für die Session-Dateien. Belässt man das originale kann es </span>
+  <span class="co1">// sein, dass PHP die Sessions zu früh &quot;wegräumt&quot;:</span>
+  <span class="co1">// Wenn das keine Software für Sie macht, dann müssen das Verzeichnis anlegen</span>
+  <span class="co1">// und dafür sorgen, dass es beschreibbar ist.</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'SESSION_FILE_DIR'</span><span class="sy0">,</span> __DIR__ <span class="sy0">.</span> <span class="st_h">'/sessions'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// Speichermethode, hier Text/CSV </span>
+  <span class="coMULTI">/* gilt für 
+  * Passwort-Datei
+  * Gruppen-Datei
+  * LastLogin-Datei
+  Geplante Einträge&#160;: json|database (Für künftige Versionen)
+  */</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'STORAGE_METHOD'</span><span class="sy0">,</span> <span class="st_h">'csv'</span> <span class="br0">&#41;</span><span class="sy0">;</span> 
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'STORAGE_DIR'</span><span class="sy0">,</span> __DIR__ <span class="sy0">.</span> <span class="st_h">'/'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// Passwort-Datei</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'PASSWORD_FILE'</span><span class="sy0">,</span> STORAGE_DIR <span class="sy0">.</span> <span class="st_h">'.htpasswd'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// Gruppen-Datei</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'GROUP_FILE'</span><span class="sy0">,</span> STORAGE_DIR <span class="sy0">.</span> <span class="st_h">'.htgroup'</span> <span class="br0">&#41;</span><span class="sy0">;</span>  
+&#160;
+  <span class="co1">// Denied-Datei:</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'DENIED_USERS_FILE'</span><span class="sy0">,</span> STORAGE_DIR <span class="sy0">.</span> <span class="st_h">'.htdeniedusers'</span> <span class="br0">&#41;</span><span class="sy0">;</span>  
+&#160;
+  <span class="co1">// Benutzer, die nicht gelöscht werden können. Liste, mit Komma getrennt</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'USERS_NODELETE'</span><span class="sy0">,</span> <span class="st_h">'root,adm'</span> <span class="br0">&#41;</span><span class="sy0">;</span>    
+  <span class="co1">// Gruppen, die nicht gelöscht werden können. Liste, mit  Komma getrennt</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'GROUPS_NODELETE'</span><span class="sy0">,</span> <span class="st_h">'root,adm'</span> <span class="br0">&#41;</span><span class="sy0">;</span>      
+&#160;
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'NAMES_PATTERN'</span><span class="sy0">,</span> <span class="st_h">'[0-9A-Za-z@_.-]{3,}'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'NAMES_PATTERN_DESCR'</span><span class="sy0">,</span><span class="st_h">'Gültig sind alle Buchstaben aus dem ASCII-Zeichensatz und Ziffern sowie die Zeichen @, -, _  und der Punkt, die Eingabe muss mindestens 3 Zeichen lang sein:'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw3">define</span><span class="br0">&#40;</span><span class="st_h">'MIN_PASSWORD_LENGTH'</span><span class="sy0">,</span> <span class="nu0">8</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="re0">$password_patterns</span><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="st_h">'.{'</span><span class="sy0">.</span> MIN_PASSWORD_LENGTH <span class="sy0">.</span><span class="st_h">'}'</span><span class="sy0">;</span> <span class="co2"># Länge: Mindestens MIN_PASSWORD_LENGTH Zeichen
+</span>  <span class="re0">$password_patterns</span><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="st_h">'[A-Z]{1,}'</span><span class="sy0">;</span> <span class="co2"># gr. Buchstaben
+</span>  <span class="re0">$password_patterns</span><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="st_h">'[a-z]{1,}'</span><span class="sy0">;</span> <span class="co2"># kl, Buchstaben
+</span>  <span class="re0">$password_patterns</span><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="st_h">'[0-9]{1,}'</span><span class="sy0">;</span> <span class="co2"># Ziffern
+</span>  <span class="re0">$password_patterns</span><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="st_h">'[^A-Za-z0-9]{1,}'</span><span class="sy0">;</span> <span class="co2"># Sonderzeichen
+</span>  
+  <span class="kw3">define</span> <span class="br0">&#40;</span> <span class="st_h">'PASSWORD_PATTERN_DESCR'</span><span class="sy0">,</span><span class="st_h">'Das Passwort muss mindestens '</span> <span class="sy0">.</span> MIN_PASSWORD_LENGTH <span class="sy0">.</span> <span class="st_h">' Zeichen lang sein und Buchstaben, Ziffern sowie Sonderzeichen enthalten, es darf nicht mit einem Leerzeichen beginnen oder enden.'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="co1">// Trennzeichen der Passwortdatei, default ist &quot;:&quot;</span>
+  <span class="kw3">define</span><span class="br0">&#40;</span> <span class="st_h">'HTPASSWD_SEPARATOR'</span> <span class="sy0">,</span> <span class="st_h">':'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="co1">// Trennzeichen der Extra-Informationen in der Passwortdatei, default ist &quot;,&quot;</span>
+  <span class="kw3">define</span><span class="br0">&#40;</span> <span class="st_h">'HTPASSWD_EXTRA_SEPARATOR'</span> <span class="sy0">,</span> <span class="st_h">':'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// Trennzeichen der Gruppendatei zwischen Gruppe und Benutzerliste, default ist &quot;:&quot;</span>
+  <span class="kw3">define</span><span class="br0">&#40;</span> <span class="st_h">'HTGROUP_SEPARATOR'</span> <span class="sy0">,</span> <span class="st_h">':'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="co1">// Trennzeichen der Gruppendatei zwischen den Benutzern, default ist &quot;,&quot;</span>
+  <span class="kw3">define</span><span class="br0">&#40;</span> <span class="st_h">'HTGROUP_USER_SEPARATOR'</span> <span class="sy0">,</span> <span class="st_h">','</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+&#160;
+  <span class="co2">#######################################################################################################################
+</span>  <span class="co2">#                                                                                                                     #
+</span>  <span class="co2">#                                               AB HIER NICHTS MEHR ÄNDERN!                                           #
+</span>  <span class="co2">#                                           Prüfungen, automatische Einstellungen                                     #
+</span>  <span class="co2">#                                                                                                                     #
+</span>  <span class="co2">#######################################################################################################################
+</span>  
+  <span class="kw3">define</span> <span class="br0">&#40;</span><span class="st_h">'JSON_PASSWORD_PATTERN'</span><span class="sy0">,</span> <span class="kw3">json_encode</span><span class="br0">&#40;</span><span class="re0">$password_patterns</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span> <span class="co2"># Nicht ändern
+</span>  
+  <span class="kw1">if</span> <span class="br0">&#40;</span>STORAGE_METHOD <span class="sy0">==</span> <span class="st_h">'csv'</span> or STORAGE_METHOD <span class="sy0">==</span> <span class="st_h">'json'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="st_h">''</span> <span class="sy0">==</span> STORAGE_DIR <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="kw3">trigger_error</span><span class="br0">&#40;</span><span class="st_h">'UPS! STORAGE_DIR darf nicht leer sein. Setzen Sie einen Punkt, wenn Sie die Daten WIRKLICH im aktuellen Verzeichnis speichern wollen!'</span><span class="sy0">,</span> <span class="kw4">E_USER_ERROR</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="re0">$ar</span><span class="sy0">=</span><span class="kw3">array</span><span class="br0">&#40;</span>PASSWORD_FILE<span class="sy0">,</span> GROUP_FILE<span class="sy0">,</span> DENIED_USERS_FILE<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$ar</span> <span class="kw1">as</span> <span class="re0">$file</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">is_file</span><span class="br0">&#40;</span>PASSWORD_FILE<span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw3">trigger_error</span><span class="br0">&#40;</span><span class="st_h">'UPS! '</span><span class="sy0">.</span><span class="re0">$file</span><span class="sy0">.</span><span class="st_h">' gibt es nicht.'</span><span class="sy0">,</span> <span class="kw4">E_USER_ERROR</span><span class="br0">&#41;</span><span class="sy0">;</span>  
+      <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">is_readable</span><span class="br0">&#40;</span>PASSWORD_FILE<span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw3">trigger_error</span><span class="br0">&#40;</span><span class="st_h">'UPS! '</span><span class="sy0">.</span><span class="re0">$file</span><span class="sy0">.</span><span class="st_h">' kann nicht gelesen werden.'</span><span class="sy0">,</span> <span class="kw4">E_USER_ERROR</span><span class="br0">&#41;</span><span class="sy0">;</span>  
+      <span class="br0">&#125;</span>      
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span>
+&#160;
+&#160;
+<span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">defined</span><span class="br0">&#40;</span><span class="st_h">'SESSION_FILE_DIR'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">is_dir</span><span class="br0">&#40;</span> SESSION_FILE_DIR <span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="re0">$dummy</span><span class="sy0">=</span><span class="kw3">umask</span><span class="br0">&#40;</span><span class="nu8">0077</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> make_dir<span class="br0">&#40;</span>SESSION_FILE_DIR <span class="sy0">.</span> <span class="st_h">'/'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw3">trigger_error</span><span class="br0">&#40;</span><span class="st_h">'Fatal: Unmöglich, das Verzeichnis für die Session-Dateien anzulegen.'</span><span class="sy0">,</span> <span class="kw4">E_USER_ERROR</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">chmod</span><span class="br0">&#40;</span> SESSION_FILE_DIR<span class="sy0">,</span> <span class="nu8">0000</span> <span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="kw3">chmod</span><span class="br0">&#40;</span> SESSION_FILE_DIR<span class="sy0">,</span> <span class="nu8">0700</span> <span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw3">die</span><span class="br0">&#40;</span><span class="st_h">'Fatal: Unmöglich, die Rechte für das Verzeichnis mit Session-Dateien zu setzen.'</span><span class="sy0">,</span> <span class="kw4">E_USER_ERROR</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">file_put_contents</span><span class="br0">&#40;</span>SESSION_FILE_DIR <span class="sy0">.</span> <span class="st_h">'/'</span> <span class="sy0">.</span> <span class="st_h">'.htaccess'</span><span class="sy0">,</span> <span class="st_h">'deny from all'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw3">trigger_error</span><span class="br0">&#40;</span><span class="st_h">'Fatal:Unmöglich, das Verzeichnis für die Session-Dateien zu sperren.'</span><span class="sy0">,</span> <span class="kw4">E_USER_ERROR</span><span class="br0">&#41;</span><span class="sy0">;</span>  
+      <span class="br0">&#125;</span>  
+    <span class="br0">&#125;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span> <span class="kw3">is_writable</span><span class="br0">&#40;</span>SESSION_FILE_DIR<span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="kw3">trigger_error</span><span class="br0">&#40;</span><span class="st_h">'Fatal: Es ist unmöglich die Session-Dateien anzulegen.'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session.gc_maxlifetime'</span><span class="sy0">,</span> SESSION_MAX_IDLE_TIME<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session.save_handler'</span><span class="sy0">,</span> <span class="st_h">'files'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">session_save_path</span><span class="br0">&#40;</span>SESSION_FILE_DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'output_buffering'</span><span class="sy0">,</span> <span class="st_h">'1'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session.use_trans_sid'</span><span class="sy0">,</span> <span class="st_h">'0'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session.use_cookies'</span> <span class="sy0">,</span> <span class="st_h">'1'</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session.use_only_cookies'</span> <span class="sy0">,</span> <span class="st_h">'1'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">ini_set</span><span class="br0">&#40;</span><span class="st_h">'session_cache_limiter'</span><span class="sy0">,</span> <span class="st_h">'private'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'access-control-allow-origin: '</span> <span class="sy0">.</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'REQUEST_SCHEME'</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="st_h">'://'</span> <span class="sy0">.</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'SERVER_NAME'</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="st_h">'/'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">session_set_cookie_params</span> <span class="br0">&#40;</span> SESSION_MAX_IDLE_TIME<span class="sy0">,</span> <span class="kw3">substr</span><span class="br0">&#40;</span>__DIR__<span class="sy0">,</span> <span class="kw3">strlen</span><span class="br0">&#40;</span><span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'DOCUMENT_ROOT'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">'/'</span><span class="sy0">,</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'SERVER_NAME'</span><span class="br0">&#93;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="coMULTI">/*&#160;?&gt; Nicht setzen, sonst wird ggf. ein oder mehrere Zeichen gesendet, was Weiterleitungen stört */</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: Schutz von Ressourcen, welche keine PHP-Skripte sind:">Bearbeiten</a>]</span> <span class="mw-headline" id="Schutz_von_Ressourcen.2C_welche_keine_PHP-Skripte_sind:"> Schutz von Ressourcen, welche keine PHP-Skripte sind: </span></h3>
+<p>Die hier beschriebene Methode bringt (bisher) gewisse Einschränkungen und Nachteile mit sich. Beispielsweise können im Gegensatz zur HTTP-Authentifizierung komplette Verzeichnisse nicht ohne weiteres geschützt werden, der Schutz beschränkt sich lediglich auf Dateien, die von PHP geparst werden. Aber genau das lässt sich ändern. Voraussetzung für das hier gezeigte ist ein Apache-Webserver mit dem Modul mod_rewrite und Sie müssen ggf. die Erlaubnis haben, eine Datei .htaccess anzulegen, die der Server dann auch beachtet. Hier ist ein Beispiel:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Resource .htaccess
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="apache source-apache"><pre class="de1"><span class="co1"># Es erfolgt mit voller Absicht keine Prüfung, ob mod_rewrite geladen ist!</span>
+<span class="co1"># Denn es ist besser, einen 500er Fehler zu haben als die Dateien</span>
+<span class="co1"># unbemerkt ungeschützt auszuliefern:</span>
+<span class="kw1">RewriteEngine</span> <span class="kw2">On</span>
+&#160;
+<span class="co1">#Versteckte Dateien werden verboten:</span>
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^.*/<span class="es0">\.</span>&quot;</span>           - [F]
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^<span class="es0">\.</span>&quot;</span>              - [F]
+&#160;
+<span class="co1">#Niemals Ändern:</span>
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^.*/<span class="es0">\.</span>ht&quot;</span>           - [F]
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^<span class="es0">\.</span>ht&quot;</span>              - [F]
+&#160;
+<span class="co1">#Directory Index (, ggf. mit Parametern)</span>
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^$&quot;</span>                ./index.php [L]
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^[?&amp;].*$&quot;</span>          ./index.php [L]
+&#160;
+<span class="co1">#PHP-Dateien kontrollieren sich selbst</span>
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^(.*<span class="es0">\.</span>php)$&quot;</span>       - [L]
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^(.*<span class="es0">\.</span>php[?&amp;].*)$&quot;</span> - [L]
+&#160;
+<span class="co1">#Ressourcen, die nicht durch sendFile.php kontrolliert werden</span>
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^interior/(.*)$&quot;</span>   - [L]
+&#160;
+<span class="co1">#Alles andere liefert die Datei sendFile.php aus</span>
+<span class="kw1">RewriteRule</span> <span class="st0">&quot;^(.*)$&quot;</span> ./sendFile.php?file=$1 [L]</pre></div></div></div>
+</div>
+<p>Die Datei sendFile.php stellen wir auch kurz vor:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Skript sendFile.php
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>
+<span class="kw1">require_once</span><span class="br0">&#40;</span><span class="st_h">'auth.php'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'./'</span> <span class="sy0">.</span> <span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+   <span class="re0">$forbidden</span><span class="sy0">=</span><span class="kw3">array</span><span class="br0">&#40;</span><span class="st_h">'../'</span><span class="sy0">,</span> <span class="st_h">'/..'</span><span class="sy0">,</span> <span class="st_h">'/.ht'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="sy0">=</span> <span class="kw3">str_replace</span><span class="br0">&#40;</span><span class="re0">$forbidden</span><span class="sy0">,</span><span class="st_h">''</span><span class="sy0">,</span> <span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+   <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">is_file</span><span class="br0">&#40;</span><span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="kw3">is_readable</span><span class="br0">&#40;</span><span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+&#160;
+     <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="kw3">function_exists</span><span class="br0">&#40;</span><span class="st_h">'finfo_open'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="re0">$finfo</span> <span class="sy0">=</span> <span class="kw3">finfo_open</span><span class="br0">&#40;</span>FILEINFO_MIME_TYPE<span class="br0">&#41;</span><span class="sy0">;</span>
+         <span class="re0">$mimeType</span><span class="sy0">=</span><span class="kw3">finfo_file</span><span class="br0">&#40;</span><span class="re0">$finfo</span><span class="sy0">,</span> <span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span> <span class="kw1">elseif</span> <span class="br0">&#40;</span> <span class="kw3">function_exists</span><span class="br0">&#40;</span><span class="st_h">'mime_content_type'</span><span class="br0">&#41;</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="re0">$mimeType</span><span class="sy0">=</span><span class="kw3">mime_content_type</span><span class="br0">&#40;</span><span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+         <span class="re0">$mimeType</span><span class="sy0">=</span><span class="st0">&quot;application/unknown&quot;</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>
+&#160;
+      <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Content-Type:'</span><span class="sy0">.</span> <span class="re0">$mimeType</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw3">readfile</span><span class="br0">&#40;</span><span class="re0">$_GET</span><span class="br0">&#91;</span><span class="st_h">'file'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="co2"># Hier sind wir fertig:
+</span>      <span class="kw3">exit</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+<span class="br0">&#125;</span> 
+show_forbidden <span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: Hinweis zu einer häufigen Fehlerquelle">Bearbeiten</a>]</span> <span class="mw-headline" id="Hinweis_zu_einer_h.C3.A4ufigen_Fehlerquelle"> Hinweis zu einer häufigen Fehlerquelle </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: Fehlerbild">Bearbeiten</a>]</span> <span class="mw-headline" id="Fehlerbild"> Fehlerbild </span></h3>
+<ul><li> Nicht angemeldete Benutzer sehen nur eine (scheinbar) leere Seite und nicht das Anmelde-Formular und/oder
+</li><li> Benutzer sehen nach dem Abmelden nur eine (scheinbar) leere Seite und /oder
+</li><li> Benutzer sehen Fehlermeldungen, die mit <code>"Warning: Cannot modify header information"</code> beginnen.
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: Abhilfe und Vermeidung">Bearbeiten</a>]</span> <span class="mw-headline" id="Abhilfe_und_Vermeidung"> Abhilfe und Vermeidung </span></h3>
+<p>Achten Sie bei der Einbindung darauf, dass vor <code>&lt;?php require_once('auth.php');&#160;?&gt;</code> wirklich nichts steht und achten Sie eben so sorgfältig darauf, dass vor dem "PHP-Tag" <code>&lt;?php</code> in den Dateien <code>auth.php</code>, <code>login.php</code> sowie <code>logout.php</code> wirklich nichts steht. Benutzer mancher Editoren, vor allem des mit Windows mitgelieferten Notepad haben hier häufig ein Problem: Dieser speichert gemäß seiner Voreinstellung bei Texten mit der Zeichenkodierung UTF-8 ganz am Beginn der Datei zwei unsichtbare Bytes (genannt BOM - "byte order mark"), die also auch gesendet werden und die Funktion <code>header()</code> stören. Abhilfe schafft zwar, dieses im Menü zu unterbinden, zu empfehlen ist aber die Benutzung eines alternativen Editors wie z.B. Notepad++ - mit welchem Sie die BOM zum einen sehen und vor allem auch wieder löschen können.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;section=25" title="Abschnitt bearbeiten: Weblinks">Bearbeiten</a>]</span> <span class="mw-headline" id="Weblinks"> Weblinks </span></h2>
+<ul><li> Ursprünglicher Artikel auf Selfhtml: <a rel="nofollow" class="external free" href="http://aktuell.de.selfhtml.org/artikel/php/loginsystem/">http://aktuell.de.selfhtml.org/artikel/php/loginsystem/</a>
+</li><li> Artikel auf Selfhtml: zur <a rel="nofollow" class="external text" href="http://wiki.selfhtml.org/wiki/Grundlagen/Sicherheit/sichere_Passwortwahl">Wahl eines sicheren Passworts</a>
+</li></ul>
+<ul><li> Ein anderes Loginverfahren: <a rel="nofollow" class="external autonumber" href="http://forum.de.selfhtml.org/archiv/2014/1/t216393/#m1483964">[2]</a>
+</li></ul>
+<ul><li> Alternativer Artikel: <a rel="nofollow" class="external text" href="http://wiki.selfhtml.org/wiki/Benutzer:Suit/Loginsystem_und_Benutzerregistrierung_mit_PHP_und_MySQL">Loginsystem und Benutzerregistrierung mit PHP und MySQL</a>
+</li><li> PHP-Handbuch: <a rel="nofollow" class="external text" href="http://www.php.net/manual/de/ref.session.php">Session-Funktionen</a>
+</li><li> PHP-Handbuch: <a rel="nofollow" class="external text" href="http://www.php.net/manual/de/function.header.php">die Funktion header()</a>
+</li><li> PHP-Handbuch: <a rel="nofollow" class="external text" href="http://www.php.net/manual/de/function.crypt.php">die Funktion crypt()</a>
+</li><li> PHP-Handbuch: <a rel="nofollow" class="external text" href="http://www.php.net/manual/de/function.password-hash.php">die Funktion password_hash()</a>
+</li><li> PHP-Handbuch: <a rel="nofollow" class="external text" href="http://www.php.net/manual/de/function.password-verify.php">die Funktion password_verify()</a>
+</li><li> Wikipedia: <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Kryptologische_Hashfunktion">Kryptologische Hashfunktionen</a>
+</li><li> veraltete PHP-FAQ: <a rel="nofollow" class="external text" href="http://www.php-faq.de/q-safe-password.html">Wie kann ich Passwörter sicher speichern?</a>
+</li><li> HTTP-Statuscodes: <a rel="nofollow" class="external text" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3">Redirection 3xx</a>
+</li><li> Für Windows-Benutzer: <a rel="nofollow" class="external text" href="http://notepad-plus-plus.org/download/">Downloadseite des Editors Notepad++</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 670/1000000
+Post‐expand include size: 7223/2097152 bytes
+Template argument size: 4647/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:2091-0!*!*!!de-formal!*!* and timestamp 20150301183348 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;oldid=26824">http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;oldid=26824</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Technische+Erg%C3%A4nzungen%2FLoginsystem" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/Loginsystem"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/Loginsystem" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/PHP/Anwendung_und_Praxis/Loginsystem" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/PHP/Anwendung_und_Praxis/Loginsystem" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/Loginsystem&amp;oldid=26824" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/PHP-2FAnwendung_und_Praxis-2FLoginsystem" title="Spezial:Durchsuchen/PHP-2FAnwendung und Praxis-2FLoginsystem">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 1. März 2015 um 19:26 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 3.736-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.137 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Technische_Ergänzungen/Loginsystem by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:55 GMT -->
+</html>

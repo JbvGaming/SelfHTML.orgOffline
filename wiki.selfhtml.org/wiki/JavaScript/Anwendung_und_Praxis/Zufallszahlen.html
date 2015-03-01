@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Anwendung_und_Praxis/Zufallszahlen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Anwendung und Praxis/Zufallszahlen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Anwendung_und_Praxis/Zufallszahlen","wgTitle":"JavaScript/Anwendung und Praxis/Zufallszahlen","wgCurRevisionId":25491,"wgArticleId":4144,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Anwendung_und_Praxis/Zufallszahlen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Anwendung und Praxis/Zufallszahlen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Anwendung_und_Praxis_Zufallszahlen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Anwendung und Praxis/Zufallszahlen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../../JavaScript.html" title="JavaScript">JavaScript</a> | <a href="../Anwendung_und_Praxis.html" title="JavaScript/Anwendung und Praxis">Anwendung und Praxis</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="note-box note-box-autor">
+<p class="note-box-title">Informationen zum Autor:</p>
+<div class="note-box-text">
+  <div>
+    <div class="note-box-autor-text">Name:</div>
+    <div class="note-box-autor-info">Matthias Schäfer</div>
+    <div class="note-box-autor-text" style="">E-Mail:</div>
+    <div class="note-box-autor-info" style=""><a rel="nofollow" class="external text" href="mailto:zapperlott@gmail.com">zapperlott@gmail.com</a></div>
+    <div class="note-box-autor-text" style="display:none;">Homepage:</div>
+    <div class="note-box-autor-info" style="display:none;">(keine)</div>
+  </div>
+</div>
+</div>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Vorbemerkung_zur_mathematischen_Schreibweise"><span class="tocnumber">1</span> <span class="toctext">Vorbemerkung zur mathematischen Schreibweise</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Erste_Schritte_mit_Math.random.28.29"><span class="tocnumber">2</span> <span class="toctext">Erste Schritte mit Math.random()</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ganzzahlige_Zufallswerte_mit_Hilfe_von_Math.round.28.29"><span class="tocnumber">3</span> <span class="toctext">Ganzzahlige Zufallswerte mit Hilfe von Math.round()</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Ganzzahlige_Zufallswerte_mit_Hilfe_von_Math.floor.28.29"><span class="tocnumber">4</span> <span class="toctext">Ganzzahlige Zufallswerte mit Hilfe von Math.floor()</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Helferfunktion_zur_Berechnung_ganzzahliger.2C_gleichverteilter_Zufallszahlen"><span class="tocnumber">5</span> <span class="toctext">Helferfunktion zur Berechnung ganzzahliger, gleichverteilter Zufallszahlen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Demonstration"><span class="tocnumber">6</span> <span class="toctext">Demonstration</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Vorbemerkung zur mathematischen Schreibweise">Bearbeiten</a>]</span> <span class="mw-headline" id="Vorbemerkung_zur_mathematischen_Schreibweise">Vorbemerkung zur mathematischen Schreibweise</span></h2>
+<p>Um Zahlenbereiche zu bezeichnen, verwendet man in der Alltagssprache&#160;»von 5 bis 10«&#160;oder&#160;»zwischen 5 und 10«. Allerdings ist nicht immer eindeutig, was damit gemeint ist und ob die Zahlen am Anfang und Ende noch dazugehören. Daher verwendet dieser Artikel eine gängige mathematische Schreibweise für Zahlenbereiche, sogenannte <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Intervall_(Mathematik)">Intervalle</a>. Damit lassen sich die Sachverhalte rund um die Erzeugung von Zufallszahlen kompakter beschreiben:
+</p>
+<ul><li> <b>[0;5] </b> Abgeschlossenes Intervall. Bezeichnet alle Zahlen, die größer oder gleich 0 sind und kleiner oder gleich 5 sind. Eine Zahl x ist Teil des Intervalls, wenn für sie gilt 0 ≤ x ≤ 5. Die Zahl 3.5 ist im Intervall, die Zahl 6 nicht mehr.
+</li></ul>
+<ul><li><b>[0;5[ </b> Rechtsoffenes Intervall. Bezeichnet alle Zahlen, die größer oder gleich 0 sind, aber kleiner als 5 sind. Eine Zahl x ist Teil des Intervalls, wenn für sie gilt 0 ≤ x &lt; 5. Die Zahl 0.5 ist im Intervall, die Zahl 5 nicht mehr.
+</li></ul>
+<p>Dieser Unterschied wird uns noch mehrfach beschäftigen, daher sollten Sie darauf achten, in welche Richtung die letzte Klammer zeigt. Diese bestimmt, ob die Zahl, die die Obergrenze bildet, noch zum Intervall dazugehört oder nicht.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Erste Schritte mit Math.random()">Bearbeiten</a>]</span> <span class="mw-headline" id="Erste_Schritte_mit_Math.random.28.29">Erste Schritte mit <code>Math.random()</code></span></h2>
+<p><a href="../Objekte/Math/random.html" title="JavaScript/Objekte/Math/random">Math.random()</a> liefert gemäß dem ECMAScript-Standard eine Pseudo-Zufallszahl aus dem Intervall <b>[0;1[</b>, das heißt größer gleich 0 und kleiner als 1. Es handelt sich um eine <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Rationale_Zahl">rationale Zahl</a>, zum Beispiel<code>0.06631505941813465</code>.
+</p><p>Nun will man in JavaScript äußerst selten eine Zufallszahl aus dem Intervall <code> [0;1[ </code>, sondern aus <code> [x;y] </code>. <code> x </code> und <code> y </code> stehen für beliebige Werte wie zum Beispiel 5 und 10. Es gilt also, die von <code>Math.random()</code> gelieferten Werte auf eine anderes Intervall abzubilden.
+</p><p>Der erste Versuch könnte so aussehen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> min <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+<span class="kw1">var</span> max <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+<span class="kw1">var</span> x <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span>max <span class="sy0">-</span> min<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">+</span> min<span class="sy0">;</span></pre></div></div></div>
+</div>
+<p><br />
+Dies liefert eine rationale Zahl x aus dem Intervall [5;10[.
+</p><p>Dies erfüllt zwei übliche Wünsche nicht:
+</p>
+<ul><li>Man will die maximale Zahl (hier 10) nicht aussparen. Man will eine zufällige Zahl aus dem Intervall [5;10], nicht aus dem Intervall [5;10[.
+</li><li>Man will eine <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Natürliche_Zahl">natürliche Zahl</a>. Die Zahl soll aus der Zahlenmenge { 5, 6, 7, 8, 9, 10 } stammen.
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Ganzzahlige Zufallswerte mit Hilfe von Math.round()">Bearbeiten</a>]</span> <span class="mw-headline" id="Ganzzahlige_Zufallswerte_mit_Hilfe_von_Math.round.28.29">Ganzzahlige Zufallswerte mit Hilfe von <code>Math.round()</code></span></h2>
+<p>Die übliche Lösung, die diese beiden Anforderungen zunächst erfüllt, sieht so aus:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> x <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">round</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span>max <span class="sy0">-</span> min<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">+</span> min<span class="sy0">;</span></pre></div></div></div>
+</div>
+<p><a href="../Objekte/Math/round.html" title="JavaScript/Objekte/Math/round">Math.round()</a> rundet kaufmännisch, das heißt, 5.2 wird 5, 7.2 wird 7 und 9.8 wird 10. Damit bekommen wir eine natürliche Zahl aus dem Intervall [5;10].
+</p><p>Diese Lösung findet sich zwar überall im Web, aber sie ist äußerst problematisch und fehlerhaft.
+</p><p>Will man eine zufällige Zahl aus der Menge <code>{ 5, 6, 7, 8, 9, 10 }</code> ziehen, so soll jede Zahl mit gleicher Wahrscheinlichkeit gezogen werden. Der Wahrscheinlichkeitswert einer jeden Zahl aus dieser Menge mit sechs Zahlen wäre 1/6 (ein Sechstel). Das kennen wir von einem sechsseitigen Würfel.
+</p><p>Die obige Lösung mit <code>Math.round()</code> sorgt aber nicht für eine gleichmäßige Wahrscheinlichkeit. Die Zahl 5 wird nicht gleich häufig gezogen wie die Zahl 6.
+</p><p>Der Teilterm <code>Math.random() * (10 - 5)</code> berechnet zunächst eine zufällige rationale Zahl aus dem Intervall [0;5[. Diese Verteilung ist noch gleichmäßig. Das heißt, jede Zahl in diesem Intervall wird mit gleicher Wahrscheinlichkeit gezogen.
+</p><p>Bei der anschließenden Rundung muss nun bedacht werden, welcher Teilintervall zu welchem ganzzahligen Wert führt. Diese Rundung von Zahlen und die anschließende Addition des Minimalwertes soll folgende Tabelle veranschaulichen.
+</p>
+<table class="wikitable">
+
+<tr>
+<td> <code>a = Math.random() * (10 - 5)</code>  </td>
+<td> [0; 0.5[ </td>
+<td>[0.5; 1[  [1; 1.5[ </td>
+<td>[1.5; 2[ [2; 2.5[ </td>
+<td>[2.5; 3[ [3; 3.5[ </td>
+<td> [3.5; 4[ 	[4; 4.5[ 	</td>
+<td> [4.5; 5[
+</td></tr>
+<tr>
+<td> <code>b = Math.round(a)</code>  </td>
+<td> 0</td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 3 </td>
+<td> 4 </td>
+<td> 5
+</td></tr>
+<tr>
+<td> <code>c = b + 5 </code> </td>
+<td> 5 </td>
+<td> 6 </td>
+<td> 7 </td>
+<td> 8 </td>
+<td> 9 </td>
+<td> 10
+</td></tr>
+<tr>
+<td> Wahrscheinlichkeit </td>
+<td> 1/10 </td>
+<td> 1/5 </td>
+<td> 1/5 </td>
+<td> 1/5 </td>
+<td> 1/5 </td>
+<td> 1/10
+</td></tr></table>
+<p>Die Tabelle ist so zu lesen: Der besagte Teilterm liefert eine Zufallszahl a aus dem Intervall [0;5[. Dieser ist in 0.5-er Teilintervallen in Spalten aufgeteilt.
+</p><p>Der springende Punkt ist nun, dass die Rundung die Zahlen aus dem Intervall [0; 0.5[ auf 0 abrundet. Alle Zahlen aus dem Intervall [0.5; 1.5[ werden hingegen auf 1 auf- bzw. abgerundet. Die Menge der Zufallszahlen, die gerundet 1 ergeben, ist also doppelt so groß wie die Menge der Zahlen, die gerundet 0 ergeben. Dasselbe Problem liegt am Ende vor: Lediglich die Zahlen aus dem Intervall [4.5; 5[ ergeben gerundet 5.
+</p><p>Der Effekt dieser Rundung ist eine ungleiche Verteilung der Wahrscheinlichkeiten. Die Zahlen 6, 7, 8 und 9 werden jeweils mit doppelter Wahrscheinlichkeit gezogen als die Zahlen 5 und 10. Die beiden Zahlen am Anfang und am Ende der Zahlenmenge, aus der zufällig gezogen werden soll, sind also benachteiligt in der Ziehung.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Ganzzahlige Zufallswerte mit Hilfe von Math.floor()">Bearbeiten</a>]</span> <span class="mw-headline" id="Ganzzahlige_Zufallswerte_mit_Hilfe_von_Math.floor.28.29">Ganzzahlige Zufallswerte mit Hilfe von <code>Math.floor()</code></span></h2>
+<p>Lange Rede, kurzer Sinn: Ein anderes Verfahren ist nötig, damit jede Zahl mit gleicher Wahrscheinlichkeit gezogen wird. Eine Rundung ist zwar weiterhin nötig, aber eine, die immer ein Intervall der Länge 1 auf eine ganze Zahl abbildet.
+</p><p>Diese Aufgabe erfüllt <a href="../Objekte/Math/floor.html" title="JavaScript/Objekte/Math/floor">Math.floor()</a>. <code>Math.floor()</code> rundet jede Zahl auf die nächstniedrige ganze Zahl ab. Die Berechnung der Zufallszahl wird entsprechend geändert:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> min <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+<span class="kw1">var</span> max <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+<span class="kw1">var</span> x <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span>max <span class="sy0">-</span> min<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">+</span> min<span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Dies gibt uns eine zufällige natürliche Zahl aus dem Intervall [5;10[. Dies fällt hinter die Lösung mit <code>Math.round()</code> in dem Punkt zurück, dass die maximale Zahl 10 wieder ausgespart wird. Daher wird der Term folgendermaßen ergänzt:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> x <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span>max <span class="sy0">-</span> min <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">+</span> min<span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die korrekte Funktionsweise wird deutlich, wenn wir die gleiche Tabelle mit der verbesserten Lösung aufstellen:
+</p>
+<table class="wikitable">
+
+<tr>
+<td> <code>a = Math.random() * (10 - 5+1)</code>  </td>
+<td> [0; 1[ </td>
+<td>[1; 2[   </td>
+<td>[2; 3[ </td>
+<td>[3, 4[  </td>
+<td> [4; 5[ </td>
+<td> [5; 6[
+</td></tr>
+<tr>
+<td> <code>b = Math.floor(a)</code>  </td>
+<td> 0</td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 3 </td>
+<td> 4 </td>
+<td> 5
+</td></tr>
+<tr>
+<td> <code>c = b + 5 </code> </td>
+<td> 5 </td>
+<td> 6 </td>
+<td> 7 </td>
+<td> 8 </td>
+<td> 9 </td>
+<td> 10
+</td></tr>
+<tr>
+<td> Wahrscheinlichkeit </td>
+<td> 1/6 </td>
+<td> 1/6 </td>
+<td> 1/6 </td>
+<td> 1/6 </td>
+<td> 1/6 </td>
+<td> 1/6
+</td></tr></table>
+<p><br />
+</p><p>Anmerkung: Die Benutzung von <code>Math.round()</code> bei der Erzeugung von zufälligen Ganzzahlen ist kein Übel an sich. Die Lösung mit <code>Math.round()</code> lässt sich abändern, sodass ebenfalls ein Intervall der Länge 1 auf eine ganze Zahl abgebildet wird und die Gleichverteilung gewährleistet ist. Dazu verschiebt man die Zahlen vor der Rundung um 0.5 nach links, also substrahiert 0.5:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> x <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">round</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span>max <span class="sy0">-</span> min <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">-</span> <span class="nu0">0.5</span><span class="br0">&#41;</span> <span class="sy0">+</span> min<span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Dies sei hier nur der Vollständigkeit erwähnt. Um Verwirrung bei verschiedenen Lösungen mit <code>Math.round()</code> zu vermeiden, wird hier die Umsetzung mit <code>Math.floor()</code> favorisiert.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Helferfunktion zur Berechnung ganzzahliger, gleichverteilter Zufallszahlen">Bearbeiten</a>]</span> <span class="mw-headline" id="Helferfunktion_zur_Berechnung_ganzzahliger.2C_gleichverteilter_Zufallszahlen">Helferfunktion zur Berechnung ganzzahliger, gleichverteilter Zufallszahlen</span></h2>
+<p>Eine allgemeine Helferfunktion, die eine Zufallszahl aus dem Intervall [min;max] zurückgibt, könnte so aussehen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: allgemeine Helferfunktion zur Berechnung ganzzahliger Zufallszahlen
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-math.random-2.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">var</span> min <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">,</span>
+      max <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+&#160;
+ <span class="kw1">function</span> rand <span class="br0">&#40;</span>min<span class="sy0">,</span> max<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw1">return</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span>max <span class="sy0">-</span> min <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">+</span> min<span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-math.random-2.html">ansehen …</a></div></div>
+<p>Diese Funktion verhält sich wie <code>rand()</code> in der Programmiersprache PHP. Um eine zufällige ganze Zahl größer gleich 5 und kleiner gleich 10, also aus der Zahlenmenge <code>{ 5, 6, 7, 8, 9, 10 }</code> zu ziehen, rufen wir <code>rand(5, 10)</code> auf.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Demonstration">Bearbeiten</a>]</span> <span class="mw-headline" id="Demonstration">Demonstration</span></h2>
+<p>Bei 120 000 Ziehungen sollte jede Zahl aus der Menge { 5, 6, 7, 8, 9, 10 } im statistischen Mittel 20 000 mal gezogen werden, denn der Wahrscheinlichkeitswert liegt bei 1/6, also 0.16̅ (Periode 6, das heißt 0,16666... usw.). Klicken Sie auf&#160;»Berechnung starten«, um die beiden Lösungen zu vergleichen. Die angezeigten Wahrscheinlichkeiten sind gerundet. Sie können den Test auch mehrfach durchführen, um genauere Resultate zu bekommen. Sie werden das Ungleichgewicht bei den Zahlen 5 und 10 auf der Seite der Lösung mit <code>Math.round()</code> feststellen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-math.random-3.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> test <span class="sy0">=</span> <span class="br0">&#123;</span>
+	results <span class="sy0">:</span> <span class="br0">&#123;</span>
+		mathfloor <span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		mathround <span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#93;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	min <span class="sy0">:</span> <span class="nu0">5</span><span class="sy0">,</span>
+	max <span class="sy0">:</span> <span class="nu0">10</span><span class="sy0">,</span>
+	iterations <span class="sy0">:</span> <span class="nu0">120000</span><span class="sy0">,</span>
+	drawings <span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">,</span>
+	randFloor <span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span>test.<span class="me1">max</span> <span class="sy0">-</span> test.<span class="me1">min</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">+</span> test.<span class="me1">min</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	randRound <span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> <span class="kw4">Math</span>.<span class="me1">round</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span>test.<span class="me1">max</span> <span class="sy0">-</span> test.<span class="me1">min</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">+</span> test.<span class="me1">min</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	start <span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span>button<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> test.<span class="me1">iterations</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			test.<span class="me1">save</span><span class="br0">&#40;</span><span class="st0">&quot;mathfloor&quot;</span><span class="sy0">,</span> test.<span class="me1">randFloor</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			test.<span class="me1">save</span><span class="br0">&#40;</span><span class="st0">&quot;mathround&quot;</span><span class="sy0">,</span> test.<span class="me1">randRound</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		test.<span class="me1">drawings</span> <span class="sy0">+=</span> test.<span class="me1">iterations</span><span class="sy0">;</span>
+		test.<span class="me1">report</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	save <span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span>type<span class="sy0">,</span> n<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">var</span> resultArray <span class="sy0">=</span> test.<span class="me1">results</span><span class="br0">&#91;</span>type<span class="br0">&#93;</span><span class="sy0">;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">typeof</span> resultArray<span class="br0">&#91;</span>n<span class="br0">&#93;</span> <span class="sy0">==</span> <span class="st0">&quot;number&quot;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			resultArray<span class="br0">&#91;</span>n<span class="br0">&#93;</span><span class="sy0">++;</span>
+		<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+			resultArray<span class="br0">&#91;</span>n<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	report <span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">var</span> tbody <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">&quot;ausgabe&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">var</span> child <span class="sy0">=</span> tbody.<span class="me1">firstChild</span><span class="sy0">;</span>
+		<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">var</span> i <span class="sy0">=</span> tbody.<span class="me1">childNodes</span>.<span class="me1">length</span> <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">,</span> child<span class="sy0">;</span> i <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="sy0">;</span> i<span class="sy0">--</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			tbody.<span class="me1">removeChild</span><span class="br0">&#40;</span>tbody.<span class="me1">childNodes</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">var</span> html <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+		<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">var</span> i <span class="sy0">=</span> test.<span class="me1">min</span><span class="sy0">;</span> i <span class="sy0">&lt;=</span> test.<span class="me1">max</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw1">var</span> nRound <span class="sy0">=</span> test.<span class="me1">results</span>.<span class="me1">mathround</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw1">var</span> pRound <span class="sy0">=</span> <span class="br0">&#40;</span>nRound <span class="sy0">/</span> test.<span class="me1">drawings</span><span class="br0">&#41;</span>.<span class="me1">toString</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">substr</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">6</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">var</span> nFloor <span class="sy0">=</span> test.<span class="me1">results</span>.<span class="me1">mathfloor</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw1">var</span> pFloor <span class="sy0">=</span> <span class="br0">&#40;</span>nFloor <span class="sy0">/</span> test.<span class="me1">drawings</span><span class="br0">&#41;</span>.<span class="me1">toString</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">substr</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">6</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">var</span> row <span class="sy0">=</span> tbody.<span class="me1">insertRow</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="br0">&#40;</span>row.<span class="me1">insertCell</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>document.<span class="me1">createTextNode</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="br0">&#40;</span>row.<span class="me1">insertCell</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>document.<span class="me1">createTextNode</span><span class="br0">&#40;</span>nRound<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="br0">&#40;</span>row.<span class="me1">insertCell</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>document.<span class="me1">createTextNode</span><span class="br0">&#40;</span>pRound<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="br0">&#40;</span>row.<span class="me1">insertCell</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>document.<span class="me1">createTextNode</span><span class="br0">&#40;</span>nFloor<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="br0">&#40;</span>row.<span class="me1">insertCell</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>document.<span class="me1">createTextNode</span><span class="br0">&#40;</span>pFloor<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-math.random-3.html">ansehen …</a></div></div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 368/1000000
+Post‐expand include size: 4741/2097152 bytes
+Template argument size: 2613/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4144-0!*!0!!de-formal!*!* and timestamp 20150301221640 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;oldid=25491">http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;oldid=25491</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FAnwendung+und+Praxis%2FZufallszahlen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Zufallszahlen.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Zufallszahlen.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../../src.selfhtml.org/logo/S-110.png);" href="../../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../../Spezial_Linkliste/JavaScript/Anwendung_und_Praxis/Zufallszahlen.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Anwendung_und_Praxis/Zufallszahlen.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/Zufallszahlen&amp;oldid=25491" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../../Spezial_Durchsuchen/JavaScript-2FAnwendung_und_Praxis-2FZufallszahlen.html" title="Spezial:Durchsuchen/JavaScript-2FAnwendung und Praxis-2FZufallszahlen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 27. Januar 2015 um 17:16 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 607-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.168 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Anwendung_und_Praxis/Zufallszahlen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:21 GMT -->
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/Apache by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Webserver/Apache – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Webserver/Apache","wgTitle":"Webserver/Apache","wgCurRevisionId":24627,"wgArticleId":4722,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webserver"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Webserver/Apache","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="Webserver/Apache" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Webserver/Apache&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Webserver_Apache skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Webserver/Apache</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Webserver" title="Webserver">Webserver</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Der weltweit am häufigsten eingesetzte Webserver wurde im April 1995 erstmals in einer Version 0.6.2 publiziert. Er war das Ergebnis der Zusammenarbeit einer kleinen Entwicklergruppe, die sich das Ziel gesetzt hatte, einige bugfixes und Patches für eine bereits im NCSA (National Center for Supercomputing Applications) an der Universität von Illinois eingesetzte Software zusammenzutragen. Dieser ersten Sammlung von Patches verdankt die Software auch ihren Namen: a-patch-e. Die Assoziation, dass der Name des Servers vom Namen eines Indianerstammes abgeleitet sein könnte, wird dabei wohl ins Kalkül gezogen worden sein.
+</p><p>Die in den 90er Jahren des vergangenen Jahrhunderts einsetzende explosionsartige Entwicklung des Internet begünstigte die weitere Arbeit der Entwickler enorm und bot gleichzeitig Voraussetzungen dafür, dass der Bedarf für den Einsatz zuverlässiger Server-Software erheblich anstieg. Dazu kam, dass der Apache von Anfang an eine Open-Source-Entwicklung sein und kostenlos jedem zur Verfügung stehen sollte. Die Entwicklergemeinde vergrößerte sich rasch, sodass es schließlich 1999 zur Gründung der <a rel="nofollow" class="external text" href="http://www.apache.org/">Apache Software Foundation</a> kam. Die Entwicklungsarbeit wird beständig weitergeführt.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Die_Apache-Module"><span class="tocnumber">1</span> <span class="toctext">Die Apache-Module</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Die_Konfigurationsdatei_httpd.conf"><span class="tocnumber">2</span> <span class="toctext">Die Konfigurationsdatei httpd.conf</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Global_Environment_.28Globale_Umgebung.29"><span class="tocnumber">2.1</span> <span class="toctext">Global Environment (Globale Umgebung)</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#.22Main.22_server_configuration_.28Hauptserver-Konfiguration.29"><span class="tocnumber">2.2</span> <span class="toctext">"Main" server configuration (Hauptserver-Konfiguration)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Virtual_Hosts_.28virtuelle_Hosts.29"><span class="tocnumber">2.3</span> <span class="toctext">Virtual Hosts (virtuelle Hosts)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Die_Container_mit_den_einzelnen_Anweisungen"><span class="tocnumber">3</span> <span class="toctext">Die Container mit den einzelnen Anweisungen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#.3CIfDefine.3E_und_.3CIfModule.3E"><span class="tocnumber">3.1</span> <span class="toctext">&lt;IfDefine&gt; und &lt;IfModule&gt;</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.3CDirectory.3E_und_.3CDirectoryMatch.3E"><span class="tocnumber">3.2</span> <span class="toctext">&lt;Directory&gt; und &lt;DirectoryMatch&gt;</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.3CFiles.3E_und_.3CFilesMatch.3E"><span class="tocnumber">3.3</span> <span class="toctext">&lt;Files&gt; und &lt;FilesMatch&gt;</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#.3CLocation.3E_und_.3CLocationMatch.3E"><span class="tocnumber">3.4</span> <span class="toctext">&lt;Location&gt; und &lt;LocationMatch&gt;</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#.3CProxy.3E_und_.3CProxyMatch.3E"><span class="tocnumber">3.5</span> <span class="toctext">&lt;Proxy&gt; und &lt;ProxyMatch&gt;</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#.3CVirtualHost.3E"><span class="tocnumber">3.6</span> <span class="toctext">&lt;VirtualHost&gt;</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Weblinks"><span class="tocnumber">4</span> <span class="toctext">Weblinks</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Die Apache-Module">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Apache-Module">Die Apache-Module</span></h2>
+<p>Für jede Plattform lassen sich sowohl bereits vorkompilierte Pakete (für Windows beispielsweise MSI-Installationspakete) wie auch der komplette Sourcecode downloaden, sodass jeder Benutzer selbst entscheiden kann, wie er sich "seinen" Apache kompilieren möchte. Das setzt allerdings bereits etwas Erfahrung im Umgang mit einem C-Compiler und Makefiles voraus. Aber gerade dadurch lassen sich auch nur bedingt Aussagen über eine "Standard"-Installation treffen. Der Server selbst ist in der Regel nur eine relativ kleine ausführbare Datei. Sie kann aber je nach Konfiguration eine Vielzahl von Modulen mit teilweise sehr umfangreichen weiteren Funktionen ansprechen - und es kann auch sein, dass Sie solche Module selbst gleich "fest" mit in die ausführbare Datei einbinden möchten. Dieser modulare Aufbau birgt enorme Vorteile in sich und hat sich möglicherweise nur deshalb durchgesetzt, weil der Apache von Anfang an eben nichts wesentlich anderes als eine Sammlung von Patches rund um eine zentrale ausführbare Datei war.
+</p><p>Das Modul-Konzept war von Anfang an Bestandteil der "Bauweise" des Apache und gilt als eine seiner großen Stärken. Er nutzt konsequent den Einsatz von <a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.2/mpm.html">Multiprozessing-Modulen (MPM)</a>, die speziell dafür entwickelt wurden, dass der Apache Eigenarten der Plattform, auf der er eingesetzt wird, berücksichtigen kann. Gleichzeitig steuern diese MPM eine Reihe <a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.2/mod/mpm_common.html">zentraler Anweisungen</a>, die nahezu immer in der Apache-Konfiguration benötigt werden. 
+</p><p>Es gibt unterschiedliche Gruppen von Modulen: Basismodule (oder Kernmodule) und andere Module. Eine andere Gruppeneinteilung kann entsprechend dem Status vorgenommen werden - also entsprechend der Art, wie sie kompiliert werden: Multiprozessing-Module (MPM), Basismodule, Erweiterungsmodule, experimentelle und externe Module. Obwohl in den Sourcen mehrere solcher MPM-Module zur Verfügung stehen, wird immer nur genau eines benötigt, das auf die Einsatzplattform zugeschnitten ist. Auf einer Windows-Maschine kann daher immer nur <code>mpm_winnt</code> eingesetzt werden. Das hat damit zu tun, dass Windows kein echtes Multiprozess-System ist und für den Apache immer nur zwei Prozesse gestartet werden können - der eigentliche Server-Prozess und ein "Child"-Prozess. Auf einer Linux-Maschine können dagegen unterschiedliche "Child"-Prozesse gleichzeitig nebeneinander laufen.
+</p><p>Zur Laufzeit des Servers stehen die Kernmodule (und die eventuell statisch einkompilierten Module) immer zur Verfügung. Es gibt derzeit nur drei Kernmodule, die aber enorme Bedeutung haben:
+</p>
+<ul><li><code>core</code>: lässt den Einsatz von Containern in der <code>httpd.conf</code> zu, das Ansprechen von Serververzeichnissen und Dateien, die Festlegung von ServerRoot und DocumentRoot, das Anlegen von Protokolldateien, das Ansprechen eines Ports, Aliasnamen... kurz: die wirklich wichtigen Funktionen, die man als Administrator auch in der httpd.conf festlegen möchte, werden damit überhaupt erst ermöglicht.
+</li><li><code>http_core</code>: ist für KeepAlive zuständig und damit für die Lebensdauer von HTTP-Verbindungen. 
+</li><li><code>mod_so</code>: erlaubt den Zugriff auf andere Module, die mit der LoadModule-Anweisung als DSO Verwendung finden sollen
+</li><li> MP-Modul
+</li></ul>
+<p>Andere Module können entsprechend dem Konzept der "dynamic shared objects" (DSO) mit Hilfe der <code>LoadModule</code>-Anweisung in der <code>httpd.conf</code> dazugeladen werden. Einige dieser Module wird man in fast allen Fällen benutzen wollen, beispielsweise <code>mod_alias</code>, das solche wichtigen Befehle wie <code>ScriptAlias</code> konfiguriert, <code>mod_access</code>, das die Anweisung <code>Order Allow,Deny</code> konfiguriert oder <code>mod_dir</code>, mit dem ein <code>DirectoryIndex</code> erst ermöglicht wird. Wenn Sie wissen möchten, wie Ihr Apache kompiliert wurde, steht Ihnen dazu der Konsolenbefehl <code>apache -l</code> zur Verfügung (je nach installierter Version kann der Befehl auch httpd -l oder apache2 -l lauten). Auf einer Windows-Maschine mit installiertem Apache 2.2.4 ergibt das beispielsweise folgende Anzeige:
+</p>
+<pre>
+ Compiled in modules:
+    core.c
+    mod_win32.c
+    mpm_winnt.c
+    http_core.c
+    mod_so.c
+</pre>
+<p>Abhängig davon, wie der Apache konfiguriert wurde, kann man sich auch mit server-info als Bestandteil der aufgerufenen URL - in der Form <code>http://domain.tld/server-info</code> - wesentlich umfangreichere Informationen anzeigen lassen. Diese Liste enthält auch Angaben über diejenigen Module, die zur Server-Laufzeit mit Hilfe der LoadModule-Anweisung eingebunden werden und ist sehr nützlich, wenn man sich rasch darüber informieren möchte, welche Anweisungen in der httpd.conf überhaupt verwendet werden dürfen.
+</p><p>In der Apache-Online-Dokumentation gibt es eine bereits übersetzte <a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.2/mod/">Auflistung</a> aller möglichen Module. Die Seite mit den Erläuterungen zu <a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.4/mod/core.html">core</a> ist ebenfalls in deutscher Sprache verfügbar und sollte bei auftretenden Fragen oder Unklarheiten immer konsultiert werden.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Gegenüber Apache 2.0.x haben sich bei Apache 2.2.x Namen und Funktionsweisen einiger Module geändert.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Die Konfigurationsdatei httpd.conf">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Konfigurationsdatei_httpd.conf">Die Konfigurationsdatei httpd.conf</span></h2>
+<p>Sobald der Apache startet, fragt er eine zentrale Konfigurationsdatei nach Anweisungen ab, wie er sich verhalten soll. Diese zentrale Konfigurationsdatei trägt in der Regel den Namen <code>httpd.conf</code>. Sie kann aber auch einen anderen Namen tragen, wenn der Webserver mit entsprechenden Anweisungen kompiliert wurde. Einige jüngere Linux-Distributionen verwenden in ihren distributionsspezifischen Paketen beispielsweise Namen wie "apache.conf".
+</p><p>Diese zentrale Konfigurationsdatei ist eine Textdatei, in der eine Reihe von Anweisungen notiert wird, an denen sich der Apache orientiert. Bei jeder Installation wird sie in einer Standard-Form angelegt und enthält zusätzlich zu den Anweisungen auch noch kurze erläuternde Kommentare (von einigen Linux-Distributionen wird die Konfigurationsdatei seit Apache 2.0.50 in mehrere kleinere Dateien aufgesplittet). Im wesentlichen enthält die httpd.conf drei größere Funktionsabschnitte, in denen die unbedingt nötigen Festlegungen stehen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Global Environment (Globale Umgebung)">Bearbeiten</a>]</span> <span class="mw-headline" id="Global_Environment_.28Globale_Umgebung.29">Global Environment (Globale Umgebung)</span></h3>
+<p>Unter "Globale Umgebung" werden die Bedingungen verstanden, unter denen der Apache Webserver arbeiten soll. Zu dieser Arbeitsumgebung gehören:
+</p>
+<ul><li><b>Angaben zum Servertyp</b><br />(wobei für den Einsatz auf einem Windows-Rechner ausschließlich der Typ "standalone" gewählt werden kann)
+</li><li>die <b>Definition des Verzeichnisses</b> bzw. Laufwerks auf dem Rechner, in dem sich die Programm-, Konfigurations- und Protokolldateien befinden
+</li><li>ein paar Festlegungen für Zugriffszeiten und -zahlen
+</li><li>die Liste der zur Laufzeit einzubindenden Module
+</li><li><b>Angabe der IP-Schnittstelle(n)</b> und des/der zugewiesenen Ports<br />In der Regel Port 80, es kann sinnvoll sein, einen anderen Port für ein lokales Netzwerk zu wählen, um möglichen Konflikten auszuweichen. Dann sollte es einer der nicht für Standards vorgesehenen Ports über 1024 sein.
+</li></ul>
+<p>Bei diesen Definitionen der Arbeitsumgebung gibt es noch nicht allzuviele Variationsmöglichkeiten. Wichtig ist die Liste der Module, die nicht ohne Grund zur globalen Umgebung zählen. Im Standardfall ist die Liste der zuladbaren Module erst einmal weitgehend deaktiviert. Es lohnt sich aber, die Dokumentation zu den Modulen gründlich nachzulesen und dann diejenigen Module zu aktivieren, mit denen man arbeiten möchte. Auch das Einbinden individuell erstellter oder aus dem Internet heruntergeladener weiterer Module ist hier möglich.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: &quot;Main&quot; server configuration (Hauptserver-Konfiguration)">Bearbeiten</a>]</span> <span class="mw-headline" id=".22Main.22_server_configuration_.28Hauptserver-Konfiguration.29">"Main" server configuration (Hauptserver-Konfiguration)</span></h3>
+<p>Nachdem die Arbeitsumgebung definiert worden ist, folgen als nächstes die Anweisungen zur Arbeitsweise. Arbeitsweise bedeutet dabei im wesentlichen:
+</p>
+<ul><li>Servername und Administrator-Adresse
+</li><li>Pfadangaben zu Dokument-, Benutzer- und Scriptverzeichnissen
+</li><li>Formatierung der Protokolldateien
+</li><li>Aufgabenzuweisung an die geladenen Module
+</li></ul>
+<p>Während die Festlegung des Ports, die Namensgebung (ein Servername wird zwingend verlangt, sonst startet Apache nicht) sowie die Bestimmung der Pfade von Server-Verzeichnissen und die Inhaltsvorgabe für die Protokolldateien (Logs) in der Regel keine Probleme darstellen, liegt die Hauptarbeit eines Administrators wahrscheinlich darin, den Modulen die gewünschten Aufgaben zur Erledigung zuzuweisen. Ob diese Zuweisungen von Apache befolgt werden können, ist davon abhängig, ob das entsprechende Modul überhaupt geladen ist.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Virtual Hosts (virtuelle Hosts)">Bearbeiten</a>]</span> <span class="mw-headline" id="Virtual_Hosts_.28virtuelle_Hosts.29">Virtual Hosts (virtuelle Hosts)</span></h3>
+<p>Der Begriff virtueller Host wurde eingeführt, um das Konzept zu kennzeichnen, mit dem auf ein und derselben Maschine mehrere unterschiedliche Webangebote verfügbar gemacht werden können. Der Apache gilt als einer der ersten Server überhaupt, die IP-basierte virtuelle Hosts direkt unterstützt haben (seit Version 1.1).
+</p><p>Es gibt grundsätzlich zwei Methoden, virtuelle Hosts einzurichten:
+</p>
+<ul><li> namensgestützte virtuelle Hosts
+</li><li> IP-gestützte virtuelle Hosts
+</li></ul>
+<p>IP-Adressen werden benötigt, damit die Datenpakete des Übertragungsprotokolls (TCP/IP) tatsächlich nur von dem Rechner (bzw. der Netzwerk-Schnittstelle) angenommen werden, dem eine solche individuelle Adresse zugeordnet ist. Dazu müssen Domainname und IP-Adresse der Registrierung entsprechen, die in einer Datenbank archiviert ist. Diese Aufgabe fällt dem Domain Name Service (DNS) zu. Nur wenn auf einem Rechner IP-Adresse und Domainname mit diesen DNS-Daten übereinstimmen, kann der Rechner, der über die gesuchte IP-Adresse und den Domainnamen verfügt, die Datenpakete auch erhalten und weiterbearbeiten.
+</p><p>Namensgestützte virtuelle Hosts machen es möglich, mehrere unterschiedliche Domainnamen einer einzelnen IP-Adresse zuzuordnen. Der Webserver wird damit in die Lage versetzt, die Verwaltung der Domains auch auf unterschiedliche Art zu realisieren - beispielsweise könnte eine Domain für CGI-Scripts eingerichtet werden, eine andere dagegen keine solchen Scripts zulassen. Das Konzept für namensbasierte virtuelle Hosts ist relativ einfach und wird auch am häufigsten genutzt.
+</p><p>IP-gestützte virtuelle Hosts erhalten unterschiedliche IP-Adressen. Die Zahl der verfügbaren IP-Adressen ist jedoch eng begrenzt, da den Netzwerk-Schnittstellen einer (physischen) Maschine ja immer nur eine individuelle IP-Adresse zugeordnet werden kann. Werden mehrere IP-Adressen benötigt, kann das mit einer Methode, die IP-Aliasing genannt wird, erreicht werden. Solche IP-Aliase können nun einer Domain zugewiesen werden, zusätzlich aber auch für weitere namensgestützte virtuelle Hosts Verwendung finden.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Ab Apache 2.2.2 wird von der Apache Software Foundation empfohlen, nicht mehr eine einzelne Konfigurationsdatei einzusetzen, sondern sie in mehrere kleinere Teile aufzutrennen. Eine Praxis, die bei Linux-Distributionen schon seit Apache 2.0.50 auf unterschiedliche Weise verfolgt wurde. Auf einem Windows-System finden Sie bei einer Standardinstallation jetzt ebenfalls mehrere Unterverzeichnisse im /conf-Verzeichnis, beispielsweise default und extra.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Die Container mit den einzelnen Anweisungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Container_mit_den_einzelnen_Anweisungen">Die Container mit den einzelnen Anweisungen</span></h2>
+<p>Wenn man das erstemal einen Blick in die <code>httpd.conf</code> wagt, ist es durchaus möglich, dass ihr grundsätzlicher Aufbau an ein HTML-Dokument erinnert. Sie enthält eine Reihe von Eintragungen, die von den gewohnten &lt; spitzen Klammern &gt; umschlossen werden und wie "Tags" wirken. Selbstverständlich sind sie das nicht. Sondern es handelt sich um so genannte Container, in denen jeweils ganz bestimmte Anweisungen zusammengefasst werden.
+</p><p>Folgende Container sind derzeit möglich: <code>&lt;Directory&gt;</code>, <code>&lt;DirectoryMatch&gt;</code>, <code>&lt;Files&gt;</code>, <code>&lt;FilesMatch&gt;</code>, <code>&lt;IfDefine&gt;</code>, <code>&lt;IfModule&gt;</code>, <code>&lt;Location&gt;</code>, <code>&lt;LocationMatch&gt;</code>, <code>&lt;Proxy&gt;</code>, <code>&lt;ProxyMatch&gt;</code> und <code>&lt;VirtualHost&gt;</code>. Man kann sie nach zwei Gruppen ordnen: <code>&lt;IfDefine&gt;</code> und <code>&lt;IfModule&gt;</code> werden ausgewertet, sobald der Server selbst startet und müssen nicht bei Anfragen berücksichtigt werden. Darin enthaltene Anweisungen werden nur wirksam, wenn eine Bedingung zutrifft. Die anderen Container enthalten Anweisungen, mit denen Verzeichnisse angesprochen werden können und die das Verhalten bei Zugriffen auf bereitgestellten Webspace bestimmen. Sie werden bei Anfragen ausgewertet.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: &lt;IfDefine> und &lt;IfModule>">Bearbeiten</a>]</span> <span class="mw-headline" id=".3CIfDefine.3E_und_.3CIfModule.3E">&lt;IfDefine&gt; und &lt;IfModule&gt;</span></h3>
+<p><code>&lt;IfDefine&gt;</code> reagiert auf Parameter, die bei Serverstart in der Befehlszeile eingegeben werden (können). Dabei gibt es zwei unterschiedliche Reaktionsweisen: es kann festgelegt werden, ob eine Bedingung zutrifft oder ob sie nicht zutrifft, abhängig davon werden die im Container enthaltenen Anweisungen ausgeführt - oder eben nicht ausgeführt. Die Startparameter selbst kann man auch in einem Startscript vorgeben. Im Standardfall wird <code>&lt;IfDefine&gt;</code> nicht benötigt und ist auch nicht in einer Standard-<code>httpd.conf</code> enthalten.
+<code>&lt;IfModule&gt;</code> werden Sie dagegen häufiger nutzen wollen, da mindestens die Festlegung für eines der Multi-Prozessing-Module benötigt wird sowie nahezu immer auch weitere Module angesprochen werden sollen. Die Module selbst stellen erst die benötigten Anweisungen bereit, es ist sicherer, modul-spezifische Anweisungen innerhalb eines <code>&lt;IfModule&gt;</code>-Containers zu notieren, da der Apache auf diese Anweisungen nur dann zugreift, wenn das entsprechende Modul tatsächlich geladen ist.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: &lt;Directory> und &lt;DirectoryMatch>">Bearbeiten</a>]</span> <span class="mw-headline" id=".3CDirectory.3E_und_.3CDirectoryMatch.3E">&lt;Directory&gt; und &lt;DirectoryMatch&gt;</span></h3>
+<p><code>&lt;Directory&gt;</code> wird eingesetzt, um Anweisungen zusammenzufassen, die nur für das genannte Verzeichnis und dessen Unterverzeichnisse gelten. Die Verzeichnisnamen werden unmittelbar im Container notiert. "Verzeichnisname" ist dabei entweder der vollständige Pfad zu einem Verzeichnis oder eine Zeichenkette mit Platzhaltern. In einer Zeichenkette mit Platzhaltern entspricht&#160;? einem einzelnen Zeichen und * einer Zeichenkette beliebiger Länge.<code>&lt;Directory&gt;</code>-Container sind so gut wie immer in einer httpd.conf enthalten.
+<code>&lt;DirectoryMatch&gt;</code> erfüllt dieselben Aufgaben wie <code>&lt;Directory&gt;</code>, mit dem Unterschied, dass als "Verzeichnisname" hier ein Regulärer Ausdruck Verwendung findet und kein Verzeichnisname.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: &lt;Files> und &lt;FilesMatch>">Bearbeiten</a>]</span> <span class="mw-headline" id=".3CFiles.3E_und_.3CFilesMatch.3E">&lt;Files&gt; und &lt;FilesMatch&gt;</span></h3>
+<p>Der Container <code>&lt;Files&gt;</code> enthält Anweisungen, die nur für ganz bestimmte Dateien gültig werden sollen. Dieser Container wird beispielsweise benutzt, um <code><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess">.htaccess</a></code>-Dateien vor unbefugten Zugriffen zu verbergen. Das Pendant <code>&lt;FilesMatch&gt;</code> erfüllt dieselbe Aufgabe, wiederum mit dem Unterschied, dass anstelle eines bestimmten Dateinamens ein <a href="http://wiki.selfhtml.org/wiki/Regulärer_Ausdruck" title="Regulärer Ausdruck">Regulärer Ausdruck</a> eingegeben werden kann, womit beispielsweise mehrere Dateinamen - eventuell Grafikformate - auf identische Weise behandelt werden können.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: &lt;Location> und &lt;LocationMatch>">Bearbeiten</a>]</span> <span class="mw-headline" id=".3CLocation.3E_und_.3CLocationMatch.3E">&lt;Location&gt; und &lt;LocationMatch&gt;</span></h3>
+<p>Der Container <code>&lt;Location&gt;</code> gilt für URLs. Das ist bisweilen nicht leicht verständlich, da ja der Apache in der Regel auf Anfragen reagiert, die ein Client (ein Browser) mit der Angabe einer URL an ihn schickt. Es wird jedoch klar, wenn man sich vor Augen hält, dass <code>&lt;Directory&gt;</code> und <code>&lt;Files&gt;</code> für Dateien gelten, die innerhalb von Serververzeichnissen liegen, <code>&lt;Location&gt;</code> dagegen Informationen abruft, die nicht zum Serverdateisystem gehören (müssen). Verdeutlichen kann man sich diesen Unterschied anhand der vorformulierten <code>&lt;Location&gt;</code>-Container für <code>server-info</code> und <code>server-status</code>. Auch hier gilt wieder, dass das Pendant <code>&lt;LocationMatch&gt;</code> eingesetzt wird, wenn Reguläre Ausdrücke eingesetzt werden sollen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: &lt;Proxy> und &lt;ProxyMatch>">Bearbeiten</a>]</span> <span class="mw-headline" id=".3CProxy.3E_und_.3CProxyMatch.3E">&lt;Proxy&gt; und &lt;ProxyMatch&gt;</span></h3>
+<p>Ein <code>&lt;Proxy&gt;</code>-Container kann nur eingesetzt werden, wenn zuvor das entsprechende Modul <code>mod_proxy</code> geladen wurde. Es gibt noch weitere Module für den Umgang mit Proxy-Inhalten, beispielsweise <code>mod_proxy_ftp</code>, mit dem der Apache in die Lage versetzt werden kann, FTP-Inhalte auszuliefern - sofern sie denn im Proxy-Cache gespeichert sind. Gelegentlich wird darauf hingewiesen, dass <code>&lt;Proxy&gt;</code> nicht genutzt werden sollte, wenn gleichzeitig SSL aktiviert ist. Auch hier findet das Pendant <code>&lt;ProxyMatch&gt;</code> dann Verwendung, wenn Reguläre Ausdrücke genutzt werden sollen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: &lt;VirtualHost>">Bearbeiten</a>]</span> <span class="mw-headline" id=".3CVirtualHost.3E">&lt;VirtualHost&gt;</span></h3>
+<p>Dies ist der vielleicht am besten bekannte Container. Innerhalb von <code>&lt;VirtualHost&gt;</code>-Containern kann nahezu alles andere ebenfalls enthalten sein, was im Hauptabschnitt der <code>httpd.conf</code> (main server configuration) Verwendung finden darf.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Umfangreichere Informationen über die Container sind in der [<a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.2/sections.html">Apache-Dokumentation</a>] zu finden.
+<p>Die Standard-Datei, die Sie während der Installation des Apache erhalten, sollten Sie unbedingt bearbeiten, da eine Reihe von Einstellungen, auf die Sie vielleicht Wert legen (z.B. die Erlaubnis zum Ausführen von Scripts), erst aktiviert werden muss. Sie haben weitgehende Freiheiten, aus der <code>httpd.conf</code> eventuell kleinere Dateien auszugliedern, die Sie dann mit Include in die <code>httpd.conf</code> wieder einbinden. Wenn Sie beispielsweise viele virtuelle Hosts zu betreuen haben, werden Sie mindestens dafür eine gesonderte Datei anlegen wollen - einfach deshalb, weil Sie damit einen besseren Überblick haben.
+</p>
+Aus Gründen des Überblicks sollten Sie grundsätzlich, noch bevor Sie irgendwelche Anpassungen vornehmen, eine Kopie Ihrer <code>httpd.conf</code> unter anderem Dateinamen und möglichst auch an einer anderen Stelle auf Ihrem Rechner abspeichern. Geht dann irgendetwas schief, können Sie sie zurückkopieren und haben wenigstens den Ausgangszustand wiederhergestellt. Haben Sie eine solche Kopie abgelegt, sollten Sie aus der <code>httpd.conf</code> alle Kommentare entfernen (da Sie sie ja bei Bedarf in Ihrer Kopie immer noch nachlesen können) sowie die Anweisungen streichen, bei denen Sie sicher sind, dass Sie sie nicht brauchen werden. Sie werden sehen, dass dann Ihre resultierende <code>httpd.conf</code> bereits eine relativ "handliche" Größe aufweist. Bei allen Fragen, die sich Ihnen dann eventuell stellen, lesen Sie bitte in der Apache-Dokumentation nach, die Sie auch auf Ihrem Rechner vorfinden.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Weblinks">Bearbeiten</a>]</span> <span class="mw-headline" id="Weblinks">Weblinks</span></h2>
+<p>Die <a rel="nofollow" class="external text" href="http://www.apache.org/">Apache Software Foundation</a> pflegt eine umfangreiche Dokumentation, auf die Sie sicher zurückgreifen wollen, wenn Ihnen irgendetwas bei der Administration Ihres Apache nicht klar ist. 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.0/">deutschsprachige Dokumentation zur Version 2.0</a> (wird nicht mehr gepflegt)
+</li><li><a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.2/">deutschsprachige Dokumentation zur Version 2.2</a>
+</li><li><a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.4/">deutschsprachige Dokumentation zur Version 2.4</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 132/1000000
+Post‐expand include size: 5036/2097152 bytes
+Template argument size: 2261/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4722-0!*!0!!de-formal!*!* and timestamp 20150301114506 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;oldid=24627">http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;oldid=24627</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:Webserver" title="Kategorie:Webserver">Webserver</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Webserver%2FApache" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Webserver/Apache&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/Apache" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Webserver/Apache" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Webserver/Apache" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Webserver/Apache&amp;oldid=24627" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Webserver-2FApache" title="Spezial:Durchsuchen/Webserver-2FApache">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 25. Dezember 2014 um 19:17 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.893-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.124 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/Apache by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+</html>

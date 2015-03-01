@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>XML/DTD/Elemente und Verschachtelungsregeln – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"XML/DTD/Elemente_und_Verschachtelungsregeln","wgTitle":"XML/DTD/Elemente und Verschachtelungsregeln","wgCurRevisionId":24237,"wgArticleId":4640,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"XML/DTD/Elemente_und_Verschachtelungsregeln","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-xml {line-height: normal;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.xml.source-xml .de1, .xml.source-xml .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.xml.source-xml  {font-family:monospace;}
+.xml.source-xml .imp {font-weight: bold; color: red;}
+.xml.source-xml li, .xml.source-xml .li1 {font-weight: normal; vertical-align:top;}
+.xml.source-xml .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.xml.source-xml .li2 {font-weight: bold; vertical-align:top;}
+.xml.source-xml .es0 {color: #000099; font-weight: bold;}
+.xml.source-xml .br0 {color: #66cc66;}
+.xml.source-xml .sy0 {color: #66cc66;}
+.xml.source-xml .st0 {color: #ff0000;}
+.xml.source-xml .nu0 {color: #cc66cc;}
+.xml.source-xml .sc-1 {color: #808080; font-style: italic;}
+.xml.source-xml .sc0 {color: #00bbdd;}
+.xml.source-xml .sc1 {color: #ddbb00;}
+.xml.source-xml .sc2 {color: #339933;}
+.xml.source-xml .sc3 {color: #009900;}
+.xml.source-xml .re0 {color: #000066;}
+.xml.source-xml .re1 {color: #000000; font-weight: bold;}
+.xml.source-xml .re2 {color: #000000; font-weight: bold;}
+.xml.source-xml .ln-xtra, .xml.source-xml li.ln-xtra, .xml.source-xml div.ln-xtra {background-color: #ffc;}
+.xml.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="XML/DTD/Elemente und Verschachtelungsregeln" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/XML/DTD/Elemente_und_Verschachtelungsregeln&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-XML_DTD_Elemente_und_Verschachtelungsregeln skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">XML/DTD/Elemente und Verschachtelungsregeln</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/XML" title="XML">XML</a> | <a href="http://wiki.selfhtml.org/wiki/XML/DTD" title="XML/DTD">DTD</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Ein <b>Element</b> ist das, was in einer XML-basierten Auszeichnungssprache durch eine Notation wie z.B. <code>&lt;geburtsdatum&gt;...&lt;/geburtsdatum&gt;</code> dargestellt wird. In einer DTD können Sie den zugehörigen Elementtyp definieren, also etwa den Elementtyp <code>geburtsdatum</code>. Dabei bestimmen Sie den Namen des Elements und geben an, welchen Inhalt das Element haben kann.
+</p><p>Elemente können auch verschachtelt sein, und es sind Regeln möglich, wie oft und an welchen Stellen ein Element vorkommen kann. So kann in HTML etwa das Element <code>&lt;tr&gt;...&lt;/tr&gt;</code> nur innerhalb von <code>&lt;table&gt;...&lt;/table&gt;</code> vorkommen. Zwischen <code>&lt;table&gt;</code> und <code>&lt;/table&gt;</code> dürfen Sie darüber hinaus auch keinen Text notieren, sondern müssen die Tabellenstruktur beachten, die innere Elemente wie <code>&lt;tr&gt;...&lt;/tr&gt;</code> fordert. Solche Regeln bestimmen Sie beim Definieren der Elementtypen Ihrer DTD.
+</p><p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Schema_zur_Definition_von_Elementtypen"><span class="tocnumber">1</span> <span class="toctext">Schema zur Definition von Elementtypen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Elementtypen_mit_Zeicheninhalt_definieren"><span class="tocnumber">2</span> <span class="toctext">Elementtypen mit Zeicheninhalt definieren</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Elementtypen_mit_Elementinhalt_definieren"><span class="tocnumber">3</span> <span class="toctext">Elementtypen mit Elementinhalt definieren</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Beliebig_viele_Wiederholungen_eines_Elementtyps_definieren"><span class="tocnumber">4</span> <span class="toctext">Beliebig viele Wiederholungen eines Elementtyps definieren</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Alternative_und_optionale_Elementtypen_f.C3.BCr_Elementinhalt_definieren"><span class="tocnumber">5</span> <span class="toctext">Alternative und optionale Elementtypen für Elementinhalt definieren</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Elemente_mit_gemischtem_Inhalt_definieren"><span class="tocnumber">6</span> <span class="toctext">Elemente mit gemischtem Inhalt definieren</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Elemente_mit_beliebigem_Inhalt_definieren"><span class="tocnumber">7</span> <span class="toctext">Elemente mit beliebigem Inhalt definieren</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Leere_Elemente_ohne_Inhalt_definieren"><span class="tocnumber">8</span> <span class="toctext">Leere Elemente ohne Inhalt definieren</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Elementgruppen_zusammenfassen"><span class="tocnumber">9</span> <span class="toctext">Elementgruppen zusammenfassen</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Zusammenh.C3.A4ngendes_Beispiel:_ein_Buch"><span class="tocnumber">10</span> <span class="toctext">Zusammenhängendes Beispiel: ein Buch</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Beispiel_einer_g.C3.BCltige_Anwendung"><span class="tocnumber">10.1</span> <span class="toctext">Beispiel einer gültige Anwendung</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Schema zur Definition von Elementtypen">Bearbeiten</a>]</span> <span class="mw-headline" id="Schema_zur_Definition_von_Elementtypen">Schema zur Definition von Elementtypen</span></h2>
+<p>Elementtypen werden innerhalb einer DTD nach folgendem Schema notiert:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Schema
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT Name <span class="br0">&#40;</span>Inhalt<span class="br0">&#41;</span><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Die Definition eines Elements beginnt mit einer öffnenden spitzen Klammer &lt;. Dahinter folgt unmittelbar anschließend ein Ausrufezeichen&#160;! und dahinter, in Großbuchstaben, das Schlüsselwort ELEMENT. Anschließend folgt ein Name für das Element. Den Namen können Sie frei wählen. Er muss jedoch den [[<a href="http://wiki.selfhtml.org/wiki/XML/DTD/Bearbeitungsregeln" title="XML/DTD/Bearbeitungsregeln">Regeln für Namen in XML</a> genügen. Hinter dem Namen notieren Sie Angaben zum Inhalt des Elementtyps. Diese Angaben können recht komplex sein und regeln, woraus ein Element bestehen kann. Abgeschlossen wird die Elementtyp-Definition mit einer schließenden spitzen Klammer &gt;. Die einzelnen Teile der Elementtyp-Definition werden durch ein oder mehrere Leerzeichen voneinander getrennt.
+</p><p>Eine solche Elementtyp-Definition können Sie an irgendeiner Stelle innerhalb der DTD definieren - vor oder nach anderen Definitionen wie <code>&lt;!ATTLIST...&gt;</code> (<a href="http://wiki.selfhtml.org/wiki/XML/DTD/Attribute_und_Wertzuweisungen" title="XML/DTD/Attribute und Wertzuweisungen">|Attribute</a>), <code>&lt;!ENTITY...&gt;</code> (<a href="http://wiki.selfhtml.org/wiki/XML/DTD/Entities" title="XML/DTD/Entities">Entities</a>) oder <code>&lt;!NOTATION...&gt;</code> (<a href="http://wiki.selfhtml.org/wiki/XML/DTD/Notationen" title="XML/DTD/Notationen">Notationen</a>).
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Elementtypen mit Zeicheninhalt definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Elementtypen_mit_Zeicheninhalt_definieren">Elementtypen mit Zeicheninhalt definieren</span></h2>
+<p>Zeicheninhalt bedeutet, dass ein Element als Inhalt beliebigen und beliebig viel Text enthalten kann, aber keine weiteren Elemente. Zeicheninhalt ist eine beliebige und beliebig lange Zeichenfolge, also Text, Zahlen, und Sonderzeichen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD durchwahlnummer.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT durchwahlnummer <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird ein Elementtyp definiert, der in der Anwendung als Element <code>&lt;durchwahlnummer&gt;...&lt;/durchwahlnummer&gt;</code> notiert werden kann. Es gilt das <a href="#Schema_zur_Definition_von_Elementtypen">Schema zur Definition von Elementtypen</a>. Den Zeicheninhalt kennzeichnen Sie durch den Schlüsselbezeichner #PCDATA (Abkürzung für parsed character data, zu deutsch analysierte Zeichendaten). Das Gatterzeichen ist erforderlich, PCDATA muss groß geschrieben sein, und das Ganze muss in runde Klammern eingeschlossen sein.
+</p><p>Beispiel einer gültigen Anwendung:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Seite Anzeigebeispiel: So sieht's aus (XML-fähiger Browser zeigt z.B. die Datenstruktur an)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE durchwahlnummer SYSTEM &quot;durchwahlnummer.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;durchwahlnummer<span class="re2">&gt;</span></span></span>123456<span class="sc3"><span class="re1">&lt;/durchwahlnummer<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Der Elementtyp <code>durchwahlnummer</code> erlaubt Zeichendaten, eine Zeichenfolge wie 123456 ist also ein korrekter Inhalt.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Das Element <code>durchwahlnummer</code> ist in diesem extrem einfachen Beispiel zugleich das Dokument-Element.</div>
+<ol><li>PCDATA bedeutet zwar so viel wie "beliebig viel Text", aber es bedeutet auch so viel wie "keine anderen, inneren Elemente". Eine Anwendung wie <code>&lt;durchwahlnummer&gt;&lt;fett&gt;123456&lt;/fett&gt;&lt;/durchwahlnummer&gt;</code> ist nach der Definition des Elements <code>durchwahlnummer</code> also unzulässig. Für solche Fälle müssen Sie <a href="#Elementtypen_mit_Elementinhalt_definieren"> Elementtypen mit Elementinhalt</a> oder <a href="#Elemente_mit_gemischtem_Inhalt_definieren"> Elementtypen mit gemischtem Inhalt</a> definieren.
+</li></ol>
+<p>Das P in PCDATA bedeutet, dass der Inhalt vom XML-Parser durchaus analysiert wird. Für die Praxis bedeutet dies, dass im Inhalt eines so definierten Elements die <a href="http://wiki.selfhtml.org/wiki/XML/Regeln/Zeichen" title="XML/Regeln/Zeichen">Regeln für Zeichen und Zeichenkodierungen</a> zu beachten sind.
+</p><p>In der Version 1.0 unterscheidet XML nicht zwischen verschiedenen Datentypen etwa für numerische oder alphanumerische Daten. Der Datentyp PCDATA entspricht dem Datentyp für alphanumerische Zeichenketten (Strings) in Programmiersprachen - Datentypen für Zahlen, Datumsformate oder dergleichen gibt es nicht. Dies wird von Entwicklern bereits als großer Nachteil empfunden, und künftige Versionen von XML werden vermutlich neben PCDATA mehrere Datentypen anbieten.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Elementtypen mit Elementinhalt definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Elementtypen_mit_Elementinhalt_definieren">Elementtypen mit Elementinhalt definieren</span></h2>
+<p>Im Gegensatz zu einem <a href="#Elementtypen_mit_Zeicheninhalt_definieren">Elementtyp mit Zeicheninhalt</a> ist ein Elementtyp mit Elementinhalt ein solcher, der andere, innere Elementtypen enthält. Er darf jedoch selber keine Zeichendaten enthalten, sondern nur aus anderen Elementen bestehen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD telefonnummer.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT telefonnummer <span class="br0">&#40;</span>vorwahlnummer, durchwahlnummer<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT vorwahlnummer <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT durchwahlnummer <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel werden drei Elementtypen definiert. Die erste der drei Definitionen ist dabei ein Elementtyp mit Elementinhalt. Eine solche Definition hat den gleichen Aufbau wie die Definition eines Elementtyps mit Zeicheninhalt. Es gilt das <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln#Schema_zur_Definition_von_Elementtypen" title="XML/DTD/Elemente und Verschachtelungsregeln">Schema zur Definition von Elementtypen</a>. Der Unterschied besteht darin, dass in den runden Klammern, in denen der Inhalt des Elementtyps definiert wird, die Namen anderer Elementtypen notiert werden, und zwar durch Kommata getrennt.
+</p><p>Im obigen ersten Beispiel wird für den Elementtyp telefonnummer eine feste Elementfolge definiert, bestehend aus den Elementtypen <code>vorwahlnummer</code> und <code>durchwahlnummer</code>. Der Elementtyp <code>telefonnummer</code> darf also nach obiger Definition genau einmal die Elemente <code>vorwahlnummer</code> und <code>durchwahlnummer</code> enthalten, und zwar in dieser Reihenfolge.
+</p><p>Zugleich ist das Element <code>telefonnummer</code> im Beispiel das Dokument-Element, also das äußerste Element der Daten.
+</p><p>Beispiel einer gültigen Anwendung:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Seite Anzeigebeispiel: So sieht's aus (XML-fähiger Browser zeigt z.B. die Datenstruktur an)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE telefonnummer SYSTEM &quot;telefonnummer.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;telefonnummer<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;vorwahlnummer<span class="re2">&gt;</span></span></span>069<span class="sc3"><span class="re1">&lt;/vorwahlnummer<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;durchwahlnummer<span class="re2">&gt;</span></span></span>974791003<span class="sc3"><span class="re1">&lt;/durchwahlnummer<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/telefonnummer<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Die Elementtypen <code>telefonnummer, vorwahlnummer</code> und <code>durchwahlnummer</code> sind so verschachtelt, wie es in der DTD definiert wurde. Die Elementtypen <code>vorwahlnummer</code> und <code>durchwahlnummern</code> enthalten nichts anderes als Zeichendaten und damit einen korrekten Inhalt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Beliebig viele Wiederholungen eines Elementtyps definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Beliebig_viele_Wiederholungen_eines_Elementtyps_definieren">Beliebig viele Wiederholungen eines Elementtyps definieren</span></h2>
+<p>Wenn Sie nichts anderes angeben, darf ein Elementtyp nur einmal vorkommen. Damit das Element eines Elementtyps mehrfach notiert werden kann, müssen Sie dies in der DTD kenntlich machen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD kochrezept.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT kochrezept <span class="br0">&#40;</span>zutatenliste, anweisungsfolge<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT zutatenliste <span class="br0">&#40;</span>zutat<span class="br0">&#41;</span>+<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT zutat <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT anweisungsfolge <span class="br0">&#40;</span>anweisung<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT anweisung <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel einer einfachen DTD für ein Kochrezept. Für alle Definitionen im Beispiel gilt das <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln#Schema_zur_Definition_von_Elementtypen" title="XML/DTD/Elemente und Verschachtelungsregeln">Schema zur Definition von Elementtypen</a>. Definiert wird zunächst der Elementtyp <code>kochrezept</code> für das Dokument-Element. Dieser Elementtyp hat <a href="#Elementtypen_mit_Elementinhalt_definieren">Elementinhalt</a>. Der Inhalt besteht aus den beiden Elementtypen <code>zutatenliste</code> und <code>anweisungsfolge</code>. Diese beiden Elementtypen werden definiert. Beide bestehen wiederum aus Elementinhalt.
+</p><p>Dabei kann <code>zutatenliste</code> einen oder mehrere Elementtypen <code>zutat</code> enthalten. Der Grund ist das Pluszeichen + in der Definition hinter der Angabe zum Inhalt. Durch das Pluszeichen geben Sie an, dass der Inhalt, im Beispiel der Elementtyp <code>zutat</code>, innerhalb von <code>zutatenliste</code> mindestens einmal vorkommen muss, ansonsten aber beliebig oft vorkommen kann. Für das Kochrezeptebeispiel ist ein solches Konstrukt durchaus sinnvoll, denn ein Rezept sollte wenigstens aus einer Zutat bestehen.
+</p><p>Der Elementtyp <code>anweisungsfolge</code> kann ebenfalls mehrere Elementtypen <code>anweisung</code> enthalten, kann jedoch auch leer bleiben. Der Grund ist in diesem Fall das Sternzeichen * in der Definition hinter der Angabe zum Inhalt. Durch das Sternzeichen geben Sie an, dass der Inhalt, im Beispiel der Elementtyp <code>anweisung</code>, innerhalb von <code>anweisungsfolge</code> kein mal, einmal oder beliebig viele male vorkommen kann. Für das Kochrezeptebeispiel bedeutet dies, dass es auch Kochrezepte mit Zutaten, aber ohne Anweisungen geben kann.
+</p><p>Beispiel einer gültigen Anwendung:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Seite Anzeigebeispiel: So sieht's aus (XML-fähiger Browser zeigt z.B. die Datenstruktur an)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE kochrezept SYSTEM &quot;kochrezept.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;kochrezept<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;zutatenliste<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;zutat<span class="re2">&gt;</span></span></span>300 g  Kartoffeln geschält<span class="sc3"><span class="re1">&lt;/zutat<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;zutat<span class="re2">&gt;</span></span></span>2 lg Lauchstangen<span class="sc3"><span class="re1">&lt;/zutat<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;zutat<span class="re2">&gt;</span></span></span>1 Zwiebel<span class="sc3"><span class="re1">&lt;/zutat<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;zutat<span class="re2">&gt;</span></span></span>1 tb Butter<span class="sc3"><span class="re1">&lt;/zutat<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;zutat<span class="re2">&gt;</span></span></span>600 ml Wasser<span class="sc3"><span class="re1">&lt;/zutat<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/zutatenliste<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;anweisungsfolge<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;anweisung<span class="re2">&gt;</span></span></span>Kartoffeln in kleine Würfel schneiden.<span class="sc3"><span class="re1">&lt;/anweisung<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;anweisung<span class="re2">&gt;</span></span></span>Lauch putzen und in dünne Ringe schneiden.<span class="sc3"><span class="re1">&lt;/anweisung<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;anweisung<span class="re2">&gt;</span></span></span>Zwiebel schälen, fein würfeln und in der Butter glasig dünsten.<span class="sc3"><span class="re1">&lt;/anweisung<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;anweisung<span class="re2">&gt;</span></span></span>Kartoffeln, Lauch und Wasser hinzufügen und 18 bis 20 Minuten garen.<span class="sc3"><span class="re1">&lt;/anweisung<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/anweisungsfolge<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/kochrezept<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Die Elementtypen sind so verschachtelt, wie es in der DTD definiert wurde. Die Elementtypen <code>zutat</code> und <code>anweisung</code> kommen innerhalb von <code>zutatenliste</code> bzw. <code>anweisungsfolge</code> mehrfach vor, was nach der Definition erlaubt ist. Innerhalb von <code>zutat</code> und <code>anweisung</code> kommt in allen Fällen nur <a href="#Elementtypen_mit_Zeicheninhalt_definieren">Zeicheninhalt</a> vor, so wie es für diese Elementtypen mit dem Schlüsselbezeichner #PCDATA definiert wurde.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wenn das Beispiel keine Elemente vom Typ <code>anweisung</code> enthalten würde, was ja nach der Definition mit dem Sternzeichen durchaus erlaubt wäre, so müssten Sie in einer gültigen Anwendung trotzdem notieren:
+<p><code>&lt;anweisungsfolge&gt;&lt;/anweisungsfolge&gt;</code>
+</p>
+Der Grund ist, dass bei der Definition des Elementtyps <code>kochrezept</code> im obigen Beispiel festgelegt wurde, dass dieses Element aus den beiden Elementtypen <code>zutatenliste</code> und <code>anweisungsfolge</code> bestehen muss, und dass diese beiden Elementtypen vorkommen müssen, nämlich genau einmal.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Alternative und optionale Elementtypen für Elementinhalt definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Alternative_und_optionale_Elementtypen_f.C3.BCr_Elementinhalt_definieren">Alternative und optionale Elementtypen für Elementinhalt definieren</span></h2>
+<p>Wenn Sie <a href="#Elementtypen_mit_Elementinhalt_definieren">Elementtypen mit Elementinhalt definieren</a>, kann es vorkommen, dass die starre Folge von Elementen, die Sie für den Elementtyp vorsehen, in der Praxis nicht immer sinnvoll ist. Bei einer Postadresse etwa könnte man alternativ zwischen der Angabe einer Straßen-/Hausnummernangabe und einer Postfachangabe unterscheiden, und bei der Angabe zur Anredeform einer Person ist ein typisches Beispiel für eine optionale Angabe, also etwas, das man bei einigen Adressen mit angeben möchte, bei anderen dagegen nicht.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD adressen.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT adressen <span class="br0">&#40;</span>adresse<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT adresse <span class="br0">&#40;</span>anrede?, name, <span class="br0">&#40;</span>postfach | wohnanschrift<span class="br0">&#41;</span>, plzort<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT anrede <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT name <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT postfach <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT wohnanschrift <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT plzort <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel zeigt eine einfache DTD zu einer Adressverwaltung. Für alle Definitionen im Beispiel gilt das <a href="#Schema_zur_Definition_von_Elementtypen">Schema zur Definition von Elementtypen</a>. Definiert wird ein Elementtyp namens <code>adressen</code> für das Dokument-Element. Dieser kann <a href="#Beliebig_viele_Wiederholungen_eines_Elementtyps_definieren">beliebig viele Wiederholungen</a> des Elements <code>adresse</code> enthalten. Der Elementtyp <code>adresse</code> definiert ein Element mit <a href="#Elementtypen_mit_Elementinhalt_definieren">Elementinhalt</a>. Der Inhalt besteht aus verschiedenen Elementtypen für die einzelnen Daten einer Adresse. Diese Elementtypen werden als einfache <a href="#Elementtypen_mit_Zeicheninhalt_definieren">Elementtypen mit Zeicheninhalt</a> definiert.
+</p><p>Die Anrede wird im Beispiel als optional definiert. Verantwortlich dafür ist das Fragezeichen&#160;? in der Definition hinter der Angabe zum Inhalt beim Namen des Elementtyps. Die einfache Notation von <code>anrede</code> würde die Verwendung des Elementtyps als zwingend erforderlich definieren, während die Notation von <code>anrede?</code> die Verwendung als optional kennzeichnet.
+</p><p>Ferner wird im Beispiel definiert, dass als Anschrift entweder eine Angabe zum Postfach oder zur Wohnanschrift gemacht werden kann. Dazu werden die alternativen Elementtypen nochmals geklammert. Innerhalb der Klammer werden die alternativen Elementtypen notiert, und zwar getrennt durch Senkrechtstriche |.
+</p><p>Beispiel einer gültigen Anwendung:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Seite Anzeigebeispiel: So sieht's aus (XML-fähiger Browser zeigt z.B. die Datenstruktur an)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE adressen SYSTEM &quot;adressen.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;adressen<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;adresse<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>Wurmstädter Anlagenbank<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;postfach<span class="re2">&gt;</span></span></span>7001<span class="sc3"><span class="re1">&lt;/postfach<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;plzort<span class="re2">&gt;</span></span></span>00234 Wurmstadt<span class="sc3"><span class="re1">&lt;/plzort<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/adresse<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;adresse<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;anrede<span class="re2">&gt;</span></span></span>Herr<span class="sc3"><span class="re1">&lt;/anrede<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>Willi Wacholder<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;wohnanschrift<span class="re2">&gt;</span></span></span>Holzwurmstr. 30<span class="sc3"><span class="re1">&lt;/wohnanschrift<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;plzort<span class="re2">&gt;</span></span></span>00234 Wurmstadt<span class="sc3"><span class="re1">&lt;/plzort<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/adresse<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/adressen<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Im Beispiel werden zwei Adressen notiert. Die erste Adresse ist die einer Bank, daher entfällt bei dieser Adresse die Anrede, die nur für Personen benötigt wird. Da der Elementtyp anrede? als optional definiert wurde, ist das Weglassen erlaubt. Im Beispiel der Bank ist die Anschrift ein Postfach. Da an dieser Stelle laut Definition entweder der Elementtyp postfach oder der Elementtyp wohnanschrift vorkommen kann, ist die Anwendung korrekt. Bei der zweiten Adresse handelt es sich um die einer Person. In diesem Fall ist die Anrede notiert, und anstelle eines Postfachs eine Straßen-/Hausnummernangabe im Alternativ-Element <code>wohnanschrift</code>.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Bei alternativen Elementtypen können Sie selbstverständlich auch mehr als zwei Elementtypen angeben.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Elemente mit gemischtem Inhalt definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Elemente_mit_gemischtem_Inhalt_definieren">Elemente mit gemischtem Inhalt definieren</span></h2>
+<p>Wenn Sie XML-Anwendungen definieren möchten, in denen Elemente nicht so starr gruppiert sein müssen, sondern in relativ freier Folge notiert werden können - so wie beispielsweise in HTML - dann müssen Sie Elemente mit gemischtem Inhalt definieren. In HTML ist <code>&lt;body&gt;...&lt;/body&gt;</code> so ein typisches Element. Innerhalb dieses Elements können Sie die meisten anderen HTML-Elemente in relativ freier Folge und unter Berücksichtigung einiger weniger Verschachtelungsregeln notieren. Für Anwendungen, die generell weniger in Richtung Datenbank und stattdessen mehr in Richtung Freitext gehen, benötigen Sie solche gemischten Inhalte.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD text.dtd:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT text <span class="br0">&#40;</span>#PCDATA | drohend | lachend | fragend | zynisch<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT drohend <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT lachend <span class="br0">&#40;</span>#PCDATA | augenzwinkernd<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT fragend <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT augenzwinkernd <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT zynisch <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel stellt eine DTD für Text dar, in dem Emotionen als solche kenntlich gemacht werden. Für alle Definitionen im Beispiel gilt das <a href="#Schema_zur_Definition_von_Elementtypen">Schema zur Definition von Elementtypen</a>. Definiert wird ein Elementtyp namens <code>text</code> für das Dokument-Element mit gemischtem Inhalt. Gemischten Inhalt bestimmen Sie, indem Sie zum Inhalt des Elements, also innerhalb der Klammern, den Schlüsselbezeichner #PCDATA für <a href="#Elementtypen_mit_Zeicheninhalt_definieren">Zeicheninhalt</a> und außerdem eine Reihe erlaubter Elementtypen für weiteren <a href="#Elementtypen_mit_Elementinhalt_definieren">Elementinhalt</a> notieren. Die Einträge müssen mit dem Senkrechtstrich | für <a href="#Alternative_und_optionale_Elementtypen_f.C3.BCr_Elementinhalt_definieren">alternativ notierte Elementtypen</a> getrennt werden. Außerdem muss der gesamte Inhalt am Ende wie im Beispiel das Sternzeichen * für <a href="#Beliebig_viele_Wiederholungen_eines_Elementtyps_definieren">beliebig viele Elemente</a> erhalten. Dadurch darf jedes dieser Elemente beliebig oft in dem Bereich notiert werden kann, in dem es erlaubt ist. Gemischter Inhalt ist also eine Kombination aller hier zuvor behandelten Definitionsmöglichkeiten.
+</p><p>Im Beispiel werden die weiteren, bei <code>text</code> notierten Elementtypen ebenfalls definiert. Mit Ausnahme des Elementtyps <code>lachend</code> wird für alle Elementtypen nichts weiter als reiner Zeicheninhalt (#PCDATA) erlaubt. Der Elementtyp <code>lachend</code> entspricht dagegen wieder dem Muster für gemischten Inhalt. Neben reinem Zeicheninhalt wird in diesem Elementtyp noch der weitere Elementtyp augenzwinkernd zugelassen.
+</p><p>Beispiel einer gültigen Anwendung:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Seite Anzeigebeispiel: So sieht's aus (XML-fähiger Browser zeigt z.B. die Datenstruktur an)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE text SYSTEM &quot;text.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;text<span class="re2">&gt;</span></span></span>
+Manchmal sagt einem das Gewissen: <span class="sc3"><span class="re1">&lt;drohend<span class="re2">&gt;</span></span></span>du musst mehr über Frauen und
+Männer nachdenken.<span class="sc3"><span class="re1">&lt;/drohend<span class="re2">&gt;</span></span></span>
+Dann fragt man sich zwar manchmal, <span class="sc3"><span class="re1">&lt;fragend<span class="re2">&gt;</span></span></span>warum es darüber wohl
+so viel nachzudenken gibt,<span class="sc3"><span class="re1">&lt;/fragend<span class="re2">&gt;</span></span></span>
+aber manchmal folgt man auch brav und denkt nach.
+Sagt die Frau zum Mann: <span class="sc3"><span class="re1">&lt;lachend<span class="re2">&gt;</span></span></span>Mann o Mann, <span class="sc3"><span class="re1">&lt;augenzwinkernd<span class="re2">&gt;</span></span></span>du bist
+dein Geld wert!<span class="sc3"><span class="re1">&lt;/augenzwinkernd<span class="re2">&gt;</span></span><span class="re1">&lt;/lachend<span class="re2">&gt;</span></span></span>
+Antwortet der Mann: <span class="sc3"><span class="re1">&lt;zynisch<span class="re2">&gt;</span></span></span>Ja, weil ich den Einkaufswagen schiebe
+und sich eine Mark darin befindet!<span class="sc3"><span class="re1">&lt;/zynisch<span class="re2">&gt;</span></span></span>
+Daraufhin die Frau: <span class="sc3"><span class="re1">&lt;lachend<span class="re2">&gt;</span></span></span>Du hast es erfasst!<span class="sc3"><span class="re1">&lt;/lachend<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/text<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Anwendungsbeispiel enthält das Dokument-Element <code>&lt;text&gt;..&lt;/text&gt;</code> und innerhalb davon typischen gemischten Inhalt. Es kommt normaler Text vor (Zeichendaten), aber auch weitere Elemente. Das <code>lachend</code>-Element kommt insgesamt zweimal vor. Genausogut könnte auch z.B. das <code>drohend</code>-Element zwei- oder mehrfach innerhalb eines text-Elements vorkommen. Dies ist aufgrund der Verwendung des Sternzeichens * bei der Definition aller inneren Elementtypen erlaubt. Das Element <code>augenzwinkernd</code> kommt wie laut DTD erlaubt innerhalb von <code>lachend</code> vor - außerhalb davon dürfte es jedoch nicht vorkommen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Elemente mit beliebigem Inhalt definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Elemente_mit_beliebigem_Inhalt_definieren">Elemente mit beliebigem Inhalt definieren</span></h2>
+<p>Elemente mit beliebigem Inhalt sind eine Steigerungsform von Elementen mit gemischtem Inhalt. Es handelt sich dabei gewissermaßen um Joker- oder Wildcard-Elemente, deren Inhalt in keiner Weise festgelegt ist. Alle übrigen in der DTD definierten Elementtypen können in einem Element mit beliebigem Inhalt vorkommen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD anytext.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT anytext ANY<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT english <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT italiano <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p><br />
+Für alle Definitionen im Beispiel gilt das <a href="#Schema_zur_Definition_von_Elementtypen">Schema zur Definition von Elementtypen</a>. Durch das Schlüsselwort ANY (großgeschrieben) anstelle der konkreten Definition eines Elementinhalts geben Sie an, dass dieses Element (im Beispiel das Dokument-Element) beliebigen Zeicheninhalt und Elementinhalt enthalten kann. Im Beispiel sind zwei andere Elementtypen definiert, die ebenfalls vorkommen dürfen.
+</p><p>Beispiel einer gültigen Anwendung:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Seite Anzeigebeispiel: So sieht's aus (XML-fähiger Browser zeigt z.B. die Datenstruktur an)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE anytext SYSTEM &quot;anytext.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;anytext<span class="re2">&gt;</span></span></span>
+Das ist etwas Text, der in Englisch lautet:
+<span class="sc3"><span class="re1">&lt;english<span class="re2">&gt;</span></span></span>this is some text<span class="sc3"><span class="re1">&lt;/english<span class="re2">&gt;</span></span></span> und in italienisch:
+<span class="sc3"><span class="re1">&lt;italiano<span class="re2">&gt;</span></span></span>ciò è un certo testo<span class="sc3"><span class="re1">&lt;/italiano<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/anytext<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Im Beispiel wird das Dokument-Element <code>&lt;anytext&gt;...&lt;/anytext&gt;</code> definiert. Darin können Zeichendaten und beliebige andere Elemente vorkommen, zu denen es in der DTD einen Elementtyp gibt. Das Beispiel zeigt eine einfache Mischung.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Leere Elemente ohne Inhalt definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Leere_Elemente_ohne_Inhalt_definieren">Leere Elemente ohne Inhalt definieren</span></h2>
+<p>Leere Elemente sind solche ohne Inhalt. Im klassischen HTML sind etwa <code>&lt;br&gt;</code> oder <code>&lt;img&gt;</code> solche Elemente. Dort redet man auch von Standalone-Elementen. In der Philosophie von XML ist eigentlich für jedes Element ein Inhalt vorgesehen. Wenn Sie Elementtypen definieren wollen, die keinen Inhalt haben, müssen Sie dies gesondert angeben. Auch die Notation der Elemente in der Anwendung weist darauf hin, dass es sich um einen Sonderfall handelt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD textzeilen.dtd
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ELEMENT textzeilen <span class="br0">&#40;</span>#PCDATA | neuezeile<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT neuezeile EMPTY<span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel werden zwei Elementtypen definiert: ein Elementtyp <code>textzeilen</code> für das Dokument-Element mit <a href="#Elemente_mit_gemischtem_Inhalt_definieren">gemischtem Inhalt</a>, und ein Elementtyp <code>neuezeile</code>, der innerhalb des Elementtyps <code>textzeilen</code> beliebig vorkommen darf. Für beide Definitionen gilt das <a href="#Schema_zur_Definition_von_Elementtypen">Schema zur Definition von Elementtypen</a>.
+</p><p>Der Elementtyp <code>neuezeile</code> ist dabei ein leerer Elementtyp. Kenntlich gemacht wird dies durch das Schlüsselwort EMPTY (zu deutsch: leer) an der Stelle, wo der Inhalt des Elementtyps definiert wird.
+</p><p>Beispiel einer gültigen Anwendung:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Seite Anzeigebeispiel: So sieht's aus (XML-fähiger Browser zeigt z.B. die Datenstruktur an)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE textzeilen SYSTEM &quot;textzeilen.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;textzeilen<span class="re2">&gt;</span></span></span>
+Das ist Text, aber wo beginnt die<span class="sc3"><span class="re1">&lt;neuezeile</span> <span class="re2">/&gt;</span></span>
+neue Zeile?
+<span class="sc3"><span class="re1">&lt;/textzeilen<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Im Beispiel wird das Element ohne Inhalt entsprechend der Regeln für <a href="http://wiki.selfhtml.org/wiki/XML/Regeln/Tags,Attribute,_Wertzuweisungen_und_Kommentare#Ausnahme:_Leere_Elemente" title="XML/Regeln/Tags,Attribute, Wertzuweisungen und Kommentare">leere Elemente</a> notiert. Für eine Umsetzung der Bedeutung "neuezeile" kann natürlich erst eine Style-Sprache wie CSS oder XSL sorgen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Elementgruppen zusammenfassen">Bearbeiten</a>]</span> <span class="mw-headline" id="Elementgruppen_zusammenfassen">Elementgruppen zusammenfassen</span></h2>
+<p>Beim Entwurf größerer DTDs mit vielen Elementtypen werden Sie schnell feststellen, dass es viele Wiederholungen speziell bei Elementtypinhalten gibt. Viele Elementtypen bilden oft logisch gesehen eine zusammengehörige Gruppe, die geschlossen als Elementinhalt mehrerer anderer, übergeordneter Elementtypen vorkommt. Für solche Fälle bietet die DTD-Syntax die Möglichkeit an, Elementtypen zu solchen logischen Gruppen zusammenzufassen. Eine logische Gruppe von Elementtypen bezeichnet man als Parameter Entity. Der Einsatz von Parameter Entities erhöht in komplexen DTDs die Lesbarkeit und die Änderungsfreundlichkeit. Beschrieben wird diese Möglichkeit im Abschnitt <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Entities#Parameter_Entities" title="XML/DTD/Entities">Parameter Entities</a> für DTD-Bausteine.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Zusammenhängendes Beispiel: ein Buch">Bearbeiten</a>]</span> <span class="mw-headline" id="Zusammenh.C3.A4ngendes_Beispiel:_ein_Buch">Zusammenhängendes Beispiel: ein Buch</span></h2>
+<p>Um komplexe Abhängigkeiten und Regeln bei der Definition von Elementtypen abzubilden, ist es wichtig, die richtigen Überlegungen anzustellen und sich ein Modell der geplanten Elementstruktur zu machen.
+</p><p>Viele Datenstrukturen weisen eine starke logische Hierarchie auf. Gut sichtbar wird das am Beispiel eines Buches. Ein Buch besteht typischerweise aus Kapiteln, Verzeichnissen und speziellen Seiten wie Impressum, Titel usw. Jedes Kapitel besteht aus einer Kapitelüberschrift und Abschnitten. Jeder Abschnitt besteht aus einer Abschnittsüberschrift und dem Abschnittsinhalt. Ein Abschnittsinhalt kann Dinge wie normale Fließtextabsätze, Aufzählungen, Grafikreferenzen usw. enthalten. Jeder Fließtextabsatz, jeder Aufzählungspunkt kann Textteile mit speziellen Formatierungen enthalten, etwa für Fettschrift, Kursivschrift usw. enthalten. 
+</p><p>Bei solchen Datenstrukturen ist es am sinnvollsten, wenn man beim Entwurf der Elementtypen und ihrer Abhängigkeiten vom Allgemeinen (das Buch) hin zum Speziellen (das fett markierte Wort in einem Absatz) denkt. XML unterstützt diese Art stark hierarchischer Datenstrukturen besonders gut, da sich ein Dokument nach der Philosophie von XML als Baumstruktur abbilden lässt. Die Umsetzung einer stark hierarchischen Elementstruktur ist denn auch in einer XML-DTD vergleichsweise einfach und gut nachvollziehbar.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-DTD buch.dtd:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ENTITY&#160;% text <span class="st0">&quot;hervorgehoben | hinweisend | auffordernd | zeilenumbruch&quot;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT buch                   <span class="br0">&#40;</span>titel,impressum,inhaltsverzeichnis,<span class="br0">&#40;</span>kapitel<span class="br0">&#41;</span>+,stichwortverzeichnis<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT titel                  <span class="br0">&#40;</span>haupttitel,untertitel<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT haupttitel             <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT untertitel             <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT impressum              <span class="br0">&#40;</span>cip,copyright,verlag<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT cip                    <span class="br0">&#40;</span>#PCDATA |&#160;%text;<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT copyright              <span class="br0">&#40;</span>#PCDATA |&#160;%text;<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT verlag                 <span class="br0">&#40;</span>#PCDATA |&#160;%text;<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT inhaltsverzeichnis     <span class="br0">&#40;</span>ivz_ueberschrift,<span class="br0">&#40;</span>ivz_kapiteleintrag | ivz_abschnittseintrag<span class="br0">&#41;</span>*<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT ivz_ueberschrift       <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT ivz_kapiteleintrag     <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT ivz_abschnittseintrag  <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT kapitel                <span class="br0">&#40;</span>kap_ueberschrift,<span class="br0">&#40;</span>abschnitt<span class="br0">&#41;</span>+<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT kap_ueberschrift       <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT abschnitt              <span class="br0">&#40;</span>ab_ueberschrift,<span class="br0">&#40;</span>fliesstext | aufzaehlung | grafik<span class="br0">&#41;</span>+<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT ab_ueberschrift        <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT fliesstext             <span class="br0">&#40;</span>#PCDATA |&#160;%text;<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT aufzaehlung            <span class="br0">&#40;</span>aufzaehlungspunkt<span class="br0">&#41;</span>+<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT aufzaehlungspunkt      <span class="br0">&#40;</span>#PCDATA |&#160;%text;<span class="br0">&#41;</span>*<span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT grafik                 <span class="br0">&#40;</span>grafikdatei<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT grafikdatei            <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT stichwortverzeichnis   <span class="br0">&#40;</span>svz_ueberschrift,<span class="br0">&#40;</span>svz_eintrag<span class="br0">&#41;</span>*<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT svz_ueberschrift       <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT svz_eintrag            <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3">&lt;!ELEMENT hervorgehoben          <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT hinweisend             <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT auffordernd            <span class="br0">&#40;</span>#PCDATA<span class="br0">&#41;</span><span class="re2">&gt;</span></span>
+<span class="sc3">&lt;!ELEMENT zeilenumbruch          EMPTY<span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Beispiel einer gültige Anwendung">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_einer_g.C3.BCltige_Anwendung">Beispiel einer gültige Anwendung</span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Seite Anzeigebeispiel: So sieht's aus (XML-fähiger Browser zeigt z.B. die Datenstruktur an)
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span> <span class="re2">?&gt;</span></span>
+<span class="sc0">&lt;!DOCTYPE buch SYSTEM &quot;buch.dtd&quot;&gt;</span>
+<span class="sc3"><span class="re1">&lt;?xml:stylesheet</span> <span class="re0">type</span>=<span class="st0">&quot;text/css&quot;</span> <span class="re0">href</span>=<span class="st0">&quot;buch.css&quot;</span> <span class="re2">?&gt;</span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;buch<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;titel<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;haupttitel<span class="re2">&gt;</span></span></span>Ich bin der Valentin<span class="sc3"><span class="re1">&lt;/haupttitel<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;untertitel<span class="re2">&gt;</span></span></span>Wie mein Leben wurde was es geworden ist<span class="sc3"><span class="re1">&lt;/untertitel<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/titel<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;impressum<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;cip<span class="re2">&gt;</span></span></span>Deutsche Bibliothek - CIP-Einheitsaufnahme:<span class="sc3"><span class="re1">&lt;zeilenumbruch</span> <span class="re2">/&gt;</span></span>
+Titeldatensatz erhältlich bei der Deutschen Bibliothek<span class="sc3"><span class="re1">&lt;/cip<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;copyright<span class="re2">&gt;</span></span></span>©2000 alle Rechte beim Verlag<span class="sc3"><span class="re1">&lt;/copyright<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;verlag<span class="re2">&gt;</span></span></span>Eigenverlag, Hinter den Sieben Bergen<span class="sc3"><span class="re1">&lt;/verlag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/impressum<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;inhaltsverzeichnis<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ivz_ueberschrift<span class="re2">&gt;</span></span></span>Inhaltsverzeichnis<span class="sc3"><span class="re1">&lt;/ivz_ueberschrift<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;ivz_kapiteleintrag<span class="re2">&gt;</span></span></span>Meine frühen Jahre<span class="sc3"><span class="re1">&lt;/ivz_kapiteleintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ivz_abschnittseintrag<span class="re2">&gt;</span></span></span>Kindheit<span class="sc3"><span class="re1">&lt;/ivz_abschnittseintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ivz_abschnittseintrag<span class="re2">&gt;</span></span></span>Jugend<span class="sc3"><span class="re1">&lt;/ivz_abschnittseintrag<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;ivz_kapiteleintrag<span class="re2">&gt;</span></span></span>Wie ich zum Manne wurde<span class="sc3"><span class="re1">&lt;/ivz_kapiteleintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ivz_abschnittseintrag<span class="re2">&gt;</span></span></span>Die erste Liebe<span class="sc3"><span class="re1">&lt;/ivz_abschnittseintrag<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/inhaltsverzeichnis<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;kapitel<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;kap_ueberschrift<span class="re2">&gt;</span></span></span>Meine frühen Jahre<span class="sc3"><span class="re1">&lt;/kap_ueberschrift<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;abschnitt<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ab_ueberschrift<span class="re2">&gt;</span></span></span>Kindheit<span class="sc3"><span class="re1">&lt;/ab_ueberschrift<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;fliesstext<span class="re2">&gt;</span></span></span>
+Meine Kindheit bestand aus zwei Lebensabschnitten:
+<span class="sc3"><span class="re1">&lt;/fliesstext<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;aufzaehlung<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;aufzaehlungspunkt<span class="re2">&gt;</span></span></span>- dem Säuglingsalter<span class="sc3"><span class="re1">&lt;/aufzaehlungspunkt<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;aufzaehlungspunkt<span class="re2">&gt;</span></span></span>- dem Kindesalter<span class="sc3"><span class="re1">&lt;/aufzaehlungspunkt<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/aufzaehlung<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/abschnitt<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;abschnitt<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ab_ueberschrift<span class="re2">&gt;</span></span></span>Jugend<span class="sc3"><span class="re1">&lt;/ab_ueberschrift<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;fliesstext<span class="re2">&gt;</span></span></span>
+Meine Jugend bestand im wesentlichen aus Pickeln.
+<span class="sc3"><span class="re1">&lt;/fliesstext<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/abschnitt<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/kapitel<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;kapitel<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;kap_ueberschrift<span class="re2">&gt;</span></span></span>Wie ich zum Manne wurde<span class="sc3"><span class="re1">&lt;/kap_ueberschrift<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;abschnitt<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;ab_ueberschrift<span class="re2">&gt;</span></span></span>Die erste Liebe<span class="sc3"><span class="re1">&lt;/ab_ueberschrift<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;fliesstext<span class="re2">&gt;</span></span></span>
+Sie <span class="sc3"><span class="re1">&lt;hervorgehoben<span class="re2">&gt;</span></span></span>kam<span class="sc3"><span class="re1">&lt;/hervorgehoben<span class="re2">&gt;</span></span></span>, <span class="sc3"><span class="re1">&lt;hervorgehoben<span class="re2">&gt;</span></span></span>geschah<span class="sc3"><span class="re1">&lt;/hervorgehoben<span class="re2">&gt;</span></span></span>, und <span class="sc3"><span class="re1">&lt;hervorgehoben<span class="re2">&gt;</span></span></span>verging<span class="sc3"><span class="re1">&lt;/hervorgehoben<span class="re2">&gt;</span></span></span> wieder.
+<span class="sc3"><span class="re1">&lt;/fliesstext<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;grafik<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;grafikdatei<span class="re2">&gt;</span></span></span>ersteliebe.tif<span class="sc3"><span class="re1">&lt;/grafikdatei<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/grafik<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/abschnitt<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/kapitel<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;stichwortverzeichnis<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;svz_ueberschrift<span class="re2">&gt;</span></span></span>Stichwortverzeichnis<span class="sc3"><span class="re1">&lt;/svz_ueberschrift<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;svz_eintrag<span class="re2">&gt;</span></span></span>Jugend<span class="sc3"><span class="re1">&lt;/svz_eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;svz_eintrag<span class="re2">&gt;</span></span></span>Kindheit<span class="sc3"><span class="re1">&lt;/svz_eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;svz_eintrag<span class="re2">&gt;</span></span></span>Liebe<span class="sc3"><span class="re1">&lt;/svz_eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;svz_eintrag<span class="re2">&gt;</span></span></span>Pickel<span class="sc3"><span class="re1">&lt;/svz_eintrag<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;svz_eintrag<span class="re2">&gt;</span></span></span>Säugling<span class="sc3"><span class="re1">&lt;/svz_eintrag<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/stichwortverzeichnis<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/buch<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel kann natürlich nur grob ein komplettes Buch beschreiben - wenn Sie tatsächlich versuchen, eine komplette Buchstruktur mit Hilfe von XML zu beschreiben, werden Sie sicher noch viel mehr Details benötigen. Das Beispiel will jedoch zeigen, wie eine solche Beschreibung im Prinzip aussehen kann.
+</p><p>In dem Beispiel wird zunächst eine <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Entities#_Parameter_Entities_f.C3.BCr_komplexere_DTDs" title="XML/DTD/Entities">Parameter Entity</a> definiert. Darin werden vier Elementtypen <code>hervorgehoben, hinweisend, auffordernd</code> und <code>zeilenumbruch</code> zusammengefasst, die innerhalb von verschiedenen Textabsätzen vorkommen können.
+</p><p>Der Rest der DTD besteht in der Definition der gewünschten Elementtypen. Die Reihenfolge spielt eigentlich keine Rolle, doch das Beispiel hält eine gewisse Logik ein und versucht, vom Allgemeinen hin zum Speziellen fortzuschreiten. Das Element, in dem das gesamte Buch steht, wird mit dem Namen <code>buch</code> definiert. Das Element hat <a href="#Elementtypen_mit_Elementinhalt_definieren">Elementinhalt</a>. Dabei können die Elementtypen <code>titel, impressum, inhaltsverzeichnis</code> und <code>stichwortverzeichnis</code> genau einmal vorkommen, und zwar in der notierten Reihenfolge. Lediglich der Elementtyp <code>kapitel</code>, in der Reihenfolge zwischen <code>inhaltsverzeichnis</code> und <code>stichwortverzeichnis</code> stehend, muss mindestens einmal und kann beliebig oft vorkommen. Damit ist die Grundstruktur des Buches festgelegt.
+</p><p>Die Bereiche <code>titel</code> und <code>impressum</code> enthalten als Elementinhalt entsprechende Elementtypen. Bei den untergeordneten Elementtypen von <code>impressum</code> wird erstmals die definierte <a href="http://wiki.selfhtml.org/wiki/XML/DTD/Entities#_Parameter_Entities_f.C3.BCr_komplexere_DTDs" title="XML/DTD/Entities">Parameter Entity</a> angewendet. Die entsprechenden Elementtypen <code>hervorgehoben, hinweisend, auffordernd</code> und <code>zeilenumbruch</code> können innerhalb von <code>cip, copyright</code> und <code>verlag</code> beliebig oft vorkommen. Die übrigen Bereiche des Buches untergliedern sich nach ähnlichem Schema in einzelne Elementtypen.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Netscape, Opera, Firefox und Safari beachten die externe DTD nicht.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 838/1000000
+Post‐expand include size: 12197/2097152 bytes
+Template argument size: 7771/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4640-0!*!0!!de-formal!*!* and timestamp 20150301164054 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;oldid=24237">http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;oldid=24237</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=XML%2FDTD%2FElemente+und+Verschachtelungsregeln" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/XML/DTD/Elemente_und_Verschachtelungsregeln" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/XML/DTD/Elemente_und_Verschachtelungsregeln" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=XML/DTD/Elemente_und_Verschachtelungsregeln&amp;oldid=24237" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/XML-2FDTD-2FElemente_und_Verschachtelungsregeln" title="Spezial:Durchsuchen/XML-2FDTD-2FElemente und Verschachtelungsregeln">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 11. November 2014 um 04:11 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 938-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.068 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/XML/DTD/Elemente_und_Verschachtelungsregeln by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:20 GMT -->
+</html>

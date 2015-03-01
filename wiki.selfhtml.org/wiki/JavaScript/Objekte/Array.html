@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Objekte/Array by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Objekte/Array – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Objekte/Array","wgTitle":"JavaScript/Objekte/Array","wgCurRevisionId":26174,"wgArticleId":2356,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["JavaScript"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Objekte/Array","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Objekte/Array" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Objekte/Array&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Objekte_Array skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Objekte/Array</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../../JavaScript.html" title="JavaScript">JavaScript</a> | <a href="../Objekte.html" title="JavaScript/Objekte">Objekte</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Die <a href="../Funktionen.html" title="JavaScript/Funktionen">Funktion</a> <b>Array</b> dient zum Erstellen eines Arrays (Instanz).
+</p>
+<div style="width:49%;float:left;padding:0 2% 0 0;">
+<p><b>Eigenschaften</b>
+</p>
+<ul><li> <a href="Array/constructor.html" title="JavaScript/Objekte/Array/constructor" class="mw-redirect">constructor</a>
+</li><li> <a href="Array/length.html" title="JavaScript/Objekte/Array/length">length</a>
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array/prototype&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Objekte/Array/prototype (Seite nicht vorhanden)">prototype</a>
+</li></ul>
+<p><br />
+</p><p><b> Funktionen</b>
+</p>
+<ul><li> <a href="Array/isArray.html" title="JavaScript/Objekte/Array/isArray">isArray()</a>
+</li></ul>
+</div>
+<div style="width:49%;float:left;padding:0;">
+<p><b>Methoden</b>
+</p>
+<div style="width:49%;float:left;padding:0 2% 0 0;">
+<ul><li> <a href="Array/concat.html" title="JavaScript/Objekte/Array/concat">concat</a>
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array/every&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Objekte/Array/every (Seite nicht vorhanden)">every</a>
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array/filter&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Objekte/Array/filter (Seite nicht vorhanden)">filter</a>
+</li><li> <a href="Array/forEach.html" title="JavaScript/Objekte/Array/forEach">forEach</a>
+</li><li> <a href="Array/indexOf.html" title="JavaScript/Objekte/Array/indexOf">indexOf</a>
+</li><li> <a href="Array/join.html" title="JavaScript/Objekte/Array/join">join</a>
+</li><li> <a href="Array/lastIndexOf.html" title="JavaScript/Objekte/Array/lastIndexOf">lastIndexOf</a>
+</li><li> <a href="Array/map.html" title="JavaScript/Objekte/Array/map">map</a>
+</li><li> <a href="Array/pop.html" title="JavaScript/Objekte/Array/pop">pop</a>
+</li><li> <a href="Array/push.html" title="JavaScript/Objekte/Array/push">push</a>
+</li></ul>
+</div>
+<div style="width:49%;float:left;padding:0;">
+<ul><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array/reduce&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Objekte/Array/reduce (Seite nicht vorhanden)">reduce</a>
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array/reduceRight&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Objekte/Array/reduceRight (Seite nicht vorhanden)">reduceRight</a>
+</li><li> <a href="Array/reverse.html" title="JavaScript/Objekte/Array/reverse">reverse</a>
+</li><li> <a href="Array/shift.html" title="JavaScript/Objekte/Array/shift">shift</a>
+</li><li> <a href="Array/slice.html" title="JavaScript/Objekte/Array/slice">slice</a>
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array/some&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Objekte/Array/some (Seite nicht vorhanden)">some</a>
+</li><li> <a href="Array/sort.html" title="JavaScript/Objekte/Array/sort">sort</a>
+</li><li> <a href="Array/splice.html" title="JavaScript/Objekte/Array/splice">splice</a>
+</li><li> <a href="Array/toString.html" title="JavaScript/Objekte/Array/toString" class="mw-redirect">toString</a>
+</li><li> <a href="Array/unshift.html" title="JavaScript/Objekte/Array/unshift">unshift</a>
+</li></ul>
+</div><div class="visualClear"></div>
+</div><div class="visualClear"></div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: mit erweiterter Überschrift
+</div>
+<div class="note-box-text note-box-example-code">new Array(<i>[anzahl]</i>)
+<p>new Array(<i>[element0, ..., elementN]</i>)
+</p>
+[<i>[element0, ..., elementN]</i>]</div>
+</div>
+<p>Folgende Parameter sind möglich:
+</p>
+<ul><li> <code>anzahl</code>: ein positiver Zahlenwert, der die anfängliche Größe des Arrays festlegt (siehe auch <a href="Array/length.html" title="JavaScript/Objekte/Array/length">length</a>-Eigenschaft)
+</li><li><code>element0, ..., elementN</code>: ein oder mehrere Elemente, die anfänglich im  Array enthalten sind<br />Die Anzahl der übergebenen Elemente bestimmt die anfängliche Größe des Arrays (siehe auch <a href="Array/length.html" title="JavaScript/Objekte/Array/length">length</a>-Eigenschaft).
+</li></ul>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Beschreibung"><span class="tocnumber">1</span> <span class="toctext">Beschreibung</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Einfache_Arrays"><span class="tocnumber">2</span> <span class="toctext">Einfache Arrays</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Mehrdimensionale_Arrays"><span class="tocnumber">3</span> <span class="toctext">Mehrdimensionale Arrays</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Assoziative_Arrays"><span class="tocnumber">4</span> <span class="toctext">Assoziative Arrays</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Beschreibung">Bearbeiten</a>]</span> <span class="mw-headline" id="Beschreibung"> Beschreibung </span></h2>
+<p>Ein Array ist eine Datenstruktur, die eine Reihe von Elemente enthält, auf die mit einem ganzzahligen Index zugegriffen werden kann. Die Reihenfolge der hinterlegten Daten wird durch deren Position im Array bestimmt. Ein Array ist abstrakt gesehen eine Sequenz von aufeinanderfolgenden Werten. Diese müssen in JavaScript nicht vom gleichen Typ sein. In anderen Programmiersprachen existiert auch die Begrifflichkeit Liste oder Vektor. Diese beziehen sich auf die Art der dahinterliegenden Datenhaltung und der Zuordnung der Objekte im Speicher.
+</p><p>In JavaScript ist beides nicht ersichtlich und für den Programmierer irrelevant. Letztendlich ist hier ein Array vom Typ <code><a href="../Objekte.html" title="JavaScript/Objekte">Object</a></code> abgeleitet und der Zugriff auf die Werte über einen Index erfolgt wie der Zugriff auf Eigenschaften von Objekte.
+</p><p>Die Erstellung neuer Objektinstanzen vom Typ Array erfolgt über das Schlüsselwort <code>new</code>, gefolgt vom Funktionsaufruf <code>Array</code>, mit oder ohne Parameter. Alternativ kann hier eine Objektinstanz auch durch die Literal-Schreibweise in <a href="../JSON.html" title="JavaScript/JSON">JavaScript Object Notation</a> (JSON) erstellt werden. Arrays dürfen anfänglich leer sein, sie enthalten dann nur keine Elemente. Ein nachträgliches Verändern von Arrays durch Hinzufügen, Löschen oder Manipulieren der Elemente ist jederzeit möglich.
+</p><p>Der Index zum Zugriff auf die enthaltenen Werte basiert auf 0 (Null). Das bedeutet, dass der erste Eintrag im Array über den Index 0 (Null) erreichbar ist. Weiterhin muss der Indexwert positiv sein, negative Werte zum Zugriff sind unzulässig. Wird ein Element nachträglich durch das Schlüsselwort <code>delete</code> entfernt, so rücken die nachfolgenden Elemente nicht automatisch nach. Stattdessen wird bei einem Zugriff auf ein Element an der gelöschten Position der Wert <code>undefined</code> zurück gegeben, sofern kein neues Element dort abgelegt wurde.
+</p><p>Folgendes Beispiel soll die Erstellung von Array-Instanzen und den Zugriff auf die enthaltenen Werte über den Indexoperator verdeutlichen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">var farben = new Array(&quot;rot&quot;, &quot;grün&quot;, &quot;blau&quot;, &quot;schwarz&quot;, &quot;weiß&quot;); // Erstellung durch Array-Funktion
+var namen  = [&quot;stefan&quot;, &quot;otto&quot;, &quot;willi&quot;, &quot;tina&quot;];                 // Erstellung durch Literal
+
+alert(farben[2]); // blau
+alert(namen[3]);  // tina
+</div>
+</div>
+<p>In diesem Beispiel wird ein Array erstellt, das fünf Farben als Zeichenfolgen beinhaltet. Die neue Instanz wird in der Variable <code>farben</code> abgelegt. Danach wird ein Array erstellt, dass vier Vornamen als Zeichenfolgen enthält. Die neue Instanz wird in der Variable <code>namen</code> abgelegt. Anschließend erfolgen zwei Kontrollausgaben, wobei über einen Index auf die gespeicherten Werte zugegriffen wird.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die erste Kontrollausgabe liefert den Wert <code>blau</code> und nicht <code>grün</code>. Das liegt daran, dass der Index ein auf 0 (Null) basierender Index ist. Der erste Wert ist über <code>[0]</code> erreichbar, der zweite Wert über <code>[1]</code> und so weiter. Das Gleiche gilt für die zweite Kontrollausgabe. Die drei steht hier nicht für die dritte Position, sondern für das Element mit dem Index drei (0,1,2,3).</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Einfache Arrays">Bearbeiten</a>]</span> <span class="mw-headline" id="Einfache_Arrays"> Einfache Arrays </span></h2>
+<p>Nachdem Sie eine Instanz des <b>Array-Objekts</b> erzeugt haben, können Sie dies in Ihrem JavaScript-Code verwenden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Test&lt;/title&gt;
+  &lt;script&gt;
+
+    Zahlen = new Array(34, 86, 167, 413);
+      var x = Zahlen[1];
+    alert(x);
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+</div>
+</div>
+<p>Nachdem Sie eine Instanz des Array-Objekts in einem Namen gespeichert haben (im Beispiel der Name <code>Zahlen</code>), können Sie wie in der zweiten Zeile gezeigt einzelne Werte innerhalb des Variablenvektors ansprechen.
+</p><p>Im Beispiel wird eine gewöhnliche Variable <code>x</code> definiert. In dieser Variable wird der Wert der zweiten Variable des Zahlen-Vektors gespeichert, also 86.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass der Zähler bei 0 beginnt, d.h. den ersten Wert im Vektor sprechen Sie im Beispiel mit <code>Zahlen[0]</code> an, den zweiten mit <code>Zahlen[1]</code> usw.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Mehrdimensionale Arrays">Bearbeiten</a>]</span> <span class="mw-headline" id="Mehrdimensionale_Arrays"> Mehrdimensionale Arrays </span></h2>
+<p>Sie können auch <b>mehrdimensionale Arrays</b> erzeugen. Genauer gesagt können die Werte eines Arrays nicht nur einfache (skalare) Werte sein, sondern auch wiederum Arrays beziehungsweise Objekte. Dabei muss sich nicht zwangsläufig eine Struktur ergeben, die in jeder Dimension gleich groß ist. Auch ein unregelmäßiger Aufbau wie in einer Baumstruktur ist möglich.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Test&lt;/title&gt;
+  &lt;script&gt;
+
+    var a = new Array(4);
+      for (var i = 0; i &lt; a.length; ++i)
+        a[i] = new Array(10);
+        a[3][1] = &quot;Hallo&quot;;
+  alert(a[3][1]);
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</div>
+</div>
+<p>Das Beispiel definiert zunächst ein Array <code>a</code> mit 4 Elementen. Dann wird in einer <a href="../Schleifen.html#Schleifen_mit_.22for.22" title="JavaScript/Schleifen"><code>for</code>-Schleife</a> für jedes dieser Elemente ein neues Array definiert, wobei für jedes Array 10 leere Elemente erzeugt werden.
+</p><p>Anschließend können Sie durch eine Angabe wie <code>a[3][1]</code> das zweite Element (1) im vierten Array (3) ansprechen. Im Beispiel wird dieses Element mit dem Wert <code>Hallo</code> belegt. Zur Kontrolle wird der Wert in einem Meldungsfenster ausgegeben.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Assoziative Arrays">Bearbeiten</a>]</span> <span class="mw-headline" id="Assoziative_Arrays"> Assoziative Arrays </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_0"><a href="../../Datei_Iconset.html" class="image" title="JavaScript 1.0"><img alt="JavaScript 1.0" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Als <b>assoziative Arrays</b> bezeichnet man Sammlungen von Elementen, bei denen der Zugriff auf einzelne Elemente mit Hilfe einer Zeichenkette erfolgt. Die Zeichenkette wird als Schlüssel für den Zugriff bezeichnet.
+</p><p>Im Gegensatz zu anderen Programmiersprachen gibt es in JavaScript keine assoziativen Arrays. Arrays in JavaScript erlauben den Zugriff auf die Elemente lediglich über Indexnummern. Man kann jedoch mit Hilfe von <code>Object()</code> das Verhalten eines assoziativen Arrays teilweise nachbauen. Es handelt sich dann um ein allgemeines Objekt, an dem die Elemente als Objekteigenschaften hängen. Auf Eigenschaften kann man nicht nur über den Punkt-Operator zugreifen (<code>objekt.eigenschaft</code>), sondern auch über eine Notation, die dem Index-Operator bei Arrays gleicht (<code>objekt["eigenschaft"]</code>). Dadurch lassen sich beliebige Schlüssel erzeugen.
+</p><p>Das Tricksen über allgemeine Objekte bringt einige Fallstricke mit sich. Ein solches „unechtes“ assoziatives Array besitzt nämlich nicht die Methoden und Eigenschaften eines gewöhnlichen Arrays. Beispielsweise ist es nicht möglich, über <a href="Array/length.html" title="JavaScript/Objekte/Array/length">length</a> die Anzahl der Elemente zu ermitteln. Die Elemente eines solchen „Arrays“ können stets nur mit dem Namen oder über eine <a href="../Schleifen.html#Schleifen_mit_.22for.22" title="JavaScript/Schleifen"><code>for-in</code>-Schleife</a> angesprochen werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script&gt;
+
+    var Mitarbeiter = new Array();
+
+        Mitarbeiter[0] = new Object();
+        Mitarbeiter[0][&quot;Name&quot;] = &quot;Müller&quot;;
+        Mitarbeiter[0][&quot;Vorname&quot;] = &quot;Hans&quot;;
+        Mitarbeiter[0][&quot;Wohnort&quot;] = &quot;Dresden&quot;;
+
+        Mitarbeiter[1] = new Object();
+        Mitarbeiter[1][&quot;Name&quot;] = &quot;Schulze&quot;;
+        Mitarbeiter[1][&quot;Vorname&quot;] = &quot;Frauke&quot;;
+        Mitarbeiter[1][&quot;Wohnort&quot;] = &quot;Berlin&quot;;
+
+    for (var i = 0; i &lt; Mitarbeiter.length; i++) {
+      document.write(&quot;&lt;dl&gt;&lt;dt&gt;Mitarbeiter &quot; + (i + 1) + &quot;&lt;\/dt&gt;&quot;);
+
+        for (var Eigenschaft in Mitarbeiter[i])
+          document.write(&quot;&lt;dd&gt;&quot; + Eigenschaft + &quot;: &quot; + Mitarbeiter[i][Eigenschaft] + &quot;&lt;\/dd&gt;&quot;);
+          document.write(&quot;&lt;\/dl&gt;&quot;);
+    }
+
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</div>
+<p>Das Beispiel definiert ein Array <code>Mitarbeiter</code>. Dieses Array besitzt zwei Elemente. Jedes dieser Elemente stellt ein Objekt dar. Den Objekten werden jeweils Eigenschaften hinzugefügt, deren Schlüssel heißen <code>Name</code>, <code>Vorname</code> und <code>Wohnort</code>. Jeder dieser Eigenschaften wird ein entsprechender Wert zugeordnet.
+</p><p>Die nachfolgende <code>for</code>-Schleife dient dazu, die Elemente des Arrays <code>Mitarbeiter</code> und die jeweiligen Eigenschaften auszugeben. Nach Beginn der <code>for</code>-Schleife wird zuerst mit der <code>write</code>-Methode der Beginn einer Definitionsliste in das Dokument geschrieben und dabei die laufende Nummer des Mitarbeiters angegeben. Dies entspricht der um eins erhöhten Position im Array, da bei Array-Elementen die Zählung bei 0 beginnt. Anschließend wird eine weitere, innere Schleife aufgerufen. Da hierbei auf ein Objekt zugegriffen wird, muss eine <a href="../Schleifen.html#Schleifen_mit_.22for.22" title="JavaScript/Schleifen"><code>for-in</code>-Schleife</a> verwendet werden. Diese Schleife durchläuft alle Eigenschaften des angesprochenen Objektes und schreibt dessen Namen und den zugehörigen Wert ins Dokument. Sobald die <code>for-in</code>-Schleife beendet ist, wird auch die Definitionsliste geschlossen und das nächste Element im Array <code>Mitarbeiter</code> verarbeitet.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> In vielen Quellen wird auch von assoziativen Arrays gesprochen, wenn diese mit <code>new Array()</code> erzeugt werden. Da ein <code>Array</code> immer auch ein <code>Object</code> ist, ist dies zwar möglich. Dennoch können die Eigenschaften und Methoden des erzeugten Arrays nicht verwendet werden, es ist daher unnötig und irreführend, hier <code>Array()</code> zu verwenden.
+Trotzdem wird das Konstrukt von Schlüssel/Werte-Paaren als assoziatives Array bezeichnet. Sie sollten sich bewusst sein, das dies in JavaScript lediglich ein <code>Object</code> darstellt, auf dessen Eigenschaften Sie über Schlüssel zugreifen können.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1690/1000000
+Post‐expand include size: 11325/2097152 bytes
+Template argument size: 5595/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:2356-0!*!0!!de-formal!2!* and timestamp 20150301095121 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;oldid=26174">http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;oldid=26174</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../../Spezial_Kategorien.html" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="../../Kategorie_JavaScript.html" title="Kategorie:JavaScript">JavaScript</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FObjekte%2FArray" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Array.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Objekte/Array&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Array.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../../src.selfhtml.org/logo/S-110.png);" href="../../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../../Spezial_Linkliste/JavaScript/Objekte/Array.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Objekte/Array.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/Array&amp;oldid=26174" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../../Spezial_Durchsuchen/JavaScript-2FObjekte-2FArray.html" title="Spezial:Durchsuchen/JavaScript-2FObjekte-2FArray">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 16. Februar 2015 um 18:43 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 13.596-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.083 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Objekte/Array by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:23 GMT -->
+</html>

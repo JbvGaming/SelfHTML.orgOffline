@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/htaccess by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Webserver/htaccess – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Webserver/htaccess","wgTitle":"Webserver/htaccess","wgCurRevisionId":24629,"wgArticleId":4128,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webserver"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Webserver/htaccess","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-apache {line-height: normal;}
+.source-apache li, .source-apache pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for apache
+ * CSS class: source-apache, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.apache.source-apache .de1, .apache.source-apache .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.apache.source-apache  {font-family:monospace;}
+.apache.source-apache .imp {font-weight: bold; color: red;}
+.apache.source-apache li, .apache.source-apache .li1 {font-weight: normal; vertical-align:top;}
+.apache.source-apache .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.apache.source-apache .li2 {font-weight: bold; vertical-align:top;}
+.apache.source-apache .kw1 {color: #00007f;}
+.apache.source-apache .kw2 {color: #0000ff;}
+.apache.source-apache .kw3 {color: #000000; font-weight:bold;}
+.apache.source-apache .co1 {color: #adadad; font-style: italic;}
+.apache.source-apache .es0 {color: #000099; font-weight: bold;}
+.apache.source-apache .br0 {color: #339933;}
+.apache.source-apache .sy0 {color: #008000;}
+.apache.source-apache .st0 {color: #7f007f;}
+.apache.source-apache .nu0 {color: #ff0000;}
+.apache.source-apache .ln-xtra, .apache.source-apache li.ln-xtra, .apache.source-apache div.ln-xtra {background-color: #ffc;}
+.apache.source-apache span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Webserver/htaccess" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Webserver/htaccess&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Webserver_htaccess skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Webserver/htaccess</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Webserver" title="Webserver">Webserver</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Webserver, die zum NCSA-Server kompatibel sind, kennen das Konzept der <code>.htaccess</code>-Dateien. Heute trifft das vor allem auf den immer dominanter werdenden und die Defacto-Standards im Web setzenden Webserver Apache zu. Wenn auf Ihrem Server-Rechner also ein <a href="http://wiki.selfhtml.org/wiki/Webserver/Apache" title="Webserver/Apache">Apache Webserver</a> läuft, dann können Sie die Technik der <code>.htaccess</code>-Dateien einsetzen. Aber auch für andere Webserver gibt es vergleichbare Konzepte, um beispielsweise einen Zugriffsschutz zu realisieren. Falls Sie nicht wissen, welche Webserver-Software auf dem Rechner läuft, auf dem Sie Ihr Web-Projekt hosten, fragen Sie bitte Ihren Provider oder Webmaster.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_.htaccess-Dateien"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu .htaccess-Dateien</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Erlaubte_Anweisungen_in_.htaccess-Dateien"><span class="tocnumber">2</span> <span class="toctext">Erlaubte Anweisungen in .htaccess-Dateien</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Verzeichnisse_und_Dateien_mit_Passwort_sch.C3.BCtzen"><span class="tocnumber">3</span> <span class="toctext">Verzeichnisse und Dateien mit Passwort schützen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#IP-Adressen.2C_IP-Bereiche_oder_Namensadressen_zulassen.2Fausschlie.C3.9Fen"><span class="tocnumber">4</span> <span class="toctext">IP-Adressen, IP-Bereiche oder Namensadressen zulassen/ausschließen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Verzeichnis-Optionen_einstellen"><span class="tocnumber">5</span> <span class="toctext">Verzeichnis-Optionen einstellen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Individuelle_Fehlermeldungen_gestalten"><span class="tocnumber">6</span> <span class="toctext">Individuelle Fehlermeldungen gestalten</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#hart_kodierte_Meldungen"><span class="tocnumber">6.1</span> <span class="toctext">hart kodierte Meldungen</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#lokale_Fehlerseiten"><span class="tocnumber">6.2</span> <span class="toctext">lokale Fehlerseiten</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#externe_Fehlerdokumente"><span class="tocnumber">6.3</span> <span class="toctext">externe Fehlerdokumente</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Verzeichnis-Browsing_einstellen"><span class="tocnumber">7</span> <span class="toctext">Verzeichnis-Browsing einstellen</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Alternative_Inhalte_senden"><span class="tocnumber">8</span> <span class="toctext">Alternative Inhalte senden</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu .htaccess-Dateien">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_.htaccess-Dateien">Allgemeines zu .htaccess-Dateien</span></h2>
+<p><code>.htaccess</code>-Dateien sind Server-Konfigurationsdateien für Verzeichnisse, die zu Ihrem Web-Angebot gehören. So ist die <code>.htaccess</code>-Technik beispielsweise der übliche Weg, um nur bestimmten Benutzern den Zugriff auf bestimmte Daten zu erlauben. <code>.htaccess</code> ist also die Antwort auf die immer wieder gestellte Frage nach einem "richtigen" Passwortschutz. Doch mit <code>.htaccess</code>-Dateien können Sie noch viel mehr anstellen als Daten mit Passwörtern zu schützen. So können Sie auch ganze Benutzerkreise automatisch (ohne Passwortzugang) aussperren oder alle bis auf bestimmte nach unten aussperren. Sie können Optionen zum so genannten <a href="#Verzeichnis-Browsing_einstellen">Verzeichnis-Browsing</a> (Web-Browser ruft ein Verzeichnis auf, in dem keine Default-Datei wie z.B. index.htm liegt) einstellen. Sie können automatische Seite Weiterleitungen einstellen oder eigene Regelungen für den Fall von <a href="#HTTP-Fehlermeldungen"> HTTP-Fehlermeldungen</a> schaffen. Sie können sogar abhängig von bestimmten Bedingungen nach unten alternative Inhalte anbieten, beispielsweise Webseiten mit unterschiedlichen Landessprachen abhängig von der Sprache des benutzten Web-Browsers - ohne CGI, ohne JavaScript. Und schließlich können Sie sogar einstellen, ob Daten komprimiert an den aufrufenden Browser übertragen werden können oder ob bei Aufrufen einzelner zu Ihrem Projekt gehörender Adressen auf eine andere URL Seite umgeleitet werden soll.
+</p><p>Dateien mit dem Namen <code>.htaccess</code> (das erste Zeichen ist ein Punkt) sind Bestandteile der Konfiguration des Webservers. Die Arbeitsweise des Webservers wird mit Hilfe einer (oder mehrerer) zentraler Konfigurationsdatei(en) definiert - die Seite <code>httpd.conf</code>. Doch diese liegt bzw. liegen normalerweise innerhalb des Programmverzeichnisses des Webservers selbst, worauf Benutzer, die ein Web-Projekt verwalten, in aller Regel keinen Zugriff erhalten. Der Server-Administrator legt in dieser zentralen Konfiguration fest, welche Berechtigungen er welchen Benutzern oder auch welchen Webangeboten (virtuellen Hosts) zugestehen möchte. Nur dann, wenn ein Benutzer das Recht erhalten soll, die Vorgaben aus der zentralen Konfiguration zu überschreiben und individuell neu festzulegen, wird ihm die Nutzung von <code>.htaccess</code>-Dateien erlaubt. <code>.htaccess</code>-Dateien kann er dann in dem Verzeichnisbereich anlegen und bearbeiten, in dem sein Web-Angebot liegt. Dort, wo Sie Ihre HTML-Dateien, Grafikdateien usw. betreuen, können Sie also auch <code>.htaccess</code>-Dateien ablegen, falls Ihr Provider Ihnen diese Möglichkeit einräumt. Der Einsatz von <code>.htaccess</code> in Apache bedeutet, dass der Webserver bei jedem einzelnen Seitenzugriff vom angeforderten Dokument aus rekursiv sämtliche Verzeichnisse überprüfen muss, ob irgendwo eine solche Datei liegt. Und diese Information darf er nicht zwischenspeichern - denn die von <code>.htaccess</code>-Dateien konfigurierten Servereinstellungen sollen unmittelbar in demselben Moment gültig sein, in dem die <code>.htaccess</code>-Datei existiert, ohne Server-Neustart. Die Dezentralisierung der Konfiguration kostet also auch etwas Rechnerleistung.
+</p><p>Dass der Name <code>.htaccess</code> mit einem Punkt beginnt, ist eine Tradition aus der Unix-Welt. Dort beginnen viele verzeichnisspezifische Konfigurationsdateien mit einem Punkt, wodurch sie als "versteckt" gekennzeichnet werden. Bekannt ist beispielsweise die Datei <code>.profile.</code> Dateien, deren Name mit einem Punkt beginnt, werden von dem Unix-Konsolenbefehl "ls" nur aufgelistet, wenn mit der Option "-a" ausdrücklich angegeben wird, versteckte Dateien zu zeigen. Setzen Sie zur Verwaltung Ihres Webangebots einen grafischen FTP-Client ein, kann es Ihnen daher passieren, dass eine <code>.htaccess</code>-Datei, die Sie gerade hochgeladen haben, plötzlich nicht mehr zu existieren scheint. Und schließlich muss der Name auch nicht unbedingt <code>.htaccess</code> lauten, dieser Name hat sich lediglich als Konvention durchgesetzt. In der zentralen Konfiguration des Apache lässt sich auch ein beliebiger anderer Dateiname einstellen.
+</p><p><code>.htaccess</code>-Dateien sind reine Textdateien, die mit einem Texteditor bearbeitet werden können. Wenn Sie Telnet- oder SSH-Zugang zu demjenigen Server-Rechner haben, auf dem Ihr Web-Angebot liegt, können Sie solche Dateien direkt auf dem Server erstellen und bearbeiten, indem Sie dort einen geeigneten Texteditor aufrufen (auf Unix-Systemen z.B. den vi-Editor). Wenn Sie nur FTP-Zugang zu dem Server-Rechner haben, können Sie eine solche Datei auf Ihrem lokalen PC mit einem Texteditor erstellen und dann hochladen. Auf einem Windows-System dürfen Sie allerdings solche Dateinamen, die mit einem Punkt beginnen, nicht unmittelbar vergeben, da Windows den Punkt anders versteht. Sie müssen in Ihrem Texteditor die Option "Speichern unter" wählen und darauf achten, dass der Editor nicht selbständig aus diesem Namen den Dateinamen <code>.htaccess</code>.txt macht.
+</p><p><code>.htaccess</code>-Dateien gelten stets für das Verzeichnis, in dem sie abgespeichert werden, sowie für alle Unterverzeichnisse davon und für deren Unterverzeichnisse. Wenn Sie in einem der Unterverzeichnisse andere Regelungen wünschen, müssen Sie dort wiederum eine <code>.htaccess</code>-Datei ablegen. Die Angaben der jeweils aktuellen Datei überschreiben die Angaben von <code>.htaccess</code>-Dateien aus darüberliegenden Verzeichnissen.
+</p><p>Das Konzept, <code>.htaccess</code>-Dateien einzusetzen, gehörte zwar nahezu von Anfang an zum Apache, jedoch wurde die Zahl der erlaubten Anweisungen von Version zu Version größer, womit sich auch der Umfang dessen, was in einer <code>.htaccess</code>-Datei konfiguriert werden kann, beständig erweiterte. Sollte eines der hier genannten Beispiele bei Ihnen nicht funktionieren, so informieren Sie sich bitte über die Version des eingesetzten Webservers und schlagen Sie in der deutschsprachige Seite Apache-Dokumentation nach, um herauszufinden, ob die Anweisung in Ihrer Apache-Version bereits eingesetzt werden kann.
+</p><p>Die Thematik ist wesentlich umfangreicher, als hier in einem kurzen Abriss dargestellt wird. Es können Ihnen nur die wichtigsten Einsatzgebiete benannt werden, für die <code>.htaccess</code>-Dateien genutzt werden können.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Erlaubte Anweisungen in .htaccess-Dateien">Bearbeiten</a>]</span> <span class="mw-headline" id="Erlaubte_Anweisungen_in_.htaccess-Dateien">Erlaubte Anweisungen in .htaccess-Dateien</span></h2>
+<p>Sie können in einer <code>.htaccess</code>-Datei genau dieselben Anweisungen notieren, die in der zentralen Konfigurationsdatei Verwendung finden - mit nur wenigen Ausnahmen. Beispielsweise dürfen Sie keine zusätzlichen Seite Module laden, den Servernamen nicht ändern und keinen zusätzlichen Speicherplatz (DocumentRoot) anfordern. Auch &lt;Directory ...&gt;-Container sind generell in so einer dezentralen Konfigurationsdatei ebensowenig zulässig wie Festlegungen für neue virtuelle Hosts. Wenn Sie solche Wünsche haben, so setzen Sie sich bitte mit Ihrem Provider bzw Webmaster in Verbindung - oder wenn Sie einen Seite lokal installierten Apache nutzen, ändern Sie die Seite httpd.conf. Sonst haben Sie aber sehr weitgehende Freiheiten. So ist es durchaus möglich, dass Sie Anweisungen nutzen, die in der zentralen Konfigurationsdatei nicht vorhanden sind, beispielsweise für Spracheinstellungen oder für ganz bestimmte Zeichensätze oder MIME-Typen. Prinzipiell dürfen Sie dies alles selbst konfigurieren. Denken Sie aber daran, dass es in jedem Verzeichnis nur eine einzige <code>.htaccess</code>-Datei geben kann, in der Sie alles das notieren müssen, was Sie konfigurieren wollen. Zur Strukturierung und damit besseren Lesbarkeit für Sie empfiehlt sich der sparsame Einsatz einiger weniger Kommentarzeilen.
+</p><p>Trotz dieser prinzipiell vielfältigen Möglichkeiten kann es aber teilweise drastische Einschränkungen geben. Welche Anweisungen Ihnen tatsächlich zur Verfügung stehen, hängt davon ab, wie weitgehend die Rechte sind, die Ihnen der Server-Administrator mit Hilfe der Anweisung AllowOverride in der zentralen Konfigurationsdatei einräumt.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Anweisung AllowOverride kann nicht innerhalb einer <code>.htaccess</code> notiert werden, sondern wird ausschließlich vom Server-Administrator in der zentralen Konfigurationsdatei vorgegeben. Um den AllowOverride-Wert in Erfahrung zu bringen, benötigen Sie Einsicht in die Serverkonfiguration. Kontaktieren Sie dazu gegebenenfalls Ihren Webhosting-Provider. Dieser kann den Wert auch ändern, falls Sie bestimmte bisher nicht erlaubte Anweisungen verwenden möchten. Im einzelnen gibt es dafür folgende mögliche Werte:
+<p><br />
+</p>
+<ul><li> <code>AllowOverride None</code> weist Webserver an, <code>.htaccess</code>-Dateien zu ignorieren. Das ist im Übrigen die Voreinstellung.
+</li><li> <code>AllowOverride All</code> legt fest, dass in einer <code>.htaccess</code>-Datei (so gut wie) sämtliche zentrale Vorgaben überschrieben und damit abgeändert werden dürfen. Das kann bedeuten, dass Vorhaben, die eigentlich verboten sind (beispielsweise die Ausführung von CGI-Scripts), mit Hilfe einer <code>.htaccess</code>-Datei erlaubt werden. Als Server-Administrator werden Sie diese Anweisung also nur sehr vorsichtig einsetzen.
+</li><li> <code>AllowOverride Options</code> legt fest, dass in einer <code>.htaccess</code>-Datei nach unten Anweisungen zur Steuerung spezieller Verzeichniseigenschaften zulässig sind.
+</li><li> <code>AllowOverride Limit</code> legt fest, dass in einer <code>.htaccess</code>-Datei nach unten Zugriffe von bestimmten Hosts erlaubt oder untersagt werden können.
+</li><li> <code>AllowOverride Indexes</code> legt fest, dass in einer <code>.htaccess</code>-Datei nach unten Anweisungen zur Steuerung von Verzeichnisindizes zulässig sind.
+</li><li> <code>AllowOverride FileInfo</code> legt fest, dass in einer <code>.htaccess</code>-Datei Anweisungen zur Akzeptanz bestimmter Dokumenttypen zulässig sind - beispielsweie, um nach unten Individuelle Fehlermeldungen ausgeben zu können.
+</li><li> <code>AllowOverride AuthConfig</code> legt fest, dass in einer <code>.htaccess</code>-Datei Autorisierungsanweisungen stehen dürfen - das betrifft beispielsweise Regelungen zum nach unten Passwortschutz.
+</li></ul>
+<p><br />
+</p>
+Diese Werte können auch miteinander kombiniert werden. <code>All</code> ist der mächtigste Parameter, mit dem alles das zugelassen wird, was die anderen Parameter steuern.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Verzeichnisse und Dateien mit Passwort schützen">Bearbeiten</a>]</span> <span class="mw-headline" id="Verzeichnisse_und_Dateien_mit_Passwort_sch.C3.BCtzen"> Verzeichnisse und Dateien mit Passwort schützen </span></h2>
+<p><code>.htaccess</code>-Dateien sind verzeichnisspezifisch. Speichern Sie die <code>.htaccess</code>-Datei also in demjenigen Verzeichnis ab, in dem die zu schützenden Daten liegen. Sie können wahlweise das ganze Verzeichnis mit all seinen Unterverzeichnissen oder nur bestimmte Dateien oder Dateitypen schützen. Sie können den Passwortschutz außerdem wahlweise für einzelne Benutzer oder für ganze Benutzergruppen einrichten. Auch Kombinationen beider Formen sind möglich. Damit der Verzeichnisschutz mit Passwort funktioniert, genügt die <code>.htaccess</code>-Datei alleine allerdings nicht. Sie brauchen zusätzlich eine Datei, in der die Benutzernamen und die zugehörigen Passwörter stehen. Falls Sie mit Benutzergruppen arbeiten, benötigen Sie außerdem noch eine Datei, in der die Benutzergruppen definiert werden. Auch diese beiden anderen Dateien werden mit einem beliebigen Texteditor erstellt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: .htaccess-Datei
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="apache source-apache"><pre class="de1"><span class="co1"># .htaccess-Datei für Web-Verzeichnis /service</span>
+<span class="kw1">AuthType</span> Basic
+<span class="kw1">AuthName</span> <span class="st0">&quot;Service-Bereich&quot;</span>
+<span class="kw1">AuthUserFile</span> /usr/verwaltung/web/.htusers
+<span class="kw1">AuthGroupFile</span> /usr/verwaltung/web/.htgroups
+<span class="kw1">Require</span> <span class="kw1">user</span>  Werner Dieter Heidi
+<span class="kw1">Require</span> <span class="kw1">group</span> Servicetechniker</pre></div></div></div>
+</div>
+<p>Die erste Zeile der Beispieldatei ist lediglich ein Kommentar. Solche Kommentarzeilen müssen mit dem Gatterzeichen # eingeleitet werden. Alle anderen Zeilen haben einen einheitlichen Aufbau: Sie beginnen mit Schlüsselwörtern (den eigentlichen Anweisungen), und dahinter folgen, durch ein oder mehrere Leerzeichen getrennt, Angaben dazu. Leerzeilen, die die Lesbarkeit verbessern, sind erlaubt, werden aber vom Webserver ignoriert. Zeilen mit Angaben, die der Webserver nicht interpretieren kann, führen jedoch grundsätzlich zu einem "Internal Server Error" (Seite HTTP-Status-Code 500).
+</p><p>Um einen Passwortschutz einzurichten, brauchen Sie die Anweisungen AuthType, AuthName, AuthUserFile, und wenn Sie mit Benutzergruppen arbeiten, auch AuthGroupFile. Ferner benötigen Sie eine oder mehrere Angaben der Anweisung Require.
+</p><p>Mit AuthType wird die Art der Authentifizierung bezeichnet. Die meist gebrauchte Angabe ist Basic für die sogenannte HTTP Basic Authentication (einfache Authentifizierung über HTTP). Dabei stehen die Benutzernamen und die zugehörigen Passwörter in einer noch anzugebenden Datei. Diese Methode verlangt aber, dass das Passwort unverschlüsselt vom Browser an den Webserver übermittelt wird. Sie ist daher nicht wirklich sicher. Die Alternative für den Authentifizierungstyp ist Digest. Dabei werden Passwörter bereits in verschlüsselter Form abgefordert, allerdings beherrschen das nicht alle Browser. Sie müssen daher entscheiden, was für Sie Vorrang hat: höhere Sicherheit oder die Berücksichtigung der Browser und Clients, die nur die einfache Authentifizierung unterstützen.
+</p><p>Mit AuthUserFile wird die Datei angegeben, in der die Namen der autorisierten Benutzer und ihre Passwörter stehen. Es sollte der vollständige absolute Pfadname angegeben werden. Das ist also nicht der Pfad ab dem Wurzelverzeichnis Ihres Web-Projekts. Fragen Sie dazu gegebenenfalls Ihren Webhosting-Provider oder Webmaster. Sie können zwar auch eine Angabe machen, die relativ zum Wurzelverzeichnis des Webservers (das oft /usr/lib/apache/ lautet) interpretiert wird. In der Regel ist das aber ein zentrales Installationsverzeichnis, auf das Sie keinen Zugriff haben.
+</p><p>Im Interesse der Sicherheit ist es günstiger, die Datei mit den Namen der Benutzer und ihren Passwörtern außerhalb des Web-Projekts auf dem Server abzulegen. Aber bei kaum einem Hosting-Angebot können Sie auf Systemverzeichnisse des Server-Rechners außerhalb des eigenen Web-Projekts zugreifen. Wenn nicht ausdrücklich vom Provider bzw. Webmaster anders bestimmt, sollten Sie außerdem für die Datei einen Namen wählen, der mit .ht beginnt, üblicherweise eben .htusers oder .htpasswd. In der Konfiguration des Apache-Servers sind solche Dateinamen als Grundeinstellung vorgegeben und werden, wie oben bereits erläutert, aufgrund des vorangestellten Punktes nicht zur Ansicht freigegeben, bleiben also vor Besuchern verborgen. Das Gleiche gilt für die Gruppendatei, falls Sie mit Benutzergruppen arbeiten. Diese wird mit AuthGroupFile angegeben. Alternativ können Sie aber mit Hilfe des Containers &lt;Files&gt; auch eigene Schutzregeln definieren und eigene Namen für diese Dateien vergeben.
+</p><p>Bei Require geben Sie als zweites Schlüsselwort entweder user oder group an, je nachdem, ob Sie Zugriffsbestimmungen für einzelne Benutzer oder Benutzergruppen festlegen möchten. Hinter diesem Schlüsselwort können ein oder mehrere Namen von Benutzern oder Benutzergruppen folgen. Alternativ können Sie auch das Schlüsselwort valid-user benutzen, um alle Benutzer zuzulassen, falls die Liste sonst zu lang werden würde.
+</p><p>Im obigen Beispiel werden die drei Benutzer Werner Dieter Heidi sowie alle Benutzer der Gruppe Servicetechniker angegeben. Damit der Passwortschutz funktioniert, müssen nun die angegebenen Dateien mit den Benutzernamen und (falls benötigt) den Gruppen angelegt werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: .htusers-Datei unter Unix
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="apache source-apache"><pre class="de1"><span class="co1"># BenutzerDatei für Web-Projekt</span>
+Werner:INY8//m5KMwIc
+Manfred:69gY8YPjQXeN6
+Janine:INw2mPEH.owe2
+Anke:INh6DHvyejvf2
+Bernd:INboWuvjjwQ7E
+Karin:INwOXOz96UQOU
+Christina:INXo9kh0M.anc
+Andreas:INeRD/cUQIFP6
+Dieter:INUnlKdkNZ6RQ
+Heidi:IN20ffIEEV1H6</pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: .htusers-Datei unter Windows
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="apache source-apache"><pre class="de1"><span class="co1"># BenutzerDatei für Web-Projekt</span>
+Werner:Herakles
+Manfred:Dionysos
+Janine:Olympia
+Anke:Hydra
+Bernd:Poseidon
+Karin:Hera
+Christina:Athena
+Andreas:Apollon
+Dieter:Achilles
+Heidi:Diana</pre></div></div></div>
+</div>
+<p>Auch in solchen Dateien sind Kommentarzeilen erlaubt, eingeleitet durch #. Ansonsten enthält jede Zeile der Benutzerdatei einen Benutzernamen, und gleich dahinter, durch einen Doppelpunkt getrennt, das Passwort. Der Apache-Webserver erlaubt entweder unverschlüsselte Passwörter (unter Windows), oder verschlüsselte nach den Methoden Crypt oder MD5 (alle Plattformen einschließlich Windows).
+</p><p>Falls Sie damit nichts anfangen können, können Sie das folgende kleine Formular verwenden. Geben Sie darin das gewünschte Passwort ein. Das Formular ruft beim Absenden ein CGI-Script im Web auf. Als Ergebnis erhalten Sie das nach der Methode Crypt verschlüsselte Passwort. Dazu muss jedoch eine Verbindung ins Internet bestehen.
+Kennwort: 	
+</p><p>Zusammen mit dem Apache wird ein kleines Hilfsprogramm ausgeliefert, das die Erstellung solcher Passwortdateien vereinfacht. Es heißt htpasswd (unter Windows: htpasswd.exe) und ist über die Konsole (Eingabeaufforderung) zu bedienen. Rufen Sie es einfach mit dem Befehl htpasswd -h auf, um eine kurze Hilfe zu seiner Verwendung zu erhalten. Im einfachsten Fall geben Sie zum Beispiel
+</p>
+<pre>htpasswd -c .htusers smuenz
+</pre>
+<p>ein. Es wird eine neue Passwortdatei angelegt. Sie müssen für den neuen Benutzer "smuenz" ein Passwort angeben und bestätigen. Diese Passwortdatei können Sie dann in das vorgesehene Verzeichnis verschieben oder hochladen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: .htgroups-Datei
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="apache source-apache"><pre class="de1"><span class="co1"># GruppenDatei für Web-Projekt</span>
+Servicetechniker: Andreas Karin Janine</pre></div></div></div>
+</div>
+<p>Gruppendateien bestehen aus Einträgen, bei denen zunächst ein Gruppenname notiert wird und dahinter, nach einem Doppelpunkt, die Namen von Benutzern, die zu dieser Gruppe gehören. Es müssen Benutzernamen sein, für die in der Benutzerdatei ein Eintrag angelegt wurde.
+Die Gruppendatei wird im Beispiel nur benötigt, weil in der <code>.htaccess</code>-Datei eine Benutzergruppe angegeben wurde; die Gruppendatei wird ausschließlich dann erforderlich, wenn Sie Gruppennamen benutzen. In einem Intranet ist auch eine Benutzerdatei nicht zwingend erforderlich, da Sie Zugriffserlaubnisse und -verbote über die Zulassung bzw. den Ausschluss der internen IP-Adresse regeln können.
+Effekt:
+</p><p>Alle Besucher des Web-Projekts, die nun versuchen, auf das Verzeichnis mit der <code>.htaccess</code>-Datei zuzugreifen, bekommen von ihrem Browser einen Dialog angeboten, in dem sie Benutzernamen und Passwort eingeben müssen. Nur Besucher, die sich mit einer gültigen Kombination aus Benutzernamen und Passwort anmelden, haben Zugriff auf das Verzeichnis.
+Erweiterte Möglichkeiten:
+</p><p>So wie im obigen Beispiel gezeigt, gilt der Zugangsschutz für das Verzeichnis, in dem die <code>.htaccess</code>-Datei liegt, und für alle Verzeichnisse unterhalb davon. Sie können den Schutz aber auch auf bestimmte Dateien, Dateitypen oder Zugriffsmethoden einschränken.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: .htaccess-Datei für Web-Verzeichnis
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="apache source-apache"><pre class="de1"><span class="co1"># &lt;code&gt;.htaccess&lt;/code&gt;-Datei für Web-Verzeichnis /service</span>
+&#160;
+<span class="kw1">AuthType</span> Basic
+<span class="kw1">AuthName</span> <span class="st0">&quot;Service-Bereich&quot;</span>
+<span class="kw1">AuthUserFile</span> /usr/verwaltung/web/.htusers
+<span class="kw1">AuthGroupFile</span> /usr/verwaltung/web/.htgroups
+&#160;
+&lt;<span class="kw3">Files</span> *.htm&gt;
+<span class="kw1">Require</span> <span class="kw1">user</span>  Werner Dieter Heidi
+<span class="kw1">Require</span> <span class="kw1">group</span> Servicetechniker
+&lt;/<span class="kw3">Files</span>&gt;</pre></div></div></div>
+</div>
+<p>Um den Schutz einzuschränken, benutzen Sie ähnlich wie in HTML oder XML Tags mit spitzen Klammern. Im einleitenden Tag kann hinter der öffnenden spitzen Klammer entweder Files stehen, wie im obigen Beispiel. Dahinter können Sie genau eine einschränkende Angabe machen. Mit *.htm wie im Beispiel beschränken Sie den Schutz auf HTML-Dateien. Mit einer Angabe wie geheim.htm würde nur diese eine Datei geschützt. Anstelle von Files können Sie auch FilesMatch einsetzen. Dann sind Reguläre Ausdrücke möglich. Beispielsweise würden Sie mit &lt;FilesMatch "\.(htm|php)$"&gt; alle HTML-Dokumente und alle PHP-Scripts erfassen.
+</p><p>Eine weitere Möglichkeit besteht darin, anstelle von Files die Anweisung Limit, oder besser noch LimitExcept anzuwenden. Diese Anweisung steht aber erst seit der Apache-Version 2.0.20 zur Verfügung. Sie hat Auswirkungen auf HTTP-Methoden wie GET, POST, PUT, DELETE, CONNECT, OPTIONS usw. Mit &lt;LimitExcept GET&gt; können Sie für alle Zugriffsmethoden Bedingungen formulieren, mit Ausnahme von GET - und mit Mit &lt;LimitExcept POST&gt; würden Sie für alle Zugriffsmethoden mit Ausnahme von POST Zugriffsbedingungen formulieren können, falls der Webserver mindestens ein Apache 2.0.20 oder neuer ist.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Falls es bei Ihnen einfach nicht mit dem Schützen von Verzeichnissen klappen will, dann könnte der Grund darin liegen, dass in der zentralen Konfiguration des Apache Webservers beim Eintrag AllowOverride der Wert None gewählt wurde.
+Schutzmechanismen, die Sie mit Hilfe von <code>.htaccess</code>-Dateien erstellen, sind auf HTTP-Ebene wesentlich sicherer als solche, die mit Hilfe von CGI-Scripts oder gar mit Hilfe von JavaScript erstellt werden. Dennoch sollten Sie beachten, dass <code>.htaccess</code> keinen Generalschutz bietet. Der Schutz gilt nur, wenn Web-Browser oder andere Web-Clients über den Webserver geschützte Daten anfordern. Er gilt nicht, wenn der Zugriff z.B. mit einem anderen Internet-Protokoll wie FTP erfolgt.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: IP-Adressen, IP-Bereiche oder Namensadressen zulassen/ausschließen">Bearbeiten</a>]</span> <span class="mw-headline" id="IP-Adressen.2C_IP-Bereiche_oder_Namensadressen_zulassen.2Fausschlie.C3.9Fen">IP-Adressen, IP-Bereiche oder Namensadressen zulassen/ausschließen</span></h2>
+<p>Sie können bestimmte IP-Adressen oder IP-Bereiche davon ausschließen, auf Webseiten zuzugreifen. Ebenso können Sie alle IP-Adressen ausschließen und nur ganz bestimmten den Zugriff erlauben. Anwender, die über eine nicht autorisierte IP-Adresse zugreifen, erhalten dann eine HTTP-Fehlermeldung (den Seite HTTP-Status-Code 403), und der Zugriff wird ihnen verweigert.
+</p><p>Sinnvoll ist das beispielsweise, wenn Ihr Web-Angebot nur den Mitarbeitern Ihrer Firma im firmeninternen Intranet zugänglich sein soll. In einem solchen Fall kennen Sie vermutlich die vorhandenen Netze, möglicherweise sogar alle im Intranet fest vergebenen IP-Adressen. Oder Sie möchten bestimmte Anwender, die mit festen IP-Adressen unterwegs sind, ausschließen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: .htacces-Datei
+</div>
+<div class="note-box-text note-box-example-code">
+# Datei zum Regeln von IP-Bereichen
+Order deny,allow
+Deny from .aol.com
+Deny from 192.168
+Allow from 192.168.220.102}}
+</div>
+</div>
+<p>Zunächst legen Sie mit Order die logische Interpretationsreihenfolge der nachfolgenden Angaben fest. Möglich ist die Angabe deny,allow wie im Beispiel, oder auch die umgekehrte Reihenfolge.
+</p><p>In Zeilen, die mit Deny from oder Allow from beginnen, geben Sie eine konkrete IP-Adresse, einen Teil davon, eine Namensadresse oder einen Teil davon an. Mit Deny from verbieten Sie den Zugriff für den oder die angegebenen Benutzer, und mit Allow from erlauben Sie den Zugriff. Auch in der zentralen Konfigurationsdatei können für &lt;Directory&gt;-Container bereits solche Regelungen getroffen worden sein, die Sie dann in der <code>.htaccess</code>-Datei erweitern oder bei Bedarf korrigieren können. Im obigen Beispiel werden alle Benutzer ausgesperrt, die mit einer AOL-Kennung surfen, (.aol.com), sowie alle Benutzer mit einer numerischen IP-Adresse des Bereichs 192.168. Das ist einer der "privaten" IP-Bereiche, also Ihr Intranet. Um aber einem bestimmten Benutzer aus diesem Bereich doch den Zugriff zu erlauben, wird im Beispiel anschließend noch mit Allow from dessen spezifische IP-Adresse angegeben.
+</p><p>Die Angabe wird einfach als Teilzeichenkette interpretiert. Wenn ein Client eine Webseite in dem Verzeichnis mit der <code>.htaccess</code>-Datei aufruft, vergleicht der Webserver, ob eine der notierten Zeichenketten in derjenigen Zeichenkette vorkommt, die der aufrufende Client dem Server übermittelt. Um mehr über die möglichen Zeichenketten zu erfahren, die in der Praxis übermittelt werden, empfiehlt sich ein Blick in die Seite Log-Dateien des Webservers.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Anstelle einer bestimmten Zeichenkette können Sie auch Allow from all bzw. Deny from all notieren, um eine generelle Erlaubnis oder ein generelles Verbot zu formulieren. Wenn Sie beispielsweise keinerlei Einschränkungen für nötig halten, geben Sie mit Allow from all Ihr Verzeichnis frei. Soll Ihr Webangebot dagegen lediglich Ihrem Firmennetz zur Verfügung stehen, so notieren Sie:
+<p>Order deny,allow
+Deny from all
+Allow from 192.168
+</p>
+Beim Aussperren und Einschließen bestimmter IP-Adressen, IP-Bereiche oder Namensadressen sind die gleichen nach obenerweiterten Möglichkeiten erlaubt wie beim Passwortschutz. Die Anweisungen mit Deny from und Allow from können dabei in entsprechende Tags eingeschlossen werden. So lässt sich z.B. das Aussperren bestimmter Benutzer oder Benutzerkreise auf bestimmte Dateien oder Zugriffsmethoden beschränken.</div>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: .htacces-Datei
+</div>
+<div class="note-box-text note-box-example-code">
+# &lt;code&gt;.htaccess&lt;/code&gt;-Datei für Web-Verzeichnis /service
+AuthType Basic
+AuthName &quot;Service-Bereich&quot;
+AuthUserFile /usr/verwaltung/web/.htusers
+Require valid-user
+Order deny,allow
+Deny from all
+Allow from 192.168
+Satisfy any</div>
+</div>
+<p>In diesem Beispiel wird Require zusammen mit Allow from und Deny from verwendet. Die Anweisung Satisfy gibt an, welche der Bedingungen erfüllt sein müssen. Das Schlüsselwort any bedeutet, dass alle Benutzer mit einer numerischen IP im Bereich 192.168 automatisch zugelassen sind. Benutzer, die nicht von dort kommen, werden nach einem Benutzernamen und Passwort gefragt ("Oder"-Verknüpfung der beiden Bedingungen). Hingegen würde das Schlüsselwort all bedeuten, dass nur Benutzer mit einer IP aus dem Bereich 192.168 und einem gültigen Benutzernamen zugelassen sind ("Und"-Verknüpfung der beiden Bedingungen).
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Verzeichnis-Optionen einstellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Verzeichnis-Optionen_einstellen">Verzeichnis-Optionen einstellen</span></h2>
+<p>Mit Hilfe einer <code>.htaccess</code>-Datei können Sie alle zentralen Verzeichnis-Optionen, die in der Konfiguration des Webservers eingestellt sind, für das entsprechende Verzeichnis und seine Unterverzeichnisse ändern. Voraussetzung ist allerdings, dass in der zentralen Webserver-Konfiguration mindestens AllowOverride Options Indexes FileInfo eingetragen ist. Wenn nicht, dann werden Angaben für andere Verzeichnis-Optionen in Ihrer <code>.htaccess</code>-Datei ignoriert.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: .htacces-Datei
+</div>
+<div class="note-box-text note-box-example-code">
+# Datei für Verzeichnis /bilder
+Options +ExecCGI -Indexes
+DirectoryIndex erste.htm start.htm</div>
+</div>
+<p>Mit Options können Sie verschiedene wichtige Grundeinstellungen ändern, die der Webserver für Verzeichnisse verwendet. Hinter Options können Sie eine oder mehrere der folgenden Angaben notieren:
+All erlaubt alles bis auf das Definieren alternativer Inhalte. Dies ist die Voreinstellung und gilt auch, wenn Sie nichts explizit angeben möchten.
++ExecCGI erlaubt das Ausführen von Seite CGI-Scripts im Verzeichnis, falls es zentral nur im definierten CGI-Verzeichnis erlaubt ist, und -ExecCGI verhindert es, sofern es zentral in allen Verzeichnissen erlaubt ist.
++Includes erlaubt das Ausführen von Seite Server Side Includes im Verzeichnis, falls es zentral verboten ist, und -Includes verhindert es, sofern es zentral erlaubt ist.
++IncludesNOEXEC erlaubt das Ausführen von Server Side Includes, die kein CGI-Script ausführen, -IncludesNOEXEC verbietet solche Server Side Includes.
++Indexes erlaubt Verzeichnis-Browsing, falls es zentral verboten ist, und -Indexes verhindert es, sofern es zentral erlaubt ist. Beim Verzeichnis-Browsing wird der Inhalt des Verzeichnisses im Browser aufgelistet, falls nur das Verzeichnis aufgerufen wird (z.B. <a rel="nofollow" class="external free" href="http://www.ihr-name.de/bilder/">http://www.ihr-name.de/bilder/</a>) und dort keine Datei mit einem Namen zu finden ist, der "Index-Funktion" hat.
++MultiViews erlaubt das Definieren nach unten alternativer Inhalte, -MultiViews schaltet es aus.
+</p><p>Im Normalfall ist der Webserver so konfiguriert, dass er das "Stöbern" im Verzeichnis zulässt, falls dort keine Datei mit "Index-Funktion" existiert. Das sind in der Einstellung der meisten Webserver Dateien mit Namen wie index.htm oder index.html.
+Mit DirectoryIndex können Sie andere Dateinamen bestimmen, die in diesem Verzeichnis und seinen Unterverzeichnissen als Dateien mit Index-Funktion gelten. Sie können beliebig viele Dateinamen angeben, welche dann in der Reihenfolge ihrer Angabe geprüft werden, falls mehrere von ihnen gleichzeitig im selben Verzeichnis existieren.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Sie müssen die Vorzeichen - und + nicht unbedingt angeben. Werden sie angegeben, so bewirken sie eine Korrektur eventuell in der zentralen Konfuguration vorhandener Einstellungen. Werden sie nicht angegeben, so werden eventuelle Voreinstellungen überschrieben.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Individuelle Fehlermeldungen gestalten">Bearbeiten</a>]</span> <span class="mw-headline" id="Individuelle_Fehlermeldungen_gestalten">Individuelle Fehlermeldungen gestalten</span></h2>
+<p>Per Voreinstellung zeigt der Webserver eine in seiner Konfiguration festgelegte HTML-Datei oder eine hart kodierte Fehlermeldung an, wenn ein Zugriffsfehler passiert, z.B. wenn eine angeforderte Datei nicht existiert. Auch dies können Sie ändern.
+</p><p>Mit ErrorDocument definieren Sie eine eigene Meldung oder Datei, die im Fehlerfall angezeigt wird. Hinter dem Schlüsselwort notieren Sie den gewünschten Seite HTTP-Status-Code - typische Fehler, die auftreten können, sind jene mit den Nummern 403, 404 und 500. Hinter der Nummer mit dem Status-Code können Sie entweder in Anführungszeichen eine eigene Fehlermeldung notieren, oder Sie geben die Adresse einer Webseite an, die im Fehlerfall angezeigt werden soll. Es gibt drei mögliche Varianten:
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: hart kodierte Meldungen">Bearbeiten</a>]</span> <span class="mw-headline" id="hart_kodierte_Meldungen"> hart kodierte Meldungen</span></h3>
+<p>Das bedeutet, dass die Meldung direkt vom Webserver erzeugt wird. Der Wortlaut muss also auch vorgegeben werden, was in folgenden Formen geschehen kann:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 1: hartkodierte Fehlermeldung als reiner Text
+</div>
+<div class="note-box-text note-box-example-code">
+
+# Text für individuelle Fehleranzeige
+ErrorDocument 404 &quot;Ups. Was haben Sie denn da für Unsinn angestellt -\
+                   die angeforderte Ressource gibts hier ja gar nicht ;-)&quot;
+</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Zugegeben, der Text ist etwas frech, variieren Sie ihn bitte und wählen Sie eine höflichere Ausdrucksweise. Sie können einen beliebig langen Text notieren, aber es muss alles hintereinander ohne jeden Zeilenumbruch in einer einzigen Zeile geschrieben werden, oder es findet hier ausnahmsweise der Backslash als Zeilentrenner Verwendung, damit Sie es besser lesen können. Die Ausgabe an den Browser erfolgt als reiner Text. Der Internet Explorer stellt allerdings solche servergenerierte Fehlermeldungen erst dann dar, wenn sie mehr als 512 Bytes belegen. Das hier notierte Beispiel erscheint daher nicht im Internet Explorer (der stattdessen eine seiner Systemmeldungen offeriert), wohl aber in anderen Browsern. Sie können dieses Verhalten des Internet Explorer ändern, indem Sie in den "Internetoptionen" die als Voreinstellung aktivierte Option "Kurze HTTP-Fehlermeldungen anzeigen" deaktivieren.</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 2: hart kodierte Fehlermeldung als HTML
+</div>
+<div class="note-box-text note-box-example-code">
+# HTML für individuelle Fehleranzeige
+ErrorDocument 404 &quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Seite nicht vorhanden&lt;/title&gt;\
+                   &lt;style type='text/css'&gt;\
+                   body {background-color:#EEEEEE;}\
+                   h1,p,a {font-family:Helvetica,Arial,Sans-serif;}\
+                   h1 {font-size:1.7em; margin-bottom:0em;}\
+                   p {font-size:0.95em;}\
+                   a {font-size:0.93em; text-decoration:none;}\
+                   a:link,a:visited {color:#000080;}\
+                   a:hover {color:#FF0000;}\
+                   &lt;/style&gt;\
+                   &lt;/head&gt;&lt;body&gt;\
+                   &lt;h1&gt;Fehler 404&lt;/h1&gt;\
+                   &lt;p&gt;Die angeforderte URL kann nicht gefunden werden.&lt;/p&gt;\
+                   &lt;p&gt;Probieren Sie es bitte erneut mit einem Aufruf der\
+                   &lt;a href='/'&gt;Startseite&lt;/a&gt;.&lt;/p&gt;\
+                   &lt;/body&gt;&lt;/html&gt;&quot;
+</div>
+</div>
+<p>Wie Sie sehen, sind HTML-Tags in solchen Meldungstexten zulässig. Es muss wiederum entweder alles hintereinander in einer Zeile geschrieben werden, oder Sie setzen den Backslash als Zeilentrenner ein. Ihren Browser interessieren solche Backslashes hier nicht. Das angegebene Beispiel umfasst mit 769 Byte mehr als 512 Bytes, daher stellt es auch der Internet Explorer dar, egal, ob Sie in den "Internetoptionen" die als Voreinstellung aktivierte Option "Kurze HTTP-Fehlermeldungen anzeigen" deaktiviert haben oder nicht.
+</p><p>Sie können, wenn Sie es für unabdingbar halten, in solchen hart kodierten HTML-Anzeigen sogar CSS-Bereiche (wie im angegebenen Beispiel) und JavaScript vorgeben. Allerdings müssen Sie beachten, dass doppelte Anführungszeichen die Fehlermeldung begrenzen und Sie somit einfache Anführungszeichen für HTML-Attribute verwenden müssen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: lokale Fehlerseiten">Bearbeiten</a>]</span> <span class="mw-headline" id="lokale_Fehlerseiten"> lokale Fehlerseiten</span></h3>
+<p>Anstelle solcher hart kodierter Fehlermeldungen, die vom Server direkt ausgegeben werden, können Sie natürlich auch eigene HTML-Dateien für die Fehleranzeige einsetzen.
+Beispiel 3: lokales HTML-Dokument im aktuellen Verzeichnis
+</p><p>Das bedeutet, dass ein lokales HTML-Dokument, das im selben Verzeichnis wie Ihre <code>.htaccess</code>-Datei liegt, die gewünschte Anzeige enthält. Dazu wird folgendes notiert:
+</p>
+<ol><li> verzeichnisspezifisches HTML-Fehlerdokument
+</li></ol>
+<p>ErrorDocument 404 /verzeichnispfad/fehler404.htm
+</p><p>Auch hier gilt, dass eine solche lokale Fehlerseite erst dann vom Internet Explorer dargestellt werden kann, wenn sie größer als 512 Bytes ist - es sei denn, Sie haben die Option für "Kurze HTTP-Fehlermeldungen anzeigen" deaktiviert. Bei dieser Art der Notation gilt die Anzeige nur für das gerade aktuelle Verzeichnis. Das kann nützlich sein, wenn Sie Ihr Webangebot so strukturiert haben, dass ein Verzeichnis nur Grafiken, ein weiteres nur Bilder und ein drittes nur Flash-Animationen enthält und Sie bei eventuellen Fehlern auch inhaltsbezogene Meldungen ausgeben möchten.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Sie müssen solche lokale Fehlerdokumente immer ausgehend vom Wurzelverzeichnis / deklarieren. Geben Sie lediglich
+<p>ErrorDocument 404 fehler404.htm
+</p>
+an, interpretiert Apache das als String und übermittelt dem Browser lediglich "fehler404.htm" zur Anzeige - was sehr irritierend wirken kann.</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 4: lokales HTML-Dokument im Wurzelverzeichnis
+</div>
+<div class="note-box-text note-box-example-code">
+# projektspezifisches HTML-Fehlerdokument
+ErrorDocument 404 /fehler404.htm
+</div>
+</div>
+<p>Wenn Sie das so notieren, brauchen Sie nur eine einzige Datei mit diesem Namen im Wurzelverzeichnis Ihres Webangebots. Das bedeutet aber auch, dass ihre Fehlerbeschreibung nicht variiert werden kann.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: externe Fehlerdokumente">Bearbeiten</a>]</span> <span class="mw-headline" id="externe_Fehlerdokumente"> externe Fehlerdokumente</span></h3>
+<p>Das bedeutet, dass die gewünschte Fehlerseite über eine externe URL angesprochen wird. Der Eintrag erhält dann folgendes Aussehen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 5: externes HTML-Dokument als Fehlerseite
+</div>
+<div class="note-box-text note-box-example-code">
+  # externes HTML-Fehlerdokument
+  ErrorDocument 404 http://www.domainname.tld/fehler404.htm
+</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Mit dieser Weiterleitung auf ein externes Dokument wird ein Redirect ausgelöst, was zu eventuell nicht erwünschten Nebeneffekten führen kann. Näheres dazu kann in der <a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/2.2/de/">Apache-Dokumentation</a> nachgelesen werden.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Verzeichnis-Browsing einstellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Verzeichnis-Browsing_einstellen">Verzeichnis-Browsing einstellen</span></h2>
+<p>Wenn Sie Verzeichnis-Browsing erlauben, sodass also bei einem Aufruf wie <code><a rel="nofollow" class="external free" href="http://www.ihr-name.de/bilder/">http://www.ihr-name.de/bilder/</a></code> der Verzeichnisinhalt aufgelistet wird, können Sie die Optik beeinflussen, mit der die Verzeichnislisten im Browser angezeigt werden. Leichter verständlich wird das, wenn Sie sich klarmachen, dass der Webserver anhand des eingelesenen Verzeichnisinhaltes dynamisch HTML-Code generiert, den der Browser dann anzeigt. Mit den hier beschriebenen Optionen können Sie diese HTML-Ausgabe beeinflussen.
+</p><p>Die folgende Abbildung zeigt, wie ein Browser ein Verzeichnislisting anzeigen könnte, bei dem eigene Dateibeschreibungen und Symbolgrafiken zum Einsatz kommen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel einer Verzeichnisdarstellung
+</div>
+<div class="note-box-text note-box-example-code">
+Beispiel: &lt;code&gt;.htaccess&lt;/code&gt;-Datei
+
+# Datei für Verzeichnis /bilder
+FancyIndexing On
+AddDescription &quot;HTML-Datei, anzeigbar&quot; .htm .html
+AddDescription &quot;GIF-Grafik, anzeigbar&quot; .gif
+AddDescription &quot;JPEG-Grafik, anzeigbar&quot; .jpg
+AddDescription &quot;ZIP-Archiv, downloadbar&quot; .zip
+AddIcon /src/blau.gif html htm
+AddIcon /src/gelb.gif gif jpg
+AddIcon /src/gruen.gif ^^DIRECTORY^^
+AddIcon /src/blau.gif ^^BLANKICON^^
+</div>
+</div>
+<p>Mit FancyIndexing On schalten Sie eigene Optionen zur Darstellung des Verzeichnislistings ein. Die Einträge der übrigen Zeilen im obigen Beispiel definieren solche Anzeigeoptionen.
+</p><p>Mit AddDescription können Sie einen kurzen Beschreibungstext notieren, der hinter einer oder mehreren bestimmten Dateien stehen soll. Zuerst notieren Sie in Anführungszeichen den gewünschten Text, und dahinter geben Sie an, für welche Datei oder Dateien der Text gelten soll. Dabei können Sie wie im Beispiel oben Wildcards benutzen.
+</p><p>Mit AddIcon können Sie für eine oder mehrere bestimmte Dateien eine eigene Symbolgrafik bestimmen. Dabei geben Sie den URI der Symbolgrafik an. Bei Adressen auf der eigenen Domain können Sie mit absoluten Pfadnamen arbeiten, wobei das Wurzelverzeichnis des Web-Projekts der Ausgangspunkt ist. Hinter der Angabe zur gewünschten Grafikdatei können Sie eine oder mehrere Dateiendungen notieren. Dateien mit dieser Endung erhalten dann bei der Anzeige die entsprechende Symbolgrafik. Anstelle von Dateiendungen können Sie auch reservierte Ausdrücke wie ^^DIRECTORY^^ (Verzeichnisse erhalten diese Symbolgrafik) oder ^^BLANKICON^^ (Dateien ohne Dateiendung oder nicht zuzuordnende Dateien erhalten diese Symbolgrafik) notieren.
+</p><p>Weitere Optionen sind ebenfalls möglich, aber im obigen Beispiel nicht notiert:
+</p><p>Mit AddType können Sie einem Kapitel MIME-Typen eine oder mehrere Dateiendungen zuordnen.
+Mit AddType text/xml adr ordnen Sie beispielsweise Dateien mit *.adr dem MIME-Typ text/xml zu.
+Mit AddEncoding können Sie dem Sub-Typ eines MIME-Typen eine oder mehrere Dateiendungen zuordnen.
+Mit AddEncoding javascript jscr ordnen Sie beispielsweise Dateien mit *.jscr dem MIME-Typ text/javascript zu.
+</p><p>Mit AddIconByType können Sie einem MIME-Typen eine Symbolgrafik zuordnen. Alle Dateien dieses MIME-Typs werden dann mit dieser Symbolgrafik angezeigt.
+Mit AddIconByType text/xml /src/struktur.gif ordnen Sie beispielsweise Dateien mit dem MIME-Typ text/xml eine Grafik mit der Adresse /src/struktur.gif zu.
+Mit AddIconByEncoding können Sie dem Sub-Typ eines MIME-Typen eine Symbolgrafik zuordnen.
+Mit AddIconByEncoding javascript /src/action.gif ordnen Sie beispielsweise Dateien mit dem MIME-Subtyp javascript eine Grafik mit der Adresse /src/action.gif zu.
+</p><p>Mit DefaultIcon bestimmen Sie eine Symbolgrafik für alle Fälle, die nicht durch speziellere Angaben abgedeckt sind.
+Mit DefaultIcon /src/punkt.gif bestimmen Sie beispielsweise, dass alle Verzeichniseinträge, die sich nicht anderweitig zu Symbolgrafiken zuordnen lassen, die Grafik mit der Adresse /src/punkt.gif erhalten.
+</p><p>Mit HeaderName bestimmen Sie eine eigene Datei für die Anzeige der Kopfinformation zum Verzeichnis.
+Mit HeaderName kopf.htm bestimmen Sie beispielsweise, dass die Anzeige der Kopfinformationen aus der Datei kopf.htm im gleichen Verzeichnis geholt werden.
+</p><p>Mit ReadmeName bestimmen Sie eine Datei, in der zusätzliche Informationen zum Verzeichnis stehen, z.B. Copyright-Hinweise. Diese Datei wird unterhalb der Verzeichnisliste eingebunden.
+Mit ReadmeName fuss.htm bestimmen Sie beispielsweise, dass die Anzeige der "Liesmich"-Informationen aus der Datei fuss.htm im gleichen Verzeichnis geholt wird.
+</p><p>Mit AddAlt können Sie einer verwendeten Symbolgrafik einen Seite HTML-Alternativtext zuordnen, falls die Grafik nicht angezeigt werden kann.
+Mit AddAlt "das ist eine Grafikdatei" gelb.gif bestimmen Sie beispielsweise den Alternativtext das ist eine Grafikdatei für die Symbolgrafik gelb.gif.
+Mit AddAltByType können Sie allen Symbolgrafiken vor Dateien eines bestimmten MIME-Typs einen gemeinsamen HTML-Alternativtext zuordnen.
+Mit AddAltByType "Das ist eine XML-basierte Datei" text/xml ordnen Sie beispielsweise allen Symbolgrafiken, die vor einer Datei mit dem MIME-Typ text/xml stehen, den angegebenen Alternativtext zu.
+Mit AddAltByEncoding können Sie allen Symbolgrafiken vor Dateien eines bestimmten MIME-Subtyps einen gemeinsamen HTML-Alternativtext zuordnen.
+Mit AddAltByEncoding "Das ist eine XML-basierte Datei" javascript ordnen Sie beispielsweise allen Symbolgrafiken, die vor einer Datei mit dem MIME-Subtyp javascript stehen, den angegebenen Alternativtext zu.
+</p><p>Mit DirectoryIndex können Sie festlegen, welche Dateinamen Index-Funktion erhalten, das heißt, welche Datei ausgeliefert wird, wenn der Client eine URL in der Form <a rel="nofollow" class="external free" href="http://www.domainname/">http://www.domainname/</a> ohne Angabe eines speziellen Dateinamens anfordert. Sie können mehrere Dateinamen angeben, die entsprechend ihrer Reihenfolge vom Server gesucht werden. Die Datei mit dem ersten Namen aus dieser Auflistung, die dann auch im durchsuchten Verzeichnis gefunden wird, liefert der Server aus.
+</p><p>Mit IndexIgnore können Sie Dateien angeben, die nicht im Verzeichnislisting auftauchen sollen.
+Mit IndexIgnore kopf.htm fuss.htm nacktbild.jpg *.bmp bestimmen Sie beispielsweise, dass die Dateien kopf.htm, fuss.htm, nacktbild.jpg sowie alle Dateien mit der Endung .bmp nicht angezeigt werden.
+</p><p>Mit IndexOrderDefault wird die Sortierung bestimmt. Per Voreinstellung werden die Verzeichniseinträge alphabetisch aufsteigend nach Dateinamen angezeigt.
+Mit IndexOrderDefault Descending Name können Sie beispielsweise nach Dateinamen absteigend sortieren,
+mit IndexOrderDefault Ascending Date aufsteigend nach Zeitstempel,
+mit IndexOrderDefault Descending Size absteigend nach Dateigröße
+und mit IndexOrderDefault Ascending Description aufsteigend nach Dateikurzbeschreibung.
+</p><p>Mit IndexOptions können Sie schließlich weitere Einzeloptionen festlegen.
+Mit IndexOptions IconHeight=12 IconWidth=14 IconsAreLinks ScanHTMLTitles legen Sie beispielsweise fest, dass Icongrafiken in der fixen Höhe von 12 Pixeln und der fixen Breite von 14 Pixeln angezeigt werden. Die Icons sind außerdem als Links anklickbar und rufen die dahinter angezeigte Datei oder das Verzeichnis auf. In der Spalte für Dateibeschreibungen werden im Fall von HTML-Dateien die Inhalte der darin definierten title-Elemente ausgelesen und als Kurzbeschreibung zur Datei angezeigt.
+Weitere Optionen sind:
+Mit SuppressColumnSorting werden die Verzeichniseinträge unsortiert angezeigt.
+Mit SuppressDescription werden keine Kurzbeschreibungen anzeigt.
+Mit SuppressLastModified werden keine Zeitstempel bei den Einträgen angezeigt.
+Mit SuppressSize werden keine Dateigrößen angezeigt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Alternative Inhalte senden">Bearbeiten</a>]</span> <span class="mw-headline" id="Alternative_Inhalte_senden">Alternative Inhalte senden</span></h2>
+<p>Jedesmal, wenn Sie irgendeine URL anfordern, findet, von Ihnen unbemerkt, zunächst ein Dialog zwischen Ihrem Browser (dem Client) und dem Webserver statt. Bereits mit Ihrer Anforderung übermitteln Sie einige Daten. Dazu gehören Informationen darüber, was Ihr Client bevorzugt, also beispielsweise, welche Sprache und welchen Zeichensatz er am besten versteht und einiges andere mehr. Server und Client führen gewissermaßen erst einmal ein Gespräch darüber, was denn der Server tatsächlich schicken soll. Diese Verhandlung wird in der Regel vom Server geführt. Bedingungen, wie das geschehen kann, sind in der Spezifikation des zugrundeliegenden Protokolls HTTP (englischsprachige Seite rfc2616) festgelegt. Beispielsweise kann der Server eine deutschsprachige oder eine englischsprachige Index-Seite senden, je nachdem, ob der Anwender einen Browser mit deutschsprachiger oder englischsprachiger Bedienoberfläche benutzt. Oder er kann alternativ eine HTML-Datei oder eine WML-Datei senden, abhängig davon, ob der aufrufende Client ein normaler Web-Client ist oder ein Handy, das WAP/WML-basierte Inhalte haben möchte.
+</p><p>Sie haben nun die Möglichkeit, in einer <code>.htaccess</code>-Datei die Bedingungen festzulegen, auf welche Art der Server die Verhandlung führen soll. Dafür gibt es mehrere Konzepte. Der etwas einfachere und weniger komplexe Weg besteht lediglich aus zwei Schritten. Als Beispiel soll der Server entscheiden, ob er eine englischsprachige oder eine deutschsprachige Index-Seite liefert:
+</p>
+<ul><li>Sie erstellen in Ihrem Verzeichnis die beiden als Alternativen gedachten Seiten index.htm.de und index.htm.en
+</li><li>Sie fügen in Ihrer <code>.htaccess</code>-Datei eine Zeile Options MultiViews ein
+</li></ul>
+<p>Das ist bereits alles. An einen Client mit deutschsprachiger Benutzerführung wird der Server nun die Seite index.htm.de ausliefern, an einen Client mit englischsprachiger Benutzerführung die Seite index.htm.en, sobald überhaupt eine index.htm angefordert wird.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 1 .htacces-Datei
+</div>
+<div class="note-box-text note-box-example-code">
+  # Einstellungen für alternative Inhalte
+  Options MultiViews FollowSymLinks IncludesNoExec
+  AddOutputFilter INCLUDES .shtml .shtm
+  Order allow,deny
+  Allow from all
+</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispieldatei index.htm.de
+</div>
+<div class="note-box-text note-box-example-code">
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Franz Mustermanns Homepage&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Willkommen bei Franz Mustermann&lt;/h1&gt;
+&lt;h3&gt;Freuen Sie sich auf folgendes:&lt;/h3&gt;
+&lt;!-- weitere Inhalte --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispieldatei index.htm.en
+</div>
+<div class="note-box-text note-box-example-code">
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Homepage of Franz Mustermann&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to Franz Mustermann&lt;/h1&gt;
+&lt;h3&gt;Enjoy the following:&lt;/h3&gt;
+&lt;!-- weitere Inhalte --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+</div>
+<p>Mit Options MultiViews wird der Server angewiesen, unter alternativen Inhalten denjenigen auszuwählen, der am besten den Bedingungen des anfragenden Clients entspricht. Zugleich wird hier im Beispiel dafür gesorgt, dass eventuellen symbolischen Links im Verzeichnis gefolgt werden darf und dass Seite SSI zulässig sind, sofern sie keine Scripts aufrufen. AddOutputFilter legt fest, dass nur Dateien mit den Endungen shtml und shtm SSI-Anweisungen enthalten dürfen und schließlich wird noch bestimmt, dass das Verzeichnis von allen Benutzern oder Besuchern eingesehen werden darf.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Eine Besonderheit bei der Auslieferung alternativer Daten besteht darin, dass der Client eine Ressource mit dem Namen index.htm anfordert (und der Benutzer also keine Sprachkennung selbst angeben muss), der Server aber die Datei auswählt, die zusätzlich die sprachspezifische Kennung im Namen trägt. Sie als Benutzer bemerken gar nichts davon, dass eine Auswahl getroffen wurde, und Sie bemerken auch nichts davon, dass die angeforderte URL zu einer Datei passt, die auf dem Server einen um ein Teilstück erweiterten Namen trägt.</div>
+<p>Options MultiViews bewirkt, dass sich der Server selbst aus einigen Angaben der zentralen Konfiguration eine Art von "Verteilerliste" erstellt, in der alle zulässigen Alternativen aufgeführt sind. Anhand der vom Client mitgelieferten Daten (Referer, User-Agent-Header usw.) wird dann verglichen, welche darin enthaltene Anweisung am besten der Anforderung des Clients entspricht. Die Voraussetzung für die im Beispiel verwendeten Kennungen "en" und "de" ist allerdings, daß der Server selbst solche Länderkennungen unterscheiden kann. Sollte es bei Ihnen nicht gleich funktionieren, dass tatsächlich unterschiedliche Inhalte ausgeliefert werden, so versuchen Sie bitte, Ihre <code>.htaccess</code>-Datei um folgende Zeilen zu erweitern:
+</p><p>AddLanguage de .de
+AddLanguage en .en
+</p><p>Sie können auch einen etwas komplexeren Ansatz verfolgen, indem Sie die Zusammenstellung der "Verteilerliste" selbst übernehmen, das also nicht dem Server überlassen. Dafür gibt es wiederum mehrere unterschiedliche Möglichkeiten, wobei leicht zu verstehen sein wird, dass Sie dann die Option MultiViews nicht einsetzen dürfen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 2: .htacces-Datei
+</div>
+<div class="note-box-text note-box-example-code">
+# Einstellungen für alternative Inhalte mit Apache 2.x
+AddHandler type-map .var
+
+# Ältere Apache-Versionen verstehen &quot;AddHandler&quot; nicht und
+# benötigen eine andere Angabe:
+# AddType application/x-type-map var
+
+DirectoryIndex index
+
+# besser: DirectoryIndex index.var
+</div>
+</div>
+<p>In der <code>.htaccess</code> stehen folgende Einträge:
+AddHandler type-map .var (bzw. in älteren Apache-Versionen AddType application/x-type-map var) fügt einen Seite MIME-Typ hinzu, den der Webserver (zumindest Apache) kennt. Es ist der MIME-Typ für Dateien mit Angaben zu alternativen Inhalten. Als Dateiendung für solche Dateien wird im Beispiel var definiert. Dateien *.var werden dann als Anweisungsdateien für alternative Inhalte angesehen.
+DirectoryIndex index bestimmt Dateien, in deren Namen index vorkommt, als Dateien für die Index-Funktion. Gehen Sie damit aber vorsichtig um: wenn es in Ihrem Verzeichnis mehrere Dateien mit diesem Namen gibt (beispielsweise index.htm und index.php sowie so eine index.var), kann sich der Server möglicherweise nicht entscheiden, welche er ausliefern bzw. nutzen soll und bietet Ihnen als Ausweichlösung ein Listing an. Gerade das wollen Sie aber meist vermeiden. Es ist daher günstiger, einen vollständigen Dateinamen anzugeben, beispielsweise index.var. Sie benötigen nun noch eine Datei mit diesem Namen im gleichen Verzeichnis wie Ihre <code>.htaccess</code>-Datei:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispieldatei index.var
+</div>
+<div class="note-box-text note-box-example-code">
+URI: index; vary=&quot;type,language&quot;
+
+URI: deutsch.htm
+Content-type: text/html; qs=1.0
+Content-language: de
+
+URI: english.htm
+Content-type: text/html; qs=0.8
+Content-language: en
+</div>
+</div>
+<p>Mit URI: index; vary="type,language" drücken Sie aus, dass die folgenden Definitionen für alternativen Inhalt dann berücksichtigt werden sollen, wenn Anfragen kommen, die auf den festgelegten DirectoryIndex (im Beispiel zuvor als index definiert) zutreffen. Die Alternativen können Angaben zum Dateityp (type) und zur Sprache (language) betreffen.
+</p><p>Diese erste Anweisung und die möglichen Alternativen müssen jeweils durch eine Leerzeile getrennt werden. Jede Alternative beginnt mit URI:. Dahinter folgt der gewünschte URI, der bei der jeweiligen Alternative aufgerufen werden soll. Im obigen Beispiel handelt es sich jeweils um Dateien im gleichen Verzeichnis, nämlich einmal english.htm und einmal deutsch.htm.
+Mit Content-type: bestimmen Sie den MIME-Typ des bei URI: angegebenen URIs, im obigen Beispiel text/html. Falls Sie z.B. alternative Inhalte für Web-Browser und WAP-Handys senden wollen, können Sie bei dieser Angabe in der einen Alternative beispielsweise eine WML-Datei anbieten mit dem MIME-Typ text/vnd.wap.wml, und in der anderen eine HTML-Datei mit dem üblichen MIME-Typ text/html. Die Angabe Content-type: ist in jedem Fall Pflicht, auch dann, wenn Sie dort keine unterschiedliche Angaben zu machen haben.
+Bei Content-type können Sie am Ende, durch Semikolon getrennt, noch eine Angabe zu qs notieren. Hinter diesem Schlüsselwort und einem Gleichheitszeichen können Sie numerische Werte für die Alternativen vergeben. Alternativen mit höheren Werten werden in dem Fall, dass sonst nicht entscheidbar ist, welche Alternative gewählt werden soll, bevorzugt.
+Mit Content-language: können Sie Sprachen unterscheiden, indem Sie ein Seite Sprachenkürzel angeben. Abhängig davon, welche Sprache der aufrufende Client benutzt oder bevorzugt, wird die entsprechende Alternative ausgewählt.
+</p><p>Für alternative Inhalte benötigen Sie natürlich auch alternative Dateien. In diesem Beispiel wären das die Dateien english.htm und deutsch.htm, die den gleichen Inhalt haben, nur in verschiedenen Sprachen - ähnlich den weiter oben vorgestellten Beispielen für eine index.htm.de und eine index.htm.en.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel 3: .htacces-Datei
+</div>
+<div class="note-box-text note-box-example-code">
+# Einstellungen für alternative Inhalte mit Apache 2.x
+Options -MultiViews
+DirectoryIndex index.html
+&lt;Files *.html&gt;
+  SetHandler type-map
+&lt;/Files&gt;
+</div>
+</div>
+<p>In der <code>.htaccess</code> stehen diesmal folgende Einträge:
+Options -MultiViews ist eine Vorsichtsmaßnahme. Diese Eintragung bedeutet, dass MultiViews explizit ausgeschaltet wird, falls es zentral erlaubt sein sollte. Ist in der zentralen Konfiguration kein MultiViews vorgesehen, bewirkt diese Angabe gar nichts.
+DirectoryIndex index.html bewirkt, dass eine Datei mit diesem Namen die Index-Funktion erhält.
+Mit dem Container &lt;Files *.html&gt; bestimmen Sie, dass die darin enthaltene Anweisung SetHandler type-map nur für Dateien gilt, deren Name die Erweiterung html aufweist. Solche Dateien, deren MIME-Typ in diesem Fall bereits bekannt ist und also nicht gesondert festgelegt werden muss, erhalten die Funktion einer type-map zugewiesen und ihr Inhalt wird grundsätzlich so behandelt, als stelle er eine solche map dar. Das hat zur Folge, dass Ihre index.html hier nicht den sonst vorzusehenden HTML-Code enthalten darf (übrigens auch keine andere *.html-Datei), sondern denselben Inhalt aufweisen muss, den Sie auch einer im zweiten Beispiel bestimmten index.var mitgeben würden. Die Wirksamkeit solcher Festlegungen können Sie überprüfen, wenn Sie sich die englischsprachige Seite / deutschsprachige Seite Apache-Dokumentation mit unterschiedlich konfigurierten Browsern anschauen - für die Ausgabe alternativer Inhalte werden von der Apache Foundation für die online-Dokumentation genau solche Einstellungen genutzt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispieldatei index.html
+</div>
+<div class="note-box-text note-box-example-code">
+URI: index; vary=&quot;type,language&quot;
+
+URI: index.php
+Content-type: text/html; qs=1.0
+Content-language: de
+
+URI: english.htm
+Content-type: text/html; qs=0.8
+Content-language: en
+</div>
+</div>
+<p>Sie sehen, dass es sich um dieselben Angaben wie bei einer weiter oben dargestellten index.var handelt, und nicht um den normalen HTML-Code.
+</p><p>Wenn Sie eine solche <code>.htaccess</code> und index.var oder index.html ins Startverzeichnis einer Domain legen, z.B. ins Startverzeichnis von <a rel="nofollow" class="external free" href="http://www.ihr-name.de/">http://www.ihr-name.de/</a>, dann werden Besucher, die nur die Domain aufrufen (ohne bestimmte Dateinamen) automatisch auf die softwareseitig erkennbare Landessprachenseite geleitet. Von dort aus können entsprechend unterschiedliche Verlinkungen so durch das restliche Angebot führen, dass die Landessprache die gleiche bleibt. Gehen Sie mit dieser Möglichkeit der Lenkung jedoch bedächtig um. Bedenken Sie, dass nicht jeder Besucher Ihres Web-Projekts frei in der Wahl seines Browsers ist. Ein deutschsprachiger Besucher in einem englischen Internetcafé hat auch bei besuchten spanischen Seiten eigene Vorstellungen bei der Wahl der Sprache. Sehen Sie gegebenenfalls eine clientseitige Auswahl der Sprache vor.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 925/1000000
+Post‐expand include size: 23839/2097152 bytes
+Template argument size: 12983/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4128-0!*!0!!de-formal!*!* and timestamp 20150301013350 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;oldid=24629">http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;oldid=24629</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:Webserver" title="Kategorie:Webserver">Webserver</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Webserver%2Fhtaccess" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Webserver/htaccess&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Webserver/htaccess" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Webserver/htaccess" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Webserver/htaccess&amp;oldid=24629" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Webserver-2Fhtaccess" title="Spezial:Durchsuchen/Webserver-2Fhtaccess">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 25. Dezember 2014 um 19:18 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 3.616-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.094 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Webserver/htaccess by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:17 GMT -->
+</html>

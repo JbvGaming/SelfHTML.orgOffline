@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Objektabfragen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Objektabfragen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Objektabfragen","wgTitle":"JavaScript/Objektabfragen","wgCurRevisionId":21039,"wgArticleId":4137,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Objektabfragen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Objektabfragen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Objektabfragen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Objektabfragen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Objektabfragen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../JavaScript.html" title="JavaScript">JavaScript</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="note-box note-box-autor">
+<p class="note-box-title">Informationen zum Autor:</p>
+<div class="note-box-text">
+  <div>
+    <div class="note-box-autor-text">Name:</div>
+    <div class="note-box-autor-info">Matthias Schäfer</div>
+    <div class="note-box-autor-text" style="">E-Mail:</div>
+    <div class="note-box-autor-info" style=""><a rel="nofollow" class="external text" href="mailto:zapperlott@gmail.com">zapperlott@gmail.com</a></div>
+    <div class="note-box-autor-text" style="display:none;">Homepage:</div>
+    <div class="note-box-autor-info" style="display:none;">(keine)</div>
+  </div>
+</div>
+</div>
+<div class="note-box note-box-advice"><p class="note-box-title">Hinweis:</p><div class="note-box-text">Man hat in JavaScript mit der (scheinbar) chaotischen losen Typisierung immer wieder mal das Problem, dass man bei Vergleichen wissen muss, warum so manches if-Statement plötzlich true oder false ergibt. Gerade Anfänger oder Fortgeschrittene wundern sich manchmal an manchen Stellen und können mit diesem Artikel vertiefen, was sie bisher eher "nach Gefühl" gemacht haben.</div></div>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Einleitung"><span class="tocnumber">1</span> <span class="toctext">Einleitung</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Bestandteile_einer_Objektabfrage"><span class="tocnumber">2</span> <span class="toctext">Bestandteile einer Objektabfrage</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Boolean-Abfragen"><span class="tocnumber">3</span> <span class="toctext">Boolean-Abfragen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#if_.28objekt.29"><span class="tocnumber">4</span> <span class="toctext">if (objekt)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#if_.28objekt_.3D.3D_true.29"><span class="tocnumber">5</span> <span class="toctext">if (objekt == true)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#if_.28objekt_.3D.3D_undefined.29"><span class="tocnumber">6</span> <span class="toctext">if (objekt == undefined)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#if_.28objekt_.3D.3D_wert.29"><span class="tocnumber">7</span> <span class="toctext">if (objekt == wert)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#if_.28objekt.eigenschaft.29_und_if_.28objekt.5B.22eigenschaft.22.5D.29"><span class="tocnumber">8</span> <span class="toctext">if (objekt.eigenschaft) und if (objekt["eigenschaft"])</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#if_.28typeof_objekt_.3D.3D_.22typ.22.29_und_if_.28typeof_objekt.eigenschaft_.3D.3D_.22typ.22.29"><span class="tocnumber">9</span> <span class="toctext">if (typeof objekt == "typ") und if (typeof objekt.eigenschaft == "typ")</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Objects_und_Primitives"><span class="tocnumber">9.1</span> <span class="toctext">Objects und Primitives</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Browserprobleme_und_Konsequenzen"><span class="tocnumber">9.2</span> <span class="toctext">Browserprobleme und Konsequenzen</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Anwendungsgebiete"><span class="tocnumber">9.3</span> <span class="toctext">Anwendungsgebiete</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Robuste_Scripte_durch_passende_Typabfragen_und_Typumwandlungen"><span class="tocnumber">9.4</span> <span class="toctext">Robuste Scripte durch passende Typabfragen und Typumwandlungen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#if_.28typeof_objekt_.21.3D_.22undefined.22.29_und_if_.28typeof_objekt.eigenschaft_.21.3D_.22undefined.22.29"><span class="tocnumber">10</span> <span class="toctext">if (typeof objekt&#160;!= "undefined") und if (typeof objekt.eigenschaft&#160;!= "undefined")</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#if_.28objekt_.3D.3D_null.29_und_if_.28objekt.unterobjekt_.3D.3D_null.29"><span class="tocnumber">11</span> <span class="toctext">if (objekt == null) und if (objekt.unterobjekt == null)</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#if_.28.22eigenschaft.22_in_objekt.29"><span class="tocnumber">12</span> <span class="toctext">if ("eigenschaft" in objekt)</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#try_.7B_.2F.2A_direkt_objekt_benutzen_.2A.2F_.7D_catch_.28e.29_.7B.7D"><span class="tocnumber">13</span> <span class="toctext">try { /* direkt objekt benutzen */ } catch (e) {}</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Weiterf.C3.BChrende_Lekt.C3.BCre"><span class="tocnumber">14</span> <span class="toctext">Weiterführende Lektüre</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Einleitung">Bearbeiten</a>]</span> <span class="mw-headline" id="Einleitung">Einleitung</span></h2>
+<p>Zeitgemäße JavaScript sollen robust und browserübergreifend funktionieren, mit anderen Scripten problemlos zusammenarbeiten und unter Umständen von fremden Entwicklern angesteuert werden. Bis vor einiger Zeit wurden zu diesem Zweck zuhauf zweifelhafte&#160;»Browserweichen«&#160;eingesetzt, die z.B. mithilfe von des <a href="Objekte/navigator-2.html" title="JavaScript/Objekte/navigator">navigator</a>-Objektes versuchten, den Browser anhand seines Namens zu identifizieren. Diese Erkennung wurde dann verwendet, um indirekt auf die Fähigkeiten des Browsers zu schließen.
+</p><p>Dieser Weg ist in der heutigen Weblandschaft, in der die Browser in ihren verschiedenen Versionen unzählige Techniken unterschiedlich umsetzen, nicht mehr gangbar. Der Browsermarkt und die Entwicklung neuer, in JavaScript nutzbarer Techniken ist zu stark in Bewegung, als dass eine solche&#160;»Browserweiche«&#160;zuverlässig und zukunftsfähig sein könnte. An deren Stelle sind&#160;»Fähigkeitenweichen«&#160;getreten. Diese fragen nicht allgemein den Namen des Browsers ab und versuchen Rückschlüsse auf die Unterstützung gewisser Techniken, sondern prüfen konkret die Existenz derjenigen JavaScript-Objekte, die im Laufe des Scriptes verwendet werden. Entscheidend ist dann, ob die nötigen Objekte existieren und korrekt funktionieren, etwa dass Eigenschaften einen erwarteten Wert oder Methoden das spezifizierte Ergebnis haben.
+</p><p>Unter anderem aus diesen Gründen spielt die Abfrage von Objekten heutzutage eine zentrale Rolle in JavaScript. Leider sieht eine Objektabfrage im Einzelfall sehr unterschiedlich aus. Welche Abfrage in welchem Fall die effektivste und zuverlässigste ist, erschließt sich nicht ohne Weiteres. Dieser Artikel soll die Grundlagen einer Objektabfrage erklären und anschließend die verschiedenen verbreiteten Objektabfragen diskutieren. Ziel ist es, die Funktionsweise und die geeigneten Anwendungen verschiedener Abfrage-Techniken zu vermitteln.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Bestandteile einer Objektabfrage">Bearbeiten</a>]</span> <span class="mw-headline" id="Bestandteile_einer_Objektabfrage">Bestandteile einer Objektabfrage</span></h2>
+<p>Objektabfragen haben drei Ebenen:
+</p>
+<ul><li>Abfrage der Existenz: Existiert ein Objekt überhaupt? (Hat es überhaupt irgendeinen Wert oder ist es&#160;»nicht definiert«?)
+</li><li>Abfrage des Types: Hat ein Objekt den gewünschten Typ?
+</li><li>Abfrage des Wertes: Hat ein Objekt den gewünschten Wert?
+</li></ul>
+<p>Diese Abfragen müssen manchmal gestaffelt sein: Denn wenn ein Objekt gar nicht existiert, ist unter Umständen Vorsicht geboten bei der Abfrage des Types. Und die Abfrage des Wertes schließt ein, dass ein bestimmter Typ vorausgesetzt wird. Am Anfang steht daher die Überlegung, welche dieser Ebenen überhaupt geprüft werden soll.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Boolean-Abfragen">Bearbeiten</a>]</span> <span class="mw-headline" id="Boolean-Abfragen">Boolean-Abfragen</span></h2>
+<p>Unter Abfragen verstehen wir hier vor allem bedingte Verzweigungen mit <code>if (...) { ... } else { ... }</code>. Im engeren Sinne werden wir uns mit der Bedingung beschäftigen, die bei der if-Anweisung zwischen den runden Klammern notiert wird. Dieselben Bedingungen finden aber auch bei anderen <a href="Anweisungen.html" title="JavaScript/Anweisungen"> bedingten Anweisungen</a>, nämlich dem sogenannten konditionalen Operator und bei switch-Fallunterscheidungen Verwendung.
+</p><p>Diese Bedingung ist ein beliebiger JavaScript-Ausdruck (»Expression«), welcher einen Boolean-Wert ergeben muss - das heißt <code>true</code> oder <code>false</code>. Der JavaScript-Interpreter wandelt das Ergebnis des Ausdrucks zwischen den Klammern automatisch in den Typ Boolean um, sofern es einen anderen Typ hat. Diese Umwandlung gehorcht festen Regeln, die wir nun kennenlernen werden.
+</p><p>Was ergibt also in Boolean umgewandelt <code>true</code>? Anders herum gefragt: Welche Werte ergeben in Boolean umgewandelt <code>false</code>?
+</p>
+<ul><li> Der Boolean-Wert false ergibt logischerweise false.
+</li><li> Die Werte null und undefined ergeben false.
+</li><li> Die Zahlen (Typ Number) 0 und NaN ergeben false.
+</li><li> Ein leerer String ("") ergibt false.
+</li></ul>
+<p>Alle anderen Werte ergeben true.
+</p><p>Das bedeutet: Vordefinierte Objekte wie <code>window</code> und <code>window.document</code>, Funktionsobjekte, DOM-Knoten-Objekte, darunter Elementobjekte, sowie Array-, Date- und RegExp-Objekte ergeben allesamt <code>true</code>. Kurz gesagt ergeben nicht-leere Strings, Zahlen ungleich 0 bzw. NaN und&#160;»richtige«&#160;Objekte (Objects, dazu später mehr) <code>true</code>.
+</p><p>Diese Regeln sind normativ im ECMAScript-Standard spezifiziert, speziell in der internen Funktion <a rel="nofollow" class="external text" href="http://es5.github.io/#x9.2">ToBoolean</a>, welche u.a. bei der  Verarbeitung eines <a rel="nofollow" class="external text" href="http://es5.github.io/#x12.5">if-Statements</a> aufgerufen wird.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: if (objekt)">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28objekt.29">if (objekt)</span></h2>
+<p>Prüft, ob eine globale oder lokale Variable nach Boolean umgewandelt <code>true</code> ergibt. Wenn weder eine lokale noch eine globale Variable dieses Namens existiert, bricht das Script hier mit einem Ausnahmefehler (einer Exception) ab: <code>ReferenceError: objekt not defined</code>.
+</p><p>Eignet sich zur Abfrage, ob einer deklarierten lokalen Variable ein Wert zugewiesen wurde, der bei der Umwandlung in Boolean <code>true</code> ergibt. Deklariert bedeutet, dass var objekt; notiert wurde oder die Variable in der Parameterliste der Funktion aufgeführt ist, ohne dass ein Wert für sie übergeben wurde. <code>objekt</code> hat dann den speziellen Wert <code>undefined</code>, was in Boolean umgewandelt <code>false</code> ergibt.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Eignet sich nicht ohne Einschränkungen zum Überprüfen, ob einer deklarierten Variable überhaupt ein Wert zugewiesen wurde. Denn wie oben aufgelistet ergeben ein leerer String (""), der Boolean-Wert <code>false</code> sowie null ebenfalls <code>false</code>.</div>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: if (objekt == true)">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28objekt_.3D.3D_true.29">if (objekt == true)</span></h2>
+<p>Dies ist eine lange Schreibweise von <code>if (objekt)</code>. Sie hat jedoch nicht denselben Effekt, sondern funktioniert intern ganz anders.
+</p><p>Wenn Sie den Vergleichsoperator verwenden, so wird der sogenannte <a rel="nofollow" class="external text" href="http://es5.github.io/#x11.9.3">Abstract Equality Comparison Algorithm</a> (abstrakter Algorithmus zur Ermittlung der Gleichheit) angewendet. Dieser wandelt <code>object</code> nicht einfach in Boolean um. Wie er genau abläuft, hängt von den Typen der beiden Operanden ab (hier <code>objekt</code> und <code>true</code>).
+</p><p>Wenn beide Typen sich unterscheiden, so wird zunächst der Boolean-Operand mithilfe von <a rel="nofollow" class="external text" href="http://es5.github.io/#x9.3">ToNumber</a> in eine Zahl (Number) umgewandelt. <code>true</code> ergibt dabei 1, <code>false</code> ergibt 0. Der Vergleich <code>objekt == true</code> wird also zu <code>objekt == 1</code> umgeschrieben. Danach wird <code>objekt</code> ebenfalls in eine Zahl umgewandelt, um die beiden Operanden vergleichen zu können. Falls <code>objekt</code> ein&#160;»echtes«&#160;Objekt (Object) ist, so wird das Objekt in einen einfachen Wert (Primitive) umgewandelt, indem dessen Methoden <code>valueOf</code> oder <code>toString</code> aufgerufen werden. (Zur <a href="#Unterscheidung_zwischen_Objects_und_Primitives"> Unterscheidung zwischen Objects und Primitives siehe unten</a>.)
+</p><p>Kurz gesagt, dabei kann etwas ganz anderes herauskommen als beim einfachen if (objekt). Ein paar Beispiele:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Eingabe </th>
+<th> if (objekt) alert('ja');<br />else alert('nein'); </th>
+<th> if (objekt == true) alert('ja');<br />else alert('nein');
+</th></tr>
+<tr>
+<td><code>0</code>  </td>
+<td> nein  </td>
+<td> nein
+</td></tr>
+<tr>
+<td> <code>1</code> </td>
+<td> ja  </td>
+<td> ja
+</td></tr>
+<tr>
+<td> <code>123</code> </td>
+<td> ja  </td>
+<td> nein
+</td></tr>
+<tr>
+<td><code>""</code>  </td>
+<td> nein  </td>
+<td> nein
+</td></tr>
+<tr>
+<td> <code>" "</code> </td>
+<td> ja  </td>
+<td> nein
+</td></tr>
+<tr>
+<td> <code>"ein String"</code> </td>
+<td> ja  </td>
+<td> nein
+</td></tr>
+<tr>
+<td><code>"0"</code>  </td>
+<td> ja  </td>
+<td> nein
+</td></tr>
+<tr>
+<td> <code>"1"</code> </td>
+<td> ja  </td>
+<td> ja
+</td></tr>
+<tr>
+<td> <code>window</code> </td>
+<td> ja  </td>
+<td> nein
+</td></tr>
+<tr>
+<td><code>window.setTimeout</code>  </td>
+<td> ja  </td>
+<td> nein
+</td></tr>
+<tr>
+<td> <code>{ valueOf&#160;: function () { return 0; } }<br />(Ein Objekt mit einer valueOf-Methode) </code> </td>
+<td> ja  </td>
+<td> nein
+</td></tr>
+<tr>
+<td> <code>{ toString&#160;: function () { return "ein Object"; } }<br />(Ein Objekt mit einer toString-Methode) </code> </td>
+<td> ja  </td>
+<td> nein
+</td></tr></table>
+<p>Ein ausdrücklicher Vergleich mit <code>true</code> bzw. <code>false</code> führt nur selten zu dem gewünschten Resultat, da intern mit Zahlen als Vergleichswerten gearbeitet wird. Sofern dieses Verhalten nicht ausdrücklich gewünscht ist, sollten Sie <code>if (objekt)</code> und <code>if (!objekt)</code> anstelle von <code>if (objekt == true)</code> und <code>if (objekt == false)</code> verwenden. Das gilt insbesondere für Fähigkeitenabfragen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: if (objekt == undefined)">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28objekt_.3D.3D_undefined.29">if (objekt == undefined)</span></h2>
+<p>Genauere Überprüfung, ob eine globale oder lokale Variable deklariert wurde, ihr aber kein Wert zugewiesen wurde. Wenn ein Funktionsparameter in der Parameterliste aufgeführt ist, aber kein Wert übergeben wurde, existiert eine entsprechende lokale Variable ohne Wert. 
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function funktionMitParameter (parameter) {
+   if (parameter == undefined) {
+      alert('Es wurde kein Parameter übergeben (oder ausdrücklich undefined)');
+   }
+}
+// Aufruf ohne Parameter
+funktionMitParameter();
+</pre></div>
+</div>
+<p>Hat die Variable den Wert <code>null</code>, so ergibt der Vergleich mit <code>undefined</code> ebenfalls <code>true</code>. Um diese Mehrdeutigkeit zu vermeiden, können Sie <code>if (objekt === undefined)</code> notieren. Der Identitätsoperator <code>===</code> überprüft sowohl die Gleichheit des Typs (hier Undefined) als auch die Gleichheit des Wertes (hier undefined).
+</p><p>Wenn keine Variable dieses Namens existiert, bricht das Script an dieser Stelle mit einem Ausnahmefehler (einer Exception) ab: <code>ReferenceError: objekt not defined</code>.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: if (objekt == wert)">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28objekt_.3D.3D_wert.29">if (objekt == wert)</span></h2>
+<p>Beispielsweise <code>if (objekt == "string")</code> oder <code>if (objekt == 1234)</code> usw. Überprüfung der Wertgleichheit von globalen oder lokalen Variablen.
+</p><p>Damit die Vergleiche die erwarteten Resultate bringen, sollten beide Operanden vom gleichen Typ sein. Andernfalls erfolgt eine automatische Umwandlung auf Basis des beschriebenen <a href="#if_.28objekt_.3D.3D_true.29">Gleichheits-Algorithmus</a>, der beide Operanden in eine Zahl (Number) umzuwandeln versucht.
+</p><p>Wenn keine Variable dieses Namens existiert, bricht das Script an dieser Stelle mit einem Ausnahmefehler (einer Exception) ab: <code>ReferenceError: objekt not defined</code>.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: if (objekt.eigenschaft) und if (objekt[&quot;eigenschaft&quot;])">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28objekt.eigenschaft.29_und_if_.28objekt.5B.22eigenschaft.22.5D.29">if (objekt.eigenschaft) und if (objekt["eigenschaft"])</span></h2>
+<p>Prüft, ob ein Objekt eine Eigenschaft (Unterobjekt) besitzt, die in Boolean umgewandelt <code>true</code> ergibt.
+</p><p>Wenn das Objekt keine Eigenschaft dieses Namens besitzt, bricht das Script an dieser Stelle nicht mit einem Ausnahmefehler ab. Der Ausdruck <code>objekt.eigenschaft</code> ergibt dann einfach <code>undefined</code>, welches in Boolean umgewandelt <code>false</code> ergibt. Dadurch würde der if-Anweisungsblock nicht ausgeführt. Sie können daher auch <code>if (objekt.eigenschaft == wert)</code> verwenden, um auf einen bestimmten Wert zu prüfen, ohne dass das Script abbricht, wenn die Eigenschaft nicht existiert.
+</p><p>Dies ist die beste Methode für&#160;»Fähigkeiten-Weichen«, die abfragen, ob vordefinierte Objekte (bzw. Eigenschaften oder Methoden) im jeweiligen Browser zur Verfügung stehen. Besonders für die Existenzabfrage von Methoden eignet sich diese Schreibweise. Ein 
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+if (document.getElementById) {
+	var elem = document.getElementById(&quot;a&quot;);
+	if (elem.scrollIntoView) {
+		elem.scrollIntoView();
+	}
+}</pre></div>
+</div>
+<p>Existieren die Methoden <code>getElementById</code> bzw. <code>scrollIntoView</code>, werden sie verwendet, anderweitig wird der entsprechende Code übersprungen.
+</p><p>Interessant ist ferner, dass sich auf diese Weise auch globale Variablen überprüfen lassen. Denn globale Variablen sind in JavaScript Eigenschaftes des globale Objektes <code>window</code>. Also kann man einfach <code>if (window.globaleVariable)</code> oder <code>if (window["globaleVariable"])</code> notieren. Der Vorteil gegenüber <code>if (globaleVariable)</code> ist, dass das Script nicht mit einem Ausnahmefehler abbricht, wenn selbige Variable nicht existiert.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: if (typeof objekt == &quot;typ&quot;) und if (typeof objekt.eigenschaft == &quot;typ&quot;)">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28typeof_objekt_.3D.3D_.22typ.22.29_und_if_.28typeof_objekt.eigenschaft_.3D.3D_.22typ.22.29">if (typeof objekt == "typ") und if (typeof objekt.eigenschaft == "typ")</span></h2>
+<p>Mit dem <code>typeof</code>-Operator lässt sich abfragen, ob eine Variable bzw. eine Objekteigenschaft einen bestimmten Typ hat. <code>typeof</code> gibt einen String zurück, je nach Typ des Operanden gemäß der folgenden Tabelle:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Typ des Operanden </th>
+<th> typeof-Rückgabe
+</th></tr>
+<tr>
+<td> Undefined  </td>
+<td> "undefined"
+</td></tr>
+<tr>
+<td> Null </td>
+<td> "object"
+</td></tr>
+<tr>
+<td> Boolean </td>
+<td> "boolean"
+</td></tr>
+<tr>
+<td> Number </td>
+<td> "number"
+</td></tr>
+<tr>
+<td> String  </td>
+<td> "string"
+</td></tr>
+<tr>
+<td> Funktionsobjekte  </td>
+<td> "function"
+</td></tr>
+<tr>
+<td> sonstige Objekte (»Objects«, siehe unten)  </td>
+<td> "object"
+</td></tr></table>
+<p><code>typeof&lt;/ocde&gt; in JavaScript verhält sich ganz anders als entsprechende Operatoren bzw. Funktionen in anderen Programmiersprachen. Das hat damit zu tun, wie JavaScript intern organisiert ist. Zum Verständnis von &lt;code&gt;typeof</code> ist ein kleiner Exkurs nötig:
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Objects und Primitives">Bearbeiten</a>]</span> <span class="mw-headline" id="Objects_und_Primitives">Objects und Primitives</span></h3>
+<p>JavaScript (ECMAScript) behandelt zwar alles als Objekt, macht eine Unterscheidung zwischen sogenannten Primitives (einfachen Werten) und Objects (»richtigen«, vollwertigen Objekten). Diese Doppelung betrifft Boolean-, Number- und String-Werte, diese können als Primitive oder als Object notiert werden. Üblicherweise arbeitet man mit Primitives: <code>var string = "Hallo Welt"</code> sowie die üblichen String-Operationen erzeugen String-Primitives, während <code>var string = new String("Hallo Welt");</code> ein String-Object erzeugt. Dieser Unterschied macht sich vor allem an zwei Stellen bemerkbar:
+</p>
+<ul><li>Primitives werden als Kopie an Funktionen übergeben, während Objects als Referenz (genauer gesagt als Referenzkopie) übergeben werden.
+</li><li>Der Vergleichsoperator == ergibt beim Vergleich zweier Objects nur dann true, wenn es sich um ein und dasselbe Object handelt. Das heißt, er verhält sich in dem Fall wie der Identitätsoperator <code>===</code>. Daher ergibt <code>new String("Hallo Welt") == new String("Hallo Welt")</code> kurioserweise <code>false</code>. Bei Primitives hingegen gibt es eine Gleichheit unabhängig von der Identität: <code>"Hallo Welt" == "Hallo Welt"</code> ergibt selbstverständlich <code>true</code>.
+</li></ul>
+<p>Was hat das nun mit <code>typeof</code> zu tun? <code>typeof</code> unterscheidet im Grunde nur zwischen undefinierten Werten (Undefined), den drei Primitives (Boolean, Number, String) und Objects (Funktionen vs. alle anderen Objects). Was null, kein Primitive und kein Funktionsobjekt ist, klassifiziert typeof zusammenfassend als "object". Dadurch gibt <code>typeof</code>  sehr häufig "object" zurück, was Verwirrung stiftet. Zum Beispiel werden Array-, Date- oder RegExp-Objekte als "object" klassifiziert – diese sind aus Sicht von<code>typeof</code>  kein eigenen Typen. Aber auch der Wert null wird als "object" klassifiziert, obwohl es sich strenggenommen um ein Primitive handelt – dies kann einige Verwirrungen stiften kann.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Browserprobleme und Konsequenzen">Bearbeiten</a>]</span> <span class="mw-headline" id="Browserprobleme_und_Konsequenzen">Browserprobleme und Konsequenzen</span></h3>
+<p>Dummerweise setzen nicht alle Browser diese Vorgaben der obigen Tabelle konsequent um, sodass <code>typeof</code>  in verschiedenen Browsern z.B. bei gleichen vordefinierten Objekten unterschiedliche Resultate erzeugt. In manchen Browsern identifiziert <code>typeof</code>  ein vordefiniertes Funktionsobjekt fälschlicherweise als "object" anstatt als "function".
+</p><p>Diese Einschränkungen und Fallstricke führen dazu, dass eine Abfrage <code>typeof</code>  nur in bestimmten Fällen das Mittel der Wahl ist. Verwenden Sie <code>typeof</code>  möglichst nur bei einfachen Werten (Boolean-, Number- und String-Primitives) und nur bei selbst definierten Funktionen. Achten Sie auf mögliche Browserunterschiede und die Besonderheiten bei der Klassifizierung.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Anwendungsgebiete">Bearbeiten</a>]</span> <span class="mw-headline" id="Anwendungsgebiete">Anwendungsgebiete</span></h3>
+<p>Nichtsdestoweniger ist <code>typeof</code>  die zweiwichtigste Abfragetechnik in der browserübergreifenden Programmierung neben if (objekt.unterobjekt). Der Vorteil ist, dass nur der Typ überprüft wird, nicht der Wert selbst in Boolean umgewandelt und auf Gleichheit mit true getestet wird, wie es z.B. bei <code>if (objekt.unterobjekt)</code> der Fall ist. Wenn bloß die Existenz einer Variable geprüft werden soll, es sich aber beispielsweise durchaus um einen leeren String, die Zahl 0 oder den Boolean-Wert false handeln darf, eignet sich <code>typeof</code> .
+</p><p>Abfragen mit <code>typeof</code>  sind wie gesagt weniger streng als <code>if (objekt.unterobjekt)</code>, da der Wert selbst keiner Boolean-Prüfung unterzogen wird. Dennoch sind die beiden Möglichkeiten in vielen Fällen austauschbar. Oft ist es eine Geschmackfrage, welche Methode verwendet wird. Meine Empfehlung ist, häufiger <code>if (objekt.unterobjekt)</code> zu verwenden und <code>typeof</code>  speziell dann zu verwenden, wenn der Inhalt egal ist, solange der Typ stimmt.
+</p><p>Wenn keine Variable bzw. Eigenschaft den angegebenen Namens existiert, bricht das Script beim <code>typeof</code> -Operator nicht mit einem Ausnahmefehler ab, sondern <code>typeof</code>  liefert den String "undefined" zurück.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Robuste Scripte durch passende Typabfragen und Typumwandlungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Robuste_Scripte_durch_passende_Typabfragen_und_Typumwandlungen">Robuste Scripte durch passende Typabfragen und Typumwandlungen</span></h3>
+<p>Strenge Typabfragen können verwirrend sein, da JavaScript flexibel mit Typen umgeht, um die Programmierung zu vereinfachen. Je nach Kontext werden Werte bei der Code-Ausführung automatisch in andere Typen konvertiert, z.B. damit Operanden und Funktionen mit den erwarteten Typen arbeiten können. Dies ist vielmals erwünscht und findet breite Verwendung, ohne dass JavaScript-Programmierer sich dessen notwendigerweise bewusst sind. Es ist nicht immer problematisch, wenn eine Variable z.B. anstelle des Wertes 250 vom Typ Number den Wert "250" vom Typ String enthält. Es kann aber ein großes Problem werden. Etwa <code>variable.toFixed()</code> funktioniert nur bei Number-Werten und der Operator + hat eine ganz andere Bedeutung, wenn ein Operand ein String ist.
+</p><p>Wenn Sie also <code>typeof</code>  benutzen, um einen speziellen Typ abzufragen, sollten Sie sich der Möglichkeiten der automatischen und manuellen Typen-Konvertierung bewusst sein. Benutzen Sie etwa <a href="Funktionen/ParseInt.html" title="JavaScript/Funktionen/ParseInt">parseInt</a> oder <a href="Funktionen/ParseFloat.html" title="JavaScript/Funktionen/ParseFloat"> parseFloat</a> zur Umwandlung von Strings in Zahlen und <a href="Objekte/Array/toString.html" title="JavaScript/Objekte/Array/toString" class="mw-redirect">toString</a> zur expliziten Umwandlung von Zahlen in Strings. So können Sie robuste, tolerante Programme schreiben:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function zahlenverarbeitung (parameter) {
+   var zahl;
+   if (typeof parameter == &quot;string&quot;) {
+      // Es wurde ein String übergeben, wandle in Zahl um
+      zahl = parseFloat(parameter);
+      if (isNaN(zahl) {
+         // Umwandlung in String ergab keinen brauchbaren Wert
+         return false;
+      }
+   } else if (typeof parameter == &quot;number&quot;) {
+      // Es wurde eine Zahl übergeben, wir können direkt damit arbeiten
+      zahl = parameter;
+   } else {
+      // Es wurde kein brauchbarer Wert übergeben
+      return false;
+   }
+   // Arbeite mit zahl weiter
+}</pre></div>
+</div>
+<p>Das obige Beispiel ist bewusst sehr ausführlich, um das Reagieren auf verschiedene Parameter-Typen zu demonstrieren. Konkret diese Logik ließe sich auch kompakter ohne <code>typeof</code> umsetzen, indem der Parameter direkt <code>parseFloat()</code> gegeben wird und anschließend nur noch geprüft wird, ob es sich um eine gültige Zahl handelt:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+function zahlenverarbeitung (parameter) {
+   var zahl = parseFloat(parameter);
+   if (isNaN(zahl) {
+      // Umwandlung in String ergab keinen brauchbaren Wert
+      return false;
+   }
+   // Arbeite mit zahl weiter
+}</pre></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: if (typeof objekt != &quot;undefined&quot;) und if (typeof objekt.eigenschaft != &quot;undefined&quot;)">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28typeof_objekt_.21.3D_.22undefined.22.29_und_if_.28typeof_objekt.eigenschaft_.21.3D_.22undefined.22.29">if (typeof objekt&#160;!= "undefined") und if (typeof objekt.eigenschaft&#160;!= "undefined")</span></h2>
+<p>Prüft, ob eine lokale oder globale Variable bzw. eine Objekteigenschaft dieses Namens existiert und zudem einen Wert besitzt (der nicht vom Typ Undefined ist).
+</p><p>Aufgrund der beschriebenen Eigenheiten und Browser-Probleme wird <code>typeof</code> häufig in diesem negativen Sinne gebraucht. Anstatt abzufragen, ob ein Objekt einen bestimmten Typ hat, wird bloß abgefragt, ob es existiert und irgendeinen anderen Typ als Undefined besitzt. Damit kann beispielsweise die bloße Existenz vordefinierter Objekte in Erfahrung gebracht werden oder geprüft werden, ob ein Funktionsparameter gesetzt wurde, unabhängig davon, welchen Typ und welchen Wert dieser hat.
+</p><p>Der negative Vergleich mit "undefined" ist zwar ungenauer als die Prüfung auf einen oder mehrere bestimmte Typen, erfüllt aber oft trotzdem den gewünschten Zweck. Diese Methode findet an ähnlichen Stellen Verwendung wie <code>if (objekt.unterobjekt)</code>.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: if (objekt == null) und if (objekt.unterobjekt == null)">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28objekt_.3D.3D_null.29_und_if_.28objekt.unterobjekt_.3D.3D_null.29">if (objekt == null) und if (objekt.unterobjekt == null)</span></h2>
+<p>Der Vergleich mit null ergibt true, wenn das Objekt den Wert null oder undefined ist (siehe auch den <a href="#if_.28objekt_.3D.3D_undefined.29"> Abschnitt zu undefined</a>).
+</p><p>Wenn keine Variable dieses Namens existiert, bricht das Script an dieser Stelle mit einem Ausnahmefehler (einer Exception) ab: <code>ReferenceError: objekt not defined</code>.
+</p><p>Zur Objekterkennung eignet sich die Prüfung auf null weniger. Sie können jedoch in ihren eigenen Programmen den Wert null verwenden, um&#160;»kein Wert«&#160;von Werten wie "", 0 und false abzugrenzen. Sie können z.B. eine eigene Funktion null zurückgeben lassen, um zu zeigen, dass die Funktion korrekt ausgeführt wurde, aber das Ergebnis&#160;»kein Wert«&#160;ist (auch kein leerer String oder 0). Ähnlich handhaben es einige Methoden des W3C-DOM. In diesen Fällen ist der Vergleich mit null angebracht.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: if (&quot;eigenschaft&quot; in objekt)">Bearbeiten</a>]</span> <span class="mw-headline" id="if_.28.22eigenschaft.22_in_objekt.29">if ("eigenschaft" in objekt)</span></h2>
+<p>Diese relativ unbekannte Abfrage prüft, ob das Objekt eine Eigenschaft mit dem angegebenen Namen besitzt. Weder Typ noch Wert werden dabei überprüft. Der Ausdruck ergibt direkt <code>true</code> oder <code>false</code>. Es entspricht <code>if (typeof objekt.eigenschaft&#160;!= "undefined")</code> bis auf den Fall, in dem die Eigenschaft zwar gesetzt ist, aber den Wert <code>undefined</code> hat.
+</p><p>Der Eigenschaftsname kann hier direkt als String angegeben werden oder als String-Variable, die den Namen der zu prüfenden Eigenschaft enthält. In letzterem Fall notiert man <code>if (stringVariable in objekt)</code>.
+</p><p>Ein Beispiel ist die Abfrage, <a rel="nofollow" class="external text" href="http://perfectionkills.com/detecting-event-support-without-browser-sniffing/">ob der Browser einen gewissen Event-Typ unterstützt</a> . Unterstützt der Browser beispielsweise den Event <code>hashchange</code>, so existiert die Eigenschaft <code>onhashchange</code>. Wenn kein Event-Handler registriert ist, ist diese Eigenschaft jedoch initial leer, üblicherweise null.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+if ('onhashchange' in window) {
+   // Event wird unterstützt, registriere einen Event-Handler
+   window.onhashchange = function () { ... };
+} else {
+   // Event wird nicht unterstützt, Alternativtechniken greifen
+   // Firefox braucht eine Extra-Abfrage
+}</pre></div>
+</div>
+<p>Die Praxis ist etwas komplizierter, da diese Abfrage im Firefox ein falsches Resultat ergibt. Wie der verlinkte Artikel beschreibt, existiert jedoch eine Alternative für Firefox.
+</p><p>Der in-Operator ist vor allem aus for-in-Schleifen bekannt. Dort hat er allerdings eine ganz andere Bedeutung und führt dazu, dass der Variablen auf der linken Seite nacheinander die Eigenschaftsnamen zugewiesen werden und für Eigenschaft der Schleifenkörper ausgeführt wird.
+</p><p>Wenn keine Eigenschaft mit dem angegebenen Namen existiert, bricht das Script an der Stelle der Verwendung des in-Operators nicht mit einem Ausnahmefehler ab, sondern liefert einfach den Boolean-Wert false zurück.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: try { /* direkt objekt benutzen */ } catch (e) {}">Bearbeiten</a>]</span> <span class="mw-headline" id="try_.7B_.2F.2A_direkt_objekt_benutzen_.2A.2F_.7D_catch_.28e.29_.7B.7D">try { /* direkt objekt benutzen */ } catch (e) {}</span></h2>
+<p>Das <a href="Anwendung_und_Praxis/Fehlerbehandlung.html" title="JavaScript/Anwendung und Praxis/Fehlerbehandlung"> try-catch-Statement</a> dient eigentlich dazu, Ausnahmefehler (Exceptions) abzufangen und sie im <code>catch</code>-Zweig selbst zu behandeln. Damit lässt sich um punktuell auf einen aufgetretenen Fehler reagieren, der sonst zum Abbruch des Scriptes führen würde. Dieses Konzept ist eigentlich sehr brauchbar. Allerdings gibt es zwei Probleme, sowohl grundlegender als auch praktischer Art.
+</p><p>Zum ersten wird <code>try-catch</code> in den wenigsten Fällen sinnvoll verwendet. Oft wird der catch-Zweig leer gelassen, bloß um eventuelle Exceptions und damit verbundene Fehlermeldungen im Browser zu unterdrücken. Eine Fehlerbehandlung findet also nicht statt. <code>try-catch</code>wird in dieser Weise inflationär gebraucht, anstatt zielgenaue Objektabfragen bzw. tatsächliche Fehlerbehandlung einzusetzen.
+</p><p>Zum zweiten ist es mit <code>try-catch</code> nicht möglich, spezifisch auf einen Fehler zu reagieren, wenn große Programmteile in try-Blöcke untergebracht werden. Das Fehlerobjekt, auf das man im catch-Block Zugriff hat, enthält wenig brauchbare Informationen. Die Fehlermeldung kann höchstens abgefangen werden, um sie beispielsweise mit XMLHttpRequest an den Server zurückzusenden. Dort könnten alle Fehlermeldungen gespeichert werden, um Scripte zu verbessern, damit sie in Zukunft keine Exceptions mehr produzieren.
+</p><p>Der Einsatz von <code>try-catch</code> zur Fehlerunterdrückung während der Entwicklung führt dazu, dass Scriptfehler nicht rechtzeitig erkannt werden. Robuster, fehlertoleranter JavaScript-Code sollte im Produktiveinsatz auch in Sonderfällen keine unerwarteten Exceptions auslösen. Daher erwähnt dieser Artikel jeweils, welche Abfragetechniken Exceptions auslösen und welche nicht, auch wenn die angesprochene Variable bzw. Eigenschaft nicht existiert. Mit diesen&#160;»sicheren«&#160;Objektabfragen können Sie Exceptions von vornherein vermeiden.
+</p><p>Es gibt noch weitere Argumente gegen einen unbedachten Einsatz von <code>try-catch</code>: Beispielsweise ist die Ausführung viel langsamer als die hier beschriebenen zielgenauen Abfragen. Zusammenfassend: Verwenden Sie <code>try-catch</code> nur im Notfall, wenn andere Objektabfragen nicht möglich sind oder nicht greifen.
+</p><p>Es gibt nur wenige Fälle, in denen <code>try-catch</code> nützlich oder gar nötig ist. Etwa wenn bekannt und spezifiziert ist, dass eine Anweisung bei der regulären Verwendung eine Exception auslösen kann. Doch nur wenige JavaScript- und DOM-Operationen erzeugen bei korrekter Anwendung und sinnvollen Eingabedaten Exceptions, z.B. die Erzeugung von ActiveX-Objekten wie XMLHttpRequest im Internet Explorer. (Dies ist nur bei Versionen kleiner als 7 nötig, ab Version 7 existiert das Objekt window.XMLHttpRequest.)
+</p><p><code>try-catch</code> soll keinesfalls verdammt werden. Sein Einsatz ist lediglich zum Zwecke der Fehlerunterdrückung und Fallunterscheidung nicht sinnvoll, weil genauere und bessere Alternativen für robuste Scripte existieren. Es spricht nichts dagegen, <code>try-catch</code> bei einer erwarteten Exception zu verwenden, um im catch-Zweig Alternativen anzuwenden und die Aufgabe auf eine andere Weise zu lösen. Es spricht auch nichts gegen den kontrollierten Einsatz von <code>try-catch</code> und <code>throw</code>, um die bestimmte Ausnahme auf einer höheren Ebene zu behandeln.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Weiterführende Lektüre">Bearbeiten</a>]</span> <span class="mw-headline" id="Weiterf.C3.BChrende_Lekt.C3.BCre">Weiterführende Lektüre</span></h2>
+<ul><li> <a rel="nofollow" class="external text" href="http://blog.selfhtml.org/2005/12/17/javascript-einsatz/?bl_action=show&amp;bl_uri=javascript-einsatz">SELFHTML-Weblog: Der sinnvolle Einsatz von JavaScript</a>
+</li><li> <a href="Konzepte.html#Abfragen_ob_ein_Objekt_existiert" title="JavaScript/Konzepte">Abfrage, ob ein Objekt existiert</a>
+</li><li><a rel="nofollow" class="external text" href="http://forum.de.selfhtml.org/archiv/2005/10/t117307/">SELFHTML-Forum: Überprüfen, ob eine Variable existiert</a>
+</li><li><a rel="nofollow" class="external text" href="http://forum.de.selfhtml.org/archiv/2008/2/t166003/">SELFHTML-Forum:&#160;»object has no properties«&#160;verhindern</a>
+</li></ul>
+<p>englischspachig:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://icant.co.uk/articles/from-dhtml-to-dom/">From DHTML to DOM scripting</a>
+</li><li><a rel="nofollow" class="external text" href="https://developer.apple.com/devcenter/safari/index.action">JavaScript Object Detection</a>
+</li><li><a rel="nofollow" class="external text" href="http://www.quirksmode.org/js/support.html">Quirksmode.org: Object Detection</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 404/1000000
+Post‐expand include size: 4019/2097152 bytes
+Template argument size: 2215/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4137-0!*!0!!de-formal!*!* and timestamp 20150301185803 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;oldid=21039">http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;oldid=21039</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FObjektabfragen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Objektabfragen.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Objektabfragen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Objektabfragen.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/JavaScript/Objektabfragen.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Objektabfragen.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objektabfragen&amp;oldid=21039" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/JavaScript-2FObjektabfragen.html" title="Spezial:Durchsuchen/JavaScript-2FObjektabfragen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 28. August 2014 um 06:46 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 906-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.069 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Objektabfragen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:16 GMT -->
+</html>

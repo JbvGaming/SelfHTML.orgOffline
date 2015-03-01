@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Objekte/RegExp – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Objekte/RegExp","wgTitle":"JavaScript/Objekte/RegExp","wgCurRevisionId":24279,"wgArticleId":3972,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["JavaScript","JavaScript Objekte"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Objekte/RegExp","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Objekte/RegExp" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Objekte/RegExp&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Objekte_RegExp skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Objekte/RegExp</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../../JavaScript.html" title="JavaScript">JavaScript</a> | <a href="../Objekte.html" title="JavaScript/Objekte">Objekte</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p><code><b>RegExp</b></code>, <b>reguläre Ausdrücke</b>  dienen dazu, Suchausdrücke zu formulieren, um in Zeichenketten nach Entsprechungen zu suchen und gefundene Stellen durch andere zu ersetzen.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Eigenschaften"><span class="tocnumber">1</span> <span class="toctext">Eigenschaften</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Allgemeines_zur_Verwendung"><span class="tocnumber">2</span> <span class="toctext">Allgemeines zur Verwendung</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Regul.C3.A4re_Ausdr.C3.BCcke_definieren"><span class="tocnumber">3</span> <span class="toctext">Reguläre Ausdrücke definieren</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Syntax"><span class="tocnumber">4</span> <span class="toctext">Syntax</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Multiplikatoren"><span class="tocnumber">4.1</span> <span class="toctext">Multiplikatoren</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Gierigkeit"><span class="tocnumber">4.2</span> <span class="toctext">Gierigkeit</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Zeichenklassen"><span class="tocnumber">4.3</span> <span class="toctext">Zeichenklassen</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Klammern"><span class="tocnumber">4.4</span> <span class="toctext">Klammern</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Syntax_regul.C3.A4rer_Ausdr.C3.BCcke"><span class="tocnumber">5</span> <span class="toctext">Syntax regulärer Ausdrücke</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Tools_zum_Testen"><span class="tocnumber">6</span> <span class="toctext">Tools zum Testen</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Eigenschaften">Bearbeiten</a>]</span> <span class="mw-headline" id="Eigenschaften">Eigenschaften</span></h2>
+<ul><li> <a href="RegExp/exec.html" title="JavaScript/Objekte/RegExp/exec"> <code> exec() </code></a> 
+</li><li> <a href="RegExp/test.html" title="JavaScript/Objekte/RegExp/test"> <code> test() </code></a> 
+</li></ul>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Allgemeines zur Verwendung">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zur_Verwendung"> Allgemeines zur Verwendung </span></h2>
+<p>Reguläre Ausdrücke können Sie in JavaScript direkt innerhalb entsprechender Methoden des <a href="String.html" title="JavaScript/Objekte/String">String-Objekts</a> anwenden:
+</p>
+<ul><li><a href="String/match.html" title="JavaScript/Objekte/String/match">match()</a>, 
+</li><li><a href="String/replace.html" title="JavaScript/Objekte/String/replace">replace()</a> 
+</li><li><a href="String/search.html" title="JavaScript/Objekte/String/search">search()</a> 
+</li></ul>
+<p>Das RegExp-Objekt von JavaScript brauchen Sie dagegen nur, wenn Sie reguläre Ausdrücke zur Laufzeit des Scripts dynamisch erzeugen und ändern wollen. Dazu können Sie eine Instanz eines RegExp-Objekts definieren.<br />
+Auf diese Instanz können Sie anschließend die Eigenschaften und Methoden des RegExp-Objekts anwenden, die hier beschrieben werden.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Reguläre Ausdrücke definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Regul.C3.A4re_Ausdr.C3.BCcke_definieren">Reguläre Ausdrücke definieren</span></h2>
+<p>Das window.RegExp-Objekt kapselt sogenannte Reguläre Ausdrücke. Darunter versteht man die Möglichkeit, regelmäßige Suchmuster zu definieren und darauf zu testen, danach zu suchen oder  Ersetzungen vorzunehmen.
+Das Objekt definiert nicht nur das Suchpattern, es enthält auch die zur Abfrage notwendigen Ergebnisinformationen eines Tests.
+</p><p>Sie sind aber nicht darauf eingeschränkt, mit dem RegExp-Objekt arbeiten zu müssen. Sie können in vielen Fällen auch die einfachere Syntax <code>/pattern/</code> verwenden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> myRegExp <span class="sy0">=</span> <span class="kw1">new</span> RegExp<span class="br0">&#40;</span><span class="st0">'[Ss]elfhtml'</span><span class="sy0">,</span> <span class="st0">'i'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="st0">&quot;test&quot;</span>.<span class="me1">match</span><span class="br0">&#40;</span>myRegExp<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird ein Suchpattern in einem RegExp-Objekt definiert. Dieses nimmt als zweiten Parameter den optionalen Modifier entgegen.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> myRegExp <span class="sy0">=</span> <span class="co2">/[Ss]elfhtml/i</span><span class="sy0">;</span>
+<span class="st0">&quot;test&quot;</span>.<span class="me1">match</span><span class="br0">&#40;</span>myRegExp<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Geläufiger ist jedoch die Variante <code>/pattern/</code>. Der Modifier wird nach dem schließenden Slash notiert.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Syntax">Bearbeiten</a>]</span> <span class="mw-headline" id="Syntax">Syntax</span></h2>
+<p>Reguläre Ausdrücke benutzen bestimmte Steuerzeichen, um Wiederholungen und mehrere mögliche Zeichen zu definieren, nach denen gesucht werden kann. Wenn man diese Zeichen als tatsächliches Zeichen verwenden will, muss man einen Backslash davorstellen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">.</div>
+<div class="note-box-text note-box-example-comment">findet ein beliebiges Zeichen</div>
+<div class="note-box-text note-box-example-code">\.</div>
+<div class="note-box-text note-box-example-comment">findet einen Punkt</div>
+</div>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Multiplikatoren">Bearbeiten</a>]</span> <span class="mw-headline" id="Multiplikatoren">Multiplikatoren</span></h3>
+<table class="wikitable">
+<tr>
+<th>Multiplikator </th>
+<th>Erläuterung
+</th></tr>
+<tr>
+<td>.
+</td>
+<td>sucht jedes beliebige Zeichen.
+</td></tr>
+<tr>
+<td>?
+</td>
+<td>das vorstehende Zeichen kommt <b>nicht</b> oder <b>genau einmal</b> vor
+</td></tr>
+<tr>
+<td>*
+</td>
+<td>das vorstehende Zeichen kommt <b>nicht</b> oder <b>beliebig oft</b> vor
+</td></tr>
+<tr>
+<td> +
+</td>
+<td>das vorstehende Zeichen kommt <b>mindestens einmal</b> vor
+</td></tr>
+<tr>
+<td>{n}
+</td>
+<td>das vorstehende Zeichen kommt <b>genau n mal</b> vor
+</td></tr>
+<tr>
+<td>{n, m}
+</td>
+<td>das vorstehende Zeichen kommt <b>n bis m mal</b> vor
+</td></tr>
+<tr>
+<td>{n,}
+</td>
+<td>das vorstehende Zeichen kommt <b>mindestens n mal</b> vor
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Gierigkeit">Bearbeiten</a>]</span> <span class="mw-headline" id="Gierigkeit">Gierigkeit</span></h3>
+<p>Standardmäßig werden Multiplikatoren, die beliebig viele Zeichen erfassen können, auch die größtmögliche Anzahl an Zeichen erfassen (also gierig sein). Folgendes Beispiel illustriert dieses Verhalten:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">text.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/&lt;a.*&gt;/g</span><span class="br0">&#41;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Dieser Ausdruck soll einzelne Starttags von Link-Elementen erkennen.
+<p>(Suche nach Zeichenfolgen, die mit „&lt;a“ beginnen, gefolgt von beliebig vielen Zeichen und mit „&gt;“ enden.)
+</p>
+Angewendet auf</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> text <span class="sy0">=</span> <span class="st0">'&lt;a href=&quot;#test1&quot;&gt;test1&lt;/a&gt;'</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">wird jedoch das komplette Link-Element zurückgegegeben.
+<p>Das Suchmuster trifft nämlich sowohl auf
+</p>
+<pre> <b>&lt;a</b> href="#test1"<b>&gt;</b>
+</pre>
+<p>als auch auf
+</p>
+<pre> <b>&lt;a</b> href="#test1"&gt;test1&lt;/a<b>&gt;</b>
+</pre>
+<p>zu.
+</p>
+Es wurde die längste der möglichen Zeichenketten zurückgeliefert.</div>
+</div>
+<p>Abhilfe liefert der Non-Greedy-Quantifier <code>?</code>.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">text.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/&lt;a.*?&gt;/g</span><span class="br0">&#41;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Jetzt wird das erste Auftreten des Suchmusters zurückgegeben.
+Ein nachgestelltes Fragezeichen macht jeden Quantifier "non-greedy" (nicht gierig).</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Zeichenklassen">Bearbeiten</a>]</span> <span class="mw-headline" id="Zeichenklassen">Zeichenklassen</span></h3>
+<p>Zeichenklassen definieren Gruppen von Zeichen, die auftreten müssen bzw. nicht auftreten dürfen. Innerhalb von Zeichenklassen müssen nur die Zeichen "[", "]" und "^" mit einem Backslash gesichert werden. Zusätzlich gibt es vordefinierte Zeichenklassen.
+</p>
+<table class="wikitable">
+<tr>
+<th>Zeichenklasse </th>
+<th>Erläuterung
+</th></tr>
+<tr>
+<td>.
+</td>
+<td>findet 1 beliebiges Zeichen ausser \n
+</td></tr>
+<tr>
+<td>[12]
+</td>
+<td>findet die Ziffer 1 oder 2
+</td></tr>
+<tr>
+<td>[0-9]
+</td>
+<td>findet Zeichen von 0-9 (Die Folgen beziehen sich auf die Zeichentabelle innerhalb der gegenwärtigen Kodierung)
+</td></tr>
+<tr>
+<td>[^123]
+</td>
+<td>findet Zeichen, die nicht 1, 2 oder 3 sind.
+</td></tr>
+<tr>
+<td>\s
+</td>
+<td>Platzhalter-Zeichen (Leerzeichen, Umbrüche und Tabulatoren, entspricht [ \f\n\r\t\v])
+</td></tr>
+<tr>
+<td>\S
+</td>
+<td>alles ausser Platzhalter-Zeichen ([^ \f\n\r\t\v])
+</td></tr>
+<tr>
+<td>\d
+</td>
+<td>Dezimal numerische Zeichen ([0-9])
+</td></tr>
+<tr>
+<td>\D
+</td>
+<td>alles ausser dezimal numerischen Zeichen ([^0-9])
+</td></tr>
+<tr>
+<td>\w
+</td>
+<td>Alphanumerische Zeichen und der Unterstrich ([0-9a-zA-Z_])
+</td></tr>
+<tr>
+<td>\W
+</td>
+<td>alles ausser alphanumerischen Zeichen bzw. Unterstrich ([^0-9a-zA-Z_])
+</td></tr>
+<tr>
+<td>\b
+</td>
+<td>findet eine Wort-Trennstelle, d.h. zwischen \w und \W bzw. umgekehrt.
+</td></tr>
+<tr>
+<td>\B
+</td>
+<td>Umkehrung von \b. Findet die Stelle zwischen \w und \w bzw. die Stelle zwischen \W und \W
+</td></tr>
+<tr>
+<td>^
+</td>
+<td>Anfang des Strings (beim m-Modifikator Anfang jeder Zeile)
+</td></tr>
+<tr>
+<td>$
+</td>
+<td>Ende des Strings (beim m-Modifikator Ende jeder Zeile)
+</td></tr>
+<tr>
+<td>\n
+</td>
+<td>Newline-Zeichen
+</td></tr>
+<tr>
+<td>\r
+</td>
+<td>Wagenrücklauf-Zeichen
+</td></tr>
+<tr>
+<td>\t
+</td>
+<td>horizontaler Tabulator
+</td></tr>
+<tr>
+<td>\v
+</td>
+<td>vertikaler Tabulator
+</td></tr>
+<tr>
+<td>\cXXX
+</td>
+<td>Kodiertes Steuerzeichen
+</td></tr>
+<tr>
+<td>\xXX
+</td>
+<td>Kodiertes Ascii-Zeichen
+</td></tr>
+<tr>
+<td>\uXXXX
+</td>
+<td>Kodiertes Unicode-Zeichen
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Klammern">Bearbeiten</a>]</span> <span class="mw-headline" id="Klammern">Klammern</span></h3>
+<p>Innerhalb von Regulären Ausdrücken kann man bestimmte Bereiche einklammern. Dabei wird zwischen Klammern, welche übereinstimmende Ausdrücke in $1..$9 speichern, und nicht speichernden Klammern unterschieden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="sy0">/</span>startpattern<span class="br0">&#40;</span>.<span class="sy0">*?</span><span class="br0">&#41;</span>endpattern<span class="sy0">/</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird alles zwischen Start und Ende in $1 gespeichert.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="sy0">/</span><span class="br0">&#40;</span><span class="sy0">?:</span>Herr<span class="sy0">|</span>Frau<span class="br0">&#41;</span>\s<span class="sy0">+</span><span class="br0">&#40;</span>\w<span class="sy0">+</span><span class="br0">&#41;</span><span class="sy0">/</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Die Alternative „Herr“ oder „Frau“ wird nicht gespeichert. Die Klammer <code>(?: )</code>dient lediglich der Gruppierung. Der zweite Klammerausdruck hingegen wird sehr wohl gespeichert.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="st0">&quot;xy&quot;</span>.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/x(?=y)/</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// true</span>
+<span class="st0">&quot;xz&quot;</span>.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/x(?=y)/</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// false</span>
+<span class="st0">&quot;x&quot;</span>.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/x(?=y)/</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// false</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Die positive lookahead Klammer <code>(?= lookaheadpattern )</code> bewirkt, dass „x“ nur getroffen wird, wenn es von „y“ gefolgt wird.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="st0">&quot;xy&quot;</span>.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/x(?!y)/</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// false</span>
+<span class="st0">&quot;xz&quot;</span>.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/x(?!y)/</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// true</span>
+<span class="st0">&quot;x&quot;</span>.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/x(?!y)/</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// true</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Die negative lookahead Klammer <code>(?! lookaheadpattern )</code> bewirkt, dass „x“ nur getroffen wird, wenn es nicht von „y“ gefolgt wird.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Test&lt;/title&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+
+    function Ausgabe (Wert) {
+var Ausdruck = /(\w.+)\s(\w.+)/;
+Ausdruck.exec(Wert);
+alert(RegExp.$2 + &quot;, &quot; + RegExp.$1);
+    }
+  &lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;User&quot; value=&quot;Vorname Zuname&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Ausgabe&quot; onclick=&quot;Ausgabe(this.form.User.value)&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>Das Beispiel zeigt, wie sich ein Name nach dem Schema "Vorname Zuname" unter Verwendung eines regulären Ausdrucks in das Schema "Name, Vorname" verwandeln lässt.
+</p><p>Das Beispiel enthält ein Formular mit einem Eingabefeld und einem Button. In dem Eingabefeld soll der Anwender seinen Namen in der Form "Vorname Zuname" eingeben. Deshalb ist das Feld auch schon so vorbelegt. Beim Anklicken des Buttons wird die Funktion <code>Ausgabe()</code> aufgerufen, die im Dateikopf definiert ist. Als Parameter bekommt die Funktion den Inhalt des Eingabefeldes übergeben.
+</p><p>Innerhalb der Funktion wird ein regulärer Ausdruck (Suchausdruck) definiert, der in der Variablen Ausdruck gespeichert wird. Solche regulären Ausdrücke werden in einfache Schrägstriche /.../ eingeschlossen. Der reguläre Ausdruck im obigen Beispiel ist so zu lesen: Suche nach einer beliebigen Anzahl von aneinandergereihten Buchstaben ohne Ziffern und Satzzeichen und merke dir das Ergebnis (\w.+). Suche dann nach einem einzelnen Leerzeichen = \s. Suche dann noch einmal nach einer beliebigen Buchstabenreihenfolge und merke dir das Ergebnis (\w.+). Auf diese Weise wird das Schema "Vorname Zuname" gefunden. Die beiden Klammern um (\w.+) führen dazu, dass die beiden einzelnen Buchstabenreihenfolgen als einzelne Teile intern gemerkt werden. Später sind diese einzelnen gemerkten Teile separat ansprechbar.
+</p><p>Im Beispiel wird mit dem nächsten Befehl eine wichtige Methode des RegExp-Objekts auf den zuvor definierten regulären Ausdruck angewendet, nämlich die Methode <a href="RegExp/exec.html" title="JavaScript/Objekte/RegExp/exec">exec()</a>. Dadurch wird der Ausdruck "ausgeführt" und direkt dem RegExp-Objekt zugewiesen. Im Beispiel wird mit RegExp.$2 direkt auf den intern gespeicherten Treffers des zweiten geklammerten Teilausdrucks zugegriffen, und mit RegExp.$1 auf den Treffer des ersten Teilausdrucks. Durch die Anordnung mit dem Komma dazwischen bei der Ausgabe mit alert() erscheint das zuvor eingegebene "Vorname Zuname" dann in dem anderen Schema "Zuname, Vorname".
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Seit der JavaScript-Version 1.5 gilt das Auslesen der Treffer geklammerten Ausdrücke über RegExp.$1, RegExp.$2 und so weiter als veraltet. In der Praxis steht allerdings nur bei der im Beispiel verwendeten Methode <a href="RegExp/exec.html" title="JavaScript/Objekte/RegExp/exec">exec()</a> eine Alternative zur Verfügung.</div>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Syntax regulärer Ausdrücke">Bearbeiten</a>]</span> <span class="mw-headline" id="Syntax_regul.C3.A4rer_Ausdr.C3.BCcke">Syntax regulärer Ausdrücke</span></h2>
+<p>Die folgende Übersicht zeigt, aus welchen Bestandteilen Sie einen regulären Ausdruck zusammensetzen können.
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Bestandteil </th>
+<th> Beispiel </th>
+<th> Beschreibung
+</th></tr>
+<tr>
+<td>  /aus/ </td>
+<td> findet "aus" </td>
+<td> und zwar in "aus", "Haus", "auserlesen" und "Banause".
+</td></tr>
+<tr>
+<td> ^ /^aus/ </td>
+<td> findet "aus"  </td>
+<td>  am Anfang des zu durchsuchenden Wertes, also in "aus" und "auserlesen", sofern das die ersten Wörter im Wert sind.
+</td></tr>
+<tr>
+<td> $ /aus$/ </td>
+<td> findet "aus" </td>
+<td>  am Ende des zu durchsuchenden Wertes, also in "aus" und "Haus", sofern das die letzten Wörter im Wert sind.
+</td></tr>
+<tr>
+<td> * /aus*/ </td>
+<td> findet "au", "aus", "auss" und "aussssss" </td>
+<td>  also das letzte Zeichen vor dem Stern 0 oder beliebig oft hintereinander wiederholt.
+</td></tr>
+<tr>
+<td> + /aus+/ </td>
+<td> findet "auss" und "aussssss" </td>
+<td> also das letzte Zeichen vor dem Plus-Zeichen mindestens einmal oder beliebig oft hintereinander wiederholt.
+</td></tr>
+<tr>
+<td> . /.aus/ </td>
+<td> findet "Haus" und "Maus" </td>
+<td>   also ein beliebiges Zeichen an einer bestimmten Stelle.
+</td></tr>
+<tr>
+<td> .+ /.+aus/ </td>
+<td> findet "Haus" und "Kehraus" </td>
+<td> also eine beliebige Zeichenfolge an einer bestimmten Stelle. Zusammensetzung aus beliebiges Zeichen und beliebig viele davon, jedoch mindestens eines.
+</td></tr>
+<tr>
+<td> \b /\baus\b/ </td>
+<td> findet "aus" als einzelnes Wort. </td>
+<td>   \b bedeutet eine Wortgrenze.
+</td></tr>
+<tr>
+<td> \B /\Baus\B/ </td>
+<td> findet "aus" nur innerhalb von Wörtern,<br /> z.B. in "hausen" oder "Totalausfall". </td>
+<td>   \B bedeutet keine Wortgrenze.
+</td></tr>
+<tr>
+<td> \d /\d+/  </td>
+<td> findet eine beliebige ganze Zahl. </td>
+<td>  \d bedeutet eine Ziffer (0 bis 9)
+</td></tr>
+<tr>
+<td>  \D /\D+/ </td>
+<td>  findet "-fach" in "3-fach" </td>
+<td> also keine Ziffer.
+</td></tr>
+<tr>
+<td> \f /\f/  </td>
+<td>  findet ein Seitenvorschubzeichen. </td>
+<td> &#160;
+</td></tr>
+<tr>
+<td> \n /\n/ </td>
+<td>  findet ein Zeilenvorschub-Zeichen. </td>
+<td>
+</td></tr>
+<tr>
+<td> \r /\r/  </td>
+<td> findet ein Wagenrücklaufzeichen. </td>
+<td>
+</td></tr>
+<tr>
+<td> \t /\t/  </td>
+<td> findet ein Tabulator-Zeichen. </td>
+<td>
+</td></tr>
+<tr>
+<td> \v /\v/  </td>
+<td> findet ein vertikales Tabulator-Zeichen. </td>
+<td>
+</td></tr>
+<tr>
+<td> \s /\s/  </td>
+<td> findet jede Art von Weißraum-Zeichen ("Whitespace") </td>
+<td>also \f, \n, \t, \v und das Leerzeichen.
+</td></tr>
+<tr>
+<td> \S /\S+/ </td>
+<td> Bfindet ein beliebiges einzelnes Zeichen,<br /> das kein "Whitespace" ist, </td>
+<td> also kein \f\n\t\v und kein Leerzeichen.
+</td></tr>
+<tr>
+<td> \w /\w+/ </td>
+<td> findet alle alphanumerischen Zeichen und den Unterstrich  </td>
+<td> (typische Bedingung etwa für programmiersprachengerechte selbstvergebene Namen).
+</td></tr>
+<tr>
+<td> \W /\W/  </td>
+<td>findet ein Zeichen, das nicht alphanumerisch und auch kein Unterstrich ist </td>
+<td> (typisch zum Suchen nach illegalen Zeichen bei programmiersprachengerechten selbstvergebenen Namen)
+</td></tr>
+<tr>
+<td> () /(aus)/   </td>
+<td> findet "aus" und merkt es sich intern </td>
+<td> Bis zu 9 solcher Klammern (Merkplätze) sind in einem regulären Ausdruck erlaubt.
+</td></tr>
+<tr>
+<td> /.../g /aus/g </td>
+<td> findet "aus" so oft wie es in dem gesamten zu durchsuchenden Bereich vorkommt. </td>
+<td>   Die Fundstellen werden intern in einem Array gespeichert.
+</td></tr>
+<tr>
+<td> /.../i /aus/i  </td>
+<td> findet "aus", "Aus" und "AUS", </td>
+<td> also unabhängig von Groß-/Kleinschreibung.
+</td></tr>
+<tr>
+<td> /.../gi /aus/gi </td>
+<td> findet "aus", so oft wie es in dem gesamten zu durchsuchenden Bereich vorkommt (g) und unabhängig von Groß-/Kleinschreibung (i). </td>
+<td>
+</td></tr></table>
+<p>Umfangreichere Informationen über reguläre Ausdrücke finden Sie Seite <a href="../../Perl/Regul%c3%a4re_Ausdr%c3%bccke.html" title="Perl/Reguläre Ausdrücke">reguläre Ausdrücke in Perl</a>.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Tools zum Testen">Bearbeiten</a>]</span> <span class="mw-headline" id="Tools_zum_Testen"> Tools zum Testen </span></h2>
+<ul><li> <a rel="nofollow" class="external text" href="http://www.regextester.com/">REGex TESTER</a>
+</li><li> <a rel="nofollow" class="external text" href="http://regexpal.com/">RegexPal – a JavaScript regular expression tester</a>
+</li><li> <a rel="nofollow" class="external text" href="http://www.regexr.com/">RegExr - an online tool to learn, build, &amp; test Regular Expressions</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 498/1000000
+Post‐expand include size: 13289/2097152 bytes
+Template argument size: 10859/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3972-0!*!0!!de-formal!*!* and timestamp 20150301220712 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;oldid=24279">http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;oldid=24279</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../../Spezial_Kategorien.html" title="Spezial:Kategorien">Kategorien</a>: <ul><li><a href="../../Kategorie_JavaScript.html" title="Kategorie:JavaScript">JavaScript</a></li><li><a href="../../Kategorie_JavaScript_Objekte.html" title="Kategorie:JavaScript Objekte">JavaScript Objekte</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FObjekte%2FRegExp" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="RegExp.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Objekte/RegExp&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="RegExp.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../../src.selfhtml.org/logo/S-110.png);" href="../../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../../Spezial_Linkliste/JavaScript/Objekte/RegExp.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Objekte/RegExp.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/RegExp&amp;oldid=24279" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../../Spezial_Durchsuchen/JavaScript-2FObjekte-2FRegExp.html" title="Spezial:Durchsuchen/JavaScript-2FObjekte-2FRegExp">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 14. November 2014 um 14:19 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 8.398-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.090 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:41 GMT -->
+</html>

@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Module/CGI-Modul – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Module/CGI-Modul","wgTitle":"Perl/Module/CGI-Modul","wgCurRevisionId":23635,"wgArticleId":3112,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Module/CGI-Modul","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Module/CGI-Modul" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Module/CGI-Modul&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Module_CGI-Modul skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Module/CGI-Modul</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a> | <a href="http://wiki.selfhtml.org/wiki/Perl/Module" title="Perl/Module">Module</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zum_CGI-Modul"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zum CGI-Modul</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Der_funktionsorientierte_Modus"><span class="tocnumber">1.1</span> <span class="toctext">Der funktionsorientierte Modus</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Der_objektorientierte_Modus"><span class="tocnumber">1.2</span> <span class="toctext">Der objektorientierte Modus</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#CGI-Modul_in_Scripts_einbinden"><span class="tocnumber">2</span> <span class="toctext">CGI-Modul in Scripts einbinden</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Einfache_.28X.29HTML-Ausgaben_mit_dem_CGI-Modul"><span class="tocnumber">3</span> <span class="toctext">Einfache (X)HTML-Ausgaben mit dem CGI-Modul</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Erweiterte_Ausgaben_mit_dem_CGI-Modul"><span class="tocnumber">4</span> <span class="toctext">Erweiterte Ausgaben mit dem CGI-Modul</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Argumente_beim_HTTP-Header"><span class="tocnumber">4.1</span> <span class="toctext">Argumente beim HTTP-Header</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Dokumenttyp-Deklarationen_.28DTD.29"><span class="tocnumber">4.2</span> <span class="toctext">Dokumenttyp-Deklarationen (DTD)</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Argumente_beim_HTML-Dateikopf"><span class="tocnumber">4.3</span> <span class="toctext">Argumente beim HTML-Dateikopf</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Formularverarbeitung_mit_dem_CGI-Modul"><span class="tocnumber">5</span> <span class="toctext">Formularverarbeitung mit dem CGI-Modul</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Die_Methode_param.28.29"><span class="tocnumber">5.1</span> <span class="toctext">Die Methode param()</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Formularerstellung"><span class="tocnumber">5.2</span> <span class="toctext">Formularerstellung</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Umgebungsdaten_ermitteln_mit_dem_CGI-Modul"><span class="tocnumber">6</span> <span class="toctext">Umgebungsdaten ermitteln mit dem CGI-Modul</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Cookies_verwalten_mit_dem_CGI-Modul"><span class="tocnumber">7</span> <span class="toctext">Cookies verwalten mit dem CGI-Modul</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Automatische_Umleitungen_.28Redirects.29_mit_dem_CGI-Modul"><span class="tocnumber">8</span> <span class="toctext">Automatische Umleitungen (Redirects) mit dem CGI-Modul</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Sicherheitseinstellungen_mit_dem_CGI-Modul"><span class="tocnumber">9</span> <span class="toctext">Sicherheitseinstellungen mit dem CGI-Modul</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zum CGI-Modul">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zum_CGI-Modul"> Allgemeines zum CGI-Modul </span></h2>
+<p>Das CGI-Modul gehört seit der Perl-Version 5.004 (Mai 1997) zu den <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodulen</a>. Sie finden es meist im Verzeichnis <var>/usr/lib/perl5/5.8.8</var> bzw. unter Windows in <var>C:\Programme\Perl\lib</var> unter dem Namen <var>CGI.pm</var>. Es fasst eine große Anzahl Funktionen zusammen, die typische Routine-Aufgaben von CGI-Scripts übernehmen. Eine relativ umfangreiche Erläuterung des Moduls können Sie sich auf der Konsole bzw. Eingabeaufforderung mit <code>perldoc CGI</code> ausgeben lassen. Seine Funktionen haben sich im Praxiseinsatz vielfach bewährt. Es ist deshalb sinnvoll, bei der Erstellung eigener CGI-Scripts auf die Ressourcen zurückzugreifen, die dieses Modul bereitstellt; man braucht dann nicht alles nochmals selbst zu schreiben.
+</p><p>Ein Nachteil des CGI-Moduls besteht allerdings darin, dass es recht groß ist. Das liegt (unter anderem) an seinem monolithischen Aufbau. Es übersetzt viel Code erst zur Laufzeit, wenn die Funktionen benötigt werden. Da darüber hinaus auch Cachingmechanismen auf dem Server dafür sorgen, dass die etwa 250 KB große Datei nicht bei jedem Aufruf neu eingelesen wird, sollten Sie nur bei kleinen CGI-Scripts wie etwa Zugriffszählern oder Weiterleitungen auf den Einsatz des CGI-Moduls verzichten. Bei den meisten CGI-Scripts ist seine Verwendung jedoch zu empfehlen, vor allem, wenn damit Formulardaten verarbeitet und (X)HTML-Dokumente zusammengestellt werden sollen. Denn das Modul übernimmt unter anderem auch eine ganze Reihe von automatischen Anpassungen an die Laufzeitumgebung des Scripts, wodurch mögliche Fehler vermieden bzw. minimiert werden können.
+</p><p>Das CGI-Modul besteht aus einem Hauptmodul und verschiedenen Untermodulen. Die Untermodule übernehmen im wesentlichen spezielle Aufgaben wie beispielsweise die Unterstützung des neueren Fast-CGI-Standards oder die Unterstützung so genannter Server-Pushs. In diesem Kapitel wird insbesondere dargestellt, wie Sie mit Hilfe des CGI-Moduls (X)HTML-Dokumente generieren und mit übermittelten Daten umgehen können. Das ist allerdings bei weitem nicht die einzige Aufgabe, die diesem Modul zugeteilt werden kann. Wenn Sie "nur" HTML ausgeben lassen möchten, könnten Sie sogar ganz auf das CGI-Modul verzichten; es gibt weitere Standardmodule, die für solche Aufgaben herangezogen werden könnten. Und schließlich ist Ihr Script auch dann, wenn es das CGI-Modul einsetzt, immer noch ein Perl-Script und kann neben dem Zusammenstellen von (X)HTML auch alle die anderen Dinge tun, für die Perl-Scripts nun einmal eingesetzt werden.
+</p><p>Und wie alles, was zu den Computersprachen gehört, unterliegt auch Perl einschließlich seiner Module einer stetigen Entwicklung. Manches, was Sie noch zum Erscheinungstermin von SELFHTML 8.1 (im November 2005) als gültig erläutert bekamen, ist bereits nach zwei Jahren nicht mehr im gleichen Maß gültig. Das hängt damit zusammen, dass auch das CGI-Modul beständig weiterentwickelt wird. Dazu vergleichen Sie bitte den aktuellen Entwicklungsstand im <a rel="nofollow" class="external text" href="http://search.cpan.org/perldoc?CGI">CPAN</a>.
+</p><p>Im wesentlichen gibt es zwei Möglichkeiten, das CGI-Modul zu verwenden: eine objektorientierte und eine funktionsorientierte. Beide Konzepte haben ihre Vor- und Nachteile.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Der funktionsorientierte Modus">Bearbeiten</a>]</span> <span class="mw-headline" id="Der_funktionsorientierte_Modus"> Der funktionsorientierte Modus </span></h3>
+<p>Wenn Sie diesen Modus nutzen möchten, müssen Sie entweder eine oder mehrere bestimmte Funktion(en) in den Namensraum Ihres Scripts importieren - oder Sie importieren eine ganze Liste, die die von Ihnen gewünschten Methoden bereitstellt. Solche Funktionslisten beginnen grundsätzlich mit einem vorangestellten Doppelpunkt. Ein Beispiel, das ein vollständiges XHTML-Dokument erzeugt, könnte dann so ausssehen:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> CGI <span class="co2">qw/:standard/</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> header<span class="sy0">,</span> start_html<span class="sy0">,</span> p<span class="br0">&#40;</span><span class="st_h">'Hallo Welt!'</span><span class="br0">&#41;</span><span class="sy0">,</span> end_html<span class="sy0">;</span></pre></div></div>
+<p>Es gibt mehrere Möglichkeiten, funktionsorientiert zu schreiben, auf die hier aber nicht näher eingegangen werden soll.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Der objektorientierte Modus">Bearbeiten</a>]</span> <span class="mw-headline" id="Der_objektorientierte_Modus">  Der objektorientierte Modus </span></h3>
+<p>Wenn Sie diesen Modus nutzen möchten, müssen Sie mindestens ein Objekt deklarieren, mit dem Sie die Funktionen des Moduls aufrufen können. Ihr Script beginnt dann grundsätzlich mit diesen Vorgaben (das ist noch kein vollständiges Script!):
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span></pre></div></div>
+<p>Der objektorientierte Modus gilt als eleganter und bietet mehr Möglichkeiten, wie etwa das Definieren mehrerer unabhängiger CGI-Objekte im gleichen Script. Deshalb beschränken sich die Beschreibungen und Scriptbeispiele dieses Kapitels auf die objektorientierte Verwendung des CGI-Moduls.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: CGI-Modul in Scripts einbinden">Bearbeiten</a>]</span> <span class="mw-headline" id="CGI-Modul_in_Scripts_einbinden"> CGI-Modul in Scripts einbinden </span></h2>
+<p>Das folgende Beispiel zeigt, wie Sie das CGI-Modul in ein eigenes Perl-Script einbinden und im objektorientierten Stil verwenden können.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<p><a rel="nofollow" class="external text" href="http://de.selfhtml.org/cgi-bin/812/modulcgi1.pl">Anzeigebeispiel: So sieht's aus</a> (Zum Aufruf des Scripts ist eine Internet-Verbindung erforderlich)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="st_h">'text/plain'</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="st0">&quot;Hallo Welt&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Mit <code>use CGI</code> binden Sie das CGI-Modul in Ihr Script ein. Im Beispiel wird zusätzlich noch ein Untermodul namens <code>CGI::Carp</code> eingebunden, genauer, eine bestimmte Funktion daraus, nämlich die Funktion <code>fatalsToBrowser</code>. Beim Entwickeln von CGI-Scripts ist es immer sinnvoll, dies mit einzubinden. Diese Funktion hat zur Folge, dass alle Fehlermeldungen, die der Perl-Interpreter erzeugt, direkt im Browser ausgegeben werden. Und solange Sie in Ihrem Script noch Fehler (bugs) vermuten, ist es überaus nützlich, solche Fehlermeldungen unmittelbar im Browser zu sehen, statt sie sich mühsam aus dem Server-log herausfischen zu müssen. Es wird Ihnen damit beinahe so etwas wie ein Debugging-Modus zur Verfügung gestellt. Hat Ihr Script am Ende der Entwicklungsphase alle Tests fehlerfrei durchlaufen, können Sie diese Zeile auch wieder auskommentieren oder ganz und gar streichen. Im produktiven Einsatz hat sie keine Bedeutung mehr.
+<p>Nachdem das CGI-Modul eingebunden ist, wird mit <code>my $cgi = new CGI</code> eine neue Instanz des CGI-Objekts erzeugt. Mit dieser Anweisung sorgen Sie dafür, dass das CGI-Modul objektorientiert verwendet werden kann. Die Objektinstanz der CGI-Klasse ist nun über den Skalar <code>$cgi</code> ansprechbar. Im weiteren Verlauf des Scripts haben Sie über diesen Skalar Zugriff auf alle Funktionen, die das CGI-Modul bereitstellt. Bei objektorientierter Programmierung spricht man dann jedoch nicht mehr von Funktionen, sondern von Methoden.
+</p><p>Der Name des Skalars, der im Beispiel <code>$cgi</code> lautet, ist frei wählbar. Da Sie den Skalar im weiteren Verlauf des Scripts vermutlich sehr oft brauchen, empfiehlt sich ein kurzer Name. Viele Programmierer arbeiten mit einbuchstabigen Namen wie z.B. <code>$q</code>.
+</p><p>Das obige Beispiel gibt ein einfaches "Hallo Welt" aus. Wie immer muss zur Übergabe an einen aufrufenden Browser zuerst ein HTTP-Header erzeugt werden. Das CGI-Modul stellt dafür eine Funktion bzw. Methode namens <code>header()</code> zur Verfügung. Wenn dieser Methode kein Argument mitgegeben wird, erzeugt sie einen HTTP-Header für den <a href="http://wiki.selfhtml.org/wiki/Referenz:MIME-Typen" title="Referenz:MIME-Typen">MIME-Typ</a> <code>text/html</code>, also für die Ausgabe von HTML-Code. Im obigen Beispiel soll jedoch unformatierter Text gesendet werden. Deshalb wird der Header nicht leer belassen, sondern ihm wird <code>text/plain</code> übergeben.
+</p><p>Am Beispiel des Aufrufs von <code>header()</code> können Sie sehen, wie der Zugriff über den zuvor definierten Skalar funktioniert. Nach dem Schema <code>$Skalar-&gt;Methode</code> "zeigen" Sie auf die Methode, und zwar mit dem Skalar, der an eine bestimmte zuvor erzeugte Instanz des CGI-Objekts gebunden wird.
+</p>
+Zum Senden des HTTP-Headers und des auszugebenden "Hallo Welt" wird im Beispiel die übliche <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#print" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">print</a>-Funktion von Perl verwendet. Diese Funktion kann ja mehrere durch Komma getrennte Argumente gleichzeitig ausgeben. Im Beispiel gibt sie zuerst den Rückgabewert der Methode <code>header()</code> aus, also den gewünschten HTTP-Header, und danach den Text <code>Hallo Welt</code>.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">h1</span><span class="br0">&#40;</span><span class="st_h">'hallo Welt!'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">p</span><span class="br0">&#40;</span><span class="st_h">'Solche sechs, wie wir fünf sind,
+               gibts keine vier mehr, wir drei sind die zwei einzigen&#160;;-)'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Wenn Sie die Methode <code>header()</code> so notieren, dass sie "leer" bleibt und der Skalar <code>$cgi</code> darauf "zeigt", wird der Perl-Interpreter im CGI-Modul diejenigen Festlegungen suchen, die es dafür enthält. Das ist in den aktuellen Versionen des CGI-Moduls für Perl 5.8.8 grundsätzlich XHTML 1.0, kann sich aber künftig zu XHTML 2.0 ändern. In diesem Fall bekommen Sie also <b>zwingend</b> den MIME-Typ text/html. Folglich müssen Sie außer dem HTTP-Header dafür sorgen, dass eine vollständige XHTML-Datei einschließlich <code>&lt;head&gt;</code> und <code>&lt;body&gt;</code> erzeugt werden kann. Das erreichen Sie mit <code>$cgi-&gt;start_html()</code>.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Einfache (X)HTML-Ausgaben mit dem CGI-Modul">Bearbeiten</a>]</span> <span class="mw-headline" id="Einfache_.28X.29HTML-Ausgaben_mit_dem_CGI-Modul"> Einfache (X)HTML-Ausgaben mit dem CGI-Modul </span></h2>
+<p>Das CGI-Modul stellt Ihnen eigene Methoden zur Verfügung, um (X)HTML-Code zusammenzustellen. Es können (mit wenigen Ausnahmen) für alle HTML-Elemente solche Methoden bereitgestellt werden. Die von HTML her gewohnten spitzen Klammern entfallen, aber allen Elementnamen werden runde Klammern nachgestellt, in denen Sie CSS-Angaben, EventHandler, diverse Attribute bzw. Parameter und natürlich auch den Text, der zuletzt ja im Browser angezeigt werden soll, notieren können. Gibt es nichts, was Sie unbedingt in solche runde Klammern schreiben möchten, können Sie sie auch weglassen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<p><a rel="nofollow" class="external text" href="http://de.selfhtml.org/cgi-bin/812/modulcgi2.pl">Anzeigebeispiel: So sieht's aus</a> (Zum Aufruf des Scripts ist eine Internet-Verbindung erforderlich)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI <span class="sy0">-</span>no_xhtml<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Autor</span> <span class="sy0">=</span> <span class="st0">&quot;der Reiseonkel&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ort</span> <span class="sy0">=</span> <span class="st0">&quot;Cap Ferret&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>dtd <span class="sy0">=&gt;</span> <span class="st_h">'-//W3C//DTD HTML 4.01 Transitional//EN'</span><span class="sy0">,</span>
+                        <span class="sy0">-</span>title <span class="sy0">=&gt;</span> <span class="st_h">'Reisebericht vom '</span><span class="sy0">.</span><span class="re0">$Ort</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">h1</span><span class="br0">&#40;</span><span class="st_h">'Reisebericht vom '</span><span class="sy0">.</span><span class="re0">$Ort</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">p</span><span class="br0">&#40;</span><span class="st_h">'Die größte Sanddüne Europas mit 117m
+      Höhe sieht man bei klarem Wetter, wenn man am Ufer des Beckens von
+      Arcachon steht. Das '</span><span class="sy0">.</span><span class="re0">$Ort</span><span class="sy0">.</span><span class="st_h">' selbst ist ein kleiner Landzipfel, der
+      vor allem aus Ferienhäusern besteht. Austernzucht, Fischerei und
+      Wassersport prägen die Atmosphäre im Becken von Arcachon.'</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">hr</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>noshade <span class="sy0">=&gt;</span> <span class="kw3">undef</span><span class="sy0">,</span> <span class="sy0">-</span>size <span class="sy0">=&gt;</span> <span class="st_h">'1'</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">p</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>style <span class="sy0">=&gt;</span> <span class="st_h">'color:red'</span><span class="br0">&#125;</span><span class="sy0">,</span> <span class="st0">&quot;Autor: &quot;</span><span class="sy0">,</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">em</span><span class="br0">&#40;</span><span class="re0">$Autor</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Zunächst wird das CGI-Modul wie bereits bekannt mit <code>use CGI</code> eingebunden, gleichzeitig sorgt der Parameter <code>-no_xhtml</code> dafür, dass vorerst gar keine Dokumenttyp-Festlegung erfolgt. Um das im objektorientierten Stil zu verwenden, wird dann mit <code>my $cgi = new CGI</code> eine neue Instanz des CGI-Objekts erzeugt. Es gibt aus Demonstrationsgründen noch zwei Variablen, die Ihnen zeigen sollen, dass Sie selbstverständlich auch in Ausgaben, die Sie mit dem CGI-Modul generieren, Variablen nutzen können.
+<p>Das Beispiel tut nichts anderes, als eine kleine vollständige HTML-Datei zusammenzustellen. Dazu wird zunächst mit <code>$cgi-&gt;header()</code> der HTTP-Header für HTML erzeugt. Dann folgt der HTML-Code. Der HTML-Code wird jedoch nicht wie bisher bekannt mit Hilfe der <code>print</code>-Funktion für einzelne HTML-Elemente geschrieben, sondern durch den Aufruf von Methoden, die das CGI-Modul bereitstellt, erzeugt. Grundsätzlich beginnt die HTML-Ausgabe mit der Methode <code>start_html()</code>, der Sie Parameter für diejenigen Elemente übergeben können, die Sie als Elemente des Headerbereichs kennen. Mit dem Parameter <code>dtd</code> müssen Sie beispielsweise den DTD-Bezeichner festlegen, um das ausgegebene Dokument standardkonform gestalten zu können, falls Sie oben den <code>-no_xhtml</code>-Parameter verwendet haben. Die Methode <code>start_html()</code> kann alle Elemente des Header-Bereichs einer HTML-Datei zur Verfügung stellen, sowie ein öffnendes <code>&lt;body&gt;</code>-tag.
+</p><p>Für alle gängigen HTML-Elemente und HTML-Tags, die Sie innerhalb von <code>&lt;body&gt;</code> verwenden möchten, gibt es solche Methoden. Dabei können Sie entweder das komplette HTML-Element erzeugen, oder auch nur ein Start- oder End-Tag. Die Anweisung <code>$cgi-&gt;h1('Reisebericht vom '.$Ort)</code> erzeugt beispielsweise ein komplettes HTML-Element mitsamt Inhalt - und zugleich sehen Sie, dass Sie dort auch Variablen einsetzen können, wie Sie es von Perl ja gewohnt sind. Der erzeugte Code lautet <code>&lt;h1&gt;Reisebericht vom Cap Ferret&lt;/h1&gt;</code>. Auf die gleiche Weise funktioniert es mit den anderen HTML-Elementen. <code>$cgi-&gt;strong('wichtiger Text')</code> würde beispielsweise den HTML-Code <code>&lt;strong&gt;wichtiger Text&lt;/strong&gt;</code> erzeugen. Die Überschrift im Beispiel könnte aber auch folgendermaßen notiert werden:<br />
+<code>$cgi-&gt;start_h1(),'Reisebericht vom '.$Ort,$cgi-&gt;end_h1()</code>.<br />
+Neben den kompletten Element-Methoden gibt es also auch Methoden, die nur ein einleitendes oder schließendes HTML-Tag erzeugen. <code>$cgi-&gt;start_h1()</code> erzeugt nur den HTML-Code <code>&lt;h1&gt;</code>, und <code>$cgi-&gt;end_h1()</code> den Code <code>&lt;/h1&gt;</code>. Entsprechende Methoden gibt es für alle Elemente, also beispielsweise auch <code>$cgi-&gt;start_strong()</code> und <code>$cgi-&gt;end_strong()</code>.
+</p><p>Die Verwendung solcher Methoden für öffnende und schließende Tags ist dann sinnvoll, wenn die Tags weit auseinanderliegen und sehr viel Inhalt haben. Vor allem bei <code>&lt;html&gt;...&lt;/html&gt;</code> ist das natürlich der Fall, dazwischen steht ja der komplette anzuzeigende Inhalt Ihrer Datei. Die Methode <code>$cgi-&gt;start_html()</code>, die auch im obigen Beispiel verwendet wird, hat jedoch eine Sonderstellung. Sie erzeugt nicht nur ein einleitendes <code>&lt;html&gt;</code>-Tag, sondern schreibt auch den Standard-Dateikopf der HTML-Datei mit den Elementen <code>head</code> und <code>title</code> sowie einem öffnenden <code>&lt;body&gt;</code>.
+</p><p>Viele einleitende HTML-Tags haben Attribute. Um diese vom Inhalt des Elements zu unterscheiden, bieten die Methoden eine besondere Syntax an. Am obigen Beispiel ist das etwa an der Trennlinie erkennbar. Mit der Anweisung: <code>$cgi-&gt;hr({-noshade =&gt; undef, -size =&gt; '1'})</code> wird der HTML-Code <code>&lt;hr noshade size="1"&gt;</code> erzeugt. Das Argument, das der Methode übergeben wird, muss dazu in geschweiften Klammern <code>{</code> bzw. <code>}</code> stehen. Jedes Attribut wird durch ein Minuszeichen <code>-</code> eingeleitet. Wertzuweisungen an Attribute werden durch den Operator <code>=&gt;</code> vom Attribut getrennt. Mehrere Attribute werden wie im <code>hr</code>-Beispiel innerhalb der geschweiften Klammern durch Kommata getrennt.
+</p><p>Die Methoden zum Erzeugen von HTML-Elementen können auch mehrere Argumente übergeben bekommen. Dabei müssen Sie die Argumente durch Kommata trennen. Ein komplexeres Beispiel sehen Sie an der letzten <code>$cgi-&gt;p(...)</code>-Anweisung. Dieser Methodenaufruf übergibt drei Argumente. Das erste Argument ist ein Attribut für das einleitende <code>&lt;p&gt;</code>-Tag, nämlich ein <code>style</code>-Attribut, in dem die Schriftfarbe rot bestimmt wird. Das zweite Argument ist statischer Text, und das dritte Argument zeigt gleich zwei weitere Möglichkeiten: es enthält einen weiteren Aufruf einer Element-Methode, nämlich <code>$cgi-&gt;i()</code> für kursiven Text. Und als Argument wird dieser Methode kein statischer Text übergeben, sondern ein Skalar namens <code>$Autor</code>, der weiter oben im Beispiel definiert wird.
+</p>
+Die Argumente erlauben also das bequeme Verschachteln von HTML-Elementen, ebenso wie das Einfügen von variablen Inhalten, die zuvor vom Script ermittelt wurden.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Das Einbinden des CGI-Moduls zwingt Sie keinesfalls dazu, HTML-Code auf diese Weise zu erzeugen. Sie können die HTML-Ausgaben auch direkt mit der <code>print</code>-Funktion erzeugen oder zuvor eingelesene Templates ausgeben. Sie können auch Methodenaufrufe des CGI-Moduls mit herkömmlicher HTML-Code-Erzeugung mischen. Es ist also kein Problem, Mischformen wie diese zu notieren:<br />
+<p><code>print "&lt;hr noshade size='1'&gt;",<br />
+&#160;&#160;&#160;&#160;&#160;&#160;$cgi-&gt;p({-style =&gt; 'color:red'}, "Autor: &lt;i&gt;$Autor&lt;/i&gt;");</code>
+</p><p>Normalerweise werden alle HTML-Elementnamen innerhalb der Methoden klein geschrieben, also z.B. <code>start_div()</code>, <code>end_div()</code> oder <code>div()</code>. Es gibt jedoch ein paar Ausnahmen, um Kollisionen mit gleichnamigen Sprachbestandteilen von Perl zu vermeiden. Die HTML-Elemente <code>Tr</code>, <code>Select</code>, <code>Link</code> und <code>Sub</code> beginnen mit Großbuchstaben, also etwa in einer Anweisung wie <code>$cgi-&gt;Sub('tiefgestellter Text')</code>.
+</p>
+HTML-Kommentare können Sie mit der Methode <code>comment()</code> setzen. So erzeugt die Anweisung <code>$cgi-&gt;comment('derzeit nicht aktuell')</code> den HTML-Code <code>&lt;!-- derzeit nicht aktuell --&gt;</code>.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Erweiterte Ausgaben mit dem CGI-Modul">Bearbeiten</a>]</span> <span class="mw-headline" id="Erweiterte_Ausgaben_mit_dem_CGI-Modul"> Erweiterte Ausgaben mit dem CGI-Modul </span></h2>
+<p>HTTP-Header können manchmal Zusatzinformationen enthalten, die für die Client-Server-Kommunikation von Bedeutung sind. Und was den HTML-Dateikopf betrifft, so kann dieser ebenfalls wichtige allgemeine Angaben zur HTML-Datei enthalten, z.B. <a href="http://wiki.selfhtml.org/wiki/HTML/Kopfdaten/meta" title="HTML/Kopfdaten/meta">Meta-Tags</a>, Scriptbereiche für CSS oder Javascript, logische Beziehungen oder Attribute zur Seitengestaltung im einleitenden <code>&lt;body&gt;</code>-Tag (die zwar zulässig und noch nicht einmal "deprecated" sind, trotzdem aber besser mit CSS bestimmt werden sollten).
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<p><a rel="nofollow" class="external text" href="http://de.selfhtml.org/cgi-bin/812/modulcgi3.pl">Anzeigebeispiel: So sieht's aus</a> (Zum Aufruf des Scripts ist eine Internet-Verbindung erforderlich)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="sy0">-</span>type    <span class="sy0">=&gt;</span><span class="st_h">'text/html'</span><span class="sy0">,</span>
+                   <span class="sy0">-</span>expires <span class="sy0">=&gt;</span><span class="st_h">'+1h'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="sy0">-</span>title  <span class="sy0">=&gt;</span><span class="st_h">'Testseite mit Link'</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>author <span class="sy0">=&gt;</span><span class="st_h">'beispiel@example.org'</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>base   <span class="sy0">=&gt;</span><span class="st_h">'true'</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>target <span class="sy0">=&gt;</span><span class="st_h">'_blank'</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>meta   <span class="sy0">=&gt;</span><span class="br0">&#123;</span><span class="st_h">'keywords'</span>   <span class="sy0">=&gt;</span><span class="st_h">'TeamOne, Test'</span><span class="sy0">,</span>
+                                  <span class="st_h">'description'</span><span class="sy0">=&gt;</span><span class="st_h">'ein kleiner Test mit einem Link'</span><span class="br0">&#125;</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>style  <span class="sy0">=&gt;</span><span class="br0">&#123;</span><span class="st_h">'src'</span><span class="sy0">=&gt;</span><span class="st_h">'/styles/formate.css'</span><span class="br0">&#125;</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>BGCOLOR<span class="sy0">=&gt;</span><span class="st_h">'#FFFFCC'</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>TEXT   <span class="sy0">=&gt;</span><span class="st_h">'#000000'</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>LINK   <span class="sy0">=&gt;</span><span class="st_h">'red'</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>VLINK  <span class="sy0">=&gt;</span><span class="st_h">'blue'</span><span class="sy0">,</span>
+                       <span class="sy0">-</span>ALINK  <span class="sy0">=&gt;</span><span class="st_h">'black'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">p</span><span class="br0">&#40;</span><span class="st_h">'ein kleiner Test mit einem '</span><span class="sy0">,</span>
+              <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">a</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>href <span class="sy0">=&gt;</span> <span class="st_h">'http://www.selfhtml.org/'</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st_h">'Link auf selfhtml.org'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script bindet mit <code>use CGI</code> das CGI-Modul ein. Da kein Parameter zur Modifizierung der Dokumenttyp-Deklaration angegeben ist, wird standardmäßig XHTML 1.0 generiert werden. Das Script erzeugt dann mit <code>my $cgi = new CGI</code> eine neue Instanz des CGI-Objekts. Bei der <a href="#Einfache_.28X.29HTML-Ausgaben_mit_dem_CGI-Modul">HTML-Ausgabe</a>, die es anschließend zusammenstellt, nutzt es verschiedene Möglichkeiten, um den HTTP-Header und die Daten im Kopf der HTML-Datei zu beeinflussen.
+Sowohl der Methode <code>header()</code> zum Erzeugen des HTTP-Headers als auch der Methode <code>start_html()</code> zum Erzeugen des HTML-Dateikopfes können Sie mehrere Argumente übergeben. Beide Methoden kennen jeweils ein Standardargument: bei <code>header()</code> ist dies der MIME-Typ, und bei <code>start_html()</code> der Inhalt des <code>title</code>-Elements. Deshalb können Sie diese Argumente ohne weiteres direkt angeben, also etwa in der Form <code>header('text/plain')</code> oder <code>start_html('Text des Titels')</code>. Bei Angabe von mehreren und weiteren Argumenten sollten Sie jedoch die oben gezeigte Syntax verwenden. Dabei besteht jedes Argument aus einem Parameternamen, eingeleitet durch ein Minuszeichen <code>-</code>, einem Zeigeoperator <code>=&gt;</code> und dem gewünschten Wert.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Argumente beim HTTP-Header">Bearbeiten</a>]</span> <span class="mw-headline" id="Argumente_beim_HTTP-Header"> Argumente beim HTTP-Header </span></h3>
+<p>Die folgende Tabelle zeigt Ihnen, welche Angaben zum HTTP-Header Sie notieren können. Die Code-Beispiele der linken Spalte stellen nur den reinen Methodenaufruf von <code>header()</code> dar.
+</p>
+<table class="wikitable">
+<tr>
+<th> Aufrufbeispiel
+</th>
+<th> Erläuterung
+</th></tr>
+<tr>
+<td> <code>header(-type=&gt;'image/gif');</code>
+</td>
+<td> Mit <code>-type</code> können Sie den MIME-Typ des nachfolgenden Datenstroms bestimmen. Im Beispiel können Sie anschließend die binären Daten einer GIF-Grafik ausgeben (dazu vorher gegebenenfalls die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#binmode" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">binmode</a> aufrufen!)
+</td></tr>
+<tr>
+<td> <code>header(-status=&gt;'204 No response');</code>
+</td>
+<td> Mit <code>-status</code> können Sie eine HTTP-Statusmeldung an den Browser senden. Mit der Beispielanweisung (HTTP-Status 204) können Sie die Ausgabe weiterer Daten an den Browser verweigern. Beim Anwender bleibt die zuletzt angezeigte Seite am Bildschirm stehen. Sinnvoll beispielsweise, wenn der Anwender durch Klick auf einen Link ein Voting-Script anstößt, das ihn aber nicht am sofortigen Weiterlesen der Seite hindern soll.
+</td></tr>
+<tr>
+<td> <code>print $cgi-&gt;header(-expires=&gt;'+120s');</code>
+</td>
+<td> Mit <code>-expires</code> können Sie bewirken, dass der Browser die HTML-Ausgabe für einen Mindestzeitraum in seinen Cache-Speicher übernimmt. Bei einem Reload der ausgegebenen Seite innerhalb des angegebenen Zeitraums ruft der Browser dann nicht mehr das Script auf, sondern holt den HTML-Code aus seinem Cache. Den Zeitraum geben Sie als Zahl mit voranstehendem Pluszeichen und einem nachgestellten Buchstaben für die Zeiteinheit an. Die Angabe <code>'+30s'</code> im Beispiel bedeutet "HTML-Code 30 Sekunden im Cache halten". Andere Zeiteinheiten sind <code>m</code> (Minuten), <code>h</code> (Stunden), <code>d</code> (Tage), <code>M</code> (Monate) und <code>y</code> (Jahr). Darüber hinaus sind absolute Zeitangaben im UTC-Format erlaubt, wie z.B. <code>Friday, 08-Jun-2001 11:29:00 GMT+0100</code>.
+</td></tr>
+<tr>
+<td> <code>print $cgi-&gt;header(-cookie=&gt;$Cookie);</code>
+</td>
+<td> Mit <code>-cookie</code> können Sie einen Cookie aktivieren. Mehr dazu im Abschnitt <a href="#Cookies_verwalten_mit_dem_CGI-Modul">Cookies verwalten mit dem CGI-Modul</a>.
+</td></tr>
+<tr>
+<td> <code>print $cgi-&gt;header(-nph=&gt;1);</code>
+</td>
+<td> Mit diesem Befehl können Sie so genannte NPH-Scripts schreiben. NPH steht für <i>no-parsed-header</i> und bedeutet, dass das CGI-Script die nachfolgenden Daten direkt an den aufrufenden Browser sendet, ohne dass der Webserver etwas davon mitbekommt. Dies kann zu Performance-Gewinnen führen, und in einigen Fällen, etwa beim Einsatz des Microsoft IIS-Webservers, ist es sogar vorgeschrieben, den NPH-Modus zu verwenden.
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Dokumenttyp-Deklarationen (DTD)">Bearbeiten</a>]</span> <span class="mw-headline" id="Dokumenttyp-Deklarationen_.28DTD.29"> Dokumenttyp-Deklarationen (DTD) </span></h3>
+<p>Standardmäßig verwendet das CGI-Modul, wie bereits angedeutet, XHMTL 1.0 Transitional. Das heißt, Sie finden eine Dokumenttyp-Angabe im generierten XHTML-Dokument grundsätzlich in dieser Form vor:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="sy0">&lt;!</span>DOCTYPE html
+    PUBLIC <span class="st0">&quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span>
+     <span class="st0">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>html xmlns<span class="sy0">=</span><span class="st0">&quot;http://www.w3.org/1999/xhtml&quot;</span> lang<span class="sy0">=</span><span class="st0">&quot;en-US&quot;</span> xml<span class="sy0">:</span>lang<span class="sy0">=</span><span class="st0">&quot;en-US&quot;</span><span class="sy0">&gt;</span></pre></div></div>
+<p>Nun kann es aber durchaus Gründe geben, weshalb Sie eine andere DTD einsetzen möchten - beispielsweise möchten Sie vielleicht ein Frameset erzeugen oder müssen auf HTML 4.01 bestehen. Dann können Sie das CGI-Modul dazu zwingen, gar keine Vorgabe zu machen, indem Sie es in der Form <code>use CGI -no_xhtml;</code> in Ihr Script einbinden. Das bedeutet zugleich, dass Sie dann an anderer Stelle eine entsprechende Deklaration vornehmen müssen. Dazu stellt Ihnen das CGI-Modul für die Methode <code>$cgi-&gt;start_html()</code> den Parameter <code>-dtd</code> zur Verfügung, den Sie in dieser Form notieren können:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="sy0">-</span>dtd <span class="sy0">&gt;</span> <span class="st_h">'-//W3C//DTD HTML 4.01 Strict//EN'</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>Die folgende Liste enthält einige Documenttyp-Deklarationen, die Sie bei Bedarf wählen können:
+</p>
+<ul><li> '-//W3C//DTD HTML 4.01//EN'
+</li><li> '-//W3C//DTD HTML 4.01 Transitional//EN'
+</li><li> '-//W3C//DTD HTML 4.01 Frameset//EN'
+</li><li> '-//W3C//DTD XHTML 1.0 Strict//EN'
+</li><li> '-//W3C//DTD XHTML 1.0 Transitional//EN'
+</li><li> '-//W3C//DTD XHTML 1.0 Frameset//EN'
+</li><li> '-//W3C//DTD XHTML 1.1//EN'
+</li><li> '-//W3C//DTD HTML 3.2//EN'
+</li><li> '-//W3C//DTD HTML 2.0//EN'
+</li></ul>
+<p>Sie sehen, dass Sie nicht die gesamte (dreizeilige) Deklaration notieren müssen. Das CGI-Modul ergänzt die fehlenden Angaben, so dass in Ihrer vom Script generierten HTML-Ausgabe immer die vollständige Dokumenttyp-Deklaration zu finden sein wird. Denken Sie daran, dass von der Wahl der für Ihr Seitenprojekt zutreffenden DTD unter anderem abhängt, welche HTML-Elemente Sie überhaupt verwenden dürfen und wie sie auszusehen haben, um validen HTML-Code zu generieren.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Argumente beim HTML-Dateikopf">Bearbeiten</a>]</span> <span class="mw-headline" id="Argumente_beim_HTML-Dateikopf"> Argumente beim HTML-Dateikopf </span></h3>
+<p>Die folgende Tabelle listet auf, welche Angaben Sie zum HTML-Dateikopf notieren können. Die Code-Beispiele der linken Spalte stellen nur den reinen Methodenaufruf von <code>start_html()</code> dar.
+</p>
+<table class="wikitable">
+<tr>
+<th> Aufrufbeispiel
+</th>
+<th> Erläuterung
+</th></tr>
+<tr>
+<td> <code>start_html(-title=&gt;'Titeltext');</code>
+</td>
+<td> Mit <code>-title</code> bestimmen Sie den <a href="http://wiki.selfhtml.org/wiki/HTML/Kopfdaten/title" title="HTML/Kopfdaten/title">Titel</a> der HTML-Ausgabe. Das Beispiel erzeugt den folgenden HTML-Code:<br />
+<p><code>&lt;TITLE&gt;Titeltext&lt;/TITLE&gt;</code>
+</p>
+</td></tr>
+<tr>
+<td> <code>start_html(-author=&gt;'beispiel@example.org');</code>
+</td>
+<td> Mit <code>-author</code> erzeugen Sie eine <a href="http://wiki.selfhtml.org/wiki/HTML/Kopfdaten/link" title="HTML/Kopfdaten/link">logische Beziehung</a> zu einer E-Mail-Adresse. Das Beispiel erzeugt folgenden HTML-Code:<br />
+<p><code>&lt;LINK REV=MADE HREF="<a rel="nofollow" class="external free" href="mailto:beispiel%40example.org">mailto:beispiel%40example.org</a>"&gt;</code>
+</p>
+</td></tr>
+<tr>
+<td> <code>start_html(-base=&gt;'<a rel="nofollow" class="external free" href="http://example.org/'">http://example.org/'</a>);</code>
+</td>
+<td> Mit <code>-base</code> bestimmen Sie die <a href="http://wiki.selfhtml.org/wiki/HTML/Kopfdaten/base#Adressbasis" title="HTML/Kopfdaten/base">Basisadresse</a> der ausgegebenen HTML-Seite. Das Beispiel erzeugt folgenden HTML-Code:<br />
+<p><code>&lt;BASE HREF="<a rel="nofollow" class="external free" href="http://example.org/">http://example.org/</a>"&gt;</code>
+</p>
+</td></tr>
+<tr>
+<td> <code>start_html(-target=&gt;'dataframe');</code>
+</td>
+<td> Mit <code>-target</code> bestimmen Sie den <a href="http://wiki.selfhtml.org/wiki/HTML/Kopfdaten/base#Zielfensterbasis" title="HTML/Kopfdaten/base">Basis-Fensternamen</a> für Links in der HTML-Ausgabe. Das Beispiel erzeugt folgenden HTML-Code:<br />
+<p><code>&lt;BASE TARGET="dataframe"&gt;</code>
+</p>
+</td></tr>
+<tr>
+<td> <code>start_html(-meta=&gt;{'keywords'=&gt;'HTML,CSS'});</code>
+</td>
+<td> Mit <code>-meta</code> können Sie Meta-Angaben notieren - jedoch nur solche, die in HTML vom Typ <code>name</code> sind, nicht solche, die vom Typ <code>http-equiv</code> sind. Mehrere Meta-Angaben gleichzeitig sind erlaubt. Jede einzelne Meta-Angabe muss in geschweiften Klammern stehen. Innerhalb der geschweiften Klammern folgt zunächst der Wert, der in HTML dem <code>name</code>-Attribut zugewiesen würde, gefolgt von dem Operator <code>=&gt;</code> und dem Wert, den Sie in HTML dem <code>content</code>-Attribut zuweisen würden. Das Beispiel erzeugt folgenden HTML-Code:<br />
+<p><code>&lt;META NAME="keywords" CONTENT="HTML,CSS"&gt;</code>
+</p>
+</td></tr>
+<tr>
+<td> <code>start_html(-BGCOLOR=&gt;'#000000');</code>
+</td>
+<td> Mit allen anderen Argumenten, die mit einem Minuszeichen beginnen und keinen der anderen reservierten Namen wie <code>-title</code> oder <code>-meta</code> haben, bestimmen Sie Attribute, die ins einleitende <code>&lt;body&gt;</code>-Tag eingefügt werden. Das Beispiel erzeugt folgenden HTML-Code:<br />
+<p><code>&lt;BODY BGCOLOR="#000000"&gt;</code>
+</p>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Formularverarbeitung mit dem CGI-Modul">Bearbeiten</a>]</span> <span class="mw-headline" id="Formularverarbeitung_mit_dem_CGI-Modul"> Formularverarbeitung mit dem CGI-Modul </span></h2>
+<p>In der Regel werden CGI-Scripts von HTML-Formularen über das <code>action</code>-Attribut innerhalb des Formulars aufgerufen (es gibt auch andere Möglichkeiten, beispielsweise über <a href="http://wiki.selfhtml.org/wiki/SSI" title="SSI" class="mw-redirect">SSI</a>). Typischerweise sieht ein HTML-Formular so ähnlich aus wie im folgenden Beispiel.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="sy0">&lt;!</span>DOCTYPE HTML PUBLIC <span class="st0">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span><span class="sy0">&gt;</span>
+<span class="re4">&lt;html&gt;</span>
+<span class="re4">&lt;head&gt;</span>
+<span class="re4">&lt;title&gt;</span>Kommentarseite<span class="sy0">&lt;/</span>title<span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span><span class="kw3">link</span> rel<span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> type<span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> href<span class="sy0">=</span><span class="st0">&quot;style.css&quot;</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span>head<span class="sy0">&gt;</span>
+<span class="re4">&lt;body&gt;</span>
+<span class="re4">&lt;h1&gt;</span>Ihr Kommentar<span class="sy0">&lt;/</span>h1<span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>form action<span class="sy0">=</span><span class="st0">&quot;/cgi-bin/comments.pl&quot;</span> method<span class="sy0">=</span><span class="st0">&quot;post&quot;</span><span class="sy0">&gt;</span>
+<span class="re4">&lt;p&gt;</span>Name<span class="sy0">:</span><span class="re4">&lt;br&gt;</span><span class="sy0">&lt;</span>input size<span class="sy0">=</span><span class="st0">&quot;40&quot;</span> maxlength<span class="sy0">=</span><span class="st0">&quot;40&quot;</span> name<span class="sy0">=</span><span class="st0">&quot;AnwenderName&quot;</span><span class="sy0">&gt;&lt;/</span>p<span class="sy0">&gt;</span>
+<span class="re4">&lt;p&gt;</span>Text<span class="sy0">:</span><span class="re4">&lt;br&gt;</span><span class="sy0">&lt;</span>textarea rows<span class="sy0">=</span><span class="st0">&quot;5&quot;</span> cols<span class="sy0">=</span><span class="st0">&quot;50&quot;</span> name<span class="sy0">=</span><span class="st0">&quot;Kommentartext&quot;</span><span class="sy0">&gt;&lt;/</span>textarea<span class="sy0">&gt;&lt;/</span>p<span class="sy0">&gt;</span>
+<span class="re4">&lt;p&gt;</span><span class="sy0">&lt;</span>input type<span class="sy0">=</span><span class="st0">&quot;submit&quot;</span> value<span class="sy0">=</span><span class="st0">&quot;Absenden&quot;</span><span class="sy0">&gt;&lt;/</span>p<span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span>form<span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span>body<span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span>html<span class="sy0">&gt;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Feldnamen</span> <span class="sy0">=</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="st_h">'CGI-Feedback'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">h1</span><span class="br0">&#40;</span><span class="st_h">'CGI-Feedback vom Programm '</span><span class="sy0">,</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">i</span><span class="br0">&#40;</span><span class="st_h">'comments.pl'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$Feld</span> <span class="br0">&#40;</span><span class="re0">@Feldnamen</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="st_h">'Feldname: '</span><span class="br0">&#41;</span><span class="sy0">,</span>
+              <span class="re0">$Feld</span><span class="sy0">,</span>
+              <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="st_h">', Inhalt: '</span><span class="br0">&#41;</span><span class="sy0">,</span>
+              <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="re0">$Feld</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="st0">&quot;&lt;br&gt;&quot;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Sobald Sie den "submit"-button dieses Formulars mit der Maus anklicken, wird Ihr Browser angewiesen, sich erneut an den Webserver mit einer Anfrage zu wenden. Die Art dieser Anfrage bestimmt das Attribut <code>method</code>, dessen Wert in den meisten Fällen <code>post</code> lauten wird. Mit dem Attribut <code>action</code> informiert das Formular den Webserver, was er tun soll - es muß ja nicht unbedingt ein Perl-Script sein, das der Server um Übernahme und Weiterverarbeitung der von Ihnen eingegebenen und vom Browser ebenfalls übermittelten Daten bitten soll. Auch ein PHP-Script, ein Shell-Script, eine ausführbare Datei (*.exe), eine Stapelverarbeitungsdatei (*.bat) oder ein anderer Programmaufruf kann von <code>action</code> initialisiert werden. In diesem Fall ist es jedoch das Perl-Script <code>comments.pl</code>, das einfach die übergebenen Daten sortiert, auswertet und als HTML wieder zurückliefert.
+Die Bezeichnung "Formularverarbeitung" ist zwar üblich, aber streng genommen nicht ganz korrekt. Es ist ja keineswegs das Formular, das verarbeitet wird, sondern es handelt sich um diejenigen Daten, die Sie in bestimmte Eingabefelder eingetragen haben: Namen, Adressen, Texte usw. Entsprechend der im Formular angegebenen Übermittlungsmethode (<code>POST</code> oder <code>GET</code>, andere HTTP-Zugriffsmethoden wie <code>PUT</code> oder <code>DELETE</code> spielen hier keine Rolle) schickt der Browser nach Aktivierung eines "submit"-buttons oder nach dem Drücken der Enter-Taste einen Datenstrom an den Webserver. Der Webserver entscheidet, was er damit machen soll und schickt alles an den Perl-Interpreter, der wiederum das CGI-Modul fragt, wie er den ganzen Datenstrom auftrennen und in sinnvolle Einzelinformationen umwandeln soll. Das CGI-Modul stellt ihm dafür die Methode <code>param()</code> zur Verfügung. Mit dieser Methode werden, falls vorhanden, die Teile des übermittelten Datenstroms als Array gespeichert. Und diesen Array kann Ihr Script nun beliebig verwenden.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Die Methode param()">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Methode_param.28.29"> Die Methode <code>param()</code> </span></h3>
+<p>Bei der Methode <code>param</code> kommt es darauf an, in welchem Kontext sie aufgerufen wird. Dementsprechend unterschiedlich ist ihr Rückgabewert. Sie können zum Beispiel ein Array <code>@Feldnamen = $cgi-&gt;param()</code> notieren. Es handelt sich dann also um einen Listenkontext, d.h. erwartet wird eine Liste als Rückgabewert. Bei dieser Art des Aufrufs liefert <code>param()</code> sämtliche Feldnamen eines eingelesenen Formulars zurück. Das sind jene Namen, die im HTML-Formular bei der Definition der Formularfelder jeweils mit dem Attribut <code>name</code> festgelegt wurden. Wenn <code>param()</code> ein einzelner Feldname als Parameter übergeben wird, liefert die Methode den zugehörigen Wert oder Inhalt des Feldes zurück. Der Kontext ist dann skalar.
+</p><p>Die folgende Tabelle fasst die Aufrufmöglichkeiten von <code>param()</code> zusammen.
+</p>
+<table class="wikitable">
+<tr>
+<th> Aufrufbeispiel
+</th>
+<th> Rückgabewert
+</th>
+<th> Erläuterung
+</th></tr>
+<tr>
+<td> <code>if($cgi-&gt;param())</code>
+</td>
+<td> Liste, im booleschen Kontext ausgewertet (<code>true</code> oder <code>false</code>)
+</td>
+<td> Ein solcher Aufruf in Form einer <code>if</code>-Bedingung ermittelt, ob überhaupt Daten an das Formular übergeben wurden oder nicht. Dies ist sinnvoll, wenn ein Script aus mehreren verschiedenen Kontexten heraus aufgerufen werden kann und erst einmal feststellen muss, ob es Formulardaten erhalten hat oder nicht. Im <code>if</code>-Zweig könnten die Formulardaten eingelesen werden, und im <code>else</code>-Zweig könnten Anweisungen stehen für den Fall, dass keine Formulardaten übergeben wurden.
+</td></tr>
+<tr>
+<td> <code>$Wert = $cgi-&gt;param('AnwenderName')</code>
+</td>
+<td> Skalar
+</td>
+<td> Gibt den Wert oder Inhalt des Formularfeldes mit dem Namen <code>AnwenderName</code> zurück. Diese Form der Notation ist sinnvoll, wenn Sie als Script-Autor die Feldnamen übergebener Formulardaten kennen und direkt den Wert oder Inhalt des jeweiligen Feldes ermitteln möchten.
+</td></tr>
+<tr>
+<td> <code>@Namen = $cgi-&gt;param()</code>
+</td>
+<td> Liste
+</td>
+<td> Gibt sämtliche Feldnamen des Formulars zurück.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;param($Namen[2])</code>
+</td>
+<td> Skalar
+</td>
+<td> Gibt den Wert oder Inhalt des dritten Formularfeldes zurück (<code>$Namen[0]</code> wäre das erste Formularfeld), sofern zuvor mit <code>@Namen = $cgi-&gt;param()</code> die Feldnamen als Liste gespeichert wurden.
+</td></tr>
+<tr>
+<td> <code>@Zutaten = $cgi-&gt;param('Zutat')</code>
+</td>
+<td> Liste
+</td>
+<td> Gibt den Wert oder Inhalt einer Formularfeldgruppe mit gleichen Namen zurück zurück - vor allem bei Checkboxen in HTML-Formularen ist diese Aufrufvariante wichtig. In der Liste <code>@Zutaten</code> stehen anschließend alle Zutaten, die ein Anwender in Checkbox-Elementen mit dem Attribut <code>name="Zutat"</code> angekreuzt hat.
+</td></tr></table>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Darstellung der Methode <code>param()</code> ist ein hervorragend geeignetes Beispiel, um Ihnen etwas detaillierter zu zeigen, was das CGI-Modul für Sie erledigt. In vielen älteren Perl-Scripts, die Sie im Internet finden können, sehen Sie beispielsweise solche kryptisch wirkende Anweisungen:
+<pre style="color:#880000">if($ENV{'REQUEST_METHOD'} eq 'GET') {
+  $Daten = $ENV{'QUERY_STRING'}
+}
+else {
+  read(STDIN, $Daten, $ENV{'CONTENT_LENGTH'});
+}
+sub verarbeiten {
+@Formularfelder = split(/&amp;/, $Daten);
+foreach $Feld (@Formularfelder) {
+  ($name, $value) = split(/=/, $Feld);
+  $value =~ tr/+/ /;
+  $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack(&quot;C&quot;, hex($1))/eg;
+  $Formular[$i] = $name;
+  $i = $i + 1;
+  $Formular[$i] = $value;
+  $i = $i + 1;
+ }
+}</pre>
+<p>Solche Anweisungen müßten Sie, wenn Sie Formulardaten verarbeiten möchten, erneut in Ihrem Script notieren, wenn Sie auf das CGI-Modul verzichten wollten. Das CGI-Modul nimmt Ihnen nun diese Arbeit ab, da es (in geringfügig anderer Form) genau diese Anweisungen bereits enthält und dem Perl-Interpreter deren Ergebnisse in einer Form zur Verfügung stellt, die es Ihnen wiederum erlaubt, sie einfach mit der Benutzung der Methode <code>param()</code> abzurufen. Beispielsweise könnten Sie so etwas in Ihrem Script notieren:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">p</span><span class="br0">&#40;</span><span class="st_h">'Ihr Name ist: '</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'AnwenderName'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+Damit würde die Methode <code>param()</code> im skalaren Kontext aufgerufen und der im oben schematisch dargestellten HTML-Formular eingetragene Name des Formularbenutzers ausgegeben. Im oben dargestellten Beispielscript <code>comments.pl</code> wird die Methode <code>param()</code> allerdings im Listenkontext verwendet, daher müssen Sie in diesem Script die Array-Bestandteile erst mit einer foreach-Schleife "individualisieren", um sie ausgeben zu können. Ein solcher Listenkontext ist dann nützlich, wenn das Script von unterschiedlichen Formularen verwendet wird, die unterschiedlich viele Eingabefelder mit unterschiedlichen Namen enthalten. In einem solchen Fall weiß das Script (bzw. wissen Sie als Programmierer) nicht von vornherein, welche Daten im Datenstrom enthalten sind und als HTML zurückgeliefert werden sollen; <code>$cgi-&gt;param('AnwenderName')</code> könnte auch leer (nicht existent) sein und es könnten andere <code>name</code>-Attribute mit Werten belegt worden sein. Wenn Sie <code>param()</code> im Listenkontext verwenden, vermeiden Sie mögliche Fehler.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Formularerstellung">Bearbeiten</a>]</span> <span class="mw-headline" id="Formularerstellung"> Formularerstellung </span></h3>
+<p>Wenn Sie sich intensiver mit Perl beschäftigen und das CGI-Modul ausgiebig nutzen, werden Sie vermutlich kein statisches HTML-Dokument zum Aufruf einer Formularauswertung einsetzen, sondern dieses Formular auch gleich selbst von Ihrem Script generieren lassen. Das hat verschiedene Vorteile: Sie können beispielsweise in Abhängigkeit von <a href="#Umgebungsdaten_ermitteln_mit_dem_CGI-Modul">Umgebungsdaten</a> Umgebungsdaten, die Sie zuvor ermitteln, Formularfelder mit Werten vorbelegen. Ausserdem füllt das CGI Modul diese Felder automatisch, wenn Sie das Formular, z.b. nach einer Fehleingabe, wieder mit den eingegebenen Werten ausgefüllt anzeigen lassen wollen (dieses Verhalten ist manchmal nicht erwünscht und kann bei Bedarf durch den Parameter <code>-override =&gt; 1</code> unterdrückt werden).
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'absenden'</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="sy0">-</span>title<span class="sy0">=&gt;</span><span class="st_h">'Auswertung'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   anzeige<span class="br0">&#40;</span><span class="re0">$cgi</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="sy0">-</span>title<span class="sy0">=&gt;</span><span class="st_h">'Testformular'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   formular<span class="br0">&#40;</span><span class="re0">$cgi</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> formular<span class="br0">&#123;</span>
+    <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_form</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">.</span>
+          <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">table</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>border <span class="sy0">=&gt;</span> <span class="nu0">1</span><span class="br0">&#125;</span><span class="sy0">,</span>
+             <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">Tr</span><span class="br0">&#40;</span><span class="br0">&#91;</span>
+                <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="br0">&#91;</span>
+                   <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="st_h">'Name&#160;: '</span><span class="br0">&#41;</span><span class="sy0">.</span>
+                   <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">textfield</span><span class="br0">&#40;</span><span class="sy0">-</span>name <span class="sy0">=&gt;</span><span class="st_h">'name'</span><span class="sy0">,</span> <span class="sy0">-</span>size <span class="sy0">=&gt;</span> <span class="nu0">40</span><span class="br0">&#41;</span>
+                <span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="br0">&#91;</span>
+                   <span class="st_h">'E-Mail&#160;: '</span><span class="sy0">.</span>
+                   <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">textfield</span><span class="br0">&#40;</span><span class="sy0">-</span>name <span class="sy0">=&gt;</span><span class="st_h">'mail'</span><span class="sy0">,</span> <span class="sy0">-</span>size <span class="sy0">=&gt;</span> <span class="nu0">40</span><span class="br0">&#41;</span>
+                <span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="br0">&#91;</span>
+                   <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="st_h">'Text&#160;: '</span><span class="br0">&#41;</span><span class="sy0">.</span>
+                   <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">textarea</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>name <span class="sy0">=&gt;</span><span class="st_h">'text'</span><span class="sy0">,</span> <span class="sy0">-</span>columns <span class="sy0">=&gt;</span><span class="nu0">50</span><span class="sy0">,</span> <span class="sy0">-</span>rows <span class="sy0">=&gt;</span><span class="nu0">5</span><span class="br0">&#125;</span><span class="br0">&#41;</span>
+                <span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="br0">&#91;</span>
+                   <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">submit</span><span class="br0">&#40;</span><span class="sy0">-</span>name <span class="sy0">=&gt;</span> <span class="st_h">'absenden'</span><span class="sy0">,</span> <span class="sy0">-</span>value <span class="sy0">=&gt;</span><span class="st_h">'absenden'</span><span class="br0">&#41;</span><span class="sy0">.</span>
+                   <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="kw1">reset</span><span class="br0">&#40;</span><span class="sy0">-</span>value <span class="sy0">=&gt;</span><span class="st_h">'verwerfen'</span><span class="br0">&#41;</span>
+                <span class="br0">&#93;</span><span class="br0">&#41;</span>
+             <span class="br0">&#93;</span><span class="br0">&#41;</span>
+           <span class="br0">&#41;</span><span class="sy0">.</span>
+          <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_form</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> anzeige<span class="br0">&#123;</span>
+    <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">h2</span><span class="br0">&#40;</span><span class="st_h">'hier kommt die Auswertung'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'name'</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="sy0">!</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'text'</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="kw3">q</span><span class="sy0">~</span>Sie haben nichts eingegeben<span class="sy0">.</span>
+         Bitte wiederholen Sie Ihre Eingabe<span class="sy0">~</span><span class="br0">&#41;</span><span class="sy0">;</span>
+         <span class="kw3">return</span> formular<span class="br0">&#40;</span><span class="re0">$cgi</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'name'</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="st_h">'Ihr Name ist: '</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'name'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+         <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">br</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'mail'</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="st_h">'Ihre mail ist: '</span><span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'mail'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+         <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">br</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'text'</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+         <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="st_h">'Ihre Nachricht: '</span> <span class="sy0">.</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">param</span><span class="br0">&#40;</span><span class="st_h">'text'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+         <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">br</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Wie immer in den hier vorgestellten Beispielen wird zunächst das CGI-Modul eingebunden und danach mit <code>my $cgi = new CGI</code> eine neue Instanz des CGI-Objekts erzeugt. Es folgt jedoch nicht unmittelbar die Ausgabe von HTML-Code, sondern eine <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen" title="Perl/Bedingte Anweisungen">bedingte Anweisung</a>. Das Script entscheidet anhand eventuell vorhandener <code>POST-Variablen</code>, welche der beiden <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutinen</a> es abarbeiten soll. Findet es keine <code>POST-Variable</code> mit dem Wert "absenden" (auch der "submit"-button sendet einen Wert für eine <code>POST-Variable</code>), so ruft es die Subroutine "anzeige" auf, die ein vollständiges HTML-Formular zur Verfügung stellt. Wurde dieses Formular bereits ausgefüllt, existieren aber <code>POST-Variablen</code>, also befolgt das Script dann die Festlegungen der ersten Subroutine und liefert dem Webserver Angaben zur Darstellung der eingegebenen Werte zurück.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Für das Script wird der objektorientierte Modus verwendet. Bisher haben Sie an den vorgestellen Scriptbeispielen gesehen, dass HTML-Elemente in diesem Modus von Methoden eines CGI-Objekts dargestellt werden. Aber auch Subroutinen sind in diesem Modus nichts anderes als Objektmethoden. Sie erkennen es an der Art, in der die im Script enthaltene bedingte Anweisung entscheidet, welche Subroutine aufgerufen werden soll: <code>formular($cgi);</code>.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Umgebungsdaten ermitteln mit dem CGI-Modul">Bearbeiten</a>]</span> <span class="mw-headline" id="Umgebungsdaten_ermitteln_mit_dem_CGI-Modul"> Umgebungsdaten ermitteln mit dem CGI-Modul </span></h2>
+<p>Häufig benötigt ein CGI-Script Informationen über seine Umgebung, z.B. über den Server, den aufrufenden Browser, oder über seinen eigenen Speicherort auf dem Server. Das CGI-Modul stellt zum Ermitteln solcher Daten verschiedene Methoden bereit.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<p><a rel="nofollow" class="external text" href="http://de.selfhtml.org/cgi-bin/812/modulcgi4.pl">Anzeigebeispiel: So sieht's aus</a> (Zum Aufruf des Scripts ist eine Internet-Verbindung erforderlich)
+</p>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="st_h">'Umgebungsdaten'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_table</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>border <span class="sy0">=&gt;</span> <span class="st_h">'1'</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+        <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">Tr</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">th</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>align <span class="sy0">=&gt;</span> <span class="st_h">'right'</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st_h">'Script-URI:'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                 <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">url</span><span class="br0">&#40;</span><span class="sy0">-</span>full <span class="sy0">=&gt;</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+        <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">Tr</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">th</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>align <span class="sy0">=&gt;</span> <span class="st_h">'right'</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st_h">'relative Script-URI:'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                 <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">url</span><span class="br0">&#40;</span><span class="sy0">-</span>relative <span class="sy0">=&gt;</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+        <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">Tr</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">th</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>align <span class="sy0">=&gt;</span> <span class="st_h">'right'</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st_h">'Server-Software:'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                 <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">server_software</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+        <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">Tr</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">th</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>align <span class="sy0">=&gt;</span> <span class="st_h">'right'</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st_h">'Browser-Software:'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                 <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">user_agent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_table</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispielscript bindet zunächst mit <code>use CGI</code> das CGI-Modul ein und erzeugt mit <code>my $cgi = new CGI</code> eine neue Instanz des CGI-Objekts. Anschließend gibt es HTML-Code zur Übermittlung an den aufrufenden Browser aus, hier ist es eine Tabelle mit ein paar Umgebungsinformationen. Die <a href="#Einfache_.28X.29HTML-Ausgaben_mit_dem_CGI-Modul">HTML-Ausgaben</a> werden mit Hilfe der Methoden des CGI-Moduls und deren Regeln realisiert. Die ausgegebene Tabelle listet in der linken Spalte in einem <code>th</code>-Element jeweils auf, welche Information die Zeile enthält, und in der rechten Spalte in einem <code>td</code>-Element den zugehörigen Wert. Dieser Wert wird jeweils mit Methoden des CGI-Moduls ermittelt. So wird mit <code>$cgi-&gt;url(-full =&gt; 1)</code> beispielsweise der URI des Scripts ermittelt.
+<p>Die folgende Tabelle listet verfügbare Methoden für Umgebungsdaten auf. Die Aufrufbeispiele gehen davon aus, dass mit <code>my $cgi = new CGI</code> eine Instanz des CGI-Objekts erzeugt wurde. Die Tabelle ist nach Methodennamen alphabetisch sortiert.
+</p>
+<table class="wikitable">
+<tr>
+<th> Methode
+</th>
+<th> Rückgabewert
+</th>
+<th> Erläuterung
+</th></tr>
+<tr>
+<td> <code>$cgi-&gt;Accept()</code>
+</td>
+<td> Liste
+</td>
+<td> Ermittelt eine Liste der <a href="http://wiki.selfhtml.org/wiki/Referenz:MIME-Typen" title="Referenz:MIME-Typen">MIME-Typen</a>, die der aufrufende Browser akzeptiert. Dies ist interessant abzuprüfen, bevor ein Script Daten eines nicht selbstverständlichen MIME-Typs an den Browser senden will. Es kann sein, dass die Liste nur aus einem Element mit dem Wert <code>*/*</code> besteht. Dann akzeptiert der aufrufende Browser potentiell alle MIME-Typen.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;auth_type()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den Typ der Benutzer-Authentifizierung, sofern das Script zugangsgeschützt und nur durch Eingabe entsprechender Zugangsdaten aufrufbar ist.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;path_info()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt zusätzliche, wie weitere Unterverzeichnisse notierte Angaben. Wenn das Script beispielsweise die Adresse <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl">http://meine.seite.net/cgi-bin/test.pl</a></code> hat, aber mit <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl/querys/musicbase.sql">http://meine.seite.net/cgi-bin/test.pl/querys/musicbase.sql</a></code> aufgerufen wird, dann ermittelt dieser Befehl den Anteil <code>/querys/musicbase.sql</code>. Beachten Sie, dass Aufrufe dieser Art nicht von allen Webservern korrekt verarbeitet werden.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;path_translated()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt wie <code>$cgi-&gt;path_info()</code> zusätzliche, wie weitere Unterverzeichnisse notierte Angaben, jedoch mit dem Unterschied, dass nicht der Anteil aus dem URI zurückgegeben wird, sondern der vom Webserver übersetzte Datenpfad dieses Anteils. Angenommen, das Script hat die Adresse <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl">http://meine.seite.net/cgi-bin/test.pl</a></code>, wurde aber mit <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl/querys/musicbase.sql">http://meine.seite.net/cgi-bin/test.pl/querys/musicbase.sql</a></code> aufgerufen. Dann könnte der zusätzliche Adressanteil <code>/querys/musicbase.sql</code> aus Sicht des Webservers beispielsweise in einen physikalischen Pfadnamen wie <code>/usr/web/seite/querys/musicbase.sql</code> aufgelöst werden. Diesen Pfadnamen würde <code>$cgi-&gt;path_translated()</code> zurückgeben.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;referer()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den URI der im Browser angezeigten Seite, von der aus das CGI-Script aufgerufen wurde. Ein solcher Wert lässt sich dann ermitteln, wenn das Script über ein abgesendetes Formular oder über einen Link aufgerufen wurde.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;remote_host()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den Internetzugangs-Domainnamen (falls verfügbar) oder die Zugangs-IP-Adresse des aufrufenden Browsers.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;remote_user()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den Benutzernamen, mit dem sich der aufrufende Benutzer angemeldet hat, um das CGI-Script aufzurufen. Wenn das Script beispielsweise htaccess-geschützt ist, muss sich der aufrufende Benutzer mit Benutzernamen und Passwort anmelden. Der dabei eingegebene Benutzername kann mit diesem Befehl ermittelt werden.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;request_method()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt die HTTP-Methode, mit der das CGI-Script aufgerufen wurde, gibt also üblicherweise <code>GET</code> oder <code>POST</code> zurück.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;script_name()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den absoluten HTTP-Pfad des CGI-Scripts. Bei einem Script mit der Adresse <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl">http://meine.seite.net/cgi-bin/test.pl</a></code> würde also <code>/cgi-bin/test.pl</code> ermittelt. Dieser Wert eignet sich sehr gut für weitere Selbstaufrufe des Scripts, etwa bei mehrseitigen Anwendungen wie Bestellvorgängen.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;server_name()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den Namen des Server-Rechners, auf dem das CGI-Script läuft. Normalerweise ist dies der eingetragene Hostname des Rechners.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;server_software()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den Namen und die Versionsnummer der Webserver-Software auf dem Server-Rechner.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;url(-full =&gt; 1)</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt die vollständige Adresse des CGI-Scripts, aber ohne eventuell mit übergebene Parameter.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;url(-path =&gt; 1)</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt zusätzliche, wie weitere Unterverzeichnisse notierte Angaben. Wenn das Script beispielsweise die Adresse <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl">http://meine.seite.net/cgi-bin/test.pl</a></code> hat, aber mit <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl/data/musicbase">http://meine.seite.net/cgi-bin/test.pl/data/musicbase</a></code> aufgerufen wird, dann ermittelt dieser Befehl den Anteil <code>/data/musicbase</code>. Beachten Sie, dass Aufrufe dieser Art nicht von allen Webservern korrekt verarbeitet werden.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;url(-query =&gt; 1)</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt die vollständige eigene Adresse des CGI-Scripts inklusive übergebener Parameter. Bei Aufrufen wie <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl?user=Heino&amp;wunsch=Volksmusik">http://meine.seite.net/cgi-bin/test.pl?user=Heino&amp;wunsch=Volksmusik</a></code> wird also auch der Teil hinter dem Fragezeichen mit zurückgegeben.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;url(-relative =&gt; 1)</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den relativen HTTP-Pfad des CGI-Scripts aus Sicht des aktuellen Arbeitsverzeichnisses.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;url_param()</code>
+</td>
+<td> Liste
+</td>
+<td> Ermittelt eine Liste aller Parameternamen, sofern Parameter übergeben wurden. Bei einem Script-Aufruf wie <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl?user=Heino&amp;wunsch=Volksmusik">http://meine.seite.net/cgi-bin/test.pl?user=Heino&amp;wunsch=Volksmusik</a></code> wird also eine Liste mit den beiden Elementen <code>user</code> und <code>wunsch</code> ermittelt
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;url_param('wunsch')</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den Wert eines dem Script übergebenen Parameter namens <code>wunsch</code>. Bei einem Script-Aufruf wie <code><a rel="nofollow" class="external free" href="http://meine.seite.net/cgi-bin/test.pl?user=Heino&amp;wunsch=Volksmusik">http://meine.seite.net/cgi-bin/test.pl?user=Heino&amp;wunsch=Volksmusik</a></code> wird also <code>Volksmusik</code> ermittelt.
+</td></tr>
+<tr>
+<td> <code>if($cgi-&gt;url_param())</code>
+</td>
+<td> Liste, im booleschen Kontext ausgewertet
+</td>
+<td> Ermittelt, ob dem Script über den URI irgendwelche Daten übergeben wurden. Im <code>if</code>-Zweig könnten Anweisungen stehen, die auf diesen Fall reagieren, während im <code>else</code>-Zweig davon ausgegangen werden kann, dass keine Parameter übergeben wurden.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;user_agent()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt die Bezeichnung, mit der sich der aufrufende Browser dem Server gegenüber ausgewiesen hat. Typische ermittelte Werte sind solche wie <code>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</code> (für den Internet Explorer 6.0).
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;user_name()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den Namen des aufrufenden Benutzers mit Hilfe verschiedener Abfragen. Moderne Browser verhindern allerdings ein Ausspionieren dieser Daten.
+</td></tr>
+<tr>
+<td> <code>$cgi-&gt;virtual_host()</code>
+</td>
+<td> Skalar
+</td>
+<td> Ermittelt den Domainnamen, mit dem der Browser das CGI-Script aufgerufen hat.
+</td></tr></table></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Diese Umgebungsdaten sind <b>nicht</b> dasselbe, was Sie eventuell als <a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">CGI-Umgebungsvariablen</a> kennen. Sondern es sind Variablen, die zur Laufzeitumgebung Ihres Scripts gehören. In vielem allerdings ähneln sie den Umgebungsvariablen der CGI-Schnittstelle. Aber Sie können sich natürlich auch mit Hilfe des CGI-Moduls ein kleines Script zusammenstellen, das Ihnen eine Übersicht der CGI-Umgebungsvariablen liefert.
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="st_h">'Umgebungsvariablen'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">h1</span><span class="br0">&#40;</span><span class="st_h">'Umgebungsvariablen'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_table</span><span class="br0">&#40;</span><span class="sy0">-</span>border <span class="sy0">=&gt;</span> <span class="st_h">'1'</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="re0">&amp;quot</span><span class="sy0">;</span><span class="re0">\n</span><span class="re0">&amp;quot</span><span class="sy0">;,</span>
+        <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">Tr</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">th</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>bgcolor <span class="sy0">=&gt;</span> <span class="st_h">'#E0E0E0'</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st_h">'Variablenname'</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="re0">&amp;quot</span><span class="sy0">;</span><span class="re0">\n</span><span class="re0">&amp;quot</span><span class="sy0">;,</span>
+                 <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">th</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>bgcolor <span class="sy0">=&gt;</span> <span class="st_h">'#E0E0E0'</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="st_h">'Wert'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="re0">&amp;quot</span><span class="sy0">;</span><span class="re0">\n</span><span class="re0">&amp;quot</span><span class="sy0">;;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="kw3">keys</span><span class="br0">&#40;</span><span class="re0">%ENV</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">Tr</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">strong</span><span class="br0">&#40;</span><span class="co5">$_</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+                 <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">td</span><span class="br0">&#40;</span><span class="re0">$ENV</span><span class="br0">&#123;</span><span class="co5">$_</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="re0">&amp;quot</span><span class="sy0">;</span><span class="re0">\n</span><span class="re0">&amp;quot</span><span class="sy0">;;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">Tr</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">th</span><span class="br0">&#40;</span><span class="br0">&#123;</span><span class="sy0">-</span>align <span class="sy0">=&gt;</span> <span class="st_h">'left'</span><span class="sy0">,</span> <span class="sy0">-</span>bgcolor <span class="sy0">=&gt;</span> <span class="st_h">'#E0E0E0'</span><span class="sy0">,</span> <span class="sy0">-</span>colspan <span class="sy0">=&gt;</span> <span class="st_h">'2'</span><span class="br0">&#125;</span><span class="sy0">,</span>
+                         <span class="st_h">'insgesamt '</span><span class="sy0">.</span><span class="kw3">scalar</span> <span class="kw3">keys</span><span class="br0">&#40;</span><span class="re0">%ENV</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st_h">' Umgebungsvariablen'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="re0">&amp;quot</span><span class="sy0">;</span><span class="re0">\n</span><span class="re0">&amp;quot</span><span class="sy0">;,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_table</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+      <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Dieses zweite Beispielscript ist so ähnlich wie das erste aufgebaut. Auch hier wird eine Tabelle erzeugt. Aber es werden nicht bestimmte Umgebungsvariablen nach ihrem Wert gefragt, sondern es werden mit Hilfe einer <code>foreach</code>-Schleife alle ermittelbaren CGI-Umgebungsvariablen mitsamt der ihnen zugehörenden Werte in jeweils einer Tabellenzelle dargestellt.</div>
+</div></div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Cookies verwalten mit dem CGI-Modul">Bearbeiten</a>]</span> <span class="mw-headline" id="Cookies_verwalten_mit_dem_CGI-Modul"> Cookies verwalten mit dem CGI-Modul </span></h2>
+<p>Cookies sind kleine Informationseinheiten in Form von Textdateien, die eine Webseite auf dem Rechner des aufrufenden Anwenders speichern kann. Das Speichern und Verwalten wird dabei vom Browser des Anwenders kontrolliert (Sie können festlegen, ob Ihr Browser Cookies annehmen darf oder nicht). Cookies erlauben es, anwender-individuelle Informationen wie den Zeitpunkt des letzten Besuchs, angeklickte Angebote oder auch login-Daten (das wird beispielsweise von diversen PHP-Boards gern genutzt) zu speichern und beim nächsten Aufruf wieder auszulesen. Das CGI-Modul unterstützt das Setzen und Lesen solcher Cookies.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$CTIME_String</span> <span class="sy0">=</span> <span class="kw3">localtime</span><span class="br0">&#40;</span><span class="kw3">time</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$altCookie</span> <span class="sy0">=</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">cookie</span><span class="br0">&#40;</span><span class="sy0">-</span>name<span class="sy0">=&gt;</span><span class="st_h">'letzter_Besuch'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$neuCookie</span> <span class="sy0">=</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">cookie</span><span class="br0">&#40;</span><span class="sy0">-</span>name<span class="sy0">=&gt;</span><span class="st_h">'letzter_Besuch'</span><span class="sy0">,</span>
+                            <span class="sy0">-</span>value<span class="sy0">=&gt;</span><span class="re0">$CTIME_String</span><span class="sy0">,</span>
+                            <span class="sy0">-</span>expires<span class="sy0">=&gt;</span><span class="st_h">'+3M'</span><span class="sy0">,</span>
+                            <span class="sy0">-</span>path<span class="sy0">=&gt;</span><span class="st_h">'/'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="sy0">-</span>cookie<span class="sy0">=&gt;</span><span class="re0">$neuCookie</span><span class="br0">&#41;</span><span class="sy0">,</span>
+  <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="st0">&quot;Cookie-Test&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+  <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">p</span><span class="br0">&#40;</span><span class="st0">&quot;&lt;b&gt;Ihr letzter Besuchszeitpunkt dieser Seite war&lt;/b&gt;: &quot;</span><span class="sy0">,</span> <span class="re0">$altCookie</span> <span class="sy0">||</span> <span class="st_h">'unbekannt'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+  <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">p</span><span class="br0">&#40;</span><span class="st0">&quot;&lt;b&gt;Als neuer Besuchszeitpunkt wurde gespeichert&lt;/b&gt;: &quot;</span><span class="sy0">,</span> <span class="re0">$CTIME_String</span><span class="br0">&#41;</span><span class="sy0">,</span>
+  <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispielscript verwendet einen Cookie, mit dessen Hilfe es den letzten Aufrufzeitpunkt ermitteln kann und den aktuellen Aufrufzeitpunkt als neuen letzten speichert. Zur Kontrolle erzeugt es eine <a href="#Einfache_.28X.29HTML-Ausgaben_mit_dem_CGI-Modul">HTML-Ausgabe</a>, in der dem Besucher der eingelesene alte Aufrufzeitpunkt und der neu gespeicherte Aufrufzeitpunkt mitgeteilt wird. Dazu bindet das Script zunächst mit <code>use CGI</code> das CGI-Modul ein und erzeugt mit <code>my $cgi = new CGI</code> eine neue Instanz des CGI-Objekts. Mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#localtime" title="Perl/Funktionen für Datum und Uhrzeit">localtime(time)</a> ermittelt es den aktuellen Zeitpunkt und speichert den Wert im Skalar <code>$CTIME_String</code>. Das Lesen und Setzen des Cookies steuert die Methode <code>cookie()</code> des CGI-Moduls. Über den Skalar <code>$cgi</code>, der an das erzeugte CGI-Objekt gebunden ist, greift das Script mit <code>$cgi-&gt;cookie()</code> auf die Methode zu.
+<p>Die Methode <code>cookie()</code> erwartet Argumente. Je nachdem, welche Argumente ihr übergeben werden, liest sie einen vorhandenen Cookie oder definiert einen neuen. Alle Argumente bestehen aus einem Argumentnamen und einem Wert. Der Argumentname beginnt mit einem Minuszeichen <code>-</code>. Hinter dem Argumentnamen folgt der Operator <code>=&gt;</code> und dahinter die Angabe des gewünschten Wertes.
+</p><p>Zum Lesen genügt es, das Argument <code>-name</code> anzugeben. Ist ein Cookie mit diesem Namen vorhanden, dann liefert der Aufruf von <code>cookie()</code> dessen Wert zurück. Genau das geschieht im ersten Aufruf des obigen Beispiels. Der zurückgegebene Wert wird dort im Skalar <code>$altCookie</code> gespeichert. Im Beispiel hat das Cookie den Namen <code>letzer_Besuch</code>.
+</p><p>Zum Setzen eines Cookies müssen Sie mindestens zwei Argumente an <code>cookie()</code> übergeben, nämlich die Argumente <code>-name</code> und <code>-value</code>. Bei <code>-value</code> geben Sie an, welcher Wert gespeichert werden soll. Im obigen Beispiel ist das der Inhalt des zuvor errechneten Skalars <code>$CTIME_String</code>. Durch die Angabe von <code>-value</code> wird das Cookie aber noch nicht gesetzt. Dies geschieht erst beim Senden eines HTTP-Headers an den aufrufenden Browser. Dazu wird zunächst der Rückgabewert des Aufrufs von <code>cookie()</code> gespeichert, und zwar im Skalar <code>$neuCookie</code>. Dieser Skalar wird dann beim HTTP-Header, den Sie mit der Methode <code>header()</code> an den Browser senden, im Argument <code>-cookie</code> als Wert gesendet, so wie im obigen Beispiel gezeigt.
+</p><p>Ein weiteres wichtiges Argument der Methode <code>cookie()</code> ist <code>-expires</code>. Damit geben Sie an, wie lange der Browser das Cookie beim Anwender speichern soll. Wenn Sie <code>-expires</code> nicht angeben, behält der Browser das Cookie nur solange bis der Anwender den Browser beendet. Den gewünschten Speicherzeitraum geben Sie als Zahl mit voranstehendem Pluszeichen und einem nachgestellten Buchstaben für die Zeiteinheit an. Die Angabe <code>'+3M'</code> im Beispiel bedeutet "3 Monate". Andere Zeiteinheiten sind <code>s</code> (Sekunden), <code>m</code> (Minuten), <code>h</code> (Stunden), <code>d</code> (Tage) und <code>y</code> (Jahr). Darüber hinaus sind absolute Zeitangaben im UTC-Format erlaubt, wie z.B. <code>Friday, 08-Jun-2001 11:29:00 GMT+0100</code>.
+</p>
+Die Methode <code>cookie()</code> kennt daneben noch weitere Argumente. Mit <code>-path</code> geben Sie den HTTP-Pfad auf dem Server an, für den (einschließlich seiner Unterverzeichnisse) das Cookie gelten soll. Fehlt die Angabe, dann gilt das Cookie für die gesamte Domain ab der Dokumentwurzel. Mit <code>-domain</code> können Sie angeben, für welche Sub-Domain innerhalb der Hauptdomain das Cookie gelten soll (z.B. <code>-domain =&gt; news.aufdiesemserver.de</code>). Mit <code>-secure</code>, das als Wertzuweisung dann <code>true</code>, also beispielsweise <code>1</code> erwartet, erreichen Sie, dass das Cookie nur dann gesetzt wird, wenn die Serverumgebung eine SSL-geschützte Umgebung ist. Das ist wichtig, wenn Sie sensible Daten im Cookie übertragen, etwa die Kreditkartennummer des Anwenders, um ihm diese bei seinem nächsten Besuch gleich als Vorbelegung eines Formularfeldes anzubieten.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Automatische Umleitungen (Redirects) mit dem CGI-Modul">Bearbeiten</a>]</span> <span class="mw-headline" id="Automatische_Umleitungen_.28Redirects.29_mit_dem_CGI-Modul"> Automatische Umleitungen (Redirects) mit dem CGI-Modul </span></h2>
+<p>Manche CGI-Scripts dienen dazu, den aufrufenden Anwender zu einer anderen Adresse weiterzuleiten und vorher eventuell noch ein paar Aufgaben zu erledigen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+&#160;
+<span class="kw3">open</span><span class="br0">&#40;</span>FH<span class="sy0">,</span><span class="st0">&quot;&gt;&gt;/usr/web/data/userlog.xml&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> FH <span class="st0">&quot;&lt;user-call&gt;<span class="es0">\n</span> &lt;remote-host&gt;&quot;</span><span class="sy0">,</span>
+         <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">remote_host</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+         <span class="st0">&quot;&lt;/remote-host&gt;<span class="es0">\n</span> &lt;user-agent&gt;&quot;</span><span class="sy0">,</span>
+         <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">user_agent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+         <span class="st0">&quot;&lt;/user-agent&gt;<span class="es0">\n</span> &lt;goto-url&gt;&quot;</span><span class="sy0">,</span>
+         <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">url_param</span><span class="br0">&#40;</span><span class="st_h">'goto'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+         <span class="st0">&quot;&lt;/goto-url&gt;<span class="es0">\n</span> &lt;time-stamp&gt;&quot;</span><span class="sy0">,</span>
+         <span class="kw3">localtime</span><span class="br0">&#40;</span><span class="kw3">time</span><span class="br0">&#41;</span><span class="sy0">,</span>
+         <span class="st0">&quot;&lt;/time-stamp&gt;<span class="es0">\n</span>&lt;/user-call&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>FH<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">redirect</span><span class="br0">&#40;</span><span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">url_param</span><span class="br0">&#40;</span><span class="st_h">'goto'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-Script erwartet beim Aufruf im URI einen Parameter namens <code>goto</code>, dem wiederum eine gültige Adresse zugewiesen werden sollte. Angenommen, das Script hat die Adresse "<a rel="nofollow" class="external free" href="http://localhost/cgi-bin/redirect.pl">http://localhost/cgi-bin/redirect.pl</a>", dann wäre ein denkbarer Aufruf <code><a rel="nofollow" class="external free" href="http://localhost/cgi-bin/redirect.pl?goto=http%3A%2F%2Fde.selfhtml.org/">http://localhost/cgi-bin/redirect.pl?goto=http%3A%2F%2Fde.selfhtml.org/</a></code>. Ein solcher Aufruf könnte beispielsweise als <code>href</code>-Attribut in einem Link stehen, der den Anwender eigentlich zu de.selfhtml.org führt, aber zuvor noch ein paar Daten über den Anwender sammelt.
+<p>Das Script bindet zunächst mit <code>use CGI</code> das CGI-Modul ein und erzeugt mit <code>my $cgi = new CGI</code> eine neue Instanz des CGI-Objekts. Die Weiterleitung ist dann wie in der untersten Anweisung des Beispiels gezeigt mit <code>print $cgi-&gt;redirect()</code> möglich. Als Argument wird der Methode <code>redirect()</code> die gewünschte Adresse übergeben, zu der die Umleitung erfolgen soll. Im Beispiel wird keine statische Adresse übergeben, sondern der Wert, der aus der <a href="#Umgebungsdaten_ermitteln_mit_dem_CGI-Modul">Umgebungsvariablen</a> <code>url_param('goto')</code> gewonnen wird. Darin ist der beim Script-Aufruf übergebene Wert von <code>goto</code> enthalten. Das Script tut also aus Anwendersicht nichts weiter, als die übergebene Adresse aufzurufen.
+</p>
+Zuvor schreibt das Script jedoch einige Daten über den Anwender in eine XML-Datei. In diese Datei werden Daten wie Hostname oder IP-Adresse des Anwenders, sein Browser-Typ, die Umleitungsadresse und der aktuelle Zeitstempel, ermittelt mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#localtime" title="Perl/Funktionen für Datum und Uhrzeit">localtime(time)</a>, geschrieben. Zum Öffnen und Schließen der Datei verwendet das Script die üblichen Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#close" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">close</a>. Die Daten werden wie üblich mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#print" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">print</a> und Angabe des Datei-Handles (im Beispiel <code>FH</code>) geschrieben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Sicherheitseinstellungen mit dem CGI-Modul">Bearbeiten</a>]</span> <span class="mw-headline" id="Sicherheitseinstellungen_mit_dem_CGI-Modul"> Sicherheitseinstellungen mit dem CGI-Modul </span></h2>
+<p>Das CGI-Modul bietet zwei wichtige Einstellmöglichkeiten an, mit denen Sie die Sicherheit eines CGI-Scripts vor böswilliger Benutzung erhöhen können. Die beiden Befehle sollten Sie zu Beginn des Scripts notieren, jedoch nach dem Einbinden des CGI-Moduls mit <code>use CGI</code>.
+</p>
+<table class="wikitable">
+<tr>
+<th> Befehl
+</th>
+<th> Erläuterung
+</th></tr>
+<tr>
+<td> <code>$CGI::POST_MAX = 1024 * 100;</code>
+</td>
+<td> Mit diesem Befehl legen Sie fest, wie viele Daten maximal an das CGI-Script übertragen werden können. Im Beispiel wird eine byte-gerechte Zahl errechnet, nämlich 100 Kilobyte. Wird der Wert überschritten, wird die Parameterliste gelöscht. Der entsprechende Fehlercode wird von der Methode <code>cgi_error</code> zurückgegeben.
+</td></tr>
+<tr>
+<td> <code>$CGI::DISABLE_UPLOADS = 1;</code>
+</td>
+<td> Mit diesem Befehl können Sie verhindern, dass Dateien, die via Formular an das Script übertragen werden, also HTML-Tags der Sorte <code>&lt;input type="file"&gt;</code>, automatisch in eine temporäre Datei gespeichert werden. Die entsprechenden Formulardaten werden dann beim Auswerten einfach übergangen. Interessant ist ein solcher Befehl beispielsweise, wenn das Script vorher nicht weiß, von wo es aufgerufen wird und welche Formulardaten es zu verarbeiten hat - etwa ein öffentlich zugänglicher Form-Mailer, der beliebige ausgefüllte HTML-Formulare an eine E-Mail-Adresse sendet.
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 755/1000000
+Post‐expand include size: 129847/2097152 bytes
+Template argument size: 121985/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3112-0!*!0!!de-formal!*!* and timestamp 20150228225918 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;oldid=23635">http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;oldid=23635</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FModule%2FCGI-Modul" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Module/CGI-Modul&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Module/CGI-Modul" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Module/CGI-Modul" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/CGI-Modul&amp;oldid=23635" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FModule-2FCGI-2DModul" title="Spezial:Durchsuchen/Perl-2FModule-2FCGI-2DModul">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 31. Oktober 2014 um 04:27 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.987-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.309 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Module/CGI-Modul by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

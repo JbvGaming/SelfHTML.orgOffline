@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Objekte/window by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Objekte/window – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Objekte/window","wgTitle":"JavaScript/Objekte/window","wgCurRevisionId":26279,"wgArticleId":1942,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Objekte/window","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Objekte/window" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Objekte/window&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Objekte_window skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Objekte/window</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../../JavaScript.html" title="JavaScript">JavaScript</a> | <a href="../Objekte.html" title="JavaScript/Objekte">Objekte</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="tocright"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Unterseiten"><span class="tocnumber">1</span> <span class="toctext">Unterseiten</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Allgemeines"><span class="tocnumber">2</span> <span class="toctext">Allgemeines</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Popup-Boxen"><span class="tocnumber">3</span> <span class="toctext">Popup-Boxen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Nachteile"><span class="tocnumber">3.1</span> <span class="toctext">Nachteile</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Alternativen"><span class="tocnumber">3.2</span> <span class="toctext">Alternativen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Inline-Popups"><span class="tocnumber">3.2.1</span> <span class="toctext">Inline-Popups</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Dialog-Box"><span class="tocnumber">3.2.2</span> <span class="toctext">Dialog-Box</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Nachladen_von_Inhalten_mit_AJAX"><span class="tocnumber">3.2.3</span> <span class="toctext">Nachladen von Inhalten mit AJAX</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Animationen"><span class="tocnumber">4</span> <span class="toctext">Animationen</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Quellen"><span class="tocnumber">5</span> <span class="toctext">Quellen</span></a></li>
+</ul>
+</td></tr></table>
+</div>
+<p>Das aktuelle Fenster des Web-Browsers können Sie über die Objekte <code>window</code> oder <code>self</code> ansprechen. Auf die Objekte <code>window</code> und <code>self</code> lassen sich alle Eigenschaften und Methoden des <code>window</code>-Objekts anwenden.
+</p>
+<ul><li> <a href="DOM/document.html" title="JavaScript/Objekte/DOM/document">document</a> bezieht sich auf den Inhalt, der in einem Browser-Fenster angezeigt wird. Mit ihm ist auch der Zugriff auf alle HTML-Elemente möglich.
+</li><li> <a href="window/event.html" title="JavaScript/Objekte/window/event" class="mw-redirect">event</a>: Einzelinformationen zu Anwenderereignissen wie Mausklicks oder Tasteneingaben ermitteln und weiterverarbeiten.
+</li><li> <a href="window/history.html" title="JavaScript/Objekte/window/history">history</a>: bietet (eingeschränkten) Zugriff auf die besuchten WWW-Seiten des Anwenders.
+</li><li> <a href="window/location.html" title="JavaScript/Objekte/window/location">location</a>: Zugriff auf den vollständigen URI der aktuell angezeigten Web-Seite.
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Unterseiten">Bearbeiten</a>]</span> <span class="mw-headline" id="Unterseiten"> Unterseiten </span></h2>
+<div style="width:49%;float:left;padding:0 2% 0 0;">
+<p><b>Eigenschaften </b>
+</p>
+<ul><li> <a href="window/closed.html" title="JavaScript/Objekte/window/closed">closed </a>
+</li><li> <a href="window/devicePixelRatio.html" title="JavaScript/Objekte/window/devicePixelRatio">devicePixelRatio </a>
+</li><li> <a href="window/Image().html" title="JavaScript/Objekte/window/Image()">Image() </a>
+</li><li> <a href="window/innerHeight.html" title="JavaScript/Objekte/window/innerHeight">innerHeight</a>
+</li><li> <a href="window/innerWidth.html" title="JavaScript/Objekte/window/innerWidth">innerWidth</a>
+</li><li> <a href="window/locationbar.html" title="JavaScript/Objekte/window/locationbar">locationbar</a>
+</li><li> <a href="window/menubar.html" title="JavaScript/Objekte/window/menubar">menubar</a>
+</li><li> <a href="window/name.html" title="JavaScript/Objekte/window/name">name</a>
+</li><li> <a href="window/outerHeight.html" title="JavaScript/Objekte/window/outerHeight">outerHeight</a>
+</li><li> <a href="window/outerWidth.html" title="JavaScript/Objekte/window/outerWidth">outerWidth</a>
+</li><li> <a href="window/pageXOffset.html" title="JavaScript/Objekte/window/pageXOffset">pageXOffset</a>
+</li><li> <a href="window/pageYOffset.html" title="JavaScript/Objekte/window/pageYOffset">pageYOffset</a>
+</li><li> <a href="window/personalbar.html" title="JavaScript/Objekte/window/personalbar">personalbar</a>
+</li><li> <a href="window/scrollbars.html" title="JavaScript/Objekte/window/scrollbars">scrollbars</a>
+</li><li> <a href="window/statusbar.html" title="JavaScript/Objekte/window/statusbar">statusbar</a>
+</li><li> <a href="window/toolbar.html" title="JavaScript/Objekte/window/toolbar">toolbar</a>
+</li></ul>
+</div>
+<div style="width:49%;float:left;padding:0;">
+<p><b>Methoden </b>
+</p>
+<ul><li> <a href="window/alert.html" title="JavaScript/Objekte/window/alert">alert</a>
+</li><li> <a href="window/back.html" title="JavaScript/Objekte/window/back">back</a>
+</li><li> <a href="window/blur.html" title="JavaScript/Objekte/window/blur">blur</a>
+</li><li> <a href="window/requestAnimationFrame.html" title="JavaScript/Objekte/window/requestAnimationFrame">cancelAnimationFrame</a>
+</li><li> <a href="window/clearInterval.html" title="JavaScript/Objekte/window/clearInterval">clearInterval</a>
+</li><li> <a href="window/clearTimeout.html" title="JavaScript/Objekte/window/clearTimeout">clearTimeout </a>
+</li><li> <a href="window/close.html" title="JavaScript/Objekte/window/close">close</a>
+</li><li> <a href="window/confirm.html" title="JavaScript/Objekte/window/confirm">confirm</a>
+</li><li> <a href="../Funktionen/DecodeURI.html" title="JavaScript/Funktionen/DecodeURI">decodeURI</a>
+</li><li> <a href="../Funktionen/DecodeURIComponent.html" title="JavaScript/Funktionen/DecodeURIComponent">decodeURIComponent</a>
+</li><li> <a href="../Funktionen/EncodeURI.html" title="JavaScript/Funktionen/EncodeURI">encodeURI</a>
+</li><li> <a href="../Funktionen/EncodeURIComponent.html" title="JavaScript/Funktionen/EncodeURIComponent">encodeURIComponent</a>
+</li><li> <a href="../Funktionen/Eval.html" title="JavaScript/Funktionen/Eval">eval</a>
+</li><li> <a href="window/focus.html" title="JavaScript/Objekte/window/focus">focus</a>
+</li><li> <a href="window/getComputedStyle.html" title="JavaScript/Objekte/window/getComputedStyle">getComputedStyle</a>
+</li><li> <a href="window/getDefaultComputedStyle.html" title="JavaScript/Objekte/window/getDefaultComputedStyle">getDefaultComputedStyle</a>
+</li><li> <a href="../Funktionen/IsFinite.html" title="JavaScript/Funktionen/IsFinite">isFinite</a>
+</li><li> <a href="../Funktionen/IsNaN.html" title="JavaScript/Funktionen/IsNaN">isNaN</a>
+</li><li> <a href="window/open.html" title="JavaScript/Objekte/window/open">open</a>
+</li><li> <a href="../Funktionen/ParseFloat.html" title="JavaScript/Funktionen/ParseFloat">parseFloat</a>
+</li><li> <a href="../Funktionen/ParseInt.html" title="JavaScript/Funktionen/ParseInt">parseInt</a>
+</li><li> <a href="window/print.html" title="JavaScript/Objekte/window/print">print</a>
+</li><li> <a href="window/prompt.html" title="JavaScript/Objekte/window/prompt">prompt</a>
+</li><li> <a href="window/requestAnimationFrame.html" title="JavaScript/Objekte/window/requestAnimationFrame">requestAnimationFrame</a>
+</li><li> <a href="window/setInterval.html" title="JavaScript/Objekte/window/setInterval">setInterval</a>
+</li><li> <a href="window/setTimeout.html" title="JavaScript/Objekte/window/setTimeout">setTimeOut</a>
+</li></ul>
+</div><div class="visualClear"></div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Allgemeines">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines"> Allgemeines </span></h2>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-window-open.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code">
+function FensterOeffnen (Adresse) {
+  MeinFenster = <span style="color:white;background-color:#3481cd;"><b>window.open</b></span>(Adresse, &quot;Zweitfenster&quot;, &quot;width=300,height=400,left=100,top=200&quot;);
+  MeinFenster.document.write(&quot;&lt;p&gt;ein neues Fenster!&lt;br&gt;(Besser wäre aber eine dialog-Box!)&lt;/p&gt;&quot;);
+  MeinFenster.focus();
+}
+</div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-window-open.html">ansehen …</a></div></div>
+<p>Die Beispieldatei enthält einen Verweis. Beim Anklicken dieses Verweises wird die JavaScript-Funktion <code>FensterOeffnen()</code> aufgerufen. Diese Funktion öffnet ein neues, kleines Browser-Fenster und zeigt darin die Datei <i>datei2.htm</i> an. Eine genauere Erklärung sowie weitere Einzelheiten zum Öffnen neuer Fenster werden bei der Methode <a href="window/open.html" title="JavaScript/Objekte/window/open">open()</a> beschrieben. Ein solches Fenster ist nach dem Erzeugen mit der Variablen ansprechbar, in der die Fensterinstanz gespeichert ist. Im Beispiel ist das die Variable <i>MeinFenster</i>.
+</p><p>Über diesen Instanznamen können Sie alle Eigenschaften und Methoden des erzeugten Fensters ansprechen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">
+&lt;a href=&quot;javascript:MeinFenster.close()&quot;&gt;Fenster zumachen&lt;/a&gt;
+</div>
+</div>
+<p>Im Beispiel wird das zuvor geöffnete Fenster beim Klicken auf den Verweis wieder geschlossen. Zuständig dafür ist die Methode <a href="window/close.html" title="JavaScript/Objekte/window/close">close()</a>. Das Fenster wird dabei mit seinem Instanznamen angesprochen, im Beispiel also mit dem Namen der Variablen <i>MeinFenster</i>, mit der es zuvor erzeugt wurde.
+</p><p>Bei der Variablen <i>MeinFenster</i> handelt es sich um eine globale Variable. Diese wurde erzeugt durch eine Deklaration der Variablen ohne das Schlüsselwort <i>var</i>. Die Deklaration als globale Variable ermöglicht es Ihnen, dieses Fenster auch außerhalb der erzeugenden Funktion anzusprechen.
+</p><p>Genau so, wie Sie vom Hauptfenster auf ein mit <a href="window/open.html" title="JavaScript/Objekte/window/open">open()</a> erzeugtes Zweitfenster zugreifen können, können Sie aus einem solchen Zweitfenster auf das Hauptfenster zugreifen. Dazu gibt es das Fensterobjekt <code>opener</code>. Damit wird das Fenster angesprochen, von dem aus das aktuelle Fenster geöffnet wurde. 
+</p><p><br />
+Über das Objekt <code>opener</code> können Sie alle Eigenschaften und Methoden des öffnenden Fensters ansprechen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">
+&lt;a href=&quot;javascript:opener.close()&quot;&gt;Hauptfenster zumachen&lt;/a&gt;</div>
+</div>
+<p>Notieren Sie nach <code>opener</code> einen Punkt und danach die gewünschte Methode oder Eigenschaft.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Popup-Boxen">Bearbeiten</a>]</span> <span class="mw-headline" id="Popup-Boxen"> Popup-Boxen </span></h2>
+<p>Das windows-Objekt und seine Methoden wurden früher zur Erzeugung weiterer Fenster gebraucht. Diese nannte man <b>Popup-Boxen</b>, wenn sie vor dem aktuellen Fenster erschienen, bzw. <b>Popunder</b>, die sich unsichtbar hinter dem Fenster befanden.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup>
+</p><p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Nachteile">Bearbeiten</a>]</span> <span class="mw-headline" id="Nachteile"> Nachteile </span></h3>
+<p>Die Darstellung heutiger Browser hat sich gegenüber der Anfangszeit des Internets stark verändert. Anstelle einer Vielzahl von offenen Fenstern werden verschiedene Seiten innerhalb eines Fensters als Registerkarten (Tabs) angezeigt. Diese Tabs haben immer die Größes des Browserfensters. Deshalb ist das klassische Popup mit vom Seitenautor festgelegter Größe, Position und Leistenkonfiguration mit <i>tabbed browsing</i> und dem Konzept moderner Browser nicht vereinbar.
+</p><p>Popup-Boxen hatten eine feste Größe, die unabhängig vom verfügbaren <a href="../../Viewport.html" title="Viewport" class="mw-redirect">Viewport</a> war und widersprechen so dem Konzept des responsiven Designs. 
+<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup>
+</p><p>Im heutigen Web soll der Benutzer selber entscheiden, ob er Links im selben Tab, in einem neuen Tab oder einem neuen Fenster öffnet. Wenn er im selben Tab bleibt, ist der Zurück-Button die bequemste Möglichkeit zu einer Seite zurückzukehren.
+Mehrere offene Fenster und Popup-Boxen verhindern dieses intuitive Bedienkonzept.
+</p><p>Heutzutage unterbinden moderne Browser oft das Öffnen neuer Fenster und machen so den Einsatz von Popups obsolet.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Alternativen">Bearbeiten</a>]</span> <span class="mw-headline" id="Alternativen"> Alternativen </span></h3>
+<p>Heute sind Popups aus den oben genannten Gründen fast völlig von den Webseiten verschwunden. Es gibt jedoch einige Alternativen, die ohne die Nachteile mehrerer Fenster auskommen.
+</p><p>Heutzutage werden Popups oft nicht mehr als neues Fenster, sondern als dokumentinterne Dialogfenster realisiert. Sie bleiben Bestandteil der Seite. Um eine Benutzerinterkation zu betonen, öffnet sich ein modaler Dialog als Overlay in einer Ebene (layer), die über dem normalen Inhalt liegt. Dies blockiert in der Regel weitere Interaktion mit der dahinter liegenden Seite, und blendet sie auch visuell mehr oder weniger stark aus.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Inline-Popups">Bearbeiten</a>]</span> <span class="mw-headline" id="Inline-Popups"> Inline-Popups </span></h4>
+<p>Dies kann man mit einem einfachen JavaScript-Script erreichen, das mithilfe von <code>className</code> ein <a href="DOM/element/className.html#Inline-Popup" title="JavaScript/Objekte/DOM/element/className">Inline-Popup</a> im aktuellen Fenster öffnet. Durch einen Klick auf den Schließen-Button verschwindet es wieder.
+</p><p>Mit Lightbox-Scripten können Sie beliebige Inhalte in einer Ebene (layer) darstellen, die über dem normalen Inhalt liegt. Die eigentliche Seite wird ausgegraut. Sobald Sie durch einen Klick auf die eigentliche Seite oder einen Schließen-Button zum Hauptinhalt zurückkehren, wird der zusätzliche Layer wieder ausgeblendet. Auf ein neues Browserfenster wird gänzlich verzichtet.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Dialog-Box">Bearbeiten</a>]</span> <span class="mw-headline" id="Dialog-Box"> Dialog-Box </span></h4>
+<p>Mit dem <a href="../../Dialog.html" title="Dialog" class="mw-redirect">Dialog</a>-Element können sie mit wenig HTML-Markup eine Dialog-Box anlegen, die per JavasCript oder CSS ein- und ausgeblendet werden kann.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Nachladen von Inhalten mit AJAX">Bearbeiten</a>]</span> <span class="mw-headline" id="Nachladen_von_Inhalten_mit_AJAX"> Nachladen von Inhalten mit AJAX </span></h4>
+<p><a href="../Ajax.html" title="JavaScript/Ajax">Ajax</a> (Asynchronus JavaScript and Xml)  ist ein Konzept, das es Webanwendungen ermöglicht, Daten zum und vom Server zu übertragen, ohne dass die Seite als Ganzes neu geladen wird.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Animationen">Bearbeiten</a>]</span> <span class="mw-headline" id="Animationen"> Animationen </span></h2>
+<p>Auch wenn es lange verpönt war Webseiten zu animieren, spielen Animationen doch eine große Rolle.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> Mittels CSS3 können Darstellungen durch <a href="../../CSS/Selektoren/Pseudoklasse/hover%2c_active%2c_focus.html" title="CSS/Selektoren/Pseudoklasse/hover, active, focus">:hover</a>-Effekte und <a href="../../CSS/Eigenschaften/Animation/Transition.html" title="CSS/Eigenschaften/Animation/Transition">transitions</a> verbessert werden. Mit <a href="../../CSS/Eigenschaften/Animation/Animation.html" title="CSS/Eigenschaften/Animation/Animation">@keyframes</a> können Sie einzelne Schritte einer CSS-Animationssequenz festlegen.
+</p><p>Trotzdem ist es oft schneller und übersichtlicher Animationen mit JavaScript zu steuern. <a href="../../RequestAnimationFrame.html" title="RequestAnimationFrame" class="mw-redirect">requestAnimationFrame</a> ermöglicht es, Funktionen, ähnlich wie mit <a href="window/setTimeout.html" title="JavaScript/Objekte/window/setTimeout">setTimeout</a> zeitlich verzögert ausgeführt werden, bitet aber einige <a href="#Vorteile_gegen.C3.BCber_setTimeout">Vorteile</a>, da es CPU-schonend und batteriesparend pausiert, wenn Tabs inaktiv sind.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup>
+</p><p>In Zukunft wird eventuell die Web Animations API mit <a href="DOM/element/animate.html" title="JavaScript/Objekte/DOM/element/animate">element.animate</a> die verschiedenen Möglichkeiten Webseiten zu animieren zusammenfassen.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> Lassen wir uns überraschen!
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Quellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Quellen"> Quellen </span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://molily.de/javascript-popups#nachteile">http://molily.de/javascript-popups#nachteile</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://forum.de.selfhtml.org/archiv/2005/12/t119707/#m768289">http://forum.de.selfhtml.org/archiv/2005/12/t119707/#m768289</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.smashingmagazine.com/2014/11/18/the-state-of-animation-2014/">http://www.smashingmagazine.com/2014/11/18/the-state-of-animation-2014/</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://aerotwist.com/blog/flip-your-animations/">http://aerotwist.com/blog/flip-your-animations/</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://css-tricks.com/things-chrome-dev-summit-2014/">http://css-tricks.com/things-chrome-dev-summit-2014/</a></span>
+</li>
+</ol>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 368/1000000
+Post‐expand include size: 4818/2097152 bytes
+Template argument size: 3878/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1942-0!*!0!!de-formal!*!* and timestamp 20150301050118 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;oldid=26279">http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;oldid=26279</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FObjekte%2Fwindow" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="window.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="../../Diskussion_JavaScript/Objekte/window.html"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="window.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../../src.selfhtml.org/logo/S-110.png);" href="../../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../../Spezial_Linkliste/JavaScript/Objekte/window.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Objekte/window.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/window&amp;oldid=26279" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../../Spezial_Durchsuchen/JavaScript-2FObjekte-2Fwindow.html" title="Spezial:Durchsuchen/JavaScript-2FObjekte-2Fwindow">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 19. Februar 2015 um 23:12 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 12.731-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.082 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Objekte/window by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:45 GMT -->
+</html>

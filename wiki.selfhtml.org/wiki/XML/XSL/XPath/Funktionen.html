@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>XML/XSL/XPath/Funktionen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"XML/XSL/XPath/Funktionen","wgTitle":"XML/XSL/XPath/Funktionen","wgCurRevisionId":24240,"wgArticleId":4620,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"XML/XSL/XPath/Funktionen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-xml {line-height: normal;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.xml.source-xml .de1, .xml.source-xml .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.xml.source-xml  {font-family:monospace;}
+.xml.source-xml .imp {font-weight: bold; color: red;}
+.xml.source-xml li, .xml.source-xml .li1 {font-weight: normal; vertical-align:top;}
+.xml.source-xml .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.xml.source-xml .li2 {font-weight: bold; vertical-align:top;}
+.xml.source-xml .es0 {color: #000099; font-weight: bold;}
+.xml.source-xml .br0 {color: #66cc66;}
+.xml.source-xml .sy0 {color: #66cc66;}
+.xml.source-xml .st0 {color: #ff0000;}
+.xml.source-xml .nu0 {color: #cc66cc;}
+.xml.source-xml .sc-1 {color: #808080; font-style: italic;}
+.xml.source-xml .sc0 {color: #00bbdd;}
+.xml.source-xml .sc1 {color: #ddbb00;}
+.xml.source-xml .sc2 {color: #339933;}
+.xml.source-xml .sc3 {color: #009900;}
+.xml.source-xml .re0 {color: #000066;}
+.xml.source-xml .re1 {color: #000000; font-weight: bold;}
+.xml.source-xml .re2 {color: #000000; font-weight: bold;}
+.xml.source-xml .ln-xtra, .xml.source-xml li.ln-xtra, .xml.source-xml div.ln-xtra {background-color: #ffc;}
+.xml.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="XML/XSL/XPath/Funktionen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/XML/XSL/XPath/Funktionen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-XML_XSL_XPath_Funktionen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">XML/XSL/XPath/Funktionen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/XML" title="XML">XML</a> | <a href="http://wiki.selfhtml.org/wiki/XML/XSL" title="XML/XSL">XSL</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Funktionen in XPath haben die Aufgabe, die Übersetzung der XML-Ausgangsdaten in den Ergebnisbaum (zum Beispiel nach HTML) genauer zu kontrollieren und dabei zusätzliche Features zur Verfügung zu stellen. Sie sind für den Einsatz innerhalb von XSLT-Stylesheets gedacht. Die einzelnen XPath-Funktionen erfüllen einen bestimmten Zweck (zum Beispiel das Extrahieren einer Teilzeichenkette aus einer Zeichenkette) und liefern im Normalfall einen Wert zurück (zum Beispiel die extrahierte Teilzeichenkette).
+</p><p>Die Funktionen bestehen aus einem Funktionsnamen, gefolgt von runden Klammern, in denen so genannte Argumente stehen können. Argumente werden benötigt, damit eine Funktion ihre Aufgabe erfüllen kann. So muss beispielsweise der Funktion, die aus einer Zeichenkette eine Teilzeichenkette extrahiert, mitgeteilt werden, aus welcher Zeichenkette sie welchen Teil extrahieren soll.
+Bei der Beschreibung der Funktionen in diesem Abschnitt wird für jede Funktion beschrieben, ob sie Argumente erwartet, und wenn ja, welche. Wenn mehrere Argumente erforderlich sind, werden die einzelnen Argumente durch Komma getrennt. Wird als Argument eine Zeichenkette notiert, muss diese in Anführungszeichen stehen. Da XPath-Funktionen jedoch meistens innerhalb von Wertzuweisungen an Attribute von XSLT-Elementen vorkommen, die selbst schon in Anführungszeichen stehen, müssen Sie andere Anführungszeichen benutzen. Wenn die Wertzuweisung an das XSLT-Element beispielsweise in doppelten Anführungszeichen steht, muss eine Zeichenkette, die innerhalb davon einer XPath-Funktion übergeben wird, in einfachen Anführungszeichen (Hochkommata) stehen, also z.B. so: <code>&lt;xsl:value-of select="document('datei2.xml')" /&gt;</code>. Zahlen und Namen von Elementen der XML-Daten können dagegen ohne Anführungszeichen übergeben werden.
+</p><p>Da die Funktionen einen Wert zurückgeben, werden sie innerhalb von XSLT normalerweise an den Stellen verwendet, wo Attribute Wertzuweisungen erhalten. So könnte beispielsweise das XSLT-Element <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">value-of</a> in der folgenden Form notiert werden:
+</p>
+<pre>&lt;xsl:value-of select=&quot;last()&quot; /&gt;</pre>
+<p>Dabei wird also dem select-Attribut ein Wert zugewiesen, allerdings kein fester Wert, sondern ein dynamisch ermittelter. In diesem Fall wird er von der Funktion 
+<a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#last.28.29_.28Positionsnummer_des_letzten_Knotens_einer_Reihe_ermitteln.29" title="XML/XSL/XPath/Funktionen">last()</a> ermittelt.
+</p><p>Generell besteht keine Gewähr, dass jeder XSL-Prozessor, also die XSL interpretierende Software, alle die hier aufgelisteten und zum Standard gehörenden XPath-Funktionen kennt oder in vollem Umfang verarbeitet.
+</p><p>Bei den Beschreibungen der Funktionen ist häufig von Knoten und Knotentypen die Rede. Diese Begriffe werden im Abschnitt <a href="http://wiki.selfhtml.org/wiki/XML/Regeln/Baumstruktur" title="XML/Regeln/Baumstruktur">Knoten und Knoten-Sets in der Baumstruktur</a> einführend erläutert. Vertiefende Informationen dazu stehen im Abschnitt über <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" title="XML/XSL/XPath/Einführung">XPath-Syntax</a>.
+</p><p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#boolean.28.29_.28Argument_als_wahr_oder_falsch_bewerten.29"><span class="tocnumber">1</span> <span class="toctext">boolean() (Argument als wahr oder falsch bewerten)</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#ceiling.28.29_.28Zahl_aufrunden.29"><span class="tocnumber">2</span> <span class="toctext">ceiling() (Zahl aufrunden)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#concat.28.29_.28Zeichenketten_zu_einer_zusammenfassen.29"><span class="tocnumber">3</span> <span class="toctext">concat() (Zeichenketten zu einer zusammenfassen)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#contains.28.29_.28auf_bestimmte_Teilzeichenkette_.C3.BCberpr.C3.BCfen.29"><span class="tocnumber">4</span> <span class="toctext">contains() (auf bestimmte Teilzeichenkette überprüfen)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#count.28.29_.28Anzahl_Knoten_in_einem_Knoten-Set_ermitteln.29"><span class="tocnumber">5</span> <span class="toctext">count() (Anzahl Knoten in einem Knoten-Set ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#current.28.29_.28aktuellen_Knoten_ermitteln.29"><span class="tocnumber">6</span> <span class="toctext">current() (aktuellen Knoten ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#document.28.29_.28anderes_XML-Dokument_aufrufen.29"><span class="tocnumber">7</span> <span class="toctext">document() (anderes XML-Dokument aufrufen)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#element-available.28.29_.28Verf.C3.BCgbarkeit_eines_XSLT-Elements_.C3.BCberpr.C3.BCfen.29"><span class="tocnumber">8</span> <span class="toctext">element-available() (Verfügbarkeit eines XSLT-Elements überprüfen)</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#false.28.29_.28booleschen_Wert_f.C3.BCr_.22falsch.22_erzeugen.29"><span class="tocnumber">9</span> <span class="toctext">false() (booleschen Wert für "falsch" erzeugen)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#floor.28.29_.28Zahl_abrunden.29"><span class="tocnumber">10</span> <span class="toctext">floor() (Zahl abrunden)</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#format-number.28.29_.28Zahl_in_Zeichenkette_umwandeln.29"><span class="tocnumber">11</span> <span class="toctext">format-number() (Zahl in Zeichenkette umwandeln)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#function-available.28.29_.28Verf.C3.BCgbarkeit_einer_XPath-Funktion_.C3.BCberpr.C3.BCfen.29"><span class="tocnumber">12</span> <span class="toctext">function-available() (Verfügbarkeit einer XPath-Funktion überprüfen)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#generate-id.28.29_.28eindeutigen_Bezeichner_f.C3.BCr_ein_Element_generieren.29"><span class="tocnumber">13</span> <span class="toctext">generate-id() (eindeutigen Bezeichner für ein Element generieren)</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#id.28.29_.28Element_mit_bestimmtem_Bezeichner_ausw.C3.A4hlen.29"><span class="tocnumber">14</span> <span class="toctext">id() (Element mit bestimmtem Bezeichner auswählen)</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#key.28.29_.28Elemente_mit_Hilfe_eines_Schl.C3.BCsselwerts_ausw.C3.A4hlen.29"><span class="tocnumber">15</span> <span class="toctext">key() (Elemente mit Hilfe eines Schlüsselwerts auswählen)</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#lang.28.29_.28Element_auf_bestimmten_Sprachcode_.C3.BCberpr.C3.BCfen.29"><span class="tocnumber">16</span> <span class="toctext">lang() (Element auf bestimmten Sprachcode überprüfen)</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#last.28.29_.28Positionsnummer_des_letzten_Knotens_einer_Reihe_ermitteln.29"><span class="tocnumber">17</span> <span class="toctext">last() (Positionsnummer des letzten Knotens einer Reihe ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#local-name.28.29_.28lokalen_Namen_eines_Knoten-Sets_ermitteln.29"><span class="tocnumber">18</span> <span class="toctext">local-name() (lokalen Namen eines Knoten-Sets ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#name.28.29_.28Namen_eines_Knoten-Sets_ermitteln.29"><span class="tocnumber">19</span> <span class="toctext">name() (Namen eines Knoten-Sets ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#namespace-uri.28.29_.28Namensraum_eines_Elements_ermitteln.29"><span class="tocnumber">20</span> <span class="toctext">namespace-uri() (Namensraum eines Elements ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#normalize-space.28.29_.28Leerzeichen_am_Anfang_und_Ende_einer_Zeichenkette_entfernen.29"><span class="tocnumber">21</span> <span class="toctext">normalize-space() (Leerzeichen am Anfang und Ende einer Zeichenkette entfernen)</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#not.28.29_.28Argument_verneinen.29"><span class="tocnumber">22</span> <span class="toctext">not() (Argument verneinen)</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#number.28.29_.28Argument_in_eine_Zahl_umwandeln.29"><span class="tocnumber">23</span> <span class="toctext">number() (Argument in eine Zahl umwandeln)</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#position.28.29_.28Positionsnummer_des_aktuellen_Knotens_ermitteln.29"><span class="tocnumber">24</span> <span class="toctext">position() (Positionsnummer des aktuellen Knotens ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#round.28.29_.28kaufm.C3.A4nnisch_auf-_oder_abrunden.29"><span class="tocnumber">25</span> <span class="toctext">round() (kaufmännisch auf- oder abrunden)</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#starts-with.28.29_.28.C3.9Cberpr.C3.BCfen.2C_ob_Zeichenkette_mit_bestimmter_Teilzeichenkette_beginnt.29"><span class="tocnumber">26</span> <span class="toctext">starts-with() (Überprüfen, ob Zeichenkette mit bestimmter Teilzeichenkette beginnt)</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#string.28.29_.28Argument_in_Zeichenkette_umwandeln.29"><span class="tocnumber">27</span> <span class="toctext">string() (Argument in Zeichenkette umwandeln)</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#string-length.28.29_.28Anzahl_Zeichen_einer_Zeichenkette_ermitteln.29"><span class="tocnumber">28</span> <span class="toctext">string-length() (Anzahl Zeichen einer Zeichenkette ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#substring.28.29_.28Teilzeichenkette_aus_Zeichenkette_extrahieren.29"><span class="tocnumber">29</span> <span class="toctext">substring() (Teilzeichenkette aus Zeichenkette extrahieren)</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#substring-after.28.29_.28Zeichenkette_ab_einer_Position_mit_Teilzeichenkette_ermitteln.29"><span class="tocnumber">30</span> <span class="toctext">substring-after() (Zeichenkette ab einer Position mit Teilzeichenkette ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#substring-before.28.29_.28Zeichenkette_vor_einer_Position_mit_Teilzeichenkette_ermitteln.29"><span class="tocnumber">31</span> <span class="toctext">substring-before() (Zeichenkette vor einer Position mit Teilzeichenkette ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#sum.28.29_.28Summe_von_Zahlenwerten_ermitteln.29"><span class="tocnumber">32</span> <span class="toctext">sum() (Summe von Zahlenwerten ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#system-property.28.29_.28Systemeigenschaften_ermitteln.29"><span class="tocnumber">33</span> <span class="toctext">system-property() (Systemeigenschaften ermitteln)</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#translate.28.29_.28Suchen_und_Ersetzen_von_Zeichen_in_einer_Zeichenkette.29"><span class="tocnumber">34</span> <span class="toctext">translate() (Suchen und Ersetzen von Zeichen in einer Zeichenkette)</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#true.28.29_.28booleschen_Wert_f.C3.BCr_.22wahr.22_erzeugen.29"><span class="tocnumber">35</span> <span class="toctext">true() (booleschen Wert für "wahr" erzeugen)</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="#unparsed-entity-uri.28.29_.28ungeparste_Eintr.C3.A4ge_der_DTD_ermitteln.29"><span class="tocnumber">36</span> <span class="toctext">unparsed-entity-uri() (ungeparste Einträge der DTD ermitteln)</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: boolean() (Argument als wahr oder falsch bewerten)">Bearbeiten</a>]</span> <span class="mw-headline" id="boolean.28.29_.28Argument_als_wahr_oder_falsch_bewerten.29">boolean() (Argument als wahr oder falsch bewerten)</span></h2>
+<p>Ermittelt, ob ein Ausdruck wahr oder falsch ist.
+</p>
+<ul class="siconset smetadaten"><li class="sicon sicon_leer"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Leer"><img alt="Leer" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Erwartet folgende Argumente:
+</p>
+<ul><li><code>[Ausdruck]</code>: irgendein mit XSL realisierbarer Ausdruck, der sich als wahr oder falsch bewerten lässt. Es kann sich z.B. um eine Vergleichsoperation handeln, aber auch um den Test auf Vorhandensein eines Knotens.
+</li></ul>
+<p>Liefert true (wahr) oder false (falsch) zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;name&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:choose<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:when</span> <span class="re0">test</span>=<span class="st0">&quot;boolean(vorname)&#160;!= boolean(nachname)&quot;</span><span class="re2">&gt;</span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:message<span class="re2">&gt;</span></span></span>Es müssen entweder Vor- und Nachname,
+    oder überhaupt kein Name angegeben werden!<span class="sc3"><span class="re1">&lt;/xsl:message<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:when<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:otherwise<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:apply-templates</span> <span class="re0">select</span>=<span class="st0">&quot;vorname&quot;</span><span class="re2">&gt;</span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:apply-templates</span> <span class="re0">select</span>=<span class="st0">&quot;nachname&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:otherwise<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:choose<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird ein Template für ein XML-Element namens <code>name</code> definiert. Es wird angenommen, dass dieses Element zwei untergeordnete Elemente <code>vorname</code> und <code>nachname</code> enthalten muss. Im Beispiel-Stylesheet wird mit 
+</p>
+<pre>&lt;xsl:when test=&quot;boolean(vorname)&#160;!= boolean(nachname)&quot;&gt;</pre> 
+<p>abgefragt, ob tatsächlich beide untergeordneten Elemente vorhanden sind. Ist das nicht der Fall, wird eine entsprechende Meldung ausgegeben. Andernfalls wird der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:otherwise_.28Andernfalls-Anweisung.29" title="XML/XSL/XSLT/Sprachelemente">xsl:otherwise</a>-Zweig ausgeführt, der die Templates zum Übersetzen der Unterelemente aufruft.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: ceiling() (Zahl aufrunden)">Bearbeiten</a>]</span> <span class="mw-headline" id="ceiling.28.29_.28Zahl_aufrunden.29"> ceiling() (Zahl aufrunden)</span></h2>
+<p>Rundet eine Bruchzahl zur nächsthöheren Ganzzahl auf. Die Zahl 5.7234 wird auf 6 aufgerundet, aber 0.00001 wird auch auf 1 aufgerundet. Wichtig ist, dass "Kommazahlen" den Punkt als Dezimalzeichen haben. Andernfalls werden sie als ungültige Zahlen (NaN - not a number) interpretiert.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li><code>[Zahl]</code>: Die aufzurundende Zahl. Es kann sich auch um den Inhalt eines Knotens oder den einer Variablen handeln. Dabei wird der Wert intern zunächst als Zahl umgewandelt, und zwar so, als würde die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#number.28.29_.28Argument_in_eine_Zahl_umwandeln.29" title="XML/XSL/XPath/Funktionen">number()</a> angewendet.
+</li></ul>
+<p>Liefert die nächsthöhere Ganzzahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;ceiling(betrag)&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>.-<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird von einem XML-Element namens <code>betrag</code> angenommen, dass es einen "krummen" Wert enthält, der auf den nächsthöheren Euro-Ganzzahlwert aufgerundet werden soll. Dazu wird beim Auswählen des Inhalts von <code>betrag</code> mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a> im select-Attribut die Funktion <b>ceiling()</b> aufgerufen. Sie bewirkt, dass der Elementinhalt aufgerundet wird, bevor er in den Ergebnisbaum der Datenausgabe übernommen wird.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: concat() (Zeichenketten zu einer zusammenfassen)">Bearbeiten</a>]</span> <span class="mw-headline" id="concat.28.29_.28Zeichenketten_zu_einer_zusammenfassen.29"> concat() (Zeichenketten zu einer zusammenfassen)</span></h2>
+<p>Hängt mehrere Zeichenketten aneinander.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li><code>[Zeichenkette], [Zeichenkette], ...</code>: Hängt alle Zeichenkette in der angegebenen Reihenfolge aneinander. Es kann sich direkt um Text handeln, aber auch um den Inhalt eines Knotens oder den Wert einer Variablen. Die Zeichenketten werden durch Kommata getrennt.
+</li></ul>
+<p>Liefert die zusammengesetzte Zeichenkette zurück.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;concat(vorname, ' heißt mit Zuname ', zuname)&quot;</span><span class="re2">/&gt;</span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird angenommen, dass es zwei verfügbare XML-Elemente <code>vorname</code> und <code>zuname</code> gibt. Bei der Übersetzung in den Ergebnisbaum soll daraus ein Satz vom Typ Heidi heißt mit Zuname Finkenzeller erzeugt werden. Dazu wird beim Auswählen des Inhalts mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a> im select-Attribut die Funktion <b>concat()</b> angewendet. Sie bekommt drei Zeichenketten übergeben: den Inhalt des Elements <code>vorname</code>, die feste Zeichenkette heißt <code>mit Zuname</code>, und den Inhalt des Elements <code>zuname</code>. 
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass Variablennamen, Elementnamen (oder Elementpfade nach <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" title="XML/XSL/XPath/Einführung">XPath-Syntax</a>) direkt angegeben werden, feste Zeichenketten dagegen in Anführungszeichen eingeschlossen werden. Dabei muss es sich um andere Anführungszeichen handeln als bei dem XSLT-Attribut, innerhalb dessen die Funktion steht. Wenn die Funktion, wie beim Beispiel im select-Attribut, in dessen doppelten Anführungszeichen "..." vorkommt, müssen einfache Anführungszeichen verwendet werden, so wie im Beispiel ' heißt mit Zuname '.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: contains() (auf bestimmte Teilzeichenkette überprüfen)">Bearbeiten</a>]</span> <span class="mw-headline" id="contains.28.29_.28auf_bestimmte_Teilzeichenkette_.C3.BCberpr.C3.BCfen.29"> contains() (auf bestimmte Teilzeichenkette überprüfen)</span></h2>
+<p>Überprüft, ob in einer Zeichenkette eine bestimmte Teilzeichenkette vorhanden ist.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette]: Die Zeichenkette, in der überprüft werden soll.
+</li><li>[Teilzeichenkette]: Die Teilzeichenkette, auf die hin die Zeichenkette überprüft werden soll.
+</li></ul>
+<p>Liefert <code>true</code> zurück, wenn die Teilzeichenkette vorhanden ist, und <code>false</code>, wenn sie nicht vorhanden ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:if</span> <span class="re0">test</span>=<span class="st0">&quot;contains(zuname, 'A')&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;zuname&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:if<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:if_.28Wenn-Bedingung.29" title="XML/XSL/XSLT/Sprachelemente">xsl:if</a> geprüft, ob der Wert eines XML-Elements <code>zuname</code> ein großes A enthält. Wenn ja, wird der Inhalt des Elements ausgegeben. Dazu wird im test-Attribut der xsl:if-Anweisung mit <code>contains(zuname, 'A')</code> in der Zeichenkette, die das Element <code>zuname</code> speichert, nach der Teilzeichenkette A gesucht. Auf diese Weise könnten also beispielsweise nur Zunamen in den Ergebnisbaum einfließen, die mit A beginnen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: count() (Anzahl Knoten in einem Knoten-Set ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="count.28.29_.28Anzahl_Knoten_in_einem_Knoten-Set_ermitteln.29"> count() (Anzahl Knoten in einem Knoten-Set ermitteln)</span></h2>
+<p>Ermittelt, wieviele Knoten auf der Ebene unterhalb eines Knoten-Sets enthalten sind.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Knoten-Set]: Ein Knoten-Set bzw. einen Pfad nach <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" title="XML/XSL/XPath/Einführung">XPath-Syntax</a>, für das die Anzahl der darin enthaltenen Knoten der nächstunteren Ebene bestimmt werden soll.
+</li></ul>
+<p>Liefert die Anzahl der untergeordneten Knoten zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:variable</span> <span class="re0">name</span>=<span class="st0">&quot;anzahl&quot;</span> <span class="re0">select</span>=<span class="st0">&quot;count(//listeneintrag)&quot;</span> <span class="re2">/&gt;</span></span>
+...
+<span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;liste&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:for-each</span> <span class="re0">select</span>=<span class="st0">&quot;listeneintrag&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;position()&quot;</span> <span class="re2">/&gt;</span></span>
+         <span class="sc3"><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>. von <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span>
+         <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;$anzahl&quot;</span> <span class="re2">/&gt;</span></span>
+         <span class="sc3"><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>: <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span>
+         <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/xsl:for-each<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel nimmt an, dass es ein XML-Element namens <code>liste</code> gibt, das aus mehreren Unterelementen <code>listeneintrag</code> besteht. Zunächst wird mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:variable_.28Variable_definieren.29" title="XML/XSL/XSLT/Sprachelemente">xsl:variable</a> eine Variable namens <code>anzahl</code> definiert, in der die Anzahl der Listeneinträge gespeichert wird. Dazu wird im select-Attribut die Funktion <b>count()</b> angewendet. Als Argument wird ihr das Element <code>listeneintrag</code> übergeben. In der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:for-each_.28f.C3.BCr_jedes_Element_aus_einer_Menge_wiederholen.29" title="XML/XSL/XSLT/Sprachelemente">for-each-Schleife</a>, die alle Listeneinträge abarbeitet, wird vor dem Text des Listeneintrags jeweils die aktuelle Positionsnummer mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#position.28.29_.28Positionsnummer_des_aktuellen_Knotens_ermitteln.29" title="XML/XSL/XPath/Funktionen">position()</a> ausgegeben, und dahinter die Gesamtzahl, die in der Variablen <code>anzahl</code> gespeichert ist, also etwa so:
+</p>
+<dl><dd>1. von 5: Text des ersten Listeneintrags
+</dd><dd>2. von 5: Text des zweiten Listeneintrags
+</dd></dl>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: current() (aktuellen Knoten ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="current.28.29_.28aktuellen_Knoten_ermitteln.29"> current() (aktuellen Knoten ermitteln)</span></h2>
+<p>Stellt den Bezug zum jeweils aktuellen Knoten her.
+</p><p>Erwartet keine Argumente.
+</p><p>Liefert das Knoten-Set zurück, das den aktuellen Knoten enthält.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;current()&quot;</span> <span class="re2">/&gt;</span></span></pre></div></div></div>
+</div>
+<p><br />
+Die Anweisung im Beispiel drückt das gleiche aus wie die üblichere Anweisung:
+</p>
+<pre>&lt;xsl:value-of select=&quot;.&quot; /&gt;</pre>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> current() und . liefern dann das gleiche Ergebnis, wenn current() in einem freistehenden XPath-Ausdruck steht, also z.B. direkt in einem select-Attribut. Wenn Sie current() dagegen in einem Prädikat (steht immer zwischen [...]) anwenden, kann das zurückgelieferte Ergebnis ein anderes sein als das Ergebnis von select=&quot;.&quot;. Der Grund ist, dass XPath intern zwischen &quot;current node&quot; und &quot;context node&quot; unterscheidet. Ein &quot;current node&quot;, also ein aktueller Knoten, ist nur dann gegeben, wenn ein Knoten-Set der Reihe nach abgearbeitet wird. In diesem Fall ist der jeweils bearbeitete Knoten der &quot;current node&quot;. Außerhalb einer solchen Serienbearbeitung gibt es jedoch keinen &quot;current node&quot;. Einen &quot;context node&quot;, wie man ihn durch die Punkt-Syntax (.) ermitteln kann, ist dagegen zu jedem Zeitpunkt gegeben.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: document() (anderes XML-Dokument aufrufen)">Bearbeiten</a>]</span> <span class="mw-headline" id="document.28.29_.28anderes_XML-Dokument_aufrufen.29"> document() (anderes XML-Dokument aufrufen)</span></h2>
+<p>Erlaubt es, XML-Ausgangsdaten aus anderen XML-Dateien als der, in der das Stylesheet eingebunden ist, mit in den Ergebnisbaum zu übernehmen.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[URI]: Angabe einer XML-Datei, die mit eingebunden werden soll. Es kann sich um eine relative Adressierung handeln oder um eine absolute Angabe, z.B. <code><a rel="nofollow" class="external free" href="http://">http://</a>....</code> Wird keine andere XML-Datei angegeben, sondern ein Element mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" title="XML/XSL/XPath/Einführung">XPath-Syntax</a> adressiert, so wird das Element und gegebenenfalls sein untergeordneter Elementenbaum an dieser Stelle eingebunden.
+</li><li>[Knoten-Set]: (optional) Angabe der Basis innerhalb der eingebundenen Daten, auf das sich relative XPath-Adressierungen beziehen können. Gemeint ist der erste Knoten des Knoten-Sets.
+</li></ul>
+<p>Liefert die ermittelte Elementstruktur der anderen XML-Datei oder des angegebenen Elements ab dem Wurzelelement zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;beispiel&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;pre<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;document(./@quelle)&quot;</span> <span class="re2">/&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;/pre<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird angenommen, dass es ein XML-Element namens <code>beispiel</code> gibt, dass in einem Attribut eine Quellenangabe zu einer XML-Datei enthält, z.B.: 
+</p>
+<pre>&lt;beispiel quelle=&quot;../quellen/beispiel03.xml&quot; /&gt;</pre>. 
+<p>Im Stylesheet wird für die HTML-Ausgabe dieses Elements mit &lt;pre&gt;...&lt;/pre&gt; ein Bereich mit präformatiertem Text definiert. Darin wird mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a> der Inhalt der Datei ausgegeben, die im Attribut <code>quelle</code> angegeben ist. Um auf die Datei zuzugreifen, wird im select-Attribut die <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#document.28.29_.28anderes_XML-Dokument_aufrufen.29" title="XML/XSL/XPath/Funktionen">document()</a>-Funktion angewendet. Als Argument wird ihr die Angabe zum Attribut <code>quelle</code> übergeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: element-available() (Verfügbarkeit eines XSLT-Elements überprüfen)">Bearbeiten</a>]</span> <span class="mw-headline" id="element-available.28.29_.28Verf.C3.BCgbarkeit_eines_XSLT-Elements_.C3.BCberpr.C3.BCfen.29"> element-available() (Verfügbarkeit eines XSLT-Elements überprüfen)</span></h2>
+<p>Ermittelt, ob ein XSLT-Element im verwendeten XSLT-Parser verfügbar ist oder nicht. Dient daher als Maßnahme zur Vermeidung von Fehlern.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Elementname]: 	Name eines XSLT-Elements, dessen Verfügbarkeit überprüft werden soll.
+</li></ul>
+<p>Liefert <code>true</code> zurück, wenn das Element verfügbar ist, und <code>false</code>, wenn es nicht verfügbar ist.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:if</span> <span class="re0">test</span>=<span class="st0">&quot;element-available('xsl:number')&quot;</span><span class="re2">&gt;</span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:number</span> <span class="re0">level</span>=<span class="st0">&quot;single&quot;</span> <span class="re0">count</span>=<span class="st0">&quot;eintrag&quot;</span> <span class="re0">format</span>=<span class="st0">&quot;1. &quot;</span> <span class="re2">/&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:if<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel überprüft mit Hilfe der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:if_.28Wenn-Bedingung.29" title="XML/XSL/XSLT/Sprachelemente">xsl:if</a>-Anweisung, ob das XSLT-Element <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#number.28.29_.28Argument_in_eine_Zahl_umwandeln.29" title="XML/XSL/XPath/Funktionen">xsl:number</a> verfügbar ist. Wenn ja, wird es innerhalb der xsl:if-Anweisung angewendet. Wenn nicht, wird zumindest ein Fehler vermieden.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Dieser Funktion ist auch dann nützlich, wenn es darum geht herauszufinden, ob der XSLT-Prozessor Hersteller-spezifische Erweiterungen kennt, z.B.:
+&lt;xsl:when test=&quot;element-available('saxon:entity-ref')&quot;&gt;...&lt;/xsl:when&gt;.
+In diesem Beispiel wird abgefragt, ob der Prozessor das Element entity-ref kennt, das der Saxon-Prozessor interpretiert.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: false() (booleschen Wert für &quot;falsch&quot; erzeugen)">Bearbeiten</a>]</span> <span class="mw-headline" id="false.28.29_.28booleschen_Wert_f.C3.BCr_.22falsch.22_erzeugen.29">false() (booleschen Wert für "falsch" erzeugen)</span></h2>
+<p>Verneint einen Ausdruck.
+</p><p>Erwartet keine Argumente
+</p><p>Liefert einfach den logischen Wert false zurück.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:variable</span> <span class="re0">name</span>=<span class="st0">&quot;passwortanzeige&quot;</span> <span class="re0">select</span>=<span class="st0">&quot;false()&quot;</span><span class="re2">/&gt;</span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">name</span>=<span class="st0">&quot;passwort&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:choose<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:when</span> <span class="re0">test</span>=<span class="st0">&quot;$passwortanzeige&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:when<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:otherwise<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>[Passwort]<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:otherwise<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:choose<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird mit xsl:variable eine Variable namens <code>passwortanzeige</code> definiert, deren Wert auf den logischen Wert <code>false</code> gesetzt wird. Verantwortlich dafür ist der Einsatz der Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#false.28.29_.28booleschen_Wert_f.C3.BCr_.22falsch.22_erzeugen.29" title="XML/XSL/XPath/Funktionen">false()</a>, die einfach dem select-Attribut zugewiesen wird und dadurch für das Setzen des Wertes sorgt. Weiterhin zeigt das Beispiel eine Template-Definition für ein Element namens <code>passwort</code>. Innerhalb dieser Template-Definition wird in einer <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:choose_.28Auswahl_treffen.29" title="XML/XSL/XSLT/Sprachelemente">xsl:choose</a>-Konstruktion abgefragt, wie es mit der Passwortanzeige steht. Wenn die Variable <code>$passwortanzeige</code> wahr ist, wird mit <code>&lt;xsl:value-of select="." /&gt;</code> der Wert des passwort-Elements ausgegeben. Andernfalls wird nur die Zeichenkette [Passwort] ausgegeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: floor() (Zahl abrunden)">Bearbeiten</a>]</span> <span class="mw-headline" id="floor.28.29_.28Zahl_abrunden.29">floor() (Zahl abrunden)</span></h2>
+<p>Rundet eine Bruchzahl zur basierenden Ganzzahl ab. Die Zahl 5.7234 wird auf 5 abgerundet, und 5.99997 wird auch zu 5 abgerundet. Wichtig ist, dass "Kommazahlen" den Punkt als Dezimalzeichen haben. Andernfalls werden sie als ungültige Zahlen (NaN - not a number) interpretiert.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zahl]: Die abzurundende Zahl. Es kann sich auch um den Inhalt eines Knotens oder den Wert einer Variablen handeln. Dabei wird der Wert intern zunächst als Zahl umgewandelt, und zwar so, als würde die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#number.28.29_.28Argument_in_eine_Zahl_umwandeln.29" title="XML/XSL/XPath/Funktionen">number()</a> angewendet.
+</li></ul>
+<p>Liefert die basierende Ganzzahl zurück.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;zahl&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;div</span> <span class="re0">style</span>=<span class="st0">&quot;background-color:yellow&quot;</span><span class="re2">&gt;</span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;floor(./@wert)&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/div<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel nimmt ein XML-Element namens <code>zahl</code> an, das z.B. folgende Ausprägung haben könnte: 
+</p>
+<pre>&lt;zahl wert=&quot;63,47&quot; /&gt;</pre>. In der Template-Definition zur HTML-Ausgabe dieses Elements wird auf das Attribut mit <code>@wert</code> zugegriffen. Dabei wird dieser Attributzugriff jedoch in die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#floor.28.29_.28Zahl_abrunden.29" title="XML/XSL/XPath/Funktionen">floor()</a> eingebettet, sodass im Falle einer Zahl mit dem Wert 63,47 nur 63 in der HTML-Ausgabe erscheint.
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: format-number() (Zahl in Zeichenkette umwandeln)">Bearbeiten</a>]</span> <span class="mw-headline" id="format-number.28.29_.28Zahl_in_Zeichenkette_umwandeln.29">format-number() (Zahl in Zeichenkette umwandeln)</span></h2>
+<p>Wandelt eine Zahl in eine Zeichenkette um und erlaubt es, die Formatierung der umgewandelten Zahl zu beeinflussen.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zahl]: Der umzuwandelnde Wert. Es kann sich auch um den Inhalt eines Elements oder den Wert einer Variablen handeln. Dabei wird der Wert intern zunächst als Zahl umgewandelt, und zwar so, als würde die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#number.28.29_.28Argument_in_eine_Zahl_umwandeln.29" title="XML/XSL/XPath/Funktionen">number()</a> angewendet.
+</li><li>[Formatregel]:	Eine Darstellungs-Syntax für die Formatierung der umgewandelten Zahl. Die Syntax der Formatregel orientiert sich dabei an dem Schema, das in Java 1.1 für die decimal_format-Klasse implementiert ist. Allerdings gibt es keine zwingende Korrelation zwischen der XPath-Syntax und der Java-Implementierung. Folgende Zeichen sind üblich:
+<ul><li>0 = eine Ziffer
+<ol><li> = eine Ziffer, 0 wird jedoch nicht angezeigt
+</li></ol>
+</li><li>. = Platzhalter für Dezimalpunkt-Trennzeichen
+</li><li>, = Platzhalter für ein Gruppierungs-Trennzeichen, z.B. für Tausender
+<dl><dt> = zum Trennen von mehreren Formaten
+</dt></dl>
+</li><li>- = negatives Vorzeichen als Voreinstellung
+</li><li>% = Wert mit 100 multiplizieren und als Prozentwert anzeigen
+</li><li>? = Wert mit 1000 multiplizieren und als Promillewert anzeigen
+</li><li>¤ = Währungssymbol, wird durch das voreingestellte Währungssymbol ersetzt (noch nicht in Java 1.1!).
+</li><li>' = zum Maskieren von format-bedeutenden Zeichen wie 0, #, . usw.
+</li></ul>
+</li><li>[Name]: (optional) Name eines Formats, das mit Seite xsl:decimal-format definiert wird.
+</li></ul>
+<p>Liefert eine Zeichenkette mit der formatierten Zahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;wert&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;format-number(.,'##0.0%')&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel nimmt ein XML-Element namens <code>wert</code> an, für dessen Ausgabe in den HTML-Ergebnisbaum ein Template definiert wird. Dabei wird der Inhalt des Elements <code>wert</code>, angesprochen durch die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#current.28.29_.28aktuellen_Knoten_ermitteln.29" title="XML/XSL/XPath/Funktionen">current()</a> als erstes Argument der Funktion <b>format-number()</b> übergeben. Für die Formatierung wird bestimmt, dass es eine bis zu dreistellige Zahl mit einer Nachkommastelle sein kann, die als Prozentwert ausgegeben wird. Durch die Zuweisung dieses Konstrukts an das select-Attribut von <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a> wird bewirkt, dass der Inhalt von <code>wert</code> entsprechend der Formatregel ausgegeben wird.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: function-available() (Verfügbarkeit einer XPath-Funktion überprüfen)">Bearbeiten</a>]</span> <span class="mw-headline" id="function-available.28.29_.28Verf.C3.BCgbarkeit_einer_XPath-Funktion_.C3.BCberpr.C3.BCfen.29">function-available() (Verfügbarkeit einer XPath-Funktion überprüfen)</span></h2>
+<p>Ermittelt, ob eine XPath-Funktion im verwendeten XSLT-Parser verfügbar ist oder nicht. Dient daher als Maßnahme zur Vermeidung von Fehlern.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Funktionsname]: Name einer XPath-Funktion, deren Verfügbarkeit überprüft werden soll.
+</li></ul>
+<p>Liefert <code>true</code> zurück, wenn die Funktion verfügbar ist, und <code>false</code>, wenn sie nicht verfügbar ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:choose<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:when</span> <span class="re0">test</span>=<span class="st0">&quot;function-available('normalize-space')&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;normalize-space(.)&quot;</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:when<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:otherwise<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:otherwise<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:choose<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel überprüft mit Hilfe einer <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:choose_.28Auswahl_treffen.29" title="XML/XSL/XSLT/Sprachelemente">xsl:choose</a>-Konstruktion, ob die XPath-Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#normalize-space.28.29_.28Leerzeichen_am_Anfang_und_Ende_einer_Zeichenkette_entfernen.29" title="XML/XSL/XPath/Funktionen">normalize-space()</a> verfügbar ist. Wenn ja, wird sie innerhalb der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung angewendet, um bei der Ausgabe des aktuellen Elements, das mit . angegeben wird, alle überflüssigen Leerraumzeichen am Anfang und am Ende zu entfernen. Andernfalls, wenn die Funktion nicht verfügbar ist, wird der Inhalt des aktuellen Elements ohne weitere Vorbehandlung ausgegeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: generate-id() (eindeutigen Bezeichner für ein Element generieren)">Bearbeiten</a>]</span> <span class="mw-headline" id="generate-id.28.29_.28eindeutigen_Bezeichner_f.C3.BCr_ein_Element_generieren.29">generate-id() (eindeutigen Bezeichner für ein Element generieren)</span></h2>
+<p>Erzeugt im Ergebnisbaum automatisch einen eindeutigen Bezeichner. Der Bezeichner muss nicht bei jedem Generierungsvorgang der gleiche sein (könnte also zum Beispiel durch zeitabhängige Algorithmen erzeugt sein), aber er ist in jedem Fall innerhalb des einzelnen Dokuments eindeutig. Der generierte Bezeichner entspricht in jedem Fall den Konventionen für Bezeichner in XML.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Knoten-Set]: (optional) Knoten-Set bzw. einen Pfad nach <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" title="XML/XSL/XPath/Einführung">XPath-Syntax</a>, der eine ID erhalten soll.
+</li></ul>
+<p>Liefert eine Zeichenkette mit dem generierten Bezeichner zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;absatz&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span><span class="re1">&lt;a</span> <span class="re0">name</span>=<span class="st0">&quot;{generate-id(.)}&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/a<span class="re2">&gt;</span></span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+Das Beispiel definiert ein Template für ein häufiger vorkommendes XML-Element namens <code>absatz</code>. Jedes dieser Elemente erhält bei der Übersetzung in ein HTML-Konstrukt einen Anker, definiert mit <pre>&lt;a name=&gt;...&lt;/a&gt;</pre>. Der Wert, der jeweils beim Attribut <code>name</code> vergeben wird, wird automatisch erzeugt, und zwar durch Anwendung der Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#generate-id.28.29_.28eindeutigen_Bezeichner_f.C3.BCr_ein_Element_generieren.29" title="XML/XSL/XPath/Funktionen">generate-id()</a>. Als Argument wird das aktuelle Element (.) übergeben. Wichtig sind die geschweiften Klammern, in denen die Funktion bei der Wertzuweisung an <code>name</code> zusätzlich steht. Dies ist nötig, weil die Funktion in diesem Beispiel nicht in der Wertzuweisung an ein Attribut einer XSLT-Anweisung steht, sondern in einer Wertzuweisung an ein Attribut eines Elements des Ergebnisbaums - im Beispiel an das name-Attribut des a-Elements der Ergebnissprache HTML.
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> generate-id() kann man auch dazu verwenden, um herauszufinden, ob Knoten identisch sind.</div>
+<pre>&lt;xsl:if test=&quot;a = b&quot;&gt;</pre> prüft nur, ob a und b den gleichen Inhalt haben.
+<pre>&lt;xsl:if test=&quot;generate-id(a) = generate-id(b)&quot;&gt;</pre> prüft dagegen, ob es wahr ist, dass beide Knoten identisch sind.
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: id() (Element mit bestimmtem Bezeichner auswählen)">Bearbeiten</a>]</span> <span class="mw-headline" id="id.28.29_.28Element_mit_bestimmtem_Bezeichner_ausw.C3.A4hlen.29">id() (Element mit bestimmtem Bezeichner auswählen)</span></h2>
+<p>Wählt ein Element aufgrund einer ID aus. Dazu muss das Element ein <a href="http://wiki.selfhtml.org/wiki/HTML/Universalattribute#Das_id-Attribut" title="HTML/Universalattribute">Attribut mit Identifikationswert</a> besitzen, das in der zugehörigen DTD entsprechend definiert sein muss. Da die Wertzuweisungen an solche Attribute dokumentweit eindeutig sein müssen, eignen sie sich hervorragend, um das Element auszuwählen.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[ID-Wert]: Der ID-Wert desjenigen Elements, das ausgewählt werden soll.
+</li></ul>
+<p>Liefert das Element oder mehrere Elemente zurück, deren ID-Wert ausgewählt wurde.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;name&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;li<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;id('p01')&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/li<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel definiert ein Template für ein Element namens <code>name</code>. Darin wird in einem HTML Aufzählungspunkt ein fixes Label (denkbar wäre z.B. ein Wert wie Name, Vorname: ) und dahinter der aktuelle Wert des Elements name mit <code>&lt;xsl:value-of select="." /&gt;</code> ausgegeben. Der Wert des Labels wird ebenfalls mit einer <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung ermittelt. Dabei ist im select-Attribut die Funktion <b>id()</b> notiert, die auf ein Element mit dem Identifikationswert p01 zugreift. Dieses Element könnte in den XML-Daten beispielsweise so notiert sein:
+</p>
+<pre>&lt;prefix x=&quot;p01&quot;&gt;Name, Vorname: &lt;/prefix&gt;</pre>
+<p>Dabei wäre das Attribut x in der zugehörigen DTD als Attribut mit Identifikationswert definiert.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: key() (Elemente mit Hilfe eines Schlüsselwerts auswählen)">Bearbeiten</a>]</span> <span class="mw-headline" id="key.28.29_.28Elemente_mit_Hilfe_eines_Schl.C3.BCsselwerts_ausw.C3.A4hlen.29">key() (Elemente mit Hilfe eines Schlüsselwerts auswählen)</span></h2>
+<p>Wählt einen Knoten aus, der für einen benannten Schlüssel einen bestimmten Wert besitzt. Sinnvoll, um etwa von allen Elementen nur solche auszuwählen, die aufgrund von Inhalt oder Wertzuweisungen an Attribute bestimmte Kriterien erfüllen.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Name]: Name eines Schlüssels. Der Schlüssel selbst muss zuvor mit Hilfe der Seite xsl:key-Anweisung definiert worden sein und im name-Attribut der Anweisung den hier angegebenen Namen erhalten haben.
+</li><li>[Wert]: Der Wert, der zur Eingrenzung auszuwählender Elemente dient. Nur Elemente, die dem Schlüssel entsprechen und dabei diesen Wert besitzen, werden ausgewählt.
+</li></ul>
+<p>Liefert das erste Element zurück, das den Auswahlkriterien entspricht.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:key</span> <span class="re0">name</span>=<span class="st0">&quot;k3&quot;</span> <span class="re0">match</span>=<span class="st0">&quot;datensatz&quot;</span> <span class="re0">use</span>=<span class="st0">&quot;handelsklasse&quot;</span> <span class="re2">/&gt;</span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;/&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;html<span class="re2">&gt;</span></span><span class="re1">&lt;head<span class="re2">&gt;</span></span><span class="re1">&lt;body<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:for-each</span> <span class="re0">select</span>=<span class="st0">&quot;key('k3','III')&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:apply-templates</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:for-each<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/body<span class="re2">&gt;</span></span><span class="re1">&lt;/html<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird mit Hilfe der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:key_.28Schl.C3.BCssel_f.C3.BCr_Auswahl_von_Elementen.29" title="XML/XSL/XSLT/Sprachelemente">xsl:key</a>-Anweisung für ein Element namens <code>datensatz</code> ein Schlüssel definiert, der den Namen <code>k3</code> erhält und sich auf den Inhalt eines zu <code>datensatz</code> untergeordneten Elements namens <code>handelsklasse</code> bezieht. Es wird angenommen, dass die XML-Daten unterhalb ihres Wurzelelements aus vielen Elementen vom Typ <code>datensatz</code> bestehen. Durch Anwendung der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:for-each_.28f.C3.BCr_jedes_Element_aus_einer_Menge_wiederholen.29" title="XML/XSL/XSLT/Sprachelemente">xsl:for-each</a>-Anweisung in Verbindung mit der Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#key.28.29_.28Elemente_mit_Hilfe_eines_Schl.C3.BCsselwerts_ausw.C3.A4hlen.29" title="XML/XSL/XPath/Funktionen">key()</a> im select-Attribut werden nur solche Datensätze ausgewählt, die im untergeordneten Element <code>handelsklasse</code> den Wert <code>III</code> enthalten. Für diesen Fall werden mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:apply-templates_.28untergeordnete_Schablonen_anwenden.29" title="XML/XSL/XSLT/Sprachelemente">xsl:apply-templates</a> untergeordnete Template-Definitionen aufgerufen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: lang() (Element auf bestimmten Sprachcode überprüfen)">Bearbeiten</a>]</span> <span class="mw-headline" id="lang.28.29_.28Element_auf_bestimmten_Sprachcode_.C3.BCberpr.C3.BCfen.29">lang() (Element auf bestimmten Sprachcode überprüfen)</span></h2>
+<p>Überprüft, ob ein Element einen bestimmten Sprachcode verwendet. Voraussetzung ist, dass in dem Element das XML-Attribut <code>xml:lang</code> notiert ist, also beispielsweise:
+</p>
+<pre>&lt;description xml:lang=&quot;de&quot;&gt;die Beschreibung zu irgendetwas&lt;/description&gt;</pre>
+<p>In der DTD wäre folgende zugehörige Definition erforderlich:
+</p>
+<pre>&lt;!ATTLIST description  xml:lang NMTOKEN #IMPLIED&gt;</pre>
+<p>Die Angaben zum Attribut <code>xml:lang</code> können <a href="http://wiki.selfhtml.org/wiki/Referenz:Sprachkürzel" title="Referenz:Sprachkürzel">Sprachenkürzel</a> sein.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li><code>[Zeichenkette]</code> 	für den Ländercode, auf den hin überprüft werden soll (z.B. de).
+</li></ul>
+<p>Liefert <code>true</code> zurück, wenn das Element diesen Ländercode in seinem <code>xml:lang</code>-Attribut angibt, und <code>false</code>, wenn kein <code>xml:lang</code>-Attribut vorhanden ist, oder wenn es einen anderen als den im Argument übergebenen Wert hat.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;description&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:choose<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:when</span> <span class="re0">test</span>=<span class="st0">&quot;lang('de')&quot;</span><span class="re2">&gt;</span></span>
+   <span class="sc3"><span class="re1">&lt;h4<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>Beschreibung:<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/h4<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:when<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:otherwise<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;h4<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>Description:<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/h4<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:otherwise<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:choose<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel sorgt dafür, dass einem Element namens <code>description</code> im HTML-Ergebnisbaum eine h4-Überschrift vorangestellt wird. Dabei wird mit Hilfe der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:choose_.28Auswahl_treffen.29" title="XML/XSL/XSLT/Sprachelemente">xsl:choose</a>-Anweisung im <code>when</code>-Zweig mit Hilfe der Funktion <code>lang()</code> überprüft, ob das description-Element <code>xml:lang="de"</code> als Attribut enthält. Wenn ja, wird als Text der h4-Überschrift das deutsche Wort <code>Beschreibung</code> ausgegeben, andernfalls das englische Wort <code>Description</code>. Am Ende wird dann noch mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a> der Inhalt des description-Elements ausgegeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: last() (Positionsnummer des letzten Knotens einer Reihe ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="last.28.29_.28Positionsnummer_des_letzten_Knotens_einer_Reihe_ermitteln.29">last() (Positionsnummer des letzten Knotens einer Reihe ermitteln)</span></h2>
+<p>Ermittelt die Positionsnummer des letzten von mehreren Knoten eines Knoten-Sets.
+</p><p>Erwartet keine Argumente.
+</p><p>Liefert die Positionsnummer des letzten Knotens zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;zahl&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:if</span> <span class="re0">test</span>=<span class="st0">&quot;position()&#160;!= last()&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>, <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:if<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel definiert ein Template für ein Element namens <code>zahl</code>. Im Beispiel wird angenommen, dass mehrere solcher Elemente nacheinander innerhalb eines gemeinsamen übergeordneten Elements notiert sind, also beispielsweise die einzelnen Zahlen innerhalb einer Lottozahlenreihe. Bei jeder Anwendung des Templates wird zunächst mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a> die aktuelle Zahl ausgegeben. Danach soll hinter allen außer der letzten Zahl ein Komma ausgegeben werden, sodass eine Ausgabe wie z.B. 3,15,28,29,33,43 entsteht. Dazu wird mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:if_.28Wenn-Bedingung.29" title="XML/XSL/XSLT/Sprachelemente">xsl:if</a> abgefragt, ob die Positionsnummer des aktuellen Elements innerhalb der Reihe (ermittelt mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#position.28.29_.28Positionsnummer_des_aktuellen_Knotens_ermitteln.29" title="XML/XSL/XPath/Funktionen"> position()</a>) ungleich (!=) der Positionsnummer des letzten Elements (ermittelt mit der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#last.28.29_.28Positionsnummer_des_letzten_Knotens_einer_Reihe_ermitteln.29" title="XML/XSL/XPath/Funktionen">last()</a>-Funktion) ist. Ist dies der Fall, wird ein Komma ausgegeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: local-name() (lokalen Namen eines Knoten-Sets ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="local-name.28.29_.28lokalen_Namen_eines_Knoten-Sets_ermitteln.29">local-name() (lokalen Namen eines Knoten-Sets ermitteln)</span></h2>
+<p>Ermittelt aus einem Knotennamen mit Namensraumangabe den lokalen Namensteil - aus einem Elementnamen wie xhtml:blockquote würde also blockquote ermittelt.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Knoten-Set]: (optional) Ein Knoten-Set bzw. einen Pfad nach <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" title="XML/XSL/XPath/Einführung">XPath-Syntax</a>, dessen lokaler Name ermittelt werden soll. Fehlt die Angabe des Arguments, wird die Funktion auf das jeweils aktuelle Element angewendet.
+</li></ul>
+<p>Liefert den lokalen Elementnamen zurück, sofern der Elementname aus einer Namensraumangabe und dem lokalen Elementnamen besteht. Ansonsten wird eine leere Zeichenkette zurückgeliefert.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;autor:*&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;div<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span></span>Name des Knotens: <span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;name(.)&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/b<span class="re2">&gt;</span></span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span></span>local-name:<span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;local-name(.)&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/b<span class="re2">&gt;</span></span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span></span>Inhalt:<span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:apply-templates</span> <span class="re2">/&gt;</span><span class="re1">&lt;/b<span class="re2">&gt;</span></span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/div<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Der Beispielausschnitt zeigt eine Template-Definition für angenommene Elemente, die aus dem Namensraum <code>autor</code> stammen. In XML wären das beispielsweise Elemente, die in der Form <code>&lt;autor:vorname&gt;...&lt;/autor:vorname&gt;</code> notiert sind. Das Template ermittelt mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#name.28.29_.28Namen_eines_Knoten-Sets_ermitteln.29" title="XML/XSL/XPath/Funktionen">name(.)</a> den vollständigen Namen des aktuellen Knotens, also z.B. <code>autor:vorname</code>, und mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#local-name.28.29_.28lokalen_Namen_eines_Knoten-Sets_ermitteln.29" title="XML/XSL/XPath/Funktionen">local-name(.)</a> den lokalen Namensteil, also z.B. <code>vorname</code>. Anschließend werden mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:apply-templates_.28untergeordnete_Schablonen_anwenden.29" title="XML/XSL/XSLT/Sprachelemente">xsl:apply-templates</a> untergeordnete Template-Definitionen angewendet.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: name() (Namen eines Knoten-Sets ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="name.28.29_.28Namen_eines_Knoten-Sets_ermitteln.29">name() (Namen eines Knoten-Sets ermitteln)</span></h2>
+<p>Ermittelt den vollständigen Namen eines Knoten-Sets, gegebenenfalls auch mit XML-Namensraumangabe.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Knoten-Set]: (optional) Ein Knoten-Set bzw. einen Pfad nach Seite XPath-Syntax, dessen vollständiger Name ermittelt werden soll. Fehlt die Angabe des Arguments, wird die Funktion auf das jeweils aktuelle Element angewendet.
+</li></ul>
+<p>Liefert den Namen des ausgewählten Knoten-Sets zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">name</span>=<span class="st0">&quot;Kurzbeschreibung&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;name()&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>: <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel definiert ein Template für ein XML-Element namens Kurzbeschreibung. Darin wird definiert, dass zuerst der Name des Elements ausgegeben wird, also Kurzbeschreibung, dann ein Doppelpunkt, und dann der Inhalt des Elements. Die Ausgabe des Elementnamens wird erreicht durch die <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung, die im select-Attribut als Wert die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#name.28.29_.28Namen_eines_Knoten-Sets_ermitteln.29" title="XML/XSL/XPath/Funktionen">name()</a> zugewiesen bekommt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: namespace-uri() (Namensraum eines Elements ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="namespace-uri.28.29_.28Namensraum_eines_Elements_ermitteln.29">namespace-uri() (Namensraum eines Elements ermitteln)</span></h2>
+<p>Ermittelt den URI für die DTD zum verwendeten XML-Namensraum. Es handelt sich normalerweise um jene Angaben, die bei der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:stylesheet_.28Stylesheet_Wurzelelement.29" title="XML/XSL/XSLT/Sprachelemente"> xsl:stylesheet</a>-Anweisung im xmlns:-Attribut gemacht wurden. Voraussetzung dafür, dass ein Wert zurückgeliefert wird, ist, dass ein Element eine Namensraumangabe verwendet, also z.B. <code>xsl:template</code> oder <code>xhtml:div</code>.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Knoten-Set]: (optional) Ein Knoten-Set bzw. einen Pfad nach <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" title="XML/XSL/XPath/Einführung">XPath-Syntax</a>, dessen URI der DTD für den XSL-Namensraum ermittelt werden soll. Fehlt die Angabe des Arguments, wird die Funktion auf das jeweils aktuelle Element angewendet.
+</li></ul>
+<p>Liefert den URI zurück, die für den zugehörigen Namensraum des Elements zurückgegeben wurde.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;ISO-8859-1&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;xsl:stylesheet</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">xmlns:xsl</span>=<span class="st0">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span><span class="re2">&gt;</span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;/&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;html<span class="re2">&gt;</span></span><span class="re1">&lt;head<span class="re2">&gt;</span></span><span class="re1">&lt;/head<span class="re2">&gt;</span></span><span class="re1">&lt;body<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>XSL-URI dieses Stylesheets: <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;namespace-uri(document('')/*)&quot;</span> <span class="re2">/&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;/body<span class="re2">&gt;</span></span><span class="re1">&lt;/html<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;/xsl:stylesheet<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel zeigt ein vollständiges XSLT-Stylesheet. Im einleitenden stylesheet-Tag wird wie üblich mit <code>xmlns:xsl="<a rel="nofollow" class="external free" href="http://www.w3.org/1999/XSL/Transform">http://www.w3.org/1999/XSL/Transform</a>"</code> der URI der DTD für den XSL-Namensraum angegeben. Im weiteren Verlauf des Stylesheets wird ein Template für das Wurzelelement definiert. Darin wird aber einfach nur der URI des XSL-Namensraums für dieses Stylesheet ausgegeben. Dazu wird bei der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung im select-Attribut als Wert die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#namespace-uri.28.29_.28Namensraum_eines_Elements_ermitteln.29" title="XML/XSL/XPath/Funktionen">namespace-uri()</a> übergeben. Die Ausgabe im Beispiel würde lauten:
+<code>XSL-URI dieses Stylesheets: <a rel="nofollow" class="external free" href="http://www.w3.org/1999/XSL/Transform">http://www.w3.org/1999/XSL/Transform</a></code>
+</p><p>Im Beispiel wird der Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#namespace-uri.28.29_.28Namensraum_eines_Elements_ermitteln.29" title="XML/XSL/XPath/Funktionen">namespace-uri()</a> als Argument <code>document('')/*</code> übergeben. Das ist folgendermaßen zu verstehen: es soll das Dokument-Element ermittelt werden, was am einfachsten durch die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#document.28.29_.28anderes_XML-Dokument_aufrufen.29" title="XML/XSL/XPath/Funktionen">document(<i>)</i></a> (mit dem Leerstring als Parameter) bewerkstelligt wird. Mit dem daran anschließenden /* wird, da sich der gesamte Ausdruck innerhalb eines Aufrufs von <b>namespace-uri()</b> befindet, der Namensraum-URI für alle Elemente innerhalb dieses Dokument-Elements ermittelt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: normalize-space() (Leerzeichen am Anfang und Ende einer Zeichenkette entfernen)">Bearbeiten</a>]</span> <span class="mw-headline" id="normalize-space.28.29_.28Leerzeichen_am_Anfang_und_Ende_einer_Zeichenkette_entfernen.29">normalize-space() (Leerzeichen am Anfang und Ende einer Zeichenkette entfernen)</span></h2>
+<p>Entfernt am Anfang und am Ende der übergebenen Zeichenkette die Leerraumzeichen und ersetzt mehrere aufeinanderfolgende Leerraumzeichen in der Zeichenkette durch ein einziges Leerzeichen (#x20). Leerraumzeichen sind die Zeichen mit den Hexadezimalwerten #x20 (einfaches Leerzeichen), #x9 (Tabulator-Zeichen), #xD (Wagenrücklaufzeichen) und #xA (Zeilenvorschub-Zeichen).
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette]: (optional) Die Zeichenkette, die behandelt werden soll. Fehlt das Argument, wird die Funktion auf den Inhaltsknoten des aktuellen Knotens angewendet, bei einem Element <code>&lt;name&gt;...&lt;/name&gt;</code> beispielsweise auf dessen Inhalt, also das, was hier durch die drei Pünktchen markiert ist.
+</li></ul>
+<p>Liefert die behandelte Zeichenkette wieder zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;augenfarbe&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;tr<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>Augenfarbe<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/td<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;normalize-space()&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/td<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/tr<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel definiert ein Template für ein XML-Element namens <code>augenfarbe</code>. Darin wird eine HTML-Tabellenzeile konstruiert. In der ersten Spalte steht der fixe Text Augenfarbe, und in der zweiten Spalte wird der Wert des Elements ausgegeben. Dabei werden jedoch zuvor führende und abschließende Leerraumzeichen, die z.B. durch unachtsames Editieren oder Behandlung durch andere Programme entstanden sein könnten, entfernt. Um das zu erreichen, wird nicht einfach <code>&lt;xsl:value-of select="." /&gt;</code> notiert, sondern <code>&lt;xsl:value-of select="normalize-space()" /&gt;</code>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: not() (Argument verneinen)">Bearbeiten</a>]</span> <span class="mw-headline" id="not.28.29_.28Argument_verneinen.29">not() (Argument verneinen)</span></h2>
+<p>Verneint das übergebene Argument und liefert dessen gegenteiliges Ergebnis zurück.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Bedingung]: Es kann sich um eine Vergleichsoperation handeln, aber auch um eine andere Funktion, die als Rückgabewert entweder true oder false liefert.
+</li></ul>
+<p>Liefert <code>true</code> zurück, wenn die als Argument übergebene Bedingung <code>false</code> ergibt, und <code>false</code>, wenn die Bedingung true ergibt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;geburtsjahr&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:if</span> <span class="re0">test</span>=<span class="st0">&quot;not(. &amp;gt; '1980')&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:if<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel zeigt die Template-Definition eines XML-Elements namens <code>geburtsjahr</code>. Das Geburtsjahr soll nur dann ausgegeben werden, wenn der aktuelle Wert nicht größer ist als 1980. Dazu wird mit Hilfe der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:if_.28Wenn-Bedingung.29" title="XML/XSL/XSLT/Sprachelemente">xsl:if</a>-Anweisung eine Bedingung formuliert. Im test-Attribut, das die Bedingung enthält, wird mit . &gt; '1980' die Bedingung "aktueller Wert größer 1980" formuliert. Der gesamte Ausdruck wird jedoch der Funktion not() als Argument übergeben, sodass die Bedingung umgekehrt wird und lautet: "aktueller Wert nicht größer 1980". Dies ist übrigens das gleiche, wie wenn als Bedingung notiert würde: <code>&lt;xsl:if test=". &lt;='1980')"&gt;</code>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: number() (Argument in eine Zahl umwandeln)">Bearbeiten</a>]</span> <span class="mw-headline" id="number.28.29_.28Argument_in_eine_Zahl_umwandeln.29">number() (Argument in eine Zahl umwandeln)</span></h2>
+<p>Versucht, eine übergebene Zeichenkette als Zahl zu interpretieren und gibt die ermittelte Zahl zurück. Wenn beispielsweise "31" übergeben wird, wird 31 zurückgeliefert. Wird "xyz" übergeben, wird NaN (not a number) zurückgeliefert. Bei Übergabe von "3xy" wird 3 zurückgeliefert. Und bei Übergabe von booleschen Werten, also true oder false, wird 0 für false und 1 für true zurückgeliefert. Führende und abschließende Leerraumzeichen der übergebenen Zeichenkette werden ignoriert.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette bzw. Wert]: (optional) Es kann sich z.B. um den Inhalt eines Elements oder den Wert einer Variablen handeln, oder um den Rückgabewert einer anderen Funktion. Fehlt das Argument, wird die Funktion auf den aktuellen Knoteninhalt angewendet, z.B. auf den Inhalt eines Elements.
+</li></ul>
+<p>Liefert die ermittelte Zahl zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;preis&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;number()&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel definiert ein Template für ein XML-Element namens <code>preis</code>. Das Template gibt den Wert des Elements aus, jedoch wird dabei versucht, den Wert numerisch zu interpretieren. Dazu wird im select-Attribut der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung die Funktion number() angewendet. Da number() kein Argument übergeben wird, bezieht sich die Funktion auf den Wert des aktuellen Elements preis.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: position() (Positionsnummer des aktuellen Knotens ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="position.28.29_.28Positionsnummer_des_aktuellen_Knotens_ermitteln.29">position() (Positionsnummer des aktuellen Knotens ermitteln)</span></h2>
+<p>Ermittelt, der wievielte Knoten ein aktueller Knoten in einem Knoten-Set ist. Bei einem Element namens liste mit beispielsweise 7 untergeordneten Elementen namens listeneintrag hat das zweite dieser Elemente in Bezug auf liste die Positionsnummer 2.
+</p><p>Erwartet keine Argumente.
+</p><p>Liefert die Ordnungszahl des aktuellen Knotens zurück. Beim ersten Knoten 1, beim zweiten 2 usw.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:variable</span> <span class="re0">name</span>=<span class="st0">&quot;anzahl&quot;</span> <span class="re0">select</span>=<span class="st0">&quot;count(//listeneintrag)&quot;</span> <span class="re2">/&gt;</span></span>
+...
+<span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;liste&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:for-each</span> <span class="re0">select</span>=<span class="st0">&quot;listeneintrag&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;position()&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>. von <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;$anzahl&quot;</span> <span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>: <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:for-each<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+</p><p>Das Beispiel nimmt an, dass es ein XML-Element namens <code>liste</code> gibt, das aus mehreren Unterelementen <code>listeneintrag</code> besteht. Zunächst wird mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:variable_.28Variable_definieren.29" title="XML/XSL/XSLT/Sprachelemente">xsl:variable</a> eine Variable namens <code>anzahl</code> definiert, in der die Anzahl der Listeneinträge gespeichert wird. Dazu wird im select-Attribut die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#count.28.29_.28Anzahl_Knoten_in_einem_Knoten-Set_ermitteln.29" title="XML/XSL/XPath/Funktionen">count()</a> angewendet. Als Argument wird ihr das Element <code>listeneintrag</code> übergeben. In der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:for-each_.28f.C3.BCr_jedes_Element_aus_einer_Menge_wiederholen.29" title="XML/XSL/XSLT/Sprachelemente">for-each</a>-Schleife, die alle Listeneinträge abarbeitet, wird vor dem Text des Listeneintrags jeweils die aktuelle Positionsnummer mit position() ausgegeben, und dahinter die Gesamtzahl, die in der Variablen <code>anzahl</code> gespeichert ist, also etwa so:
+</p>
+<dl><dd>1. von 5: Text des ersten Listeneintrags
+</dd><dd>2. von 5: Text des zweiten Listeneintrags
+</dd></dl>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> 
+<ul><li>&lt;xsl:value-of select=&quot;listeneintrag[position()=1]&quot; /&gt; kann auch so notiert werden:
+</li></ul>
+<dl><dd>&lt;xsl:value-of select=&quot;listeneintrag[1]&quot; /&gt;
+</dd></dl>
+<ul><li>&lt;xsl:value-of select=&quot;listeneintrag[position()=last()]&quot; /&gt; kann auch so notiert werden:
+</li></ul>
+<dl><dd>&lt;xsl:value-of select=&quot;listeneintrag[last()]&quot; /&gt;
+</dd></dl>
+<ul><li>&lt;xsl:if test=&quot;position()=1&quot;&gt; ist etwas anderes als &lt;xsl:if test=&quot;1&quot;&gt;! Im ersten Fall wird geprüft, ob der aktuell bearbeitete Knoten der erste ist, im zweiten Fall wird geprüft, ob der aktuelle Kontext logisch gesehen wahr ist.</div>
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=25" title="Abschnitt bearbeiten: round() (kaufmännisch auf- oder abrunden)">Bearbeiten</a>]</span> <span class="mw-headline" id="round.28.29_.28kaufm.C3.A4nnisch_auf-_oder_abrunden.29">round() (kaufmännisch auf- oder abrunden)</span></h2>
+<p>Rundet eine Bruchzahl zur nächstgelegenen Ganzzahl auf. Bei Bruchwerten kleiner als [Wert],5 wird abgerundet, bei Bruchwerten größer gleich [Wert],5 aufgerundet. Die Zahl 5,49 wird also auf 5 abgerundet, und 5,5 auf 6 aufgerundet.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zahl]: Die zu rundende Zahl. Es kann sich auch um den Inhalt eines Knotens oder den einer Variablen handeln. Dabei wird der Wert intern zunächst als Zahl umgewandelt, und zwar so, als würde die Funktion <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#number.28.29_.28Argument_in_eine_Zahl_umwandeln.29" title="XML/XSL/XPath/Funktionen">number()</a> angewendet.
+</li></ul>
+<p>Liefert die Ganzzahl zurück, auf die auf- oder abgerundet wurde.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;round(betrag)&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;xsl:text</span> <span class="re2">&gt;</span></span>.-<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird von einem XML-Element namens <code>betrag</code> angenommen, dass es einen "krummen" Wert enthält, der kaufmännisch gerundet werden soll. Dazu wird beim Auswählen des Inhalts von betrag mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a> im select-Attribut die Funktion round() aufgerufen. Sie bewirkt, dass der Elementinhalt aufgerundet wird, bevor er in den Ergebnisbaum der Datenausgabe übernommen wird.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=26" title="Abschnitt bearbeiten: starts-with() (Überprüfen, ob Zeichenkette mit bestimmter Teilzeichenkette beginnt)">Bearbeiten</a>]</span> <span class="mw-headline" id="starts-with.28.29_.28.C3.9Cberpr.C3.BCfen.2C_ob_Zeichenkette_mit_bestimmter_Teilzeichenkette_beginnt.29">starts-with() (Überprüfen, ob Zeichenkette mit bestimmter Teilzeichenkette beginnt)</span></h2>
+<p>Findet heraus, ob am Beginn einer Zeichenkette eine bestimmte Teilzeichenkette vorkommt.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette]: Zeichenkette, die durchsucht werden soll. Es kann sich z.B. um den Inhalt eines Elements oder den Wert einer Variablen handeln.
+</li><li>[Teilzeichenkette]: Diejenige Zeichenfolge, nach der am Beginn der durchsuchten Zeichenkette gesucht wird. Es kann sich direkt um Text handeln, aber auch um den Inhalt eines Knotens oder den Wert einer Variablen.
+</li></ul>
+<p>Liefert <code>true</code> zurück, wenn die Zeichenkette mit der Teilzeichenkette beginnt, und <code>false</code>, wenn sie nicht damit beginnt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;mitarbeitername&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:if</span> <span class="re0">test</span>=<span class="st0">&quot;starts-with(.,'Frau')&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:if<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:if</span> <span class="re0">test</span>=<span class="st0">&quot;starts-with(.,'Herr')&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;i<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/i<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:if<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Im Beispiel wird für ein XML-Element namens <code>mitarbeitername</code> ein Template definiert. Dabei wird mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:if_.28Wenn-Bedingung.29" title="XML/XSL/XSLT/Sprachelemente">xsl:if</a> abgefragt, ob der Elementinhalt mit Frau oder mit Herr beginnt. Im Fall "Frau" wird der Name in Fettschrift in den HTML-Ergebnisbaum geschrieben. Einträge, die mit Herr beginnen, werden dagegen in Kursivschrift geschrieben. Die xsl:if-Abfrage benutzt dazu die Funktion starts-with(). Als Parameter werden der Funktion der Inhalt des aktuellen Knotens (.) übergeben, sowie die Suchzeichenfolge Frau bzw. Herr.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=27" title="Abschnitt bearbeiten: string() (Argument in Zeichenkette umwandeln)">Bearbeiten</a>]</span> <span class="mw-headline" id="string.28.29_.28Argument_in_Zeichenkette_umwandeln.29">string() (Argument in Zeichenkette umwandeln)</span></h2>
+<p>Interpretiert ein übergebenes Argument als Zeichenkette und gibt die ermittelte Zeichenkette zurück. Wenn beispielsweise 31 übergeben wird, wird "31" zurückgeliefert. Negative Zahlen erhalten ein vorangestelltes Minuszeichen, Bruchzahlen einen Dezimalpunkt. Bei Übergabe von booleschen Werten, also true oder false, wird "true" bzw. "false" als Zeichenkette zurückgeliefert.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Argument]: (optional) Es kann sich z.B. um den Inhalt eines Elements oder den Wert einer Variablen handeln, oder um den Rückgabewert einer anderen Funktion. Fehlt das Argument, wird die Funktion auf den aktuellen Knoteninhalt angewendet, z.B. auf den Inhalt eines Elements.
+</li></ul>
+<p>Liefert die ermittelte Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;spannung&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;string()&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span> Volt<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel definiert ein Template für ein XML-Element namens <code>spannung</code>. Das Template gibt den Wert des Elements aus, jedoch wird dabei der numerische Inhalt in eine Zeichenkette umgewandelt. Dazu wird im select-Attribut der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung die Funktion string() angewendet. Da string() kein Argument übergeben wird, bezieht sich die Funktion auf den Wert des aktuellen Elements spannung.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=28" title="Abschnitt bearbeiten: string-length() (Anzahl Zeichen einer Zeichenkette ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="string-length.28.29_.28Anzahl_Zeichen_einer_Zeichenkette_ermitteln.29">string-length() (Anzahl Zeichen einer Zeichenkette ermitteln)</span></h2>
+<p>Ermittelt, wie lang eine Zeichenkette ist.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette]: (optional) Zeichenkette, deren Länge ermittelt werden soll. Es kann sich z.B. um den Inhalt eines Elements oder den Wert einer Variablen handeln. Falls das Argument keine Zeichenkette ist, sondern beispielsweise eine Zahl, wird es zunächst intern mit der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#string.28.29_.28Argument_in_Zeichenkette_umwandeln.29" title="XML/XSL/XPath/Funktionen"> string()</a>-Funktion in eine Zeichenkette umgewandelt. Fehlt das Argument, wird die Funktion auf den aktuellen Knoteninhalt angewendet, z.B. auf den Inhalt eines Elements.
+</li></ul>
+<p>Liefert die Anzahl der Zeichen zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;mitteilungstext&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:choose<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:when</span> <span class="re0">test</span>=<span class="st0">&quot;string-length() &amp;lt; 20&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span><span class="re1">&lt;b<span class="re2">&gt;</span></span></span>Fehler: zu geringe Mitteilungsmenge!<span class="sc3"><span class="re1">&lt;/b<span class="re2">&gt;</span></span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;/xsl:when<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:otherwise<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;/xsl:otherwise<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:choose<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel definiert ein Template für ein XML-Element namens <code>mitteilungstext</code>. Der Inhalt dieses Elements soll nur dann in den Ergebnisbaum übernommen werden, wenn er mindestens 20 Zeichen besitzt. Dazu wird mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:choose_.28Auswahl_treffen.29" title="XML/XSL/XSLT/Sprachelemente">xsl:choose</a> eine logische Verzweigung realisiert. Im <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:when_.28Bedingung_innerhalb_einer_Auswahl.29" title="XML/XSL/XSLT/Sprachelemente">xsl:when</a>-Zweig wird abgefragt, ob der Elementinhalt kleiner als 20 Zeichen ist. Dazu wird die Funktion string-length() angewendet. Da kein Argument übergeben wird, bezieht sie sich automatisch auf den Inhalt des aktuellen Elements. Wenn weniger als 20 Zeichen ermittelt werden, wird eine Fehlermeldung in die Ausgabe geschrieben. Andernfalls (<a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:otherwise_.28Andernfalls-Anweisung.29" title="XML/XSL/XSLT/Sprachelemente">xsl:otherwise</a>) wird der Inhalt von <code>mitteilungstext</code> in den Ergebnisbaum geschrieben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=29" title="Abschnitt bearbeiten: substring() (Teilzeichenkette aus Zeichenkette extrahieren)">Bearbeiten</a>]</span> <span class="mw-headline" id="substring.28.29_.28Teilzeichenkette_aus_Zeichenkette_extrahieren.29">substring() (Teilzeichenkette aus Zeichenkette extrahieren)</span></h2>
+<p>Extrahiert aus einer Zeichenkette einen Teil ab einer bestimmten Zeichenposition und auf Wunsch eine bestimmte Anzahl von Zeichen.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette] 	Zeichenkette, aus der ein Teil extrahiert werden soll. Es kann sich z.B. um den Inhalt eines Elements oder den Wert einer Variablen handeln. Falls das Argument keine Zeichenkette ist, sondern beispielsweise eine Zahl, wird es zunächst intern mit der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#string.28.29_.28Argument_in_Zeichenkette_umwandeln.29" title="XML/XSL/XPath/Funktionen">string()</a>-Funktion in eine Zeichenkette umgewandelt.
+</li><li>[Zahl] 	Position innerhalb der Zeichenkette, ab der extrahiert werden soll. Wenn z.B. ab dem 1. Zeichen extrahiert werden soll, muss 1 übergeben werden, wenn ab dem 20. Zeichen extrahiert werden soll, ist 20 zu übergeben.
+</li><li>[Zahl] 	(optional) Anzahl der Zeichen, die extrahiert werden sollen. Fehlt dieses Argument, wird bis zum Ende der Zeichenkette extrahiert.
+</li></ul>
+<p>Liefert die extrahierte Teilzeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;ort&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;tr<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;substring(.,1,5)&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/td<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;substring(.,7)&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/td<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/tr<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Das Beispiel definiert ein Template für ein XML-Element namens ort, von dem angenommen wird, dass es Daten in der Form <code>81379 München</code> enthält. Postleitzahl und Ortsname sollen bei der Ausgabe in den Ergebnisbaum auseinandergenommen und in zwei getrennte Tabellenzellen übernommen werden. Dazu wird dem select-Attribut der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung jeweils die Funktion substring() zugewiesen. Sie extrahiert beim ersten der beiden Aufrufe für den Inhalt des aktuellen Elements, der mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#current.28.29_.28aktuellen_Knoten_ermitteln.29" title="XML/XSL/XPath/Funktionen">current()</a> bzw. . ermittelt wird, die ersten 5 Zeichen, also die Postleitzahl, und beim zweiten Aufruf die Zeichen ab Position 7 bis zum Ende der Ortsangabe, also den Ortsnamen ohne die Postleitzahl.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=30" title="Abschnitt bearbeiten: substring-after() (Zeichenkette ab einer Position mit Teilzeichenkette ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="substring-after.28.29_.28Zeichenkette_ab_einer_Position_mit_Teilzeichenkette_ermitteln.29">substring-after() (Zeichenkette ab einer Position mit Teilzeichenkette ermitteln)</span></h2>
+<p>Prüft, ob eine Zeichenkette eine bestimmte Teilzeichenkette enthält. Ist das der Fall, wird diejenige Restzeichenkette zurückgegeben, die nach dem ersten Vorkommen der Teilzeichenkette folgt. Dies ist z.B. sinnvoll, um in Daten, die aus dem Schema Variablenname=zugewiesener Wert bestehen, den Wert zu extrahieren. Analog dazu arbeitet die Funktion substring-before(), die aus den gleichen Daten den Variablennamen extrahieren kann.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette] 	Zeichenkette, aus der ein Teil extrahiert werden soll. Es kann sich z.B. um den Inhalt eines Elements oder den Wert einer Variablen handeln. Falls das Argument keine Zeichenkette ist, sondern beispielsweise eine Zahl, wird es zunächst intern mit der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#string.28.29_.28Argument_in_Zeichenkette_umwandeln.29" title="XML/XSL/XPath/Funktionen">string()</a>-Funktion in eine Zeichenkette umgewandelt.
+</li><li>[Teilzeichenkette] 	Zeichenkette, die in der zuvor angegebenen Zeichenkette vorkommen soll. Es kann sich auch um ein einzelnes Zeichen handeln.
+</li></ul>
+<p>Liefert die Restzeichenkette hinter der Teilzeichenkette zurück, falls die Teilzeichenkette gefunden wurde. Andernfalls wird eine leere Zeichenkette zurückgegeben. Die Gegenfunktion substring-before() gibt dementsprechend den Teil der Zeichenkette zurück, der vor der Teilzeichenkette steht.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;config-eintrag&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;th<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;substring-before(current(),'=')&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/th<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;td<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;substring-after(current(),'=')&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/td<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel nimmt an, dass es ein XML-Element namens <code>config-eintrag</code> gibt, in dem Bezeichnungen und Werte durch ein Gleichheitszeichen getrennt sind, z.B. Breite=475m. In der Template-Definition für dieses Element sollen der Teil vor dem Gleichheitszeichen in eine HTML-Tabellenkopfzelle übernommen werden, und der Teil hinter dem Gleichheitszeichen in eine Tabellendatenzeile. Dazu wird im ersten Teil dem select-Attribut der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung zuerst die Funktion substring-before() zugewiesen, im zweiten Teil die Funktion substring-after(). In beiden Fällen wird der Inhalt des aktuellen Elements, ermittelt mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#current.28.29_.28aktuellen_Knoten_ermitteln.29" title="XML/XSL/XPath/Funktionen"> current()</a>, durchsucht. Als Zeichenkette, die das Signal für die davor bzw. dahinter zu extrahierende Teilzeichenkette ist, dient das Gleichheitszeichen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=31" title="Abschnitt bearbeiten: substring-before() (Zeichenkette vor einer Position mit Teilzeichenkette ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="substring-before.28.29_.28Zeichenkette_vor_einer_Position_mit_Teilzeichenkette_ermitteln.29">substring-before() (Zeichenkette vor einer Position mit Teilzeichenkette ermitteln)</span></h2>
+<p>Ist die Gegenfunktion zu <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#substring-after.28.29_.28Zeichenkette_ab_einer_Position_mit_Teilzeichenkette_ermitteln.29" title="XML/XSL/XPath/Funktionen">substring-after()</a>. Beispiel siehe dort.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=32" title="Abschnitt bearbeiten: sum() (Summe von Zahlenwerten ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="sum.28.29_.28Summe_von_Zahlenwerten_ermitteln.29">sum() (Summe von Zahlenwerten ermitteln)</span></h2>
+<p>Ermittelt die Gesamtsumme der Zahlenwerte des Augangsknotens. Wenn Werte nicht als Zahl interpretiert werden können, wird NaN (not a number) ermittelt.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Knoten-Set] 	Ein Knoten-Set, für das die Summe seiner in Zahlen interpretierten Werte ermittelt werden soll. Sinnvollerweise enthält das Knoten-Set mehrere Knoten mit Werten, die als Zahlen interpretierbar sind, und deren Summe aus irgendeinem Grund interessant ist.
+</li></ul>
+<p>Liefert die Summe der ermittelten Werte zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;viereck&quot;</span><span class="re2">&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;name()&quot;</span> <span class="re2">/&gt;</span></span> Umfang:<span class="sc3"><span class="re1">&lt;/b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;sum(@*)&quot;</span> <span class="re2">/&gt;</span></span>cm
+<span class="sc3"><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel zeigt eine Template-Definition für ein XML-Element namens viereck, das etwa so notiert sein könnte:
+</p>
+<pre>&lt;viereck links=&quot;12&quot; rechts=&quot;12&quot; oben=&quot;20&quot; unten=&quot;20&quot; /&gt;</pre>
+<p>In der Übersetzung nach HTML wird einfach in einem Textabsatz der Umfang des Vierecks ausgegeben. Dazu wird mit <code>select="sum(@*)"</code> die Summe aller Attributwerte des viereck-Elements ermittelt. Bei dem zuvor notierten XML-Beispiel würde also 64 herauskommen, da dies die Summe der Attributwerte 12, 12, 20 und 20 ist. Das Argument @*, das im Beispiel der Funktion sum() übergeben wird, steht für "alle Attribute des Elements".
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=33" title="Abschnitt bearbeiten: system-property() (Systemeigenschaften ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="system-property.28.29_.28Systemeigenschaften_ermitteln.29">system-property() (Systemeigenschaften ermitteln)</span></h2>
+<p>Ermittelt Informationen über den verwendeten XSLT-Prozessor.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette] 	Eine Eigenschaft des XSLT-Prozessors. Folgende Angaben sollten von jedem XSLT-Prozessor unterstützt werden: 
+<ul><li>'xsl:version' (Version des XSLT-Standards, der vom Prozessor interpretiert wird), 
+</li><li>'xsl:vendor' (Hersteller der Prozessor-Software) und 
+</li><li>'xsl:vendor-url' (URI des Herstellers der Prozessor-Software).
+</li></ul>
+</li></ul>
+<p>Liefert den ermittelten Wert zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;zusatzinfos&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>XSL Version: <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;system-property('xsl:version')&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>XSL Prozessor-Hersteller: <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;system-property('xsl:vendor')&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;p<span class="re2">&gt;</span></span><span class="re1">&lt;b<span class="re2">&gt;</span></span><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>Hersteller URL-Adresse: <span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;system-property('xsl:vendor-url')&quot;</span> <span class="re2">/&gt;</span><span class="re1">&lt;/p<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel zeigt, wie man ein XML-Element, das in den XML-Daten beispielsweise als leeres Element definiert sein könnte, als Signalgeber benutzen kann, um in einer XSLT-Transformation an die betreffende Stelle bestimmte Daten einzusetzen. Im Beispiel wird ein XML-Element namens <code>zusatzinfos</code> angenommen, das so eine Funktion hat. Denn in der Template-Definition für dieses Element wird nicht dessen Inhalt ausgegeben, sondern es werden mit der system-property()-Funktion diverse Eigenschaften des verwendeten XSLT-Prozessors ermittelt und in den HTML-Ergebnisbaum mit übernommen. Dazu werden jeweils den select-Attributen der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisungen Aufrufe von system-property() übergeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=34" title="Abschnitt bearbeiten: translate() (Suchen und Ersetzen von Zeichen in einer Zeichenkette)">Bearbeiten</a>]</span> <span class="mw-headline" id="translate.28.29_.28Suchen_und_Ersetzen_von_Zeichen_in_einer_Zeichenkette.29">translate() (Suchen und Ersetzen von Zeichen in einer Zeichenkette)</span></h2>
+<p>Ersetzt einzelne Zeichen in einer Zeichenkette in andere Zeichen.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Zeichenkette] 	Zeichenkette, in der gesucht und ersetzt werden soll. Es kann sich z.B. um den Inhalt eines Elements oder den Wert einer Variablen handeln. Falls das Argument keine Zeichenkette ist, sondern beispielsweise eine Zahl, wird es zunächst intern mit der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#string.28.29_.28Argument_in_Zeichenkette_umwandeln.29" title="XML/XSL/XPath/Funktionen">string()</a>-Funktion in eine Zeichenkette umgewandelt.
+</li><li>[Zeichen] 	Ein oder mehrere Zeichen, die ersetzt werden sollen.
+</li><li>[Zeichen] 	Ein oder mehrere Zeichen, durch welche die zuvor angegebenen Zeichen ersetzt werden sollen. Mögliche Angaben sind z.B. ',' oder ']['. Dieses Argument muss übergeben werden, kann aber auch einen leeren Inhalt haben (<i>). Dann werden die Zeichen, die im zweiten Argument genannt sind, einfach durch nichts ersetzt, also gelöscht.</i>
+</li></ul>
+<p>Liefert die behandelte Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;ortsname&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;b<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;translate(current(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')&quot;</span> <span class="re2">/&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;/b<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+</p><p>Das Beispiel definiert ein Template für ein XML-Element namens <code>ortsname</code>. Der Inhalt des Elements wird in den Ergebnisbaum ausgegeben, doch dabei werden alle Kleinbuchstaben in Großbuchstaben umgewandelt. Zu diesem Zweck wird dem select-Attribut der <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:value-of_.28Wert_ausgeben.29" title="XML/XSL/XSLT/Sprachelemente">xsl:value-of</a>-Anweisung die Funktion translate() zugewiesen. Diese bestimmt für den Inhalt des aktuellen Elements, ermittelt mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen#current.28.29_.28aktuellen_Knoten_ermitteln.29" title="XML/XSL/XPath/Funktionen"> current()</a>, dass die Kleinbuchstaben von a bis z durch entsprechende Großbuchstaben ersetzt werden.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=35" title="Abschnitt bearbeiten: true() (booleschen Wert für &quot;wahr&quot; erzeugen)">Bearbeiten</a>]</span> <span class="mw-headline" id="true.28.29_.28booleschen_Wert_f.C3.BCr_.22wahr.22_erzeugen.29">true() (booleschen Wert für "wahr" erzeugen)</span></h2>
+<p>Bejaht einen Ausdruck.
+</p><p>Erwartet keine Argumente
+</p><p>Liefert einfach den logischen Wert true zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:variable</span> <span class="re0">name</span>=<span class="st0">&quot;passwortanzeige&quot;</span> <span class="re0">select</span>=<span class="st0">&quot;true()&quot;</span><span class="re2">/&gt;</span></span>
+&#160;
+<span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">name</span>=<span class="st0">&quot;passwort&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;xsl:choose<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:when</span> <span class="re0">test</span>=<span class="st0">&quot;$passwortanzeige&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;xsl:value-of</span> <span class="re0">select</span>=<span class="st0">&quot;.&quot;</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:when<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;xsl:otherwise<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;xsl:text<span class="re2">&gt;</span></span></span>[Passwort]<span class="sc3"><span class="re1">&lt;/xsl:text<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/xsl:otherwise<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;/xsl:choose<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p><br />
+Im Beispiel wird mit <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:variable_.28Variable_definieren.29" title="XML/XSL/XSLT/Sprachelemente">xsl:variable</a> eine Variable namens <code>passwortanzeige</code> definiert, deren Wert auf den logischen Wert <code>true</code> gesetzt wird. Verantwortlich dafür ist der Einsatz der Funktion true(), die einfach dem select-Attribut zugewiesen wird und dadurch für das Setzen des Wertes sorgt. Weiterhin zeigt das Beispiel eine Template-Definition für ein Element namens <code>passwort</code>. Innerhalb dieser Template-Definition wird in einer <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XSLT/Sprachelemente#xsl:choose_.28Auswahl_treffen.29" title="XML/XSL/XSLT/Sprachelemente">xsl:choose</a>-Konstruktion abgefragt, wie es mit der Passwortanzeige steht. Wenn die Variable <code>$passwortanzeige</code> wahr ist, wird mit <code>&lt;xsl:value-of select="." /&gt;</code> der Wert des passwort-Elements ausgegeben. Andernfalls wird nur die Zeichenkette [Passwort] ausgegeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit&amp;section=36" title="Abschnitt bearbeiten: unparsed-entity-uri() (ungeparste Einträge der DTD ermitteln)">Bearbeiten</a>]</span> <span class="mw-headline" id="unparsed-entity-uri.28.29_.28ungeparste_Eintr.C3.A4ge_der_DTD_ermitteln.29">unparsed-entity-uri() (ungeparste Einträge der DTD ermitteln)</span></h2>
+<p>Erlaubt es, auf DTD-Einträge zuzugreifen, die vom Parser nicht analysiert wurden. Dies betrifft vor allem Seite Entities für externe Ressourcen.
+</p><p>Erwartet folgende Argumente:
+</p>
+<ul><li>[Name] 	Der Name des nicht geparsten DTD-Eintrags (Entities).
+</li></ul>
+<p>Liefert den URI des Entities zurück, der hinter SYSTEM oder PUBLIC angegeben ist. Die entsprechende Adresse kann dann im Ergebnisbaum an eine geeignete Stelle eingesetzt werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einer DTD:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3">&lt;!ENTITY firmenlogo SYSTEM <span class="st0">&quot;images/logo.jpg&quot;</span> NDATA JPEG<span class="re2">&gt;</span></span></pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XML-Datei:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;bild</span> <span class="re0">quelle</span>=<span class="st0">&quot;firmenlogo&quot;</span> <span class="re2">/&gt;</span></span></pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispielauszug aus einem XSL-Stylesheet:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="xml source-xml"><pre class="de1"><span class="sc3"><span class="re1">&lt;xsl:template</span> <span class="re0">match</span>=<span class="st0">&quot;bild&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;img</span> <span class="re0">src</span>=<span class="st0">&quot;{unparsed-entity-uri(@quelle)}&quot;</span> <span class="re0">alt</span>=<span class="st0">&quot;Firmenlogo&quot;</span> <span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/xsl:template<span class="re2">&gt;</span></span></span></pre></div></div></div>
+</div>
+<p>Das Beispiel zeigt eine externe Entity-Definition in einer DTD. Dort wird ein Entity namens <code>firmenlogo</code> definiert, das eine JPEG-Grafik zugewiesen bekommt. Im zweiten Teil des Beispiels wird gezeigt, wie dieses Entity in einer XML-Datei zur Anwendung gelangt. Ein XML-Element namens <code>bild</code> hat ein Attribut namens <code>quelle</code>, dem das Entity zugewiesen wird. Der dritte Teil des Beispiels schließlich zeigt eine zugehörige Definition im XSL-Stylesheet. Dort wird für das Element <code>bild</code> ein Template definiert, in dem das XML-Konstrukt in ein HTML-Konstrukt zum Anzeigen einer Grafik übersetzt wird. Dem src-Attribut des img-Elements wird dabei die Funktion <code>unparsed-entity-uri()</code> zugewiesen. Der Funktion wird als Argument das Attribut <code>@quelle</code> des bild-Elements übergeben. Die Funktion liefert den zugehörigen URI wie in der DTD definiert zurück, also <code>images/logo.jpg</code>.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass die geschweiften Klammern erforderlich sind, wenn eine XPath-Funktion im Code des Ergebnisbaums verwendet wird. Mehr dazu im Abschnitt über <a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Einführung" title="XML/XSL/XPath/Einführung">XPath-Syntax</a>.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 2290/1000000
+Post‐expand include size: 23480/2097152 bytes
+Template argument size: 16113/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4620-0!*!0!!de-formal!2!* and timestamp 20150301222038 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;oldid=24240">http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;oldid=24240</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=XML%2FXSL%2FXPath%2FFunktionen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:XML/XSL/XPath/Funktionen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/XML/XSL/XPath/Funktionen" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/XML/XSL/XPath/Funktionen" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=XML/XSL/XPath/Funktionen&amp;oldid=24240" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/XML-2FXSL-2FXPath-2FFunktionen" title="Spezial:Durchsuchen/XML-2FXSL-2FXPath-2FFunktionen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 11. November 2014 um 04:15 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 3.299-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.491 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/XML/XSL/XPath/Funktionen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:20 GMT -->
+</html>

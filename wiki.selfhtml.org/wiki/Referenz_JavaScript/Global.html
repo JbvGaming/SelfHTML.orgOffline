@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Referenz:JavaScript/Global by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Funktionen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="canonical" href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Funktionen","wgTitle":"JavaScript/Funktionen","wgCurRevisionId":26262,"wgArticleId":1255,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Funktionen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgRedirectedFrom":"Referenz:JavaScript/Global","wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Funktionen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Funktionen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Funktionen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Funktionen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/JavaScript" title="JavaScript">JavaScript</a></span>(Weitergeleitet von <a href="http://wiki.selfhtml.org/index.php?title=Referenz:JavaScript/Global&amp;redirect=no" title="Referenz:JavaScript/Global">Referenz:JavaScript/Global</a>)</div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>In JavaScript gibt es sowohl <b><a href="#Selbst_definierte_Funktionen">selbst definierte Funktionen</a></b> als auch <b><a href="#Objektunabh.C3.A4ngige_Funktionen">objektunabhängige, vordefinierte Funktionen</a></b>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Objektunabh.C3.A4ngige_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Objektunabhängige Funktionen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Selbst_definierte_Funktionen"><span class="tocnumber">2</span> <span class="toctext">Selbst definierte Funktionen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Funktion_definieren"><span class="tocnumber">2.1</span> <span class="toctext">Funktion definieren</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Funktionen_erzeugen"><span class="tocnumber">2.2</span> <span class="toctext">Funktionen erzeugen</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Funktionen_aufrufen"><span class="tocnumber">2.3</span> <span class="toctext">Funktionen aufrufen</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#arguments_innerhalb_einer_Funktion"><span class="tocnumber">2.4</span> <span class="toctext">arguments innerhalb einer Funktion</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Funktionen_mit_R.C3.BCckgabewert"><span class="tocnumber">2.5</span> <span class="toctext">Funktionen mit Rückgabewert</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Variablen_Scope"><span class="tocnumber">2.6</span> <span class="toctext">Variablen Scope</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Objektunabhängige Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Objektunabh.C3.A4ngige_Funktionen"> Objektunabhängige Funktionen </span></h2>
+<p><b>Objektunabhängige Funktionen</b> sind im Gegensatz zu <a href="#Selbst_definierte_Funktionen">selbst definierten Funktionen</a> in JavaScript bereits vordefiniert. Das heißt, Sie können diese Funktionen jederzeit aufrufen, ohne sie vorher selbst definieren zu müssen, da sie bereits in JavaScript integriert sind.
+</p><p>Üblicherweise sind die hier sogenannten objektunabhängigen Funktionen an das <a href="http://wiki.selfhtml.org/wiki/JavaScript/Objekte/window" title="JavaScript/Objekte/window"><code>window</code>-Objekt</a> gekoppelt und deshalb im globalen Namensraum verfügbar. Man kann zu ihrem Aufruf das <code>window</code>-Objekt davor notieren (z.B. <code>window.alert()</code>), oder aber auch weglassen, wenn es im gegenwärtigen <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen#Variablen_Scope" title="JavaScript/Funktionen">Geltungsbereich (Scope)</a> keine andere "lokale" Funktion gleichen Namens gibt (z.B. <code>alert()</code>).
+</p>
+<ul><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/DecodeURI" title="JavaScript/Funktionen/DecodeURI"><code>decodeURI()</code></a> (kodierten URI dekodieren)
+</li><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/DecodeURIComponent" title="JavaScript/Funktionen/DecodeURIComponent"><code>decodeURIComponent()</code></a>  (kodierten URI dekodieren - II)
+</li><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/EncodeURI" title="JavaScript/Funktionen/EncodeURI"><code>encodeURI()</code></a>  (URI kodieren)
+</li><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/EncodeURIComponent" title="JavaScript/Funktionen/EncodeURIComponent"><code>encodeURIComponent()</code></a>  (URI kodieren - II)
+</li><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/Eval" title="JavaScript/Funktionen/Eval"><code>eval()</code></a>  (Ausdruck interpretieren)
+</li><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/IsFinite" title="JavaScript/Funktionen/IsFinite"><code>isFinite()</code></a>  (auf numerischen Wertebereich prüfen)
+</li><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/IsNaN" title="JavaScript/Funktionen/IsNaN"><code>isNaN()</code></a>  (auf numerischen Wert prüfen)
+</li><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/ParseFloat" title="JavaScript/Funktionen/ParseFloat"><code>parseFloat()</code></a>  (in Kommazahl umwandeln)
+</li><li> <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/ParseInt" title="JavaScript/Funktionen/ParseInt"><code>parseInt()</code></a>  (in Ganzzahl umwandeln)
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Selbst definierte Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Selbst_definierte_Funktionen"> Selbst definierte Funktionen </span></h2>
+<ul><li><a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/Rekursive_Funktionen" title="JavaScript/Funktionen/Rekursive Funktionen">Rekursive Funktionen</a>
+</li><li><a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/Closures" title="JavaScript/Funktionen/Closures">Closures</a>
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Funktion definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktion_definieren"> Funktion definieren </span></h3>
+<p>Mit Hilfe von Funktionen können Sie eigene, in sich abgeschlossene JavaScript-Prozeduren programmieren, die Sie dann über den Aufruf der Funktion ausführen können. Dabei können Sie bestimmen, bei welchem Ereignis (zum Beispiel, wenn der Anwender einen Button anklickt) die Funktion aufgerufen und ihr Programmcode ausgeführt wird. JavaScript-Code, der nicht innerhalb einer Funktion steht, wird beim Einlesen der Datei vom WWW-Browser sofort ausgeführt!
+</p>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_0"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="JavaScript 1.0"><img alt="JavaScript 1.0" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Android"><img alt="Android" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Chrome"><img alt="Chrome" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Firefox"><img alt="Firefox" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="IE"><img alt="IE" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Opera"><img alt="Opera" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Safari"><img alt="Safari" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Das generelle Erzeugen und Verwenden von Funktionen ist denkbar einfach:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">var</span> summe <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span>Argument1<span class="sy0">,</span> Argument2<span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="co1">// (1)</span>
+    <span class="kw1">var</span> sum <span class="sy0">=</span> Argument1 <span class="sy0">+</span> Argument2<span class="sy0">;</span>            <span class="co1">// (2)</span>
+    <span class="kw1">return</span> sum<span class="sy0">;</span>                                 <span class="co1">// (3)</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+  alert<span class="br0">&#40;</span>summe<span class="br0">&#40;</span><span class="nu0">40</span><span class="sy0">,</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>                          <span class="co1">// (4)</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">
+<ol><li> Erzeugt eine Funktion, die zwei Argumente erwartet und weist sie der Variablen "<code>summe</code>" zu.
+</li><li> Der Funktions-Körper. Hier wird die Logik der Funktion notiert. In diesem Beispiel eine einfache Addition.
+</li><li> Eine Funktion kann einen Wert zurückgeben, hier wird das Ergebnis der Addition zurückgegeben. <code>return</code> ist optional.
+</li><li> Ruft die Funktion <a href="http://wiki.selfhtml.org/wiki/JavaScript/Objekte/window/alert" title="JavaScript/Objekte/window/alert">alert</a> auf und übergibt als Parameter den Rückgabewert der Funktion <code>summe</code>.</div>
+</li></ol>
+</div>
+<p>In JavaScript ist es kein Ausführungsfehler, wenn an eine Funktion mehr oder weniger Argumente übergeben werden, als in ihrer Signatur definiert sind.
+Falls zu wenige Argumente übergeben wurden, werden die fehlenden Argumente mit <code>undefined</code> initialisiert.
+Falls zu viele Argumente übergeben wurden, kann man auf diese mittels <code>arguments</code> zugreifen.
+</p><p>Im weiteren wird detaillierter auf die Unterschiede beim Erzeugen einer Funktion und das Verhalten dieser eingegangen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Funktionen erzeugen">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionen_erzeugen"> Funktionen erzeugen </span></h3>
+<p>Es gibt in Javascript 3 Möglichkeiten ein Funktionsobjekt zu erzeugen:
+</p>
+<ul><li> Als Funktionsausdruck (function expression):
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> foo <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#91;</span>Argument1<span class="br0">&#91;</span><span class="sy0">,</span> Argument2<span class="br0">&#91;</span><span class="sy0">,</span> …<span class="br0">&#93;</span><span class="br0">&#93;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="coMULTI">/* tue etwas, optional Rückgabe mit return */</span> <span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<ul><li> Als Funktionsdeklaration (function declaration):
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> foo <span class="br0">&#40;</span><span class="br0">&#91;</span>Argument1<span class="br0">&#91;</span><span class="sy0">,</span> Argument2<span class="br0">&#91;</span><span class="sy0">,</span> …<span class="br0">&#93;</span><span class="br0">&#93;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="coMULTI">/* tue etwas, optional Rückgabe mit return */</span> <span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<ul><li> Über den Funktions-Konstruktor:
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> foo <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Function</span><span class="br0">&#40;</span><span class="st0">'[Argument1[, Argument2[, …]]]'</span><span class="sy0">,</span> <span class="st0">'&quot;tue etwas&quot;; return &quot;Gib etwas zurück&quot;'</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Letzteres ist ähnlich <a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen/Eval" title="JavaScript/Funktionen/Eval">eval</a>, es nimmt einen String und macht Javascript-Code daraus.
+Genauso wie im Fall von <code>eval</code> gilt auch hier: nicht verwenden.
+</p><p>Der Unterschied zwischen Funktionsdeklarationen und -ausdrücken ist oft schwer zu erkennen. ECMAScript unterscheidet anhand des Kontextes. Wenn <code>function foo () {}</code> z.B. Teil einer Zuweisung ist, wird es als Funktionsausdruck interpretiert. Genauso wenn es innerhalb von Klammern notiert wird, da <code>(</code> und <code>)</code> als "grouping operator" definiert sind, und als solche nur Ausdrücke beinhalten können.
+Ein paar Beispiele:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> foo <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">;</span>           <span class="co1">// Deklaration, da keine Zuweisung oder Gruppierung.</span>
+&#160;
+<span class="kw1">var</span> bar <span class="sy0">=</span> <span class="kw1">function</span> foo <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">;</span> <span class="co1">// Ausdruck, da eine Zuweisung. Wenn man nur diese Zeile ausführt, hat man also keine Variable &quot;foo&quot;, </span>
+                              <span class="co1">// die auf eine Funktion referenzieren würde.</span>
+&#160;
+<span class="kw1">new</span> <span class="kw1">function</span> foo <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">;</span>       <span class="co1">// Ausdruck, da es Teil eines &quot;new&quot;-Ausdruckes ist.</span>
+&#160;
+<span class="br0">&#40;</span><span class="kw1">function</span> foo <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>         <span class="co1">// Ausdruck, aufgrund des Gruppen-Operators.</span></pre></div></div></div>
+</div>
+<p>Die Unterschiede zwischen den beiden Varianten sind gering.
+</p><p>Funktionsdeklarationen werden unabhängig davon, wo sie im Quelltext stehen, gleich zu Beginn geparst und interpretiert.
+In folgendem Beispiel wird <code>Hallo Welt</code> ausgegeben obwohl die Funktion <code>foo</code> im Quelltext erst nach seinem Aufruf deklariert wird:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">alert<span class="br0">&#40;</span>foo<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">function</span> foo <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">return</span> <span class="st0">'Hallo Welt'</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>Das kann in manchen Fällen zu unerwartetem Verhalten führen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">function</span> foo <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="st0">'first'</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw1">function</span> foo <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="st0">'second'</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+foo<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// Manche Javascript-Engines führen die erste Funktion aus, manche die zweite.</span></pre></div></div></div>
+</div>
+<p>Um dennoch Funktion haben zu können, die von Bedingungen abhängig sind, muss man sie als Funktionsausdruck erstellen und einer Variable zuweisen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> foo<span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  foo <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="st0">'first'</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+  foo <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="st0">'second'</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+foo<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// Jede Javascript-Engine führt die erste Funktion aus.</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Funktionen aufrufen">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionen_aufrufen"> Funktionen aufrufen </span></h3>
+<p>Alle Funktionen, die <a href="#Selbst_definierte_Funktionen">selbst definierten</a> sowie die <a href="#Vordefinierte.2C_objektunabh.C3.A4ngige_Funktionen">vordefinierten</a>, können aufrufen werden, um den darin enthaltenen JavaScript-Code auszuführen.
+</p>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_0"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="JavaScript 1.0"><img alt="JavaScript 1.0" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Android"><img alt="Android" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Chrome"><img alt="Chrome" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Firefox"><img alt="Firefox" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="IE"><img alt="IE" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Opera"><img alt="Opera" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Safari"><img alt="Safari" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Funktionen-1.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">    <span class="kw1">function</span> PrimzahlCheck <span class="br0">&#40;</span>Zahl<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      Zahl <span class="sy0">=</span> parseInt<span class="br0">&#40;</span>Zahl<span class="sy0">,</span> <span class="nu0">10</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span>isNaN<span class="br0">&#40;</span>Zahl<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+          alert<span class="br0">&#40;</span><span class="st0">'Sie müssen eine Zahl eingeben!'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+          <span class="kw1">return</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+      <span class="kw1">var</span> Grenzzahl <span class="sy0">=</span> Zahl <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">;</span>
+      <span class="kw1">var</span> Check <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+        <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span> i <span class="sy0">&lt;=</span> Grenzzahl<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span>
+          <span class="kw1">if</span> <span class="br0">&#40;</span>Zahl <span class="sy0">%</span> i <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            text <span class="sy0">=</span> Zahl <span class="sy0">+</span> <span class="st0">' ist keine Primzahl, weil teilbar durch '</span> <span class="sy0">+</span> i<span class="sy0">;</span>
+            Check <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+          <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span>Check <span class="sy0">==</span> <span class="nu0">1</span><span class="br0">&#41;</span>
+      text <span class="sy0">=</span> Zahl <span class="sy0">+</span> <span class="st0">' ist eine Primzahl!'</span><span class="sy0">;</span>
+	  <span class="kw1">var</span> ausgabe <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'ausgabe'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	  ausgabe.<span class="me1">innerHTML</span> <span class="sy0">=</span> text<span class="sy0">;</span>
+    <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Funktionen-1.html">ansehen …</a></div></div>
+<p>Das obige Beispiel zeigt eine komplette HTML-Datei. Darin ist ein JavaScript-Bereich definiert, in dem wiederum die Funktion <code>PrimzahlCheck()</code> definiert ist. Im Dateikörper der HTML-Datei steht ein Formular mit einem Eingabefeld und einem Button. Im Eingabefeld kann der Anwender eine Zahl eingeben. Wenn er auf den Button klickt, wird die JavaScript-Funktion aufgerufen und ermittelt, ob es sich bei der Eingabe um eine Primzahl handelt. Dazu enthält der Button den <a href="http://wiki.selfhtml.org/wiki/JavaScript/Event-Handler#onclick_.28beim_Anklicken.29" title="JavaScript/Event-Handler">Event-Handler onclick</a> (= beim Anklicken). Dahinter wird die JavaScript-Funktion mit der eingegebenen Zahl aufgerufen.
+</p><p>Die Funktion rufen Sie mit ihrem Funktionsnamen auf. Dahinter folgt die öffnende Klammer. Wenn die Funktion keine Parameter erwartet, notieren Sie hinter der öffnenden gleich eine schließende Klammer. Wenn die Funktion Parameter erwartet, müssen Sie für jeden Parameter einen erlaubten Wert übergeben. Im Beispiel erwartet die Funktion einen Parameter. Wenn Sie mehrere Parameter übergeben, trennen Sie diese durch Kommata.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: arguments innerhalb einer Funktion">Bearbeiten</a>]</span> <span class="mw-headline" id="arguments_innerhalb_einer_Funktion"> <code>arguments</code> innerhalb einer Funktion </span></h3>
+<p><code>arguments</code> ist innerhalb von Funktionen eine System-Variable die sich ähnlich wie ein Array verhält.
+Sie hat eine Eigenschaft <code>length</code> der die Anzahl der übergebenen Argumente entnommen werden kann. Zugriff auf die Werte der einzelnen Argumente erhält man über <code>arguments[0]</code> bis <code>arguments[arguments.length - 1]</code>, dies sind die der Funktion übergebenen Werte in genau dieser Reihenfolge.
+</p><p>Ähnlich wie ein Array, aber nicht genauso, da <code>arguments</code> die Methoden die ein Array hat (z.B. <code>splice()</code>) nicht besitzt.
+Um diese dennoch anwenden zu können kann man sich mittels <code>.call()</code> bzw. <code>.apply()</code> behelfen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="co1">// foo verwendet die Arraymethode splice um das erste übergebene Argument abzuschneiden, und gibt dieses neue Array zurück.</span>
+<span class="kw1">var</span> foo <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="br0">&#91;</span><span class="br0">&#93;</span>.<span class="me1">splice</span>.<span class="me1">call</span><span class="br0">&#40;</span>arguments<span class="sy0">,</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+foo<span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="nu0">4</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// Gibt ein Array [2, 3, 4] zurück.</span></pre></div></div></div>
+</div>
+<p>Es ist prinzipiell eine schlechte Idee und davon abzuraten ein Argument oder eine Variable mit dem Namen "arguments" zu erstellen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Funktionen mit Rückgabewert">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionen_mit_R.C3.BCckgabewert"> Funktionen mit Rückgabewert </span></h3>
+<p>Eine Funktion kann einen oder mehrere ermittelte Werte an die aufrufende Instanz zurückgeben.
+</p>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_0"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="JavaScript 1.0"><img alt="JavaScript 1.0" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Android"><img alt="Android" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Chrome"><img alt="Chrome" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Firefox"><img alt="Firefox" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="IE"><img alt="IE" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Opera"><img alt="Opera" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Safari"><img alt="Safari" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Funktionen-2.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">    <span class="kw1">function</span> BruttoBetrag <span class="br0">&#40;</span>Netto<span class="sy0">,</span> Prozente<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="kw1">var</span> Ergebnis <span class="sy0">=</span> Netto <span class="sy0">*</span> <span class="br0">&#40;</span><span class="nu0">1</span> <span class="sy0">+</span> <span class="br0">&#40;</span>Prozente <span class="sy0">/</span> <span class="nu0">100</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">return</span> Ergebnis<span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">function</span> SchreibeBrutto <span class="br0">&#40;</span>Betrag<span class="sy0">,</span> Prozentsatz<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="kw1">var</span> Wert <span class="sy0">=</span> BruttoBetrag<span class="br0">&#40;</span>Betrag<span class="sy0">,</span> Prozentsatz<span class="br0">&#41;</span><span class="sy0">;</span>
+	  <span class="kw1">var</span> ausgabe <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'ausgabe'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	  ausgabe.<span class="me1">innerHTML</span> <span class="sy0">=</span> Wert<span class="sy0">;</span>
+    <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Funktionen-2.html">ansehen …</a></div></div>
+<p>Das obige Beispiel zeigt eine HTML-Datei, in deren Dateikopf ein <a href="http://wiki.selfhtml.org/wiki/JavaScript/Einführung#JavaScript-Bereiche_in_HTML_definieren" title="JavaScript/Einführung">JavaScript-Bereich</a> definiert ist, in dem wiederum die zwei Funktionen <code>BruttoBetrag(...)</code> und <code>SchreibeBrutto(...)</code> definiert sind. Im Dateikörper der HTML-Datei steht ein Formular mit je einem Eingabefeld für einen Nettobetrag und einen Prozentwert. Wenn der Anwender auf den darunter definierten Button klickt, wird die Funktion <code>SchreibeBrutto(...)</code> aufgerufen. Diese wiederum ruft die Funktion <code>BruttoBetrag(...)</code> auf.
+</p><p><br />
+Da die Funktion <code>BruttoBetrag(...)</code> ihr errechnetes Ergebnis an die aufrufende Instanz zurückgibt, wird in <code>SchreibeBrutto(...)</code> eine <a href="http://wiki.selfhtml.org/wiki/JavaScript/Variable" title="JavaScript/Variable">Variable</a> mit dem Namen <code>Wert</code> definiert, die diesen Rückgabewert speichert. Das Ergebnis, das in dieser Variablen gespeichert ist, schreibt die Funktion schließlich in den Absatz mit der id <code>ausgabe</code>.
+</p><p><br />
+Funktionen können ein oder mehrere <code>return</code>-Statements beinhalten. Diese beenden die Funktion und definieren den Rückgabewert.
+Falls <code>return</code> innerhalb einer Funktion nicht aufgerufen wird, wird die Funktion nach deren letztem Statement verlassen und <code>undefined</code> zurückgegeben.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Zwischen <code>return</code> und dem Wert, der zurückgegeben werden soll, dürfen keine Zeilenumbrüche sein.</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> foo <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span>
+      <span class="kw2">true</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+foo<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// Gibt undefined zurück, da nach return ein Zeilenumbruch kommt</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Variablen Scope">Bearbeiten</a>]</span> <span class="mw-headline" id="Variablen_Scope"> Variablen Scope </span></h3>
+<p>Mit Scope ist die Gültigkeit oder Sichtbarkeit einer Variable gemeint.
+Javascript erzeugt für jede Funktion einen neuen Scope.
+Es kann nur auf Variablen aus dem aktuellem oder übergeordneten Scopes zugegriffen werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> bar <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw1">var</span> foo <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">var</span> baz <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
+    <span class="kw1">return</span> bar <span class="sy0">+</span> baz<span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+foo<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// Gibt 3 zurück</span>
+bar <span class="sy0">+</span> baz<span class="sy0">;</span> <span class="co1">// Erzeugt einen Ausführungsfehler, da baz nicht definiert wurde.</span></pre></div></div></div>
+</div>
+<p>Javascript hat keinen Blockscope, d.h. Variablen die z.B. innerhalb eines if-Blocks gesetzt wurden sind auch außerhalb von diesem sichtbar. Weitere <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Umgang_mit_Callback-Funktionen#Funktionen_als_Container_mit_eigenem_Scope" title="JavaScript/Tutorials/Umgang mit Callback-Funktionen">Feinheiten zu Scope in JavaScript</a> finden Sie im <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Umgang_mit_Callback-Funktionen" title="JavaScript/Tutorials/Umgang mit Callback-Funktionen">Tutorial zum Umgang mit Callback-Funktionen</a>.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 5559/1000000
+Post‐expand include size: 21128/2097152 bytes
+Template argument size: 6484/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1255-0!*!0!!de-formal!2!* and timestamp 20150228225207 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;oldid=26262">http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;oldid=26262</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Referenz%3AJavaScript%2FGlobal" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="http://wiki.selfhtml.org/wiki/Diskussion:JavaScript/Funktionen"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/Funktionen" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/JavaScript/Funktionen" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/JavaScript/Funktionen" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Funktionen&amp;oldid=26262" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/JavaScript-2FFunktionen" title="Spezial:Durchsuchen/JavaScript-2FFunktionen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 19. Februar 2015 um 17:03 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 11.222-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.081 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Referenz:JavaScript/Global by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:54 GMT -->
+</html>

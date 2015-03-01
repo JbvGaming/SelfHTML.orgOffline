@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Einführung – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="canonical" href="http://wiki.selfhtml.org/wiki/Perl/Einführung" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Einführung","wgTitle":"Perl/Einführung","wgCurRevisionId":24524,"wgArticleId":1209,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Perl"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Einführung","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgRedirectedFrom":"Perl/Einführung_in_Perl","wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Einführung" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Einf%C3%BChrung&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Einführung skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Einführung</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span>(Weitergeleitet von <a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung_in_Perl&amp;redirect=no" title="Perl/Einführung in Perl">Perl/Einführung in Perl</a>)</div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Die_Perl-Distribution"><span class="tocnumber">1</span> <span class="toctext">Die Perl-Distribution</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Perl-Distribution_installieren"><span class="tocnumber">2</span> <span class="toctext">Perl-Distribution installieren</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Perl_mit_CGI-Programm_testen"><span class="tocnumber">3</span> <span class="toctext">Perl mit CGI-Programm testen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Aufrufm.C3.B6glichkeiten_des_Perl-Interpreters"><span class="tocnumber">4</span> <span class="toctext">Aufrufmöglichkeiten des Perl-Interpreters</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Erste_Zeile_eines_Perl-Programms"><span class="tocnumber">5</span> <span class="toctext">Erste Zeile eines Perl-Programms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Konfiguration_im_Webserver"><span class="tocnumber">5.1</span> <span class="toctext">Konfiguration im Webserver</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Anweisungen_notieren"><span class="tocnumber">6</span> <span class="toctext">Anweisungen notieren</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Anweisungsbl.C3.B6cke_notieren"><span class="tocnumber">7</span> <span class="toctext">Anweisungsblöcke notieren</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Kommentare_in_Perl"><span class="tocnumber">8</span> <span class="toctext">Kommentare in Perl</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Regeln_f.C3.BCr_selbst_vergebene_Namen"><span class="tocnumber">9</span> <span class="toctext">Regeln für selbst vergebene Namen</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Sauberer_Programmierstil"><span class="tocnumber">10</span> <span class="toctext">Sauberer Programmierstil</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Siehe_auch"><span class="tocnumber">11</span> <span class="toctext">Siehe auch</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Die Perl-Distribution">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Perl-Distribution"> Die Perl-Distribution </span></h2>
+<p>Die Perl-Distribution ist freie Software nach der GNU General Public License Version 1 (oder später), oder der ursprünglichen Version der Artistic License und für etliche Betriebssysteme verfügbar. Der Quelltext ist verfügbar, sodass Sie ihn, wenn Sie einen C-Compiler haben, für Ihren Rechner kompilieren können. Sie können die <a rel="nofollow" class="external text" href="http://www.perl.org/get.html">Perl-Distribution aus dem Internet herunterladen</a>.
+</p><p>Für Windows-Anwender existieren zwei recht weit verbreitete Perl-Distributionen. <i>ActivePerl</i> von <a rel="nofollow" class="external text" href="http://www.activestate.com/">ActiveState</a> ist einfach zu installieren, jedoch lassen sich hier zusätzliche Module häufig nicht oder nur schwer installieren. Eine Open-Source-Alternative, die auch das CPAN besser einbindet, ist <a rel="nofollow" class="external text" href="http://strawberryperl.com/">Strawberry Perl</a>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Perl-Distribution installieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Perl-Distribution_installieren"> Perl-Distribution installieren </span></h2>
+<p>Je nach Betriebssystemumgebung ist Perl bereits vorhanden, ansonsten müssen Sie die Perl-Distribution manuell installieren, oder ein automatisch aufgerufenes Installationsprogramm führt für Sie alle nötigen Kopiervorgänge und Einstellungen durch. Wenn es kein ausführbares Installationsprogramm gibt, finden Sie nach dem Entpacken des heruntergeladenen Quelltextarchivs auf jeden Fall Hilfedateien vor, in denen beschrieben wird, wie die Distribution zu installieren ist.
+</p><p>Wenn Sie Perl für die CGI-Schnittstelle Ihres eigenen Webservers nutzen wollen, müssen Sie bei dessen Einrichten je nach Betriebssystemumgebung und Serversoftware eventuell den vollständigen Pfadnamen der ausführbaren Perl-Interpreter-Datei angeben. Nach einer typischen Installation des Perl-Interpreters liegt diese im Programmunterverzeichnis <code>bin</code> und heißt <code>perl</code> oder (unter Windows) <code>perl.exe</code>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Perl mit CGI-Programm testen">Bearbeiten</a>]</span> <span class="mw-headline" id="Perl_mit_CGI-Programm_testen"> Perl mit CGI-Programm testen </span></h2>
+<p>Wenn Sie einen lokalen Webserver installiert und in dessen Einstellungen ein CGI-Verzeichnis bestimmt haben, können Sie nach der Installation der Perl-Distribution Ihr erstes eigenes lokales CGI-Programm ausführen. Den Quellcode des folgenden Perlprogramms können Sie mit einem Texteditor im eingestellten CGI-Verzeichnis beispielsweise unter dem Namen <code>test.pl</code> abspeichern. Angenommen, Ihr CGI-Verzeichnis heißt wie üblich <code>cgi-bin</code> und der Webserver ist gestartet, dann können Sie das Programm im Browser mit der Adresse <code>http://127.0.0.1/cgi-bin/test.pl</code> oder auch <code>http://localhost/cgi-bin/test.pl</code> aufrufen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Datei test.pl:
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/env perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;END;
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Hurra, es klappt!&lt;/h1&gt;
+&lt;/body&gt;&lt;/html&gt;
+END</span></pre></div></div></div>
+</div>
+<p>Das Programm gibt, wenn es aufgerufen wird, einfach ein wenig HTML-Code aus. Die Perl-Anweisungen sind für den Augenblick noch nicht weiter interessant. Nur die erste Zeile des Programm (die so genannte <i>Shebang</i>, englisch, auszusprechen als schiebäng) müssen Sie möglicherweise anpassen. Das wird im Abschnitt <a href="#Erste_Zeile_eines_Perl-Programms">#Erste Zeile eines Perl-Programms</a> näher erläutert. Falls Sie beim Aufruf eine Fehlermeldung wie <i>500 - Internal Server Error</i> erhalten, sollten Sie im Error-Log des Webservers nachschauen, denn dort findet sich üblicherweise eine aussagekräftigere Meldung. Eine Ursache kann auch sein, dass die Script-Datei kein Ausführen-Recht bekommen hat.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Aufrufmöglichkeiten des Perl-Interpreters">Bearbeiten</a>]</span> <span class="mw-headline" id="Aufrufm.C3.B6glichkeiten_des_Perl-Interpreters"> Aufrufmöglichkeiten des Perl-Interpreters </span></h2>
+<p>Bei CGI-Programmen fordert der aufrufende Browser vom Webserver über HTTP eine Ressource an, die der Webserver bei geeigneter Serverkonfiguration als auszuführendes Programm erkennt. Um zu erfahren, ob die vom Browser angeforderte Ressource ein auszuführendes CGI-Programm ist, prüft der Webserver verschiedene Kriterien:
+</p>
+<ul><li> Die Ressource kann als Datei in einem Verzeichnis geortet werden, das durch den Webserver als CGI-Verzeichnis für CGI-Programme definiert ist. CGI-Verzeichnisse heißen oft <code>cgi-bin</code> oder <code>cgi</code>.
+</li><li> Bei der Programmdatei sind die Zugriffsrechte so gesetzt, dass der Benutzer, unter dem der Webserver läuft, das Recht hat, die Datei auszuführen. Dies gilt vor allem für Unix-basierte Systeme.
+</li><li> Die Programmdatei hat eine Dateiendung, die vom Server als Endung für Perl-Programme erkannt wird (z.B. <code>.pl</code> oder <code>.cgi</code>).
+</li><li> Die erste Zeile des Perl-Programms enthält (für Unix-Systeme) eine so genannte "Shebang". Diese Anweisung enthält für den Server den Pfad zum Perl-Interpreter.
+</li></ul>
+<p>Diese Faktoren bewirken, dass bei einem Aufruf eines Perl-Programms im CGI-Verzeichnis der Webserver entsprechend reagiert und den Quelltext des Programms nicht einfach an den Browser sendet, sondern den Perl-Interpreter bittet, die im CGI-Programm enthaltenen Anweisungen auszuführen und das Ergebnis an ihn zur Auslieferung an den Browser zurückzugeben.
+</p><p>Perl ist ursprünglich dafür entwickelt worden, in einem Unix-basierten System komplexe Aufgaben im Bereich der Textauswertung und Systemadministration zu erfüllen. Perl-Programme können zahllose Aufgaben auf einem Rechner übernehmen, z.B. Backups organisieren, die Rechnerauslastung analysieren, in Dateien nach etwas suchen und es durch etwas anderes ersetzen usw. Um Perl-Programme auszuführen, die nicht als CGI-Programm eingesetzt werden, müssen Sie einen Zugang zu einer Shell oder Kommandozeile auf dem Rechner haben. Am lokalen PC und unter Windows können Sie eine Eingabeaufforderung (DOS-Fenster) öffnen. Dann können Sie den Perl-Interpreter vom Prompt aus aufrufen. Bei Unix-basierten Systemen benötigen Sie einen Zugang als Benutzer. Nach dem Anmelden am System erhalten Sie eine Shell, also eine benutzereigene Kommandozeile. Von dort aus können Sie den Perl-Interpreter aufrufen, vorausgesetzt, Sie haben die Rechte dazu. Wenn Sie Perl-Programme über die Kommandozeile auf einem entfernten Rechner ausführen wollen, also etwa auf einem öffentlichen Server, auf dem Sie Web-Speicherplatz gemietet haben, dann brauchen Sie einen Telnet- oder SSH-Zugang zu diesem Rechner. Außerdem benötigen Sie ein Telnet- oder SSH-Programm (im Online-Angebot des SELFHTML-Linkverzeichnisses finden Sie <a rel="nofollow" class="external text" href="http://aktuell.de.selfhtml.org/links/telnet-ssh-programme.htm">WWW-Links zu Telnet- und SSH-Programmen</a>). Mit einem solchen Programm können Sie sich aus der Ferne an einem Rechner anmelden und erhalten eine Shell zum Eingeben von Kommandos. Fragen Sie gegebenenfalls Ihren Provider danach, ob Sie Telnet- oder SSH-Zugang zum Server haben!
+</p><p>Von der Kommandozeile aus können Sie den Perl-Interpreter mit einem Perl-Programm, also einer Datei mit Perl-Quelltext, aufrufen. Solche Dateien haben die Standard-Dateinamensendung <code>.pl</code>. Der Perl-Interpreter wird normalerweise einfach durch Eingabe von <code>perl</code> gestartet. Wenn Sie beispielsweise ein Perl-Programm namens <code>hallowelt.pl</code> haben, können Sie dieses Programm mit <code>perl hallowelt.pl</code> starten. Gegebenenfalls müssen Sie sowohl den Perl-Interpreter als auch das Perl-Programm mit den korrekten Pfadnamen aufrufen, unter Windows also z.B. <code>c:\programme\perl\bin\perl.exe c:\code\perl\hallowelt.pl</code>, unter Unix-basierten Systemen z.B. <code>/usr/bin/perl /home/benutzer/code/perl/hallowelt.pl</code>.
+</p><p>Neben der reinen Angabe einer Perl-Datei gibt es Optionen beim Aufruf des Perl-Interpreters. Die Optionen folgen unmittelbar hinter dem Programmdateinamen und vor dem Namen des Perl-Programms, also etwa <code>perl -c test.pl</code>. Sie können auch mehrere Optionen aneinanderhängen. Notieren Sie dazu nur ein Minuszeichen mit allen gewünschten Optionsbuchstaben hintereinander, z.B. <code>perl -cwT test.pl</code>.
+</p><p>Die folgende Tabelle enthält einige Optionen, die beim Aufruf des Perl-Interpreters Anwendung finden können.
+</p>
+<table>
+<tr>
+<th> Option
+</th>
+<th> Bedeutung
+</th></tr>
+<tr valign="top">
+<td> <code>-c</code>
+</td>
+<td> Das Perl-Programm wird nicht ausgeführt, sondern nur in einen Perl-internen Syntaxbaum kompiliert und so auf syntaktische Richtigkeit überprüft.
+</td></tr>
+<tr valign="top">
+<td> <code>-d</code>
+</td>
+<td> Das Perl-Programm wird im Debug-Modus ausgeführt. Dieser erlaubt das systematische Testen des Perl-Programms. Im Debug-Modus stehen etliche Befehle zum Kontrollieren und Überprüfen des Programmablaufs bereit.
+</td></tr>
+<tr valign="top">
+<td> <code>-h</code>
+</td>
+<td> Wenn Sie Perl mit dieser Option ohne Angabe eines Programms aufrufen, gibt der Perl-Interpreter eine Übersicht aller verfügbaren Optionen aus.
+</td></tr>
+<tr valign="top">
+<td> <code>-S</code>
+</td>
+<td> Das Programm braucht nur als Dateiname ohne Pfad angegeben zu werden. Wenn es in einem der Verzeichnisse liegt, die in der <code>PATH</code>-Variablen des Betriebssystems genannt sind, findet der Perl-Interpreter das Programm auch ohne Pfadangabe.
+</td></tr>
+<tr valign="top">
+<td> <code>-T</code>
+</td>
+<td> Im Programm verursachen fehlgeschlagene Taint-Überprüfungen einen Programmabbruch. Das heißt, alle Daten, die das Perl-Programm von außen bekommt, werden vom Perl-Interpreter besonders gekennzeichnet und müssen vom Programm bei kritischen Operationen speziell bearbeitet werden, bevor sie benutzt werden können. Dies dient zum Schutz vor Einschleusung fremder Daten.
+</td></tr>
+<tr valign="top">
+<td> <code>-v</code>
+</td>
+<td> Gibt die Version des Perl-Interpreters aus.
+</td></tr>
+<tr valign="top">
+<td> <code>-w</code>
+</td>
+<td> Bewirkt, dass der Perl-Interpreter nicht nur offensichtliche Fehlermeldungen bei Syntaxfehlern ausgibt, sondern auch Warnungen bei möglichen Fehlern, logisch zweifelhaften Anweisungsfolgen, undefinierten Zuweisungen usw. Die Benutzung des Pragmas <code>warnings</code> ist dieser Option vorzuziehen.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Erste Zeile eines Perl-Programms">Bearbeiten</a>]</span> <span class="mw-headline" id="Erste_Zeile_eines_Perl-Programms"> Erste Zeile eines Perl-Programms </span></h2>
+<p>In der ersten Zeile eines Perl-Programms, der so genannten „Shebang-Zeile“, muss unter Umständen eine Anweisung stehen, die angibt, wo sich die ausführbare Datei des Perl-Interpreters befindet.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Shebang
+</div>
+<div class="note-box-text note-box-example-code"><pre>#!/usr/bin/env perl
+print &quot;Hallo Welt\n&quot;;</pre></div>
+</div>
+<p>Die Anweisung zur Lage des Perl-Interpreters auf dem Rechner beginnt mit den Zeichen <code>#!</code>, der so genannten <i>Shebang</i>, gefolgt von der Pfadangabe und dem Namen des Perl-Interpreters. Ab der zweiten Zeile können Sie Perl-Code notieren, wie im Beispiel die Ausgabe der beiden Wörter <i>Hallo Welt</i>.
+</p><p>Die Anweisung zur Lage des Perl-Interpreters auf dem Rechner wird vor allem von Unix-basierten Systemen ausgewertet, und zwar dann, wenn für die Perl-Datei das Recht „ausführbar“ (x, executable) gesetzt ist. Die Datei kann dann direkt aufgerufen werden und startet den Perl-Interpreter. Wenn Sie unter anderen Umgebungen als Unix (außer Windows) arbeiten, notieren Sie einfach die übliche Zeile mit der üblichen Pfadangabe (<code>#!/usr/bin/perl</code>) in der ersten Zeile Ihres Perl-Programms. Sollte das Programm dann nicht ausgeführt werden bzw. eine Fehlermeldung produzieren, notieren Sie den genauen Pfad der ausführbaren Datei des Perl-Interpreters. Trennen Sie dabei die Verzeichnisse durch einfache Schrägstriche. 
+</p><p>Das obige Beispiel verwendet eine alternative Methode. Da sich der Perl-Interpreter je nach Installation an unterschiedlichen Orten befinden kann, gibt es das Hilfsprogramm <code>env</code>, das in der Regel unter <code>/usr/bin/</code> zu finden ist, welches selbständig in diesem Fall nach <code>perl</code>, also den Perl-Interpreter, sucht und ihn startet. Dazu muss der Pfad zu ihm im Suchpfad für ausführbare Programme aufgeführt sein, der z.B. in der Umgebungsvariablen <code>PATH</code> gespeichert ist.
+</p><p>Wenn Sie Perl unter Windows verwenden, ist die Shebang-Zeile nicht von Bedeutung. Windows findet den Perl-Interpreter anhand der Dateiendung (<code>.pl</code>). (Ausnahme siehe nächsten Abschnitt.)
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Konfiguration im Webserver">Bearbeiten</a>]</span> <span class="mw-headline" id="Konfiguration_im_Webserver"> Konfiguration im Webserver </span></h3>
+<p>Bei Webservern mit CGI-Unterstützung hängt es vom Webserverprodukt ab, ob die Shebang ausgelesen wird. Zu den Grundeinstellungen eines Webservers gehört mittlerweile auch die Angabe des Pfades zum Perl-Interpreter. Wenn dann bei laufendem Webserver aufgrund eines Requests ein Perl-Programm ausgeführt werden soll, ruft der Webserver den Perl-Interpreter entsprechend seiner Konfiguration auf.
+</p><p>Der Apache unter Windows liest ebenfalls die Shebang. Da diese jedoch meist auf Unix-Gegebenheiten angepasst ist, empfiehlt es sich, den Apachen so zu konfigurieren, dass er die Shebang generell ignoriert. Dazu benötigen Sie Zugang zu seiner Konfigurationsdatei (<code>httpd.conf</code>) und zur Windows-Registry. In der Apache-Konfiguration notieren Sie die Anweisung <code>ScriptInterpreterSource registry</code>. Diese Anweisung bewirkt, dass Apache in der Windows-Registry nach dem Pfad sucht, mit dem der Perl-Interpreter angesprochen werden kann und die Shebang umgeht. Weiterhin muss in der Registry unter HKEY_CLASSES_ROOT für eine entsprechende Dateinamensendung, beispielsweise <code>.pl</code>, ein Schlüssel <code>Shell\ExecCGI\Command</code> oder <code>Shell\Open\Command</code> eingetragen sein. Ist kein solcher Schlüssel vorhanden, wird zuletzt auf die "Shebang" zurückgegriffen, und wenn dort dann ein nicht zutreffender Pfad eingetragen ist, erfolgt eine Fehlermeldung an den aufrufenden Browser.
+</p><p>Hinter der Pfadangabe zum Perl-Interpreter kann, durch Leerraum getrennt, auch noch eine Aufrufoption folgen wie in der Tabelle bei den Aufrufmöglichkeiten des Perl-Interpreters beschrieben. So können Sie beispielsweise <code>#!/usr/bin/perl -T</code> oder <code>#!/usr/bin/env perl -T</code> notieren, um den Perl-Interpreter anzuweisen, den Umgang mit Daten von außerhalb (z.B. Benutzereingaben eines CGI-Programms) zur vorbeugenden Sicherheit besonders zu behandeln. Diese Option wird von Perl-Programmierern gerne empfohlen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Anweisungen notieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Anweisungen_notieren"> Anweisungen notieren </span></h2>
+<p>Perl-Programme bestehen, wie die Quelltexte anderer Programmiersprachen auch, aus einer kontrollierten Anordnung von Anweisungen. Das sind Befehle, die der Perl-Interpreter bewertet und in einen Maschinencode übersetzt (kompiliert), der auf dem betreffenden Rechner ausführbar ist.
+</p><p>Es gibt einfache und komplexere Anweisungen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: eines vollständigen Perl-Programms
+</div>
+<div class="note-box-text note-box-example-code"><pre>#!/usr/bin/perl
+use strict;
+use warnings;
+
+my $number = 42;
+my $square = $number * $number;
+print &quot;Das Quadrat von $number ist $square.\n&quot;;</pre></div>
+</div>
+<p>Eine Anweisung besteht in Perl aus einem Befehl, der normalerweise mit einem Semikolon <code>;</code> abgeschlossen wird. Der Befehl kann an verschiedene Bedingungen gebunden sein.
+</p><p>Eine Anweisung ist es zum Beispiel:
+</p>
+<ul><li> wenn Sie Pragmas laden
+</li><li> wenn Sie eine Variable definieren und einen Wert zuweisen, wie oben in Beispiel in der Anweisung <code>my $zahl = 42;</code>.
+</li><li> wenn Sie mit Variablen oder Werten eine Operation durchführen, wie oben in der folgenden Anweisung.
+</li><li> wenn Sie eine Perl-Funktion aufrufen, wie oben in der Anweisung die Funktion <code>print</code>.
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Anweisungsblöcke notieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Anweisungsbl.C3.B6cke_notieren"> Anweisungsblöcke notieren </span></h2>
+<p>Ein Anweisungsblock besteht aus einer oder mehreren einzelnen Anweisungen, die innerhalb einer übergeordneten Anweisung stehen. So können Anweisungsblöcke beispielsweise innerhalb einer bedingten Anweisung oder innerhalb einer Schleife  stehen. Auch alle Anweisungen, die innerhalb einer Subroutine stehen, bilden einen Anweisungsblock.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 1:
+</div>
+<div class="note-box-text note-box-example-code"><pre>if ($number &gt; 1000) {
+    $number = 0;
+}</pre></div>
+<div class="note-box-text note-box-example-comment">Beispiel 2:</div>
+<div class="note-box-text note-box-example-code"><pre>for my $i (1..99) {
+    print &quot;Das Quadrat von $i ist &quot; . $i * $i . &quot;.\n&quot;;
+}</pre></div>
+</div>
+<p>Ein Anweisungsblock wird durch eine öffnende geschweifte Klammer <code>{</code> begonnen und durch eine schließende geschweifte Klammer <code>}</code> beendet.
+</p><p>Bei bedingten Anweisungen (wie in Beispiel 1) oder bei Schleifen (wie in Beispiel 2) müssen Sie solche Anweisungsblöcke notieren, auch wenn nur eine einzige Anweisung von der Bedingung oder der Schleifenbedingung abhängig ausgeführt werden soll.
+</p><p>Anweisungsblöcke können auch verschachtelt werden.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Kommentare in Perl">Bearbeiten</a>]</span> <span class="mw-headline" id="Kommentare_in_Perl"> Kommentare in Perl </span></h2>
+<p>Wie jede bessere Programmiersprache erlaubt Perl das Notieren von Kommentaren. Kommentare werden nicht als Code interpretiert, sondern erläutern das Programm oder machen den Code für den Programmierer besser lesbar.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre># es folgt die Ausgabe der Quadratzahlen
+# von 1 bis 99
+
+for my $i (1..99) {
+  # Hier wird das Quadrat der Zahlen ausgegeben
+    print &quot;Das Quadrat von $i ist &quot; . $i * $i . &quot;.\n&quot;;
+}</pre></div>
+</div>
+<p>Kommentare in Perl beginnen mit einem Nummernzeichen <code>#</code>. Alles, was hinter dem Nummernzeichen bis zum Ende der Zeile steht, wird von Perl ignoriert. Beginnt eine Zeile mit dem Nummernzeichen, ist die gesamte Zeile ein Kommentar.
+</p><p>Neben der einfachen Auskommentierung besteht auch die Möglichkeit, größere Abschnitte des Programms als Dokumentation auszuweisen. Solche Dokumentationen können mit dem Programm <code>perldoc</code>, das zum Lieferumfang der Perl-Distribution gehört, separat gelesen werden. Bei komplexeren Programmen können Sie so die Dokumentation gleich zum Programm  mit dazuliefern. Im Zusammenhang mit Modulen wird im Abschnitt <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Moduldokumentationen_lesen_mit_perldoc" title="Perl/Module/Einführung">Moduldokumentationen lesen mit perldoc</a> beschrieben, wie solche Abschnitte aussehen. Was dort für Module beschrieben wird, funktioniert in jedem Perl-Programm.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Regeln für selbst vergebene Namen">Bearbeiten</a>]</span> <span class="mw-headline" id="Regeln_f.C3.BCr_selbst_vergebene_Namen"> Regeln für selbst vergebene Namen </span></h2>
+<p>An vielen Stellen in Perl müssen Sie selbst Namen vergeben, zum Beispiel für Variablen wie Skalare, Arrays oder Hashes, sowie für Subroutinen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>my $interface_version = $ENV{'GATEWAY_INTERFACE'};</pre></div>
+</div>
+<p>Im Beispiel ist <code>$interface_version</code> ein selbst vergebener Name, auch Bezeichner genannt. Bei selbst vergebenen Namen gelten folgende Regeln:
+</p>
+<ul><li> Sie dürfen keine Leerzeichen enthalten.
+</li><li> Ein Variablenamen wird immer mit einem "Sigil" (führendes Symbol) versehen, das den Typ des Variableninhalts anzeigt. Einer <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalarvariablen</a> wird dabei das Dollarzeichen (<code>$</code>), einer <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Arrayvariablen</a> das At-Zeichen (<code>@</code>) und einer <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hashvariablen</a> das Prozentzeichen (<code>%</code>) vorangestellt.
+</li><li> Nach einem eventuell vorhandenen Sigil müssen sie mit einem Buchstaben oder einem Unterstrich <code>_</code> beginnen. Mit einer Ziffer oder einem anderen Zeichen dürfen sie nicht beginnen.
+</li><li> Es sind Groß- und Kleinbuchstaben erlaubt. Groß- und Kleinschreibung wird aber auch unterschieden. Das heißt, zwei Variablennamen wie <code>$user</code> und <code>$User</code> bezeichnen unterschiedliche Variablen!
+</li><li> Sie dürfen Unterstriche <code>_</code> enthalten.
+</li><li> Sie dürfen alphabetische Zeichen außerhalb ASCII wie z.B. Umlaute oder ß enthalten, wenn das Pragma <code>utf8</code> geladen ist und der Quellcode in <code>UTF-8</code> kodiert gespeichert wird.
+</li></ul>
+<p>Vergeben Sie sprechende Namen, die Ihnen auch ein halbes Jahr, nachdem Sie das Perl-Programmm geschrieben haben, noch signalisieren, welche Bedeutung sie haben. In Hinblick auf Tradition und zum Zwecke der Zusammenarbeit mit anderen Programmierern werden auch die Bezeichner auf englisch geschrieben.
+</p><p>Seit Perl-Version 5.6.0 können Perl-Programme auch in Unicode notiert werden. Damit ist es möglich, auch beispielsweise Umlaute in Variablennamen zu verwenden. Die Perl-Programme müssen dann in UTF-8 kodiert sein. In einem Editor, der diese Kodierung nicht beherrscht, sieht dann eine Variable <code>$Straße</code> beispielsweise so aus: <code>$StraÃŸe</code>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Sauberer Programmierstil">Bearbeiten</a>]</span> <span class="mw-headline" id="Sauberer_Programmierstil"> Sauberer Programmierstil </span></h2>
+<p>Es gibt ein paar Dinge, die ein sauber geschriebenes Perl-Programm enthalten sollte. Ohne diese Dinge funktionieren die meisten Perl-Programme zwar genauso gut, aber kritische (mehrdeutige) Anweisungen im Quelltext fallen dann nicht auf und können leichter zu Fehlern führen. Das folgende kleine Perl-Programm enthält ein paar Dinge, die von Perl-Programmierern zum sauberen Programmieren empfohlen werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: eines CGI-Programms
+</div>
+<div class="note-box-text note-box-example-code"><pre>#!/usr/bin/env perl -T
+use strict;
+use warnings;
+use CGI::Carp qw(fatalsToBrowser);
+
+my $headline = 'Ein sauberes Programm!';
+
+print qq{Content-type: text/html
+
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;$headline&lt;/h1&gt;
+&lt;p&gt;nur auf das CGI-Modul wurde hier verzichtet&#160;;-)&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;
+}</pre></div>
+</div>
+<p>Zu den empfohlenen Maßnahmen sauberer Programmierung zählt auf jeden Fall die Verwendung der Aufrufoption <code>-T</code> in der ersten Zeile des Programms. Dadurch verursachen fehlgeschlagene Taint-Überprüfungen einen Programmabbruch. Das heißt, alle Daten, die das Perl-Programm von außen bekommt, werden vom Perl-Interpreter besonders gekennzeichnet und müssen vom Programm bei kritischen Operationen speziell bearbeitet werden, bevor sie benutzt werden können. Dies dient zum Schutz vor Einschleusung ungewollter Daten.
+</p><p>In die gleiche Richtung zielt die Anweisung <code>use strict;</code>. Damit wird ein spezielles Pragma-Modul eingebunden, das bewirkt, dass der Perl-Interpreter keine unsicheren Konstrukte akzeptiert, bevor er das Programm ausführt. Das können zum Beispiel nicht definierte Variablen sein. Auch damit lassen sich Fehler vermeiden, die durch unachtsames Programmieren entstehen können und bei einer toleranteren Interpretation des Quelltextes nicht auffallen.
+</p><p>Durch das Pragma <code>warnings</code> gibt der Perl-Interpreter Warnungen zu zweifelhaften Befehlen aus, bevor er das Programm ausführt. Manche Unsauberkeiten im Quellcode werden so ohne zeitraubende Suche erkannt.
+</p><p>Die Anweisung <code>use CGI::Carp qw(fatalsToBrowser);</code> wird Programmierern, die Perl-Programme für die CGI-Schnittstelle entwickeln wollen, während der Entwicklungs- und Testzeit zu ihrer Bequemlichkeit dringend empfohlen. Sie bindet eine Funktion eines speziellen Modul ein, das beim ungewollten Abbruch des Programms aufgrund eines Syntaxfehlers die Fehlerursache in HTML umwandelt und direkt auf die Standardausgabe schreibt, also an den aufrufenden Browser übergibt. Auf diese Weise ersparen es sich CGI-Programmierer, beim Programmabbruch in der meist langen Error-Log-Datei des Webservers nach der Fehlermeldung zu suchen. Diese Anweisung nutzt jedoch nichts, wenn bereits Fehler auftreten, bevor der Perl-Interpreter ausgeführt werden kann, also etwa, wenn die erste Zeile des Perl-Programms eine falsche Lage des Perl-Interpreters ausweist. Im Produktivbetrieb muss die Anweisung wieder entfernt werden, weil Fehlermeldungen Daten enthalten können, die aus Sicherheits- oder Datenschutzgründen privat im Error-Log bleiben sollten.
+</p><p>Wenn Sie <code>use strict;</code> angeben, zwingt Perl Sie dazu, alle Ihre Variablen vor der ersten Verwendung zu deklarieren (z.B. mit <code>my</code>). Im obigen Beispiel ist dies bei der Initialisierung von <code>$headline</code> der Fall. Dies hat den Vorteil, dass ein Programmabbruch erfolgt, wenn Sie im weiteren Verlauf des Programms einen Variablennamen falsch geschrieben haben. Die Verwendung von <code>my</code> bewirkt, dass eine Variable nur im aktuellen Anweisungsblock gültig ist. Näheres dazu bei der Beschreibung des Befehls <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts#my" title="Perl/Funktionen für die Kontrolle des laufenden Scripts">my</a>.
+</p><p>Wie Sie dem Quellcode des obigen Beispiels entnehmen können, gibt das Programm in seiner Ausgabe an den aufrufenden Browser mit einem verschmitzten Lächeln zu, dass es das CGI-Modul nicht verwendet. Tatsächlich sollten Sie sich, wenn Sie CGI-Programme schreiben wollen, mit diesem Modul und seiner API beschäftigen. Es hält für viele CGI-Programme nützliche Funktionen bereit und soll an dieser Stelle ausdrücklich empfohlen werden.
+</p><p>Generell ist es empfehlenswert, auf vorhandene und bewährte Ressourcen zurückzugreifen. Perl wird in einer Distribution mit einer ganzen Reihe von fertigen Modulen ausgeliefert, die viele Programmieraufgaben erleichtern und die möglichen Fehlerquellen verringen. Nachdem Sie sich mit den Sprachelementen und eingebauten Funktionen von Perl etwas vertraut gemacht haben, sollten Sie sich daher auf jeden Fall auch mit den Perl-Modulen beschäftigen.
+</p><p>Bei größeren Programmen sollten Sie den Quellcode auf Subroutinen verteilen. Mit dieser Technik können Sie Anweisungsblöcke definieren, die bestimmte Aufgaben übernehmen und von verschiedenen anderen Stellen im Programm aus aufgerufen werden können. Ferner können Sie die Technik der Subroutinen dazu nutzen, um den Programmablauf in Teilprozeduren zu zerlegen und nur bestimmte Teile des Programms auszuführen.
+</p><p>Seit Version 5 erlaubt Perl auch objektorientiertes Programmieren. Das ist zwar für Neulinge zunächst erheblich schwieriger zu begreifen, aber wenn man es sich angewöhnt, werden größere Anwendungen in Perl letztlich einfacher zu programmieren sein, und der Code sieht deutlich lesbarer aus.
+</p><p>Zum sauberen Programmieren gehören schließlich folgende allgemeine Empfehlungen:
+</p>
+<ul><li> Kommentieren Sie alle nicht-trivialen Anweisungen oder Anweisungsblöcke Ihres Programms. Sie sollten allerdings darauf achten, dass Sie auch nicht zu viel kommentieren. Ein Programm, in dem auf eine Code-Zeile zehn Zeilen Kommentar kommen, ist schlecht lesbar. Kommentieren Sie, was mit dem Code beabsichtigt ist, nicht was der Code macht, denn das sieht man ihm an, im Gegensatz zur Intention dahinter.
+</li><li> Notieren Sie den Quelltext so, dass er übersichtlich wirkt. Dazu gehören Leerzeilen zwischen logischen Abschnitten im Programm sowie Einrückungen, die vor allem bei Anweisungsblöcken erkennen lassen, was zum Anweisungsblock gehört und was außerhalb davon steht. Vor allem sollte die schließende geschweifte Klammer eines Blocks in der gleichen Textspalte stehen wie das erste Zeichen des Wortes, das den Block einleitet.
+</li><li> Verwenden Sie ein einheitliches Schema bei der Namensvergabe. Es sieht besser aus, wenn eine Reihe von Variablen die Namen <code>$name</code>, <code>$telephone</code>, <code>$mail</code> und <code>$homepage</code> haben, als wenn diese <code>$Name</code>, <code>$telephoneNumber</code>, <code>$mail_Adresse</code> und <code>$Homepage</code> lauten.
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Siehe auch">Bearbeiten</a>]</span> <span class="mw-headline" id="Siehe_auch"> Siehe auch </span></h2>
+<ul><li> <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Linkliste" title="SELFHTML:Linkliste">SELFHTML:Linkliste</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 356/1000000
+Post‐expand include size: 3820/2097152 bytes
+Template argument size: 2518/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1209-0!*!0!!de-formal!*!* and timestamp 20150301151009 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;oldid=24524">http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;oldid=24524</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:Perl" title="Kategorie:Perl">Perl</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FEinf%C3%BChrung+in+Perl" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Einführung"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="http://wiki.selfhtml.org/wiki/Diskussion:Perl/Einführung"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Einführung" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Einführung" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Einführung" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Einf%C3%BChrung&amp;oldid=24524" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FEinführung" title="Spezial:Durchsuchen/Perl-2FEinführung">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 5. Dezember 2014 um 17:47 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 6.722-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.110 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

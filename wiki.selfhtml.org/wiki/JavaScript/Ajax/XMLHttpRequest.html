@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Ajax/XMLHttpRequest by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/API/XMLHttpRequest – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="canonical" href="http://wiki.selfhtml.org/wiki/JavaScript/API/XMLHttpRequest" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/API/XMLHttpRequest","wgTitle":"JavaScript/API/XMLHttpRequest","wgCurRevisionId":25024,"wgArticleId":3212,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["ToDo"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/API/XMLHttpRequest","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgRedirectedFrom":"JavaScript/Ajax/XMLHttpRequest","wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-php {line-height: normal;}
+.source-php li, .source-php pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for php
+ * CSS class: source-php, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.php.source-php .de1, .php.source-php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.php.source-php  {font-family:monospace;}
+.php.source-php .imp {font-weight: bold; color: red;}
+.php.source-php li, .php.source-php .li1 {font-weight: normal; vertical-align:top;}
+.php.source-php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php.source-php .li2 {font-weight: bold; vertical-align:top;}
+.php.source-php .kw1 {color: #b1b100;}
+.php.source-php .kw2 {color: #000000; font-weight: bold;}
+.php.source-php .kw3 {color: #990000;}
+.php.source-php .kw4 {color: #009900; font-weight: bold;}
+.php.source-php .co1 {color: #666666; font-style: italic;}
+.php.source-php .co2 {color: #666666; font-style: italic;}
+.php.source-php .co3 {color: #0000cc; font-style: italic;}
+.php.source-php .co4 {color: #009933; font-style: italic;}
+.php.source-php .coMULTI {color: #666666; font-style: italic;}
+.php.source-php .es0 {color: #000099; font-weight: bold;}
+.php.source-php .es1 {color: #000099; font-weight: bold;}
+.php.source-php .es2 {color: #660099; font-weight: bold;}
+.php.source-php .es3 {color: #660099; font-weight: bold;}
+.php.source-php .es4 {color: #006699; font-weight: bold;}
+.php.source-php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php.source-php .es6 {color: #009933; font-weight: bold;}
+.php.source-php .es_h {color: #000099; font-weight: bold;}
+.php.source-php .br0 {color: #009900;}
+.php.source-php .sy0 {color: #339933;}
+.php.source-php .sy1 {color: #000000; font-weight: bold;}
+.php.source-php .st0 {color: #0000ff;}
+.php.source-php .st_h {color: #0000ff;}
+.php.source-php .nu0 {color: #cc66cc;}
+.php.source-php .nu8 {color: #208080;}
+.php.source-php .nu12 {color: #208080;}
+.php.source-php .nu19 {color:#800080;}
+.php.source-php .me1 {color: #004000;}
+.php.source-php .me2 {color: #004000;}
+.php.source-php .re0 {color: #000088;}
+.php.source-php .ln-xtra, .php.source-php li.ln-xtra, .php.source-php div.ln-xtra {background-color: #ffc;}
+.php.source-php span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html4strict {line-height: normal;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html4strict.source-html4strict .de1, .html4strict.source-html4strict .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html4strict.source-html4strict  {font-family:monospace;}
+.html4strict.source-html4strict .imp {font-weight: bold; color: red;}
+.html4strict.source-html4strict li, .html4strict.source-html4strict .li1 {font-weight: normal; vertical-align:top;}
+.html4strict.source-html4strict .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html4strict.source-html4strict .li2 {font-weight: bold; vertical-align:top;}
+.html4strict.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict.source-html4strict .kw3 {color: #000066;}
+.html4strict.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict.source-html4strict .br0 {color: #66cc66;}
+.html4strict.source-html4strict .sy0 {color: #66cc66;}
+.html4strict.source-html4strict .st0 {color: #ff0000;}
+.html4strict.source-html4strict .nu0 {color: #cc66cc;}
+.html4strict.source-html4strict .sc-2 {color: #404040;}
+.html4strict.source-html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict.source-html4strict .sc0 {color: #00bbdd;}
+.html4strict.source-html4strict .sc1 {color: #ddbb00;}
+.html4strict.source-html4strict .sc2 {color: #009900;}
+.html4strict.source-html4strict .ln-xtra, .html4strict.source-html4strict li.ln-xtra, .html4strict.source-html4strict div.ln-xtra {background-color: #ffc;}
+.html4strict.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/API/XMLHttpRequest" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/API/XMLHttpRequest&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_API_XMLHttpRequest skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/API/XMLHttpRequest</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/JavaScript" title="JavaScript">JavaScript</a> | <a href="http://wiki.selfhtml.org/wiki/JavaScript/API" title="JavaScript/API">API</a></span>(Weitergeleitet von <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Ajax/XMLHttpRequest&amp;redirect=no" title="JavaScript/Ajax/XMLHttpRequest">JavaScript/Ajax/XMLHttpRequest</a>)</div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Das <b>XMLHttpRequest</b>-Objekt wird zum Austausch von Daten zwischen Nutzer und Server verwendet. Man kann damit ...
+</p>
+<ul><li> eine Webseite aktualisieren, ohne sie neu laden zu müssen
+</li><li> Daten vom Server anfordern, nachdem die Seite geladen ist
+</li><li> Daten vom Server empfangen, nachdem die Seite geladen ist 
+</li><li> Daten zu einem Server im Hintergund senden
+</li></ul>
+<ul class="siconset smetadaten"><li class="sicon sicon_ie7"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="IE 7"><img alt="IE 7" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Firefox"><img alt="Firefox" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Chrome"><img alt="Chrome" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Safari"><img alt="Safari" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Opera"><img alt="Opera" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Erzeugung eines XMLHttpRequst-Objekts
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> ajax <span class="sy0">=</span> <span class="kw2">null</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span>window.<span class="me1">XMLHttpRequest</span><span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="co1">//Google Chrome, Mozilla Firefox, Opera, Safari, IE 10</span>
+	ajax <span class="sy0">=</span> <span class="kw1">new</span> XMLHttpRequest<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="kw1">if</span><span class="br0">&#40;</span>window.<span class="me1">ActiveXObject</span><span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="co1">// Internet Explorer 9 und niedriger</span>
+	<span class="kw1">try</span><span class="br0">&#123;</span>
+		ajax <span class="sy0">=</span> <span class="kw1">new</span> ActiveXObject<span class="br0">&#40;</span><span class="st0">&quot;Msxml2.XMLHTTP.6.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span> <span class="kw1">catch</span><span class="br0">&#40;</span>e<span class="br0">&#41;</span><span class="br0">&#123;</span>
+		<span class="kw1">try</span><span class="br0">&#123;</span>
+			ajax <span class="sy0">=</span> <span class="kw1">new</span> ActiveXObject<span class="br0">&#40;</span><span class="st0">&quot;Msxml2.XMLHTTP.3.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">catch</span><span class="br0">&#40;</span>e<span class="br0">&#41;</span><span class="br0">&#123;</span><span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span>ajax<span class="sy0">==</span><span class="kw2">null</span><span class="br0">&#41;</span>
+	alert<span class="br0">&#40;</span><span class="st0">&quot;Ihr Browser unterstützt kein Ajax!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Im Code wird zuerst die Variable <code>ajax</code> mit <code>null</code> initialisiert, als nächstes wird getestet ob das <code>XMLHttpRequest</code>-Objekt (Ajax) existiert und ggf. erzeugt. Falls nicht (bei älteren Internet Explorer Versionen) wird das jeweilige ActiveX-Objekt abgefragt, und am Ende, für den Fall, dass das <code>ajax</code>-Objekt immer noch <code>null</code> ist, eine Fehlermeldung ausgegeben.
+</p>
+<div class="note-box note-box-todo"><p class="note-box-title">ToDo:&#160;&#160;&#160;&#160;<span class="note-box-more small">(<a href="http://wiki.selfhtml.org/wiki/Kategorie:ToDo" title="Kategorie:ToDo"><span style="color:#eef;text-decoration:underline">weitere ToDos</span></a>)</span></p><div class="note-box-text">Überarbeiten und strukturieren.</div></div>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Das_Ajax-Objekt_mit_Daten_f.C3.BCttern"><span class="tocnumber">1</span> <span class="toctext">Das Ajax-Objekt mit Daten füttern</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Die_Verarbeitung_bestimmen"><span class="tocnumber">2</span> <span class="toctext">Die Verarbeitung bestimmen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Die_Anfrage_senden"><span class="tocnumber">3</span> <span class="toctext">Die Anfrage senden</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Kompletter_Code"><span class="tocnumber">4</span> <span class="toctext">Kompletter Code</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Beispiel:_Benutzernamen-Pr.C3.BCfung"><span class="tocnumber">5</span> <span class="toctext">Beispiel: Benutzernamen-Prüfung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#serverseitige_Resource"><span class="tocnumber">5.1</span> <span class="toctext">serverseitige Resource</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#HTML-Seite"><span class="tocnumber">5.2</span> <span class="toctext">HTML-Seite</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#JavaScript-Datei"><span class="tocnumber">5.3</span> <span class="toctext">JavaScript-Datei</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Spezifikationen_.28Fortgeschritten.29"><span class="tocnumber">6</span> <span class="toctext">Spezifikationen (Fortgeschritten)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Methoden"><span class="tocnumber">6.1</span> <span class="toctext">Methoden</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#XMLHttpRequest.open"><span class="tocnumber">6.1.1</span> <span class="toctext">XMLHttpRequest.open</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#XMLHttpRequest.setRequestHeader"><span class="tocnumber">6.1.2</span> <span class="toctext">XMLHttpRequest.setRequestHeader</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#XMLHttpRequest.send"><span class="tocnumber">6.1.3</span> <span class="toctext">XMLHttpRequest.send</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#XMLHttpRequest.abort"><span class="tocnumber">6.1.4</span> <span class="toctext">XMLHttpRequest.abort</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#XMLHttpRequest.getResponseHeader.28.29"><span class="tocnumber">6.1.5</span> <span class="toctext">XMLHttpRequest.getResponseHeader()</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#XMLHttpRequest.getAllResponseHeaders.28.29"><span class="tocnumber">6.1.6</span> <span class="toctext">XMLHttpRequest.getAllResponseHeaders()</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#XMLHttpRequest.overrideMimeType.28.29"><span class="tocnumber">6.1.7</span> <span class="toctext">XMLHttpRequest.overrideMimeType()</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#Eigenschaften"><span class="tocnumber">6.2</span> <span class="toctext">Eigenschaften</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#XMLHttpRequest.timeout"><span class="tocnumber">6.2.1</span> <span class="toctext">XMLHttpRequest.timeout</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#XMLHttpRequest.withCredentials"><span class="tocnumber">6.2.2</span> <span class="toctext">XMLHttpRequest.withCredentials</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#XMLHttpRequest.upload"><span class="tocnumber">6.2.3</span> <span class="toctext">XMLHttpRequest.upload</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#XMLHttpRequest.status"><span class="tocnumber">6.2.4</span> <span class="toctext">XMLHttpRequest.status</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#XMLHttpRequest.statusText"><span class="tocnumber">6.2.5</span> <span class="toctext">XMLHttpRequest.statusText</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#XMLHttpRequest.responseType"><span class="tocnumber">6.2.6</span> <span class="toctext">XMLHttpRequest.responseType</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#XMLHttpRequest.response"><span class="tocnumber">6.2.7</span> <span class="toctext">XMLHttpRequest.response</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#XMLHttpRequest.responseText"><span class="tocnumber">6.2.8</span> <span class="toctext">XMLHttpRequest.responseText</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#XMLHttpRequest.responseXML"><span class="tocnumber">6.2.9</span> <span class="toctext">XMLHttpRequest.responseXML</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#Konstanten"><span class="tocnumber">6.3</span> <span class="toctext">Konstanten</span></a>
+<ul>
+<li class="toclevel-3 tocsection-29"><a href="#XMLHttpRequest.UNSENT"><span class="tocnumber">6.3.1</span> <span class="toctext">XMLHttpRequest.UNSENT</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#XMLHttpRequest.OPENED"><span class="tocnumber">6.3.2</span> <span class="toctext">XMLHttpRequest.OPENED</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#XMLHttpRequest.HEADERS_RECEIVED"><span class="tocnumber">6.3.3</span> <span class="toctext">XMLHttpRequest.HEADERS_RECEIVED</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#XMLHttpRequest.LOADING"><span class="tocnumber">6.3.4</span> <span class="toctext">XMLHttpRequest.LOADING</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#XMLHttpRequest.DONE"><span class="tocnumber">6.3.5</span> <span class="toctext">XMLHttpRequest.DONE</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-34"><a href="#Events"><span class="tocnumber">6.4</span> <span class="toctext">Events</span></a>
+<ul>
+<li class="toclevel-3 tocsection-35"><a href="#readystatechange"><span class="tocnumber">6.4.1</span> <span class="toctext">readystatechange</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#loadstart"><span class="tocnumber">6.4.2</span> <span class="toctext">loadstart</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#progress"><span class="tocnumber">6.4.3</span> <span class="toctext">progress</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#abort"><span class="tocnumber">6.4.4</span> <span class="toctext">abort</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#error"><span class="tocnumber">6.4.5</span> <span class="toctext">error</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#load"><span class="tocnumber">6.4.6</span> <span class="toctext">load</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#timeout"><span class="tocnumber">6.4.7</span> <span class="toctext">timeout</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#loadend"><span class="tocnumber">6.4.8</span> <span class="toctext">loadend</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-43"><a href="#Quellen"><span class="tocnumber">7</span> <span class="toctext">Quellen</span></a></li>
+</ul>
+</td></tr></table>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Das Ajax-Objekt mit Daten füttern">Bearbeiten</a>]</span> <span class="mw-headline" id="Das_Ajax-Objekt_mit_Daten_f.C3.BCttern"> Das Ajax-Objekt mit Daten füttern </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">ajax.<span class="me1">open</span><span class="br0">&#40;</span><span class="st0">&quot;GET&quot;</span><span class="sy0">,</span><span class="st0">&quot;daten.txt&quot;</span><span class="sy0">,</span><span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ajax.<span class="me1">setRequestHeader</span><span class="br0">&#40;</span><span class="st0">&quot;X-Test&quot;</span><span class="sy0">,</span><span class="st0">&quot;test1&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ajax.<span class="me1">setRequestHeader</span><span class="br0">&#40;</span><span class="st0">&quot;X-Test&quot;</span><span class="sy0">,</span><span class="st0">&quot;test2&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Als erstes "öffnen" wir das Ajax-Objekt und füttern es mit der verwendeten Methode, der URL und geben an ob synchron oder asynchron gearbeitet wird.
+Danach setzen wir noch einen Anfrage-Header. Wenn man nun 2 mal den gleichen Anfrage-Header (wie im Beispiel) angeben, kombiniert das Ajax-Objekt beide Werte.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Die Verarbeitung bestimmen">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Verarbeitung_bestimmen"> Die Verarbeitung bestimmen </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">ajax.<span class="me1">onreadystatechange</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">readyState</span> <span class="sy0">==</span> <span class="nu0">4</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">status</span> <span class="sy0">==</span> <span class="nu0">200</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+			alert<span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">responseText</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">else</span><span class="br0">&#123;</span>
+			alert<span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">statusText</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>Unsere Verarbeitung ist recht simpel, wenn nichts schiefgelaufen ist lassen wir uns den Inhalt der angeforderten Resource ausgeben, ansonsten den HTTP-Statustext.
+Nun ins Detail: Das Ajax-Objekt ruft intern die <code>onreadystatechange</code>-Funktion auf, sobald sich der Status (<code>readyState</code>) des Objektes/der Anfrage ändert. Am Interessantesten ist dabei der Wert 4. Dieser besagt, dass die Anfrage beendet wurde, dies bedeutet entweder, dass alles glatt verlaufen ist, oder das ein Fehler aufgetreten ist.
+Nun kontrollieren wir noch den Status der Antwort, 200 bedeutet, dass die Anfrage erfolgreich bearbeit und übertragen wurde.
+<code>responseText</code> beinhaltet den Inhalt der Resource.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Die Anfrage senden">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Anfrage_senden"> Die Anfrage senden </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">ajax.<span class="me1">send</span><span class="br0">&#40;</span><span class="kw2">null</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die Anfrage wird gesendet. Wenn die verwendete Methode Daten versendet, wird der Parameter-Text übergeben, ansonsten <code>null</code>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Kompletter Code">Bearbeiten</a>]</span> <span class="mw-headline" id="Kompletter_Code"> Kompletter Code </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">if</span><span class="br0">&#40;</span>window.<span class="me1">XMLHttpRequest</span><span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="co1">//Google Chrome, Mozilla Firefox, Opera, Safari,...</span>
+	ajax <span class="sy0">=</span> <span class="kw1">new</span> XMLHttpRequest<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="kw1">if</span><span class="br0">&#40;</span>window.<span class="me1">ActiveXObject</span><span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="co1">// Internet Explorer</span>
+	<span class="kw1">try</span><span class="br0">&#123;</span>
+		ajax <span class="sy0">=</span> <span class="kw1">new</span> ActiveXObject<span class="br0">&#40;</span><span class="st0">&quot;Msxml2.XMLHTTP.6.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span> <span class="kw1">catch</span><span class="br0">&#40;</span>e<span class="br0">&#41;</span><span class="br0">&#123;</span>
+		<span class="kw1">try</span><span class="br0">&#123;</span>
+			ajax <span class="sy0">=</span> <span class="kw1">new</span> ActiveXObject<span class="br0">&#40;</span><span class="st0">&quot;Msxml2.XMLHTTP.3.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">catch</span><span class="br0">&#40;</span>e<span class="br0">&#41;</span><span class="br0">&#123;</span><span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span>ajax<span class="sy0">!=</span><span class="kw2">null</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+	ajax.<span class="me1">open</span><span class="br0">&#40;</span><span class="st0">&quot;GET&quot;</span><span class="sy0">,</span><span class="st0">&quot;daten.txt&quot;</span><span class="sy0">,</span><span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	ajax.<span class="me1">setRequestHeader</span><span class="br0">&#40;</span><span class="st0">&quot;X-Test&quot;</span><span class="sy0">,</span><span class="st0">&quot;test1&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	ajax.<span class="me1">setRequestHeader</span><span class="br0">&#40;</span><span class="st0">&quot;X-Test&quot;</span><span class="sy0">,</span><span class="st0">&quot;test2&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	ajax.<span class="me1">onreadystatechange</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">readyState</span> <span class="sy0">==</span> <span class="nu0">4</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">status</span> <span class="sy0">==</span> <span class="nu0">200</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+				alert<span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">responseText</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="br0">&#125;</span>
+			<span class="kw1">else</span><span class="br0">&#123;</span>
+				alert<span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">statusText</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+	ajax.<span class="me1">send</span><span class="br0">&#40;</span><span class="kw2">null</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span><span class="br0">&#123;</span>
+	alert<span class="br0">&#40;</span><span class="st0">&quot;Ihr Browser unterstützt kein Ajax!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Beispiel: Benutzernamen-Prüfung">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel:_Benutzernamen-Pr.C3.BCfung"> Beispiel: Benutzernamen-Prüfung </span></h2>
+<p>Hier wird nun das bereits erwähnte <a href="#Verwendungsbeispiel">Beispiel</a> mit Code hinterlegt.
+</p><p>Was wird gebraucht?
+</p>
+<ul><li> Eine serverseitige Resource zur Überprüfung des gewünschten Benutzernamens
+</li><li> Eine HTML-Seite mit Formular
+</li><li> Das eigentliche JavaScript
+</li></ul>
+<p>Desweiteren wird davon ausgegangen, das sich alle Dateien im gleichen Verzeichnis auf dem Webserver befinden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: serverseitige Resource">Bearbeiten</a>]</span> <span class="mw-headline" id="serverseitige_Resource"> serverseitige Resource </span></h3>
+<p>Für das Beispiel wird PHP verwendet, getauft wird die Datei auf "usernamecheck.php".
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">isset</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st0">&quot;username&quot;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+		<span class="kw3">die</span><span class="br0">&#40;</span><span class="st0">&quot;{valid:false,message:false}&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+	<span class="re0">$usernames</span> <span class="sy0">=</span> <span class="kw3">Array</span><span class="br0">&#40;</span><span class="st0">&quot;admin&quot;</span><span class="sy0">,</span><span class="st0">&quot;gast&quot;</span><span class="sy0">,</span><span class="st0">&quot;paul&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="re0">$validatePattern</span> <span class="sy0">=</span> <span class="st0">&quot;/^[a-z0-9]{4,20}$/&quot;</span><span class="sy0">;</span>
+&#160;
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">in_array</span><span class="br0">&#40;</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st0">&quot;username&quot;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+		<span class="kw3">die</span><span class="br0">&#40;</span><span class="st0">&quot;{valid:false,message:'Der Benutzername wird bereits verwendet!'}&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">preg_match</span><span class="br0">&#40;</span><span class="re0">$validatePattern</span><span class="sy0">,</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st0">&quot;username&quot;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+		<span class="kw3">die</span><span class="br0">&#40;</span><span class="st0">&quot;{valid:false,message:'Der Benutzername muss aus kleinen Buchstaben(a-z) und/oder Ziffern(0-9) bestehen und 4-20 Zeichen lang sein'}&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">echo</span> <span class="st0">&quot;{valid:true,message:false}&quot;</span><span class="sy0">;</span>
+<span class="sy1">?&gt;</span></pre></div></div></div>
+</div>
+<p>Das Script erwartet den Benutzernamen via POST-Methode und unter dem Namen <code>username</code>.
+Zurück gibt es einen JSON-Text, welches ein Objekt mit den Eigenschaften <code>valid</code> und <code>message</code> enthält.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: HTML-Seite">Bearbeiten</a>]</span> <span class="mw-headline" id="HTML-Seite"> HTML-Seite </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc0">&lt;!DOCTYPE html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+	<span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+		<span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>AJAX-Benutzerüberprüfung<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+		<span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;check.js&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+	<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+		Benutzername: <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;username&quot;</span>&gt;&lt;<span class="kw2">button</span> <span class="kw3">onclick</span><span class="sy0">=</span><span class="st0">&quot;check();&quot;</span>&gt;</span>check<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">button</span>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: JavaScript-Datei">Bearbeiten</a>]</span> <span class="mw-headline" id="JavaScript-Datei"> JavaScript-Datei </span></h3>
+<p>Dateiname: check.js
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> check<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>window.<span class="me1">XMLHttpRequest</span><span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="co1">//Google Chrome, Mozilla Firefox, Opera, Safari,...</span>
+		ajax <span class="sy0">=</span> <span class="kw1">new</span> XMLHttpRequest<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">else</span> <span class="kw1">if</span><span class="br0">&#40;</span>window.<span class="me1">ActiveXObject</span><span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="co1">// Internet Explorer</span>
+		<span class="kw1">try</span><span class="br0">&#123;</span>
+			ajax <span class="sy0">=</span> <span class="kw1">new</span> ActiveXObject<span class="br0">&#40;</span><span class="st0">&quot;Msxml2.XMLHTTP.6.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span> <span class="kw1">catch</span><span class="br0">&#40;</span>e<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="kw1">try</span><span class="br0">&#123;</span>
+				ajax <span class="sy0">=</span> <span class="kw1">new</span> ActiveXObject<span class="br0">&#40;</span><span class="st0">&quot;Msxml2.XMLHTTP.3.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="br0">&#125;</span>
+			<span class="kw1">catch</span><span class="br0">&#40;</span>e<span class="br0">&#41;</span><span class="br0">&#123;</span><span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>ajax<span class="sy0">!=</span><span class="kw2">null</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		ajax.<span class="me1">open</span><span class="br0">&#40;</span><span class="st0">&quot;POST&quot;</span><span class="sy0">,</span><span class="st0">&quot;usernamecheck.php&quot;</span><span class="sy0">,</span><span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		ajax.<span class="me1">onreadystatechange</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">readyState</span> <span class="sy0">==</span> <span class="nu0">4</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+				<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">status</span> <span class="sy0">==</span> <span class="nu0">200</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+					<span class="kw1">var</span> obj <span class="sy0">=</span> <span class="kw2">null</span><span class="sy0">;</span>
+					eval<span class="br0">&#40;</span><span class="st0">&quot;obj = &quot;</span><span class="sy0">+</span><span class="kw1">this</span>.<span class="me1">responseText</span><span class="br0">&#41;</span><span class="sy0">;</span>
+					<span class="kw1">if</span><span class="br0">&#40;</span>obj.<span class="me1">valid</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+						alert<span class="br0">&#40;</span><span class="st0">&quot;Der Benutzername kann verwendet werden!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+					<span class="br0">&#125;</span>
+					<span class="kw1">else</span><span class="br0">&#123;</span>
+						<span class="kw1">if</span><span class="br0">&#40;</span>obj.<span class="me1">message</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+							alert<span class="br0">&#40;</span>obj.<span class="me1">message</span><span class="br0">&#41;</span><span class="sy0">;</span>
+						<span class="br0">&#125;</span>
+						<span class="kw1">else</span><span class="br0">&#123;</span>
+							alert<span class="br0">&#40;</span><span class="st0">&quot;Ein unbekannter Fehler ist aufgetreten!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+						<span class="br0">&#125;</span>
+					<span class="br0">&#125;</span>
+				<span class="br0">&#125;</span>
+				<span class="kw1">else</span><span class="br0">&#123;</span>
+					alert<span class="br0">&#40;</span><span class="st0">&quot;Es ist ein Fehler aufgetreten! (&quot;</span><span class="sy0">+</span><span class="kw1">this</span>.<span class="me1">statusText</span><span class="sy0">+</span><span class="st0">&quot;)&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+				<span class="br0">&#125;</span>
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+		ajax.<span class="me1">send</span><span class="br0">&#40;</span><span class="st0">&quot;username=&quot;</span><span class="sy0">+</span>encodeURIComponent<span class="br0">&#40;</span>document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">&quot;username&quot;</span><span class="br0">&#41;</span>.<span class="me1">value</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">else</span><span class="br0">&#123;</span>
+		alert<span class="br0">&#40;</span><span class="st0">&quot;Ihr Browser unterstützt kein Ajax!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Spezifikationen (Fortgeschritten)">Bearbeiten</a>]</span> <span class="mw-headline" id="Spezifikationen_.28Fortgeschritten.29"> Spezifikationen (Fortgeschritten) </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Methoden">Bearbeiten</a>]</span> <span class="mw-headline" id="Methoden"> Methoden </span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: XMLHttpRequest.open">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.open"> XMLHttpRequest.open  </span></h4>
+<pre>void function open(string method, string url[, boolean asynch = true[, string user = null[, string password = null]]])</pre>
+<p>Setzt die Anfrage-Methode, Anfrage-URL, ob die Anfrage asynchron abgearbeitet wird, Anfrage-Benutzername und Anfrage-Benutzerpasswort.
+</p><p><b>Ausnahmefehler:</b>
+<code>SyntaxError</code>, wenn:
+</p>
+<ul><li> <code>method</code> ist keine gültige HTTP-Methode
+</li><li> <code>url</code> kann nicht aufgelöst werden
+</li><li> <code>url</code> beinhaltet das "user:password"-Format
+</li></ul>
+<p><code>SecurityError</code>, wenn:
+</p>
+<ul><li> <code>method</code> ist eine der HTTP-Methoden <code>CONNECT</code>, <code>TRACE</code> oder <code>TRACK</code>
+</li></ul>
+<p><code>InvalidAccessError</code>, wenn:
+</p>
+<ul><li> (SPÄTER)
+</li></ul>
+<p><br />
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: XMLHttpRequest.setRequestHeader">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.setRequestHeader"> XMLHttpRequest.setRequestHeader </span></h4>
+<pre>void function setRequestHeader(string header, string value)</pre>
+<p>XMLHttpRequest.setRequestHeader setzt bestimmte Eigenschaften für die Resourcen-Anfrage. Wenn der gleiche Header mehrmals gesetzt wird, werden die Werte kombiniert.
+</p><p>Parameter:
+</p>
+<ul><li> <code>header</code>: Erwartet einen validen HTTP-Header-Feldnamen
+</li><li> <code>value</code>: Erwartet einen validen Wert für das Header-Feld
+</li></ul>
+<p>Rückgabewert: keine Rückgabe
+</p><p>Ausnahmefehler:
+</p>
+<ul><li> <code>InvalidStateError</code>: wird geworfen, wenn entweder noch nicht das Ziel via XMLHttpRequest.open definiert wurde oder wenn die Anfrage schon via XMLHttpRequest.send gestartet wurde
+</li><li> <code>SyntaxError</code>: wird geworfen, wenn ein invalides Header-Feld oder der dazu angegebene Wert invalid ist
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: XMLHttpRequest.send">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.send"> XMLHttpRequest.send </span></h4>
+<pre>void function send([data=null])</pre>
+<p>XMLHttpRequest.send schickt die Anfrage los.
+</p><p>Parameter:
+</p>
+<ul><li> <code>data</code>: [optional] Daten, die gesendet werden sollen.
+</li></ul>
+<p>Rückgabewert: keine Rückgabe
+</p><p>Ausnahmefehler:
+</p>
+<ul><li> <code>InvalidStateError</code>: wird geworfen, wenn entweder die Anfrage nocht nicht via XMLHttpRequest.open geöffnet wurde oder die die Anfrage schon via XMLHttpRequest.send gestartet wurde.
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: XMLHttpRequest.abort">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.abort"> XMLHttpRequest.abort </span></h4>
+<pre>void function abort()</pre>
+<p>Stoppt sämtliche Netzwerkaktivitäten.
+</p><p>Parameter: keine Parameter
+</p><p>Rückgabewert: keine Rückgabe
+</p><p>Ausnahmefehler: keine
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: XMLHttpRequest.getResponseHeader()">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.getResponseHeader.28.29"> XMLHttpRequest.getResponseHeader() </span></h4>
+<pre>string function getResponseHeader(string header)</pre>
+<p>Gibt den Wert eines Antwortheaders zurück, wenn das Headerfeld nicht <code>Set-Cookie</code> oder <code>Set-Cookie2</code> ist.
+</p><p>Parameter:
+</p>
+<ul><li> <code>header</code>: Header-Feldname, groß- und kleinschreibungsunabhängig
+</li></ul>
+<p>Rückgabewert: Wenn ein Header-Feld gefunden wird, wird der Wert zurückgegeben, ansonsten <code>null</code>
+</p><p>Ausnahmefehler: keine
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: XMLHttpRequest.getAllResponseHeaders()">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.getAllResponseHeaders.28.29"> XMLHttpRequest.getAllResponseHeaders() </span></h4>
+<pre>string function getAllResponseHeaders()</pre>
+<p>Gibt Antwortheader zurück (außer <code>Set-Cookie</code> oder <code>Set-Cookie2</code>)
+</p><p>Parameter: keine Parameter
+</p><p>Rückgabewert: Für jedes Headerfeld eine Zeile nach dem Schema &lt;Name&gt;: &lt;Wert&gt;
+</p><p>Ausnahmefehler: keine
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: XMLHttpRequest.overrideMimeType()">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.overrideMimeType.28.29"> XMLHttpRequest.overrideMimeType() </span></h4>
+<pre>void function overrideMimeType(string mime)</pre>
+<p>Überschreibt den MIME-Type des Antwort-Headers
+</p><p>Parameter:
+</p>
+<ul><li> <code>mime</code>: stellt den neuen MIME-Type dar
+</li></ul>
+<p>Rückgabewert: keine Rückgabe
+</p><p>Ausnahmefehler:
+</p>
+<ul><li> <code>InvalidStateError</code>: wird geworfen, wenn der die Anfrage entweder schon fertig ist, oder gerade geladen wird.
+</li><li> <code>SyntaxError</code>: wird geworfen, wenn <code>mime</code> kein gülter MIME-Type ist
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Eigenschaften">Bearbeiten</a>]</span> <span class="mw-headline" id="Eigenschaften"> Eigenschaften </span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: XMLHttpRequest.timeout">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.timeout"> XMLHttpRequest.timeout </span></h4>
+<pre>int timeout</pre>
+<p>Beinhalted die Timeout-Zeit für asynchrone Anfragen in Millisekunden. Nach Ablauf der Zeit wird Timeout-Event geschickt.
+</p><p>Ausnahmefehler:
+</p>
+<ul><li> <code>InvalidAccessError</code>: wird geworfen, wenn die Anfrage synchron abgearbeitet wird.
+</li><li> <code>TimeoutError</code>: wird für <code>XMLHttpRequest.send</code> geworfen
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: XMLHttpRequest.withCredentials">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.withCredentials"> XMLHttpRequest.withCredentials </span></h4>
+<pre>bool withCredentials</pre>
+<p><br />
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: XMLHttpRequest.upload">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.upload"> XMLHttpRequest.upload </span></h4>
+<pre>XMLHttpRequestUpload upload</pre>
+<p>Stellt das zur Anfrage dazugehörende XMLHttpRequestUpload-Objekt dar.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: XMLHttpRequest.status">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.status"> XMLHttpRequest.status </span></h4>
+<pre>int status</pre>
+<p>Beinhaltet den HTTP-Statuscode, wenn dieser nicht gegeben ist (aufgrund eines Fehlers oder weil die Anfrage noch nicht gesendet wurde) beinhaltet <code>status</code> den Wert 0.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: XMLHttpRequest.statusText">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.statusText"> XMLHttpRequest.statusText </span></h4>
+<pre>string statusText</pre>
+<p>Beinhaltet den HTTP-Statustext, wenn dieser nicht gegeben ist (aufgrund eines Fehlers oder weil die Anfrage noch nicht gesendet wurde) beinhaltet <code>statusText</code> einen leeren String.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: XMLHttpRequest.responseType">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.responseType"> XMLHttpRequest.responseType </span></h4>
+<pre>string responseType</pre>
+<p>Beinhaltet den Typ der Antwort, kann verändert werden um den Typ zu ändern.
+</p><p>Mögliche Werte:
+</p>
+<ul><li> "" (leerer String)
+</li><li> "arraybuffer"
+</li><li> "blob"
+</li><li> "document"
+</li><li> "json"
+</li><li> "text"
+</li></ul>
+<p>Ausnahmefehler:
+</p>
+<ul><li> <code>InvalidStateError</code>: wird geworfen, wenn <code>responseType</code> gesetzt wird, wenn die Anfrage geladen oder fertig ist
+</li><li> <code>InvalidAccessError</code>: wird geworfen, wenn die Anfrage synchron abgearbeitet wird.
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=25" title="Abschnitt bearbeiten: XMLHttpRequest.response">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.response"> XMLHttpRequest.response </span></h4>
+<pre>object response</pre>
+<p>Wenn <code>responseType</code> "" oder "text" ist, 
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=26" title="Abschnitt bearbeiten: XMLHttpRequest.responseText">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.responseText"> XMLHttpRequest.responseText </span></h4>
+<pre>string reponseText</pre>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=27" title="Abschnitt bearbeiten: XMLHttpRequest.responseXML">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.responseXML"> XMLHttpRequest.responseXML </span></h4>
+<pre>object responseXML</pre>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=28" title="Abschnitt bearbeiten: Konstanten">Bearbeiten</a>]</span> <span class="mw-headline" id="Konstanten"> Konstanten </span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=29" title="Abschnitt bearbeiten: XMLHttpRequest.UNSENT">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.UNSENT"> XMLHttpRequest.UNSENT </span></h4>
+<pre>int UNSENT = 0</pre>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=30" title="Abschnitt bearbeiten: XMLHttpRequest.OPENED">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.OPENED"> XMLHttpRequest.OPENED </span></h4>
+<pre>int OPENED = 1</pre>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=31" title="Abschnitt bearbeiten: XMLHttpRequest.HEADERS RECEIVED">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.HEADERS_RECEIVED"> XMLHttpRequest.HEADERS_RECEIVED </span></h4>
+<pre>int HEADERS_RECEIVED = 2</pre>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=32" title="Abschnitt bearbeiten: XMLHttpRequest.LOADING">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.LOADING"> XMLHttpRequest.LOADING </span></h4>
+<pre>int LOADING = 3</pre>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=33" title="Abschnitt bearbeiten: XMLHttpRequest.DONE">Bearbeiten</a>]</span> <span class="mw-headline" id="XMLHttpRequest.DONE"> XMLHttpRequest.DONE </span></h4>
+<pre>int DONE = 4</pre>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=34" title="Abschnitt bearbeiten: Events">Bearbeiten</a>]</span> <span class="mw-headline" id="Events"> Events </span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=35" title="Abschnitt bearbeiten: readystatechange">Bearbeiten</a>]</span> <span class="mw-headline" id="readystatechange"> readystatechange </span></h4>
+<ul><li> EventHandler-Typ: <code>readystatechange</code>
+</li><li> EventHandler: <code>onreadystatechange</code>
+</li><li> Interface: <code>Event</code>
+</li><li> Feuer-Ereignis: <code>readyState</code> hat sich geändert
+</li></ul>
+<p>Das readystatechange-Event <b>muss</b> mit dem EventHandler behandelt werden!
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=36" title="Abschnitt bearbeiten: loadstart">Bearbeiten</a>]</span> <span class="mw-headline" id="loadstart"> loadstart </span></h4>
+<ul><li> EventHandler-Typ: <code>loadstart</code>
+</li><li> EventHandler: <code>onloadstart</code>
+</li><li> Interface: <code>ProgressEvent</code>
+</li><li> Feuer-Ereignis: Anfrage wurde gestartet.
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=37" title="Abschnitt bearbeiten: progress">Bearbeiten</a>]</span> <span class="mw-headline" id="progress"> progress </span></h4>
+<ul><li> EventHandler-Typ: <code>progress</code>
+</li><li> EventHandler: <code>onprogress</code>
+</li><li> Interface: <code>ProgressEvent</code>
+</li><li> Feuer-Ereignis: Daten werden gesendet oder empfangen.
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=38" title="Abschnitt bearbeiten: abort">Bearbeiten</a>]</span> <span class="mw-headline" id="abort"> abort </span></h4>
+<ul><li> EventHandler-Typ: <code>abort</code>
+</li><li> EventHandler: <code>onabort</code>
+</li><li> Interface: <code>ProgressEvent</code>
+</li><li> Feuer-Ereignis: Anfrage wurde abgebrochen (z.B. durch <code>abort()</code>)
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=39" title="Abschnitt bearbeiten: error">Bearbeiten</a>]</span> <span class="mw-headline" id="error"> error </span></h4>
+<ul><li> EventHandler-Typ: <code>error</code>
+</li><li> EventHandler: <code>onerror</code>
+</li><li> Interface: <code>ProgressEvent</code>
+</li><li> Feuer-Ereignis: Anfrage ist gescheitert.
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=40" title="Abschnitt bearbeiten: load">Bearbeiten</a>]</span> <span class="mw-headline" id="load"> load </span></h4>
+<ul><li> EventHandler-Typ: <code>load</code>
+</li><li> EventHandler: <code>onload</code>
+</li><li> Interface: <code>ProgressEvent</code>
+</li><li> Feuer-Ereignis: Anfrage wurde erfolgreich abgeschlossen
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=41" title="Abschnitt bearbeiten: timeout">Bearbeiten</a>]</span> <span class="mw-headline" id="timeout"> timeout </span></h4>
+<ul><li> EventHandler-Typ: <code>timeout</code>
+</li><li> EventHandler: <code>ontimeout</code>
+</li><li> Interface: <code>ProgressEvent</code>
+</li><li> Feuer-Ereignis: Timeout-Zeit wurde überschritten
+</li></ul>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=42" title="Abschnitt bearbeiten: loadend">Bearbeiten</a>]</span> <span class="mw-headline" id="loadend"> loadend </span></h4>
+<ul><li> EventHandler-Typ: <code>loadend</code>
+</li><li> EventHandler: <code>onloadend</code>
+</li><li> Interface: <code>ProgressEvent</code>
+</li><li> Feuer-Ereignis: Anfrage wurde beendet (egal ob erfolgreich oder gescheitert)
+</li></ul>
+<h1><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit&amp;section=43" title="Abschnitt bearbeiten: Quellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Quellen"> Quellen </span></h1>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1771/1000000
+Post‐expand include size: 6716/2097152 bytes
+Template argument size: 2489/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3212-0!*!0!!de-formal!2!* and timestamp 20150301145337 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;oldid=25024">http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;oldid=25024</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:ToDo" title="Kategorie:ToDo">ToDo</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FAjax%2FXMLHttpRequest" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/API/XMLHttpRequest"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="http://wiki.selfhtml.org/wiki/Diskussion:JavaScript/API/XMLHttpRequest"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/API/XMLHttpRequest" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/JavaScript/API/XMLHttpRequest" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/JavaScript/API/XMLHttpRequest" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/API/XMLHttpRequest&amp;oldid=25024" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/JavaScript-2FAPI-2FXMLHttpRequest" title="Spezial:Durchsuchen/JavaScript-2FAPI-2FXMLHttpRequest">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 9. Januar 2015 um 06:23 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 4.880-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.102 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Ajax/XMLHttpRequest by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:55 GMT -->
+</html>

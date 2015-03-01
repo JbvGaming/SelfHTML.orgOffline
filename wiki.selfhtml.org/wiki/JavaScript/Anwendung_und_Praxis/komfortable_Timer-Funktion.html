@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Anwendung und Praxis/komfortable Timer-Funktion – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion","wgTitle":"JavaScript/Anwendung und Praxis/komfortable Timer-Funktion","wgCurRevisionId":25511,"wgArticleId":4351,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Anwendung und Praxis/komfortable Timer-Funktion" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Anwendung_und_Praxis_komfortable_Timer-Funktion skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Anwendung und Praxis/komfortable Timer-Funktion</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../../JavaScript.html" title="JavaScript">JavaScript</a> | <a href="../Anwendung_und_Praxis.html" title="JavaScript/Anwendung und Praxis">Anwendung und Praxis</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>JavaScript-Programme sind nicht mit anderen Computerprogrammen zu vergleichen, die eine bestimmten Startzeit und Endzeit ihrer Ausführung haben. JavaScripte werden immer wieder für kurze Zeit aktiv, etwa wenn auf Ereignisse reagiert wird. Wenn ein JavaScript tatsächlich mehrere Sekunden an einem Stück läuft und die gesamten Rechenkapazitäten in Beschlag nimmt, friert der Browser ein oder zeigt einen Dialog, mit dem das Script abgebrochen werden kann.
+</p><p>Dementsprechend gibt es in JavaScript keinen Befehl <code>sleep</code>, der einfach für eine gegebene Zeit nichts tut. So etwas ist in JavaScript nicht möglich. Allerdings lassen sich über <a href="../Objekte/window/setTimeout.html" title="JavaScript/Objekte/window/setTimeout">window.setTimeout</a> und <a href="../Objekte/window/setInterval.html" title="JavaScript/Objekte/window/setInterval">window.setInterval</a> Funktionen nach einer angegebenen Wartezeit aufrufen.
+</p><p>Soll ein Script über längere Zeit laufen und zwischen einzelnen Befehlen eine Wartezeit verstreichen lassen, ist dies in JavaScript nur mit <a href="../Objekte/window/setTimeout.html" title="JavaScript/Objekte/window/setTimeout">window.setTimeout</a> über das&#160;»Stop &amp; Go«-Verfahren möglich. Auf diese Weise können z.B. Animationen umgesetzt werden.
+</p><p>Ein verzögerter Aufruf sieht in manch anderen Sprachen schematisch so aus:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">befehl1<span class="sy0">;</span>
+sleep<span class="br0">&#40;</span><span class="nu0">5</span><span class="br0">&#41;</span><span class="sy0">;</span>
+befehl2<span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>In JavaScript hingegen notieren wir eine Funktion, die wir zeitverzögert aufrufen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">befehl1<span class="sy0">;</span>
+<span class="kw1">function</span> befehl2 <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span>
+window.<span class="me1">setTimeout</span><span class="br0">&#40;</span>befehl2<span class="sy0">,</span> <span class="nu0">5000</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Knifflig wird es nun, wenn ein Befehl mit sich ändernden Parametern mehrmals ausgeführt werden soll und dazwischen jeweils eine Zeitspanne liegen soll. Ein Countdown etwa ließe sich in anderen Sprachen schematisch so realisieren:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">for</span> <span class="br0">&#40;</span>$i <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span> $i <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="sy0">;</span> i<span class="sy0">--</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  echo $i . <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  sleep<span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>In JavaScript wird dies üblicherweise mit einer Funktion gelöst, die sich immer wieder selbst verzögert aufruft und dabei den Schleifenzähler übergibt:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> countdown <span class="br0">&#40;</span>i<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span>i <span class="sy0">==</span> <span class="kw2">undefined</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="co1">// Startwert</span>
+    i <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  alert<span class="br0">&#40;</span>i<span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span>i <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    i<span class="sy0">--;</span>
+    <span class="co1">// Funktion verzögert aufrufen</span>
+    <span class="kw1">var</span> timeout <span class="sy0">=</span> window.<span class="me1">setTimeout</span><span class="br0">&#40;</span><span class="st0">&quot;countdown(&quot;</span> <span class="sy0">+</span> i <span class="sy0">+</span> <span class="st0">&quot;)&quot;</span><span class="sy0">,</span> <span class="nu0">1000</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+<span class="co1">// Countdown anstoßen</span>
+countdown<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Wir sehen hier bereits, wie kompliziert die Umsetzung eines einfachen Countdowns wird. Diese verbreitete Umsetzung lässt sich zunächst durch den Einsatz von Seite Closures vereinfachen. Damit lässt sich die Übergabe von Parametern einfacher gestalten: Anstatt <code>window.setTimeout("countdown(" + i + ")", 1000);</code> können wir ebenso eine anonyme Funktion notieren, die als Closure wirkt und in der die lokale Variable <code> i </code> zur Verfügung steht: <code>window.setTimeout(function () { countdown(i) }, 1000);</code>. Dies ist vor allem sinnvoll, wenn mehr und komplexere Variablen übergeben werden müssen, die nicht so einfach in einen String linearisiert werden können.
+</p><p>Wenn mehrere Funktionen periodisch aufgerufen werden sollen, so ist es umständlich, denselben Mechanismus immer wieder neu zu notieren. Im Folgenden wird eine Helferfunktion vorgestellt, mit der sich solche Aufgaben komfortabel umsetzen lassen.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Vorstellung der Timer-Methode">Bearbeiten</a>]</span> <span class="mw-headline" id="Vorstellung_der_Timer-Methode">Vorstellung der Timer-Methode</span></h2>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw4">Function</span>.<span class="kw1">prototype</span>.<span class="me1">Timer</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span>interval<span class="sy0">,</span> calls<span class="sy0">,</span> onend<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">var</span> count <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw1">var</span> payloadFunction <span class="sy0">=</span> <span class="kw1">this</span><span class="sy0">;</span>
+  <span class="kw1">var</span> startTime <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">var</span> callbackFunction <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> payloadFunction<span class="br0">&#40;</span>startTime<span class="sy0">,</span> count<span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+  <span class="kw1">var</span> endFunction <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>onend<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      onend<span class="br0">&#40;</span>startTime<span class="sy0">,</span> count<span class="sy0">,</span> calls<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+  <span class="kw1">var</span> timerFunction <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    count<span class="sy0">++;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>count <span class="sy0">&lt;</span> calls <span class="sy0">&amp;&amp;</span> callbackFunction<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="kw2">false</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      window.<span class="me1">setTimeout</span><span class="br0">&#40;</span>timerFunction<span class="sy0">,</span> interval<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+      endFunction<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+  timerFunction<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p><br />
+</p><p>Zum Verständnis der Funktionsweise ist es notwendig, sich vor Augen zu führen, dass Funktionen in JavaScript nichts anderes als Objekte sind, die sich im Grunde genauso wie andere Variablen verhalten können. Außerdem werden verschachtelte Funktionen und Closures an mehreren Stellen verwendet, um Variablen zwischen verschiedenen Funktionen zu teilen, ohne dass sie global verfügbar sind.
+</p><p>Die Helferfunktion wird an das prototype-Objekt des Function-Objektes geheftet. Dies nennt sich prototypische Erweiterung und hat den Effekt, dass durch die Zuweisung <code>Function.prototype.methode = function () {};</code> alle Funktionen fortan über die notierte Methode als gewöhnliches Unterobjekt verfügen. Denn Funktionen stammen vom Function-Konstruktor ab und erben dessen Methoden. Ein einfacheres Beispiel der prototypischen Erweiterung:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw4">Function</span>.<span class="kw1">prototype</span>.<span class="me1">zeigeParameterzahl</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  alert<span class="br0">&#40;</span><span class="st0">&quot;Diese Funktion erwartet &quot;</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me1">length</span> <span class="sy0">+</span> <span class="st0">&quot; Parameter.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">function</span> irgendeineFunktion <span class="br0">&#40;</span>parameter1<span class="sy0">,</span> parameter2<span class="sy0">,</span> parameter3<span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span>
+irgendeineFunktion.<span class="me1">zeigeParameterzahl</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die gezeigte Timer-Methode erwartet drei Parameter:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Parameter </th>
+<th> Bedeutung
+</th></tr>
+<tr>
+<td> interval </td>
+<td> Zeit zwischen den Aufrufen in Millisekunden
+</td></tr>
+<tr>
+<td> calls  </td>
+<td> Anzahl der Aufrufe
+</td></tr>
+<tr>
+<td> onend </td>
+<td> Funktion, die am Ende der Wiederholungen gestartet werden soll (optional)
+</td></tr></table>
+<p><br />
+Am Anfang der Funktion werden einige Variablen initialisiert:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="co1">// Zähler, wie oft die Funktion schon ausgeführt wurde, beginne bei 0.</span>
+  <span class="kw1">var</span> count <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// Lege eine Referenz auf die Funktion an, die mehrfach ausgeführt werden soll.</span>
+  <span class="co1">// Dies ist nötig, damit in den folgenden notieren verschachtelten Funktionen</span>
+  <span class="co1">// ein Zugriff darauf möglich ist.</span>
+  <span class="kw1">var</span> payloadFunction <span class="sy0">=</span> <span class="kw1">this</span><span class="sy0">;</span>
+&#160;
+  <span class="co1">// Speichere den Startzeitpunkt der Aufrufkette.</span>
+  <span class="kw1">var</span> startTime <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p><br />
+Der Rest besteht aus drei Funktionen, die als lokale Variablen gespeichert werden. Alle wirken als Closures, das heißt, sie werden nach dem Ende der Ausführung der Timer-Funktion nicht gelöscht, sondern haben weiterhin Zugriff auf die eben initialisierten Variablen. Zudem haben die drei Funktionen aus demselben Grund Zugriff aufeinander, sie liegen im selben abgeschlossenen Scope (Geltungsbereich).
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">var</span> callbackFunction <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> payloadFunction<span class="br0">&#40;</span>startTime<span class="sy0">,</span> count<span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die callbackFunktion wird aufgerufen, während der Timer läuft. Sie startet die eigentliche Funktion, die mehrfach ausgeführt werden soll (payloadFunction). Ihr übergibt sie den Startzeitpunkt sowie die fortlaufende Nummer des wiederholten Aufrufes. Wenn die callbackFunction das Ergebnis false zurückgibt, wird der Timer beendet. Das heißt, dass in der zu wiederholenden Funktion einfach return false notiert werden kann, um den Timer zu beenden - callbackFunction gibt diesen Rückgabewert durch.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">var</span> endFunction <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>onend<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      onend<span class="br0">&#40;</span>startTime<span class="sy0">,</span> count<span class="sy0">,</span> calls<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>endFunction wird am Ende aller Wiederholungen aufgerufen. Sie kapselt die als Parameter entgegen genommene onend-Funktion und übergibt ihr den Startzeitpunkt, die tatsächliche Anzahl der Wiederholungen sowie die ursprünglich übergebene Anzahl der Wiederholungen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">var</span> timerFunction <span class="sy0">=</span>  <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    count<span class="sy0">++;</span>
+    <span class="kw1">var</span> callbackReturnValue <span class="sy0">=</span> callbackFunction<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>count <span class="sy0">&lt;</span> calls <span class="sy0">&amp;&amp;</span> callbackReturnValue <span class="sy0">!=</span> <span class="kw2">false</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      window.<span class="me1">setTimeout</span><span class="br0">&#40;</span>timerFunction<span class="sy0">,</span> interval<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+      endFunction<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die Timer-Funktion schließlich erhöht den Zähler, führt die <code>callbackFunction</code> sowie sich selbst aus, wenn das Limit an Aufrufen noch nicht erreicht ist und die <code>callbackFunction</code> nicht false ergeben hat. Im Falle eines Abbruchs oder bei Erreichen des Limits wird die endFunction ausgeführt.
+</p><p>Am Ende der Timer-Methode wird schließlich die <code>timerFunction</code> erstmalig angestoßen, der weitere Ablauf wird an sie übergeben.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Anwendung und Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Anwendung_und_Beispiel">Anwendung und Beispiel</span></h2>
+<p>Ein kompleres Beispiel wird verdeutlichen, wie die vorgestellte Helferfunktion angewendet wird, wie sie abläuft und wieso sie derartig strukturiert ist.
+</p><p>Die beispielhafte Aufgabe ist ein einfacher Countdown, der in einem Element ausgegeben werden soll. Gleichzeitig sollen zwei dieser Countdowns laufen.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Anwendung-Timer.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> leadingzero <span class="br0">&#40;</span>number<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="br0">&#40;</span>number <span class="sy0">&lt;</span> <span class="nu0">10</span><span class="br0">&#41;</span> <span class="sy0">?</span> <span class="st0">'0'</span> <span class="sy0">+</span> number <span class="sy0">:</span> number<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">function</span> countdown <span class="br0">&#40;</span>seconds<span class="sy0">,</span> target<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span>target<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">var</span> calculateAndShow <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>seconds <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="kw1">var</span> h <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span>seconds <span class="sy0">/</span> <span class="nu0">3600</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">var</span> m <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span><span class="br0">&#40;</span>seconds <span class="sy0">%</span> <span class="nu0">3600</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="nu0">60</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">var</span> s <span class="sy0">=</span> seconds <span class="sy0">%</span> <span class="nu0">60</span><span class="sy0">;</span>
+      element.<span class="me1">innerHTML</span><span class="sy0">=</span>
+        leadingzero<span class="br0">&#40;</span>h<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">':'</span> <span class="sy0">+</span>
+        leadingzero<span class="br0">&#40;</span>m<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">':'</span> <span class="sy0">+</span>
+        leadingzero<span class="br0">&#40;</span>s<span class="br0">&#41;</span><span class="sy0">;</span>
+      seconds<span class="sy0">--;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+      <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">var</span> completed <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    element.<span class="me1">innerHTML</span> <span class="sy0">=</span> <span class="st0">&quot;&lt;strong&gt;Liftoff!&lt;<span class="es0">\/</span>strong&gt;&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+  calculateAndShow.<span class="me1">Timer</span><span class="br0">&#40;</span><span class="nu0">1000</span><span class="sy0">,</span> <span class="kw2">Infinity</span><span class="sy0">,</span> completed<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+window.<span class="me1">onload</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">new</span> countdown<span class="br0">&#40;</span><span class="nu0">20</span><span class="sy0">,</span> <span class="st0">'counter1'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">new</span> countdown<span class="br0">&#40;</span><span class="nu0">10</span><span class="sy0">,</span> <span class="st0">'counter2'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Anwendung-Timer.html">ansehen …</a></div></div>
+<p>Herzstück ist die Funktion <code>countdown</code>, die als Konstruktor eines eigenen Objektes dient (wobei diesem Objekt keine öffentlichen Eigenschaften zugewiesen werden). Beim Laden der Seite werden mit new zwei Countdown-Objekt mit verschiedenen Parametern erzeugt:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">window.<span class="me1">onload</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">new</span> countdown<span class="br0">&#40;</span><span class="nu0">20</span><span class="sy0">,</span> <span class="st0">'counter1'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">new</span> countdown<span class="br0">&#40;</span><span class="nu0">10</span><span class="sy0">,</span> <span class="st0">'counter2'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die countdown-Konstruktorfunktion erwartet zwei Parameter: <code>seconds</code> ist die Sekundenzahl, von der aus heruntergezählt werden soll, und <code>target</code> ist ein String mit der ID desjenigen Elements, in dem der Countdown angezeigt werden soll. In diesem Fall werden zwei Countdowns gestartet mit den Element-IDs <code>counter1</code> und <code>counter2</code>, einer mit zehn und einer mit zwanzig Sekunden Laufzeit.
+</p><p>Zunächst wird eine Referenz namens <code>element</code> auf das Element angelegt, in dem der Countdown ausgegeben werden soll:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> element <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span>target<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Im Konstruktor wird nun eine verschachtelte Funktion namens <code>calculateAndShow</code> <code></code>notiert. Dies ist die eigentliche Funktion, die mehrfach aufgerufen werden soll. Durch den Closure-Effekt sind in ihr die lokalen Variablen von <code>countdown</code> <code></code>über die verschiedenen Aufrufe hinweg verfügbar - dies wird zum Zugriff auf <code>seconds</code> und <code>element</code> benötigt.
+</p><p><code>calculateAndShow</code> fragt ab, ob <code>seconds</code> noch nicht bei 0 angekommen ist. Wenn nicht, rechnet es den Sekundenwert in das Format HH:MM:SS (Stunden, Minuten, Sekunden) um und schreibt diesen Wert ins Element:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">      <span class="kw1">var</span> h <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span>seconds <span class="sy0">/</span> <span class="nu0">3600</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">var</span> m <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span><span class="br0">&#40;</span>seconds <span class="sy0">%</span> <span class="nu0">3600</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="nu0">60</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw1">var</span> s <span class="sy0">=</span> seconds <span class="sy0">%</span> <span class="nu0">60</span><span class="sy0">;</span>
+      element.<span class="me1">innerHTML</span><span class="sy0">=</span>
+        leadingzero<span class="br0">&#40;</span>h<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">':'</span> <span class="sy0">+</span>
+        leadingzero<span class="br0">&#40;</span>m<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">':'</span> <span class="sy0">+</span>
+        leadingzero<span class="br0">&#40;</span>s<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Schließlich wird mit <code>seconds--;</code> der Variablenwert verringert. Wenn dieser beim nächsten Aufruf von <code>calculateAndShow</code> bei 0 angekommen wird, wird <code>false</code> <code></code>zurückgegeben. Dies führt, wie oben beschrieben wurde, dazu, dass die Kette an Aufrufen abbricht.
+</p><p>Am Ende der Funktion <code>countdown</code> <code></code>wird die Methode Timer des <code>calculateAndShow</code>-Funktionsobjektes gestartet. Die Funktion hat die Methode durch die prototypische Erweiterung erhalten.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">calculateAndShow.<span class="me1">Timer</span><span class="br0">&#40;</span><span class="nu0">1000</span><span class="sy0">,</span> <span class="kw2">Infinity</span><span class="sy0">,</span> completed<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Als Parameter übergeben wir 1000 Millisekunden als Intervall-Länge, die vordefinierte Konstante <code>Infinity</code> (unendlich) als Anzahl der Wiederholungen sowie die verschachtelte Funktion <code>completed</code>, die nach den wiederholten Aufrufen gestartet wird. Natürlich soll <code>calculateAndShow</code> nicht unendlich oft ausgeführt werden, wir übergeben ihr aber selbst die Kontrolle darüber, wann die Kette an Wiederholungen abgebrochen werden soll - in dem Fall gibt sie einfach false zurück.
+</p><p>Folgendes Ablaufprotokoll zeigt die Funktionsweise der Countdowns im Beispiel:
+</p>
+<ul><li>Aufruf countdown
+<ul><li>Aufruf Timer
+<ul><li>Aufruf timerFunction
+<ul><li>Aufruf callbackFunction
+<ul><li>Aufruf calculateAndShow
+</li></ul>
+</li><li>starte Timeout
+</li></ul>
+</li><li>(Diese timerFunction-Aufrufe wiederholen sich bis zum letzten Aufruf. Dieser startet keinen neuen Timeout, sondern die endFunction:)
+</li><li>Aufruf timerFunction
+<ul><li>Aufruf callbackFunction
+<ul><li>Aufruf calculateAndShow
+</li></ul>
+</li><li>Aufruf endFunction
+<ul><li>Aufruf completed
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<p>Hier zeigt sich, wie <code>timerFunction</code> den Ablauf regelt und die Kontrolle behält, wenn sie einmal angestoßen wurde. Sie führt mithilfe von <code>callbackFunction</code> <code></code>die eigentliche Wiederholungsfunktion <code>calculateAndShow</code> aus und die Wiederholungen werden mit <code>endFunction</code> beendet.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Nachwort">Bearbeiten</a>]</span> <span class="mw-headline" id="Nachwort">Nachwort</span></h2>
+<p>Die vorgestellte Funktion soll beispielhaft zeigen, wie fortgeschrittene Programmiertechniken genutzt werden können, um einen einfach benutzbaren Timer zu realisieren. Dazu gehören prototypische Erweiterung, objektorientierte Programmierung, Funktionen als Objekte sowie Closures.
+</p><p>Das Konzept hat selbstverständlich Vor- und Nachteile und ist ausbaufähig. Andere Umsetzungen wie etwa der <a rel="nofollow" class="external text" href="http://prototypejs.org/doc/latest/language/PeriodicalExecuter/">periodicalExecuter</a> aus dem JavaScript-Framework Prototype besitzen eine stop-Methode, mit der die Kette der Aufrufe auch&#160;»von außen«&#160;unterbrochen werden kann, anstatt nur durch die mehrfach aufgerufene Funktion selbst.
+</p><p>Es gibt zudem verschiedene Methoden, um Variablen von einer Ausführung zur anderen zu konservieren, ohne dass sie notwendigerweise im globalen Scope liegen müssen. Das Anwendungsbeispiel nutzt hier ein eigenes Objekt mit privaten Eigenschaften, die durch den Closure-Effekt in der wiederholten Funktion verfügbar sind, die ihrerseits eine private Methode ist.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 569/1000000
+Post‐expand include size: 7188/2097152 bytes
+Template argument size: 4482/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4351-0!*!0!!*!*!* and timestamp 20150301035451 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;oldid=25511">http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;oldid=25511</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FAnwendung+und+Praxis%2Fkomfortable+Timer-Funktion" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="komfortable_Timer-Funktion.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="komfortable_Timer-Funktion.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../../src.selfhtml.org/logo/S-110.png);" href="../../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../../Spezial_Linkliste/JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion&amp;oldid=25511" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../../Spezial_Durchsuchen/JavaScript-2FAnwendung_und_Praxis-2Fkomfortable_Timer-2DFunktion.html" title="Spezial:Durchsuchen/JavaScript-2FAnwendung und Praxis-2Fkomfortable Timer-2DFunktion">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 28. Januar 2015 um 17:23 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 799-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.116 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Anwendung_und_Praxis/komfortable_Timer-Funktion by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:15 GMT -->
+</html>

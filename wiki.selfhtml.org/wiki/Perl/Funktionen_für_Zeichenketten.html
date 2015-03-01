@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Funktionen für Zeichenketten – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Funktionen_für_Zeichenketten","wgTitle":"Perl/Funktionen für Zeichenketten","wgCurRevisionId":20885,"wgArticleId":1884,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Funktionen_für_Zeichenketten","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-html5 {line-height: normal;}
+.source-html5 li, .source-html5 pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html5
+ * CSS class: source-html5, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html5.source-html5 .de1, .html5.source-html5 .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html5.source-html5  {font-family:monospace;}
+.html5.source-html5 .imp {font-weight: bold; color: red;}
+.html5.source-html5 li, .html5.source-html5 .li1 {font-weight: normal; vertical-align:top;}
+.html5.source-html5 .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html5.source-html5 .li2 {font-weight: bold; vertical-align:top;}
+.html5.source-html5 .kw2 {color: #000000; font-weight: bold;}
+.html5.source-html5 .kw3 {color: #000066;}
+.html5.source-html5 .es0 {color: #000099; font-weight: bold;}
+.html5.source-html5 .br0 {color: #66cc66;}
+.html5.source-html5 .sy0 {color: #66cc66;}
+.html5.source-html5 .st0 {color: #ff0000;}
+.html5.source-html5 .nu0 {color: #cc66cc;}
+.html5.source-html5 .sc-2 {color: #404040;}
+.html5.source-html5 .sc-1 {color: #808080; font-style: italic;}
+.html5.source-html5 .sc0 {color: #00bbdd;}
+.html5.source-html5 .sc1 {color: #ddbb00;}
+.html5.source-html5 .sc2 {color: #009900;}
+.html5.source-html5 .ln-xtra, .html5.source-html5 li.ln-xtra, .html5.source-html5 div.ln-xtra {background-color: #ffc;}
+.html5.source-html5 span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Funktionen für Zeichenketten" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Funktionen_für_Zeichenketten skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Funktionen für Zeichenketten</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_diesen_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu diesen Funktionen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#chomp_-_letztes_Zeichen_entfernen.2C_sofern_Separator"><span class="tocnumber">2</span> <span class="toctext">chomp - letztes Zeichen entfernen, sofern Separator</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#chop_-_letztes_Zeichen_entfernen"><span class="tocnumber">3</span> <span class="toctext">chop - letztes Zeichen entfernen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#chr_-_Zeichen_eines_Zeichenwerts_ermitteln"><span class="tocnumber">4</span> <span class="toctext">chr - Zeichen eines Zeichenwerts ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#crypt_-_Zeichenkette_verschl.C3.BCsseln"><span class="tocnumber">5</span> <span class="toctext">crypt - Zeichenkette verschlüsseln</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#index_-_erstes_Vorkommen_einer_Teilzeichenkette_in_Zeichenkette_suchen"><span class="tocnumber">6</span> <span class="toctext">index - erstes Vorkommen einer Teilzeichenkette in Zeichenkette suchen</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#rindex_-_letztes_Vorkommen_einer_Teilzeichenkette_in_Zeichenkette_suchen"><span class="tocnumber">7</span> <span class="toctext">rindex - letztes Vorkommen einer Teilzeichenkette in Zeichenkette suchen</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#lc_-_alle_Zeichen_einer_Zeichenkette_in_Kleinbuchstaben_umwandeln"><span class="tocnumber">8</span> <span class="toctext">lc - alle Zeichen einer Zeichenkette in Kleinbuchstaben umwandeln</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#lcfirst_-_erstes_Zeichen_einer_Zeichenkette_in_Kleinbuchstabe_umwandeln"><span class="tocnumber">9</span> <span class="toctext">lcfirst - erstes Zeichen einer Zeichenkette in Kleinbuchstabe umwandeln</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#length_-_Anzahl_Zeichen_einer_Zeichenkette_ermitteln"><span class="tocnumber">10</span> <span class="toctext">length - Anzahl Zeichen einer Zeichenkette ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#pack_-_Bin.C3.A4rdaten_erzeugen"><span class="tocnumber">11</span> <span class="toctext">pack - Binärdaten erzeugen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Tabelle_der_Formatierangaben:"><span class="tocnumber">11.1</span> <span class="toctext">Tabelle der Formatierangaben:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#pos_-_Position_der_Anwendung_von_m.2F.5Bregexp.5D.2Fg_auf_Zeichenkette_ermitteln"><span class="tocnumber">12</span> <span class="toctext">pos - Position der Anwendung von m/[regexp]/g auf Zeichenkette ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#reverse_-_Zeichenkette_von_hinten_nach_vorn_umwandeln"><span class="tocnumber">13</span> <span class="toctext">reverse - Zeichenkette von hinten nach vorn umwandeln</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#split_-_Zeichenkette_in_mehrere_Zeichenketten_aufsplitten"><span class="tocnumber">14</span> <span class="toctext">split - Zeichenkette in mehrere Zeichenketten aufsplitten</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#sprintf_-_Zeichenkette_formatieren"><span class="tocnumber">15</span> <span class="toctext">sprintf - Zeichenkette formatieren</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#substr_-_Teilzeichenkette_aus_Zeichenkette_extrahieren"><span class="tocnumber">16</span> <span class="toctext">substr - Teilzeichenkette aus Zeichenkette extrahieren</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#uc_-_alle_Zeichen_einer_Zeichenkette_in_Gro.C3.9Fbuchstaben_umwandeln"><span class="tocnumber">17</span> <span class="toctext">uc - alle Zeichen einer Zeichenkette in Großbuchstaben umwandeln</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#ucfirst_-_erstes_Zeichen_einer_Zeichenkette_in_Gro.C3.9Fbuchstabe_umwandeln"><span class="tocnumber">18</span> <span class="toctext">ucfirst - erstes Zeichen einer Zeichenkette in Großbuchstabe umwandeln</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#unpack_-_Bin.C3.A4rdaten_aufl.C3.B6sen"><span class="tocnumber">19</span> <span class="toctext">unpack - Binärdaten auflösen</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu diesen Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_diesen_Funktionen"> Allgemeines zu diesen Funktionen </span></h2>
+<p>Um die hier versammelten Funktionen zu verstehen, sollten Sie die allgemeinen Bemerkungen zu <a href="http://wiki.selfhtml.org/wiki/Perl/Zeichenketten" title="Perl/Zeichenketten">Zeichenketten</a> in Perl kennen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: chomp - letztes Zeichen entfernen, sofern Separator">Bearbeiten</a>]</span> <span class="mw-headline" id="chomp_-_letztes_Zeichen_entfernen.2C_sofern_Separator"> <span id="chomp"></span> chomp - letztes Zeichen entfernen, sofern Separator</span></h2>
+<p>Entfernt das letzte Zeichen aus einer Zeichenkette. Das kann vor allem bei der Weiterverarbeitung von Zeichenketten interessant sein, die ein Endekennzeichen haben, in der Regel ein Newline-Zeichen <code>\n</code>. Im Gegensatz zu der Funktion <a href="#chop">chop</a>, die in jedem Fall das letzte Zeichen entfernt, egal um was es sich handelt, entfernt die Funktion <code>chomp</code> nur solche Zeichen, die in der <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten Variablen</a> <code>$/</code> enthalten sind. Per Voreinstellung ist in dieser Variablen nur das Newline-Zeichen <code>\n</code> gespeichert. Sollte eine Zeichenkette also nicht mit diesem Sonderzeichen enden, passiert bei Anwendung von <code>chomp</code> im Gegensatz zu <code>chop</code> gar nichts.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Liste von Zeichenketten, auf welche die Funktion angewendet werden soll. Statt einer Liste kann auch eine einzelne Zeichenkette bzw. ein Skalar mit einer Zeichenkette übergeben werden.
+</p><p>Gibt die Anzahl der Zeichen zurück, die insgesamt entfernt wurden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html5 source-html5"><pre class="de1">[boot loader]
+timeout=30
+default=multi(0)disk(0)rdisk(0)partition(1)\WINNT
+[operating systems]
+multi(0)disk(0)rdisk(0)partition(1)\WINNT=&quot;Microsoft Windows XP Professional&quot; /fastdetect</pre></div></div></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!C:/Programme/Perl/bin/perl.exe -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">open</span><span class="br0">&#40;</span>BOOTINI<span class="sy0">,</span> <span class="st0">&quot;&lt;c:/boot.ini&quot;</span><span class="br0">&#41;</span> <span class="kw1">or</span> <span class="kw3">die</span> <span class="st0">&quot;Fehler aufgetreten: $!&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Zeilen</span> <span class="sy0">=</span> <span class="re4">&lt;BOOTINI&gt;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>BOOTINI<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">chomp</span><span class="br0">&#40;</span><span class="re0">@Zeilen</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;pre&gt;
+@Zeilen
+&lt;/pre&gt;
+&lt;/body&gt;&lt;/html&gt;
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt im ersten Teil eine typische zeilenweise Textdatei, hier eine boot.ini, wie man sie auf NT-basierten Windows-Systemen (von Windows NT bis Windows XP) vorfindet. Im CGI-Script des Beispiels wird die Datei in den <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Array</a> <code>@Zeilen</code> eingelesen. Anschließend wird die Funktion <code>chomp</code> auf den Array <code>@Zeilen</code> angewendet. Dadurch wird von jeder Zeile das beendende Newline-Zeichen entfernt. Zur Kontrolle gibt das Script am Ende HTML-Code aus. Innerhalb eines <code>&lt;pre&gt;</code>-Bereichs, in dem alles so ausgegeben wird, wie es notiert ist, wird die Liste <code>@Zeilen</code> ausgegeben. Da alle Newline-Zeichen entfernt wurden, erscheinen die Einträge der Liste nicht mehr als separate Zeilen, sondern in einer druchgehenden Zeichenfolge.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> In diesem Beispiel wird davon ausgegangen, dass Sie das Script auf einem Windows-Rechner einsetzen wollen. Aus diesem Grund muss auch die <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Erste_Zeile_eines_Perl-Programms" title="Perl/Einführung in Perl" class="mw-redirect">erste Zeile des Perl-Scripts</a> einen Pfad zum Perl-Interpreter aufweisen, der auf einem Windows-System gütig ist.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/chomp.html">http://perldoc.perl.org/functions/chomp.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: chop - letztes Zeichen entfernen">Bearbeiten</a>]</span> <span class="mw-headline" id="chop_-_letztes_Zeichen_entfernen"> <span id="chop"></span> chop - letztes Zeichen entfernen</span></h2>
+<p>Entfernt das letzte Zeichen aus einer Zeichenkette. Im Gegensatz zu <a href="#chomp">chomp</a> entfernt <code>chop</code> in jedem Fall das letzte Zeichen, egal, worum es sich handelt.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> eine Variable, auf die die Funktion angewendet werden soll. Alternativ kann auch eine Liste übergeben werden. Wird eine Liste übergeben, gibt <code>chop</code> das abgeschnittene Zeichen des letzen Listenelementes zurück.
+</p><p>Gibt das abgeschnittene Zeichen zurück.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: chr - Zeichen eines Zeichenwerts ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="chr_-_Zeichen_eines_Zeichenwerts_ermitteln"> <span id="chr"></span> chr - Zeichen eines Zeichenwerts ermitteln</span></h2>
+<p>Ermittelt zu einem numerischen Wert das zugehörige Zeichen. Darstellbar sind größtenteils allerdings nur die Zeichen mit Zeichenwerten höher als 32, da die darunterliegenden Zeichen so genannte Steuerzeichen sind, die in der Regel nicht am Bildschirm darstellbar sind.<br />
+Die Gegenfunktion ist <a href="#ord">ord</a>.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> den gewünschten Zeichenwert als Zahl.
+</p><p>Gibt das zugehörige Zeichen zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;table border=<span class="es0">\&quot;</span>1<span class="es0">\&quot;</span> bgcolor=<span class="es0">\&quot;</span>#FFFFE0<span class="es0">\&quot;</span>&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Zeichenwert</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$ASCII_Zeichen</span> <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span><span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span><span class="re0">$i</span><span class="sy0">&lt;</span><span class="nu0">16</span><span class="sy0">;</span><span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="st0">&quot;&lt;tr&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+   <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$j</span><span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span><span class="re0">$j</span><span class="sy0">&lt;</span><span class="nu0">8</span><span class="sy0">;</span><span class="re0">$j</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      <span class="re0">$ASCII_Zeichen</span> <span class="sy0">=</span> <span class="kw3">chr</span><span class="br0">&#40;</span><span class="re0">$Zeichenwert</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="kw3">print</span> <span class="st0">&quot;&lt;td&gt;$Zeichenwert = $ASCII_Zeichen&lt;/td&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+      <span class="re0">$Zeichenwert</span><span class="sy0">++;</span>
+   <span class="br0">&#125;</span>
+   <span class="kw3">print</span> <span class="st0">&quot;&lt;/tr&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/table&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erstellt in zwei ineinander verschachtelten <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for-Schleifen" title="Perl/Schleifen">for-Schleifen</a> eine HTML-Tabelle mit 16 Zeilen zu je 8 Spalten. In jeder der dadurch entstehenden 128 Zellen wird ein ASCII-Zeichen und dessen Zeichenwert ausgegeben. Dazu wird jeweils vor dem Schreiben der aktuellen Tabellenzelle die Funktion <code>chr</code> auf den aktuellen Stand des Skalars <code>$Zeichenwert</code> angewendet, der bei jedem inneren Schleifendurchgang um 1 erhöht wird und durch die beiden Schleifen der Reihe nach alle Zahlen zwischen 0 und 127 annimmt. Der Rückgabewert, also das ASCII-Zeichen, wird jeweils in dem Skalar <code>$ASCII_Zeichen</code> gespeichert. Beide Skalare werden in jeder Tabellenzelle ausgegeben, sodass die Zuordnung zwischen Zeichenwert und ASCII-Codetabelle deutlich wird.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: crypt - Zeichenkette verschlüsseln">Bearbeiten</a>]</span> <span class="mw-headline" id="crypt_-_Zeichenkette_verschl.C3.BCsseln"> <span id="crypt"></span> crypt - Zeichenkette verschlüsseln</span></h2>
+<p>Mit dieser Funktion können Sie eine Zeichenkette verschlüsseln. Dazu wird die Zeichenkette selbst sowie eine zweite Zeichenkette benötigt, die als "Salz in der Suppe" (engl. <i>salt</i>) dient.<br />
+Die Funktion <code>crypt</code> leistet nur eine einseitige Verschlüsselung. Eine entsprechende Entschlüsselungsmethode ist nicht bekannt. <code>crypt</code> ist daher nicht geeignet, um Kodier- und Dekodierverfahren zu realisieren.<br />
+<code>crypt</code> entspricht dem gleichnamigen Systemprogramm unter Unix und der gleichnamigen Funktion in C. Im Zusammenhang mit Web-Seiten wird <code>crypt</code> beispielsweise beim <a href="http://wiki.selfhtml.org/wiki/Webserver/htaccess" title="Webserver/htaccess">Verzeichnisschutz mit .htaccess</a> verwendet, um die Passwörter berechtigter Zugänge verschlüsselt zu speichern.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Zeichenkette, die verschlüsselt werden soll.<br />
+<b>2.</b> das "Salz in der Suppe", eine Zeichenkette, die aus zwei frei wählbaren Zeichen bestehen sollte.
+</p><p>Gibt die verschlüsselte Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Input</span> <span class="sy0">=</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$String</span><span class="sy0">,</span> <span class="re0">$Salt</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">split</span><span class="br0">&#40;</span><span class="co2">/\+/</span><span class="sy0">,</span><span class="re0">$Input</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$CryptString</span> <span class="sy0">=</span> <span class="kw3">crypt</span><span class="br0">&#40;</span><span class="re0">$String</span><span class="sy0">,</span><span class="re0">$Salt</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;die Zeichenkette &lt;b&gt;$String&lt;/b&gt; lautet verschl&amp;uuml;sselt: &lt;b&gt;$CryptString&lt;/b&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-CGI-Script erwartet einen Übergabeparameter, der beim Aufruf über URI hinter einem Fragezeichen notiert wird. Der Übergabeparameter besteht aus der zu verschlüsselnden Zeichenkette und dem "Salz in der Suppe", getrennt durch ein Pluszeichen. Beispiel:<br />
+<p><var><a rel="nofollow" class="external free" href="http://localhost/cgi-bin/test.pl?Stefan+kn">http://localhost/cgi-bin/test.pl?Stefan+kn</a></var>.
+</p>
+Das Beispiel-Script ermittelt den übergebenen Parameter aus der <a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">CGI-Umgebungsvariablen</a> <code>QUERY_STRING</code> und speichert den Wert im Skalar <code>$input</code>. Um den Übergabeparameter am Pluszeichen aufzusplitten (hier also die zu verschlüsselnde Zeichenkette und das "Salz in der Suppe" voneinander zu trennen), wird die Funktion <a href="#split">split</a> eingesetzt, die das Ergebnis in einer aus den beiden Skalaren <code>$String</code> und <code>$Salt</code> bestehenden Liste speichert. Anschließend wird die Funktion <code>crypt</code> angewendet, der die beiden Skalare als Parameter übergeben werden. Der Rückgabewert, also die verschlüsselte Zeichenkette, wird in dem Skalar <code>$CryptString</code> gespeichert. Zur Kontrolle gibt das Script die zu verschlüsselnde Zeichenkette und das Ergebnis der Verschlüsselung aus.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> <code>crypt</code> kann nur Zeichenketten mit maximal 8 Zeichen Länge verschlüsseln. Sollte die Zeichenkette länger sein, werden nur die ersten 8 Zeichen verschlüsselt.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: index - erstes Vorkommen einer Teilzeichenkette in Zeichenkette suchen">Bearbeiten</a>]</span> <span class="mw-headline" id="index_-_erstes_Vorkommen_einer_Teilzeichenkette_in_Zeichenkette_suchen"> <span id="index"></span> index - erstes Vorkommen einer Teilzeichenkette in Zeichenkette suchen </span></h2>
+<p>Diese Funktion sucht in einer Zeichenkette nach dem ersten Vorkommnis einer beliebigen Teilzeichenkette, jedoch ohne reguläre Ausdrücke. Sie können also beispielsweise in einer Textzeile nach <code>Sex-Appeal</code> suchen, aber nicht nach <code>Sex.*</code>.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die Zeichenkette, in der gesucht werden soll,
+</li><li> die Zeichenkette, nach der gesucht werden soll,
+</li><li> (optional) die Zeichenposition, ab der gesucht werden soll, z.b. 8 für "ab dem 9. Zeichen". Wenn Sie den 3. Parameter weglassen, wird ab dem Beginn der Zeichenkette gesucht.
+</li></ol>
+<p>Gibt die Position des Zeichens zurück, an dem die gewünschte Teilzeichenkette zum ersten Mal (von links) gefunden wurde. Wenn sie nicht gefunden wurde, wird <code>-1</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1"># gibt den html header aus</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$satz</span> <span class="sy0">=</span> <span class="st0">&quot;Fischers Fritze fischt frische Fische.&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">index</span><span class="br0">&#40;</span><span class="re0">$satz</span><span class="sy0">,</span><span class="st0">&quot;Fische&quot;</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Der Satz '$satz' beginnt mit 'Fische'<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="kw1">elsif</span><span class="br0">&#40;</span><span class="kw3">index</span><span class="br0">&#40;</span><span class="re0">$satz</span><span class="sy0">,</span> <span class="st0">&quot;Fische&quot;</span><span class="br0">&#41;</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Der Satz '$satz' enthält die Zeichenkette 'Fische', beginnt aber nicht damit.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="kw1">else</span><span class="br0">&#123;</span> <span class="co1"># &lt; 0</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Der Satz '$satz' enthält die Zeichenkette 'Fische' nicht.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Skalar namens <code>$satz</code> und weist ihm einen Wert zu. Das Script gibt HTML-Code aus. Mit der <code>index</code>-Funktion ermittelt es, ob in dem Skalar <code>$satz</code> die Zeichenkette "Fische" enthalten ist. Dies ist der Fall, wenn der Rückgabewert der Funktion größer/gleich 0 ist. Im obigen Beispiel gelangt das Script in den ersten if-Zweig, weil der durchsuchte Satz mit der Zeichenkette "Fische" beginnt.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: rindex - letztes Vorkommen einer Teilzeichenkette in Zeichenkette suchen">Bearbeiten</a>]</span> <span class="mw-headline" id="rindex_-_letztes_Vorkommen_einer_Teilzeichenkette_in_Zeichenkette_suchen"> <span id="rindex"></span> rindex - letztes Vorkommen einer Teilzeichenkette in Zeichenkette suchen </span></h2>
+<p>Diese Funktion sucht in einer Zeichenkette nach dem letzten Vorkommnis einer beliebigen Teilzeichenkette, jedoch ebenso wie die Funktion <a href="#index">index</a> ohne die Unterstützung regulärer Ausdrücke.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die Zeichenkette, in der gesucht werden soll,
+</li><li> die Zeichenkette, nach der gesucht werden soll,
+</li><li> (optional) die Zeichenposition, ab der gesucht werden soll, z.b. 8 für "ab dem 9. Zeichen". Wenn Sie den 3. Parameter weglassen, wird ab dem Beginn der Zeichenkette gesucht.
+</li></ol>
+<p>Gibt die Position des Zeichens zurück, an dem die gewünschte Teilzeichenkette zum letzten Mal gefunden wurde. Wenn sie nicht gefunden wurde, wird <code>-1</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1"># gibt den html header aus</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$satz</span> <span class="sy0">=</span> <span class="st0">&quot;Fischers Fritze fischt frische Fische.&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">rindex</span><span class="br0">&#40;</span><span class="re0">$satz</span><span class="sy0">,</span><span class="st0">&quot;Fische&quot;</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Der Satz '$satz' beginnt mit 'Fische' und enthaelt keine weiteren Vorkommnisse dieser Zeichenkette.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="kw1">elsif</span><span class="br0">&#40;</span><span class="kw3">rindex</span><span class="br0">&#40;</span><span class="re0">$satz</span><span class="sy0">,</span> <span class="st0">&quot;Fische&quot;</span><span class="br0">&#41;</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Der Satz '$satz' enthält die Zeichenkette 'Fische'. Ob der Satz mit 'Fische' beginnt, weiß ich nicht.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="kw1">else</span><span class="br0">&#123;</span> <span class="co1"># &lt; 0</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Der Satz '$satz' enthält die Zeichenkette 'Fische' nicht.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Skalar namens <code>$satz</code> und weist ihm einen Wert zu. Das Script gibt HTML-Code aus. Mit der <code>rindex</code>-Funktion ermittelt es, ob in dem Skalar <code>$satz</code> die Zeichenkette "Fische" enthalten ist. Dies ist der Fall, wenn der Rückgabewert der Funktion größer/gleich 0 ist. Im obigen Beispiel gelangt das Script in den zweiten if-Zweig, weil der durchsuchte Satz die Zeichenkette "Fische" enthält und das letzte Vorkommnis, also das erste von rechts, gefunden wird.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: lc - alle Zeichen einer Zeichenkette in Kleinbuchstaben umwandeln">Bearbeiten</a>]</span> <span class="mw-headline" id="lc_-_alle_Zeichen_einer_Zeichenkette_in_Kleinbuchstaben_umwandeln"> <span id="lc"></span> lc - alle Zeichen einer Zeichenkette in Kleinbuchstaben umwandeln</span></h2>
+<p>Wandelt Großbuchstaben in Kleinbuchstaben um und lässt Kleinbuchstaben und alle anderen Zeichen unberührt. Die entsprechende Gegenfunktion für Großbuchstaben ist <a href="#uc">uc</a>.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Zeichenkette, die bearbeitet werden soll.
+</p><p>Gibt die bearbeitete Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!C:/Programme/Perl/bin/perl.exe -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">opendir</span><span class="br0">&#40;</span>DIR<span class="sy0">,</span> <span class="st0">&quot;C:/WINNT&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Eintraege</span> <span class="sy0">=</span> <span class="kw3">readdir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">closedir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$Eintrag</span> <span class="br0">&#40;</span><span class="re0">@Eintraege</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$Eintrag</span> <span class="sy0">=</span> <span class="kw3">lc</span><span class="br0">&#40;</span><span class="re0">$Eintrag</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="re0">$Eintrag</span> <span class="sy0">=</span> <span class="re0">$Eintrag</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;@Eintraege&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel liest das auf PCs mit Betriebssystem Windows übliche Windows-Verzeichnis ein (Die entsprechenden Befehle dazu sind <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#opendir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">opendir</a>, <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#readdir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">readdir</a>) und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#closedir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">closedir</a>. In diesem Verzeichnis befinden sich normalerweise jede Menge Dateien und Unterverzeichnisse, die achtlos Groß- und Kleinschreibung enthalten, zum Teil auch, weil sie zu alten 16-Bit-Programmen gehören. Auf jedes Element des Arrays <code>@Eintraege</code>, in den der Inhalt des Verzeichnisses eingelesen wurde, wird anschließend in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for-Schleifen" title="Perl/Schleifen">for-Schleife</a> die Funktion <code>lc</code> angewendet. Der Rückgabewert wird in der gleichen aktuellen Schleifenvariable <code>$Eintrag</code> gespeichert, die auch als zu bearbeitende Zeichenkette übergeben wird.<br />
+Das Anhängen eines Newline-Zeichens innerhalb der gleichen <code>for</code>-Schleife ist nur für die folgende Ausgabe gedacht. Die Ausgabe erzeugt die gesamte eingelesene und bearbeitete Liste der Verzeichniseinträge. Alle Einträge enthalten nur noch Kleinbuchstaben.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> In diesem Beispiel wird davon ausgegangen, dass Sie das Script auf einem Windows-Rechner einsetzen wollen. Aus diesem Grund muss auch die <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Erste_Zeile_eines_Perl-Programms" title="Perl/Einführung in Perl" class="mw-redirect">erste Zeile des Perl-Scripts</a> einen Pfad zum Perl-Interpreter aufweisen, der auf einem Windows-System gütig ist.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: lcfirst - erstes Zeichen einer Zeichenkette in Kleinbuchstabe umwandeln">Bearbeiten</a>]</span> <span class="mw-headline" id="lcfirst_-_erstes_Zeichen_einer_Zeichenkette_in_Kleinbuchstabe_umwandeln"> <span id="lcfirst"></span> lcfirst - erstes Zeichen einer Zeichenkette in Kleinbuchstabe umwandeln</span></h2>
+<p>Wandelt das erste Zeichen einer Zeichenkette in Kleinbuchstaben um, sofern es ein entsprechender Großbuchstabe ist. Die entsprechende Gegenfunktion für Großbuchstaben ist <a href="#ucfirst">ucfirst</a>.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Zeichenkette, die bearbeitet werden soll.
+</p><p>Gibt die bearbeitete Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wort</span> <span class="sy0">=</span> <span class="st0">&quot;Textart&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="kw3">lcfirst</span><span class="br0">&#40;</span><span class="re0">$Wort</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel gibt nur ein Wort aus. Bevor das Wort ausgegeben wird, wird allerdings die Funktion <code>lcfirst</code> darauf angewendet. Der führende Großbuchstabe wird dabei in einen Kleinbuchstaben verwandelt.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: length - Anzahl Zeichen einer Zeichenkette ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="length_-_Anzahl_Zeichen_einer_Zeichenkette_ermitteln"> <span id="length"></span> length - Anzahl Zeichen einer Zeichenkette ermitteln</span></h2>
+<p>Erwartet als Parameter:<br />
+<b>1.</b> die gewünschte Zeichenkette.
+</p><p>Gibt die Anzahl Zeichen in der Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$URI</span> <span class="sy0">=</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Laenge</span> <span class="sy0">=</span> <span class="kw3">length</span><span class="br0">&#40;</span><span class="re0">$URI</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;a href=<span class="es0">\&quot;</span>$URI<span class="es0">\&quot;</span>&gt;$URI&lt;/a&gt; hat eine Länge von $Laenge Zeichen!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-CGI-Script erwartet einen Übergabeparameter, der beim Aufruf über URI hinter einem Fragezeichen notiert wird. Der Übergabeparameter sollte selber einen URI enthalten. Beispiel:<br />
+<p><var><a rel="nofollow" class="external free" href="http://localhost/cgi-bin/test.pl?http://www.selfhtml.org/">http://localhost/cgi-bin/test.pl?http://www.selfhtml.org/</a></var>.
+</p>
+Das Beispiel ermittelt mit <code>length</code> die Länge der übergebenen Adresse und gibt HTML-Code mit einem Link auf die Adresse mit Angabe der Zeichenzahl aus.</div>
+</div>
+<p>== <span id="ord"></span> ord - Zeichenwert eines Zeichens ermitteln??
+</p><p>Ermittelt zu einem Zeichen den zugehörigen Wert zwischen 0 und 127. Die Gegenfunktion ist <a href="#chr">chr</a>.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> das gewünschte Zeichen.
+</p><p>Gibt den zugehörigen Zeichenwert zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$MagischeZahl</span> <span class="sy0">=</span> <span class="st0">&quot;155&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Laenge</span> <span class="sy0">=</span> <span class="kw3">length</span><span class="br0">&#40;</span><span class="re0">$MagischeZahl</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Quersumme</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span><span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">&lt;</span><span class="re0">$Laenge</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw1">my</span> <span class="re0">$Zeichen</span> <span class="sy0">=</span> <span class="kw3">substr</span><span class="br0">&#40;</span><span class="re0">$MagischeZahl</span><span class="sy0">,</span> <span class="re0">$i</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$Quersumme</span> <span class="sy0">=</span> <span class="re0">$Quersumme</span> <span class="sy0">+</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="kw3">ord</span><span class="br0">&#40;</span><span class="re0">$Zeichen</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Quersumme der ASCII-Werte der Zeichen der Zahl $MagischeZahl beträgt $Quersumme<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert eine "magische Zahl" 155. "Magisch" ist diese Zahl deshalb, weil sie aus den Zeichen "1", "5" und nochmal "5" besteht, und weil die Summe der Zeichenwerte dieser drei Zeichen 155 ergibt. Denn die 1 hat den Zeichenwert 49, und die 5 hat den Zeichenwert 53, und 49+53+53 ergibt 155. In einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for-Schleifen" title="Perl/Schleifen">for-Schleife</a> wird die Zahl Ziffer für Ziffer eingelesen. Das geht in Perl mit Hilfe der Funktion <a href="#substr">substr</a>. Auf das jeweils eingelesene Zeichen wird die Funktion <code>ord</code> angewendet. Ihr Rückgabewert, also der Zeichenwert des verarbeiteten Zeichens, wird bei jedem Schleifendurchgang zu dem bisherigen Wert des Skalars <code>$Quersumme</code> hinzuaddiert. Das Script gibt zur Kontrolle ein entsprechendes Ergebnis als HTML-Code aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: pack - Binärdaten erzeugen">Bearbeiten</a>]</span> <span class="mw-headline" id="pack_-_Bin.C3.A4rdaten_erzeugen"> <span id="pack"></span> pack - Binärdaten erzeugen</span></h2>
+<p>Erzeugt eine binäre Datenstruktur aus einem oder mehreren Werten. Der Daten-Input kann selbst eine Zeichenkette, aber etwa auch eine Liste sein. Eine zusätzliche Formatierungsangabe dient dazu, das binäre Datenformat des zu erzeugenden Ergebnisses der Konvertierung genau zu steuern. Für die Formatierungsangabe steht eine spezielle Syntax zur Verfügung.<br />
+Die Funktion <code>pack</code> wird beispielsweise verwendet, um einer Datenbank Zeichenketten zu übergeben, innerhalb deren die Datenbank feste Feldlängen erwartet. Aber auch andere mächtige Konvertierarbeiten sind möglich. So lassen sich Daten mit Hilfe von <code>pack</code> etwa sehr einfach nach dem UUencode-Verfahren kodieren.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Formatierungsangabe,<br />
+<b>2.</b> den Daten-Input - eine Zeichenkette oder eine Liste.
+</p><p>Gibt den erzeugten Wert zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Datensatz_1</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Anna&quot;</span><span class="sy0">,</span><span class="st0">&quot;Lyse&quot;</span><span class="sy0">,</span><span class="st0">&quot;07.07.1977&quot;</span><span class="sy0">,</span><span class="st0">&quot;w&quot;</span><span class="sy0">,</span><span class="st0">&quot;Bau 21&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Zi 280&quot;</span><span class="sy0">,</span><span class="st0">&quot;seit 03/1999 Team-Assistenz Marketing&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Datensatz_2</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Rainer&quot;</span><span class="sy0">,</span><span class="st0">&quot;Zufall&quot;</span><span class="sy0">,</span><span class="st0">&quot;29.02.1960&quot;</span><span class="sy0">,</span><span class="st0">&quot;m&quot;</span><span class="sy0">,</span><span class="st0">&quot;Bau 113&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Zi 11&quot;</span><span class="sy0">,</span><span class="st0">&quot;Bereichsleiter Entwicklung&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Format</span> <span class="sy0">=</span> <span class="st0">&quot;A10 A14 A10 A1 A7 A7 A*&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ausgabe_1</span> <span class="sy0">=</span> <span class="kw3">pack</span><span class="br0">&#40;</span><span class="re0">$Format</span><span class="sy0">,</span> <span class="re0">@Datensatz_1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ausgabe_2</span> <span class="sy0">=</span> <span class="kw3">pack</span><span class="br0">&#40;</span><span class="re0">$Format</span><span class="sy0">,</span> <span class="re0">@Datensatz_2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;pre&gt;
+$Ausgabe_1
+$Ausgabe_2
+&lt;/pre&gt;
+&lt;/body&gt;&lt;/html&gt;
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In dem Beispiel werden zunächst zwei Listen <code>@Datensatz_1</code> und <code>@Datensatz_2</code> mit gleichartigen Mitarbeiterdaten definiert. Die Felder eines Datensatzes sollen jeweils zu einer Zeichenkette verbunden werden, sodass sich diese beispielsweise als Zeile am Bildschirm ausgeben oder in eine Datei schreiben lässt. Dabei sollen jedoch die Felder immer an der gleichen Spaltenposition beginnen, so wie in der Ergebnisausgabe dargestellt. Um das zu erreichen, wird eine Zeichenkette namens <code>$Format</code> definiert. Sie definiert die Feldbreiten der einzelnen Datenfelder. Dazu benutzt sie die spezielle Syntax für <code>pack</code>-Formatierangaben. Weiter unten finden Sie eine <a href="#pack_1">Tabelle der Formatierangaben</a>. Im Beispiel wird für das erste Feld (Vorname) mit <code>A10</code> eine Breite von 10 Zeichen definiert, für das zweite Feld (Nachname) mit <code>A14</code> eine Breite von 14 Zeichen, und so weiter für die übrigen Datenfelder. Das letzte Feld, die beschreibende Angabe, wird durch das Sternchen bei <code>A*</code> als "so breit wie der Inhalt des Feldes ist" definiert.<br />
+Anschließend wird zweimal die Funktion <code>pack</code> angewendet, einmal auf <code>@Datensatz_1</code> und dann auf <code>@Datensatz_2</code>. In beiden Fällen wird die gleiche Formatierangabe, also <code>$Format</code>, benutzt. Der Räckgabewert wird in den Zeichenketten <code>$Ausgabe_1</code> bzw. <code>$Ausgabe_2</code> gespeichert. Diese beiden Zeichenketten werden zur Kontrolle als HTML-Ausgabe zum Browser gesendet. Wichtig ist dabei, die Ausgabe in einen <code>&lt;pre&gt;</code>-Bereich zu setzen, da nur dort die Spaltendarstellung sichtbar wird.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Satz</span> <span class="sy0">=</span> <span class="st0">&quot;In Münchner Biergärten gibt es Bier nur aus Maßkrügen&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$UUE_Satz</span> <span class="sy0">=</span> <span class="kw3">pack</span><span class="br0">&#40;</span><span class="st0">&quot;u&quot;</span><span class="sy0">,</span> <span class="re0">$Satz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/plain
+&#160;
+Der Satz '$Satz' lautet UU-kodiert:
+$UUE_Satz
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Satz in dem Skalar <code>$Satz</code>. Auf diesen Skalar wird die Funktion <code>pack</code> angewendet. Als Formatierangabe wird dabei <code>u</code> übergeben. Dies bewirkt eine Kodierung nach dem UUencode-Verfahren. Das Ergebnis wird in dem neuen Skalar <code>$UUE_Satz</code> gespeichert. Zur Kontrolle wird ein entsprechender Text an den Browser gesendet. Der Beispielsatz erscheint in der UUencode-Kodierung als <code>M26X@3?QN8VAN97(@0FEE&lt;F?D&lt;G1E&#160;;B!G:6)T(&amp;5S($)I97(@;G5R(&amp;%U&lt;R!- (8=]K&lt;OQG96X`</code>.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Tabelle der Formatierangaben:">Bearbeiten</a>]</span> <span class="mw-headline" id="Tabelle_der_Formatierangaben:"> Tabelle der Formatierangaben: </span></h3>
+<p>Durch die Formatierangabe steuern Sie die Art, wie <code>pack</code> den Daten-Input behandelt.
+</p>
+<table class="wikitable">
+<tr>
+<th> Typ
+</th>
+<th> Bedeutung
+</th>
+<th> Beispiel
+</th>
+<th> Erläuterung
+</th></tr>
+<tr>
+<td> <code>a[n]</code>
+</td>
+<td> Erzeugt einen String aus 8-Bit-Zeichen und ist auch <b>für binäre Daten</b> geeignet. <code>[n]</code> ist eine Zahl für die Feldbreite. Ungenutzte Bytes werden mit <b>Zeichenwert 0 (Hex-0)</b> aufgefüllt. Überbreite Feldinhalte werden abgeschnitten. Anstelle einer Zahl ist auch <code>*</code> erlaubt. Dadurch richtet sich die Feldbreite nach dem Feldinhalt.
+</td>
+<td> <code>@Mitarbeiter = ("03919","Hinkel");<br />$Ausgabe = pack("a5 a15", @Mitarbeiter);</code>
+</td>
+<td> Ein Mitarbeiterdatensatz, bestehend aus einer Ausweisnummer und dem Namen, wird in eine Zeichenkette verwandelt.
+</td></tr>
+<tr>
+<td> <code>A[n]</code>
+</td>
+<td> Erzeugt ASCII-Zeichen (Zeichenwerte 0-127) und ist daher <b>für Textdaten</b> geeignet. <code>[n]</code> ist eine Zahl für die Feldbreite. Ungenutzte Bytes werden mit <b>Leerzeichen (Zeichenwert 32)</b> aufgefüllt. Ansonsten wie <code>a</code>.
+</td>
+<td> <code>$Ausgabe = pack("A80", "kleine Zeile");</code>
+</td>
+<td> Erzeugt wird eine Zeichenkette von 80 Zeichen Breite, auch wenn der Textinhalt deutlich kleiner ist. Die restlichen Zeichen sind Leerzeichen.
+</td></tr>
+<tr>
+<td> <code>Z[n]</code>
+</td>
+<td> Erzeugt ASCII-Zeichen (Zeichenwerte 0-127) und ist daher <b>für Textdaten</b> geeignet. <code>[n]</code> ist eine Zahl für die Feldbreite. Ungenutzte Bytes werden mit <b>Zeichenwert 0 (Hex-0)</b> aufgefüllt. Außerdem wird der String in jedem Fall nullterminiert, d.h. das letzte Zeichen hat immer den Zeichenwert 0 (Hex-0). Ansonsten wie <code>A</code>.
+</td>
+<td> <code>$Ausgabe = pack("Z80", "kleine Zeile");</code>
+</td>
+<td> Erzeugt wird eine Zeichenkette von 80 Zeichen Breite, auch wenn der Textinhalt deutlich kleiner ist. Die restlichen Zeichen haben den Wert hexadezimal 0.
+</td></tr>
+<tr>
+<td> <code>b[n]</code>
+</td>
+<td> Erzeugt einen Bit-String in aufsteigender Bitreihenfolge. Das letzte Bit jedes Bytes der Eingabe ergibt ein Bit der Ausgabe. Dabei wird das letzte 8-bit Tupel gegebenenfalls mit Nullen aufgefüllt.
+</td>
+<td> <code>$Ausgabe = pack("b8","Beispiel")</code>
+</td>
+<td> Erzeugt eine Zeichenkette von 8 Bit, also einem Byte Länge
+</td></tr>
+<tr>
+<td> <code>B[n]</code>
+</td>
+<td> Erzeugt einen Bit-String in absteigender Bitreihenfolge. Arbeitet genauso wie <code>b</code>, dreht aber die Reihenfolge um.
+</td>
+<td> <code>$Ausgabe = pack("B8","Beispiel")</code>
+</td>
+<td> Erzeugt eine Zeichenkette von 8 Bit, also einem Byte Länge
+</td></tr>
+<tr>
+<td> <code>c[n]</code>
+</td>
+<td> Erzeugt Zeichen aus numerischen Angaben. Das kleine c steht für <b>signed char</b>, verarbeitet werden 8 Bit lange Ganzzahlen zwischen -128 und 127. <code>[n]</code> ist eine Zahl für die Anzahl Zeichen. Wenn Sie mehrere Zeichen auf einmal verarbeiten wollen, geben Sie die Anzahl der Zeichen an. Anstelle einer Zahl ist auch <code>*</code> erlaubt. Benutzen Sie den Platzhalter, wenn Sie eine unbestimmte Anzahl Zeichen verarbeiten wollen.
+</td>
+<td> <code>@Zeichenwerte = (65,115,116,114,105,100);<br />$Ausgabe = pack("c6", @Zeichenwerte);<br />print "$Ausgabe";</code>
+</td>
+<td> Das Beispiel erzeugt eine Liste aus 6 Zahlen. Mit <code>c6</code> werden alle 6 Zahlen in ihre Zeichenwerte (gemäß der ASCII-Codetabelle) umgewandelt und in der Zeichenkette <code>$Ausgabe</code> zusammengefügt.
+</td></tr>
+<tr>
+<td> <code>C[n]</code>
+</td>
+<td> Erzeugt Zeichen aus numerischen Angaben. Das große C steht für <b>unsigned char</b>, verarbeitet werden 8 Bit lange Ganzzahlen ohne Vorzeichen, also zwischen 0 und 255. Ansonsten wie <code>c</code>.
+</td>
+<td> <code>@Zeichenwerte = (65,115,116,114,105,100);<br />$Ausgabe = pack("C6", @Zeichenwerte);<br />print "$Ausgabe";</code>
+</td>
+<td> siehe Erläuterung zu <code>c</code>.
+</td></tr>
+<tr>
+<td> <code>s[n]</code>
+</td>
+<td> Erzeugt Zeichen aus numerischen Angaben. Das kleine s steht für <b>signed short</b>. Verarbeitet werden dabei in Perl 16 Bit lange Ganzzahlen zwischen -32768 und 32767. Ansonsten wie <code>c</code>.
+</td>
+<td> <code>@Werte = (-1000,1000);<br />$Ausgabe = pack("s2", @Werte);<br />print "$Ausgabe";</code>
+</td>
+<td> Das Beispiel erzeugt eine Liste aus 2 Zahlen. Mit <code>s2</code> werden die Zahlen in Zeichen oder Zeichenkombinationen umgewandelt und in der Zeichenkette <code>$Ausgabe</code> zusammengefügt.
+</td></tr>
+<tr>
+<td> <code>S[n]</code>
+</td>
+<td> Erzeugt Zeichen aus numerischen Angaben. Das große S steht für <b>unsigned short</b>. Verarbeitet werden dabei in Perl 16 Bit lange Ganzzahlen zwischen 0 und 65535. Ansonsten wie <code>s</code>.
+</td>
+<td> <code>@Werte = (1,1000);<br />$Ausgabe = pack("S2", @Werte);<br />print "$Ausgabe";</code>
+</td>
+<td> Das Beispiel erzeugt eine Liste aus 2 Zahlen. Mit <code>S2</code> werden die Zahlen in Zeichen oder Zeichenkombinationen umgewandelt und in der Zeichenkette <code>$Ausgabe</code> zusammengefügt.
+</td></tr>
+<tr>
+<td> <code>i[n]</code>
+</td>
+<td> Erzeugt Zeichen aus numerischen Angaben. Das kleine i steht für <b>signed integer</b>. Verarbeitet werden dabei in Perl mindestens 32 Bit lange Ganzzahlen zwischen -2147483648 und 2147483647 (je nach Umgebung werden auch höhere Bitlängen und damit größere Zahlen verarbeitet). Ansonsten wie <code>c</code>.
+</td>
+<td> <code>@Werte = (-100000,100000);<br />$Ausgabe = pack("i2", @Werte);<br />print "$Ausgabe";</code>
+</td>
+<td> Das Beispiel erzeugt eine Liste aus 2 großen Zahlen. Mit <code>i2</code> werden die Zahlen in Zeichen oder Zeichenkombinationen umgewandelt und in der Zeichenkette <code>$Ausgabe</code> zusammengefügt.
+</td></tr>
+<tr>
+<td> <code>I[n]</code>
+</td>
+<td> Erzeugt Zeichen aus numerischen Angaben. Das große I steht für <b>unsigned integer</b>. Verarbeitet werden dabei in Perl mindestens 32 Bit lange Ganzzahlen zwischen 0 und 429496729<del>6</del><ins>5</ins> (je nach Umgebung werden auch höhere Bitlängen und damit größere Zahlen verarbeitet). Ansonsten wie <code>i</code>.
+</td>
+<td> <code>@Werte = (1,100000);<br />$Ausgabe = pack("I2", @Werte);<br />print "$Ausgabe";</code>
+</td>
+<td> Das Beispiel erzeugt eine Liste aus 2 Zahlen. Mit <code>I2</code> werden die Zahlen in Zeichen oder Zeichenkombinationen umgewandelt und in der Zeichenkette <code>$Ausgabe</code> zusammengefügt.
+</td></tr>
+<tr>
+<td> <code>l[n]</code>
+</td>
+<td> Erzeugt Zeichen aus numerischen Angaben. Das kleine l steht für <b>signed long</b>. Verarbeitet werden dabei in Perl genau 32 Bit lange Ganzzahlen zwischen -2147483648 und 2147483647. Ansonsten wie <code>c</code>.
+</td>
+<td> <code>@Werte = (-100000,100000);<br />$Ausgabe = pack("l2", @Werte);<br />print "$Ausgabe";</code>
+</td>
+<td> Das Beispiel erzeugt eine Liste aus 2 großen Zahlen. Mit <code>l2</code> werden die Zahlen in Zeichen oder Zeichenkombinationen umgewandelt und in der Zeichenkette <code>$Ausgabe</code> zusammengefügt.
+</td></tr>
+<tr>
+<td> <code>L[n]</code>
+</td>
+<td> Erzeugt Zeichen aus numerischen Angaben. Das große L steht für <b>unsigned long</b>. Verarbeitet werden dabei in Perl genau 32 Bit lange Ganzzahlen zwischen 0 und 4294967295. Ansonsten wie <code>l</code>.
+</td>
+<td> <code>@Werte = (1,100000);<br />$Ausgabe = pack("L2", @Werte);<br />print "$Ausgabe";</code>
+</td>
+<td> Das Beispiel erzeugt eine Liste aus 2 Zahlen. Mit <code>L2</code> werden die Zahlen in Zeichen oder Zeichenkombinationen umgewandelt und in der Zeichenkette <code>$Ausgabe</code> zusammengefügt.
+</td></tr>
+<tr>
+<td> <code>n[n]</code>
+</td>
+<td> Erzeugt aus einer Zahl eine Binärspeicherung in der so genannten <i>Network Byte Order</i> (auch: <i>Big Endian Order</i>). Verarbeitet werden dabei 16 Bit lange Ganzzahlen zwischen 0 und 65535. Wenn Sie mehrere Zahlen auf einmal verarbeiten wollen, geben Sie die Anzahl der Zahlen an. Anstelle einer Zahl ist auch <code>*</code> erlaubt. Benutzen Sie den Platzhalter, wenn Sie eine unbestimmte Anzahl Zahlen verarbeiten wollen.
+</td>
+<td> <code>$IP_mit_Port = pack("Nn", 0xC19EAAC7,80);</code>
+</td>
+<td> In dem Skalar <code>$IP_mit_Port</code> wird die IP-Adresse 193.158.170.199 und die Zahl 80, die für den Port des Webservers stehen soll, gespeichert. Die IP-Adresse wird dabei als 32 Bit lange Zahl in Hexadezimalschreibweise mit <code>N</code> verarbeitet, die Zahl für den Port, die kleiner ist, mit <code>n</code>.
+</td></tr>
+<tr>
+<td> <code>N[n]</code>
+</td>
+<td> Erzeugt aus einer Zahl eine Binärspeicherung in der so genannten <i>Network Byte Order</i> (auch: <i>Big Endian Order</i>). Verarbeitet werden dabei 32 Bit lange Ganzzahlen zwischen 0 und 4294967295. Ansonsten wie <code>n</code>.
+</td>
+<td> <code>$IP = pack("N", 0xC19EAAC7);</code>
+</td>
+<td> In dem Skalar <code>$IP</code> wird die IP-Adresse 193.158.170.199 gespeichert. Die IP-Adresse wird dabei als 32 Bit lange Zahl in Hexadezimalschreibweise mit <code>N</code> verarbeitet. (Dezimal=Hexadezimal: 193=C1, 158=9E, 170=AA, 199=C7).
+</td></tr>
+<tr>
+<td> <code>v[n]</code>
+</td>
+<td> Erzeugt aus einer Zahl eine Binärspeicherung in der so genannten <i>VAX Byte Order</i> (auch: <i>Little Endian Order</i>). Verarbeitet werden dabei 16 Bit lange Ganzzahlen zwischen 0 und 65535. Ansonsten wie <code>n</code>.
+</td>
+<td> <code>$Wert = pack("v", 0xFFFF);</code>
+</td>
+<td> In dem Skalar <code>$Wert</code> wird der höchstmögliche Wert gespeichert, den <code>v</code> verarbeitet, in Hexadezimalschreibweise als <code>FFFF</code> ausgedrückt.
+</td></tr>
+<tr>
+<td> <code>V[n]</code>
+</td>
+<td> Erzeugt aus einer Zahl eine Binärspeicherung in der so genannten <i>VAX Byte Order</i> (auch: <i>Little Endian Order</i>). Verarbeitet werden dabei 32 Bit lange Ganzzahlen zwischen 0 und 4294967295. Ansonsten wie <code>n</code>.
+</td>
+<td> <code>$Wert = pack("V", 0xFFFFFFFF);</code>
+</td>
+<td> In dem Skalar <code>$Wert</code> wird der höchstmögliche Wert gespeichert, den <code>v</code> verarbeitet, in Hexadezimalschreibweise als <code>FFFFFFFF</code> ausgedrückt.
+</td></tr>
+<tr>
+<td> <code>f[n]</code>
+</td>
+<td> Erzeugt eine binär gespeicherte Fließkommazahl. Die genaue Art der Speicherung ist vom Computertyp abhängig. Das kleine f steht für <b>float</b>, und zwar mit <i>single precision</i>, also einfacher Genauigkeit. Ansonsten wie <code>n</code>.
+</td>
+<td> <code>$Wert = pack("f",(1/7));</code>
+</td>
+<td> In einem Skalar <code>$Wert</code> wird das Ergebnis der Division von 1 durch 7 binär als Fließkommazahl gespeichert.
+</td></tr>
+<tr>
+<td> <code>d[n]</code>
+</td>
+<td> Erzeugt eine binär gespeicherte Fließkommazahl. Die genaue Art der Speicherung ist vom Computertyp abhängig. Das kleine d steht für <b>double float</b>, also mit <i>double precision</i>, doppelter Genauigkeit. Ansonsten wie <code>n</code>.
+</td>
+<td> <code>$Wert = pack("d",(1/7));</code>
+</td>
+<td> In einem Skalar <code>$Wert</code> wird das Ergebnis der Division von 1 durch 7 binär als doppelt genaue Fließkommazahl gespeichert.
+</td></tr>
+<tr>
+<td> <code>p[n]</code>
+</td>
+<td> Speichert die Arbeitsspeicheradresse einer nullterminierten Zeichenkette, wie sie in C üblich ist. Wenn Sie mehrere Zeichenketten auf einmal verarbeiten wollen, geben Sie die Anzahl der Zeichenketten an. Anstelle einer Zeichenkette ist auch <code>*</code> erlaubt. Benutzen Sie den Platzhalter, wenn Sie eine unbestimmte Anzahl Zeichenketten verarbeiten wollen.
+</td>
+<td> <code>@Namen = ("Hans", "Peter", "Stefan");<br /> $Anzahl = @Namen;<br /> $Werte = pack("p" x $Anzahl, @Namen );<br /> irgendeineFunktion($Anzahl, $Werte);</code>
+</td>
+<td> In einem Skalar <code>$Anzahl</code> wird die Anzahl der Elemente von <code>@Namen</code> gespeichert. Dann wird die Liste <code>@Namen</code> zu einem einzelnen String von Adressen gepackt und in <code>$Werte</code> gespeichert.<code>$Anzahl</code> und <code>$Werte</code> werden dann einer Funktion übergeben.
+</td></tr>
+<tr>
+<td> <code>P[n]</code>
+</td>
+<td> Speichert die Arbeitsspeicheradresse einer Struktur (struct) mit fester Bytelänge. Ansonsten wie <code>p</code>.
+</td>
+<td> <code>use C::DynaLib::Struct;<br /> Define C::DynaLib::Struct('Adresse',<br /> &#160;&#160;'pppi' =&gt; [qw(name ort strasse nummer)]);<br /> $Ausgabe = pack( 'P', $struct );</code>
+</td>
+<td> Zunächst wird eine Struktur erstellt, wie sie C beispielsweise versteht. In dem Skalar <code>$Ausgabe</code> wird dann die Adresse der Struktur gespeichert.
+</td></tr>
+<tr>
+<td> <code>u[n]</code>
+</td>
+<td> Erzeugt aus binären Daten eine UU-kodierte Zeichenkette. UU-Encode ist eines der Verfahren zum Umwandeln von 8-Bit-Daten (Bytes) in ein 7-Bit-Schema. Attachments von E-Mails wurden früher beispielsweise UU-kodiert übertragen.
+</td>
+<td> <code>$UUDaten = pack("u", 1234);</code>
+</td>
+<td> Die Zahl <code>1234</code>, ein binärer Wert auf 8-Bit-Basis, wird durch das UU-basierte Kodieren in Zeichen auf 7-bit-Basis umgewandelt.
+</td></tr>
+<tr>
+<td> <code>x[n]</code>
+</td>
+<td> Erzeugt ein Byte mit dem Wert 0, ohne dafür ein Argument aus der Übergabeliste zu "verbrauchen".
+</td>
+<td> <code>$Kette = pack("A* x A* x","Test","beispiel");</code>
+</td>
+<td> Erzeugt aus den beiden Zeichenketten <code>Test</code> und <code>beispiel</code> eine Zeichenkette, die beide Teilstrings jeweils nullterminiert enthält.
+</td></tr>
+<tr>
+<td> <code>X[n]</code>
+</td>
+<td> Geht <code>n</code> Byte im Ergebisstring zurück und löscht diese.
+</td>
+<td> <code>$Stefan = pack("A* X2", "Stefanie");</code>
+</td>
+<td> Die Anweisung erzeugt zunächst mit <code>A*</code> das Ergebnis "Stefanie" und entfernt dann die letzten beiden Bytes. Das Endergebnis ist dann "Stefan".
+</td></tr>
+<tr>
+<td> <code>@[n]</code>
+</td>
+<td> Bringt den vorläufigen Ergebnisstring auf eine Länge von genau <code>n</code> Bytes. Ist der String zu lang, wird er einfach abgeschnitten, ist er zur kurz, wird er mit Null-Bytes aufgefüllt. Danach wird der Formatstring ganz normal weiterbearbeitet.
+</td>
+<td> <code>$Walkman = pack("A* @3 A*","Walross","kman");</code>
+</td>
+<td> Die Anweisung erzeugt zunächst mit <code>A*</code> das vorläufige Ergebnis "Walross", welches dann mit <code>@3</code> auf drei Zeichen, also "Wal" gekürzt wird. Anschließend wird noch "kman" angehängt. Das Endergebnis ist "Walkman".
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: pos - Position der Anwendung von m/[regexp]/g auf Zeichenkette ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="pos_-_Position_der_Anwendung_von_m.2F.5Bregexp.5D.2Fg_auf_Zeichenkette_ermitteln"> <span id="pos"></span> pos - Position der Anwendung von m/[regexp]/g auf Zeichenkette ermitteln</span></h2>
+<p><a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">Reguläre Ausdrücke</a> vom Typ <code>m/[regexp]/g</code> oder einfach <code>/[regexp]/g</code> können Zeichenketten nach allen Stellen durchsuchen, auf die der angegebene Ausdruck passt. Die Funktion <code>pos</code> liefert diejenige Position innerhalb der zu durchsuchenden Zeichenkette zurück, bei der die Suche beim jeweils nächsten Aufruf des regulären Ausdrucks fortfahren würde. Durch geschickte Verarbeitung innerhalb einer Schleife können mit Hilfe dieser Funktion alle Positionen innerhalb der gesamten Zeichenkette gefunden werden. Sie können diesen Wert auch ändern, um die Suche zu beeinflussen.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die zu durchsuchende Zeichenkette bzw. den Skalar, in dem diese gespeichert ist.
+</p><p>Gibt die nächste gefundene Position zurück, bei der die Suche fortfährt. Die Zeichen davor passen auf das Suchmuster.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Satz</span> <span class="sy0">=</span> <span class="st0">&quot;es ist was es ist&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Suchwort</span> <span class="sy0">=</span> <span class="st0">&quot;ist&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$out</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">while</span><span class="br0">&#40;</span> <span class="re0">$Satz</span> <span class="sy0">=~</span> <span class="co2">/$Suchwort/g</span> <span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="re0">$out</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st0">&quot;Suchwort '%s' wurde gefunden bei Position&#160;%s<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+    <span class="re0">$Suchwort</span><span class="sy0">,</span> 
+    <span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$Satz</span><span class="br0">&#41;</span> <span class="sy0">-</span> <span class="kw3">length</span><span class="br0">&#40;</span> <span class="re0">$Suchwort</span> <span class="br0">&#41;</span><span class="sy0">,</span>
+  <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$out</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-Script zeigt, wie Sie innerhalb einer Zeichenkette alle Vorkommnisse eines bestimmten gesuchten Musters auffinden und sammeln können. In dem Beispiel wird eine zu durchsuchende Zeichenkette <code>$Satz</code> definiert und mit einem Wert vorbelegt. Das Muster, nach dem innerhalb dieses Satzes gesucht werden soll, wird im Skalar <code>$Suchwort</code> definiert. In einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#while-Schleifen" title="Perl/Schleifen">while-Schleife</a> wird der Satz nach dem Suchwort durchsucht. Wichtig ist dabei hinter dem regulären Ausdruck die Option <code>g</code> für "global". 
+<p>Innerhalb der Schleife wird die Position jedes Vorkommens des gesuchten Musters ausgegeben. Dabei wird die Funktion <code>pos</code> auf die zu durchsuchende Zeichenkette <code>$Satz</code> angewendet. Der Rückgabewert ist die erste Position hinter dem gefundenen Suchmuster. Da das Beispiel nach einem bestimmten Wort "ist" sucht, das 3 Buchstaben hat, wird durch Subtrahieren von 3 die Anfangsposition ermittelt, an der das gesuchte Wort beginnt. 
+</p>
+Im Beispiel werden insgesamt zwei Zeilen ausgegeben, nämlich Gefunden-Hinweise für die Positionen 3 und 14. Der Grund: das Wort kommt zwei mal vor in dem Satz, und die Suche landet zweimal auf den Positionen dahinter, also bei den Positionen 6 und 17.</div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/pos.html">http://perldoc.perl.org/functions/pos.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: reverse - Zeichenkette von hinten nach vorn umwandeln">Bearbeiten</a>]</span> <span class="mw-headline" id="reverse_-_Zeichenkette_von_hinten_nach_vorn_umwandeln"> <span id="reverse"></span> reverse - Zeichenkette von hinten nach vorn umwandeln</span></h2>
+<p>Dreht eine Zeichenkette Zeichen für Zeichen um. Statt einer Zeichenkette können Sie auch eine Liste übergeben, deren Elemente vor der Umwandlung zu einer Zeichenkette verknüpft werden.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Zeichenkette oder Liste, die bearbeitet werden soll.
+</p><p>Gibt eine bearbeitete Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Palindrom</span> <span class="sy0">=</span> <span class="kw3">reverse</span><span class="br0">&#40;</span><span class="st0">&quot;EIN NEGER MIT GAZELLE ZAGT IM REGEN NIE&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$Palindrom</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In dem Beispiel wird der klassische Satz "EIN NEGER MIT GAZELLE ZAGT IM REGEN NIE", den man rückwärts genauso lesen kann wie vorwärts (Palindrom-Effekt), zur Verdeutlichung verwendet. Die Funktion <code>reverse</code> wird auf diesen Satz angewendet, und der Rückgabewert wird in dem Skalar <code>$Palindrom</code> gespeichert. 
+<b>Hinweis:</b> Manche Leute regen sich ja über jeden Ausdruck auf, der nicht der gegenwärtigen "political correctness" entspricht. Aber mit einem Wort wie "Dunkelhäutiger" würde das Palindrom nun mal nicht funktionieren. Sie dürfen dieses Wort jedoch gerne probieren, wenn Ihnen nicht klar geworden sein sollte, dass <code>reverse</code> tatsächlich das tut, was soeben beschrieben wurde.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: split - Zeichenkette in mehrere Zeichenketten aufsplitten">Bearbeiten</a>]</span> <span class="mw-headline" id="split_-_Zeichenkette_in_mehrere_Zeichenketten_aufsplitten"> <span id="split"></span> split - Zeichenkette in mehrere Zeichenketten aufsplitten</span></h2>
+<p>Erzeugt aus einer Zeichenkette eine Liste von Teilzeichenketten, und zwar aufgrund eines regulären Ausdrucks, der das Trennsymbol definiert, das die einzelnen Teile trennt. Trennsymbole können eine beliebige Länge besitzen und müssen nicht bei jeder Fundstelle identisch sein.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> einen <a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">regulären Ausdruck</a>, der definiert, wie die Zeichenkette in einzelne Teile aufgespalten werden soll,<br />
+<b>2.</b> die Zeichenkette, die bearbeitet werden soll.
+</p><p>Gibt eine Liste mit den extrahierten Teilen der Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Satz</span> <span class="sy0">=</span> <span class="st0">&quot;Sage jeden Morgen 
+  guten Morgen zu dir selbst&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Woerter</span> <span class="sy0">=</span> <span class="kw3">split</span><span class="br0">&#40;</span><span class="co2">/\s+/</span><span class="sy0">,</span><span class="re0">$Satz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Anzahl</span> <span class="sy0">=</span> <span class="re0">@Woerter</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+   <span class="st0">&quot;Der Satz &quot;</span><span class="sy0">,</span> <span class="re0">$Satz</span><span class="sy0">,</span><span class="st0">&quot; hat &quot;</span><span class="sy0">,</span> <span class="re0">$Anzahl</span><span class="sy0">,</span><span class="st0">&quot; Wörter<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Satz. Auf den Satz wird die Funktion <code>split</code> angewendet. Dabei wird ein regulärer Ausdruck als erster Parameter übergeben, der auf Whitespace passt. Als zweiter Parameter wird der Skalar <code>$Satz</code> übergeben, in dem der Satz gespeichert ist. Die Funktion teilt den übergebenen Satz in Einzelelemente auf, die durch Leerzeichen voneinander getrennt sind - im Beispiel also in die einzelnen Wörter. Diese werden im Array <code>@Woerter</code> gespeichert. Im Beispiel soll zur Kontrolle nur die Anzahl der Wörter ermittelt werden, was durch die Anweisung <code>$Anzahl = @Woerter;</code> geschieht. 
+Es folgt eine Testausgabe.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: sprintf - Zeichenkette formatieren">Bearbeiten</a>]</span> <span class="mw-headline" id="sprintf_-_Zeichenkette_formatieren"> <span id="sprintf"></span> sprintf - Zeichenkette formatieren</span></h2>
+<p>Diese Funktion dient dazu, einzelne Datenelemente zu formatieren. So lassen sich Dezimalzahlen beispielsweise ohne viel Aufwand hexadezimal umrechnen, oder Gleitkommazahlen mit vielen Nachkommastellen auf eine bestimmte Anzahl Nachkommastellen trimmen.<br />
+Die <code>sprintf</code>-Funktion in Perl entspricht im wesentlichen der <code>sprintf</code>-Funktion in C.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> <i>Formatstring</i> = eine Zeichenkette, die für bestimmte auszugebende Elemente Formatbezeichner enthalten kann. Die Syntax ist identisch mit der der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#printf" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">printf</a>-Funktion.<br />
+<b>2.</b> <i>Ausgabeliste</i> = ein oder mehrere Elemente, auf die sich die speziellen Formatbezeichner im Formatstring beziehen.
+</p><p>Gibt die formatierte Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$BruttoBetrag</span> <span class="sy0">=</span> <span class="nu0">27.95</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$NettoBetrag</span> <span class="sy0">=</span> <span class="re0">$BruttoBetrag</span> <span class="sy0">/</span> <span class="nu0">1.16</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Formatiert</span> <span class="sy0">=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span>
+    <span class="st0">&quot;Das im Bruttobetrag&#160;%s enthaltene Netto beträgt ungerundet&#160;%.2f&quot;</span><span class="sy0">,</span> 
+    <span class="re0">$BruttoBetrag</span><span class="sy0">,</span> <span class="re0">$NettoBetrag</span> 
+<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/html\n\n
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+$Formatiert
+&lt;/body&gt;&lt;/html&gt;
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel formatiert Hilfe der <code>sprintf</code>-Funktion die beiden Variablen <code>$BruttoBetrag</code> und <code>$NettoBetrag</code> in der Zeichenkette <code>$Formatiert</code>. Der Wert von <code>$NettoBetrag</code> wird rechnerisch gewonnen und stellt eine Bruchzahl mit vielen Nachkommastellen dar. In der mit Hilfe von <code>sprintf</code> formatierten Zeichenkette wird diese Zahl jedoch auf zwei Nachkommastellen reduziert.
+Eine Auflistung der möglichen Formatbezeichner für diese Funktion finden Sie bei der Beschreibung der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#printf" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">printf</a>-Funktion.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: substr - Teilzeichenkette aus Zeichenkette extrahieren">Bearbeiten</a>]</span> <span class="mw-headline" id="substr_-_Teilzeichenkette_aus_Zeichenkette_extrahieren"> <span id="substr"></span> substr - Teilzeichenkette aus Zeichenkette extrahieren</span></h2>
+<p>Ermittelt aus einer Zeichenkette eine Teilzeichenkette an einer bestimmten Position und ersetzt sie gegebenenfalls durch eine andere.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Zeichenkette, aus der extrahiert werden soll,<br />
+<b>2.</b> die Zeichenposition des ersten Zeichens der gewünschten Teilzeichenkette (erste Zeichenposition in einer Zeichenkette ist 0, zweite 1 usw.),<br />
+<b>3.</b> (optional) die Anzahl Zeichen, wie lang die gewünschte Teilzeichenkette sein soll,<br />
+<b>4.</b> (optional) eine Ersetzungszeichenkette
+</p><p>Gibt die bearbeitete Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Satz</span> <span class="sy0">=</span> <span class="st0">&quot;nutze den Tag!&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Satzlaenge</span> <span class="sy0">=</span> <span class="kw3">length</span><span class="br0">&#40;</span><span class="re0">$Satz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Zeichen</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span><span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">&lt;</span><span class="re0">$Satzlaenge</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$Zeichen</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw3">substr</span><span class="br0">&#40;</span><span class="re0">$Satz</span><span class="sy0">,</span><span class="re0">$i</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span><span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">&lt;</span><span class="re0">$Satzlaenge</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Zeichen $i lautet: $Zeichen[$i]&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In dem Beispiel wird die Funktion <code>substr</code> verwendet, um die einzelnen Zeichen einer Zeichenkette in einer Liste zu speichern. Denn in Perl fehlt die für C typische Behandlung von Zeichenketten als Zeichen-Array. Anders als in C, das Zeichenketten nur als Array speichert, sind einzelne Zeichen einer Zeichenkette in Perl nicht direkt ansprechbar. Das Beispiel zeigt eine - wenn auch etwas umständliche - Methode, durch die einzelnen Zeichen der Zeichenkette zu iterieren (also die Zeichenkette Zeichen für Zeichen abzuarbeiten).<br />
+In dem Beispiel wird ein Skalar <code>$Satz</code> mit einem Wert definiert. Die Länge des Satzes wird in dem Skalar <code>$Satzlaenge</code> gespeichert (durch Anwendung von <a href="#length">length</a>). Anschließend wird der Satz Zeichen für Zeichen in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for-Schleifen" title="Perl/Schleifen">for-Schleife</a> in die Liste <code>@Zeichen</code> eingelesen. Dazu wird die Funktion <code>substr</code> so angewendet, dass sie jeweils ein Zeichen aus dem Satz "extrahiert". Zur Kontrolle gibt das Script HTML-Code aus, in dem die einzelnen Zeichen des Satzes untereinander aufgelistet werden.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: uc - alle Zeichen einer Zeichenkette in Großbuchstaben umwandeln">Bearbeiten</a>]</span> <span class="mw-headline" id="uc_-_alle_Zeichen_einer_Zeichenkette_in_Gro.C3.9Fbuchstaben_umwandeln"> <span id="uc"></span> uc - alle Zeichen einer Zeichenkette in Großbuchstaben umwandeln</span></h2>
+<p>Wandelt Kleinbuchstaben in Großbuchstaben um und lässt Großbuchstaben und alle anderen Zeichen unberührt. Die entsprechende Gegenfunktion für Kleinbuchstaben ist <a href="#lc">lc</a>.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Zeichenkette, die bearbeitet werden soll.
+</p><p>Gibt die bearbeitete Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Satz</span> <span class="sy0">=</span> <span class="st0">&quot;mir ist nach Schreien zumute!&quot;</span><span class="sy0">;</span>
+<span class="re0">$Satz</span> <span class="sy0">=</span> <span class="kw3">uc</span><span class="br0">&#40;</span><span class="re0">$Satz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Satz<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Satz in normaler Schreibweise. Aber jeder Internet-Freak weiß, dass man Großbuchstaben nur dann benutzen sollte, wenn einem nach Schreien zumute ist. Deshalb wird die Funktion <code>uc</code> auf den Satz angewendet und speichert ihren Rückgabewert in dem gleichen Skalar, der ihr als Parameter übergeben wird. Zur Kontrolle wird HTML-Code mit dem bearbeiteten Satz ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: ucfirst - erstes Zeichen einer Zeichenkette in Großbuchstabe umwandeln">Bearbeiten</a>]</span> <span class="mw-headline" id="ucfirst_-_erstes_Zeichen_einer_Zeichenkette_in_Gro.C3.9Fbuchstabe_umwandeln"> <span id="ucfirst"></span> ucfirst - erstes Zeichen einer Zeichenkette in Großbuchstabe umwandeln</span></h2>
+<p>Wandelt das erste Zeichen einer Zeichenkette in Großbuchstaben um, sofern es ein entsprechender Kleinbuchstabe ist. Die entsprechende Gegenfunktion für Kleinbuchstaben ist <a href="#lcfirst">lcfirst</a>.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Zeichenkette, die bearbeitet werden soll.
+</p><p>Gibt die bearbeitete Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wort</span> <span class="sy0">=</span> <span class="st0">&quot;fallen&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="kw3">ucfirst</span><span class="br0">&#40;</span><span class="re0">$Wort</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel gibt nur ein Wort aus. Bevor das Wort ausgegeben wird, wird allerdings die Funktion <code>ucfirst</code> darauf angewendet. Der führende Kleinbuchstabe wird dabei in einen Großbuchstaben verwandelt und ändert dadurch die Bedeutung des Wortes.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: unpack - Binärdaten auflösen">Bearbeiten</a>]</span> <span class="mw-headline" id="unpack_-_Bin.C3.A4rdaten_aufl.C3.B6sen"> <span id="unpack"></span> unpack - Binärdaten auflösen</span></h2>
+<p>Macht (fast) alles rückgängig, was mit Hilfe der Funktion <a href="#pack">pack</a> zu Binärdaten verwandelt wurde, oder anderweitig erzeugte Daten, die in eines der entsprechenden Binärformate passen.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die Formatierungsangabe, siehe <a href="#pack_1">Tabelle</a>,<br />
+<b>2.</b> den Daten-Input.
+</p><p>Gibt die entsprechende Werteliste zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Satz</span> <span class="sy0">=</span> <span class="st0">&quot;Beam me up, Scotty&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Zeichen</span> <span class="sy0">=</span> <span class="kw3">unpack</span><span class="br0">&#40;</span><span class="st0">&quot;C*&quot;</span><span class="sy0">,</span> <span class="re0">$Satz</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Quersumme</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@Zeichen</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="re0">$Quersumme</span> <span class="sy0">+=</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="co5">$_</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Zeichenwert-Quersumme des Satzes &lt;b&gt;$Satz&lt;/b&gt; lautet &lt;b&gt;$Quersumme&lt;/b&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Die Formatierangabe <code>C</code> erzeugt bei der Funktion <code>pack</code> aus numerischen Angaben entsprechende Zeichenwerte. Bei <code>unpack</code> ist es umgekehrt. Da erzeugt die Funktion aus der Bytefolge, die der Zeichenkette der bei der Eingabe verwendeten Zeichenkodierung entspricht, eine Liste der numerischen Werte. Im Beispiel wird dies genutzt, um die Quersumme aller Zeichenwerte des Satzes zu ermitteln. Das Beispiel sendet HTML-Code an den Browser und gibt dabei das Ergebnis aus.<br />
+Alles weitere zu den komplexen Möglichkeiten dieser Funktion siehe <a href="#pack">pack</a>.</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1663/1000000
+Post‐expand include size: 73071/2097152 bytes
+Template argument size: 67074/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1884-0!*!0!!de-formal!*!* and timestamp 20150301110717 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;oldid=20885">http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;oldid=20885</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FFunktionen+f%C3%BCr+Zeichenketten" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Funktionen_für_Zeichenketten" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Funktionen_für_Zeichenketten" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Zeichenketten&amp;oldid=20885" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FFunktionen_für_Zeichenketten" title="Spezial:Durchsuchen/Perl-2FFunktionen für Zeichenketten">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 17. August 2014 um 20:12 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 5.166-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.086 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

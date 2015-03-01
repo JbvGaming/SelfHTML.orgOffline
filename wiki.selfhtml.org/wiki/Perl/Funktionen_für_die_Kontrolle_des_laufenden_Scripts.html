@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Funktionen für die Kontrolle des laufenden Scripts – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts","wgTitle":"Perl/Funktionen für die Kontrolle des laufenden Scripts","wgCurRevisionId":20876,"wgArticleId":1887,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Funktionen für die Kontrolle des laufenden Scripts" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Funktionen_für_die_Kontrolle_des_laufenden_Scripts skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Funktionen für die Kontrolle des laufenden Scripts</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_diesen_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu diesen Funktionen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#caller_-_Aufrufkontext_ermitteln"><span class="tocnumber">2</span> <span class="toctext">caller - Aufrufkontext ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#defined_-_Definition_einer_Variablen_.C3.BCberpr.C3.BCfen"><span class="tocnumber">3</span> <span class="toctext">defined - Definition einer Variablen überprüfen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#die_-_Script_wegen_eines_Fehlers_abbrechen"><span class="tocnumber">4</span> <span class="toctext">die - Script wegen eines Fehlers abbrechen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#eval_-_Anweisungen_oder_Anweisungsbl.C3.B6cke_interpretieren_lassen"><span class="tocnumber">5</span> <span class="toctext">eval - Anweisungen oder Anweisungsblöcke interpretieren lassen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#exit_-_Script_beenden"><span class="tocnumber">6</span> <span class="toctext">exit - Script beenden</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#local_-_Wert_von_Variablen_lokal_begrenzen"><span class="tocnumber">7</span> <span class="toctext">local - Wert von Variablen lokal begrenzen</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#my_-_G.C3.BCltigkeitsbereich_von_Variablen_begrenzen"><span class="tocnumber">8</span> <span class="toctext">my - Gültigkeitsbereich von Variablen begrenzen</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#quotemeta_-_Alle_Zeichen_au.C3.9Fer_A-Z.2C_a-z.2C_0-9_und_maskieren"><span class="tocnumber">9</span> <span class="toctext">quotemeta - Alle Zeichen außer A-Z, a-z, 0-9 und _ maskieren</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#return_-_aus_Subroutine_zur.C3.BCckkehren_und_Wert_zur.C3.BCckgeben"><span class="tocnumber">10</span> <span class="toctext">return - aus Subroutine zurückkehren und Wert zurückgeben</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#scalar_-_Ausdruck_in_skalarem_Kontext_bewerten"><span class="tocnumber">11</span> <span class="toctext">scalar - Ausdruck in skalarem Kontext bewerten</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#wantarray_-_.C3.9Cberpr.C3.BCfen_ob_Listenkontext_gegeben_ist"><span class="tocnumber">12</span> <span class="toctext">wantarray - Überprüfen ob Listenkontext gegeben ist</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#warn_-_Warnungen_ausgeben"><span class="tocnumber">13</span> <span class="toctext">warn - Warnungen ausgeben</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu diesen Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_diesen_Funktionen"> Allgemeines zu diesen Funktionen </span></h2>
+<p>Die hier versammelten Funktionen dienen vor allem dazu, bestimmte Dinge für das Script festzulegen, zu kontrollieren oder den Ablauf des Scripts zu beeinflussen. So kann eine <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutine</a> beispielsweise ermitteln, von wo aus sie aufgerufen wurde. Für eine Variable kann überprüft werden, ob sie einen Wert besitzt oder nicht. Die Gültigkeit (Lebensdauer) von Variablen kann auf bestimmte Bereiche des Scripts begrenzt werden. Scripts können in Fehlerfällen oder kritischen Situationen abgebrochen werden oder Warnungen ausgeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: caller - Aufrufkontext ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="caller_-_Aufrufkontext_ermitteln"> <span id="caller"></span> caller - Aufrufkontext ermitteln </span></h2>
+<p>Ermittelt, von wo aus der aktuelle Programmteil aufgerufen wurde, und aus welchem Kontext heraus.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> (optional) die Rückverfolgungstiefe als Zahl. Wenn Sie mit diesem Parameter experimentieren wollen, probieren Sie zunächst, den Wert <code>1</code> zu übergeben. Höhere Werte können dazu führen, dass weniger Information ermittelt wird als erhofft.
+</p><p>Gibt wahlweise einen Skalar oder eine Liste zurück. Wenn der Rückgabewert nur in einem Skalar gespeichert wird, enthält dieser nach Aufruf der Funktion den Namen des aufrufenden <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Packages_und_Module" title="Perl/Module/Einführung">Packages</a>. Welche weiteren Rückgabewerte in einer Liste gespeichert werden, zeigt das folgende Beispiel.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Infos</span> <span class="sy0">=</span> Aufrufe_Starten<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Infos<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> Aufrufe_Starten <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$Info_Einfach</span> <span class="sy0">=</span> Aufruf_Info_Einfach<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$A_S</span> <span class="sy0">=</span> <span class="st0">&quot;&lt;h3&gt;Einfache Aufruf-Infos:&lt;/h3&gt;&lt;p&gt;&quot;</span><span class="sy0">.</span><span class="re0">$Info_Einfach</span><span class="sy0">.</span><span class="st0">&quot;&lt;/p&gt;&quot;</span><span class="sy0">;</span>
+  <span class="kw1">my</span> <span class="re0">$Info_Ausfuehrlich</span> <span class="sy0">=</span> Aufruf_Info_Ausfuehrlich<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="re0">$A_S</span> <span class="sy0">=</span> <span class="re0">$A_S</span><span class="sy0">.</span><span class="st0">&quot;&lt;h3&gt;Ausführliche Aufruf-Infos:&lt;/h3&gt;&lt;p&gt;&quot;</span><span class="sy0">.</span><span class="re0">$Info_Ausfuehrlich</span><span class="sy0">.</span><span class="st0">&quot;&lt;/p&gt;&quot;</span><span class="sy0">;</span>
+  <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$A_S</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> Aufruf_Info_Einfach <span class="br0">&#123;</span>
+   <span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$Package</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Datei</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Zeile</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">caller</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw1">my</span> <span class="re0">$A_I_E</span> <span class="sy0">=</span> <span class="st0">&quot;&lt;strong&gt;Aufruf erfolgte aus Package:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$Package</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$Package</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_E</span> <span class="sy0">=</span> <span class="re0">$A_I_E</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;Aufruf erfolgte aus Datei:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$Datei</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$Datei</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_E</span> <span class="sy0">=</span> <span class="re0">$A_I_E</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;Aufruf erfolgte aus Programmzeile:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$Zeile</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$Zeile</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$A_I_E</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> Aufruf_Info_Ausfuehrlich <span class="br0">&#123;</span>
+   <span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$Package</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Datei</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Zeile</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Subroutine</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$HasArgs</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$WantArray</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$EvalText</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$IsRequire</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">caller</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw1">my</span> <span class="re0">$A_I_A</span> <span class="sy0">=</span> <span class="st0">&quot;&lt;strong&gt;Aufruf erfolgte aus Package:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$Package</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$Package</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_A</span> <span class="sy0">=</span> <span class="re0">$A_I_A</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;Aufruf erfolgte aus Datei:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$Datei</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$Datei</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_A</span> <span class="sy0">=</span> <span class="re0">$A_I_A</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;Aufruf erfolgte aus Programmzeile:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$Zeile</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$Zeile</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_A</span> <span class="sy0">=</span> <span class="re0">$A_I_A</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;Aufruf erfolgte aus Subroutine:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$Subroutine</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$Subroutine</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_A</span> <span class="sy0">=</span> <span class="re0">$A_I_A</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;HasArgs:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$HasArgs</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$HasArgs</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_A</span> <span class="sy0">=</span> <span class="re0">$A_I_A</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;WantArray:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$WantArray</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$WantArray</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_A</span> <span class="sy0">=</span> <span class="re0">$A_I_A</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;EvalText:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$EvalText</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$EvalText</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="re0">$A_I_A</span> <span class="sy0">=</span> <span class="re0">$A_I_A</span><span class="sy0">.</span><span class="st0">&quot;&lt;strong&gt;IsRequire:&lt;/strong&gt; &quot;</span><span class="sy0">.</span><span class="re0">$IsRequire</span><span class="sy0">.</span><span class="st0">&quot;&lt;br&gt;&quot;</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$IsRequire</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$A_I_A</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel gibt HTML-Code aus. Während der HTML-Ausgabe wird die Subroutine <code>Aufrufe_Starten()</code> aufgerufen. Der Rückgabewert des Aufrufs wird in dem Skalar <code>$Infos</code> gespeichert und anschließend ausgegeben.<br />
+<p>Die Subroutine <code>Aufrufe_Starten()</code> ruft ihrerseits wieder die Subroutinen <code>Aufruf_Info_Einfach()</code> und <code>Aufruf_Info_Ausfuehrlich()</code> auf. Aus den Rückgabewerten dieser beiden Routinen wird eine Zeichenkette namens <code>$A_S</code> zusammengesetzt und zurückgegeben.<br />
+In <code>Aufruf_Info_Einfach</code> steht die einfache Variante eines typischen Aufrufs von <code>caller</code>. Dabei werden drei Listenelemente als Rückgabewert erwartet: der Name des aufrufenden Packages, der aufrufenden Perl-Datei, und die Nummer der Programmzeile, in der der Aufruf erfolgte.<br />
+Die Subroutine <code>Aufruf_Info_Ausfuehrlich</code> zeigt dagegen den erweiterten Aufruf von <code>caller</code>. Dabei werden acht Listenelemente als Rückgabewerte erwartet. Neben den drei Elementen der einfachen Variante sind das der Name der aufrufenden Subroutine und folgende Zusatzinformationen:<br />
+<code>$HasArgs</code> ist 1, wenn beim Aufruf Argumente übergeben wurden (dazu zählt auch eine leere Liste), ansonsten 0.<br />
+<code>$WantArray</code> speichert, ob die Funktion im Listenkontext aufgerufen wurde.<br />
+<code>$EvalText</code> speichert einen Inhalt, wenn der Aufruf aus einer <a href="#eval">eval()</a>-Bewertung heraus erfolgt (jedoch nicht unbedingt bei Blockbewertungen mit <code>eval{...}</code>).<br />
+<code>$IsRequire</code> speichert <code>1</code> als Inhalt, wenn der Aufruf aus <code>eval</code> heraus erfolgte, und wenn dabei eine der Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages#use" title="Perl/Funktionen für Module und Packages">use</a> oder <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages#require" title="Perl/Funktionen für Module und Packages">require</a> im Spiel sind.<br />
+</p>
+Die beiden Subroutinen <code>Aufruf_Info_Einfach</code> und <code>Aufruf_Info_Ausfuehrlich</code> im obigen Beispiel stellen aus den gewonnenen Informationen die Zeichenketten <code>$A_I_E</code> bzw. <code>$A_I_A</code> zusammen und geben diese am Ende zurück.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: defined - Definition einer Variablen überprüfen">Bearbeiten</a>]</span> <span class="mw-headline" id="defined_-_Definition_einer_Variablen_.C3.BCberpr.C3.BCfen"> <span id="defined"></span> defined - Definition einer Variablen überprüfen </span></h2>
+<p>Variablen, egal, ob Skalare, Listen- bzw. Array-Elemente oder Hash-Elemente, haben, solange ihnen nicht explizit irgendein Wert zugewiesen wird, den Wert <code>undef</code>. Mit dieser Funktion können Sie überprüfen, ob einer Variablen bereits ein Wert zugewiesen wurde oder nicht.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> die zu überprüfende Variable.
+</p><p>Gibt <code>1</code> bzw. ein logisches "wahr" zurück, wenn der Variablen ein Wert zugewiesen ist, und <code>0</code> bzw. ein logisches "falsch", wenn kein Wert zugewiesen ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$ErsterSatz</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$ZweiterSatz</span> <span class="sy0">=</span> <span class="st0">&quot;Den ersten beissen die Katzen&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="re0">&amp;Satz_aufsagen</span><span class="sy0">;</span>
+<span class="re0">$ErsterSatz</span> <span class="sy0">=</span> <span class="st0">&quot;...und den letzten wie bekannt die Hunde&quot;</span><span class="sy0">;</span>
+<span class="kw3">undef</span> <span class="re0">$ZweiterSatz</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;&lt;/p&gt;&lt;i&gt;So - und jetzt noch einmal:&lt;/i&gt;&lt;/p&gt;&quot;</span><span class="sy0">;</span>
+<span class="re0">&amp;Satz_aufsagen</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> Satz_aufsagen <span class="br0">&#123;</span>
+  <span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$ErsterSatz</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw3">print</span> <span class="st0">&quot;Der erste Satz lautet &lt;strong&gt;$ErsterSatz&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">defined</span> <span class="re0">$ZweiterSatz</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw3">print</span> <span class="st0">&quot;Der zweite Satz lautet &lt;strong&gt;$ZweiterSatz&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispielscript definiert zunächst zwei Skalare namens <code>$ErsterSatz</code> ohne Wertzuweisung und <code>$ZweiterSatz</code> mit Wertzuweisung. Das Script enthält eine Subroutine namens <code>Satz_aufsagen</code>. Darin wird mit <code>defined</code> für die beiden Skalare überprüft, ob ihnen ein Wert zugewiesen wurde. Wenn ja, wird dieser Wert ausgegeben.<br />
+<p>Das Script erzeugt HTML-Code und ruft dabei zunächst einmal die Subroutine <code>Satz_aufsagen</code> auf. Anschließend erhält der bislang undefinierte Skalar <code>$ErsterSatz</code> einen Wert, und der Skalar <code>$ZweiterSatz</code> wird mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#undef" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">undef</a> in jenen Zustand versetzt, in dem ihm kein Wert (bzw. der "Nichtwert" <code>undef</code>) zugewiesen ist. Danach wird <code>Satz_aufsagen</code> nochmals aufgerufen.<br />
+</p>
+Beim ersten Aufruf von <code>Satz_aufsagen</code> wird nur "Den ersten beissen die Katzen" ausgegeben, beim zweiten Aufruf nur "...und den letzten wie bekannt die Hunde".</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Der Anfangswert <code>undef</code> einer Variablen, den Sie mit der Funktion <code>undef</code> wieder herstellen können, ist etwas anderes als der so genannte Leerstring (<code>""</code>). Eine leere Zeichenkette ist durchaus ein zugewiesener Wert!</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: die - Script wegen eines Fehlers abbrechen">Bearbeiten</a>]</span> <span class="mw-headline" id="die_-_Script_wegen_eines_Fehlers_abbrechen"> <span id="die"></span> die - Script wegen eines Fehlers abbrechen </span></h2>
+<p>Beendet ein Script, wenn es keinen Sinn hat, das Script weiter auszuführen. Wird z.B. gern verwendet, wenn eine wichtige Datei nicht geöffnet werden kann.<br />
+Schreibt Fehlermeldungen auf die Standardfehlerausgabe <code>STDERR</code> und beendet das Script mit dem aktuellen Wert der <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten Variablen</a> <code>$!</code>. Bei der CGI-Schnittstelle eines Webervers ist die Standardfehlerausgabe meistens eine Log-Datei, in der solche Fehlermeldungen gesammelt werden. Suchen Sie gegebenenfalls in der Dokumentation zu Ihrem Webserver nach, wo und wie der Server CGI-Fehlermeldungen protokolliert.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> Eine Liste, die auf die Standardfehlerausgabe <code>STDERR</code> geschrieben werden soll. Sinnvollerweise enthält die Liste eine oder mehrere entsprechende Fehlermeldungen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">open</span><span class="br0">&#40;</span>TEXT<span class="sy0">,</span> <span class="st0">&quot;&lt;&quot;</span><span class="sy0">,</span> <span class="st0">&quot;/daten/texte/nichtda.txt&quot;</span><span class="br0">&#41;</span>
+      <span class="kw1">or</span> <span class="kw3">die</span> <span class="st0">&quot;Fehler aufgetreten: $!&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Zeilen</span> <span class="sy0">=</span> <span class="re4">&lt;TEXT&gt;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>TEXT<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel versucht, mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a> eine Datei zu öffnen, die aber nicht vorhanden ist. Dadurch wird der Oder-Zweig hinter dem <a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren#Logische_Operatoren" title="Perl/Operatoren">logischen Operator</a> <code>||</code> (steht für "oder") aktiv. Dort ist die Funktion <code>die</code> notiert. Sie schreibt auf die Standardfehlerausgabe, dass ein Fehler aufgetreten ist. Indem sie dabei auch die vordefinierte Variable <code>$!</code> mit in die Ausgabe schreibt, wird auch mitprotokolliert, welcher Fehler aufgetreten ist. In diesem Fall ist auch die Anweisung <code>use&#160;CGI::Carp&#160;qw(fatalsToBrowser)</code> sehr hilfreich, denn der Fehler wird dadurch zusätzlich auf die Standardausgabe geschrieben und kann so je nach Situation im Browser zur Anzeige gelangen.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: eval - Anweisungen oder Anweisungsblöcke interpretieren lassen">Bearbeiten</a>]</span> <span class="mw-headline" id="eval_-_Anweisungen_oder_Anweisungsbl.C3.B6cke_interpretieren_lassen"> <span id="eval"></span> eval - Anweisungen oder Anweisungsblöcke interpretieren lassen </span></h2>
+<p>Perl-Scripts werden normalerweise intern zu <b>Operationscode</b> (sogenannten Opcodes) kompiliert, bevor sie ausgeführt werden. Das merken Sie als Programmierer beispielsweise daran, dass der Perl-Interpreter vor der Ausführung abbricht, sobald das Script Syntaxfehler enthält. Mit Hilfe der <code>eval</code>-Funktion können Sie jedoch den Perl-Interpreter während der Laufzeit eines Scripts aufrufen und innerhalb des Scripts beliebigen Perl-Code interpretieren lassen. Wenn Sie so wollen, kann ein Perl-Script auf diese Weise selber Perl-Scripts schreiben und deren Ausführung in die eigene Ausführung einbetten. In die Code-Erzeugung dürfen natürlich auch Variableninhalte einfließen, die das Script verwaltet.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> <b>entweder</b> eine Zeichenkette, die Perl-Code enthält, <b>oder</b> einen Anweisungsblock in geschweiften Klammern, vergleichbar einem Anweisungsblock innerhalb einer Subroutine oder innerhalb einer <code>if</code>-Abfrage.<br />
+Der Unterschied zwischen beiden Möglichkeiten besteht darin, dass eine übergebene Zeichenkette tatsächlich erst zur Laufzeit kompiliert wird, während der Anweisungsblock in der internen Vorab-Kompilierung mit berücksichtigt wird. Dadurch werden beispielsweise schwere Fehler, die zum Scriptabbruch führen, in einem übergebenen Anweisungsblock bereits bei der Kompilierung erkannt, in einer übergebenen Zeichenkette jedoch erst während der Ausführung.
+</p><p>Gibt das Ergebnis der zuletzt ausgeführten Anweisung in der übergebenen Zeichenkette oder dem übergebenen Anweisungsblock zurück. Im Fehlerfall wird <code>undef</code> zurückgegeben, und die aufgetretene Fehlermeldung ist über die <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierte Variable</a> <code>$@</code> abfragbar.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Rechenergebnis</span> <span class="sy0">=</span> <span class="kw3">eval</span><span class="br0">&#40;</span><span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Das Ergebnis der übergebenen Rechenoperation lautet &lt;strong&gt;$Rechenergebnis&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script erwartet beim Aufruf einen Übergabeparameter, der über URI hinter einem Fragezeichen notiert wird. Der Übergabeparameter besteht in einer Rechenoperation. Es kann sich auch um geklammerte, komplexe Rechenausdrücke handeln, z.B. <code>((6+7)*4)+(5/7)</code>. Nur Leerzeichen sind bei diesem einfachen Beispielscript nicht erlaubt, da sie bei der Übergabe in der URI-Zeile umformatiert werden.<br />
+<p>Über die <a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">CGI-Umgebungsvariable</a> <code>$ENV{'QUERY_STRING'}</code> kann das Script auf die übergebene Rechenoperation zugreifen. Es übergibt die Umgebungsvariable gleich an die Funktion <code>eval</code>. Die wiederum übergibt die übergebene Zeichenkette, also die Rechenoperation, zur Laufzeit an den Perl-Interpreter. Zurückgegeben wird der Wert dieser Anweisung, und das ist in dem Fall einfach das Rechenergebnis, so wie Perl es in einem Skalar speichern würde, wenn man ihm diese Rechenoperation zuweisen würde.<br />
+</p>
+Zur Kontrolle gibt das Script HTML-Code mit dem Rechenergebnis aus.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Scripts wie im Beispiel oben können extrem gefährlich sein. Benutzen Sie so etwas niemals als öffentlich zugängliches CGI-Script! Denn der übergebene Code, den das Script vom Anwender erhält, wird gnadenlos ausgeführt. Wenn der Anwender jemand ist, der sich auskennt, kann er statt der geforderten Rechenoperation beispielsweise einen Aufruf von <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Betriebssystemaufrufe#system" title="Perl/Funktionen für Betriebssystemaufrufe">system</a> übergeben, bei dem ein ganzer Verzeichnisbaum gelöscht oder die Festplatte formatiert wird.</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Zahl_1</span> <span class="sy0">=</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="kw3">rand</span><span class="br0">&#40;</span><span class="nu0">50</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Zahl_2</span> <span class="sy0">=</span> <span class="kw3">int</span><span class="br0">&#40;</span><span class="kw3">rand</span><span class="br0">&#40;</span><span class="nu0">5</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ergebnis</span><span class="sy0">;</span>
+<span class="kw3">eval</span> <span class="br0">&#123;</span> <span class="re0">$Ergebnis</span> <span class="sy0">=</span> <span class="re0">$Zahl_1</span> <span class="sy0">/</span> <span class="re0">$Zahl_2</span><span class="sy0">;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="co5">$@</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Folgender Fehler ist aufgetreten: $@<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Zahl_1 geteilt durch $Zahl_2 ist $Ergebnis<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Beispiel wird die Funktion <code>eval</code> wie in der Praxis oft üblich zum Abfangen von Fehlern verwendet. Das Script ermittelt mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Berechnungen#rand" title="Perl/Funktionen für Berechnungen">rand</a> zwei Zufallszahlen <code>$Zahl_1</code> und <code>$Zahl_2</code>. Anschließend dividiert es Zahl 1 durch Zahl 2. Da bei den ermittelten Zufallszahlen jedoch auch der Wert 0 vorkommen kann, würde ein schwerer Fehler auftreten, wenn Zahl 2 diesen Wert hat. Denn eine Division durch 0 führt auf allen Computersystemen zu einem Fehler. Das Script bettet die Anweisung mit der Division aus diesem Grund in einen <code>eval</code>-Block ein. Falls die Zahl 2 tatsächlich den Wert 0 hat, wird abgebrochen, und in der vordefinierten Variablen <code>$@</code> steht anschließend die von Perl erzeugte Fehlermeldung.<br />
+Das Beispiel gibt HTML-Code aus. Dabei fragt es ab, ob <code>$@</code> einen Inhalt enthält. Wenn ja, wird der Fehler ausgegeben. Wenn nein, wird das Ergebnis der erfolgreichen Division ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: exit - Script beenden">Bearbeiten</a>]</span> <span class="mw-headline" id="exit_-_Script_beenden"> <span id="exit"></span> exit - Script beenden </span></h2>
+<p>Beendet das Script und gibt einen Wert an den aufrufenden Prozess zurück.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> (optional) einen zurückzugebenden Wert. Die üblichen Werte, die auch von fremden aufrufenden Prozessen am ehesten erkannt werden, sind <code>0</code> für "erfolgreich beenden" und <code>1</code> für "Beenden mit Fehler". Wenn Sie keinen Parameter übergeben, wird automatisch <code>0</code> verwendet.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span> <span class="kw1">eq</span> <span class="st0">&quot;&quot;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   HTML_Output<span class="br0">&#40;</span><span class="st0">&quot;Username beim Aufruf erwartet!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">exit</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+   HTML_Output<span class="br0">&#40;</span><span class="st0">&quot;Hallo $ENV{'QUERY_STRING'}, wie geht's?&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">exit</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> HTML_Output <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$_[0]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script erwartet beim Aufruf einen Übergabeparameter, der hinter einem an den URI angehängten Fragezeichen notiert wird. Der Übergabeparameter besteht in einem User-Namen. Durch Auswerten der <a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">CGI-Umgebungsvariablen</a> <code>$ENV{'QUERY_STRING'}</code> gelangt das Script an den übergebenen Namen. Wenn die Umgebungsvariable leer ist (<code>""</code>), wurde kein Name übergeben. In diesem Fall ruft das Script die Subroutine <code>HTML_Output</code> auf und lässt sie eine Fehlermeldung senden. Anschließend wird das Script mit <code>exit(1)</code> beendet. Im anderen Fall, wenn alles in Ordnung ist und ein Name übergeben wurde, ruft das Script ebenfalls <code>HTML_Output</code> auf, diesmal jedoch mit einer netten Begrüßung des Users. In diesem Fall beendet sich das Script anschließend mit <code>exit(0)</code>.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Es ist kein guter Programmierstil, <code>exit</code> in Subroutinen zu verwenden. Wenn das Script in solchen Programmteilen fehlerhafte Situationen erkennt, sollte es besser mit <a href="#return">return</a> einen Wert zurückgeben, der an einer zentralen Stelle im Script als Fehler erkannt wird und dort zu einem Aufruf von <code>exit</code> führt.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: local - Wert von Variablen lokal begrenzen">Bearbeiten</a>]</span> <span class="mw-headline" id="local_-_Wert_von_Variablen_lokal_begrenzen"> <span id="local"></span> local - Wert von Variablen lokal begrenzen </span></h2>
+<p>Beschränkt den Wert einer Variablen (egal ob Skalar, Liste oder Hash usw.) auf lokale Gültigkeit. Die Beschränkung kann sich auf einen <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Anweisungsbl.C3.B6cke_notieren" title="Perl/Einführung in Perl" class="mw-redirect">Anweisungsblock</a> oder einen der Bereiche beziehen, die aus diesem Anweisungsblock heraus aufgerufen werden. Wenn es eine gleichnamige Variable außerhalb des Blocks gibt, wird dieser innerhalb des Anweisungsblocks temporär ein neuer Wert zugewiesen. Anwenden können Sie diese Funktion bei der Ersteinführung, also der Deklaration einer Variablen.
+</p><p>Beachten Sie, dass <code>local</code> nicht wirklich eine lokale Variable erzeugt, sondern nur eine globale Variable mit einem lokal gültigen Wert. Verwenden Sie <code>local</code> daher nur in begründeten Ausnahmefällen! "Echte" lokal gültige Variablen werden durch <a href="#my">my</a> deklariert.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> eine Variable, der temporär ein neuer Wert zugewiesen werden soll.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw2">use</span> vars <span class="kw3">qw</span><span class="br0">&#40;</span><span class="re0">$Zahl_1</span> <span class="re0">$Zahl_2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ergebnis</span> <span class="sy0">=</span> Subroutine_1<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="re0">$Ergebnis</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> Subroutine_1 <span class="br0">&#123;</span>
+   <span class="kw3">local</span> <span class="re0">$Zahl_1</span> <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+   <span class="re0">$Zahl_1</span> <span class="sy0">=</span> <span class="re0">$Zahl_1</span> <span class="sy0">*</span> <span class="nu0">2</span><span class="sy0">;</span>
+   <span class="re0">$Zahl_2</span> <span class="sy0">=</span> Subroutine_2<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Zahl_1</span> <span class="sy0">+</span> <span class="re0">$Zahl_2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> Subroutine_2 <span class="br0">&#123;</span>
+  <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Zahl_1</span> <span class="sy0">+</span> <span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel deklariert zu Beginn zwei Skalare <code>$Zahl_1</code> und <code>$Zahl_2</code>. Dies sind globale Variablen, die überall Gültigkeit haben und an jeder Stelle des Scripts verändert werden können. Das Beispiel enthält weiter unten jedoch auch noch eine Subroutine namens <code>Subroutine_1</code>. Innerhalb dieser Subroutine, die aus Sicht von Perl einen Anweisungsblock darstellt, wird mit <code>local $Zahl_1</code> einer dieser globalen Variablen für die Subroutine <code>Subroutine_1</code> ein anderer Wert zugewiesen, nämlich <code>10</code>. Würde das <code>local</code> fehlen, so würde einfach der globalen Variablen <code>$Zahl_1</code> ein neuer Wert zugewiesen.<br />
+<p><code>$Zahl_1</code> wird in der darauffolgenden Anweisung mit 2 multipliziert. Hinterher steht <code>20</code> als Wert in <code>$Zahl_1</code>, da die Multiplikation mit dem temporären Wert <code>10</code> vorgenommen wird.<br />
+Aus <code>Subroutine_1</code> heraus wird anschließend <code>Subroutine_2</code> aufgerufen. Dort wird wiederum die Variable <code>$Zahl_1</code> verwendet. Zu diesem Zeitpunkt ist im Script-Ablauf der globale Wert <code>5</code> der Variablen <code>$Zahl_1</code> noch immer durch den temporären Wert <code>20</code> ersetzt. Da er auch in Bereichen Gültigkeit hat, die von <code>Subroutine_1</code> aus aufgerufen werden, wird dieser Wert innerhalb von <code>Subroutine_2</code> weiter verwendet (hier liegt ein sichtbarer Unterschied zur Funktion <a href="#my">my</a>). Zum aktuellen Wert 20 wird 100 addiert. Der Wert, den <code>Subroutine_2</code> mit <a href="#return">return</a> zurückgibt, lautet also 120.<br />
+<code>Subroutine_1</code> gibt nach dem Aufruf von <code>Subroutine_2</code> ebenfalls das Ergebnis einer Addition an den aufrufenden Befehl zurück. Da <code>$Zahl_2</code> den Wert <code>120</code> hat, wird also der Wert <code>140</code> zurückgegeben.<br />
+</p>
+Im Hauptprogramm erzeugt das Beispiel HTML-Code. Dabei wird <code>Subroutine_1</code> aufgerufen und deren Rückgabewert im Skalar <code>$Ergebnis</code> gespeichert. Zur Kontrolle wird das Ergebnis ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: my - Gültigkeitsbereich von Variablen begrenzen">Bearbeiten</a>]</span> <span class="mw-headline" id="my_-_G.C3.BCltigkeitsbereich_von_Variablen_begrenzen"> <span id="my"></span> my - Gültigkeitsbereich von Variablen begrenzen </span></h2>
+<p>Schränkt den Gültigkeitsbereich einer Variablen (egal ob Skalar, Liste oder Hash usw.) auf einen <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Packages_und_Module" title="Perl/Module/Einführung">Namensraum</a> oder einen <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung_in_Perl#Anweisungsbl.C3.B6cke_notieren" title="Perl/Einführung in Perl" class="mw-redirect">Anweisungsblock</a> ein. Wenn es eine gleichnamige Variable außerhalb des Blocks gibt, wird diese nicht berührt. Anwenden können Sie diese Funktion bei der Definition einer Variablen.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> eine Variable, deren Gültigkeitsbereich eingeschränkt werden soll.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw2">use</span> vars <span class="kw3">qw</span><span class="br0">&#40;</span><span class="re0">$Zahl_1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="re0">$Zahl_1</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ergebnis</span> <span class="sy0">=</span> Subroutine_1<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="re0">$Ergebnis</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> Subroutine_1 <span class="br0">&#123;</span>
+   <span class="kw1">my</span> <span class="re0">$Zahl_1</span> <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+   <span class="kw1">my</span> <span class="re0">$Zahl_2</span> <span class="sy0">=</span> Subroutine_2<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Zahl_1</span> <span class="sy0">+</span> <span class="re0">$Zahl_2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> Subroutine_2 <span class="br0">&#123;</span>
+ <span class="kw3">return</span><span class="br0">&#40;</span><span class="re0">$Zahl_1</span> <span class="sy0">+</span> <span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel deklariert zu Beginn einen Skalar <code>$Zahl_1</code>. Dies ist eine globale Variable, die überall Gültigkeit hat und an jeder Stelle des Scripts verändert werden kann. Die Deklaration erfolgt mit dem <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>vars</code>. Der Grund dafür ist, dass die Verwendung von <code>use strict</code> sonst keine Deklaration globaler Variablen erlaubt und einen Fehler erzeugen würde. Im Beispiel sehen Sie, wie das Modul <code>vars</code> eingesetzt wird. Mit <code>use</code> eingebunden, steht in der Klammer hinter <code>qw</code> der Name <code>$Zahl_1</code>, also der Name der Variablen, die global deklariert werden soll. In der Klammer hinter <code>qw</code> können Sie als Liste, durch Leerzeichen getrennt, auch mehrere globale Variablen angeben.
+<p>Das Beispielscript enthält weiter unten eine Subroutine namens <code>Subroutine_1</code>. Innerhalb dieser Subroutine, die aus Sicht von Perl einen Anweisungsblock darstellt, wird mit <code>my $Zahl_1</code> eine Variable deklariert, die den gleichen Namen hat wie die globale Variable. Durch Anwendung von <code>my</code> ist es jedoch eine eigene neue Variable, die mit <code>10</code> initialisiert wird. Würde das <code>my</code> fehlen, so würde einfach der globalen Variablen <code>$Zahl_1</code> ein neuer Wert zugewiesen.<br />
+Aus <code>Subroutine_1</code> heraus wird <code>Subroutine_2</code> aufgerufen. Dort wird wieder die Variable <code>$Zahl_1</code> verwendet. Zu diesem Zeitpunkt im Script-Ablauf existieren beide Variablen <code>$Zahl_1</code>. Da diejenige, die in <code>Subroutine_1</code> deklariert wurde, jedoch nur dort Gültigkeit hat, ist innerhalb von <code>Subroutine_2</code> wieder die globale Variable gemeint. Zu deren Wert <code>1</code> wird <code>100</code> addiert. Der Wert, den <code>Subroutine_2</code> mit <a href="#return">return</a> zurückgibt, lautet also <code>101</code>.<br />
+<code>Subroutine_1</code> gibt nach dem Aufruf von <code>Subroutine_2</code> ebenfalls das Ergebnis einer Addition an den aufrufenden Befehl zurück. In diesem Fall ist mit <code>$Zahl_1</code> wieder diejenige Variable gemeint, die innerhalb des gleichen Blocks, also innerhalb von <code>Subroutine_1</code> deklariert wurde, und die den Wert <code>10</code> hat. Da <code>$Zahl_2</code> den Wert <code>101</code> hat, wird also der Wert <code>111</code> zurückgegeben.<br />
+</p>
+Im Hauptprogramm gibt das Beispiel HTML-Code aus. Dabei wird <code>Subroutine_1</code> aufgerufen und deren Rückgabewert im Skalar <code>$Ergebnis</code> gespeichert. Zur Kontrolle wird das Ergebnis ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: quotemeta - Alle Zeichen außer A-Z, a-z, 0-9 und maskieren">Bearbeiten</a>]</span> <span class="mw-headline" id="quotemeta_-_Alle_Zeichen_au.C3.9Fer_A-Z.2C_a-z.2C_0-9_und_maskieren"> <span id="quotemeta"></span> quotemeta - Alle Zeichen außer A-Z, a-z, 0-9 und _ maskieren </span></h2>
+<p>Wandelt eine Zeichenkette so um, dass alle Zeichen außer A bis Z, a bis z, 0 bis 9 und Unterstrich _ mit einem Backslash <code>\</code> maskiert werden.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> eine Zeichenkette, die umgewandelt werden soll.
+</p><p>Gibt die umgewandelte Zeichenkette zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Normaltext</span> <span class="sy0">=</span> <span class="st0">&quot;+++Test+++&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Normallaenge</span> <span class="sy0">=</span> <span class="kw3">length</span><span class="br0">&#40;</span><span class="re0">$Normaltext</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Quotematatext</span> <span class="sy0">=</span> <span class="kw3">quotemeta</span><span class="br0">&#40;</span><span class="re0">$Normaltext</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Quotematalaenge</span> <span class="sy0">=</span> <span class="kw3">length</span><span class="br0">&#40;</span><span class="re0">$Quotematatext</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;$Normaltext&lt;/strong&gt; wurde umgewandelt in &lt;strong&gt;$Quotematatext&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Textlänge zuvor: &lt;strong&gt;$Normallaenge&lt;/strong&gt; Zeichen&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Textlänge jetzt: &lt;strong&gt;$Quotematalaenge&lt;/strong&gt; Zeichen<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erzeugt HTML-Code. Dabei demonstriert es die Wirkungsweise von <code>quotemeta</code>. Ein Skalar namens <code>$Normalext</code> wird zunächst mit einem Wert belegt, der neben dem Wort "Test" diverse Pluszeichen enthält. Außerdem wird mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#length" title="Perl/Funktionen für Zeichenketten">length</a> die Länge der Zeichenkette ermittelt. Durch die anschließende Anwendung der Funktion <code>quotemeta</code> auf <code>$Normaltext</code> werden die Pluszeichen maskiert. Der Rückgabewert der Funktion wird in einem neuen Skalar namens <code>$Quotemetatext</code> gespeichert. Auch dessen Länge wird mit <code>length</code> ermittelt. Zur Kontrolle gibt das Script alle ermittelten Daten aus. Die maskierte Version hat 6 Zeichen mehr, da jedes Pluszeichen maskiert wurde.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: return - aus Subroutine zurückkehren und Wert zurückgeben">Bearbeiten</a>]</span> <span class="mw-headline" id="return_-_aus_Subroutine_zur.C3.BCckkehren_und_Wert_zur.C3.BCckgeben"> <span id="return"></span> return - aus Subroutine zurückkehren und Wert zurückgeben </span></h2>
+<p>Gibt einen Wert an die Anweisung zurück, welche die <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutine</a> aufgerufen hat.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> (optional) ein Wert, der zurückgegeben werden soll. Es kann sich um eine Zahl, eine Zeichenkette oder um eine beliebige Variable (auch um eine komplette Liste oder einen Hash) handeln. Wenn kein Parameter übergeben wird, wird einfach die Subroutine verlassen und je nach zuletzt ausgeführtem Kontext eine leere Liste oder ein Skalar mit dem Wert <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ausgabe</span> <span class="sy0">=</span> fett<span class="br0">&#40;</span><span class="st0">&quot;eine wichtige Angelegenheit&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;$Ausgabe&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="re0">$Ausgabe</span> <span class="sy0">=</span> kursiv<span class="br0">&#40;</span><span class="st0">&quot;eine noch wichtigere Angelegenheit&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Ausgabe</span> <span class="sy0">=</span> fett<span class="br0">&#40;</span><span class="re0">$Ausgabe</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;$Ausgabe&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> fett <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$fetterText</span> <span class="sy0">=</span> <span class="st0">&quot;&lt;strong&gt;&quot;</span> <span class="sy0">.</span> <span class="br0">&#40;</span> <span class="co5">$_</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">||</span> <span class="st_h">''</span> <span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;&lt;/strong&gt;&quot;</span><span class="sy0">;</span>
+  <span class="kw3">return</span> <span class="re0">$fetterText</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">sub</span> kursiv <span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">$kursiverText</span> <span class="sy0">=</span> <span class="st0">&quot;&lt;i&gt;&quot;</span> <span class="sy0">.</span> <span class="br0">&#40;</span> <span class="co5">$_</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">||</span> <span class="st_h">''</span> <span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;&lt;/i&gt;&quot;</span><span class="sy0">;</span>
+  <span class="kw3">return</span> <span class="re0">$kursiverText</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel enthält zwei Subroutinen namens <code>fett</code> und <code>kursiv</code>. In beiden Subroutinen wird ein übergebener Parameter erwartet, der in dem vordefinierten Array für Übergabeparameter (<code>@_</code>) an erster Stelle (<code>$_[0]</code>) steht. Dieser übergebene Parameter wird in die HTML-Tags für fett bzw. kursiv gesetzt. Die Skalare <code>$fetterText</code> bzw. <code>$kursiverText</code>, die dieses Konstrukt speichern, werden anschließend mit <code>return</code> zurückgegeben.<br />
+Das Script erzeugt HTML-Code. Während der Ausgabe ruft es die beiden Subroutinen auf. Der Rückgabewert wird jeweils in dem Skalar <code>$Ausgabe</code> gespeichert. Im zweiten Fall werden sogar beide Subroutinen hintereinander aufgerufen. Dadurch wird der übergebene Text erst kursiv, dann fett, also insgesamt fett kursiv. Zur Kontrolle werden die HTML-Konstrukte ausgegeben.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Subroutinen geben auch dann etwas zurück, wenn sie nicht mit <code>return</code> verlassen werden. Wenn Sie beispielsweise eine Subroutine so aufrufen:<br />
+<p><code>$Ausgabe = Test();</code><br />
+und die Subroutine so aussieht:<br />
+<code>sub Test { $x = 1; }</code><br />
+</p>
+dann ist in <code>$Ausgabe</code> anschließend der Wert <code>1</code> gespeichert.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: scalar - Ausdruck in skalarem Kontext bewerten">Bearbeiten</a>]</span> <span class="mw-headline" id="scalar_-_Ausdruck_in_skalarem_Kontext_bewerten"> <span id="scalar"></span> scalar - Ausdruck in skalarem Kontext bewerten </span></h2>
+<p>Erwartet als Parameter:<br />
+<b>1.</b> einen beliebigen Ausdruck. Es kann sich um eine Variable, einen Funktionsaufruf, eine Berechnung, eine Zuweisung usw. handeln.
+</p><p>Gibt den Wert zurück, den der übergebene Ausdruck bei skalarem Kontext liefert.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Singular</span> <span class="sy0">=</span> <span class="st0">&quot;ein Tisch&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Plural</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;ein Tisch&quot;</span><span class="sy0">,</span><span class="st0">&quot;noch ein Tisch&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ausgabe_1</span> <span class="sy0">=</span> <span class="kw3">scalar</span><span class="br0">&#40;</span><span class="re0">$Singular</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ausgabe_2</span> <span class="sy0">=</span> <span class="kw3">scalar</span><span class="br0">&#40;</span><span class="re0">@Plural</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ausgabe_3</span> <span class="sy0">=</span> <span class="kw3">scalar</span><span class="br0">&#40;</span><span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">&gt;</span> <span class="nu0">900000000</span> <span class="sy0">?</span> <span class="nu0">1</span> <span class="sy0">:</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Ausgabe 1: &quot;</span><span class="sy0">,</span> <span class="re0">$Ausgabe_1</span><span class="sy0">,</span> <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Ausgabe 2: &quot;</span><span class="sy0">,</span> <span class="re0">$Ausgabe_2</span><span class="sy0">,</span> <span class="st0">&quot;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Ausgabe 3: &quot;</span><span class="sy0">,</span> <span class="re0">$Ausgabe_3</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel gibt HTML-Code aus. Dabei definiert es einen Skalar namens <code>$Singular</code> und eine Liste namens <code>@Plural</code>. Auf beide wird die Funktion <code>scalar</code> angewendet. Der skalare Rückgabewert wird in den Skalaren <code>$Ausgabe_1</code> und <code>$Ausgabe_2</code> gespeichert. Außerdem wird noch ein dritter Skalar <code>$Ausgabe_3</code> definiert, dem der skalare Kontext einer komplexeren Anweisung zurückgegeben wird. In der Anweisung wird ermittelt, ob der Rückgabewert der Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#time" title="Perl/Funktionen für Datum und Uhrzeit">time</a> größer als 900000000 ist. Wenn ja, wird 1 zurückgegeben, wenn nein, wird 0 zurückgegeben. Anschließend gibt das Script die 3 ermittelten Werte aus.<br />
+<p><code>$Ausgabe_1</code> gibt einfach den Inhalt des Skalars <code>$Singular</code> aus, also <code>ein Tisch</code>. Da der bewertete Ausdruck ein Skalar ist, hat der skalare Kontext keinen Einfluss auf den zurückgegebenen Wert.<br />
+<code>$Ausgabe_2</code> gibt eine Zahl aus, nämlich 2. Der Grund ist, dass die skalare Interpretation einer Liste, im Beispiel der Liste <code>@Plural</code>, die Anzahl der Elemente ermittelt, die in der Liste enthalten sind.<br />
+</p>
+<code>$Ausgabe_3</code> gibt 1 oder 0 aus, je nachdem, welchen Wert <code>time</code> zurückgeliefert hat. Da 1 und 0 normale Einzelwerte sind, ist der skalare Kontext bereits gegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: wantarray - Überprüfen ob Listenkontext gegeben ist">Bearbeiten</a>]</span> <span class="mw-headline" id="wantarray_-_.C3.9Cberpr.C3.BCfen_ob_Listenkontext_gegeben_ist"> <span id="wantarray"></span> wantarray - Überprüfen ob Listenkontext gegeben ist </span></h2>
+<p>Erwartet keine Parameter
+</p><p>Gibt <code>1</code> bzw. <code>TRUE</code> zurück, wenn das aufrufende Programm oder die aufrufende Subroutine einen Listenkontext erwartet, und <code>0</code> bzw. <code>FALSE</code>, wenn ein skalarer Kontext erwartet wird. Gibt <code>undef</code> zurück, wenn gar kein Kontext erwartet wird (sogenannter <i>void context</i>).
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Zahlen</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="sy0">,</span><span class="nu0">3</span><span class="sy0">,</span><span class="nu0">4</span><span class="sy0">,</span><span class="nu0">5</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Normalsumme</span> <span class="sy0">=</span> Summe_ermitteln<span class="br0">&#40;</span><span class="re0">@Zahlen</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die normale Summe von 1,2,3,4,5 ist &lt;strong&gt;&quot;</span><span class="sy0">,</span> <span class="re0">$Normalsumme</span><span class="sy0">,</span> <span class="st0">&quot;&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Kumulativsummen</span> <span class="sy0">=</span> Summe_ermitteln<span class="br0">&#40;</span><span class="re0">@Zahlen</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Kumulativsummen von 1,2,3,4,5 sind &lt;strong&gt;&quot;</span><span class="sy0">,</span> <span class="re0">@Kumulativsummen</span><span class="sy0">,</span> <span class="st0">&quot;&lt;/strong&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> Summe_ermitteln <span class="br0">&#123;</span>
+   <span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">wantarray</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+     <span class="kw1">my</span> <span class="re0">@Summe</span> <span class="sy0">=</span> <span class="co5">@_</span><span class="sy0">;</span>
+     <span class="kw1">my</span> <span class="re0">$Wert</span><span class="sy0">;</span>
+     <span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$Summe</span> <span class="br0">&#40;</span><span class="re0">@Summe</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="re0">$Summe</span> <span class="sy0">=</span> <span class="re0">$Wert</span> <span class="sy0">+=</span> <span class="re0">$Summe</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>
+     <span class="kw3">return</span> <span class="re0">@Summe</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+   <span class="kw1">else</span> <span class="br0">&#123;</span>
+     <span class="kw1">my</span> <span class="re0">$Wert</span><span class="sy0">;</span>
+     <span class="kw1">foreach</span> <span class="kw1">my</span> <span class="re0">$Summe</span> <span class="br0">&#40;</span><span class="co5">@_</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="re0">$Wert</span> <span class="sy0">+=</span> <span class="re0">$Summe</span><span class="sy0">;</span>
+     <span class="br0">&#125;</span>
+     <span class="kw3">return</span> <span class="re0">$Wert</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel enthält eine Subroutine namens <code>Summe_ermitteln</code>. Die Funktion erwartet einen Array von Zahlen als Parameter, die über die Parameterliste <code>@_</code> abgefragt werden können. Innerhalb der Funktion wird mit <code>if(wantarray)</code> abgefragt, ob die Anweisung, die die Subroutine aufruft, als Rückgabewert eine Liste oder einen Skalar erwartet. Wenn eine Liste erwartet wird, wird der <code>if</code>-Zweig ausgeführt. Wenn ein Skalar erwartet wird, dann der <code>else</code>-Zweig. Im <code>if</code>-Zweig ist ein Algorithmus notiert, der aus den übergebenen Zahlen Kumulativsummen ermittelt. Die Kumulativsummen werden in einer Liste namens <code>@Summe</code> festgehalten. Diese Liste wird am Ende zurückgegeben. Im <code>else</code>-Zweig dagegen ermittelt die Funktion einfach nur die Summe der übergebenen Zahlen und hält das Ergebnis in dem Skalar <code>$Wert</code> fest, den sie am Ende zurückgibt.<br />
+Im Hauptprogramm wird HTML-Code erzeugt. Dabei wird insgesamt zweimal die Subroutine <code>Summe_ermitteln</code> aufgerufen. Einmal wird der Rückgabewert in einem Skalar namens <code>$Normalsumme</code> gespeichert, und beim anderen mal in einer Liste namens <code>@Kumulativsummen</code>. Dadurch wird beim ersten Aufruf der Subroutine der <code>else</code>-Zweig ausgeführt, und beim zweiten Aufruf der <code>if</code>-Zweig. Zur Kontrolle gibt das Script die jeweils ermittelten Ergebnisse aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: warn - Warnungen ausgeben">Bearbeiten</a>]</span> <span class="mw-headline" id="warn_-_Warnungen_ausgeben"> <span id="warn"></span> warn - Warnungen ausgeben </span></h2>
+<p>Schreibt Warnungen auf die Standardfehlerausgabe <code>STDERR</code>, ohne das Script zu beenden (im Gegensatz zu <a href="#die">die</a>). Für die CGI-Schnittstelle eines Webservers ist die Standardfehlerausgabe meistens eine Log-Datei, in der solche Fehlermeldungen gesammelt werden. Suchen Sie gegebenenfalls in der Dokumentation zu Ihrem Webserver nach, wo und wie der Server CGI-Fehlermeldungen protokolliert.
+</p><p>Erwartet als Parameter:<br />
+<b>1.</b> Eine Liste mit der oder den Meldungen, die auf die Standardfehlerausgabe <code>STDERR</code> geschrieben werden sollen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Daten</span> <span class="sy0">=</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span> <span class="sy0">-</span>e <span class="st0">&quot;/tmp/idx.txt&quot;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">warn</span><span class="br0">&#40;</span><span class="st0">&quot;idx.txt nicht gefunden. Datei wird deshalb neu erzeugt<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">open</span><span class="br0">&#40;</span>FILE<span class="sy0">,</span><span class="st0">&quot;&gt;&quot;</span><span class="sy0">,</span> <span class="st0">&quot;/tmp/idx.txt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> FILE <span class="st0">&quot;$Daten<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+  <span class="kw3">open</span><span class="br0">&#40;</span>FILE<span class="sy0">,</span><span class="st0">&quot;&gt;&gt;&quot;</span><span class="sy0">,</span> <span class="st0">&quot;/tmp/idx.txt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> FILE <span class="st0">&quot;$Daten<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;in Datei geschrieben:&lt;/strong&gt; $Daten<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>FILE<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script erwartet einen Übergabeparameter, der hinter einem Fragezeichen notiert wird. Der Übergabeparameter ist in diesem Beispiel ein User-Name. Durch Auswerten der <a href="http://wiki.selfhtml.org/wiki/Perl/CGI/Umgebungsvariablen" title="Perl/CGI/Umgebungsvariablen">CGI-Umgebungsvariablen</a> <code>$ENV{'QUERY_STRING'}</code> gelangt das Script an die übergebenen Daten.<br />
+<p>Das Script erzeugt HTML-Code. Währenddessen versucht es, mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a> eine Datei namens <code>/usr/web/temp/idx.txt</code> zu öffnen, um die übergebenen Daten ans Ende der Datei zu schreiben. Falls die Datei nicht existiert, wird sie im <code>if</code>-Zweig zwar neu erzeugt (falls das Verzeichnis <code>/usr/web/temp</code> zumindest schon existiert), aber es wird mit <code>warn</code> eine entsprechende Warnung auf die Standardfehlerausgabe, die dem error_log des Webservers entspricht, geschrieben. Sie erhalten diese Warnung also <b>nicht</b> im Browserfenster angezeigt.<br />
+Zur Kontrolle wird auch noch übermittelt, welche Daten in die Datei geschrieben wurden. Diese Mitteilung sehen Sie allerdings in Ihrem Browser.<br />
+</p>
+Die <code>if</code>-Abfrage überprüft mit dem <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management#-.5Bx.5D" title="Perl/Funktionen für Datei- und Verzeichnis-Management">Dateitestoperator</a> <code>-e</code>, ob die Datei bereits existiert. Abhängig davon ist die Reaktion des Scripts.</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1223/1000000
+Post‐expand include size: 84403/2097152 bytes
+Template argument size: 79042/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1887-0!*!0!!de-formal!*!* and timestamp 20150301151025 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;oldid=20876">http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;oldid=20876</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FFunktionen+f%C3%BCr+die+Kontrolle+des+laufenden+Scripts" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_die_Kontrolle_des_laufenden_Scripts&amp;oldid=20876" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FFunktionen_für_die_Kontrolle_des_laufenden_Scripts" title="Spezial:Durchsuchen/Perl-2FFunktionen für die Kontrolle des laufenden Scripts">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 17. August 2014 um 19:54 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.864-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.089 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

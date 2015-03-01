@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Artikel:JavaScript/Fader-Framework/Komfort-Fader by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Tutorials/Fader-Framework/Komfort-Fader – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="canonical" href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Komfort-Fader" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Tutorials/Fader-Framework/Komfort-Fader","wgTitle":"JavaScript/Tutorials/Fader-Framework/Komfort-Fader","wgCurRevisionId":21086,"wgArticleId":1116,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["JavaScript"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Tutorials/Fader-Framework/Komfort-Fader","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgRedirectedFrom":"Artikel:JavaScript/Fader-Framework/Komfort-Fader","wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html4strict {line-height: normal;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html4strict.source-html4strict .de1, .html4strict.source-html4strict .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html4strict.source-html4strict  {font-family:monospace;}
+.html4strict.source-html4strict .imp {font-weight: bold; color: red;}
+.html4strict.source-html4strict li, .html4strict.source-html4strict .li1 {font-weight: normal; vertical-align:top;}
+.html4strict.source-html4strict .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html4strict.source-html4strict .li2 {font-weight: bold; vertical-align:top;}
+.html4strict.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict.source-html4strict .kw3 {color: #000066;}
+.html4strict.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict.source-html4strict .br0 {color: #66cc66;}
+.html4strict.source-html4strict .sy0 {color: #66cc66;}
+.html4strict.source-html4strict .st0 {color: #ff0000;}
+.html4strict.source-html4strict .nu0 {color: #cc66cc;}
+.html4strict.source-html4strict .sc-2 {color: #404040;}
+.html4strict.source-html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict.source-html4strict .sc0 {color: #00bbdd;}
+.html4strict.source-html4strict .sc1 {color: #ddbb00;}
+.html4strict.source-html4strict .sc2 {color: #009900;}
+.html4strict.source-html4strict .ln-xtra, .html4strict.source-html4strict li.ln-xtra, .html4strict.source-html4strict div.ln-xtra {background-color: #ffc;}
+.html4strict.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Tutorials/Fader-Framework/Komfort-Fader" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Tutorials_Fader-Framework_Komfort-Fader skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Tutorials/Fader-Framework/Komfort-Fader</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/JavaScript" title="JavaScript">JavaScript</a> | <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials" title="JavaScript/Tutorials">Tutorials</a> | <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework" title="JavaScript/Tutorials/Fader-Framework">Fader-Framework</a></span>(Weitergeleitet von <a href="http://wiki.selfhtml.org/index.php?title=Artikel:JavaScript/Fader-Framework/Komfort-Fader&amp;redirect=no" title="Artikel:JavaScript/Fader-Framework/Komfort-Fader">Artikel:JavaScript/Fader-Framework/Komfort-Fader</a>)</div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="note-box note-box-continuation">
+<table class="note-box-text">
+<tr>
+<td><a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Projekt_Fader-Framework" title="JavaScript/Tutorials/Fader-Framework/Projekt Fader-Framework">← Projekt: Fader-Framework</a>
+</td>
+<td>
+</td>
+<td>
+</td></tr></table>
+</div>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Komfort-Fader_.28mit_zuf.C3.A4lliger_Bilderreihenfolge.29"><span class="tocnumber">1</span> <span class="toctext">Komfort-Fader (mit zufälliger Bilderreihenfolge)</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Neuerungen_gegen.C3.BCber_der_alten_Variante"><span class="tocnumber">2</span> <span class="toctext">Neuerungen gegenüber der alten Variante</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Einstellbare_Eigenschaften"><span class="tocnumber">2.1</span> <span class="toctext">Einstellbare Eigenschaften</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Interne_Eigenschaften"><span class="tocnumber">2.2</span> <span class="toctext">Interne Eigenschaften</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Geplante_Methoden"><span class="tocnumber">2.3</span> <span class="toctext">Geplante Methoden</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Die_neuen_Methoden_im_Einzelnen"><span class="tocnumber">3</span> <span class="toctext">Die neuen Methoden im Einzelnen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Code_der_Methode_stop"><span class="tocnumber">3.1</span> <span class="toctext">Code der Methode stop</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Code_der_Methode_start"><span class="tocnumber">3.2</span> <span class="toctext">Code der Methode start</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Code_der_Methode_createPlayList"><span class="tocnumber">3.3</span> <span class="toctext">Code der Methode createPlayList</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Code_der_Methode_next"><span class="tocnumber">3.4</span> <span class="toctext">Code der Methode next</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Code_der_Methode_fade"><span class="tocnumber">3.5</span> <span class="toctext">Code der Methode fade</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Voreinstellungen"><span class="tocnumber">4</span> <span class="toctext">Voreinstellungen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Voreinstellungen_in_FaderFramework.js"><span class="tocnumber">4.1</span> <span class="toctext">Voreinstellungen in <i>FaderFramework.js</i></span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Voreinstellungen_im_Konstruktor"><span class="tocnumber">4.2</span> <span class="toctext">Voreinstellungen im Konstruktor</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Der_fertige_Komfort-Fader"><span class="tocnumber">5</span> <span class="toctext">Der fertige Komfort-Fader</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Einsatzbeispiel_in_einer_Galerie"><span class="tocnumber">6</span> <span class="toctext">Einsatzbeispiel in einer Galerie</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Komfort-Fader (mit zufälliger Bilderreihenfolge)">Bearbeiten</a>]</span> <span class="mw-headline" id="Komfort-Fader_.28mit_zuf.C3.A4lliger_Bilderreihenfolge.29"> Komfort-Fader (mit zufälliger Bilderreihenfolge) </span></h2>
+<p>Nun wird das bisherige Script aufgebohrt und mit einigen Extras versehen. Dazu gehört zuallererst die Möglichkeit, die Bilder in einer zufälligen Reihenfolge anzeigen zu lassen. Außerdem soll ein Fader auch manuell startbar sein, ohne dass er automatisch nach dem Laden der Seite anläuft. Ebenso soll er auch anhaltbar sein, damit man ihn auf Knopfdruck stoppen kann, und er soll eine Einzelschritt-Funktion (natürlich vorwärts und rückwärts) besitzen. Und selbstverständlich sollte er so robust geschrieben sein, dass eine "Fehlbedienung" ausgeschlossen ist.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Neuerungen gegenüber der alten Variante">Bearbeiten</a>]</span> <span class="mw-headline" id="Neuerungen_gegen.C3.BCber_der_alten_Variante"> Neuerungen gegenüber der alten Variante </span></h2>
+<p>Um diese gewünschten Fähigkeiten umsetzen zu können, müssen dem Fader zunächst verschiedene weitere Eigenschaften verliehen werden, auf die man dann im <code>init</code>-Aufruf Bezug nehmen kann, und die diese zusätzlichen Möglichkeiten steuern. Einstellungen, die im <code>init</code>-Aufruf nicht enthalten sind, werden durch Voreinstellungen ersetzt, die im Framework-Objekt abgespeichert werden. Hier die komplette Übersicht aller benötigten Eigenschaften dieses Komfort-Faders:
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Einstellbare Eigenschaften">Bearbeiten</a>]</span> <span class="mw-headline" id="Einstellbare_Eigenschaften"> Einstellbare Eigenschaften </span></h3>
+<table class="wikitable">
+<tr>
+<th>Eigenschaft</th>
+<th>Inhalt</th>
+<th>Bedeutung
+</th></tr>
+<tr>
+<td><code>viewTime</code></td>
+<td>Ganzzahl</td>
+<td>Zeit bis zum Überblenden in ein neues Bild (in Millisekunden)
+</td></tr>
+<tr>
+<td><code>fadeStep</code></td>
+<td>Dezimalzahl</td>
+<td>
+</td></tr>
+<tr>
+<td><code>autostart</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>sofortiges Starten des Faders nach dem Laden der Seite
+</td></tr>
+<tr>
+<td><code>random</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>zufällige Reihenfolge der Bilder
+</td></tr></table>
+<p>Diese Werte können in einem <code>init</code>-Aufruf über das zu übergebende Objekt für jeden Fader individuell definiert werden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Interne Eigenschaften">Bearbeiten</a>]</span> <span class="mw-headline" id="Interne_Eigenschaften"> Interne Eigenschaften </span></h3>
+<table class="wikitable">
+<tr>
+<th>Eigenschaft</th>
+<th>Inhalt</th>
+<th>Bedeutung
+</th></tr>
+<tr>
+<td><code>dir</code></td>
+<td>String</td>
+<td>Richtung für die Reihenfolge der Bilder. "<i>backwards</i>" führt zu einer umgekehrten Reihenfolge.
+</td></tr>
+<tr>
+<td><code>counter</code></td>
+<td>Zahl</td>
+<td>Zähler, der auf die Nummer des aktuellen Indexes in der Playlist zeigt.
+</td></tr>
+<tr>
+<td><code>playList</code></td>
+<td>Array</td>
+<td>
+</td></tr>
+<tr>
+<td><code>fading</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>Wird von <code>fade</code> geändert: Während einer Überblendung ist dieser Wert <code>true</code>.
+</td></tr></table>
+<p>Die Handhabung der Reihenfolge der Bilder wird über eine "Playlist" geregelt. In <code>playList</code> stehen die (eventuell vermischten) Indizes der Bilder aus dem internen Array <code>this.images</code>. Auf diese Weise kann sowohl eine reguläre, als auch eine zufällige Reihenfolge relativ einfach gehandhabt werden. Die Eigenschaft <code>counter</code> wurde sowieso schon in vorherigen Versionen des Fader-Objektes benötigt. Hier zeigt sie nun nicht mehr direkt auf die Bild-Elemente selbst, sondern auf einen Index in der Playlist, der jeweils für eines der Bild-Elemente steht.
+</p><p>Die Reihenfolge in der Playlist kann über die Eigenschaft <code>dir</code> umgekehrt abgespielt werden. Der Fader zeigt die Bilder dann "rückwärts" an. Um das zu erreichen muss in <code>dir</code> die Zeichenkette <i>backwards</i> stehen.
+</p><p>Während des Überblendens sollen Störungen unmöglich gemacht werden. Dafür existiert jetzt die Eigenschaft <code>fading</code>, die ein Weiterschalten in der Playlist verhindert.
+</p><p>Um eine Playlist zu erstellen, bedarf es einer entsprechenden Methode. Auch zum manuellen Starten und Anhalten des Faders werden weitere Methoden benötigt. Hier eine Übersicht aller Methoden eines Komfort-Faders:
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Geplante Methoden">Bearbeiten</a>]</span> <span class="mw-headline" id="Geplante_Methoden"> Geplante Methoden </span></h3>
+<table class="wikitable">
+<tr>
+<th>Methode</th>
+<th>Aufgabe
+</th></tr>
+<tr>
+<td><code>createPlayList()</code></td>
+<td>erstellt ein neues Array anhand der Menge der in <code>images</code> abgelegten Bildreferenzen und mischt die Nummern, wenn in <code>random</code> der Wert <code>true</code> steht
+</td></tr>
+<tr>
+<td><code>start()</code></td>
+<td>startet den Fader, setzt <code>stopped</code> logischerweise auf <code>false</code> und ruft <code>next</code> auf
+</td></tr>
+<tr>
+<td><code>stop()</code></td>
+<td>setzt <code>stopped</code> auf <code>true</code>
+</td></tr>
+<tr>
+<td><code>next(single, backwards)</code></td>
+<td>zählt <code>counter</code> um eins hoch oder runter (je nach <code>dir</code>) - wenn Playlist zu Ende ist, wird <code>counter</code> zurückgesetzt und eine neue Playlist mittels <code>createPlayList</code> erstellt - wird für <code>single</code> als ersten Parameter <code>true</code> übermittelt (für Einzelschritt-Modus), wird <code>stopped</code> auf <code>true</code> gesetzt - wird für <code>backwards</code> als zweiter Parameter ein String übermittelt, so wird er in <code>dir</code> gespeichert - zuletzt wird <code>fade</code> aufgerufen
+</td></tr>
+<tr>
+<td><code>fade()</code></td>
+<td>führt eine Überblendung zweier Bilder durch - benutzt <code>counter</code>, um das entsprechende Bilderpaar zu ermitteln.
+</td></tr></table>
+<p>Im Wesentlichen übernehmen die Methoden <code>fade</code> und <code>next</code> die Animation. Die Methoden <code>start</code> und <code>stop</code> sind lediglich dazu da, eine Animation anzuhalten oder wieder zu starten. Dabei muss <code>next</code> auf die Eigenschaft <code>stopped</code> Rücksicht nehmen, da sonst der Fader nicht angehalten werden kann. Ebenso muss <code>next</code> auf <code>fading</code> Rücksicht nehmen, damit eine gerade ablaufende Animation nicht gestört wird. Die Methode <code>fade</code> wiederum soll nicht auf <code>stopped</code> Rücksicht nehmen, da sonst der Fader mitten in einer Überblendung angehalten würde, was nicht unbedingt einen Sinn hat.
+</p><p>Die Methode <code>createPlayList</code> ist im Grunde eine Helferfunktion, die sowohl bei der Erstellung eines Faders, als auch von der Methode <code>next</code> aufgerufen wird, um eine neue Playlist zu erstellen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Die neuen Methoden im Einzelnen">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_neuen_Methoden_im_Einzelnen"> Die neuen Methoden im Einzelnen </span></h2>
+<p>In diesem Kapitel wird der JavaScript-Code der Methoden genauer besprochen, bevor alles am Ende wieder zu einem neuen FaderFramework zusammengesetzt wird.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Code der Methode stop">Bearbeiten</a>]</span> <span class="mw-headline" id="Code_der_Methode_stop"> Code der Methode <code>stop</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Methode stop
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">this</span>.<span class="me1">stop</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">this</span>.<span class="me1">stopped</span> <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Mehr ist in dieser Methode nicht notwendig.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Code der Methode start">Bearbeiten</a>]</span> <span class="mw-headline" id="Code_der_Methode_start"> Code der Methode <code>start</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Methode start
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">this</span>.<span class="me1">start</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">this</span>.<span class="me1">stopped</span> <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">next</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Wie bereits besprochen ruft diese Funktion <code>next</code> auf, um einen Bilderwechsel zu provozieren. Damit ein Bilderwechsel auch manuell ausgelöst werden kann, ist der "Umweg" über <code>start</code> → <code>next</code> notwendig.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Code der Methode createPlayList">Bearbeiten</a>]</span> <span class="mw-headline" id="Code_der_Methode_createPlayList"> Code der Methode <code>createPlayList</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Methode playlist
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">this</span>.<span class="me1">createPlayList</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">var</span> i<span class="sy0">,</span> r<span class="sy0">;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">playList</span> <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">random</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="co1">// zufällige Reihenfolge</span>
+        while <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">playList</span>.<span class="me1">length</span> <span class="sy0">&lt;</span> <span class="kw1">this</span>.<span class="me1">images</span>.<span class="me1">length</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            vorhanden <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+            r <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">random</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">images</span>.<span class="me1">length</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+            <span class="kw1">for</span> <span class="br0">&#40;</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="kw1">this</span>.<span class="me1">playList</span>.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">if</span> <span class="br0">&#40;</span>r <span class="sy0">==</span> <span class="kw1">this</span>.<span class="me1">playList</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    vorhanden <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span>
+&#160;
+            <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>vorhanden<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">this</span>.<span class="me1">playList</span><span class="br0">&#91;</span><span class="kw1">this</span>.<span class="me1">playList</span>.<span class="me1">length</span><span class="br0">&#93;</span> <span class="sy0">=</span> r<span class="sy0">;</span>
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+&#160;
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+        <span class="co1">// geordnete Reihenfolge</span>
+        <span class="kw1">for</span> <span class="br0">&#40;</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="kw1">this</span>.<span class="me1">images</span>.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">this</span>.<span class="me1">playList</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span> <span class="sy0">=</span> i<span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Für die Playlist wird ein leeres Array angelegt. Eine eventuell vorhandene Playlist wird dadurch gelöscht. Danach verzweigt sich die Funktion, je nach der Einstellung <code>random</code> entweder in eine zufällige Reihenfolge (wenn <code>random</code> den Wert <code>true</code> enthält) oder in eine geordnete Reihenfolge. Im Zweig für eine geordnete Reihenfolge wird lediglich die Variablen <code>i</code> auf die benötigte Anzahl der Bilder hochgezählt, im Zweig für eine zufällige Reihenfolge ist der Vorgang etwas komplexer.
+</p><p>Die <code>while</code>-Schleife wird so lange ausgeführt, bis für alle Bilder eine Nummer gefunden wurde. In der Variablen <code>vorhanden</code> wird angenommen, dass die neu ermittelte Zufallszahl noch nicht in der Playlist vorhanden ist, daher erhält sie den Wert <code>false</code>. Anschließend wird in der Variablen <code>r</code> eine Zufallszahl ermittelt. Diese Zufallszahl wird in der folgenden <code>for</code>-Schleife mit allen bereits eingetragenen Zahlen abgeglichen, ob sie nicht bereits vergeben wurde. Der Wert von <code>vorhanden</code> wird bei Bedarf auf <code>true</code> gesetzt. Dieser Wert entscheidet dann im darauffolgenden <code>if</code>-Zweig, ob die Zufallszahl in <code>this.playList</code> eingetragen werden kann.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Was Zufallszahlen angeht, so muss man wissen, dass die Funktion <code>Math.random</code> zufällige Werte zwischen <code>0.0</code> und <code>1.0</code> zurückgibt. Wie man diesen Zufallswert am Besten auf eine Skala von Null bis x auffächert, beschreibt der Artikel <a href="http://wiki.selfhtml.org/wiki/JavaScript/Anwendung_und_Praxis/Zufallszahlen" title="JavaScript/Anwendung und Praxis/Zufallszahlen"> Gleichverteilte Zufallszahlen erzeugen</a> von Mathias Schäfer.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Code der Methode next">Bearbeiten</a>]</span> <span class="mw-headline" id="Code_der_Methode_next"> Code der Methode <code>next</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Methode next
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">this</span>.<span class="me1">next</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span>single<span class="sy0">,</span> dir<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>single<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">this</span>.<span class="me1">stopped</span> <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">typeof</span> dir <span class="sy0">==</span> <span class="st0">&quot;string&quot;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">this</span>.<span class="me1">dir</span> <span class="sy0">=</span> dir<span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">stopped</span> <span class="sy0">&amp;&amp;</span> <span class="sy0">!</span>single<span class="br0">&#41;</span> <span class="sy0">||</span> <span class="kw1">this</span>.<span class="me1">fading</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">return</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">dir</span> <span class="sy0">!=</span> <span class="st0">&quot;backwards&quot;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">&lt;</span> <span class="kw1">this</span>.<span class="me1">playList</span>.<span class="me1">length</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">?</span> <span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">+</span><span class="nu0">1</span> <span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+        <span class="kw1">if</span>  <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">this</span>.<span class="me1">createPlayList</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+&#160;
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+        <span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="sy0">?</span> <span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">-</span><span class="nu0">1</span> <span class="sy0">:</span> <span class="kw1">this</span>.<span class="me1">playList</span>.<span class="me1">length</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+        <span class="kw1">if</span>  <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">==</span> <span class="kw1">this</span>.<span class="me1">playList</span>.<span class="me1">length</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">this</span>.<span class="me1">createPlayList</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">element</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">images</span><span class="br0">&#91;</span><span class="kw1">this</span>.<span class="me1">playList</span><span class="br0">&#91;</span><span class="kw1">this</span>.<span class="me1">counter</span><span class="br0">&#93;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">images</span><span class="br0">&#91;</span><span class="kw1">this</span>.<span class="me1">playList</span><span class="br0">&#91;</span><span class="kw1">this</span>.<span class="me1">counter</span><span class="br0">&#93;</span><span class="br0">&#93;</span>.<span class="me1">className</span> <span class="sy0">=</span> <span class="st0">&quot;next&quot;</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">fade</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die Methode <code>next</code> nimmt einen Parameter namens <code>single</code> entgegen, der entweder als <code>true</code> oder als <code>false</code> interpretiert wird. Er dient dazu, die Animation auf "manuelle Einzelbilder" umzuschalten. Sollte kein Parameter <code>single</code> übergeben worden sein, dann ist das für diese Funktion dasselbe, als hätte er den Wert <code>false</code> gehabt.
+</p><p>Die Methode <code>next</code> nimmt noch einen zweiten Parameter namens <code>backwards</code> entgegen, der nur dann in <code>this.dir</code> abgespeichert wird, wenn es sich dabei um eine Zeichenkette handelt.
+</p><p>In der Methode wird allerdings nur dann eine Weiterschaltung in der Playlist vorgenommen, wenn entweder der Fader nicht mittels der Eigenschaft <code>stopped</code> angehalten wurde, oder wenn der Parameter <code>single</code> auf <code>true</code> gesetzt ist. Im letzteren Falle wird der Fader auf jeden Fall angehalten, da <code>single</code> für "Einzelschritt" steht. Und ein Einzelschritt kann nur dann ein Einzelschritt sein, wenn es danach keine weiteren automatischen Bilderwechsel gibt. Auf jeden Fall aber wird genau kein Bilderwechsel durchgeführt, solange die Eigenschaft <code>fading</code> noch nicht wieder auf <code>false</code> gesetzt wurde, um Störungen in der gerade laufenden Animation zu vermeiden.
+</p><p>Je nachdem, ob in der Fader-Eigenschaft <code>dir</code> der Wert "<i>backwards</i>" enthalten ist, wird <code>counter</code> entweder hoch- oder heruntergezählt. Je nach Bedarf wird dann <code>counter</code> wieder zurückgesetzt und eine neue Playlist erstellt.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Code der Methode fade">Bearbeiten</a>]</span> <span class="mw-headline" id="Code_der_Methode_fade"> Code der Methode <code>fade</code> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Methode fade
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">this</span>.<span class="me1">fade</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span>step<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">var</span> fader <span class="sy0">=</span> <span class="kw1">this</span><span class="sy0">,</span> imgs <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">element</span>.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span><span class="st0">&quot;img&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">fading</span> <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+&#160;
+    step <span class="sy0">=</span> step <span class="sy0">||</span> <span class="nu0">0</span><span class="sy0">;</span>
+&#160;
+    imgs<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>.<span class="me1">style</span>.<span class="me1">opacity</span> <span class="sy0">=</span> step<span class="sy0">/</span><span class="nu0">100</span><span class="sy0">;</span>
+    imgs<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>.<span class="me1">style</span>.<span class="me1">filter</span> <span class="sy0">=</span> <span class="st0">&quot;alpha(opacity=&quot;</span> <span class="sy0">+</span> step <span class="sy0">+</span> <span class="st0">&quot;)&quot;</span><span class="sy0">;</span> <span class="co1">// IE</span>
+&#160;
+    step <span class="sy0">+=</span> <span class="kw1">this</span>.<span class="me1">fadeStep</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">if</span> <span class="br0">&#40;</span>step <span class="sy0">&lt;=</span> <span class="nu0">100</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        window.<span class="me1">setTimeout</span><span class="br0">&#40;</span><span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> fader.<span class="me1">fade</span><span class="br0">&#40;</span>step<span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+        <span class="kw1">this</span>.<span class="me1">fading</span> <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+        window.<span class="me1">setTimeout</span><span class="br0">&#40;</span><span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> fader.<span class="me1">next</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span><span class="sy0">,</span> <span class="kw1">this</span>.<span class="me1">viewTime</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p><code>fade</code> führt wie bereits in den vorhergehenden Fader-Versionen einen Animationsschritt beim Überblenden aus. Dazu nimmt die Methode einen Parameter entgegen, der den aktuellen Prozentwert im Überblendungsvorgang darstellt. Wird kein Wert übergeben, interpretiert <code>fade</code> das als <code>0.0</code>.
+</p><p>Unabhängig davon, warum <code>fade</code> aufgerufen wurde, setzt die Methode sofort die Eigenschaft <code>fading</code> auf <code>true</code>, da <code>fade</code> ja nur aufgerufen worden sein konnte, um eine Animation einen Schritt weiter zu führen, eventuell sogar von Anfang an. Aus diesem Grund sollen keine Weiterschaltungen in der Playlist möglich sein, damit die gegenwärtige Animation nicht gestört wird.
+</p><p>Wie schon in den Vorgängerversionen verändert <code>fade</code> den <code>opacity</code>-Wert des zweiten Bild-Elements im Fader-Element für den Überblendungsvorgang, um die Deckkraft schrittweise zu erhöhen.
+</p><p>Um das richtige Bildelement als neues Bild ins Fader-Element einzuhängen, wird mit Hilfe des <code>counter</code> in der <code>playList</code> das anzuzeigende Bild-Element adressiert.
+</p><p>Wenn der Überblendungsvorgang abgeschlossen ist, also die volle Deckkraft erreicht wurde, wird im zweiten Bild der Klassenname "next" durch einen Leerstring ersetzt, um die Zugehörigkeit zu dieser Klasse aufzuheben. Das Bild muss nun nicht mehr absolut positioniert werden, da es das einzige Bild-Element werden wird. Das erste Bild wird entfernt, da es nun nicht mehr angezeigt wird. Danach setzt <code>fade</code> den Wert in <code>fading</code> wieder zurück auf <code>false</code> und ruft über einen Timeout die Methode <code>next</code> auf. Für die Dauer dieser Pause wird Wert in der Eigenschaft <code>viewTime</code> benutzt, der als zweiter Parameter an <code>window.setTimeout</code> übergeben wird.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Da einige Werte in diesem Fader-Script nicht mehr fest im Script-Code eingetragen werden, sondern über "Variablen" (genauer Eigenschaften des Objekts) festgelegt werden, kann in jedem Fader z.B. eine individuelle Betrachtungszeit für ein Bild eingestellt werden.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Voreinstellungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Voreinstellungen"> Voreinstellungen </span></h2>
+<p>Um das FaderFramework so komfortabel wie möglich zu gestalten, müssen natürlich alle Parameter mit Voreinstellungen versehen werden, falls im <code>init</code>-Aufruf nicht alle explizit aufgeführt und mit einem Wert versehen werden. Um nun aber einen bequemen Zugriff auf die Voreinstellungen zu ermöglichen, sollten diese nicht im Konstruktor, sondern im FaderFramework selbst stehen. Der Konstruktor muss dann jeweils die Werte für die Voreinstellungen aus diesem Objekt beziehen.
+</p><p>Das bedeutet, dass der Anfang des Codes von sowohl dem Konstruktor, als auch dem Framework-Objekt modifiziert werden muss. Bis auf die "lebenswichtigen" Angaben zu <code>id</code> und <code>images</code> können Voreinstellungen definiert werden, zu den beiden genannten Parametern hingegen selbstverständlich nicht. Damit sieht der Code des Framework-Objektes am Anfang so aus:
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Voreinstellungen in FaderFramework.js">Bearbeiten</a>]</span> <span class="mw-headline" id="Voreinstellungen_in_FaderFramework.js"> Voreinstellungen in <i>FaderFramework.js</i> </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Voreinstellungen
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> FaderFramework <span class="sy0">=</span> <span class="br0">&#123;</span>
+&#160;
+    <span class="co1">// Einstellungen</span>
+    className<span class="sy0">:</span> <span class="st0">&quot;fader&quot;</span><span class="sy0">,</span>
+&#160;
+    <span class="co1">// Voreinstellungen für einen Fader</span>
+    viewTime<span class="sy0">:</span> <span class="nu0">5000</span><span class="sy0">,</span>
+    fadeStep<span class="sy0">:</span> <span class="nu0">0.5</span><span class="sy0">,</span>
+    random<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+    autostart<span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span>
+&#160;
+    <span class="co1">// automatische Einstellungen</span>
+    baseURL<span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+    oldWinOnLoad<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+    inits<span class="sy0">:</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    faders<span class="sy0">:</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+&#160;
+&#160;
+    start<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        ...
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    ...
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p>Die Einstellung <code>className</code> bezeichnet die Klasse, die das <code>&lt;span&gt;</code>-Element verliehen bekommt, welches die Slideshow für einen Fader enthält. Diese Einstellung korrespondiert mit den CSS-Regeln in der zugehörigen CSS-Datei.
+</p><p>Die folgenden Parameter können in einem <code>init</code>-Aufruf explizit für jeden Fader individuell eingestellt werden. Was sie im Einzelnen bewirken, wurde bereits <a href="#neue_eigenschaften">behandelt</a>.
+</p><p>Die darauffolgenden Parameter richtet das Framework automatisch ein. Sie haben für den einzelnen Fader zunächst keine Bedeutung.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Voreinstellungen im Konstruktor">Bearbeiten</a>]</span> <span class="mw-headline" id="Voreinstellungen_im_Konstruktor"> Voreinstellungen im Konstruktor </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Voreinstellungen im Konstruktor
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">Fader<span class="sy0">:</span> <span class="kw1">function</span> <span class="br0">&#40;</span>einstellungen<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>einstellungen.<span class="me1">id</span>
+        <span class="sy0">||</span> <span class="sy0">!</span>document.<span class="me1">getElementById</span><span class="br0">&#40;</span>einstellungen.<span class="me1">id</span><span class="br0">&#41;</span>
+        <span class="sy0">||</span> FaderFramework.<span class="me1">faders</span><span class="br0">&#91;</span>einstellungen.<span class="me1">id</span><span class="br0">&#93;</span>
+        <span class="sy0">||</span> einstellungen.<span class="me1">images</span>.<span class="me1">length</span> <span class="sy0">&lt;</span> <span class="nu0">2</span>
+    <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+        <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">id</span> <span class="sy0">=</span> einstellungen.<span class="me1">id</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">images</span> <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">random</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw1">typeof</span><span class="br0">&#40;</span>einstellungen.<span class="me1">random</span><span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="st0">&quot;undefined&quot;</span><span class="br0">&#41;</span> <span class="sy0">?</span>
+        einstellungen.<span class="me1">random</span> <span class="sy0">:</span>
+        FaderFramework.<span class="me1">random</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">autostart</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw1">typeof</span><span class="br0">&#40;</span>einstellungen.<span class="me1">autostart</span><span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="st0">&quot;undefined&quot;</span><span class="br0">&#41;</span> <span class="sy0">?</span>
+        einstellungen.<span class="me1">autostart</span> <span class="sy0">:</span>
+        FaderFramework.<span class="me1">autostart</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">viewTime</span> <span class="sy0">=</span> einstellungen.<span class="me1">viewTime</span> <span class="sy0">||</span> FaderFramework.<span class="me1">viewTime</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">fadeStep</span> <span class="sy0">=</span> einstellungen.<span class="me1">fadeStep</span> <span class="sy0">||</span> FaderFramework.<span class="me1">fadeStep</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">stopped</span> <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">this</span>.<span class="me1">playList</span> <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">counter</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&#160;
+    ...
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>Die einzelnen Parameter werden mit <code>this.&lt;Parameter&gt;</code> wie in einer simplen Variablendeklaration zugewiesen. Zu jedem in <code>FaderFramework</code> voreingestellten Parameter wird überprüft, ob im übermittelten Einstellungen-Objekt ein Wert eingetragen ist, oder ob der in <code>FaderFramework</code> voreingestellte Wert genommen werden soll. Dabei wird immer wieder "FaderFramework" ausnotiert, da ja das Schlüsselwort <code>this</code> nicht auf das Framework-Objekt, sondern auf das neu zu erstellende Fader-Objekt verweist.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Manche Einstellungen enthalten Boolesche Werte (also entweder <code>true</code> oder <code>false</code>). Wenn nun der voreingestellte Wert <code>false</code> ist, dann könnte man einfach auf <code>if (einstellungen.&lt;Parameter&gt;)</code> prüfen, da ja eine Abweichung von der Voreinstellung immer <code>true</code> sein muss, welche in die <code>if</code>-Verzweigung führt und für den Parameter den Wert <code>true</code> einträgt. Ist dagegen überhaupt keine Angabe gemacht worden, oder soll <code>false</code> eingetragen werden, so entspricht das der Voreinstellung. Dieses Vorgehen versagt aber in dem Moment, wo die Voreinstellung <code>true</code> lautet. Daher muss man solche Default-Werte anders abfragen.</div>
+<p>Die eben vorgestellte Prüfung führt bei <code>true</code> als Defaultwert in die Irre! Wenn für einen Parameter explizit <code>false</code> eingetragen werden soll, dann ergibt <code>if (einstellungen.&lt;Parameter&gt;)</code> eben <code>false</code>, was aber dazu führt, dass eben nicht in die <code>if</code>-Verzweigung gegangen wird, sondern dass der voreingestellte Wert genommen wird, welcher entgegen der Absicht <code>true</code> lautet! Daher muss bei Booleschen Defaultwerten immer explizit auf das Vorhandensein der entsprechenden Eigenschaft geprüft werden, und das geht mit dem <code>typeof</code>-Operator. Die Prüfung muss korrekterweise lauten: <code>if (typeof(einstellungen.&lt;Parameter&gt;)&#160;!= "undefined")</code>! Bei den Parametern <code>autostart</code> und <code>random</code> kann man das sehen.
+</p><p>Bei Voreinstellungen mit anderen Werten schreibt man: <code>this.&lt;Parameter&gt; = einstellungen.&lt;Parameter&gt; || FaderFramework.&lt;Parameter&gt;;</code>. Das mag verwirrend aussehen, ist aber eine simple Oder-Verknüpfung. Bei einer Oder-Verknüpfung ist das Ergebnis entweder der erste Vergleichswert (wenn er nicht als <code>false</code> interpretiert werden muss), oder eben der zweite Vergleichswert, oder eben <code>false</code>. Daher führt die eben genannte Schreibweise zu entweder dem übermittelten Parameter, oder (wenn er fehlt ist das wie <code>false</code>) der Voreinstellung.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Der fertige Komfort-Fader">Bearbeiten</a>]</span> <span class="mw-headline" id="Der_fertige_Komfort-Fader"> Der fertige Komfort-Fader </span></h2>
+<p>Alle Code-Beispiele zusammengenommen ergeben dieses Script: <a rel="nofollow" class="external text" href="http://aktuell.de.selfhtml.org/artikel/javascript/fader-framework/fader-framework/fader-framework.js"><i>fader-framework.js</i></a> (10 KB), welches auch für die <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework#Demonstration:" title="JavaScript/Tutorials/Fader-Framework">Demonstration</a> am Anfang dieses Artikels benutzt wurde. Auf der folgenden Beispielseite können an einem solchen Komfort-Fader diverse Methoden ausprobiert, und diverse Parameter live verändert werden.
+</p><p><br />
+</p>
+<ul><li><a rel="nofollow" class="external free" href="http://aktuell.de.selfhtml.org/artikel/javascript/komfort-demo.htm‏‎">http://aktuell.de.selfhtml.org/artikel/javascript/komfort-demo.htm‏‎</a>
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: So sieht's aus
+</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Einsatzbeispiel in einer Galerie">Bearbeiten</a>]</span> <span class="mw-headline" id="Einsatzbeispiel_in_einer_Galerie"> Einsatzbeispiel in einer Galerie </span></h2>
+<p>Das folgende Beispiel zeigt, wie eine Bildergalerie in eine Slideshow verwandelt werden könnte. Je nach Dokumentstruktur ist ein anderes JavaScript nötig, um den Umbau vorzunehmen. Den Rest erledigt das Fader-Framework.
+</p>
+<ul><li><a rel="nofollow" class="external free" href="http://aktuell.de.selfhtml.org/artikel/javascript/galerie-beispiel.htm">http://aktuell.de.selfhtml.org/artikel/javascript/galerie-beispiel.htm</a>
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: So sieht's aus
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc0">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;</span>
+<span class="sc0">    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span> xmlns<span class="sy0">=</span><span class="st0">&quot;http://www.w3.org/1999/xhtml&quot;</span> xml:<span class="kw3">lang</span><span class="sy0">=</span><span class="st0">&quot;de&quot;</span> <span class="kw3">lang</span><span class="sy0">=</span><span class="st0">&quot;de&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Komfort-Fader in einer Bildergalerie<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;fader-framework/fader-framework.js&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>//<span class="sc-2">&lt;![CDATA[</span>
+<span class="sc-2">            // Slideshow einrichten</span>
+<span class="sc-2">            function slideShow () {</span>
+<span class="sc-2">                var galerie, i, images, img, p, test;</span>
+&#160;
+<span class="sc-2">                test = document.getElementsByTagName(&quot;*&quot;);</span>
+<span class="sc-2">                for (i = 0; i &lt; test.length; i++) {</span>
+<span class="sc-2">                    if (test[i] &amp;&amp; test[i].className &amp;&amp; test[i].className == &quot;bildergalerie&quot;) {</span>
+<span class="sc-2">                        galerie = test[i];</span>
+<span class="sc-2">                    }</span>
+<span class="sc-2">                }</span>
+&#160;
+<span class="sc-2">                images = new Array();</span>
+<span class="sc-2">                test = galerie.getElementsByTagName(&quot;a&quot;);</span>
+<span class="sc-2">                for (j = 0; j &lt; test.length; j++) {</span>
+<span class="sc-2">                    images[images.length] = test[j].href;</span>
+<span class="sc-2">                }</span>
+&#160;
+<span class="sc-2">                p = document.createElement(&quot;p&quot;);</span>
+<span class="sc-2">                img = document.createElement(&quot;img&quot;);</span>
+<span class="sc-2">                img.src = images[0];</span>
+<span class="sc-2">                img.alt = &quot;Bild&quot;;</span>
+<span class="sc-2">                img.id = &quot;meineSlideshow&quot;;</span>
+<span class="sc-2">                p.appendChild(img);</span>
+<span class="sc-2">                galerie.parentNode.replaceChild(p, galerie);</span>
+&#160;
+<span class="sc-2">                FaderFramework.init({ id: img.id, images: images, fadeStep: 2, viewTime: 1000 });</span>
+<span class="sc-2">            }</span>
+<span class="sc-2">       //]]&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">style</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span>&gt;</span>
+           .bildergalerie { margin: 0; padding: 0; list-style: none; }
+           .bildergalerie li { display: inline; margin: 0; padding: 10px; }
+       <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">style</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Komfort-Fader in einer Bildergalerie<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">ul</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;bildergalerie&quot;</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;images/berge1.jpg&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/tn_berge1.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;In den Bergen&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;images/berge2.jpg&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/tn_berge2.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;In den Bergen&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;images/berge3.jpg&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/tn_berge3.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;In den Bergen&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;images/berge4.jpg&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/tn_berge4.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;In den Bergen&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;images/berge5.jpg&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/tn_berge5.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;In den Bergen&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;images/berge6.jpg&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/tn_berge6.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;In den Bergen&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span> <span class="kw3">onclick</span><span class="sy0">=</span><span class="st0">&quot;slideShow(); this.onclick = function () { return false; }; return false;&quot;</span>&gt;</span>Slideshow<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></div></div></div>
+</div>
+<p>Durch Anklicken des Links "Slideshow" wird über den <code>onclick</code>-Attribut notierten Funktionsaufruf die Funktion <code>slideshow</code> gestartet. Diese Funktion ermittelt alle HTML-Elemente des Dokuments, indem sie in <code>getElementsByTagName</code> als Parameter den Stern übermittelt, der wie ein Joker zu verstehen ist. Danach prüft sie in einer <code>for</code>-Schleife jedes ermittelte Element, ob es zur Klasse "bildergalerie" gehört. Wenn ja, wird es in der Variablen <code>galerie</code> abgelegt.
+</p><p>Anschließend werden alle <code>&lt;a&gt;</code>-Elemente ermittelt und ihre Verweisziele in der Array-Variablen <code>images</code> gespeichert.
+</p><p>Die originale Bildergalerie wird durch einen Textabsatz ersetzt, in den das erste Bild als Startbild eingefügt wird. Es erhält in diesem Beispiel die ID "meineSlideshow", über die es später im Fader referenziert wird.
+</p><p>Zuletzt wird <code>FaderFramework.init</code> aufgerufen, der ein Objekt übergeben wird, das unter anderem die ID des Startbildes, und eine Liste aller Slideshow-Bilder enthält. Den Rest übernimmt dann das Fader-Script.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Das obige Beispiel ist auf die Dokumentstruktur der Beispielseite zugeschnitten. Eventuell muss in anderen Bildergalerien anders vorgegangen werden, um eine Galerie durch eine Slideshow zu ersetzen. Außerdem wird im obigen Code nicht überprüft, ob eine Galerie auch erfolgreich gefunden wurde. An der Stelle, an der mit <code>test</code> die Nachfahrenelemente (Vollbild-Links) von <code>galerie</code> ermittelt werden sollen, könnte ja sein, dass zuvor kein Element mit passender Klasse gefunden worden war. Hier würde dann der Browser das Script mit einer Fehlermeldung beenden.</div>
+<p>Im obigen Beispiel wird außerdem die Variablen <code>galerie</code> bei mehreren gefundenen Elementen einfach mit dem zuletzt gefundenen überschrieben. Hier könnte man das Script dahingehend erweitern, dass <code>galerie</code> als Array angelegt wird, durch welches dann mit den folgenden Aktionen hindurch iteriert werden könnte. Für das vorliegende Beispiel war dies jedoch nicht erforderlich.
+</p>
+<div class="note-box note-box-continuation">
+<table class="note-box-text">
+<tr>
+<td><a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Projekt_Fader-Framework" title="JavaScript/Tutorials/Fader-Framework/Projekt Fader-Framework">← Projekt: Fader-Framework</a>
+</td>
+<td>
+</td>
+<td>
+</td></tr></table>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 540/1000000
+Post‐expand include size: 9251/2097152 bytes
+Template argument size: 4789/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1116-0!*!0!!de-formal!*!* and timestamp 20150301083727 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;oldid=21086">http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;oldid=21086</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:JavaScript" title="Kategorie:JavaScript">JavaScript</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Artikel%3AJavaScript%2FFader-Framework%2FKomfort-Fader" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Komfort-Fader"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Fader-Framework/Komfort-Fader" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/JavaScript/Tutorials/Fader-Framework/Komfort-Fader" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/JavaScript/Tutorials/Fader-Framework/Komfort-Fader" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Tutorials/Fader-Framework/Komfort-Fader&amp;oldid=21086" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/JavaScript-2FTutorials-2FFader-2DFramework-2FKomfort-2DFader" title="Spezial:Durchsuchen/JavaScript-2FTutorials-2FFader-2DFramework-2FKomfort-2DFader">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 2. September 2014 um 07:18 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.866-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.090 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Artikel:JavaScript/Fader-Framework/Komfort-Fader by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:54 GMT -->
+</html>

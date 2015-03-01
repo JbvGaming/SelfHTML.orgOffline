@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Konzepte by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Konzepte – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Konzepte","wgTitle":"JavaScript/Konzepte","wgCurRevisionId":25985,"wgArticleId":1254,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Konzepte","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-html5 {line-height: normal;}
+.source-html5 li, .source-html5 pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html5
+ * CSS class: source-html5, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html5.source-html5 .de1, .html5.source-html5 .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html5.source-html5  {font-family:monospace;}
+.html5.source-html5 .imp {font-weight: bold; color: red;}
+.html5.source-html5 li, .html5.source-html5 .li1 {font-weight: normal; vertical-align:top;}
+.html5.source-html5 .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html5.source-html5 .li2 {font-weight: bold; vertical-align:top;}
+.html5.source-html5 .kw2 {color: #000000; font-weight: bold;}
+.html5.source-html5 .kw3 {color: #000066;}
+.html5.source-html5 .es0 {color: #000099; font-weight: bold;}
+.html5.source-html5 .br0 {color: #66cc66;}
+.html5.source-html5 .sy0 {color: #66cc66;}
+.html5.source-html5 .st0 {color: #ff0000;}
+.html5.source-html5 .nu0 {color: #cc66cc;}
+.html5.source-html5 .sc-2 {color: #404040;}
+.html5.source-html5 .sc-1 {color: #808080; font-style: italic;}
+.html5.source-html5 .sc0 {color: #00bbdd;}
+.html5.source-html5 .sc1 {color: #ddbb00;}
+.html5.source-html5 .sc2 {color: #009900;}
+.html5.source-html5 .ln-xtra, .html5.source-html5 li.ln-xtra, .html5.source-html5 div.ln-xtra {background-color: #ffc;}
+.html5.source-html5 span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Konzepte" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Konzepte&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Konzepte skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Konzepte</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../JavaScript.html" title="JavaScript">JavaScript</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p><b>Objekte</b> sind fest umgrenzte Datenelemente mit <b>Eigenschaften</b> und oft auch mit objektgebundenen Funktionen (<b>Methoden</b>).
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Vordefinierte_JavaScript-Objekte"><span class="tocnumber">1</span> <span class="toctext">Vordefinierte JavaScript-Objekte</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Vordefinierte_JavaScript-Objekte_verwenden"><span class="tocnumber">2</span> <span class="toctext">Vordefinierte JavaScript-Objekte verwenden</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Eigene_Objekte_definieren"><span class="tocnumber">3</span> <span class="toctext">Eigene Objekte definieren</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Eigenschaften_von_Objekten"><span class="tocnumber">4</span> <span class="toctext">Eigenschaften von Objekten</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Objektmethoden"><span class="tocnumber">5</span> <span class="toctext">Objektmethoden</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Abfragen_ob_ein_Objekt_existiert"><span class="tocnumber">6</span> <span class="toctext">Abfragen ob ein Objekt existiert</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Mehrere_Anweisungen_mit_einem_Objekt_ausf.C3.BChren_.28with.29"><span class="tocnumber">7</span> <span class="toctext">Mehrere Anweisungen mit einem Objekt ausführen (with)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Auf_aktuelles_Objekt_Bezug_nehmen_.28this.29"><span class="tocnumber">8</span> <span class="toctext">Auf aktuelles Objekt Bezug nehmen (this)</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Vordefinierte JavaScript-Objekte">Bearbeiten</a>]</span> <span class="mw-headline" id="Vordefinierte_JavaScript-Objekte"> Vordefinierte JavaScript-Objekte </span></h2>
+<p>Dass JavaScript eine Erweiterung von HTML darstellt, liegt vor allem an den <b>vordefinierten Objekten</b>, die Ihnen in JavaScript zur Verfügung stehen. Über diese vordefinierten Objekte können Sie beispielsweise einzelne Elemente eines HTML-Formulars abfragen oder ändern.
+</p><p>Ein Objekt kann eine Teilmenge eines übergeordneten Objekts sein. Die JavaScript-Objekte sind deshalb in einer Hierarchie geordnet. Das hierarchiehöchste Objekt ist in JavaScript das Fensterobjekt (<code>window</code>). Fenster haben Eigenschaften wie einen Namen, eine Größe usw. Der Inhalt eines Fensters ist das nächstniedrigere Objekt, nämlich das im Fenster angezeigte Dokument (in JavaScript das Objekt <code>document</code>). In der Regel ist der Fensterinhalt eine HTML-Datei. Eine solche Datei kann bestimmte durch HTML-Tags definierte Elemente enthalten, wie zum Beispiel Formulare, Verweise, Grafikreferenzen usw. Für solche untergeordneten Elemente gibt es wieder eigene JavaScript-
+Objekte, zum Beispiel das Objekt <code>forms</code> für Formulare. Ein Formular besteht seinerseits aus verschiedenen Elementen, zum Beispiel aus Eingabefeldern, Auswahllisten oder Buttons zum Absenden bzw. Abbrechen. In JavaScript gibt es dafür ein Objekt <code>elements</code>, mit dem Sie einzelne Felder und andere Elemente innerhalb eines Formulars ansprechen können.
+</p><p>Neben den hierarchisch geordneten JavaScript-Objekten gibt es auch solche, die nicht direkt in die Hierarchie passen. Das sind zum Beispiel Objekte für Datums- und Zeitrechnung, für mathematische Aufgaben oder für Zeichenkettenverarbeitung.
+</p><p>Eine Übersicht der vordefinierten JavaScript-Objekte finden Sie unter <a href="Objekte.html" title="JavaScript/Objekte">JavaScript/Objekte</a>. Dort werden zu jedem Objekt die verfügbaren  <a href="#Eigenschaften_von_Objekten">Eigenschaften</a> und  <a href="#Objektmethoden">Methoden</a> vorgestellt.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Vordefinierte JavaScript-Objekte verwenden">Bearbeiten</a>]</span> <span class="mw-headline" id="Vordefinierte_JavaScript-Objekte_verwenden"> Vordefinierte JavaScript-Objekte verwenden </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_1"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.1"><img alt="JavaScript 1.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="../Datei_Iconset.html" class="image" title="Android"><img alt="Android" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p><b>JavaScript-Objekte</b> können Sie jederzeit <b>verwenden</b>.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Konzepte1.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html5 source-html5"><pre class="de1">  var Jetzt = new Date();
+  var Tag = Jetzt.getDate();
+  var Monat = Jetzt.getMonth() + 1;
+  var Jahr = Jetzt.getYear();
+  var Stunden = Jetzt.getHours();
+  var Minuten = Jetzt.getMinutes();
+  var NachVoll = ((Minuten <span class="sc2">&lt; <span class="nu0">10</span><span class="br0">&#41;</span>&#160;? <span class="st0">&quot;:0&quot;</span>&#160;: <span class="st0">&quot;:&quot;</span><span class="br0">&#41;</span>;</span>
+&#160;
+<span class="sc2">  if <span class="br0">&#40;</span>Jahr &lt; <span class="nu0">2000</span><span class="br0">&#41;</span> <span class="br0">&#123;</span></span>
+<span class="sc2">    Jahr <span class="sy0">=</span> Jahr + <span class="nu0">1900</span>;</span>
+<span class="sc2">  <span class="br0">&#125;</span></span>
+<span class="sc2">  var zeit <span class="sy0">=</span> <span class="st0">'Heute ist der '</span> + Tag + <span class="st0">'.'</span> + Monat + <span class="st0">'.'</span> + Jahr + <span class="st0">'. Es ist jetzt '</span> + Stunden + NachVoll + Minuten + <span class="st0">' Uhr'</span>;</span>
+<span class="sc2">  var ausgabe <span class="sy0">=</span> document.getElementById<span class="br0">&#40;</span><span class="st0">'ausgabe'</span><span class="br0">&#41;</span>; </span>
+<span class="sc2">  ausgabe.innerHTML <span class="sy0">=</span> zeit;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Konzepte1.html">ansehen …</a></div></div>
+<p>Im Beispiel wird innerhalb eines  <a href="Einf%c3%bchrung.html#JavaScript-Bereiche_in_HTML_definieren" title="JavaScript/Einführung">JavaScript-Bereichs</a> mit Hilfe des vordefinierten JavaScript-Objekts <code>Date</code> das aktuelle Datum und die aktuelle Uhrzeit ermittelt und HTML-formatiert ausgegeben.
+</p><p>Zuerst muss dazu eine neue  <a href="Variable.html" title="JavaScript/Variable">Variable</a> angelegt werden. Im Beispiel ist das die Variable <code>Jetzt</code>. Diese Variable soll auf Daten des <code>Date</code>-Objekts zugreifen können. Dies geschieht durch ein Ist-Gleich-Zeichen hinter dem Variablennamen. Dahinter folgt das  <a href="Reservierte_W%c3%b6rter.html" title="JavaScript/Reservierte Wörter">reservierte Wort</a> <code>new</code>, und dahinter, durch ein Leerzeichen getrennt, der Aufruf von <code>Date()</code> zum Erzeugen einer neuen Instanz des Objekts <code>Date</code>.
+</p><p>Um die einzelnen Daten der Objektinstanz von <code>Date</code>, also Tag, Monat, Jahr usw. anzusprechen, stehen entsprechende  <a href="#Objektmethoden">Methoden</a> zur Verfügung. Diese Methoden, z.B. <code>getDate()</code> oder <code>getHours()</code>, haben als Rückgabewert jeweils einen Datums-/Uhrzeit-Bestandteil. So liefert <code>getDate()</code> beispielsweise den aktuellen Tag des Monats und <code>getHours()</code> die aktuelle Stundenzahl des Tages. Im Beispiel wird für jeden der benötigten Bestandteile eine Variable definiert. In der Variablen <code>Tag</code> wird beispielsweise durch Aufruf von <code>Jetzt.getDate()</code> der aktuelle Tag des Monats gespeichert.
+</p><p>Die Anweisung im Beispiel, die mit <code>NachVoll ...</code> beginnt, kann an dieser Stelle nicht näher erläutert werden. Die Anweisung ist eine Vorbereitung zur sauberen Formatierung der Uhrzeit.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die einzelnen Methoden des im Beispiel verwendeten Objekts <code>Date</code>, wie zum Beispiel <code>getDate()</code>, werden bei der Referenz des Objekts  <a href="Objekte/Date.html" title="JavaScript/Objekte/Date"><code>Date</code></a> beschrieben.</div>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Eigene Objekte definieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Eigene_Objekte_definieren"> Eigene Objekte definieren </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_1"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.1"><img alt="JavaScript 1.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="../Datei_Iconset.html" class="image" title="Android"><img alt="Android" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Sie können eigene Objekte definieren, wenn Sie streng objektorientiert in JavaScript programmieren wollen.
+</p><p>Um ein eigenes Objekt anzulegen, sind zwei Schritte nötig. Zuerst müssen Sie das Objekt selbst und seine Eigenschaften "deklarieren". Im zweiten Schritt können Sie anschließend eine Instanz dieses Objekts definieren. Mit dieser Objektinstanz können Sie dann Programmprozeduren durchführen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Konzepte2.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">var</span> elem <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">&quot;button&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  elem.<span class="me1">addEventListener</span><span class="br0">&#40;</span><span class="st0">&quot;click&quot;</span><span class="sy0">,</span> HintergrundWechseln<span class="br0">&#41;</span><span class="sy0">;</span>	
+&#160;
+  <span class="kw1">function</span> Farbe <span class="br0">&#40;</span>R<span class="sy0">,</span> G<span class="sy0">,</span> B<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">this</span>.<span class="me1">R</span> <span class="sy0">=</span> R<span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">G</span> <span class="sy0">=</span> G<span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">B</span> <span class="sy0">=</span> B<span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me1">hex</span> <span class="sy0">=</span> <span class="st0">&quot;#&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+&#160;
+  <span class="kw1">function</span> HintergrundWechseln <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">var</span> Hintergrund <span class="sy0">=</span> <span class="kw1">new</span> Farbe<span class="br0">&#40;</span><span class="st0">&quot;E0&quot;</span><span class="sy0">,</span> <span class="st0">&quot;FF&quot;</span><span class="sy0">,</span> <span class="st0">&quot;E0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    document.<span class="me1">body</span>.<span class="me1">style</span>.<span class="me1">backgroundColor</span> <span class="sy0">=</span> Hintergrund.<span class="me1">hex</span> <span class="sy0">+</span> Hintergrund.<span class="me1">R</span> <span class="sy0">+</span> Hintergrund.<span class="me1">G</span> <span class="sy0">+</span> Hintergrund.<span class="me1">B</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Konzepte2.html">ansehen …</a></div></div>
+<p>Um ein neues Objekt und seine Eigenschaften anzulegen, müssen Sie innerhalb eines  <a href="Einf%c3%bchrung.html#JavaScript-Bereiche_in_HTML_definieren" title="JavaScript/Einführung">JavaScript-Bereichs</a> oder innerhalb einer  <a href="Einf%c3%bchrung.html#JavaScript_in_separaten_Dateien" title="JavaScript/Einführung">separaten JavaScript-Datei</a> eine eigene  <a href="Funktionen.html" title="JavaScript/Funktionen">Funktion</a> definieren, die so aussehen kann wie im Beispiel die Funktion <code>Farbe(...)</code>. Der Name, den Sie der Funktion geben (im Beispiel der Name Farbe) ist zugleich der Name des Objekts, das Sie mit dieser Funktion anlegen. Als Parameter, die die Funktion erwartet, notieren Sie die Eigenschaften, die Ihr Objekt haben soll. Die Parameternamen sind zugleich die Namen der Objekteigenschaften. Im Beispiel sind das die Eigenschaften <code>R</code>, <code>G</code> und <code>B</code>, denn es soll ein Objekt angelegt werden, das Rot-, Grün- und Blauwert einer Farbe speichern kann. <code>R</code>, <code>G</code> und <code>B</code> sind dabei übrigens  <a href="Regeln.html#Selbstvergebene_Namen" title="JavaScript/Regeln">selbstvergebene Namen</a>! Innerhalb der Funktion notieren Sie alle Anweisungen so wie im Beispiel gezeigt: für jede Eigenschaft, die bei den Funktionsparametern festgelegt wurde, notieren Sie eine Anweisung, beginnend mit dem  <a href="Reservierte_W%c3%b6rter.html" title="JavaScript/Reservierte Wörter">reservierte JavaScript Wort</a> <code>this</code>, gefolgt von einem Punkt und dem Parameternamen. Dahinter notieren Sie ein Gleichheitszeichen, und hinter dem Gleichheitszeichen nochmals den Parameternamen. Am Ende jeder Anweisung muss ein Strichpunkt stehen.<br />
+Natürlich können Sie für jedes Objekt auch feste (nicht durch Parameter beeinflusste) Eigenschaften definieren. Im Beispiel ist die Eigenschaft <code>hex</code> eine feste Eigenschaft, die für jede Instanz des Objektes existiert. Notieren Sie dazu hinter dem Eigenschaftsnamen den jeweiligen Wert der Eigenschaft.
+</p><p>Nachdem das Objekt angelegt ist, können Sie an anderen Stellen innerhalb Ihres JavaScripts Instanzen dieses Objekt definieren. Dies geschieht mit Hilfe einer  <a href="Variable.html" title="JavaScript/Variable">Variablen</a> und dem reservierten JavaScript Wort <code>new</code>. Im Beispiel wird eine zweite Funktion <code>HintergrundWechseln()</code> definiert. Darin wird zunächst eine Variable <code>Hintergrund</code> angelegt. Diese Variable soll Daten des angelegten Objekts <code>Farbe</code> enthalten. Dies geschieht durch ein Gleichheitszeichen hinter dem Variablennamen. Dahinter folgt das Wort <code>new</code> und dahinter, durch ein Leerzeichen getrennt, der Name der Funktion, mit der das gleichnamige Objekt angelegt wurde, im Beispiel <code>Farbe</code>. Als Parameter werden dieser Funktion irgendwelche brauchbaren Werte übergeben, im Beispiel "<code>33</code>", "<code>99</code>" und "<code>C0</code>" (typische hexadezimale Farbwerte, wie sie in HTML zum Einsatz kommen).
+</p><p>Anschließend ist die Variable Hintergrund an das Farbobjekt gebunden, und über sie lassen sich die Eigenschaften des Objekts setzen oder abfragen. Im Beispiel steht die Anweisung:<br />
+<code>document.body.style.backgroundColor = Hintergrund.hex + Hintergrund.R + Hintergrund.G + Hintergrund.B;</code><br />
+Damit wird die Hintergrundfarbe der aktuell angezeigten Seite verändert. Normalerweise könnte man <code>document.body.style.backgroundColor</code> so etwas zuweisen wie <code>"#C0C0EE"</code>. Auch im Beispiel wird ein Farbwert dieser Art zugewiesen, jedoch zusammengesetzt aus den Einzeleigenschaften des Farbobjekts, das in der Instanz <code>Hintergrund</code> gespeichert ist. Die Funktion <code>HintergrundWechseln()</code> wird aufgerufen, wenn der Anwender auf den Verweis klickt, der in der HTML-Datei enthalten ist.
+</p><p><br />
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Eigenschaften von Objekten">Bearbeiten</a>]</span> <span class="mw-headline" id="Eigenschaften_von_Objekten"> Eigenschaften von Objekten </span></h2>
+<p>Objekte können Eigenschaften haben. Ein selbst definiertes Objekt "Mensch" könnte zum Beispiel die Eigenschaften Name, Alter, Geschlecht und Muttersprache haben. Vordefinierte JavaScript-Objekte haben ebenfalls Eigenschaften. So hat das Objekt  <a href="Objekte/Math.html" title="JavaScript/Objekte/Math">Math</a> zum Beispiel eine Eigenschaft "PI" (<code>Math.PI</code>). Auf diese Weise lässt sich mit der mathematischen Konstante PI rechnen, ohne deren genauen Wert zu kennen.
+</p><p>Eigenschaften von Objekten können Sie innerhalb Ihres JavaScript-Codes jederzeit auslesen, und in vielen Fällen können Sie die Werte von Eigenschaften auch ändern. So können Sie beispielsweise dem im Browser-Fenster angezeigten Dokument einen neuen, gültigen  <a href="../HTML/Referenzieren_in_HTML.html" title="HTML/Referenzieren in HTML"> URI</a> zuweisen. Dadurch erreichen Sie, dass der WWW-Browser einen Sprung zu der zugewiesenen Adresse so ausführt, als ob der Anwender auf einen entsprechenden Verweis klicken würde.
+</p>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_1"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.1"><img alt="JavaScript 1.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="../Datei_Iconset.html" class="image" title="Android"><img alt="Android" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-navigator-appName.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">var</span> elem <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'button'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  elem.<span class="me1">addEventListener</span><span class="br0">&#40;</span><span class="st0">'click'</span><span class="sy0">,</span> browserCheck<span class="br0">&#41;</span><span class="sy0">;</span>	
+&#160;
+  <span class="kw1">function</span> browserCheck<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">var</span> BrowserName <span class="sy0">=</span> navigator.<span class="me1">appName</span><span class="sy0">;</span>
+    <span class="kw1">var</span> BrowserVersion <span class="sy0">=</span> navigator.<span class="me1">appVersion</span><span class="sy0">;</span>
+&#160;
+    text <span class="sy0">=</span> <span class="st0">'Ah ja, Sie verwenden also den &lt;span&gt;'</span> <span class="sy0">+</span> BrowserName <span class="sy0">+</span> <span class="st0">'&lt;<span class="es0">\/</span>span&gt;, und zwar in der Version &lt;span&gt;'</span> <span class="sy0">+</span> BrowserVersion <span class="sy0">+</span> <span class="st0">'&lt;<span class="es0">\/</span>span&gt;'</span><span class="sy0">;</span>
+    <span class="kw1">var</span> ausgabe <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'ausgabe'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    ausgabe.<span class="me1">innerHTML</span> <span class="sy0">=</span> text<span class="sy0">;</span>
+  <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-navigator-appName.html">ansehen …</a></div></div>
+<p>Im Beispiel werden innerhalb eines  <a href="Einf%c3%bchrung.html#JavaScript-Bereiche_in_HTML_definieren" title="JavaScript/Einführung">JavaScript-Bereichs</a> zwei Eigenschaften des vordefinierten JavaScript-Objekts  <a href="Objekte/Navigator.html" title="JavaScript/Objekte/Navigator" class="mw-redirect"><code>navigator</code></a> in zwei entsprechenden Variablen namens <code>BrowserName</code> und <code>BrowserVersion</code> gespeichert. Das <code>navigator</code>-Objekt stellt Ihnen über seine Eigenschaften verschiedene Informationen über den verwendeten WWW-Browser des Anwenders zur Verfügung. Im obigen Beispiel werden die Eigenschaften des Browser-Namens (gespeichert in der Objekteigenschaft <code>navigator.appName</code>) und der Browser-Version (gespeichert in der Objekteigenschaft <code>navigator.appVersion</code>) ermittelt. Anschließend werden die ermittelten Daten mit <a href="Objekte/DOM/document/getElementById.html" title="JavaScript/Objekte/DOM/document/getElementById"><code>getElementById()</code></a> dynamisch ins Browser-Fenster geschrieben.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Objekteigenschaften sprechen Sie an, indem Sie zuerst den Namen des Objekts notieren, dahinter einen Punkt, und dahinter den Namen der Eigenschaft. Dabei sind keine Leerzeichen erlaubt!</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Fast alle Browser geben sich als Netscape-Navigator mit der Version 5 zu erkennen. Dies hat historische Gründe und stellt uns vor das Problem, dass eine Unterscheidung der Browser mit einer <a href="../Grundlagen/User-Agent-Kennung.html" title="Grundlagen/User-Agent-Kennung">User-Agent-Kennung</a> nur schwer möglich ist.</div>
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Objektmethoden">Bearbeiten</a>]</span> <span class="mw-headline" id="Objektmethoden"> Objektmethoden </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_1"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.1"><img alt="JavaScript 1.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="../Datei_Iconset.html" class="image" title="Android"><img alt="Android" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Objekte können Methoden haben. Das sind Funktionen, die Aktionen ausführen, aber im Gegensatz zu alleinstehenden  <a href="Funktionen.html" title="JavaScript/Funktionen">Funktionen</a> an ein bestimmtes Objekt gebunden sind. Viele vordefinierte JavaScript-Objekte haben Methoden. So gibt es zum Beispiel das vordefinierte JavaScript-Objekt  <a href="Objekte/window/history.html" title="JavaScript/Objekte/window/history"><code>history</code></a>, in dem die bereits besuchten URIs eines Browser-Fensters gespeichert sind. Dazu gibt es eine Methode <code>history.back()</code>, mit der Sie in JavaScript einen Rücksprung zu einer bereits besuchten Adresse erzwingen können.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-history.back.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">function</span> Zurück<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    window.<span class="me1">history</span>.<span class="me1">back</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+  <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-history.back.html">ansehen …</a></div></div>
+<p>Das Beispiel enthält einen Verweis mit einer speziellen Syntax. Diese Syntax erlaubt Ihnen, beim Anklicken des Verweises JavaScript-Code aufzurufen. Im Beispiel ist das ein Aufruf der Methode <code>back()</code> des Objekts <code>history</code>.
+</p><p>Objektmethoden sprechen Sie an, indem Sie zuerst den Namen des Objekts notieren, dahinter einen Punkt, dahinter den Namen der Methode, und dahinter eine öffnende und eine schließende Klammer. Dabei sind keine Leerzeichen erlaubt! Einige Methoden können auch Parameter beim Aufruf erwarten. Diese Parameter müssen Sie dann zwischen der öffnenden und der schließenden Klammer übergeben.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Mehr zu der Aufrufsyntax bei Verweisen erfahren Sie im Abschnitt über  <a href="Event-Handler.html" title="JavaScript/Event-Handler">Event-Handler</a>.</div>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Abfragen ob ein Objekt existiert">Bearbeiten</a>]</span> <span class="mw-headline" id="Abfragen_ob_ein_Objekt_existiert"> Abfragen ob ein Objekt existiert </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_1"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.1"><img alt="JavaScript 1.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="../Datei_Iconset.html" class="image" title="Android"><img alt="Android" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Es gibt viele JavaScript-Objekte, und es ist oft schwer durchschaubar, welcher Browser in welcher Version welches Objekt interpretiert. Objekte, die nicht interpretierbar sind, führen in den Browsern zu Fehlermeldungen. Deshalb gibt es eine Möglichkeit, den Aufruf von Eigenschaften und Methoden eines Objekts von einer Abfrage abhängig zu machen, ob das Objekt dem Browser überhaupt bekannt ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Konzepte4.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">  <span class="kw1">var</span> elem <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'button'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  elem.<span class="me1">addEventListener</span><span class="br0">&#40;</span><span class="st0">'click'</span><span class="sy0">,</span> browserCheck<span class="br0">&#41;</span><span class="sy0">;</span>	
+&#160;
+  <span class="kw1">function</span> browserCheck<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>document.<span class="me1">images</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      text1 <span class="sy0">=</span> <span class="st0">'Schade, Ihr Browser kennt das image-Objekt nicht - Sie verpassen was!'</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+      text1 <span class="sy0">=</span> <span class="st0">'Gut, Ihr Browser kennt das image-Objekt!'</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">if</span> <span class="br0">&#40;</span>document.<span class="me1">all</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      text2 <span class="sy0">=</span> <span class="st0">'Ihr Browser kennt Microsofts all-Objekt!'</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+      text2 <span class="sy0">=</span> <span class="st0">'Ihr Browser kennt nicht Microsofts all-Objekt.'</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    text <span class="sy0">=</span> text1 <span class="sy0">+</span> <span class="st0">'&lt;br&gt;'</span> <span class="sy0">+</span> text2<span class="sy0">;</span>
+    <span class="kw1">var</span> ausgabe <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'ausgabe'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    ausgabe.<span class="me1">innerHTML</span> <span class="sy0">=</span> text<span class="sy0">;</span>
+  <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-Konzepte4.html">ansehen …</a></div></div>
+<p><br />
+Mit einer <a href="Anweisungen.html" title="JavaScript/Anweisungen">bedingten Anweisung</a> <code>if (...)</code> können Sie überprüfen, ob ein Objekt verfügbar ist. Als Ausdruck für die Bedingung notieren Sie innerhalb der Klammern hinter <code>if</code> einfach das Objekt, nach dem Sie fragen. Wenn das Objekt verfügbar ist, wird intern der Wert true (wahr) zurückgegeben. In dem Zweig der if-else-Abfrage, die diesen Fall verarbeitet, können Sie dann loslegen und zum Beispiel Befehle verwenden, die dieses Objekt verwenden. In dem anderen Zweig der if-else-Abfrage können Sie dann beispielsweise eine eigene Meldung ausgeben, dass dieses JavaScript leider Befehle verwendet, die der Browser des Anwenders nicht interpretiert.
+</p><p>Im obigen Beispiel wird zunächst gefragt, ob das Unterobjekt  <a href="Objekte/DOM/document/images.html" title="JavaScript/Objekte/DOM/document/images"><code>document.images</code></a> <b>nicht</b> verfügbar ist (die verneinte Abfrage ergibt sich durch das Ausrufezeichen vor dem Objekt). Ist das Objekt also nicht verfügbar, dann wird im Beispiel ausgegeben, dass dies sehr schade sei usw. Im anderen Fall, also wenn das Objekt verfügbar ist, wird eine erfreutere Reaktion ausgegeben.
+</p><p>Im zweiten Teil des Beispiels wird die Verfügbarkeit des Unterobjekts  <a href="Objekte/DOM/document/all.html" title="JavaScript/Objekte/DOM/document/all"><code>document.all</code></a> abgefragt, das nur einigen veralteten Browsern bekannt ist. Auch dabei werden im Beispiel wieder je nach Verfügbarkeit zwei unterschiedliche Sätze ausgegeben. An diesem Beispiel ist auch ersichtlich, dass die Abfrage der Verfügbarkeit von Objekten auch zur Browser-Groberkennung dienen kann - vorausgesetzt, man kennt sich bei den vordefinierten JavaScript-Objekten aus und weiß, welche Objekte nur von bestimmten Browsern interpretiert werden.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Mehrere Anweisungen mit einem Objekt ausführen (with)">Bearbeiten</a>]</span> <span class="mw-headline" id="Mehrere_Anweisungen_mit_einem_Objekt_ausf.C3.BChren_.28with.29"> Mehrere Anweisungen mit einem Objekt ausführen (with) </span></h2>
+<ul class="siconset smetadaten"><li class="sicon sicon_achtung"><a href="../Datei_Iconset.html" class="image" title="Achtung"><img alt="Achtung" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_js1_1"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.1"><img alt="JavaScript 1.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie3"><a href="../Datei_Iconset.html" class="image" title="IE 3"><img alt="IE 3" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx1"><a href="../Datei_Iconset.html" class="image" title="Firefox 1.0"><img alt="Firefox 1.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr4"><a href="../Datei_Iconset.html" class="image" title="Chrome 4"><img alt="Chrome 4" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf1_0"><a href="../Datei_Iconset.html" class="image" title="Safari 1.0"><img alt="Safari 1.0" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op5_12"><a href="../Datei_Iconset.html" class="image" title="Opera 5.12"><img alt="Opera 5.12" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<p>Hin und wieder kommt es vor, dass Sie mehrere Anweisungen in Folge notieren, die alle mit dem gleichen Objekt arbeiten. Für diesen Zweck können Sie, wenn Sie wollen, eine spezielle verkürzte Schreibweise verwenden.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Im <a href="strict_mode.html" title="JavaScript/strict mode">strict mode</a> ist das with-Statement verboten und erzeugt einen Syntaxfehler!</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt; Test &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+
+    with (document) {
+      open();
+      write(&quot;&lt;p&gt;Diese Seite hat den Titel &quot; + title + &quot;&lt;\/p&gt;&quot;);
+      close();
+    }
+
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>Mit <code>with (Objektname)</code> leiten Sie eine solche Schreibweise ein <i>(with = mit)</i>. Da normalerweise mehrere Anweisungen folgen, die dieses Objekt verwenden, müssen Sie alle diese Anweisungen in geschweifte Klammern einschließen.
+</p><p>Im obigen Beispiel wird mit dem  <a href="Objekte/window/document.html" title="JavaScript/Objekte/window/document" class="mw-redirect"><code>document</code></a>-Objekt gearbeitet. Innerhalb der geschweiften Klammern werden die Methoden <code>open()</code>, <code>write()</code> und <code>close()</code> sowie die Eigenschaft <code>title</code> verwendet. Sie alle gehören zum <code>document</code>-Objekt. Normalerweise müssten Sie notieren: <code>document.open()</code> oder <code>document.title</code>. Durch die spezielle Syntax mit with
+(document) entfällt dies.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Es ist auch möglich, untergeordnete Objekte auf diese Weise anzusprechen, z.B.:<br />
+<p><code>with (document.MeinFormular.Feld_1)</code><br />
+<code>value = "Stefan";</code><br />
+</p>
+Achten Sie darauf, dass die aufgerufene Eigenschaft auch tatsächlich existiert. Wenn diese fehlt, erhalten Sie eine JavaScript-Fehlermeldung.</div>
+<div class="note-box note-box-recommendation-text"><strong>Empfehlung:</strong> Vermeiden Sie das with-Statement, da es den Code schwerer lesbar macht und so ein Zurückverfolgen von Fehlern erschwert!</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Auf aktuelles Objekt Bezug nehmen (this)">Bearbeiten</a>]</span> <span class="mw-headline" id="Auf_aktuelles_Objekt_Bezug_nehmen_.28this.29"> Auf aktuelles Objekt Bezug nehmen (this) </span></h2>
+<p>Es gibt Fälle, in denen es eindeutig ist, auf welches Objekt sich ein Befehl bezieht. In solchen Fällen können Sie eine verkürzte Schreibweise benutzen.
+</p>
+<ul class="siconset smetadaten"><li class="sicon sicon_js1_1"><a href="../Datei_Iconset.html" class="image" title="JavaScript 1.1"><img alt="JavaScript 1.1" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_android"><a href="../Datei_Iconset.html" class="image" title="Android"><img alt="Android" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_chr"><a href="../Datei_Iconset.html" class="image" title="Chrome"><img alt="Chrome" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_fx"><a href="../Datei_Iconset.html" class="image" title="Firefox"><img alt="Firefox" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_ie"><a href="../Datei_Iconset.html" class="image" title="IE"><img alt="IE" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_op"><a href="../Datei_Iconset.html" class="image" title="Opera"><img alt="Opera" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li><li class="sicon sicon_saf"><a href="../Datei_Iconset.html" class="image" title="Safari"><img alt="Safari" src="../../images/d/d8/Iconset.png" width="776" height="342" /></a></li></ul><div class="visualClear"></div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt; Test &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;form name=&quot;Eingabe&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;Feld&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;OK&quot; onclick=&quot;alert(this.form.Feld.value)&quot;&gt;
+  &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>Mit dem Schlüsselwort <code>this</code> können Sie auf ein aktuelles Objekt Bezug nehmen. Im Beispiel wird ein Formular mit einem Eingabefeld und einem Button definiert. Wenn der Anwender auf den Button klickt, tritt der  <a href="Event-Handler.html" title="JavaScript/Event-Handler">Event-Handler</a> <code>onclick</code> in Aktion, der als Attribut in dem HTML-Tag für den Button notiert ist. Im Beispiel wird in einem Meldungsfenster der Wert ausgegeben, den der Anwender in dem Eingabefeld eingegeben hat. Normalerweise würde der Befehl so notiert: <code>alert(document.Eingabe.Feld.value</code>)
+</p><p>Da der Befehl jedoch innerhalb des Formulars steht, auf das er sich bezieht, dürfen Sie auch schreiben: <code>alert(this.form.Feld.value)</code>
+</p><p>Das Wort <code>form</code> ist dabei vom  <a href="Objekte/DOM/document/forms.html" title="JavaScript/Objekte/DOM/document/forms"><code>forms</code></a>-Objekt abgeleitet.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Im <a href="strict_mode.html" title="JavaScript/strict mode">strict mode</a> ist <code>this</code> standardmäßig <code>undefined</code>. Sie müssen deshalb neue Eigenschaften und Methoden immer mit <code>new</code> einleiten.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 12251/1000000
+Post‐expand include size: 37750/2097152 bytes
+Template argument size: 5051/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1254-0!*!0!!de-formal!2!* and timestamp 20150301175323 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;oldid=25985">http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;oldid=25985</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FKonzepte" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Konzepte.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/Konzepte&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Konzepte.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/JavaScript/Konzepte.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Konzepte.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Konzepte&amp;oldid=25985" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/JavaScript-2FKonzepte.html" title="Spezial:Durchsuchen/JavaScript-2FKonzepte">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 13. Februar 2015 um 06:32 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 5.481-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.079 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Konzepte by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:07 GMT -->
+</html>

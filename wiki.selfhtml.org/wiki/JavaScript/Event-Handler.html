@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Event-Handler by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/Event-Handler – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/Event-Handler","wgTitle":"JavaScript/Event-Handler","wgCurRevisionId":26438,"wgArticleId":3539,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/Event-Handler","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="JavaScript/Event-Handler" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/Event-Handler&amp;xmlmime=rdf" />
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_Event-Handler skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/Event-Handler</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../JavaScript.html" title="JavaScript">JavaScript</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p><b>Event-Handler</b> (Ereignisbehandler) sind ein wichtiges Bindeglied zwischen HTML und JavaScript. Event-Handler werden entweder in Form von Attributen in HTML-Tags notiert (siehe auch <a href="../HTML/Eventhandler.html" title="HTML/Eventhandler">HTML/Eventhandler</a>), besser aber mittels der Methode <a href="Objekte/DOM/event/addEventListener.html" title="JavaScript/Objekte/DOM/event/addEventListener">addEventListener</a> hinzugefügt. 
+</p>
+<div style="width:49%;float:left;padding:0 2% 0 0;">
+<p><b>Animation-Events</b>
+</p>
+<ul><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Animation-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Animation-Events (Seite nicht vorhanden)">  animationend  </a>   (CSS-<a href="../CSS/Eigenschaften/Animation/Animation.html" title="CSS/Eigenschaften/Animation/Animation">animation</a> beendet)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Animation-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Animation-Events (Seite nicht vorhanden)">  animationiteration  </a>  (CSS-<a href="../CSS/Eigenschaften/Animation/Animation.html" title="CSS/Eigenschaften/Animation/Animation">animation</a> wiederholt)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Animation-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Animation-Events (Seite nicht vorhanden)">  animationstart  </a>  (CSS-<a href="../CSS/Eigenschaften/Animation/Animation.html" title="CSS/Eigenschaften/Animation/Animation">animation</a> begonnen)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Animation-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Animation-Events (Seite nicht vorhanden)">  transitionend </a>  (CSS-<a href="../Transition.html" title="Transition" class="mw-redirect">transition</a> beendet)
+</li></ul>
+<p><br />
+<b>Daten-Abruf-Events</b>
+</p>
+<ul><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Data-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Data-Events (Seite nicht vorhanden)">  onloadeddata </a>  (Daten sind geladen)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Data-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Data-Events (Seite nicht vorhanden)">  onloadedmetadata </a>  (Metadaten sind geladen)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Data-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Data-Events (Seite nicht vorhanden)">  onloadstart </a> (Laden der Daten begonnen)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Data-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Data-Events (Seite nicht vorhanden)">  onprogress </a>  (Download läuft)
+</li></ul>
+<p><br />
+<b>Drag-und-Drop-Events</b>
+</p>
+<ul><li> <a href="Event-Handler/Drag-Events.html" title="JavaScript/Event-Handler/Drag-Events">  ondrag </a>  (Element gezogen)
+</li><li> <a href="Event-Handler/Drag-Events.html" title="JavaScript/Event-Handler/Drag-Events">  ondragend </a>  (Ziehen beendet)
+</li><li> <a href="Event-Handler/Drag-Events.html" title="JavaScript/Event-Handler/Drag-Events">  ondragenter </a>  (Ziel erreicht)
+</li><li> <a href="Event-Handler/Drag-Events.html" title="JavaScript/Event-Handler/Drag-Events">  ondragleave </a>  (Ziel verlassen)
+</li><li> <a href="Event-Handler/Drag-Events.html" title="JavaScript/Event-Handler/Drag-Events">  ondragover </a>  (Ziehen auf Ziel)
+</li><li> <a href="Event-Handler/Drag-Events.html" title="JavaScript/Event-Handler/Drag-Events">  ondragstart </a>  (Ziehen begonnen)
+</li><li> <a href="Event-Handler/Drag-Events.html" title="JavaScript/Event-Handler/Drag-Events">  ondrop </a>  (Element abgelegt)
+</li></ul>
+<p><br />
+<b>Druck-Events</b>
+</p>
+<ul><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Druck-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Druck-Events (Seite nicht vorhanden)">  onafterprint  </a>  (nachdem das Druckereignis durchgeführt wurde)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Druck-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Druck-Events (Seite nicht vorhanden)">  onbeforeprint  </a>  (bevor das Druckereignis ausgelöst wird)
+</li></ul>
+<p><br />
+<b>Fenster-/Frame-Events</b>
+</p>
+<ul><li> <a href="Event-Handler/onabort.html" title="JavaScript/Event-Handler/onabort">  onabort </a>  (Abbruch beim Laden der Seite, unvollständig geladen)
+</li><li> <a href="Event-Handler/onbeforeunload.html" title="JavaScript/Event-Handler/onbeforeunload">  onbeforeunload </a> 
+</li><li> <a href="Event-Handler/onerror.html" title="JavaScript/Event-Handler/onerror">  onerror </a>  (Element nicht richtig geladen o. Skript fehlerhaft läuft)
+</li><li> <a href="Event-Handler/onhashchange.html" title="JavaScript/Event-Handler/onhashchange">  onhashchange </a>  (wenn Anker aufgerufen werden)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/onlanguagechange&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/onlanguagechange (Seite nicht vorhanden)">  onlanguagechange  </a>  (wenn die Sprache geändert wird)
+</li><li> <a href="Event-Handler/onload.html" title="JavaScript/Event-Handler/onload">   onload </a>  (Elemente &amp; Unterelement vollständig geladen)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/onmessage&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/onmessage (Seite nicht vorhanden)">  onmessage  </a>  (eine Nachricht erhalten)
+</li><li> <a href="Event-Handler/onoffline.html" title="JavaScript/Event-Handler/onoffline">  onoffline  </a>  (nicht mit dem Server verbunden)
+</li><li> <a href="Event-Handler/onoffline.html" title="JavaScript/Event-Handler/onoffline">  ononline  </a>  (mit dem Server verbunden)
+</li><li> <a href="Event-Handler/onpageshow.html" title="JavaScript/Event-Handler/onpageshow">  onpageshow </a>  (angezeigt wird.)
+</li><li> <a href="Event-Handler/onpagehide.html" title="JavaScript/Event-Handler/onpagehide">  onpagehide </a>  (versteckt wird, in den Hintergrund tritt)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/onpopstate&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/onpopstate (Seite nicht vorhanden)">  onpopstate  </a>  (wenn sich die active <a href="Objekte/window/history.html" title="JavaScript/Objekte/window/history">history</a> ändert)
+</li><li> <a href="Event-Handler/onresize.html" title="JavaScript/Event-Handler/onresize">   onresize </a>  (beim Verändern der Fenstergröße)
+</li><li> <a href="Event-Handler/onscroll.html" title="JavaScript/Event-Handler/onscroll">   onscroll </a>  (Dokumentansicht wird entlang der x/y-Achsen verschoben)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/onstorage&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/onstorage (Seite nicht vorhanden)">  onstorage  </a>  (Speicher-Ereignis)
+</li><li> <a href="Event-Handler/onunload.html" title="JavaScript/Event-Handler/onunload">   onunload </a>  (beim Verlassen der Datei)
+</li></ul>
+<p><br />
+<b>Formular-Events</b>
+</p>
+<ul><li> <a href="Event-Handler/onblur.html" title="JavaScript/Event-Handler/onblur">  onblur </a>  (beim Verlassen)
+</li><li> <a href="Event-Handler/onchange.html" title="JavaScript/Event-Handler/onchange">  onchange </a>  (bei erfolgter Änderung)
+</li><li> <a href="Event-Handler/onfocus.html" title="JavaScript/Event-Handler/onfocus">  onfocus </a>  (beim Aktivieren)
+</li><li> <a href="Event-Handler/onfocusin.html" title="JavaScript/Event-Handler/onfocusin">  onfocusin </a>  (wenn ein Element angeklickt wird)
+</li><li> <a href="Event-Handler/onfocusout.html" title="JavaScript/Event-Handler/onfocusout">  onfocusout </a>  (wenn ein Element verlassen wird)
+</li><li> <a href="Event-Handler/oninput.html" title="JavaScript/Event-Handler/oninput">  oninput  </a>  (wenn etwas eingeben wird)
+</li><li> <a href="Event-Handler/oninvalid.html" title="JavaScript/Event-Handler/oninvalid">  oninvalid  </a>  (Wenn eine Eingabe ungültig ist)
+</li><li> <a href="Event-Handler/onreset.html" title="JavaScript/Event-Handler/onreset">   onreset </a>  (beim Zurücksetzen des Formulars)
+</li><li> <a href="Event-Handler/onsearch.html" title="JavaScript/Event-Handler/onsearch">   onsearch </a>  (wenn etwas in einem Suchformular gesucht wird)
+</li><li> <a href="Event-Handler/onselect.html" title="JavaScript/Event-Handler/onselect">   onselect </a>  (beim Selektieren von Text)
+</li><li> <a href="Event-Handler/onsubmit.html" title="JavaScript/Event-Handler/onsubmit">   onsubmit </a>  (beim Absenden des Formulars)
+</li></ul>
+<p><br />
+</p><p><br />
+</p>
+</div>
+<div style="width:49%;float:left;padding:0;">
+<p><b>Maus-Events</b>
+</p>
+<ul><li> <a href="Event-Handler/onclick.html" title="JavaScript/Event-Handler/onclick">  onclick </a>  (beim Anklicken)
+</li><li> <a href="Event-Handler/oncontextmenu.html" title="JavaScript/Event-Handler/oncontextmenu">  oncontextmenu  </a> (wenn die rechte Maustaste ein Kontextmenü anfordert)
+</li><li> <a href="Event-Handler/ondblclick.html" title="JavaScript/Event-Handler/ondblclick">  ondblclick </a>  (bei doppeltem Anklicken)
+</li><li> <a href="Event-Handler/onmousedown.html" title="JavaScript/Event-Handler/onmousedown">   onmousedown </a>  (bei gedrückter Maustaste)
+</li><li> <a href="Event-Handler/onmouseenter.html" title="JavaScript/Event-Handler/onmouseenter">   onmouseenter </a>  (bei gedrückter Maustaste)
+</li><li> <a href="Event-Handler/onmouseenter.html" title="JavaScript/Event-Handler/onmouseenter">   onmouseleave </a>  (bei gedrückter Maustaste)
+</li><li> <a href="Event-Handler/onmousemove.html" title="JavaScript/Event-Handler/onmousemove">   onmousemove </a> (bei weiterbewegter Maus)
+</li><li> <a href="Event-Handler/onmouseout.html" title="JavaScript/Event-Handler/onmouseout">   onmouseout </a>  (beim Verlassen des Elements mit der Maus)
+</li><li> <a href="Event-Handler/onmouseover.html" title="JavaScript/Event-Handler/onmouseover">   onmouseover </a>  (beim Überfahren des Elements mit der Maus)
+</li><li> <a href="Event-Handler/onmouseup.html" title="JavaScript/Event-Handler/onmouseup">   onmouseup </a>  (bei losgelassener Maustaste)
+</li><li> <a href="Event-Handler/onwheel.html" title="JavaScript/Event-Handler/onwheel">   onwheel </a> (wenn sich das Mausrad bewegt)
+</li></ul>
+<p><br />
+<b>Medienwiedergaben-Events</b>
+</p>
+<ul><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  oncanplay  </a>  (bereit zum Abspielen)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  oncanplaythrough</a> (bereit zum Abspielen bis zum Ende)  
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  oncuechange  </a>  
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  ondurationchange  </a>  (Änderung der Dauer)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onended  </a> (wenn Ende erreicht ist)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onemptied  </a>  (Medien-Datei nicht verfügbar)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onpause   </a>  (pausiert)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onplay  </a>  (Abspielen nach Pause)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onplaying  </a> (Abspielen nach Pause)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onratechange  </a>  (Änderung der Abspielgeschwindigkeit)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onseeked  </a>  (wenn Nutzer andere Stelle ausgesucht hat)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onseeking   </a>  (wenn Nutzer zu anderer Stelle geht)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onstalled  </a>   (Laden nicht erfolgt)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onsuspend  </a>  (Ende des Ladens)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  ontimeupdate </a>  (Änderung der playback Position)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onvolumechange  </a>  Lautstärkeänderung)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Medien-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Medien-Events (Seite nicht vorhanden)">  onwaiting  </a>  (buffering, wenn gewartet werden muss)
+</li></ul>
+<p><br />
+<b><a href="Event-Handler/SVG-Events.html" title="JavaScript/Event-Handler/SVG-Events">Skalierbare Vektor Grafiken (SVG) -Events</a></b> 
+</p>
+<ul><li> <a href="Event-Handler/SVG-Events.html" title="JavaScript/Event-Handler/SVG-Events">  onactivate </a>  (ausgelöst ↔  <i>click</i>)
+</li><li> <a href="Event-Handler/SVG-Events.html" title="JavaScript/Event-Handler/SVG-Events">  onzoom </a>  (Dokument-Zoom-Stufe oder Aktueller Maßstab wird geändert)
+</li></ul>
+<p><br />
+<b>Tastatur-Events</b>
+</p>
+<ul><li> <a href="Event-Handler/Tastatur-Events.html" title="JavaScript/Event-Handler/Tastatur-Events">  onkeydown </a>  (bei gedrückter Taste)
+</li><li> <a href="Event-Handler/Tastatur-Events.html" title="JavaScript/Event-Handler/Tastatur-Events">  onkeypress </a>  (bei gedrückt gehaltener Taste)
+</li><li> <a href="Event-Handler/Tastatur-Events.html" title="JavaScript/Event-Handler/Tastatur-Events">  onkeyup </a>  (bei losgelassener Taste)
+</li></ul>
+<p><br />
+<b>Touch-Events</b>
+</p>
+<ul><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Touch-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Touch-Events (Seite nicht vorhanden)">  ontouchcancel </a>  (Abbruch der Berührung)  
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Touch-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Touch-Events (Seite nicht vorhanden)">  ontouchend  </a>  (Ende der Berührung ↔  <i>mouseup</i>) 
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Touch-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Touch-Events (Seite nicht vorhanden)">  ontouchleave  </a>  (Ende der Berührung ↔  <i>mouseout</i>) 
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Touch-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Touch-Events (Seite nicht vorhanden)">  ontouchmove  </a>  (Wischen ↔  <i>mousemove</i>) 
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Touch-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Touch-Events (Seite nicht vorhanden)">  ontouchstart  </a>  (Beginn der Berührung ↔  <i>mousedown</i>) 
+</li></ul>
+<p><br />
+<b>Zwischenablage-Events</b>
+</p>
+<ul><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Zwischenablage-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Zwischenablage-Events (Seite nicht vorhanden)">  oncopy  </a>  (in Zwischenablage kopiert)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Zwischenablage-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Zwischenablage-Events (Seite nicht vorhanden)">  oncut  </a>  (ausgeschnitten)
+</li><li> <a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler/Zwischenablage-Events&amp;action=edit&amp;redlink=1" class="new" title="JavaScript/Event-Handler/Zwischenablage-Events (Seite nicht vorhanden)">  onpaste  </a>  (eingefügt)
+</li></ul>
+<p><br />
+</p>
+</div><div class="visualClear"></div>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_Event-Handlern"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu Event-Handlern</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Einbindung"><span class="tocnumber">2</span> <span class="toctext">Einbindung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#HTML-Attribute"><span class="tocnumber">2.1</span> <span class="toctext">HTML-Attribute</span></a></li>
+<li class="toclevel-2"><a href="#Event-Handler_dynamisch_einf.C3.BCgen_und_entfernen"><span class="tocnumber">2.2</span> <span class="toctext">Event-Handler dynamisch einfügen und entfernen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Quellen"><span class="tocnumber">3</span> <span class="toctext">Quellen</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu Event-Handlern">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_Event-Handlern"> Allgemeines zu Event-Handlern </span></h2>
+<p>Jeder Event-Handler steht für ein bestimmtes Anwenderereignis, <code>onclick</code> etwa für das Ereignis "Anwender hat mit der Maus geklickt". Der Anzeigebereich des HTML-Elements, in dem der Event-Handler notiert ist, ist das auslösende Element. Wenn der Event-Handler <code>onclick</code> beispielsweise in einem Formular-Button notiert wird, wird der damit verknüpfte JavaScript-Code nur dann ausgeführt, wenn der Mausklick im Anzeigebereich dieses Elements erfolgt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Einbindung">Bearbeiten</a>]</span> <span class="mw-headline" id="Einbindung"> Einbindung </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: HTML-Attribute">Bearbeiten</a>]</span> <span class="mw-headline" id="HTML-Attribute"> HTML-Attribute </span></h3>
+<p>Event-Handler erkennen Sie daran, dass solche <a href="../HTML/Eventhandler.html" title="HTML/Eventhandler">HTML-Attribute</a> immer mit <code>on</code>[...] beginnen, zum Beispiel <code>onclick</code>. Hinter dem Istgleichzeichen notieren Sie eine in Anführungszeichen gesetzte JavaScript-Anweisung. Wenn Sie mehrere Anweisungen ausführen wollen, dann definieren Sie sich dazu am besten in einem JavaScript-Bereich eine <a href="Funktionen.html" title="JavaScript/Funktionen">Funktion</a> und rufen hinter dem Istgleichzeichen diese Funktion auf, also z.B. <code>onclick="Umrechnen()"</code>.
+</p><p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Objekte/DOM/event/addEventListener&amp;action=edit&amp;section=T-1" title="JavaScript/Objekte/DOM/event/addEventListener">Bearbeiten</a>]</span> <span class="mw-headline" id="Event-Handler_dynamisch_einf.C3.BCgen_und_entfernen"> Event-Handler dynamisch einfügen und entfernen </span></h3>
+<p>Mit dieser integrierten Helferfunktion können sie problemlos <a href="../Event-Handler.html" title="Event-Handler" class="mw-redirect">Event-Handler</a> dynamisch einfügen und wieder entfernen. Im Script wird attachEvent() aufgerufen, wenn die Abfrage nach <a href="Objekte/DOM/event/addEventListener.html" title="JavaScript/Objekte/DOM/event/addEventListener">addEventListener</a> false ergibt<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup>:
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-event-addeventlistener2.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> AddEvent<span class="br0">&#40;</span>obj<span class="sy0">,</span>type<span class="sy0">,</span>fn<span class="br0">&#41;</span> <span class="br0">&#123;</span>                 <span class="co1">// Helferfunktion für alle Browser</span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span>obj.<span class="me1">addEventListener</span><span class="br0">&#41;</span>
+    obj.<span class="me1">addEventListener</span> <span class="br0">&#40;</span>type<span class="sy0">,</span>fn<span class="sy0">,</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">&#40;</span>obj.<span class="me1">attachEvent</span><span class="br0">&#41;</span>
+    obj.<span class="me1">attachEvent</span> <span class="br0">&#40;</span><span class="st0">'on'</span><span class="sy0">+</span>type<span class="sy0">,</span>fn<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">function</span> RemoveEvent<span class="br0">&#40;</span>obj<span class="sy0">,</span>type<span class="sy0">,</span>fn<span class="br0">&#41;</span> <span class="br0">&#123;</span>              <span class="co1">// Helferfunktion für alle Browser</span>
+  <span class="kw1">if</span> <span class="br0">&#40;</span>obj.<span class="me1">removeEventListener</span><span class="br0">&#41;</span>
+    obj.<span class="me1">removeEventListener</span> <span class="br0">&#40;</span>type<span class="sy0">,</span>fn<span class="sy0">,</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">&#40;</span>obj.<span class="me1">detachEvent</span><span class="br0">&#41;</span>
+    obj.<span class="me1">detachEvent</span> <span class="br0">&#40;</span><span class="st0">'on'</span><span class="sy0">+</span>type<span class="sy0">,</span>fn<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:JS-event-addeventlistener2.html">ansehen …</a></div></div>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Quellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Quellen"> Quellen </span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://molily.de/js/event-handling-fortgeschritten.html#dom-events">http://molily.de/js/event-handling-fortgeschritten.html#dom-events</a> molily fortgeschrittenes Event-Handling (von Matthias Schäfer)</span>
+</li>
+</ol>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 110/1000000
+Post‐expand include size: 9819/2097152 bytes
+Template argument size: 8626/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3539-0!*!0!!de-formal!*!* and timestamp 20150301155214 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;oldid=26438">http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;oldid=26438</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FEvent-Handler" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Event-Handler.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="../Diskussion_JavaScript/Event-Handler.html"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Event-Handler.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/JavaScript/Event-Handler.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/Event-Handler.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/Event-Handler&amp;oldid=26438" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/JavaScript-2FEvent-2DHandler.html" title="Spezial:Durchsuchen/JavaScript-2FEvent-2DHandler">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 22. Februar 2015 um 15:20 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 7.966-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.080 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/Event-Handler by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:27:20 GMT -->
+</html>

@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Module/Standardmodule by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Module/Standardmodule – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Module/Standardmodule","wgTitle":"Perl/Module/Standardmodule","wgCurRevisionId":13974,"wgArticleId":3110,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Module/Standardmodule","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="Perl/Module/Standardmodule" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Module/Standardmodule&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Module_Standardmodule skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Module/Standardmodule</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a> | <a href="http://wiki.selfhtml.org/wiki/Perl/Module" title="Perl/Module">Module</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_Standardmodulen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu Standardmodulen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Module_mit_allgemeinen_Aufgaben"><span class="tocnumber">2</span> <span class="toctext">Module mit allgemeinen Aufgaben</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Module_f.C3.BCr_Textverarbeitung"><span class="tocnumber">3</span> <span class="toctext">Module für Textverarbeitung</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Module_f.C3.BCr_Sprachen_und_Zeichenkodierungen"><span class="tocnumber">4</span> <span class="toctext">Module für Sprachen und Zeichenkodierungen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Module_f.C3.BCr_Berechnungen"><span class="tocnumber">5</span> <span class="toctext">Module für Berechnungen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Module_f.C3.BCr_Dateiverwaltung"><span class="tocnumber">6</span> <span class="toctext">Module für Dateiverwaltung</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Module_f.C3.BCr_Ein-.2FAusgabe"><span class="tocnumber">7</span> <span class="toctext">Module für Ein-/Ausgabe</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Module_f.C3.BCr_Datum_und_Zeit"><span class="tocnumber">8</span> <span class="toctext">Module für Datum und Zeit</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Module_f.C3.BCr_Datenbankzugriffe"><span class="tocnumber">9</span> <span class="toctext">Module für Datenbankzugriffe</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Module_f.C3.BCr_Prozesskommunikation"><span class="tocnumber">10</span> <span class="toctext">Module für Prozesskommunikation</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Module_f.C3.BCr_Variablenbindung"><span class="tocnumber">11</span> <span class="toctext">Module für Variablenbindung</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Module_f.C3.BCr_Modulverwaltung_und_objektorientierte_Programmierung"><span class="tocnumber">12</span> <span class="toctext">Module für Modulverwaltung und objektorientierte Programmierung</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Module_f.C3.BCr_CGI-Scripts"><span class="tocnumber">13</span> <span class="toctext">Module für CGI-Scripts</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Module_f.C3.BCr_Internetfunktionen"><span class="tocnumber">14</span> <span class="toctext">Module für Internetfunktionen</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Module_zum_Verwalten_von_Perl-Erweiterungen"><span class="tocnumber">15</span> <span class="toctext">Module zum Verwalten von Perl-Erweiterungen</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Module_f.C3.BCr_POD-Dokumente"><span class="tocnumber">16</span> <span class="toctext">Module für POD-Dokumente</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Module_zum_Steuern_des_Perl-Compilers"><span class="tocnumber">17</span> <span class="toctext">Module zum Steuern des Perl-Compilers</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Systemnahe_Module"><span class="tocnumber">18</span> <span class="toctext">Systemnahe Module</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Pragma-Module_zum_Beeinflussen_des_Perl-Interpreters"><span class="tocnumber">19</span> <span class="toctext">Pragma-Module zum Beeinflussen des Perl-Interpreters</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu Standardmodulen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_Standardmodulen"> Allgemeines zu Standardmodulen </span></h2>
+<p>Standardmodule sind Module, die zusammen mit dem Perl-Interpreter ausgeliefert werden. Dadurch haben solche Module einen sehr hohen Verbreitungsgrad und sind überall verfügbar, wo der Perl-Interpreter vollständig installiert ist. Bei neuen Versionen des Perl-Interpreters können jedoch auch neue Standardmodule mit ausgeliefert werden. Module, die erst seit der neuesten Interpreterversion mit ausgeliefert werden, stehen bei Installationen älterer Perl-Versionen also nicht automatisch zur Verfügung.
+</p><p>Einige der ausgelieferten Module haben nicht die heute übliche Dateiendung <var>.pm</var>, sondern noch die Endung <var>.pl</var>. Dies sind ältere Module, die schon vor der Version 5 des Perl-Interpreters existierten.
+</p><p>Bei einer typischen Installation des Perl-Interpreters werden die Standardmodule unterhalb des Installationsverzeichnisses im Verzeichnis <var>lib</var> und dessen Unterverzeichnissen abgelegt.
+</p><p>Die folgenden Tabellen listen Standardmodule nach Bedeutung kategorisiert auf. In der jeweils linken Spalte steht das Modul, wie es z.B. mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Module_und_Packages#use" title="Perl/Funktionen für Module und Packages">use</a> eingebunden werden kann. In der mittleren Spalte steht eine kurze Bedeutung. Weitere Einzelheiten zum jeweiligen Modul erfahren Sie, wenn Sie die jeweilige <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Moduldokumentationen_lesen_mit_perldoc" title="Perl/Module/Einführung">Moduldokumentation mit perldoc lesen</a>.
+</p><p>Die Tabellen erheben keinen Anspruch auf Vollständigkeit! Module, die nur intern von anderen Modulen verwendet werden oder noch keinen Zweck haben, wurden absichtlich ausgelassen. Eine vollständige Liste der Perl-Standardmodule erhalten Sie, wenn Sie mit <code>perldoc</code> das Dokument <code>perlmodlib</code> aufrufen.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Mehrzahl der Modulnamen beginnt mit einem Großbuchstaben. Es hat sich eingebürgert, Module auf diese Weise zu benennen. Die Unterscheidung von Groß- und Kleinschreibung beim Einbinden ist wichtig!</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Module mit allgemeinen Aufgaben">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_mit_allgemeinen_Aufgaben"> Module mit allgemeinen Aufgaben </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Attribute::Handlers</code>
+</td>
+<td> Ermöglicht das Definieren von Handlern für die Parameter von <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutinen</a>.
+</td></tr>
+<tr>
+<td> <code>Benchmark</code>
+</td>
+<td> Misst die Ausführungszeit für Perl-Codes und testet den Code in Wiederholungsschleifen.
+</td></tr>
+<tr>
+<td> <code>Carp</code>
+</td>
+<td> Stellt Funktionen zur Fehlerbehandlung bereit.
+</td></tr>
+<tr>
+<td> <code>CPAN</code>
+</td>
+<td> Lädt und installiert Module aus dem <a href="http://wiki.selfhtml.org/wiki/Perl/Module/CPAN-Module" title="Perl/Module/CPAN-Module">CPAN-Verzeichnis</a> bei Bedarf.
+</td></tr>
+<tr>
+<td> <code>CPAN::FirstTime</code>
+</td>
+<td> Ergänzung zu <code>CPAN</code>: unterstützt bei den Initialisierungseinstellungen zum Benutzen des CPAN-Moduls.
+</td></tr>
+<tr>
+<td> <code>CPAN::Nox</code>
+</td>
+<td> Ergänzung zu <code>CPAN</code>: verhindert, dass vorkompilierte Erweiterungen ausgeführt werden.
+</td></tr>
+<tr>
+<td> <code>Config</code>
+</td>
+<td> Erlaubt den Zugriff auf die einzelnen Konfigurationsdaten von Perl.
+</td></tr>
+<tr>
+<td> <code>Data::Dumper</code>
+</td>
+<td> Stellt die interne Struktur von Variablen dar.
+</td></tr>
+<tr>
+<td> <code>DB</code>
+</td>
+<td> Ermöglicht den Zugriff auf die Debug-API von Perl.
+</td></tr>
+<tr>
+<td> <code>Devel::DProf</code>
+</td>
+<td> Misst die Ausführungszeit eines Perl-Scripts und der einzelnen enthaltenen Subroutinen.
+</td></tr>
+<tr>
+<td> <code>Devel::PPPort</code>
+</td>
+<td> Stellt einige Features der Perl-API aus neuen Versionen des Perl-Interpreters für ältere Perl-Versionen bereit.
+</td></tr>
+<tr>
+<td> <code>Digest</code>
+</td>
+<td> Stellt die Routinen der Module der <code>Digest</code>-Familie bereit.
+</td></tr>
+<tr>
+<td> <code>Digest::MD5</code>
+</td>
+<td> Erlaubt es, MD5-Prüfsummen zu berechnen.
+</td></tr>
+<tr>
+<td> <code>Dumpvalue</code>
+</td>
+<td> Stellt Perl-Daten dar. Beispielsweise lässt sich mit diesem Modul der komplette Inhalt eines <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Packages_und_Module" title="Perl/Module/Einführung">Namensraums</a> darstellen.
+</td></tr>
+<tr>
+<td> <code>English</code>
+</td>
+<td> Definiert Klartextnamen für die <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten Variablen</a> von Perl und macht Quellcode dadurch lesbarer.
+</td></tr>
+<tr>
+<td> <code>Env</code>
+</td>
+<td> Importiert Umgebungsvariablen mit einzelnen Namen und macht dadurch die Verwendung des vordefinierten Hashes <code>%ENV</code> überflüssig.
+</td></tr>
+<tr>
+<td> <code>Fatal</code>
+</td>
+<td> Bewirkt, dass Funktionen, die als Rückgabewert <code>false</code> liefern, mit der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts#die" title="Perl/Funktionen für die Kontrolle des laufenden Scripts">die</a>-Funktion auf <code>STDERR</code> schreiben und das laufende Script beenden.
+</td></tr>
+<tr>
+<td> <code>Filter::Simple</code>
+</td>
+<td> Einfache Variante von <code>Filter::Util::Call</code>.
+</td></tr>
+<tr>
+<td> <code>Filter::Util::Call</code>
+</td>
+<td> Erlaubt das Definieren sog. "Source-Filter", einer Art Mini-Interpreter, der den Quellcode des Scripts zur Laufzeit verändern kann, bevor er vom Interpreter verarbeitet wird. Auf diese Weise lassen sich beispielsweise eigene Sprach-Konstrukte realisieren (wie beim Standardmodul <code>Switch</code>, das auf <code>Filter::Util::Call</code> basiert).
+</td></tr>
+<tr>
+<td> <code>Getopt::Long</code>
+</td>
+<td> Ermöglicht die Interpretation von Kommandozeilenoptionen für das Script mit mehreren Zeichen.
+</td></tr>
+<tr>
+<td> <code>Getopt::Std</code>
+</td>
+<td> Ermöglicht die Interpretation von Kommandozeilenoptionen für das Script mit einem Zeichen.
+</td></tr>
+<tr>
+<td> <code>Hash::Util</code>
+</td>
+<td> Enthält verschiedene Funktionen zum Arbeiten mit <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hashes</a>.
+</td></tr>
+<tr>
+<td> <code>List::Util</code>
+</td>
+<td> Enthält verschiedene Funktionen zum Arbeiten mit <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Listen</a>.
+</td></tr>
+<tr>
+<td> <code>Memoize</code>
+</td>
+<td> Versucht, Subroutinen zu beschleunigen, indem es die Rückgabewerte speichert.
+</td></tr>
+<tr>
+<td> <code>Memoize::Expire</code>
+</td>
+<td> Plugin für das <code>Memoize</code>-Modul, das dafür sorgt, dass die gespeicherten Rückgabewerte irgendwann ungültig werden und neu ausgelesen werden müssen.
+</td></tr>
+<tr>
+<td> <code>POSIX</code>
+</td>
+<td> Stellt eine Bibliothek an Funktionen für alle möglichen Zwecke bereit. Maßgeblich dabei ist der IEEE-Standard 1003.1. Viele aus C bekannte Funktionen, die dem IEEE-Standard entsprechen, finden sich in diesem Modul wieder, z.B. für Zeichenkettenverarbeitung oder Signal-Handling unter Unix.
+</td></tr>
+<tr>
+<td> <code>Scalar::Util</code>
+</td>
+<td> Enthält verschiedene Funktionen zum Arbeiten mit <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalaren</a>.
+</td></tr>
+<tr>
+<td> <code>Shell</code>
+</td>
+<td> Erlaubt es, die Standardausgabe von Shell-Kommandos abzufangen und in einer Variablen zu speichern, z.B. zur Weiterverarbeitung oder zum formatierten Ausgeben, etwa in HTML-Code an den Browser.
+</td></tr>
+<tr>
+<td> <code>Storable</code>
+</td>
+<td> Erlaubt es, Perl-Datenstrukturen auf der Festplatte zu speichern und später wieder zu laden.
+</td></tr>
+<tr>
+<td> <code>Switch</code>
+</td>
+<td> Erlaubt es, die aus anderen Programmiersprachen bekannten <code>switch</code>-Anweisungen in Perl zu benutzen.
+</td></tr>
+<tr>
+<td> <code>Symbol</code>
+</td>
+<td> Generiert symbolische Namen und erlaubt dadurch, zur Laufzeit Dateihandles usw. zu erzeugen.
+</td></tr>
+<tr>
+<td> <code>Sys::Syslog</code>
+</td>
+<td> Ermöglicht den Zugriff auf Aufrufe des Unix-Programms <code>syslog</code>.
+</td></tr>
+<tr>
+<td> <code>Unicode::Collate</code>
+</td>
+<td> Klasse zum Arbeiten mit Unicode-Strings.
+</td></tr>
+<tr>
+<td> <code>Unicode::Normalize</code>
+</td>
+<td> Funktionen, um Unicode zu normalisieren.
+</td></tr>
+<tr>
+<td> <code>Unicode::UCD</code>
+</td>
+<td> Schnittstelle zur Unicode-Zeichendatenbank.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Module für Textverarbeitung">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Textverarbeitung"> Module für Textverarbeitung </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>MIME::Base64</code>
+</td>
+<td> Ermöglicht das Umwandeln von Zeichenketten in das Base64-Format und umgekehrt.
+</td></tr>
+<tr>
+<td> <code>MIME::QuotedPrint</code>
+</td>
+<td> Ermöglicht das Umwandeln von Zeichenketten in das Quoted-Printable-Format und umgekehrt.
+</td></tr>
+<tr>
+<td> <code>Search::Dict</code>
+</td>
+<td> Durchsucht ein Wörterbuch nach einem Wort und gibt die Dateiposition oder <code>-1</code> zurück, je nachdem, ob das Wort gefunden wurde oder nicht.
+</td></tr>
+<tr>
+<td> <code>Term::ANSIColor</code>
+</td>
+<td> Erlaubt es, Bildschirmausgaben einzufärben.
+</td></tr>
+<tr>
+<td> <code>Term::Cap</code>
+</td>
+<td> Ermöglicht den Zugriff auf <var>termcap</var> (Unix).
+</td></tr>
+<tr>
+<td> <code>Term::Complete</code>
+</td>
+<td> Vervollständigt Worteingaben bei Prompt-Aufforderungen automatisch.
+</td></tr>
+<tr>
+<td> <code>Term::ReadLine</code>
+</td>
+<td> Stellt eine Schnittstelle für diverse andere Packages aus der <var>ReadLine</var>-Reihe dar.
+</td></tr>
+<tr>
+<td> <code>Text::Abbrev</code>
+</td>
+<td> Erzeugt aus einer Liste von Begriffen eine Abkürzungstabelle.
+</td></tr>
+<tr>
+<td> <code>Text::Balanced</code>
+</td>
+<td> Extrahiert Text aus einer Zeichenkette, der von bestimmten Zeichenketten eingeschlossen ist.
+</td></tr>
+<tr>
+<td> <code>Text::ParseWords</code>
+</td>
+<td> Zerlegt einen Text in die einzelnen Wörter und speichert diese in einer Liste. Wörter in Anführungszeichen gelten dabei als ein zusammenhängender Ausdruck.
+</td></tr>
+<tr>
+<td> <code>Text::Soundex</code>
+</td>
+<td> Erzeugt für ein Wort den Soundex-Code entsprechend dem Soundex-Algorithmus von Knuth. Dieser Code ist ein Schema für die Erzeugung von computergesprochenem Englisch.
+</td></tr>
+<tr>
+<td> <code>Text::Tabs</code>
+</td>
+<td> Kann in einem Text Tabulatoren durch eine feste Anzahl Leerzeichen ersetzen oder umgekehrt mehrere Leerzeichen zu einem Tabulator-Zeichen zusammenfassen.
+</td></tr>
+<tr>
+<td> <code>Text::Wrap</code>
+</td>
+<td> Bricht Text automatisch um entsprechend einer zu definierenden Vorgabe, bei welcher Zeichenspalte umbrochen werden soll.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Module für Sprachen und Zeichenkodierungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Sprachen_und_Zeichenkodierungen"> Module für Sprachen und Zeichenkodierungen </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Encode</code>
+</td>
+<td> Allgemeine API für die Module der <code>Encode</code>-Familie.
+</td></tr>
+<tr>
+<td> <code>Encode::Alias</code>
+</td>
+<td> Erlaubt das Definieren von Aliasnamen für Kodierungen.
+</td></tr>
+<tr>
+<td> <code>Encode::Byte</code>
+</td>
+<td> Erlaubt das Arbeiten mit Kodierungen, die nur 1 Byte für ein Zeichen verwenden (zum Beispiel die <a rel="nofollow" class="external text" href="http://de.selfhtml.org/inter/zeichenkodierungen.htm">ISO-8859-Kodierungen</a>).
+</td></tr>
+<tr>
+<td> <code>Encode::CN</code>
+</td>
+<td> Erlaubt es, mit chinesischen Zeichenkodierungen zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>Encode::EBCDIC</code>
+</td>
+<td> Erlaubt es, mit EBCDIC-Zeichenkodierungen zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>Encode::Encoder</code>
+</td>
+<td> Objektorientiertes Tool zum Arbeiten mit Zeichenkodierungen.
+</td></tr>
+<tr>
+<td> <code>Encode::Encoding</code>
+</td>
+<td> Basisklasse für Zeichenkodierungen.
+</td></tr>
+<tr>
+<td> <code>Encode::Guess</code>
+</td>
+<td> Versucht, den Codierungstyp von Daten festzustellen.
+</td></tr>
+<tr>
+<td> <code>Encode::JP</code>
+</td>
+<td> Erlaubt es, mit japanischen Zeichenkodierungen zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>Encode::KR</code>
+</td>
+<td> Erlaubt es, mit koreanischen Zeichenkodierungen zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>Encode::MIME::Header</code>
+</td>
+<td> Erlaubt das Verarbeiten von MIME-kodierten Mailheader-Angaben (derzeit wird nur UTF-8 unterstützt).
+</td></tr>
+<tr>
+<td> <code>Encode::Symbol</code>
+</td>
+<td> Erlaubt es, mit Codierungen von verschiedenen Symbolen zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>Encode::TW</code>
+</td>
+<td> Erlaubt es, mit taiwanesischen Zeichenkodierungen zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>Encode::Unicode</code>
+</td>
+<td> Erlaubt das Arbeiten mit Zeichenkodierungen nach dem Unicode-Standard.
+</td></tr>
+<tr>
+<td> <code>Encode::Unicode::UTF7</code>
+</td>
+<td> Erlaubt das Arbeiten mit Zeichenkodierungen nach UTF-7.
+</td></tr>
+<tr>
+<td> <code>I18N::Collate</code>
+</td>
+<td> Passt skalare Daten mit 8 Bit Zeichenbreite an das verwendete System an (nur im Zusammenhang mit Perl-Versionen unter 5.003_06 interessant, da seitdem im Perl-Interpreter direkt implementiert).
+</td></tr>
+<tr>
+<td> <code>I18N::Langinfo</code>
+</td>
+<td> Gibt Informationen über die Spracheinstellungen des Systems zurück.
+</td></tr>
+<tr>
+<td> <code>I18N::LangTags</code>
+</td>
+<td> Enthält Funktionen, um mit Sprachkürzeln nach <a class="external mw-magiclink-rfc" href="http://tools.ietf.org/html/rfc3066">RFC 3066</a> zu arbeiten (z.B. <code>de</code>, <code>en</code> und <code>fr</code>).
+</td></tr>
+<tr>
+<td> <code>I18N::LangTags::List</code>
+</td>
+<td> Versucht, Sprachkürzel in einen Sprachnamen umzuwandeln.
+</td></tr>
+<tr>
+<td> <code>Locale::Constants</code>
+</td>
+<td> Definiert verschiedene Konstanten, die beim Arbeiten mit den Modulen <code>Locale::Country</code>, <code>Locale::Currency</code>, <code>Locale::Language</code> und <code>Locale::Script</code> genutzt werden können.
+</td></tr>
+<tr>
+<td> <code>Locale::Country</code>
+</td>
+<td> Enthält Ländernamen und -codes nach ISO&#160;3166.
+</td></tr>
+<tr>
+<td> <code>Locale::Currency</code>
+</td>
+<td> Enthält Währungsnamen und -codes nach ISO&#160;4217.
+</td></tr>
+<tr>
+<td> <code>Locale::Language</code>
+</td>
+<td> Enthält Sprachnamen und -codes nach ISO&#160;639.
+</td></tr>
+<tr>
+<td> <code>Locale::Maketext</code>
+</td>
+<td> Framework um Software mehrsprachig anzubieten.
+</td></tr>
+<tr>
+<td> <code>Locale::Script</code>
+</td>
+<td> Enthält Schriftnamen und -codes nach ISO&#160;15924.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Module für Berechnungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Berechnungen"> Module für Berechnungen </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Math::BigFloat</code>
+</td>
+<td> Erlaubt das Rechnen mit Fließkommazahlen, die größer oder kleiner sind als das, was Perl normalerweise als Fließkommazahl zu interpretieren in der Lage ist. <a href="http://wiki.selfhtml.org/wiki/Perl/Zahlen#Beispiel_eines_vollst.C3.A4ndigen_CGI-Scripts_in_Perl" title="Perl/Zahlen">Beispiel</a>
+</td></tr>
+<tr>
+<td> <code>Math::BigInt</code>
+</td>
+<td> Erlaubt das Rechnen mit Ganzzahlen, die größer sind als das, was Perl normalerweise als Ganzzahl zu interpretieren in der Lage ist. <a href="http://wiki.selfhtml.org/wiki/Perl/Zahlen#Beispiel_eines_vollst.C3.A4ndigen_CGI-Scripts_in_Perl" title="Perl/Zahlen">Beispiel</a>
+</td></tr>
+<tr>
+<td> <code>Math::BigRat</code>
+</td>
+<td> Erlaubt das Rechnen mit Zahlen, die größer sind als das, was Perl normalerweise als Zahl zu interpretieren in der Lage ist.
+</td></tr>
+<tr>
+<td> <code>Math::Complex</code>
+</td>
+<td> Unterstützt das Rechnen mit komplexen Zahlen, wie sie etwa zum Lösen mancher Gleichungen erforderlich sind.
+</td></tr>
+<tr>
+<td> <code>Math::Trig</code>
+</td>
+<td> Stellt die in Perl selber fehlenden trigonometrischen Funktionen für Tangens, Arcus Cosinus, Arcus Sinus sowie Berechnungen mit der Konstanten Pi bereit.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Module für Dateiverwaltung">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Dateiverwaltung"> Module für Dateiverwaltung </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Cwd</code>
+</td>
+<td> Ermittelt das aktuelle Arbeitsverzeichnis
+</td></tr>
+<tr>
+<td> <code>DirHandle</code>
+</td>
+<td> Bietet eine objektorientierte Alternative zu den Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#opendir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">opendir</a>, <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#readdir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">readdir</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#closedir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">closedir</a> an.
+</td></tr>
+<tr>
+<td> <code>File::Basename</code>
+</td>
+<td> Zerlegt eine Dateiangabe mit Pfad in den Pfadnamen und den Dateinamen.
+</td></tr>
+<tr>
+<td> <code>File::CheckTree</code>
+</td>
+<td> Kann mehrere Dateien oder Verzeichnisse auf Existenz überprüfen.
+</td></tr>
+<tr>
+<td> <code>File::Compare</code>
+</td>
+<td> Vergleicht zwei Dateien und überprüft, ob sie inhaltlich identisch sind.
+</td></tr>
+<tr>
+<td> <code>File::Copy</code>
+</td>
+<td> Ermöglicht das Kopieren von Dateien und gilt als wichtiges Tool, um Dateien mit Perl betriebssystemunabhängig kopieren zu können.
+</td></tr>
+<tr>
+<td> <code>File::DosGlob</code>
+</td>
+<td> Erzeugt von einem Verzeichnis eine Dateiliste und erlaubt dabei die Angabe DOS-typischer Wildcards wie <code>*.exe</code>.
+</td></tr>
+<tr>
+<td> <code>File::Find</code>
+</td>
+<td> Durchsucht Verzeichnisbäume nach Dateien.
+</td></tr>
+<tr>
+<td> <code>File::Path</code>
+</td>
+<td> Legt mehrere Verzeichnisse auf einmal neu an oder löscht mehrere Verzeichnisse, je nach Wunsch mitsamt allen darin enthaltenen Dateien.
+</td></tr>
+<tr>
+<td> <code>File::Spec</code>
+</td>
+<td> Stellt Methoden bereit, um mit syntaktisch korrekten Dateinamen und Pfaden zu arbeiten. Da diese betriebssystemspezifisch sind, gibt es für diverse wichtige Betriebssysteme entsprechende Untermodule.
+</td></tr>
+<tr>
+<td> <code>File::Spec::Cygwin</code>
+</td>
+<td> Stellt Methoden bereit, um unter Cygwin mit syntaktisch korrekten Dateinamen und Pfaden zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>File::Spec::Epoc</code>
+</td>
+<td> Stellt Methoden bereit, um auf dem Betriebssystem Epoc mit syntaktisch korrekten Dateinamen und Pfaden zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>File::Spec::Mac</code>
+</td>
+<td> Stellt Methoden bereit, um auf dem Betriebssystem Macintosh mit syntaktisch korrekten Dateinamen und Pfaden zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>File::Spec::OS2</code>
+</td>
+<td> Stellt Methoden bereit, um auf dem Betriebssystem OS/2 mit syntaktisch korrekten Dateinamen und Pfaden zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>File::Spec::Unix</code>
+</td>
+<td> Stellt Methoden bereit, um auf Unix-Derivaten mit syntaktisch korrekten Dateinamen und Pfaden zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>File::Spec::VMS</code>
+</td>
+<td> Stellt Methoden bereit, um auf dem Betriebssystem VMS mit syntaktisch korrekten Dateinamen und Pfaden zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>File::Spec::Win32</code>
+</td>
+<td> Stellt Methoden bereit, um auf Windows-Betriebssystemen (ab Windows 95) mit syntaktisch korrekten Dateinamen und Pfaden zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>File::stat</code>
+</td>
+<td> Ruft einfach die Perl-Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management#stat" title="Perl/Funktionen für Datei- und Verzeichnis-Management">stat</a> auf und erlaubt es, objektorientiert auf die Daten zuzugreifen.
+</td></tr>
+<tr>
+<td> <code>File::Temp</code>
+</td>
+<td> Stellt Funktionen bereit, um auf sichere Weise mit temporären Dateien mit eindeutigen Namen zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>FileCache</code>
+</td>
+<td> Erlaubt es, mehr Dateien gleichzeitig geöffnet zu halten als das Betriebssystem erlaubt.
+</td></tr>
+<tr>
+<td> <code>FileHandle</code>
+</td>
+<td> Ermöglicht das Arbeiten mit objektorientierten Handles für Dateien und stellt alle wichtigen Funktionen zum Lesen und Schreiben von Dateien und zum Positionieren des Dateizeigers bereit.
+</td></tr>
+<tr>
+<td> <code>FindBin</code>
+</td>
+<td> Liefert das Verzeichnis, in dem sich das Perl-Script befindet.
+</td></tr>
+<tr>
+<td> <code>SelectSaver</code>
+</td>
+<td> Sichert Handles für Dateien und erlaubt es, gesicherte Handles später wiederzuverwenden.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Module für Ein-/Ausgabe">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Ein-.2FAusgabe"> Module für Ein-/Ausgabe </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>IO</code>
+</td>
+<td> lädt die untergeordneten <code>IO</code>-Module.
+</td></tr>
+<tr>
+<td> <code>IO::Dir</code>
+</td>
+<td> Ermöglicht das objektorientierte Arbeiten mit Verzeichnishandles.
+</td></tr>
+<tr>
+<td> <code>IO::File</code>
+</td>
+<td> Ermöglicht das Arbeiten mit objektorientierten Ein-/Ausgabe-Handles. Erbt dabei Objekte von <code>IO::Handle</code> und <code>IO::Seekable</code>.
+</td></tr>
+<tr>
+<td> <code>IO::Handle</code>
+</td>
+<td> Basisklasse für objektorientierte Ein-/Ausgabe-Handles, die z.B. von <code>IO::File</code> verwendet werden.
+</td></tr>
+<tr>
+<td> <code>IO::Pipe</code>
+</td>
+<td> Ermöglicht es, mit Hilfe objektorientierter Methoden Pipes zwischen Prozessen (Umlenkung der Ausgabe eines Prozesses in die Eingabe eines nachfolgenden Prozesses) zu erzeugen.
+</td></tr>
+<tr>
+<td> <code>IO::Poll</code>
+</td>
+<td> Ermöglicht es, mit Hilfe objektorientierter Methoden mit dem <code>poll</code>-Systembefehl zu arbeiten.
+</td></tr>
+<tr>
+<td> <code>IO::Seekable</code>
+</td>
+<td> Stellt objektorientierte Front-Ends für die Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#seek" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">seek</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#tell" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">tell</a>  bereit.
+</td></tr>
+<tr>
+<td> <code>IO::Select</code>
+</td>
+<td> Bietet eine objektorientierte Verwaltung von Ein-/Ausgabe-Handles an und enthält Funktionen zum Erzeugen, Löschen und Überprüfen von Handles.
+</td></tr>
+<tr>
+<td> <code>IO::Socket</code>
+</td>
+<td> Bietet eine objektorientierte Verwaltung von Ein-/Ausgabe-Sockets für Prozesskommunikation über ein Netzwerk, bevorzugt TCP/IP, an und enthält Funktionen zum Erzeugen, Löschen und Abfragen der Sockets.
+</td></tr>
+<tr>
+<td> <code>PerlIO</code>
+</td>
+<td> Erlaubt Ein-/Ausgabe-Operationen mit kodierten Daten. Sie können dann mit den Daten arbeiten, als wären sie nicht kodiert.
+</td></tr>
+<tr>
+<td> <code>PerlIO::encoding</code>
+</td>
+<td> Erlaubt das transparente Arbeiten mit Dateien, deren Inhalt mit einem Verfahren wie UTF-8 kodiert wurde. Sie können dann mit den Daten arbeiten, als wären sie nicht kodiert.
+</td></tr>
+<tr>
+<td> <code>PerlIO::scalar</code>
+</td>
+<td> Erlaubt es, mit einem <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalar</a> so zu arbeiten, als ob er eine Datei wäre.
+</td></tr>
+<tr>
+<td> <code>PerlIO::via</code>
+</td>
+<td> Ein Hilfsmodul zum Arbeiten mit Filtern für die Ein-/Ausgabe von Dateien mit kodiertem Inhalt.
+</td></tr>
+<tr>
+<td> <code>PerlIO::via::QuotedPrint</code>
+</td>
+<td> Erlaubt das transparente Arbeiten mit Dateien, deren Inhalt im Quoted-Printable-Format vorliegt. Sie können dann mit den Daten arbeiten, als wären sie nicht kodiert.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Module für Datum und Zeit">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Datum_und_Zeit"> Module für Datum und Zeit </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Time::HiRes</code>
+</td>
+<td> Ersetzt interne Funktionen wie <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#time" title="Perl/Funktionen für Datum und Uhrzeit">time</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Betriebssystemaufrufe#sleep" title="Perl/Funktionen für Betriebssystemaufrufe">sleep</a> und gibt ihnen die Möglichkeit, mit Millisekunden umzugehen.
+</td></tr>
+<tr>
+<td> <code>Time::Local</code>
+</td>
+<td> Stellt Umkehrfunktionen für die Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#gmtime" title="Perl/Funktionen für Datum und Uhrzeit">gmtime</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#localtime" title="Perl/Funktionen für Datum und Uhrzeit">localtime</a> zur Verfügung.
+</td></tr>
+<tr>
+<td> <code>Time::gmtime</code>
+</td>
+<td> Überschreibt die Perl-Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#gmtime" title="Perl/Funktionen für Datum und Uhrzeit">gmtime</a> und ermöglicht einen objektorientierten Zugriff auf die Daten.
+</td></tr>
+<tr>
+<td> <code>Time::localtime</code>
+</td>
+<td> Überschreibt die Perl-Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#localtime" title="Perl/Funktionen für Datum und Uhrzeit">localtime</a> und ermöglicht einen objektorientierten Zugriff auf die Daten.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Module für Datenbankzugriffe">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Datenbankzugriffe"> Module für Datenbankzugriffe </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>AnyDBM_File</code>
+</td>
+<td> Basismodul für die übrigen Module dieser Abteilung.
+</td></tr>
+<tr>
+<td> <code>DB_File</code>
+</td>
+<td> Erlaubt den Zugriff auf Datenbankdateien von Berkeley DB Version 1.x.
+</td></tr>
+<tr>
+<td> <code>GDBM_File</code>
+</td>
+<td> Erlaubt den Zugriff auf GDBM-Dateien über die <code>tie</code>-Funktion, die eine Variable an eine Objektklasse bindet.
+</td></tr>
+<tr>
+<td> <code>NDBM_File</code>
+</td>
+<td> Erlaubt den Zugriff auf NDBM-Dateien über die <code>tie</code>-Funktion, die eine Variable an eine Objektklasse bindet.
+</td></tr>
+<tr>
+<td> <code>ODBM_File</code>
+</td>
+<td> Erlaubt den Zugriff auf ODBM-Dateien über die <code>tie</code>-Funktion, die eine Variable an eine Objektklasse bindet.
+</td></tr>
+<tr>
+<td> <code>SDBM_File</code>
+</td>
+<td> Erlaubt den Zugriff auf SDBM-Dateien über die <code>tie</code>-Funktion, die eine Variable an eine Objektklasse bindet.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Module für Prozesskommunikation">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Prozesskommunikation"> Module für Prozesskommunikation </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>IPC::Msg</code>
+</td>
+<td> Ermöglicht es, Nachrichtenwarteschlangen (Message Queues) und zugehörige Nachrichten für Unix-System V zu stellen.
+</td></tr>
+<tr>
+<td> <code>IPC::Open2</code>
+</td>
+<td> Öffnet einen Unix-Prozess zum Lesen und Schreiben.
+</td></tr>
+<tr>
+<td> <code>IPC::Open3</code>
+</td>
+<td> Öffnet einen Unix-Prozess zum Lesen, Schreiben und für Fehlerbehandlung.
+</td></tr>
+<tr>
+<td> <code>IPC::Semaphore</code>
+</td>
+<td> Ermöglicht es, die Semaphore-Funktion von Unix-System V zu nutzen.
+</td></tr>
+<tr>
+<td> <code>IPC::SysV</code>
+</td>
+<td> Stellt IPC-Konstanten von Unix-System V bereit.
+</td></tr>
+<tr>
+<td> <code>Thread</code>
+</td>
+<td> Ermöglicht das Arbeiten mit Multithreading (Teile eines Scripts werden separat in eigenen "Threads" ausgeführt, während die "normale" Ausführung des Scripts weiterläuft.)
+</td></tr>
+<tr>
+<td> <code>Thread::Queue</code>
+</td>
+<td> Stellt eine Warteschlange in Form einer Liste bereit, die Threads erlaubt, Variablen hinzuzufügen oder zu entfernen.
+</td></tr>
+<tr>
+<td> <code>Thread::Semaphore</code>
+</td>
+<td> Ermöglicht die Anwendung der Semaphore-Technik zwischen Threads.
+</td></tr>
+<tr>
+<td> <code>Thread::Signal</code>
+</td>
+<td> Startet einen speziellen Signal-Handler-Thread, an den für den laufenden Prozess ankommende Signale weitergeleitet werden, sodass ein Script, das durch Multithreading stark beschäftigt ist, Signale in einem Zwischenspeicher halten kann, bis eine Abarbeitung möglich ist.
+</td></tr>
+<tr>
+<td> <code>Thread::Specific</code>
+</td>
+<td> Generiert für einen Thread einen eindeutigen Schlüssel.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Module für Variablenbindung">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Variablenbindung"> Module für Variablenbindung </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Tie::Array</code>
+</td>
+<td> Bindet eine Liste an eine Objektklasse.
+</td></tr>
+<tr>
+<td> <code>Tie::File</code>
+</td>
+<td> Ermöglicht es, die Zeilen einer Datei über einen Array anzusprechen.
+</td></tr>
+<tr>
+<td> <code>Tie::Handle</code>
+</td>
+<td> Bindet ein Handle an eine Objektklasse.
+</td></tr>
+<tr>
+<td> <code>Tie::Hash</code>
+</td>
+<td> Bindet einen Hash an eine Objektklasse
+</td></tr>
+<tr>
+<td> <code>Tie::Memoize</code>
+</td>
+<td> Fügt die Daten zu einem Hash hinzu, wenn Sie benötigt werden.
+</td></tr>
+<tr>
+<td> <code>Tie::RefHash</code>
+</td>
+<td> Ermöglicht Referenzen als Schlüssel für Hashes.
+</td></tr>
+<tr>
+<td> <code>Tie::Scalar</code>
+</td>
+<td> Bindet einen Skalar an eine Objektklasse.
+</td></tr>
+<tr>
+<td> <code>Tie::SubstrHash</code>
+</td>
+<td> Ermöglicht einen Hash-artigen Zugriff auf eine Liste fester Länge.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Module für Modulverwaltung und objektorientierte Programmierung">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Modulverwaltung_und_objektorientierte_Programmierung"> Module für Modulverwaltung und objektorientierte Programmierung </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Class::ISA</code>
+</td>
+<td> Stellt die Werte der <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen#Vordefinierte_Listen_und_Hashes" title="Perl/Vordefinierte Variablen">@ISA</a>-Listen sämtlicher eingebundener Basisklassen bereit.
+</td></tr>
+<tr>
+<td> <code>Class::Struct</code>
+</td>
+<td> Erzeugt Datenstrukturen nach dem Vorbild von <code>struct</code> in C.
+</td></tr>
+<tr>
+<td> <code>Exporter</code>
+</td>
+<td> Ermöglicht Modulen, genau festzulegen, welche Variablen und Funktionen in den Namensraum eines einbindenden Scripts importiert werden.
+</td></tr>
+<tr>
+<td> <code>NEXT</code>
+</td>
+<td> Stellt eine Pseudoklasse namens <code>NEXT</code> bereit, mit der Sie beim Aufruf von Methoden von Klassen Methoden gleichen Namens aus den Basisklassen mit aufrufen können.
+</td></tr>
+<tr>
+<td> <code>UNIVERSAL</code>
+</td>
+<td> Stellt die Basis-Objektklasse für objektorientiertes Programmieren in Perl dar. Erlaubt das Überprüfen von Referenzen und Methoden bei beliebigen Objekten.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Module für CGI-Scripts">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_CGI-Scripts"> Module für CGI-Scripts </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>CGI</code>
+</td>
+<td> Kann Formulardaten parsen und ermöglicht dadurch die bequeme Weiterverarbeitung von Formulardaten. Stellt außerdem verschiedene Mittel bereit, um HTML-Ausgaben an den Browser zu senden.
+</td></tr>
+<tr>
+<td> <code>CGI::Apache</code>
+</td>
+<td> Variante des <code>CGI</code>-Moduls, die speziell für den Einsatz unter dem Apache Webserver optimiert war. Das Modul ist inzwischen veraltet.
+</td></tr>
+<tr>
+<td> <code>CGI::Carp</code>
+</td>
+<td> Ermöglicht es, auftretende Fehler und Laufzeitprobleme auch an die Standardausgabe und damit an den auf Ausgabe wartenden Browser zu senden.
+</td></tr>
+<tr>
+<td> <code>CGI::Cookie</code>
+</td>
+<td> Erlaubt das Setzen und Auslesen von Netscape- bzw. HTTP1.1-kompatiblen Cookies auf dem Rechner des Anwenders. Mit Hilfe von Cookies lassen sich Informationen auf dem Anwenderrechner speichern, die beim nächsten Aufruf wieder ausgelesen werden können (Stichwort "mitdenkende Web-Seiten").
+</td></tr>
+<tr>
+<td> <code>CGI::Fast</code>
+</td>
+<td> Schnittstelle zum Fast-CGI-Standard, durch den CGI-Scripts deutlich schneller werden, weil sie als Prozesse dauerhaft im Arbeitsspeicher des Server-Rechners gehalten werden.
+</td></tr>
+<tr>
+<td> <code>CGI::Push</code>
+</td>
+<td> Schnittstelle zum Server-Push, also dem Senden von Inhalten an den Browser ohne dessen explizite Anfrage. Web-Seiten können auf diese Weise in bestimmten Zeitintervallen automatisch neu gesendet werden, was bei schnell wechselnden Inhalten sinnvoll ist.
+</td></tr>
+<tr>
+<td> <code>CGI::Switch</code>
+</td>
+<td> Probiert selbstständig, ein neues CGI-Objekt anzulegen, und zwar wenn möglich mit <code>CGI::Apache</code>, ansonsten mit dem normalen <code>CGI</code>-Modul. Das Modul ist inzwischen veraltet.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Module für Internetfunktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_Internetfunktionen"> Module für Internetfunktionen </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Net::Cmd</code>
+</td>
+<td> Basisklasse zur Kommunikation mit befehlsbasierten Internet-Protokollen (wie FTP und SMTP).
+</td></tr>
+<tr>
+<td> <code>Net::Domain</code>
+</td>
+<td> Ermittelt den Host- und Domainnamen des aktuellen Rechners.
+</td></tr>
+<tr>
+<td> <code>Net::FTP</code>
+</td>
+<td> Klasse zur Kommunikation mit FTP-Servern.
+</td></tr>
+<tr>
+<td> <code>Net::Netrc</code>
+</td>
+<td> Objektorientierter Zugriff auf die <var>.netrc</var>-Datei des aktuellen Benutzers.
+</td></tr>
+<tr>
+<td> <code>Net::NNTP</code>
+</td>
+<td> Klasse zur Kommunikation mit NNTP-Servern (News).
+</td></tr>
+<tr>
+<td> <code>Net::Ping</code>
+</td>
+<td> Überprüft die Erreichbarkeit eines Host-Rechners im Internet mit der dafür üblichen Ping-Funktion.
+</td></tr>
+<tr>
+<td> <code>Net::POP3</code>
+</td>
+<td> Klasse zur Kommunikation mit POP3-Servern.
+</td></tr>
+<tr>
+<td> <code>Net::SMTP</code>
+</td>
+<td> Klasse zur Kommunikation mit SMTP-Servern.
+</td></tr>
+<tr>
+<td> <code>Net::Time</code>
+</td>
+<td> Funktionen zum Zugriff auf Zeit-Server.
+</td></tr>
+<tr>
+<td> <code>Net::hostent</code>
+</td>
+<td> Ersetzt die Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#gethostbyaddr" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">gethostbyaddr</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#gethostbyname" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">gethostbyname</a> durch ein Objekt. Das Objekt stellt eine Datenstruktur für den Zugriff auf die Konfigurationsdaten zur Verfügung, die der von C aus dessen Headerdatei <var>netdb.h</var> ähnelt.
+</td></tr>
+<tr>
+<td> <code>Net::netent</code>
+</td>
+<td> Ersetzt die Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getnetent" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getnetent</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getnetbyname" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getnetbyname</a> durch ein Objekt. Das Objekt stellt eine Datenstruktur für den Zugriff auf die Konfigurationsdaten zur Verfügung, die der von C aus dessen Headerdatei <var>netdb.h</var> ähnelt.
+</td></tr>
+<tr>
+<td> <code>Net::protoent</code>
+</td>
+<td> Ersetzt die Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getprotoent" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getprotoent</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getprotobyname" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getprotobyname</a> durch ein Objekt. Das Objekt stellt eine Datenstruktur für den Zugriff auf die Konfigurationsdaten zur Verfügung, die der von C aus dessen Headerdatei <var>netdb.h</var> ähnelt.
+</td></tr>
+<tr>
+<td> <code>Net::servent</code>
+</td>
+<td> Ersetzt die Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getservent" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getservent</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getservbyname" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getservbyname</a> durch ein Objekt. Das Objekt stellt eine Datenstruktur für den Zugriff auf die Konfigurationsdaten zur Verfügung, die der von C aus dessen Headerdatei <var>netdb.h</var> ähnelt.
+</td></tr>
+<tr>
+<td> <code>Socket</code>
+</td>
+<td> Stellt eine Übersetzung der C-Header-Datei <var>socket.h</var> dar und kann Hostnamen, Portnummern usw. ermitteln.
+</td></tr>
+<tr>
+<td> <code>Sys::Hostname</code>
+</td>
+<td> Ermittelt den Hostnamen des Rechners, auf dem das Script läuft.
+</td></tr>
+<tr>
+<td> <code>User::grent</code>
+</td>
+<td> Ersetzt die Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getgrent" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getgrent</a>, <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getgrgid" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getgrgid</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getgrnam" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getgrnam</a> durch ein Objekt. Das Objekt stellt eine Datenstruktur für den Zugriff auf die Konfigurationsdaten zur Verfügung, die der von C aus dessen Headerdatei <var>grp.h</var> ähnelt.
+</td></tr>
+<tr>
+<td> <code>User::pwent</code>
+</td>
+<td> Ersetzt die Perl-Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getpwent" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getpwent</a>, <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getpwuid" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getpwuid</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien#getpwnam" title="Perl/Funktionen für Informationen aus Konfigurationsdateien">getpwnam</a> durch ein Objekt. Das Objekt stellt eine Datenstruktur für den Zugriff auf die Konfigurationsdaten zur Verfügung, die der von C aus dessen Headerdatei <var>pwd.h</var> ähnelt.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Module zum Verwalten von Perl-Erweiterungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_zum_Verwalten_von_Perl-Erweiterungen"> Module zum Verwalten von Perl-Erweiterungen </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>AutoLoader</code>
+</td>
+<td> Lädt Unterprogramme nur wenn erforderlich. Dazu ist die Verwendung von <code>__END__</code> erforderlich.
+</td></tr>
+<tr>
+<td> <code>AutoSplit</code>
+</td>
+<td> Splittet eine Scriptdatei in mehrere Einzeldateien auf und ermöglicht auf diese Weise, dass das Modul <code>AutoLoader</code> Unterprogramme nur bei Aufruf  lädt.
+</td></tr>
+<tr>
+<td> <code>Devel::Peek</code>
+</td>
+<td> Ermöglicht das Prüfen von Daten, die von einem XS-Programm an ein Perl-Script gesendet wurden.
+</td></tr>
+<tr>
+<td> <code>Devel::SelfStubber</code>
+</td>
+<td> Regelt Aufrufe von Objektmethoden in einer objektorientierten Hierarchie, die sich über mehrere Module erstreckt.
+</td></tr>
+<tr>
+<td> <code>DynaLoader</code>
+</td>
+<td> Lädt dynamisch Routinen aus den C-Bibliotheken in das laufende Perl-Script.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Command</code>
+</td>
+<td> Ersetzt Unix-Kommandos in Makefiles, beispielsweise für eine Win32-Portierung.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Constant</code>
+</td>
+<td> Erzeugt XS-Code, um Konstanten aus C-Header-Dateien zu laden.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Embed</code>
+</td>
+<td> Erlaubt das Einbinden von Aufrufen des Perl-Interpreters in C/C++ Programmen.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Install</code>
+</td>
+<td> Installiert Dateien von einem Installationsverzeichnis ins Zielverzeichnis.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Installed</code>
+</td>
+<td> Findet heraus, welche Module bereits installiert sind. Sinnvoll beispielsweise, um bei Bedarf nicht installierte Module dynamisch nachzuinstallieren.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Liblist</code>
+</td>
+<td> Liefert eine Liste zu verwendender Erweiterungsbibliotheken.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::MakeMaker</code>
+</td>
+<td> Erzeugt ein Makefile namens <var>Makefile.PL</var>, das die Installation von Dateien erlaubt.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Manifest</code>
+</td>
+<td> Stellt Funktionen bereit, um eine Manifest-Datei zu erzeugen und zu überprüfen. In die Manifest-Datei werden alle Dateien eines Verzeichnisbaums unterhalb des aktuellen Verzeichnisses geschrieben. Auf diese Weise lässt sich der Originalzustand eines Verzeichnisbaums sichern, bevor z.B. eine Installationsroutine daraus Dateien kopiert, löscht usw.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Miniperl</code>
+</td>
+<td> Schreibt den C-Code für die Datei <var>perlmain.c</var>, aus der sich der Perl-Interpreter neu linken lässt. Dabei lassen sich Module angeben, die mit gelinkt werden sollen. Auf diese Weise können also Module zu eingebauten Features einer eigenen Variante des Perl-Interpreters werden!
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Mkbootstrap</code>
+</td>
+<td> Erzeugt eine so genannte Bootstrap-Datei, die vom Modul <code>DynaLoader</code> verwendet wird.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Mksymlists</code>
+</td>
+<td> Erzeugt Hilfsdateien, die bei manchen Betriebssystemen benötigt werden, um Bibliotheken zu linken.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::Packlist</code>
+</td>
+<td> Liest und schreibt <var>.packlist</var>-Dateien, die Informationen über zu installierende Pfade, Dateien usw. enthalten.
+</td></tr>
+<tr>
+<td> <code>ExtUtils::testlib</code>
+</td>
+<td> Stellt Funktionen bereit, um eine Erweiterungsbibliothek zu testen, bevor sie installiert wird.
+</td></tr>
+<tr>
+<td> <code>SelfLoader</code>
+</td>
+<td> Bewirkt, dass Unterprogramme, die in einem Script nach <code>__DATA__</code> notiert sind, bei Bedarf kompiliert und ausgeführt werden.
+</td></tr>
+<tr>
+<td> <code>XS::APItest</code>
+</td>
+<td> Prüft, ob die C-API von Perl korrekt funktioniert.
+</td></tr>
+<tr>
+<td> <code>XS::Typemap</code>
+</td>
+<td> Prüft die XS-Typemaps von Perl.
+</td></tr>
+<tr>
+<td> <code>XSLoader</code>
+</td>
+<td> Lädt dynamisch Routinen aus den C-Bibliotheken in das laufende Perl-Script (ähnlich wie <code>DynaLoader</code>, jedoch weniger komplex).
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Module für POD-Dokumente">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_f.C3.BCr_POD-Dokumente"> Module für POD-Dokumente </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Pod::Checker</code>
+</td>
+<td> Prüft die Syntax von POD-Dokumenten (POD ist das Klartextformat, in dem die Perl-Dokumentation geschrieben ist, das z.B. auch für die interne Moduldokumentation verwendet wird und das mit <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Moduldokumentationen_lesen_mit_perldoc" title="Perl/Module/Einführung">perldoc</a> lesbar ist - also das Format mit den "<code>=</code>-Kommandos").
+</td></tr>
+<tr>
+<td> <code>Pod::Find</code>
+</td>
+<td> Durchsucht einen Verzeichnisbaum nach POD-Dokumenten.
+</td></tr>
+<tr>
+<td> <code>Pod::Functions</code>
+</td>
+<td> Erzeugt eine formatierte Liste von Perl-Standardfunktionen, ähnlich dem POD-Dokument <code>perlfunc</code>.
+</td></tr>
+<tr>
+<td> <code>Pod::Html</code>
+</td>
+<td> Generiert aus dem POD-Format HTML-Code inklusive Querverweisen.
+</td></tr>
+<tr>
+<td> <code>Pod::InputObjects</code>
+</td>
+<td> Stellt Objekte bereit, die beispielsweise die Absätze und Anweisungen in einem POD-Dokument darstellen.
+</td></tr>
+<tr>
+<td> <code>Pod::LaTeX</code>
+</td>
+<td> Konvertiert POD-Dokumente ins LaTeX-Format.
+</td></tr>
+<tr>
+<td> <code>Pod::Man</code>
+</td>
+<td> Konvertiert POD-Dokumente in ein Format, das vom <code>man</code>-Befehl von UNIX dargestellt werden kann.
+</td></tr>
+<tr>
+<td> <code>Pod::ParseLink</code>
+</td>
+<td> Parst Links in einem POD-Dokument.
+</td></tr>
+<tr>
+<td> <code>Pod::Parser</code>
+</td>
+<td> Basisklasse zum Parsen des POD-Formats.
+</td></tr>
+<tr>
+<td> <code>Pod::ParseUtils</code>
+</td>
+<td> Enthält verschiedene Klassen zum Parsen von POD-Dokumenten.
+</td></tr>
+<tr>
+<td> <code>Pod::Plainer</code>
+</td>
+<td> Wandelt POD-Texte in einem neuen Format in das ältere um.
+</td></tr>
+<tr>
+<td> <code>Pod::PlainText</code>
+</td>
+<td> Generiert aus dem POD-Format reinen formatierten Text ohne Steuerbefehle.
+</td></tr>
+<tr>
+<td> <code>Pod::Select</code>
+</td>
+<td> Liest eine bestimmte Stelle aus einem POD-Dokument aus.
+</td></tr>
+<tr>
+<td> <code>Pod::Text</code>
+</td>
+<td> Generiert aus dem POD-Format reinen Text ohne Steuerbefehle.
+</td></tr>
+<tr>
+<td> <code>Pod::Usage</code>
+</td>
+<td> Erzeugt aus POD-Dokumenten Hinweise zur Nutzung von Perl-Scripts an der Kommandozeile.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: Module zum Steuern des Perl-Compilers">Bearbeiten</a>]</span> <span class="mw-headline" id="Module_zum_Steuern_des_Perl-Compilers"> Module zum Steuern des Perl-Compilers </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>B</code>
+</td>
+<td> Stellt die Basisklassen des Perl-Compilers zur Verfügung. Mit Hilfe des Perl-Compilers lässt sich der Code eines Perl-Scripts in C-Code übersetzen, der dann mit einem C-Compiler zu einer für das Betriebssystem ausführbaren Datei kompiliert und gelinkt werden kann. Das <code>B</code>-Modul stellt einem Perl-Script die Funktionalität des Perl-Compilers zur Verfügung. Das Perl-Script kann auf diese Weise den Perl-Compiler steuern.
+</td></tr>
+<tr>
+<td> <code>B::Asmdata</code>
+</td>
+<td> Erzeugt automatisch generierte Datenstrukturen für Byte-Code.
+</td></tr>
+<tr>
+<td> <code>B::Assembler</code>
+</td>
+<td> Assembliert Byte-Code.
+</td></tr>
+<tr>
+<td> <code>B::Bblock</code>
+</td>
+<td> Durchläuft die Grundblöcke eines Scripts.
+</td></tr>
+<tr>
+<td> <code>B::Bytecode</code>
+</td>
+<td> Schnittstelle zum perl-internen Byte-Code eines Scripts.
+</td></tr>
+<tr>
+<td> <code>B::C</code>
+</td>
+<td> Schnittstelle zum C-Backend des Perl-Compilers.
+</td></tr>
+<tr>
+<td> <code>B::CC</code>
+</td>
+<td> Optimierte Schnittstelle zum C-Backend des Perl-Compilers.
+</td></tr>
+<tr>
+<td> <code>B::Concise</code>
+</td>
+<td> Zeigt die Struktur des OP-Code eines Perl-Scripts.
+</td></tr>
+<tr>
+<td> <code>B::Debug</code>
+</td>
+<td> Durchläuft den Code des Perl-Scripts und zeigt Debug-Informationen an.
+</td></tr>
+<tr>
+<td> <code>B::Deparse</code>
+</td>
+<td> Disassembliert den Perl-Byte-Code.
+</td></tr>
+<tr>
+<td> <code>B::Disassembler</code>
+</td>
+<td> Stellt den Perl-Code eines Perl-Scripts aus Byte-Code wieder her.
+</td></tr>
+<tr>
+<td> <code>B::Lint</code>
+</td>
+<td> Benutzt beim Kompilieren die Warnstufe, die bei Perl durch den <a href="http://wiki.selfhtml.org/wiki/Perl/Einführung#Aufrufm.C3.B6glichkeiten_des_Perl-Interpreters" title="Perl/Einführung">Aufruf des Perl-Interpreters</a> mit der Option <code>-w</code> erreicht wird.
+</td></tr>
+<tr>
+<td> <code>B::Showlex</code>
+</td>
+<td> Zeigt die Namen von lexikalischen Variablen in Dateien und Funktionen an.
+</td></tr>
+<tr>
+<td> <code>B::Stackobj</code>
+</td>
+<td> Hilfsmodul für <code>B::CC</code>.
+</td></tr>
+<tr>
+<td> <code>B::Stash</code>
+</td>
+<td> Gibt an, welche Stashes geladen sind.
+</td></tr>
+<tr>
+<td> <code>B::Terse</code>
+</td>
+<td> Parst ein Perl-Script und zeigt dabei nur wenige Informationen an.
+</td></tr>
+<tr>
+<td> <code>B::Xref</code>
+</td>
+<td> Erzeugt eine Liste aller Kreuzreferenzen und Abhängigkeiten in einem Perl-Script.
+</td></tr>
+<tr>
+<td> <code>O</code>
+</td>
+<td> Schnittstelle zum Backend des Perl-Compilers, die es erlaubt, die Standardausgabe abzufangen und in einer Variable zu speichern.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Systemnahe Module">Bearbeiten</a>]</span> <span class="mw-headline" id="Systemnahe_Module"> Systemnahe Module </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>Errno</code>
+</td>
+<td> Importiert die Konstanten aus der Systemdatei <var>errno.h</var> für die Fehlerbehandlung.
+</td></tr>
+<tr>
+<td> <code>Fcntl</code>
+</td>
+<td> Stellt eine Übersetzung der C-Headerdatei <var>fcntl.h</var> dar und importiert daraus alle Definitionen. Diese Definitionen unterstützen Sie beim Öffnen von Dateien.
+</td></tr>
+<tr>
+<td> <code>Opcode</code>
+</td>
+<td> Beeinflusst die Perl-interne Kompilation eines Scripts, bevor es ausgeführt wird. Wird in Zusammenhang mit dem Modul <code>Safe</code> verwendet.
+</td></tr>
+<tr>
+<td> <code>Safe</code>
+</td>
+<td> Erzeugt geschützte Bereiche mit eigenen Namensräumen, um Perl-Code darin auszuführen.
+</td></tr>
+<tr>
+<td> <code>Test</code>
+</td>
+<td> Stellt Test-Typen und Fehlerreaktionen zum Austesten von Perl-Scripts bereit.
+</td></tr>
+<tr>
+<td> <code>Test::Builder</code>
+</td>
+<td> Erlaubt es, eigene Bibliotheken für Tests zu schreiben, die zusammenarbeiten können.
+</td></tr>
+<tr>
+<td> <code>Test::Harness</code>
+</td>
+<td> Führt standardisierte Tests durch und gibt die Ergebnisse aus.
+</td></tr>
+<tr>
+<td> <code>Test::More</code>
+</td>
+<td> Erweiterung von <code>Test::Simple</code>.
+</td></tr>
+<tr>
+<td> <code>Test::Simple</code>
+</td>
+<td> Ermöglicht das einfache Durchführen von Tests.
+</td></tr>
+<tr>
+<td> <code>Win32</code>
+</td>
+<td> Ermöglicht den Zugriff auf einige interne Funktionen von Windows-Systemen.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: Pragma-Module zum Beeinflussen des Perl-Interpreters">Bearbeiten</a>]</span> <span class="mw-headline" id="Pragma-Module_zum_Beeinflussen_des_Perl-Interpreters"> Pragma-Module zum Beeinflussen des Perl-Interpreters </span></h2>
+<table class="wikitable">
+<tr>
+<th> Modul (Syntax für Einbindung)
+</th>
+<th> Aufgabe
+</th></tr>
+<tr>
+<td> <code>attrs</code>
+</td>
+<td> Setzt und ermittelt Attribute eines Unterprogrammes. Dieses Pragma ist veraltet, stattdessen soll <code>attributes</code> verwendet werden.
+</td></tr>
+<tr>
+<td> <code>attributes</code>
+</td>
+<td> Setzt und ermittelt Attribute von Unterprogrammen und Variablen.
+</td></tr>
+<tr>
+<td> <code>autouse</code>
+</td>
+<td> Parst Perl-Code aus eingebundenen Modulen erst dann, wenn Funktionen des Moduls aufgerufen werden. Ein Perl-Script kann dadurch schneller starten, verliert die gewonnene Zeit aber gegebenenfalls während der Ausführung wieder.
+</td></tr>
+<tr>
+<td> <code>base</code>
+</td>
+<td> Definiert Basisklassen für die aktuelle Klasse.
+</td></tr>
+<tr>
+<td> <code>bigint</code>
+</td>
+<td> Erlaubt das Rechnen mit Ganzzahlen, die größer sind als das, was Perl normalerweise als Ganzzahl zu interpretieren in der Lage ist. Im Gegensatz zu <code>Math::BigInt</code> werden hierbei die Operatoren mit dieser Funktion ausgestattet.
+</td></tr>
+<tr>
+<td> <code>bignum</code>
+</td>
+<td> Stattet die Operatoren mit der Fähigkeit aus, mit Zahlen zu rechnen, die größer oder kleiner sind als das, was Perl normalerweise als Zahl zu interpretieren in der Lage ist.
+</td></tr>
+<tr>
+<td> <code>bigrat</code>
+</td>
+<td> Stattet die Operatoren mit der Fähigkeit aus, mit Zahlen zu rechnen, die größer oder kleiner sind als das, was Perl normalerweise als Zahl zu interpretieren in der Lage ist.
+</td></tr>
+<tr>
+<td> <code>blib</code>
+</td>
+<td> Durchsucht nicht installierte Module. Gedacht für die Verwendung im Zusammenhang mit der Option <code>-M</code> beim Aufruf des Perl-Compilers.
+</td></tr>
+<tr>
+<td> <code>bytes</code>
+</td>
+<td> Behandelt Daten nicht als UTF-8, sondern arbeitet sie byteweise ab.
+</td></tr>
+<tr>
+<td> <code>constant</code>
+</td>
+<td> Deklariert unveränderliche Konstanten, ähnlich, wie es in C mit <code>#define</code> möglich ist.
+</td></tr>
+<tr>
+<td> <code>charnames</code>
+</td>
+<td> Erlaubt es, Zeichen aus anderen Zeichenvorräten mit Hilfe Ihrer Namen zu erzeugen.
+</td></tr>
+<tr>
+<td> <code>diagnostics</code>
+</td>
+<td> Gibt bei Fehlermeldungen, die der Perl-Compiler ausgibt, zugleich deren Erläuterungen mit aus. Dazu werden die Beschreibungen aus <var>perldiag</var> verwendet.
+</td></tr>
+<tr>
+<td> <code>encoding</code>
+</td>
+<td> Ermöglicht das Schreiben von Perl-Quellcode in anderen Kodierungen als der ASCII- oder UTF-8-Kodierung.
+</td></tr>
+<tr>
+<td> <code>fields</code>
+</td>
+<td> Stellt sicher, dass der vordefinierte Hash <code>%FIELDS</code> zur Kompilierzeit versorgt ist.
+</td></tr>
+<tr>
+<td> <code>filetest</code>
+</td>
+<td> Verändert das Verhalten einiger [[Perl/Funktionen für Datei- und Verzeichnis-Management#-[x]|Dateitestoperatoren]] und ermöglicht so, die Berechtigungen von Dateien genauer zu ermitteln (beispielsweise falls sog. Access Control Lists verwendet werden).
+</td></tr>
+<tr>
+<td> <code>if</code>
+</td>
+<td> Erlaubt es, ein Perl-Modul nur unter bestimmten Bedingungen zu laden.
+</td></tr>
+<tr>
+<td> <code>integer</code>
+</td>
+<td> Bewirkt, dass der Perl-Interpreter bei Rechenoperationen nur mit Ganzzahlen rechnet. Eine Operation wie <code>10/3</code> ergibt dann <code>3</code> ohne Nachkommastellen.
+</td></tr>
+<tr>
+<td> <code>lib</code>
+</td>
+<td> Ermöglicht das Erweitern der vordefinierten Liste <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Einführung#Speicherorte_f.C3.BCr_Module_und_die_Liste_.40INC" title="Perl/Module/Einführung">@INC</a>, bevor das Script ausgeführt wird. Auf diese Weise lassen sich Pfade zu eigenen Modulen in den Suchpfad <code>@INC</code> mit aufnehmen, die vom Script benötigt werden, sich aber nicht in den vordefinierten Suchpfaden befinden.
+</td></tr>
+<tr>
+<td> <code>locale</code>
+</td>
+<td> Schaltet die Verwendung von lokalen Einstellungen, wie sie in <code>POSIX</code> definiert sind, ein oder aus. Solche lokalen Einstellungen betreffen z.B. die zu verwendende Zeichenkodierung bei Zeichenkettenvergleichen.
+</td></tr>
+<tr>
+<td> <code>open</code>
+</td>
+<td> Beeinflusst das Verhalten des Perl-Interpreters bei IO-Operation (Lesen und Schreiben von Daten).
+</td></tr>
+<tr>
+<td> <code>ops</code>
+</td>
+<td> Schränkt die Ausführung unsicherer Operationen in einem Perl-Script ein, sofern der Perl-Interpreter zum Ausführen des Scripts mit der Option <code>-M</code> aufgerufen wird.
+</td></tr>
+<tr>
+<td> <code>overload</code>
+</td>
+<td> Ermöglicht es, Operatoren in Perl-Scripts mit eigenen Funktionen zu verknüpfen. So ist es beispielsweise möglich, eigene Funktionen für Operatoren wie "Division" oder "größer als" zu schreiben und die Funktionalität der entsprechenden Operatoren wie <code>/</code> (Division) oder <code>&gt;</code> (größer als) an die selbst geschriebenen Funktionen zu knüpfen.
+</td></tr>
+<tr>
+<td> <code>re</code>
+</td>
+<td> Beeinflusst die Interpretation <a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">regulärer Ausdrücke</a> für spezielle Zwecke wie das Behandeln von Variablen innerhalb des regulären Ausdrucks.
+</td></tr>
+<tr>
+<td> <code>sigtrap</code>
+</td>
+<td> Ermöglicht einem Perl-Script, auf Signale zu reagieren, die es von anderen Prozessen erhält.
+</td></tr>
+<tr>
+<td> <code>sort</code>
+</td>
+<td> Beeinflusst das Verhalten der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes#sort" title="Perl/Funktionen für Listen bzw. Arrays und Hashes">sort</a>-Funktion.
+</td></tr>
+<tr>
+<td> <code>strict</code>
+</td>
+<td> Verhindert, dass unsauberer Code ausgeführt wird. Toleranzen, die der Perl-Interpreter ansonsten erlaubt, werden dadurch ausgeschaltet.
+</td></tr>
+<tr>
+<td> <code>subs</code>
+</td>
+<td> Ermöglicht das Vorabdeklarieren der Namen aller verwendeten <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutinen</a>. Im weiteren Code des Scripts können die Namen dann sofort ohne Klammern verwendet werden, also z.B. <code>Speichern</code> statt <code>Speichern()</code>.
+</td></tr>
+<tr>
+<td> <code>threads</code>
+</td>
+<td> Erlaubt es, Interpreter-basierte Threads in Perl zu nutzen.
+</td></tr>
+<tr>
+<td> <code>threads::shared</code>
+</td>
+<td> Erlaubt es, Datenstrukturen zwischen zwei Threads auszutauschen.
+</td></tr>
+<tr>
+<td> <code>utf8</code>
+</td>
+<td> Ermöglicht das Verwenden von UTF-8-Sonderzeichen im Quellcode.
+</td></tr>
+<tr>
+<td> <code>vars</code>
+</td>
+<td> Ermöglicht das Vorabdeklarieren der Namen von globalen Variablen. Dieses Modul ist mittlerweile veraltet, stattdessen sollen Deklarationen mit der Funktion <code>our</code> verwendet werden.
+</td></tr>
+<tr>
+<td> <code>vmsish</code>
+</td>
+<td> Ermöglicht es, Features zu nutzen, die nur unter dem Betriebssystem VMS verfügbar sind.
+</td></tr>
+<tr>
+<td> <code>warnings</code>
+</td>
+<td> Mit diesem Modul lassen sich die Warnmeldungen des Perl-Interpreters kontrollieren.
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 92/1000000
+Post‐expand include size: 571/2097152 bytes
+Template argument size: 203/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3110-0!*!0!!de-formal!*!* and timestamp 20150301073420 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;oldid=13974">http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;oldid=13974</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FModule%2FStandardmodule" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Module/Standardmodule&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Module/Standardmodule" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Module/Standardmodule" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Module/Standardmodule&amp;oldid=13974" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FModule-2FStandardmodule" title="Spezial:Durchsuchen/Perl-2FModule-2FStandardmodule">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 16. September 2012 um 19:44 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.192-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.105 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Module/Standardmodule by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

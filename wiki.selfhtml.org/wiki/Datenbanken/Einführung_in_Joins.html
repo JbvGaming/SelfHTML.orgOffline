@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Datenbanken/Einführung_in_Joins by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Datenbanken/Einführung in Joins – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Datenbanken/Einführung_in_Joins","wgTitle":"Datenbanken/Einführung in Joins","wgCurRevisionId":23683,"wgArticleId":1953,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["DBMS und SQL"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Datenbanken/Einführung_in_Joins","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-sql {line-height: normal;}
+.source-sql li, .source-sql pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for sql
+ * CSS class: source-sql, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.sql.source-sql .de1, .sql.source-sql .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.sql.source-sql  {font-family:monospace;}
+.sql.source-sql .imp {font-weight: bold; color: red;}
+.sql.source-sql li, .sql.source-sql .li1 {font-weight: normal; vertical-align:top;}
+.sql.source-sql .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.sql.source-sql .li2 {font-weight: bold; vertical-align:top;}
+.sql.source-sql .kw1 {color: #993333; font-weight: bold;}
+.sql.source-sql .co1 {color: #808080; font-style: italic;}
+.sql.source-sql .coMULTI {color: #808080; font-style: italic;}
+.sql.source-sql .es0 {color: #000099; font-weight: bold;}
+.sql.source-sql .br0 {color: #66cc66;}
+.sql.source-sql .sy0 {color: #66cc66;}
+.sql.source-sql .st0 {color: #ff0000;}
+.sql.source-sql .nu0 {color: #cc66cc;}
+.sql.source-sql .ln-xtra, .sql.source-sql li.ln-xtra, .sql.source-sql div.ln-xtra {background-color: #ffc;}
+.sql.source-sql span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Datenbanken/Einführung in Joins" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Datenbanken/Einf%C3%BChrung_in_Joins&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Datenbanken_Einführung_in_Joins skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Datenbanken/Einführung in Joins</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Normalisierung_.26_Vorstellung_des_Beispiels"><span class="tocnumber">1</span> <span class="toctext">Normalisierung &amp; Vorstellung des Beispiels</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Nicht_normalisierte_Tabelle"><span class="tocnumber">1.1</span> <span class="toctext">Nicht normalisierte Tabelle</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Probleme_dieses_Ansatzes"><span class="tocnumber">1.1.1</span> <span class="toctext">Probleme dieses Ansatzes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-4"><a href="#Normalisierte_Tabellen"><span class="tocnumber">1.2</span> <span class="toctext">Normalisierte Tabellen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Gibt_es_Nachteile_dieser_Speicherform.3F"><span class="tocnumber">1.2.1</span> <span class="toctext">Gibt es Nachteile dieser Speicherform?</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Joins_allgemein"><span class="tocnumber">2</span> <span class="toctext">Joins allgemein</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Join_als_Kreuzprodukt"><span class="tocnumber">2.1</span> <span class="toctext">Join als Kreuzprodukt</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Equi-Join"><span class="tocnumber">2.2</span> <span class="toctext">Equi-Join</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Natural_Join"><span class="tocnumber">2.3</span> <span class="toctext">Natural Join</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Syntax"><span class="tocnumber">2.4</span> <span class="toctext">Syntax</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Platzierung_von_Kriterien"><span class="tocnumber">2.5</span> <span class="toctext">Platzierung von Kriterien</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Mehrfachjoins"><span class="tocnumber">2.6</span> <span class="toctext">Mehrfachjoins</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#INNER_JOIN"><span class="tocnumber">3</span> <span class="toctext">INNER JOIN</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#LEFT.2FRIGHT_JOIN"><span class="tocnumber">4</span> <span class="toctext">LEFT/RIGHT JOIN</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Beispiel_LEFT_JOIN"><span class="tocnumber">4.1</span> <span class="toctext">Beispiel LEFT JOIN</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Beispiel_RIGHT_JOIN"><span class="tocnumber">4.2</span> <span class="toctext">Beispiel RIGHT JOIN</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#FULL_OUTER_JOIN"><span class="tocnumber">5</span> <span class="toctext">FULL OUTER JOIN</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Abschlie.C3.9Fende_Anmerkungen"><span class="tocnumber">6</span> <span class="toctext">Abschließende Anmerkungen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#Beispiele_zur_Tabellenreihenfolge:_Alle_Rechnungen_zur_Kreditkarte_12347"><span class="tocnumber">6.1</span> <span class="toctext">Beispiele zur Tabellenreihenfolge: Alle Rechnungen zur Kreditkarte 12347</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Views"><span class="tocnumber">6.2</span> <span class="toctext">Views</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Fortsetzung"><span class="tocnumber">7</span> <span class="toctext">Fortsetzung</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Normalisierung &amp; Vorstellung des Beispiels">Bearbeiten</a>]</span> <span class="mw-headline" id="Normalisierung_.26_Vorstellung_des_Beispiels"> Normalisierung &amp; Vorstellung des Beispiels </span></h2>
+<p>Bevor genauer auf Joins und Join-Arten eingegangen wird, soll zunächst das Problem vorgestellt bzw. eine Motivation für die künstliche Herbeiführung des Problems gegeben werden:<br />
+<b>Frage:</b> Warum liegen nicht alle Datensätze in einer Tabelle?<br />
+<b>Antwort:</b> Weil eine Normalisierung vorgenommen wurde.
+</p><p>Die Normalisierung ist ein Prozess der Umgestaltung von Datenbankstrukturen in der relationalen Welt. Ziel ist die Vermeidung zahlreicher Probleme, die sich aus der einfachen Speicherung „in einer großen Tabelle“ ergeben. Das Ergebnis der Normalisierung sind zahlreiche, kleinere Relationen, in denen weniger bis keine Abhängigkeiten zwischen einzelnen Feldern bestehen und <a href="http://wiki.selfhtml.org/wiki/Glossar:Redundanz" title="Glossar:Redundanz">Redundanzen</a> nicht mehr auftreten.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Nicht normalisierte Tabelle">Bearbeiten</a>]</span> <span class="mw-headline" id="Nicht_normalisierte_Tabelle"> Nicht normalisierte Tabelle </span></h3>
+<p>Nachfolgend soll ein fiktiver Teil einer Unternehmenssoftware betrachtet werden. Das Unternehmen besitzt bereits eine Kundendatei, in der zu jedem Kunden eine eindeutige Kundennummer festgehalten ist. Die zu erstellende Datenlandschaft soll folgende Sachverhalte abdecken:
+</p>
+<ol><li> Kunden kaufen bei dem Unternehmen verschiedene Waren ein. Der Gesamtrechnungsbetrag soll unter einer Rechnungsnummer zusammen mit der Kundennummer abgelegt werden.
+</li><li> Falls ein Kunde die Rechnung per Kreditkarte begleicht, so sind die nötigen Kartendaten wie Nummer, Firma, Inhaber und Ablaufdatum festzuhalten. Für anderweitig beglichene Rechnungen entfallen diese Angaben.
+</li><li> Um dem Kunden bei einem erneuten Einkauf die Eingabe der Kartendaten zu ersparen, müssen sämtliche bekannten Kreditkarteninformationen archiviert werden.
+</li><li> Die Rechnungstabelle wird monatsweise geführt, d.h. sie enthält immer nur die Rechnungen eines Monats.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: – Tabelle Rechnungen
+</div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<tr>
+<th>RechnungsNr</th>
+<th>KundenNr</th>
+<th>Betrag</th>
+<th>Kartennummer</th>
+<th>Firma</th>
+<th>Inhaber</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>98765</td>
+<td>ABX039</td>
+<td>49,95</td>
+<td>12345</td>
+<td>VISA</td>
+<td>Max Mustermann</td>
+<td>05/2007
+</td></tr>
+<tr>
+<td>98766</td>
+<td>ABX039</td>
+<td>12,95</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-
+</td></tr>
+<tr>
+<td> -</td>
+<td>-</td>
+<td>-</td>
+<td>12346</td>
+<td>Mastercard</td>
+<td>Katrin Musterfrau</td>
+<td>01/2008
+</td></tr>
+<tr>
+<td>98767</td>
+<td>ABX040</td>
+<td>79,95</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98768</td>
+<td>ABX050</td>
+<td>59,99</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98769</td>
+<td>ABX050</td>
+<td>29,99</td>
+<td>12348</td>
+<td>Diners Club</td>
+<td>John Doe</td>
+<td>03/2008
+</td></tr>
+<tr>
+<td>98770</td>
+<td>ABX060</td>
+<td>99,99</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-
+</td></tr></table></div>
+</div>
+<p>Die vorstehende Tabelle erfüllt die obigen Anforderungen. Sie ist allerdings zwangsläufig suboptimal, da sie sich mit zwei Sachverhalten gleichzeitig befasst. Zum einen hält sie fest, welcher Kunde unter welcher Rechnungsnummer welchen Betrag beglichen hat. Zum anderen speichert sie sämtliche Kreditkarteninformationen, die dem Unternehmen vorliegen. Rein logisch liegt zwischen beiden Informationen zunächst keine Beziehung vor.
+</p><p>Woran ist der Sachverhalt zu erkennen?
+</p><p>Man betrachte die Rechnung mit der Nummer <code>98766</code>. Keines der Felder <code>Kartennummer</code>, <code>Firma</code>, <code>Inhaber</code> oder <code>Ablaufdatum</code> ist befüllt (sog. NULL-Werte). In diesem Szenario könnte dies z.B. bedeuten, dass die entsprechende Rechnung noch nicht oder nicht mit einer Kreditkarte beglichen wurde. Betrachtet man weiterhin die Kartennummer <code>12346</code>, so zeigt sich die umgekehrte Situation: Es liegen keine Rechnungsinformationen vor.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Probleme dieses Ansatzes">Bearbeiten</a>]</span> <span class="mw-headline" id="Probleme_dieses_Ansatzes"> Probleme dieses Ansatzes </span></h4>
+<p>Der unerfahrene Designer mag diese Tabelle ansehen und sich fragen, wo denn nun das eigentliche Problem liegt, denn offensichtlich werden ja alle Daten geliefert, die das Unternehmen in diesem Zusammenhang benötigt. Der Hauptfeind dieses Modells sind Änderungen im Laufe der Zeit.
+</p>
+<ul><li> Man stelle sich beispielsweise vor, dass die Zahlungen von <code>John Doe</code> fehlschlagen, weil die Kreditkarteninformationen zu seiner American Express-Karte ungültig sind. Auf Rückfrage bestätigt der Kunde, dass das Ablaufdatum eigentlich nicht <code>01/2007</code>, sondern <code>02/2007</code> ist. Anstatt diese Information an nur einer Stelle zu ändern muss sichergestellt werden, dass bei sämtlichen (hier: 2; im Laufe der Zeit sicher deutlich mehr) Einträgen die Information geändert wird. Wird die Änderung nicht bei allen Sätzen durchgeführt oder wird lediglich bei neuen Rechnungen der richtige Eintrag vorgenommen, kann zu einem späteren Zeitpunkt keiner feststellen, welche der Angaben korrekt ist. Es kommt zur sog. <b>Update-Anomalie</b>.
+</li><li> Ein weiteres Problem ergibt sich, wenn z.B. nach einem Monat die Rechnungsinformationen gelöscht werden, weil das Unternehmen sie in dieser Form nicht mehr benötigt. Anstatt einfach alle entsprechenden Rechnungen zu löschen, müssen Konsistenzprüfungen ausgeführt werden, um nicht aus Versehen eine der Karteninformationen aus dem Bestand zu löschen. Geht eine Karteninformation (zwangsweise) verloren, nur weil die letzte Rechnung gelöscht wurde, spricht man von der <b>Lösch-Anomalie</b>.
+</li><li> Die <b>Einfüge-Anomalie</b> wurde im obigen Beispiel durch die unsaubere Lösung mit NULL-Werten bekämpft: Eine Karteninformation kann ohne Rechnung eigentlich nicht eingetragen werden, man behilft sich daher mit leeren Angaben.
+</li></ul>
+<p>All dies ist hinfällig, wenn die Datenbankstruktur nur leicht angepasst wird.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Normalisierte Tabellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Normalisierte_Tabellen"> Normalisierte Tabellen </span></h3>
+<p>Um den zuvor genannten Problemen aus dem Weg zu gehen, sollte eine Normalisierung der Daten angestrebt werden. Eine mögliche Normalisierung könnte etwa wie folgt aussehen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: – Normalisierte Tabellen
+</div>
+<div class="note-box-text note-box-example-comment">Tabelle Kreditkarte</div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<tr>
+<th>Kartennummer</th>
+<th>Firma</th>
+<th>Inhaber</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>12345</td>
+<td>VISA</td>
+<td>Max Mustermann</td>
+<td>05/2007
+</td></tr>
+<tr>
+<td>12346</td>
+<td>Mastercard</td>
+<td>Katrin Musterfrau</td>
+<td>01/2008
+</td></tr>
+<tr>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>12348</td>
+<td>Diners Club</td>
+<td>John Doe</td>
+<td>03/2008
+</td></tr></table></div>
+<div class="note-box-text note-box-example-comment">Tabelle Rechnungen</div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<tr>
+<th>RechnungsNr</th>
+<th>KundenNr</th>
+<th>Betrag</th>
+<th>Kartennummer
+</th></tr>
+<tr>
+<td>98765</td>
+<td>ABX039</td>
+<td>49,95</td>
+<td>12345
+</td></tr>
+<tr>
+<td>98766</td>
+<td>ABX039</td>
+<td>12,95</td>
+<td>-
+</td></tr>
+<tr>
+<td>98767</td>
+<td>ABX040</td>
+<td>79,95</td>
+<td>12347
+</td></tr>
+<tr>
+<td>98768</td>
+<td>ABX050</td>
+<td>59,99</td>
+<td>12347
+</td></tr>
+<tr>
+<td>98769</td>
+<td>ABX050</td>
+<td>29,99</td>
+<td>12348
+</td></tr>
+<tr>
+<td>98770</td>
+<td>ABX060</td>
+<td>99,99</td>
+<td>-
+</td></tr></table></div>
+</div>
+<p>In der nun vorliegenden Struktur wurde für jeden Sachverhalt eine eigene Tabelle gebildet. Über das eindeutige Feld, den sogenannten <i>Primärschlüssel</i>, in diesem Fall <code>Kartennummer</code> bzw. <code>RechnungsNr</code>, kann ein Datensatz identifiziert werden. Zwischen der Tabelle <code>Rechnungen</code> und der Tabelle <code>Kreditkarte</code> besteht eine sog. <i>Fremdschlüsselbeziehung</i>: Durch den Eintrag der Kartennummer kann einer Rechnung eine Kreditkarteninformation zugeordnet werden. Keiner der Einträge ist redundant, die zuvor genannten Anomalien sind beseitigt.
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Gibt es Nachteile dieser Speicherform?">Bearbeiten</a>]</span> <span class="mw-headline" id="Gibt_es_Nachteile_dieser_Speicherform.3F"> Gibt es Nachteile dieser Speicherform? </span></h4>
+<p>Nachteile ergeben sich sowohl für einen menschlichen Leser als auch für die maschinelle Verarbeitung der Daten. Das menschliche Gehirn ist in der Lage, ohne weiteres relevante Informationen wahrzunehmen und irrelevantes auszublenden. Möchte der Mensch also alle Rechnungen sehen, so ist es ihm einigermaßen egal, ob er dabei einen Satz übergehen muss oder nicht. Erst bei zahlreichen NULL-Werten in der Ausgangstabelle wäre es ggf. umständlicher diese zu lesen. Bei den Kreditkarten verhält es sich schon anders, hier ist die normalisierte Tabelle in jedem Fall zugänglicher. Um in der Urtabelle herauszufinden, welche Karten bekannt sind, muss mühsam jede Rechnung betrachtet werden, nun existieren alle Karten getrennt. Knackpunkt bei der Umstrukturierung bleibt allerdings die reine Kernfunktionalität <i>Welche Rechnung wurde mit welcher Kreditkarte beglichen?</i>. In der Ausgangslage musste hierzu lediglich <i>der Datensatz</i> angeschaut werden. Nach der Umstrukturierung muss erstens die Rechnung angeschaut, zweitens die Kartennummer ermittelt und drittens die Karteninformation an anderer Stelle nachgeschlagen werden.
+</p><p>Was sich hier noch als Problem der menschlichen Lesbarkeit darstellt, birgt auch für die maschinelle Verarbeitung ein Problem: Zwar können alle Informationen wiederhergestellt werden, aber der Suchaufwand ist ungleich höher. Aus einer einzigen Abfrage (<i>Gib mir alle Rechnungen mit Zahlungsinformation</i>) sind entweder 2 Abfragen geworden (<i>Gib mir alle Rechnungen, die mit Karte gezahlt wurden</i> und <i>Gib mir zu jeder dieser Kartennummern die Karteninformationen</i>), oder die Tabellen müssen wieder in ihre Ausgangsform zusammengefügt werden. Dieser <i>JOIN</i> kann bei großen Tabellen sehr aufwändig werden. Bei zwei Tabellen ist das Problem noch nicht unmittelbar vorhanden, stellt man sich aber komplexere Beziehungen vor, so können die Operationen relativ viel Zeit beanspruchen. Bei großen Datenbanken wird daher nicht immer bis zur letzten Stufe normalisiert, sondern einzelne Anomalien akzeptiert und durch Programmlogik oder andere Datenbankmechanismen ausgeglichen.
+</p><p>Im Netz finden sich zahlreiche Seiten, die sich mit der Normalisierung von Tabellen befassen. Da dies nicht der eigentliche Inhalt dieses Artikels ist, sei dem interessierten Leser die Recherche selbst nahegelegt. Ein guter Startpunkt ist der <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Normalisierung_(Datenbank)">Wikipedia-Artikel zur Normalisierung</a>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Joins allgemein">Bearbeiten</a>]</span> <span class="mw-headline" id="Joins_allgemein"> Joins allgemein </span></h2>
+<p>Ein Join (zu Deutsch: Verbund oder Verbindung) dient der Zusammenführung von zwei Tabellen unter bestimmten Kriterien. Durch verschiedene Arten von Joins werden dabei zusätzlich zu den eigentlichen Kriterien noch Grundregeln für die Ergebnismenge festgelegt.
+</p><p>Joins basieren, wie relationale Datenbanksysteme insgesamt, auf dem Konstrukt der Relation in der Mathematik. In der Theorie existieren daher eine ganze Reihe von Joins, die im Datenbankalltag keine Rolle spielen. Um langsam an das Thema heranzuführen, sollen sie hier trotzdem genannt werden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Join als Kreuzprodukt">Bearbeiten</a>]</span> <span class="mw-headline" id="Join_als_Kreuzprodukt"> Join als Kreuzprodukt </span></h3>
+<p>In der allereinfachsten Form des Joins werden sämtliche Datensätze der ersten Tabelle mit sämtlichen Datensätzen der zweiten Tabelle zusammengeführt.
+</p><p>X
+</p>
+<table border="1">
+<tr>
+<th>XA</th>
+<th>XB
+</th></tr>
+<tr style="background:#E6B8B7">
+<td>1</td>
+<td>2
+</td></tr>
+<tr style="background:#FCD5B4">
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#D8E4BC">
+<td>3</td>
+<td>4
+</td></tr></table>
+<p>Y
+</p>
+<table border="1">
+<tr>
+<th>YA</th>
+<th>YB</th>
+<th>YC
+</th></tr>
+<tr style="background:#C5D9F1">
+<td>1</td>
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td>2</td>
+<td>3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td>3</td>
+<td>4</td>
+<td>5
+</td></tr></table>
+<p>X, Y
+</p>
+<table border="1">
+<tr>
+<th>XA</th>
+<th>XB</th>
+<th>YA</th>
+<th>YB</th>
+<th>YC
+</th></tr>
+<tr style="background:#C5D9F1">
+<td style="background:#E6B8B7">1</td>
+<td style="background:#E6B8B7">2</td>
+<td>1</td>
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td style="background:#E6B8B7">1</td>
+<td style="background:#E6B8B7">2</td>
+<td>2</td>
+<td>3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td style="background:#E6B8B7">1</td>
+<td style="background:#E6B8B7">2</td>
+<td>3</td>
+<td>4</td>
+<td>5
+</td></tr>
+<tr style="background:#C5D9F1">
+<td style="background:#FCD5B4">2</td>
+<td style="background:#FCD5B4">3</td>
+<td>1</td>
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td style="background:#FCD5B4">2</td>
+<td style="background:#FCD5B4">3</td>
+<td>2</td>
+<td>3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td style="background:#FCD5B4">2</td>
+<td style="background:#FCD5B4">3</td>
+<td>3</td>
+<td>4</td>
+<td>5
+</td></tr>
+<tr style="background:#C5D9F1">
+<td style="background:#D8E4BC">3</td>
+<td style="background:#D8E4BC">4</td>
+<td>1</td>
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td style="background:#D8E4BC">3</td>
+<td style="background:#D8E4BC">4</td>
+<td>2</td>
+<td>3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td style="background:#D8E4BC">3</td>
+<td style="background:#D8E4BC">4</td>
+<td>3</td>
+<td>4</td>
+<td>5
+</td></tr></table>
+<p>Für den praktischen Datenbankeinsatz ist diese Reinform in der Regel unbrauchbar, da keinerlei Beziehungen zwischen den Daten beachtet werden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Equi-Join">Bearbeiten</a>]</span> <span class="mw-headline" id="Equi-Join"> Equi-Join </span></h3>
+<p>Während beim Kreuzprodukt keinerlei Anforderungen an die Kombination der Datensätze gestellt werden, führt der Equi-Join eine solche ein: Die Gleichheit von zwei Spalten.
+</p><p>X
+</p>
+<table border="1">
+<tr>
+<th>XA</th>
+<th>XB
+</th></tr>
+<tr style="background:#E6B8B7">
+<td>1</td>
+<td>2
+</td></tr>
+<tr style="background:#FCD5B4">
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#D8E4BC">
+<td>3</td>
+<td>4
+</td></tr></table>
+<p>Y
+</p>
+<table border="1">
+<tr>
+<th>YA</th>
+<th>YB</th>
+<th>YC
+</th></tr>
+<tr style="background:#C5D9F1">
+<td>1</td>
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td>2</td>
+<td>3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td>3</td>
+<td>4</td>
+<td>5
+</td></tr></table>
+<p>X, Y mit XA=YA und XB=YB
+</p>
+<table border="1">
+<tr>
+<th>XA</th>
+<th>XB</th>
+<th>YA</th>
+<th>YB</th>
+<th>YC
+</th></tr>
+<tr style="background:#C5D9F1">
+<td style="background:#E6B8B7">1</td>
+<td style="background:#E6B8B7">2</td>
+<td>1</td>
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td style="background:#FCD5B4">2</td>
+<td style="background:#FCD5B4">3</td>
+<td>2</td>
+<td>3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td style="background:#D8E4BC">3</td>
+<td style="background:#D8E4BC">4</td>
+<td>3</td>
+<td>4</td>
+<td>5
+</td></tr></table>
+<p>Im Gegensatz zur ersten Variante sind hier also nur noch die Datensätze in der Ergebnismenge, die das Kriterium der Gleichheit erfüllt haben.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Natural Join">Bearbeiten</a>]</span> <span class="mw-headline" id="Natural_Join"> Natural Join </span></h3>
+<p>Ein Natural Join ist eine Kombination von zwei Tabellen, in denen Spalten gleichen Namens existieren. Die Werte in diesen Spalten werden sodann auf Übereinstimmungen geprüft (analog Equi-Join), 
+Das vorliegende Beispiel ist genau so gewählt, dass in beiden Relationen eine Spalte <code>A</code> und eine Spalte <code>B</code> existiert. Genau wie beim Equi-Join werden <code>A=A</code> und <code>B=B</code> geprüft. Im Anschluss an die Zusammenführung werden die Spalten paarweise zu einer einzigen <code>A</code>- bzw. <code>B</code>-Spalte zusammengefasst.
+</p><p>X
+</p>
+<table border="1">
+<tr>
+<th>A</th>
+<th>B
+</th></tr>
+<tr style="background:#E6B8B7">
+<td>1</td>
+<td>2
+</td></tr>
+<tr style="background:#FCD5B4">
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#D8E4BC">
+<td>3</td>
+<td>4
+</td></tr></table>
+<p>Y
+</p>
+<table border="1">
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C
+</th></tr>
+<tr style="background:#C5D9F1">
+<td>1</td>
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td>2</td>
+<td>3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td>3</td>
+<td>4</td>
+<td>5
+</td></tr></table>
+<p>Natural Join von X, Y
+</p>
+<table border="1">
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C
+</th></tr>
+<tr style="background:#C5D9F1">
+<td>1</td>
+<td>2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td>2</td>
+<td>3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td>3</td>
+<td>4</td>
+<td>5
+</td></tr></table>
+<p>oder auch:
+</p>
+<table border="1">
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C
+</th></tr>
+<tr style="background:#C5D9F1">
+<td style="background:#E6B8B7">1</td>
+<td style="background:#E6B8B7">2</td>
+<td>3
+</td></tr>
+<tr style="background:#CCC0DA">
+<td style="background:#FCD5B4">2</td>
+<td style="background:#FCD5B4">3</td>
+<td>4
+</td></tr>
+<tr style="background:#C4BD97">
+<td style="background:#D8E4BC">3</td>
+<td style="background:#D8E4BC">4</td>
+<td>5
+</td></tr></table>
+<p>Einige Datenbanksysteme erkennen das Schlüsselwort NATURAL und eliminieren entsprechend automatisch doppelte Spalten.
+</p><p>Die in Datenbanken weiterhin gebräuchlichen Joins werden in nachfolgenden Abschnitten separat behandelt:
+</p>
+<ul><li> <a href="#INNER_JOIN">INNER JOIN</a>
+</li><li> <a href="#LEFT.2FRIGHT_JOIN">LEFT/RIGHT JOIN</a>
+</li><li> <a href="#FULL_OUTER_JOIN">FULL OUTER JOIN</a>
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Syntax">Bearbeiten</a>]</span> <span class="mw-headline" id="Syntax"> Syntax </span></h3>
+<p>Datenbanksysteme unterstützen verschiedene Schreibweisen für Joins, die sich zum einen in ihrer Anwendbarkeit und zum anderen in der Lesbarkeit unterscheiden.
+</p>
+<b>implizite Schreibweise: </b><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span> X<span class="sy0">.</span>a<span class="sy0">,</span> X<span class="sy0">.</span>b<span class="sy0">,</span> Y<span class="sy0">.</span>a<span class="sy0">,</span> Y<span class="sy0">.</span>b<span class="sy0">,</span> c <span class="kw1">FROM</span> X<span class="sy0">,</span> Y</pre></div></div>
+<b>explizite Schreibweise: </b><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span> X<span class="sy0">.</span>a<span class="sy0">,</span> X<span class="sy0">.</span>b<span class="sy0">,</span> Y<span class="sy0">.</span>a<span class="sy0">,</span> Y<span class="sy0">.</span>b<span class="sy0">,</span> c <span class="kw1">FROM</span> X <span class="kw1">JOIN</span> Y</pre></div></div>
+<p>Zunächst fällt auf, dass die Spalten <code>a</code> und <code>b</code> jeweils mit dem Tabellennamen angegeben werden. Der Grund liegt darin, dass das Datenbanksystem bei der Angabe <code>a</code> nicht entscheiden kann, welche der Spalten gemeint ist, die aus Tabelle <code>X</code> oder die aus Tabelle <code>Y</code>. Um die Doppeldeutigkeit aufzulösen, muss der Tabellenname angegeben werden.
+</p><p>Desweiteren ist die implizite Schreibweise kürzer als die explizite. Sollen allerdings in einer Abfrage einmal mehrere Tabellen gejoint werden, kann es anschließend schwierig herauszufinden sein, welche Tabelle wann mit welcher und unter welchen Bedingungen gejoint wird. Deswegen wird oft die explizite Schreibweise empfohlen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Platzierung von Kriterien">Bearbeiten</a>]</span> <span class="mw-headline" id="Platzierung_von_Kriterien"> Platzierung von Kriterien </span></h3>
+<p>In der Regel sollen für den Join Kriterien festgelegt werden (siehe z.B. Equi-Join weiter oben). Grundsätzlich besteht die Möglichkeit, diese Kriterien im Bereich der <code>WHERE</code>-Klausel einer Abfrage anzugeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span> c <span class="kw1">FROM</span> X<span class="sy0">,</span> Y <span class="kw1">WHERE</span> X<span class="sy0">.</span>a <span class="sy0">=</span> Y<span class="sy0">.</span>a <span class="kw1">AND</span> X<span class="sy0">.</span>b <span class="sy0">=</span> Y<span class="sy0">.</span>b</pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Fall der impliziten Schreibweise <b>müssen</b> die Kriterien hier platziert werden, bei der expliziten <b>können</b> sie so platziert werden.
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Machen Sie sich den Unterschied klar: Wenn das DBMS die Kriterien nicht dem Join zuordnen kann, so wird zunächst ein vollständiges Kreuzprodukt gebildet und erst am Ende der Abfrage per <code>WHERE</code> auf die relevante Menge reduziert. Speziell bei einer Abfolge von mehreren Joins steigt dadurch die Datenmenge unnötig an.</div></div>
+</div>
+<p>Bei der expliziten Schreibweise ist daher auch die gezielte Angabe der Bedingungen anzustreben, zumal sie auch die Lesbarkeit der Abfrage erhöht.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span> c <span class="kw1">FROM</span> X <span class="kw1">JOIN</span> Y <span class="kw1">ON</span> X<span class="sy0">.</span>a <span class="sy0">=</span> Y<span class="sy0">.</span>a <span class="kw1">AND</span> X<span class="sy0">.</span>b <span class="sy0">=</span> Y<span class="sy0">.</span>b</pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Schlüsselwort <code>ON</code> leitet einen Kriterienblock ein, der dem <code>WHERE</code>-Block des gesamten <code>SELECT</code>-Statements ähnlich ist. Zu jedem Join gehört genau ein oder kein <code>ON</code>-Block.</div>
+</div>
+<p>In allen bisherigen Beispiele waren die Spaltennamen, die als Kriterien dienen, identisch. Außerdem wurde die Gleichheit der Werte in beiden Spalten gefordert. Einige Datenbanksysteme bieten für diesen „Spezialfall“ auch eine gesonderte Schreibweise an:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span> c <span class="kw1">FROM</span> X <span class="kw1">JOIN</span> Y <span class="kw1">USING</span> <span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="br0">&#41;</span></pre></div></div></div>
+</div>
+<p>Anmerkung: Sämtliche Beispiele haben eine Gleichheit der Spalten <code>A</code> und <code>B</code> gefordert. In der Praxis ist dies wohl auch die am häufigsten benötigte Variante. Es spricht allerdings nichts dagegen, beispielsweise einen Join <code>ON X.a &lt; Y.a</code> auszuführen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Mehrfachjoins">Bearbeiten</a>]</span> <span class="mw-headline" id="Mehrfachjoins"> Mehrfachjoins </span></h3>
+<p>Ein einzelner Join führt immer genau zwei Tabellen zusammen. Die Namen <i>LEFT (OUTER) JOIN</i> bzw. <i>RIGHT (OUTER) JOIN</i> sowie die nachfolgend verwendete Bezeichnung <i>linke</i> bzw. <i>rechte</i> Tabelle beziehen sich auf die Reihenfolge, in der die Tabellen am Join beteiligt sind. Bei <code>X JOIN Y</code> ist <code>X</code> die linke, <code>Y</code> die rechte Tabelle.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: implizite Schreibweise
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span> a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="sy0">,</span> d<span class="sy0">,</span> e <span class="kw1">FROM</span> X<span class="sy0">,</span> Y<span class="sy0">,</span> Z</pre></div></div></div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: explizite Schreibweise
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span> a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="sy0">,</span> d<span class="sy0">,</span> e <span class="kw1">FROM</span> X <span class="kw1">JOIN</span> Y <span class="kw1">JOIN</span> Z</pre></div></div></div>
+</div>
+<p>Beide Schreibweisen können zu dem Eindruck führen, es würden mehr als zwei Tabellen gejoint. In Wahrheit ist dies nicht der Fall. Der Ausdruck wird i.d.R. von links nach rechts abgearbeitet, so dass zunächst <code>X</code> und <code>Y</code> gejoint werden. Das Ergebnis dieses Joins wird sodann mit <code>Z</code> gejoint. Dies sollte man im Hinterkopf haben, da die Reihenfolge der Tabellen und Platzierung von Kriterien sowohl die Performance als auch das Ergebnis beeinflussen können. Zum Thema <i>Mehrfach-JOINs</i> sei der weiterführende Artikel <a href="http://wiki.selfhtml.org/wiki/Artikel:DBMS_und_SQL/Fortgeschrittene_Jointechniken" title="Artikel:DBMS und SQL/Fortgeschrittene Jointechniken" class="mw-redirect">Fortgeschrittene Joins</a> empfohlen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: INNER JOIN">Bearbeiten</a>]</span> <span class="mw-headline" id="INNER_JOIN"> INNER JOIN </span></h2>
+<p>Der <i>INNER JOIN</i> führt Datensätze aus der linken und rechten Tabelle genau dann zusammen, wenn die angegebenen Kriterien alle erfüllt sind. Ist eines oder mehrere der Kriterien nicht erfüllt, so entsteht kein Datensatz in der Ergebnismenge. Durch den Einsatz dieses JOINS reduziert sich das Ergebnis des kartesischen Produktes auf ein Minimum (vergleiche auch nachfolgende Join-Varianten).
+</p><p>Gesucht werden alle Rechnungen, die mit Kreditkarte beglichen wurden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: INNER JOIN
+</div>
+<div class="note-box-text note-box-example-comment">Implizite Schreibweise des INNER JOIN</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+  RechnungsNr<span class="sy0">,</span>
+  KundenNr<span class="sy0">,</span>
+  Betrag<span class="sy0">,</span>
+  Rechnungen<span class="sy0">.</span>Kartennummer<span class="sy0">,</span>
+  Firma<span class="sy0">,</span>
+  Inhaber<span class="sy0">,</span>
+  Ablaufdatum
+<span class="kw1">FROM</span> Kreditkarte<span class="sy0">,</span> Rechnungen
+<span class="kw1">WHERE</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> Rechnungen<span class="sy0">.</span>Kartennummer</pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Explizite Schreibweise des INNER JOIN</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+  RechnungsNr<span class="sy0">,</span>
+  KundenNr<span class="sy0">,</span>
+  Betrag<span class="sy0">,</span>
+  Rechnungen<span class="sy0">.</span>Kartennummer<span class="sy0">,</span>
+  Firma<span class="sy0">,</span>
+  Inhaber<span class="sy0">,</span>
+  Ablaufdatum
+<span class="kw1">FROM</span> Kreditkarte
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> Rechnungen <span class="kw1">ON</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> Rechnungen<span class="sy0">.</span>Kartennummer</pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Ergebnis der Abfrage lautet:</div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<tr>
+<th>RechnungsNr</th>
+<th>KundenNr</th>
+<th>Betrag</th>
+<th>Kartennummer</th>
+<th>Firma</th>
+<th>Inhaber</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>98765</td>
+<td>ABX039</td>
+<td>49,95</td>
+<td>12345</td>
+<td>VISA</td>
+<td>Max Mustermann</td>
+<td>05/2007
+</td></tr>
+<tr>
+<td>98767</td>
+<td>ABX040</td>
+<td>79,95</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98768</td>
+<td>ABX050</td>
+<td>59,99</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98769</td>
+<td>ABX050</td>
+<td>29,99</td>
+<td>12348</td>
+<td>Diners Club</td>
+<td>John Doe</td>
+<td>03/2008
+</td></tr></table></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass die Reihenfolge, in der die Tabellen genannt werden, bei diesem Join egal ist.</div>
+<p>Zunächst fällt auf, dass von ursprünglich 6 Rechnungen nun nur noch 4 übrig sind. Der Grund liegt darin, dass zu den beiden Barzahlungseinträgen (Kartennummer <code>-</code>) keine passende Kreditkarte gefunden werden konnte. Damit ist das <code>ON</code>-Kriterium des Joins nicht erfüllt und der Datensatz entfällt. Analog ist die Kreditkarte <code>12346</code> nicht im Ergebnis enthalten, da sie keiner Rechnung zugeordnet werden konnte.
+</p><p>Im Vergleich zum kartesischen Produkt entfallen darüber hinaus all diejenigen Datensätze, bei denen zwar in beiden Tabellen eine Kreditkartennummer vorhanden ist, diese aber nicht übereinstimmt.
+</p><p>Beachten Sie: Die Spalte <code>Kartennummer</code> muss zusammen mit einem Tabellennamen angegeben werden, da sie durch den Join im Ergebnis doppelt vorhanden ist, einmal aus jeder Tabelle (wenn auch mit identischem Wert). Das DBMS fordert daher zur Auflösung dieser Mehrdeutigkeit auf.
+</p><p>Das obige Ergebnis stimmt zudem mit einer nicht-normalisierten Speicherung aller Kreditkartenzahlungen überein, allerdings mit den bekannten Redundanzen (hier z.B. die Kreditkartendaten der Kartennummer <code>12347</code>).
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: LEFT/RIGHT JOIN">Bearbeiten</a>]</span> <span class="mw-headline" id="LEFT.2FRIGHT_JOIN"> LEFT/RIGHT JOIN </span></h2>
+<p>Die <i>LEFT JOIN</i>- bzw. <i>RIGHT JOIN</i>-Varianten sind auf den ersten Blick etwas schwieriger zu verstehen. Die Syntax ist dabei bis auf das jeweilige Schlüsselwort analog der Syntax des <i>INNER JOIN</i>. Der Unterschied liegt in den Datensätzen, die hinterher im Ergebnis zugelassen werden.
+</p><p>Die Logik lautet für den <i>LEFT JOIN</i>: Ein Datensatz aus der linken Tabelle kommt in jedem Fall in das Ergebnis. Wenn ein Datensatz der rechten Tabelle dem <i>ON</i>-Kriterium entspricht, so wird er entsprechend in den Spalten eingetragen, ansonsten bleiben die Spalten leer (<code>NULL</code>). Der <i>RIGHT JOIN</i> arbeitet genau entgegengesetzt.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> In diesem Fall spielt die Reihenfolge in der die Tabellen angesprochen werden sehr wohl eine Rolle, <code>Kreditkarte LEFT JOIN Rechnungen</code> (alle Kreditkarten, ggf. Rechnungsdaten) liefert ein anderes Ergebnis als <code>Rechnungen LEFT JOIN Kreditkarte</code> (alle Rechnungen, ggf. Kreditkarteninformation).</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Beispiel LEFT JOIN">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_LEFT_JOIN"> Beispiel LEFT JOIN </span></h3>
+<p>Gesucht werden alle Rechnungen. Falls sie per Kreditkarte bezahlt wurden, so sollen die Kartendaten ebenfalls ausgegeben werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: LEFT JOIN
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+  RechnungsNr<span class="sy0">,</span>
+  KundenNr<span class="sy0">,</span>
+  Betrag<span class="sy0">,</span>
+  Rechnungen<span class="sy0">.</span>Kartennummer<span class="sy0">,</span>
+  Firma<span class="sy0">,</span>
+  Inhaber<span class="sy0">,</span>
+  Ablaufdatum
+<span class="kw1">FROM</span> Rechnungen
+<span class="kw1">LEFT</span> <span class="kw1">JOIN</span> Kreditkarte <span class="kw1">ON</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> Rechnungen<span class="sy0">.</span>Kartennummer</pre></div></div></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass im Unterschied zum <i>INNER JOIN</i> die Herkunft der selektierten Kartennummer eine Rolle spielt. Dies ist mehr eine syntaktische Feinheit als inhaltliche Notwendigkeit.</div>
+<p>Für alle Datensätze trifft genau eines der nachfolgenden Szenarien zu:
+</p>
+<ol><li> <b>Rechnungen.Kartennummer = Kreditkarte.Kartennummer:</b> Beide Kartennummern stimmen überein, damit ist es egal, aus welcher Tabelle die Kartennummer entstammt.
+</li><li> <b>Rechnungen.Kartennummer ist NULL</b> (Barzahlung): Der Join bringt kein Ergebnis. Per Definition ergibt damit der Ausdruck Kreditkarte.Kartennummer <code>NULL</code>, ebenso wie Rechnungen.Kartennummer.
+</li><li> <b>Rechnungen.Kartennummer ist eine nicht-existente Karte:</b> Dies ist der kritische Sonderfall. Bei korrekt definierten Konsistenzbedingungen dürfte er nicht auftreten. Tut er dies doch, so ist Kreditkarte.Kartennummer <code>NULL</code>, da keine Übereinstimmung gefunden wurde. Rechnungen.Kartennummer enthält jedoch die ungültige Kartennummer. Je nachdem welche Spalte im <code>SELECT</code> aufgeführt wurde, unterscheidet sich also das Ergebnis.
+</li></ol>
+<p>Das Ergebnis der Abfrage lautet:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: – Ergebnis des LEFT JOIN
+</div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<tr>
+<th>RechnungsNr</th>
+<th>KundenNr</th>
+<th>Betrag</th>
+<th>Kartennummer</th>
+<th>Firma</th>
+<th>Inhaber</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>98765</td>
+<td>ABX039</td>
+<td>49,95</td>
+<td>12345</td>
+<td>VISA</td>
+<td>Max Mustermann</td>
+<td>05/2007
+</td></tr>
+<tr>
+<td>98766</td>
+<td>ABX039</td>
+<td>12,95</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-
+</td></tr>
+<tr>
+<td>98767</td>
+<td>ABX040</td>
+<td>79,95</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98768</td>
+<td>ABX050</td>
+<td>59,99</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98769</td>
+<td>ABX050</td>
+<td>29,99</td>
+<td>12348</td>
+<td>Diners Club</td>
+<td>John Doe</td>
+<td>03/2008
+</td></tr>
+<tr>
+<td>98770</td>
+<td>ABX060</td>
+<td>99,99</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-
+</td></tr></table></div>
+</div>
+<p>Es befinden sich nun alle 6 Rechnungen der Ausgangsmenge im Ergebnis, alle diejenigen zu denen es eine Karteninformation gab wurden um diese Informationen ergänzt.
+</p><p>Die Spalte <code>Kartennummer</code> muss zusammen mit dem Tabellennamen angegeben werden, da sie durch den Join im Ergebnis doppelt vorhanden ist, einmal aus jeder Tabelle (wenn auch mit identischem Wert). Das DBMS fordert daher zur Auflösung dieser Mehrdeutigkeit auf.
+</p><p>Dieses Ergebnis entspricht der nicht normalisierten Speicherung aller Rechnungsinformationen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Beispiel RIGHT JOIN">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_RIGHT_JOIN"> Beispiel RIGHT JOIN </span></h3>
+<p>Gesucht werden alle Karteninformationen. Falls mit der entsprechenden Kreditkarte etwas bestellt wurde, sollen die Rechnungsinformationen beigefügt werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: RIGHT JOIN
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+  RechnungsNr<span class="sy0">,</span>
+  KundenNr<span class="sy0">,</span>
+  Betrag<span class="sy0">,</span>
+  Kreditkarte<span class="sy0">.</span>Kartennummer<span class="sy0">,</span>
+  Firma<span class="sy0">,</span>
+  Inhaber<span class="sy0">,</span>
+  Ablaufdatum
+<span class="kw1">FROM</span> Rechnungen <span class="kw1">RIGHT</span> <span class="kw1">JOIN</span> Kreditkarte
+<span class="kw1">ON</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> Rechnungen<span class="sy0">.</span>Kartennummer</pre></div></div></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass im Unterschied zum <i>INNER JOIN</i> die Herkunft der selektierte Kartennummer eine Rolle spielt. Dies ist mehr eine syntaktische Feinheit als inhaltliche Notwendigkeit.</div>
+<p>Für alle Datensätze trifft genau eines der nachfolgenden Szenarien zu:
+</p>
+<ol><li> <b>Kreditkarte.Kartennummer = Rechnungen.Kartennummer:</b> Beide Kartennummern stimmen überein, damit ist es egal, aus welcher Tabelle die Kartennummer entstammt.
+</li><li> <b>Kreditkarte.Kartennummer ist NULL:</b> Der Join bringt kein Ergebnis. Per Definition ergibt damit der Ausdruck Rechnungen.Kartennummer <code>NULL</code>, ebenso wie Kreditkarte.Kartennummer.<br /> Dieser Auflistungpunkt wurde nur aus Gründen der Vollständigkeit eingefügt. Das vorgeführte Beispiel arbeitet mit einer Fremdschlüsselbeziehung: Der Primärschlüssel <code>Kartennummer</code> aus der Tabelle <code>Kreditkarte</code> tritt als Fremdschlüssel in der Tabelle <code>Rechnungen</code> auf. Beim <i>LEFT JOIN</i> sind diese Ausführungen demnach sinnvoll (es kann eine Rechnung geben, bei der keine Kreditkarte eingetragen ist). Dieses inverse <i>RIGHT JOIN</i>-Beispiel geht jedoch von einer Kreditkarte mit der Kartennummer <code>NULL</code> aus, was aufgrund der Primärschlüsseleigenschaft der Kartennummer nicht passieren kann.
+</li><li> <b>Kreditkarte.Kartennummer ist eine nicht-verwendete Karte:</b> Dies ist der kritische Sonderfall. Wird Rechnungen.Kartennummer abgefragt, so ist das Ergebnis <code>NULL</code>, da keine Übereinstimmung gefunden wurde. Kreditkarte.Kartennummer enthält jedoch die Nummer der nicht verwendeten Karte. Je nachdem welche Spalte im <code>SELECT</code> aufgeführt wurde, unterscheidet sich also das Ergebnis.
+</li></ol>
+<div class="note-box note-box-advice"><p class="note-box-title">Hinweis:</p><div class="note-box-text"> Das MySQL-Handbuch rät von der Verwendung von <i>RIGHT JOIN</i> ab, da dieser Join nicht von allen DBMS unterstützt wird und durch simples Umsortieren durch einen <i>LEFT JOIN</i> ersetzt werden kann.</div></div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: – Ergebnis RIGHT JOIN
+</div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<tr>
+<th>RechnungsNr</th>
+<th>KundenNr</th>
+<th>Betrag</th>
+<th>Kartennummer</th>
+<th>Firma</th>
+<th>Inhaber</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>98765</td>
+<td>ABX039</td>
+<td>49,95</td>
+<td>12345</td>
+<td>VISA</td>
+<td>Max Mustermann</td>
+<td>05/2007
+</td></tr>
+<tr>
+<td> -</td>
+<td>-</td>
+<td>-</td>
+<td>12346</td>
+<td>Mastercard</td>
+<td>Katrin Musterfrau</td>
+<td>01/2008
+</td></tr>
+<tr>
+<td>98767</td>
+<td>ABX040</td>
+<td>79,95</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98768</td>
+<td>ABX050</td>
+<td>59,99</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98769</td>
+<td>ABX050</td>
+<td>29,99</td>
+<td>12348</td>
+<td>Diners Club</td>
+<td>John Doe</td>
+<td>03/2008
+</td></tr></table></div>
+</div>
+<p>In der Ergebnismenge befinden sich alle 4 Kreditkarten, die Karte <code>12347</code> taucht doppelt auf, da sie zwei Rechnungen zugeordnet ist. Die Karte <code>12346</code> hingegen wird ohne Rechnung gelistet.
+</p><p>Die Spalte <code>Kartennummer</code> muss zusammen mit dem Tabellennamen angegeben werden, da sie durch den Join im Ergebnis doppelt vorhanden ist, einmal aus jeder Tabelle (wenn auch mit identischem Wert). Das DBMS fordert daher zur Auflösung dieser Mehrdeutigkeit auf.
+</p><p>Dieses Ergebnis entspricht der nicht normalisierten Speicherung aller Kreditkarteninformationen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: FULL OUTER JOIN">Bearbeiten</a>]</span> <span class="mw-headline" id="FULL_OUTER_JOIN"> FULL OUTER JOIN </span></h2>
+<p>Der <i>FULL OUTER JOIN</i> kommt dem ursprünglichen Kreuzprodukt von allen Joins am nächsten. Er ist gewissermaßen die Kombination aus <i>LEFT</i> und <i>RIGHT JOIN</i>.
+</p><p>Die Logik für diesen Join: Jeder Datensatz der rechten und der linken Tabelle kommt in die Ergebnismenge. Findet sich über das <code>ON</code>-Kriterium ein passender Partner werden beide zusammengefügt, andernfalls wird die jeweils fehlende Seite mit <code>NULL</code> aufgefüllt.
+</p><p>Gesucht werden sowohl alle Karteninformationen als auch alle Rechnungen. Sofern möglich sollen dabei Rechnungen und Karten kombiniert werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: FULL OUTER JOIN
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+  RechnungsNr<span class="sy0">,</span>
+  KundenNr<span class="sy0">,</span>
+  Betrag<span class="sy0">,</span>
+  Rechnungen<span class="sy0">.</span>Kartennummer<span class="sy0">,</span>
+  Firma<span class="sy0">,</span>
+  Inhaber<span class="sy0">,</span>
+  Ablaufdatum
+<span class="kw1">FROM</span> Rechnungen
+<span class="kw1">OUTER</span> <span class="kw1">JOIN</span> Kreditkarte <span class="kw1">ON</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> Rechnungen<span class="sy0">.</span>Kartennummer</pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Ergebnis der Abfrage lautet:</div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<tr>
+<th>RechnungsNr</th>
+<th>KundenNr</th>
+<th>Betrag</th>
+<th>Kartennummer</th>
+<th>Firma</th>
+<th>Inhaber</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>98765</td>
+<td>ABX039</td>
+<td>49,95</td>
+<td>12345</td>
+<td>VISA</td>
+<td>Max Mustermann</td>
+<td>05/2007
+</td></tr>
+<tr>
+<td>98766</td>
+<td>ABX039</td>
+<td>12,95</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-
+</td></tr>
+<tr>
+<td> -</td>
+<td>-</td>
+<td>-</td>
+<td>12346</td>
+<td>Mastercard</td>
+<td>Katrin Musterfrau</td>
+<td>01/2008
+</td></tr>
+<tr>
+<td>98767</td>
+<td>ABX040</td>
+<td>79,95</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98768</td>
+<td>ABX050</td>
+<td>59,99</td>
+<td>12347</td>
+<td>American Express</td>
+<td>John Doe</td>
+<td>01/2007
+</td></tr>
+<tr>
+<td>98769</td>
+<td>ABX050</td>
+<td>29,99</td>
+<td>12348</td>
+<td>Diners Club</td>
+<td>John Doe</td>
+<td>03/2008
+</td></tr>
+<tr>
+<td>98770</td>
+<td>ABX060</td>
+<td>99,99</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-
+</td></tr></table></div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie,</strong> dass in diesem Fall die Reihenfolge der Tabellen wiederum egal ist. <b>Achtung:</b> MySQL unterstützt diese Abfrage nicht.</div>
+<p>In der Ergebnismenge befinden sich nun alle 6 Bestellungen sowie alle 4 Kreditkarten, sofern möglich mit Datensätzen der jeweils anderen Tabelle zusammengeführt.
+</p><p>Die Spalte <code>Kartennummer</code> muss zusammen mit dem Tabellennamen angegeben werden, da sie durch den Join im Ergebnis doppelt vorhanden ist, einmal aus jeder Tabelle (wenn auch mit identischem Wert). Das DBMS fordert daher zur Auflösung dieser Mehrdeutigkeit auf.
+</p><p>Das Ergebnis der Abfrage entspricht einer nicht normalisierten Speicherung aller Daten in einer Tabelle.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Abschließende Anmerkungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Abschlie.C3.9Fende_Anmerkungen"> Abschließende Anmerkungen </span></h2>
+<p>Im Zusammenhang mit Joins und normalisierten Tabellen sollte man einige Dinge im Hinterkopf behalten:
+</p>
+<ul><li> Ein Join ist und bleibt – je nach Tabellengröße – eine umfangreiche Aktion. Wenn die Performance ein kritischer Faktor ist, sollte man die verwendeten Joins dahingehend untersuchen, ob:
+<ul><li> sämtliche in den Kriterien (<code>ON</code>) verwendeten Spalten indiziert sind
+</li><li> der Join tatsächlich nötig ist und nicht aus reiner Bequemlichkeit einer zweiten Abfrage vorgezogen wird
+</li><li> die Tabellenreihenfolge optimal gewählt ist. Als Faustregel gilt: Immer mit der kleinsten Tabelle beginnen. Wenn das Datenbanksystem Subselects unterstützt, kann es effizienter sein statt der gesamten Tabelle nur eine durch Kriterien beschränkte Teilmenge der Datensätze im Join zu verwenden.
+</li></ul>
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: Beispiele zur Tabellenreihenfolge: Alle Rechnungen zur Kreditkarte 12347">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiele_zur_Tabellenreihenfolge:_Alle_Rechnungen_zur_Kreditkarte_12347"> Beispiele zur Tabellenreihenfolge: Alle Rechnungen zur Kreditkarte 12347 </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 1
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+  RechnungsNr<span class="sy0">,</span>
+  KundenNr<span class="sy0">,</span>
+  Betrag<span class="sy0">,</span>
+  Rechnungen<span class="sy0">.</span>Kartennummer<span class="sy0">,</span>
+  Firma<span class="sy0">,</span>
+  Inhaber<span class="sy0">,</span>
+  Ablaufdatum
+<span class="kw1">FROM</span> Rechnungen
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> Kreditkarte <span class="kw1">ON</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> Rechnungen<span class="sy0">.</span>Kartennummer
+<span class="kw1">WHERE</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> <span class="nu0">12347</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In der Ausgangsform ist diese Abfrage relativ ineffizient. Dank der Reihenfolge beim <i>INNER JOIN</i> werden alle Rechnungen mit allen Karteninformationen gegenübergestellt. Erst nach dem Join wird das <code>WHERE</code>-Kriterium angewandt. Unter Umständen optimiert das Datenbanksystem diese Abfrage automatisch, aber sie kann auch vom Programmierer selbst optimiert werden.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 2
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+  RechnungsNr<span class="sy0">,</span>
+  KundenNr<span class="sy0">,</span>
+  Betrag<span class="sy0">,</span>
+  Rechnungen<span class="sy0">.</span>Kartennummer<span class="sy0">,</span>
+  Firma<span class="sy0">,</span>
+  Inhaber<span class="sy0">,</span>
+  Ablaufdatum
+<span class="kw1">FROM</span> Kreditkarte
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> Rechnungen <span class="kw1">ON</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> Rechnungen<span class="sy0">.</span>Kartennummer
+                      <span class="kw1">AND</span> Kreditkarte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> <span class="nu0">12347</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Bei dieser Abfrage wurden die verwendeten Tabellen vertauscht und im <code>ON</code>-Kriterium eine Einschränkung platziert. Die <code>WHERE</code>-Klausel wurde somit weiter nach innen verlegt.
+Vorteil dieser Schreibweise ist, dass sie von den meisten DBMS unterstützt wird und keinen Subselect verwendet.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 3
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+  RechnungsNr<span class="sy0">,</span>
+  KundenNr<span class="sy0">,</span>
+  Betrag<span class="sy0">,</span>
+  Rechnungen<span class="sy0">.</span>Kartennummer<span class="sy0">,</span>
+  Firma<span class="sy0">,</span>
+  Inhaber<span class="sy0">,</span>
+  Ablaufdatum
+<span class="kw1">FROM</span>
+  <span class="br0">&#40;</span><span class="kw1">SELECT</span> Kartennummer<span class="sy0">,</span> Firma<span class="sy0">,</span> Inhaber<span class="sy0">,</span> Ablaufdatum
+   <span class="kw1">FROM</span> Kreditkarte
+   <span class="kw1">WHERE</span> Kartennummer <span class="sy0">=</span> <span class="nu0">12347</span><span class="br0">&#41;</span> Karte
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> Rechnungen <span class="kw1">ON</span> Karte<span class="sy0">.</span>Kartennummer <span class="sy0">=</span> Rechnungen<span class="sy0">.</span>Kartennummer</pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Dies ist die Subselect-Variante, die nicht von allen DBMS unterstützt wird (vgl. z.B. ältere Versionen von MySQL oder MS-Access).<br />
+Der Vorteil dieser Schreibweise gegenüber der vorherigen liegt in der Parametrisierbarkeit: Man stelle sich vor, man möchte eine Abfrage innerhalb einer Anwendung mehrfach verwenden, der Kriterienausdruck soll allerdings dynamisch bleiben. In PHP-Syntax könnte sodann der gesamte Teil <code>SELECT … FROM … WHERE</code> stehen bleiben, einzig und alleine hinter dem WHERE wird eine Variable $(kriterienausdruck) platziert, die beliebig komplex sein kann. Da es sich um ein gewöhnliches <code>SELECT FROM WHERE</code> handelt, können hier auch Gruppierungen o.ä. vorgenommen werden, die in der <code>ON</code>-Klausel unzulässig sind.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: Views">Bearbeiten</a>]</span> <span class="mw-headline" id="Views"> Views </span></h3>
+<p>Es muss nicht immer ein Join sein. Wenn immer wieder die selbe Abfolge von Joins benötigt wird, kann Gebrauch von sog. <i>Views</i> gemacht werden. Ein View ist eine Art virtuelle Tabelle. Er basiert auf einer beliebig komplexen SQL-Abfrage und stellt das Ergebnis in Form einer Tabelle zur Verfügung. Das Datenbanksystem kann das Ergebnis dieser Abfrage unter Umständen cachen und somit beim zweiten Zugriff schneller zur Verfügung stellen als das Ergebnis des Joins. Beim Lesezugriff auf einen View gibt es i.d.R. keine Probleme, Schreiboperationen hingegen sind mit Vorsicht zu genießen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: Fortsetzung">Bearbeiten</a>]</span> <span class="mw-headline" id="Fortsetzung"> Fortsetzung </span></h2>
+<p>Siehe Artikel: <a href="http://wiki.selfhtml.org/wiki/Artikel:DBMS_und_SQL/Fortgeschrittene_Jointechniken" title="Artikel:DBMS und SQL/Fortgeschrittene Jointechniken" class="mw-redirect">Fortgeschrittene Jointechniken</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 1258/1000000
+Post‐expand include size: 34132/2097152 bytes
+Template argument size: 29119/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1953-0!*!0!!de-formal!*!* and timestamp 20150301174250 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;oldid=23683">http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;oldid=23683</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:DBMS_und_SQL" title="Kategorie:DBMS und SQL">DBMS und SQL</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Datenbanken%2FEinf%C3%BChrung+in+Joins" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Datenbanken/Einführung_in_Joins"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="http://wiki.selfhtml.org/wiki/Diskussion:Datenbanken/Einführung_in_Joins"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Datenbanken/Einführung_in_Joins" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Datenbanken/Einführung_in_Joins" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Datenbanken/Einführung_in_Joins" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Einf%C3%BChrung_in_Joins&amp;oldid=23683" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Datenbanken-2FEinführung_in_Joins" title="Spezial:Durchsuchen/Datenbanken-2FEinführung in Joins">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 31. Oktober 2014 um 10:14 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 67.523-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.087 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Datenbanken/Einführung_in_Joins by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:24 GMT -->
+</html>

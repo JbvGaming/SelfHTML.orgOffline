@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Funktionen für Datei- und Verzeichnis-Management – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Funktionen_für_Datei-_und_Verzeichnis-Management","wgTitle":"Perl/Funktionen für Datei- und Verzeichnis-Management","wgCurRevisionId":13958,"wgArticleId":3103,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Funktionen_für_Datei-_und_Verzeichnis-Management","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Funktionen für Datei- und Verzeichnis-Management" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Funktionen_für_Datei-_und_Verzeichnis-Management skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Funktionen für Datei- und Verzeichnis-Management</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_diesen_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu diesen Funktionen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Pfadnamen_und_Verzeichnisse"><span class="tocnumber">1.1</span> <span class="toctext">Pfadnamen und Verzeichnisse</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Rechteangaben_f.C3.BCr_Dateien_und_Verzeichnisse"><span class="tocnumber">1.2</span> <span class="toctext">Rechteangaben für Dateien und Verzeichnisse</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#-.5Bx.5D_-_Dateitestoperatoren_f.C3.BCr_Dateien.2FVerzeichnisse"><span class="tocnumber">2</span> <span class="toctext">-[x] - Dateitestoperatoren für Dateien/Verzeichnisse</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Tabelle_der_Dateitestoperatoren"><span class="tocnumber">2.1</span> <span class="toctext">Tabelle der Dateitestoperatoren</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#chdir_-_Verzeichnis_wechseln"><span class="tocnumber">3</span> <span class="toctext">chdir - Verzeichnis wechseln</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#chmod_-_Datei-.2FVerzeichnisrechte_.C3.A4ndern"><span class="tocnumber">4</span> <span class="toctext">chmod - Datei-/Verzeichnisrechte ändern</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#chown_-_Besitzer_und_Besitzergruppe_von_Dateien_.C3.A4ndern"><span class="tocnumber">5</span> <span class="toctext">chown - Besitzer und Besitzergruppe von Dateien ändern</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#chroot_-_Wurzelverzeichnis_f.C3.BCr_Pfadnamen_.C3.A4ndern"><span class="tocnumber">6</span> <span class="toctext">chroot - Wurzelverzeichnis für Pfadnamen ändern</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#glob_-_Dateien_mit_Wildcards_ausw.C3.A4hlen"><span class="tocnumber">7</span> <span class="toctext">glob - Dateien mit Wildcards auswählen</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#link_-_neue_Datei_als_Link_auf_vorhandene_erzeugen"><span class="tocnumber">8</span> <span class="toctext">link - neue Datei als Link auf vorhandene erzeugen</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#lstat_-_Eigenschaften_einer_Link-Datei"><span class="tocnumber">9</span> <span class="toctext">lstat - Eigenschaften einer Link-Datei</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#mkdir_-_Verzeichnis_erstellen"><span class="tocnumber">10</span> <span class="toctext">mkdir - Verzeichnis erstellen</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#readlink_-_Wert_einer_Link-Datei_auslesen"><span class="tocnumber">11</span> <span class="toctext">readlink - Wert einer Link-Datei auslesen</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#rename_-_Datei.2FVerzeichnis_umbenennen"><span class="tocnumber">12</span> <span class="toctext">rename - Datei/Verzeichnis umbenennen</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#rmdir_-_Verzeichnis_l.C3.B6schen"><span class="tocnumber">13</span> <span class="toctext">rmdir - Verzeichnis löschen</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#stat_-_Eigenschaften_einer_Datei_ermitteln"><span class="tocnumber">14</span> <span class="toctext">stat - Eigenschaften einer Datei ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#symlink_-_neue_Datei_als_symbolischen_Link_auf_vorhandene_erzeugen"><span class="tocnumber">15</span> <span class="toctext">symlink - neue Datei als symbolischen Link auf vorhandene erzeugen</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#umask_-_Umask_des_laufenden_Prozesses_.C3.A4ndern"><span class="tocnumber">16</span> <span class="toctext">umask - Umask des laufenden Prozesses ändern</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#unlink_-_Dateien_l.C3.B6schen"><span class="tocnumber">17</span> <span class="toctext">unlink - Dateien löschen</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#utime_-_Zeitstempel_von_Dateien.2FVerzeichnissen_.C3.A4ndern"><span class="tocnumber">18</span> <span class="toctext">utime - Zeitstempel von Dateien/Verzeichnissen ändern</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu diesen Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_diesen_Funktionen"> Allgemeines zu diesen Funktionen </span></h2>
+<p>Perl kommt, wie bereits mehrfach betont wurde, aus der Unix-Welt. Daher sind die Funktionen rund um Datei- und Verzeichnismanagement auch an den typischen Möglichkeiten von Unix orientiert. Einige dieser Funktionen sind nur anwendbar, wenn Ihr Perl-Script auf einem Unix-System ausgeführt wird. Funktionen zur Dateiverwaltung, die auch auf anderen Betriebssystemen ausführbar sind, können als "plattformunabhängig" bezeichnet werden, auch wenn das nicht absolut korrekt ist. Bei den hier aufgeführten Beschreibungen zu den einzelnen Funktionen zum Datei- und Verzeichnismanagement wird darauf hingewiesen, wenn es Beschränkungen auf bestimmte Betriebssystemtypen gibt.
+</p><p>Weitere Funktionen zur Dateiverwaltung, etwa zum Kopieren und Verschieben von Dateien, gibt es ebenfalls, doch gehören sie nicht zum Kernel von Perl. Solche Funktionen sind über das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>File</code> erreichbar.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Pfadnamen und Verzeichnisse">Bearbeiten</a>]</span> <span class="mw-headline" id="Pfadnamen_und_Verzeichnisse"> Pfadnamen und Verzeichnisse </span></h3>
+<p>Die hier beschriebenen Funktionen erwarten als Parameter Pfadangaben. Als Trennzeichen zwischen Verzeichnisnamen bei Pfadangaben benutzen Sie aus Portabilitätsgründen am besten grundsätzlich den einfachen Schrägstrich, auch bei Perl-Scripts, die unter Windows laufen sollen. Perl unter Windows setzt dies intern in die Microsoft-eigenen Backslashes um.<br />Beispiele:
+</p>
+<table class="wikitable">
+<tr>
+<th> Syntaxbeispiel
+</th>
+<th> Bedeutung
+</th></tr>
+<tr>
+<td> <code>".."</code>
+</td>
+<td> relative Angabe, ein Verzeichnis höher
+</td></tr>
+<tr>
+<td> <code>"../../bin"</code>
+</td>
+<td> relative Angabe, zwei Verzeichnisse höher und von dort aus gerechnet Unterverzeichnis "bin"
+</td></tr>
+<tr>
+<td> <code>"images"</code>
+</td>
+<td> relative Angabe, Unterverzeichnis "images" im aktuellen Verzeichnis
+</td></tr>
+<tr>
+<td> <code>"/"</code>
+</td>
+<td> absolute Angabe, Wurzelverzeichnis
+</td></tr>
+<tr>
+<td> <code>"/usr/bin/perl"</code>
+</td>
+<td> absolute Angabe ab Wurzelverzeichnis
+</td></tr>
+<tr>
+<td> <code>"c:/windows/system"</code>
+</td>
+<td> absolute Angabe mit Laufwerksangabe - Windows-typisch
+</td></tr></table>
+<p>Relative Pfadangaben sollten Sie nur verwenden, wenn das aktuelle Arbeitsverzeichnis bekannt ist.<br />
+Um das aktuelle Arbeitsverzeichnis in Perl zu ermitteln, können Sie notieren:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw2">use</span> Cwd<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Arbeitsverzeichnis</span> <span class="sy0">=</span> cwd<span class="sy0">;</span></pre></div></div>
+<p>In dem Skalar <code>$Arbeitsverzeichnis</code> steht dann anschließend der vollständige Pfad zum aktuellen Arbeitsverzeichnis. Benutzt wird dazu das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>cwd</code>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Rechteangaben für Dateien und Verzeichnisse">Bearbeiten</a>]</span> <span class="mw-headline" id="Rechteangaben_f.C3.BCr_Dateien_und_Verzeichnisse"> Rechteangaben für Dateien und Verzeichnisse </span></h3>
+<p>Viele der hier beschriebenen Funktionen erwarten als Parameter eine Rechteangabe.
+</p><p>Bei Unix-Systemen haben alle Einträge eines Dateisystems Rechte. Jede Datei, jedes Verzeichnis gehört einem Benutzer, und jeder Benutzer gehört zu einer Benutzergruppe. Der so genannte Superuser, also der Benutzer mit der so genannten root-Kennung, kann Benutzer und Benutzergruppen einrichten und manipulieren sowie Logindaten für die einzelnen Benutzer des Systems vergeben.
+</p><p>Ein Benutzer, der sich an einem Unix-System einloggt, erhält vom Betriebssystem eine individuelle Benutzerkennung, die User-ID (UID). Ebenso erhält jede Benutzergruppe eine Gruppen-ID (GID). Beide IDs sind Nummern. In einigen der hier beschriebenen Funktionen spielen diese IDs eine Rolle. Solche Funktionen sind dann in der Regel nur anwendbar, wenn das Perl-Script in einer Unix-Umgebung laufen soll.
+</p><p>Das System weiß stets, welcher eingeloggte Benutzer eine Datei oder ein Verzeichnis erzeugt. Die Datei bzw. das Verzeichnis gehört dann diesem Benutzer und seiner primären Benutzergruppe. Grundsätzlich werden auf Unix-Systemen für jede Datei und jedes Verzeichnis die Zugriffsrechte für den besitzenden Benutzer, seine primäre Benutzergruppe und für Fremdbenutzer ("Rest der Welt") festgelegt. Dabei wird zwischen Leserecht, Schreibrecht und Ausführungsrecht unterschieden. Jedes dieser drei Rechte (Lesen, Schreiben, Ausführen) kann für jede der drei Benutzertypen (Besitzer, zugehörige Gruppe und Rest der Welt) auf "ja" oder "nein" gesetzt werden. Die Darstellung dieser Rechte erfolgt üblicherweise in zwei Arten: entweder als eine Zeichenkette von 3 mal 3, also 9 Zeichen, oder als Oktalzahl mit 3 Ziffern.
+</p><p><b>Darstellung als Zeichenkette (Beispiele):</b>
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1">rwxrwxrwx
+rw<span class="sy0">-</span>r<span class="sy0">--</span>r<span class="sy0">--</span>
+rwx<span class="sy0">------</span></pre></div></div>
+<p>Der Buchstabe <code>r</code> steht für Lesen (<i>read</i>), <code>w</code> für Schreiben (<i>write</i>), und <code>x</code> für Ausführen (<i>execute</i>). Ist ein solcher Buchstabe gesetzt, so ist damit das entsprechende Recht vergeben. Ist das entsprechende Recht nicht gesetzt, wird stattdessen ein Bindestrich <code>-</code> notiert. Die ersten drei der neun Zeichen bedeuten die Lese-, Schreib- und Ausführungsrechte des besitzenden Benutzers der Datei, die zweiten drei Zeichen die Lese-, Schreib- und Ausführungsrechte seiner Gruppe, und die dritten drei Zeichen die Lese-, Schreib- und Ausführungsrechte für den "Rest der Welt".
+Der Wert <code>rwxrwxrwx</code> bedeutet also: alle drei Benutzertypen (besitzender Benutzer, zugehörige Gruppe und Rest der Welt) haben an der Datei alle drei Rechte.<br />
+Der Wert <code>rw-r--r--</code> bedeutet: der besitzende Benutzer hat die Rechte "Lesen" und "Schreiben", aber nicht "Ausführen", seine Gruppe und der Rest der Welt haben nur das Recht "Lesen", aber nicht die Rechte "Schreiben" und "Ausführen".<br />
+Der Wert <code>rwx------</code> bedeutet: der besitzende Benutzer hat alle Rechte, seine Gruppe und der Rest der Welt haben überhaupt keine Rechte.
+</p><p><b>Darstellung als Oktalzahl (gleiche Beispiele wie zuvor):</b>
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1">0777
+0644
+0700</pre></div></div>
+<p>Bei dieser Darstellung, die von den meisten der hier beschriebenen Funktionen gefordert wird, wird eine Zahl mit einer führenden 0 notiert, was Perl die Zahl als Oktalzahl interpretieren lässt. Die Zahl selber besteht aus den 3 nachfolgenden Ziffern. Bei Oktalzahlen sind nur Ziffern zwischen 0 und 7 erlaubt. Die erste Ziffer steht für die Rechte des besitzenden Benutzers, die zweite Ziffer für die seiner Benutzergruppe, und die dritte für die vom "Rest der Welt". Die Ziffern haben folgende Bedeutung für die Rechtezuweisung:
+</p>
+<ul><li> 1 für Ausführen (--x)
+</li><li> 2 für Schreiben (-w-)
+</li><li> 3 für Schreiben und Ausführen (-wx)
+</li><li> 4 für Lesen (r--)
+</li><li> 5 für Lesen und Ausführen (r-x)
+</li><li> 6 für Lesen und Schreiben (rw-)
+</li><li> 7 für Lesen, Schreiben und Ausführen (rwx)
+</li><li> sowie 0 für nichts (---)
+</li></ul>
+<p>Der Wert <code>0777</code> bedeutet also: alle drei Benutzertypen (besitzender Benutzer, zugehörige Gruppe und Rest der Welt) haben an der Datei alle drei Rechte.<br />
+Der Wert <code>0644</code> bedeutet also: der besitzende Benutzer hat die Rechte "Lesen" und "Schreiben", seine Gruppe und der Rest der Welt haben nur das Recht "Lesen".<br />
+Der Wert <code>0700</code> bedeutet also: der besitzende Benutzer hat alle Rechte, seine Gruppe und der Rest der Welt haben überhaupt keine Rechte.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Als Hilfe für Dateirechte können Sie auch den <a rel="nofollow" class="external text" href="http://de.selfhtml.org/helferlein/chmod.htm">Unix-Dateirechte-Setzer (chmod)</a> benutzen.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: -[x] - Dateitestoperatoren für Dateien/Verzeichnisse">Bearbeiten</a>]</span> <span class="mw-headline" id="-.5Bx.5D_-_Dateitestoperatoren_f.C3.BCr_Dateien.2FVerzeichnisse"> <span id="-.5Bx.5D"></span> -[x] - Dateitestoperatoren für Dateien/Verzeichnisse </span></h2>
+<p>Die einfachste und schnellste Methode, gezielt auf bestimmte Eigenschaften einer Datei oder eines Verzeichnisses zuzugreifen, ist diejenige, die Perl mit den Dateitestoperatoren zur Verfügung stellt. Einige der Dateitestoperatoren geben eine Zahl zurück, beispielsweise die Größe einer Datei in Bytes, andere nur, ob eine Aussage zutrifft oder nicht. Eine Übersicht der Dateitestoperatoren finden Sie in der <a href="#Tabelle_der_Dateitestoperatoren">Tabelle der Dateitestoperatoren</a>.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Textdatei</span> <span class="sy0">=</span> <span class="st0">&quot;/usr/bin/myprog/readme.txt&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$UnbekannteDatei</span> <span class="sy0">=</span> <span class="st0">&quot;/usr/bin/myprog/doit&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Perl</span><span class="sy0">-</span>Datei <span class="sy0">=</span> <span class="st0">&quot;/usr/webcgi-local/betrag.pl&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Log</span><span class="sy0">-</span>Datei <span class="sy0">=</span> <span class="st0">&quot;/usr/web/logs/heute.log&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Textdatei hat eine Größe von &quot;</span><span class="sy0">,-</span><span class="kw3">s</span> <span class="re0">$Textdatei</span><span class="sy0">,</span><span class="st0">&quot; Bytes&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">printf</span> <span class="st0">&quot;Die Textdatei wurde vor&#160;%.3f Tagen zuletzt bearbeitet&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">,-</span>M <span class="re0">$Textdatei</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die unbekannte Datei ist &quot;</span><span class="sy0">,-</span>d <span class="re0">$UnbekannteDatei</span> <span class="sy0">?</span> <span class="st0">&quot;ein Verzeichnis&lt;br&gt;<span class="es0">\n</span>&quot;</span> <span class="sy0">:</span> <span class="st0">&quot;kein Verzeichnis&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Die Perl-Datei &quot;</span><span class="sy0">,-</span>e <span class="re0">$Perl</span><span class="sy0">-</span>Datei <span class="sy0">?</span> <span class="st0">&quot;existiert&lt;br&gt;<span class="es0">\n</span>&quot;</span> <span class="sy0">:</span> <span class="st0">&quot;existiert nicht&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Es hat Zugriffe gegeben&quot;</span> <span class="kw1">if</span> <span class="kw1">not</span> <span class="sy0">-</span>z <span class="re0">$Log</span><span class="sy0">-</span>Datei<span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Alle Dateitestoperatoren zum Abfragen von Eigenschaften bestehen aus einem Minuszeichen, gefolgt von einem Buchstaben ohne Leerzeichen dazwischen. Dahinter folgt, durch ein Leerzeichen getrennt, die Angabe der gewünschten Datei, wenn erforderlich mit vollständigem <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a>.
+<p>Im obigen Beispiel 1 werden drei Skalare definiert, die Dateinamen mit Pfadangaben speichern. Anschließend wird HTML-Code ausgegeben. Dabei werden verschiedene Aussagen über Eigenschaften der drei Dateien getroffen.<br />
+Die erste <code>print</code>-Anweisung enthält als Parameter einen Dateitestoperator (siehe dazu auch die Syntax von <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#print" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">print</a>). In der Anweisung wird durch Anwendung von <code>-s $Textdatei</code> die Größe der Datei ermittelt und an der entsprechenden Stelle ausgegeben.<br />
+Im zweiten Befehl, einem Aufruf von <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#printf" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">printf</a>, wird mit <code>-M $Textdatei</code> ermittelt, seit wie viel Tagen die Datei nicht mehr geändert wurde. Auch dieser Wert wird ausgegeben. Da <code>-M</code> eine Gleitkommazahl zurückgibt, wird die Ausgabe mit Hilfe der <code>printf</code>-Funktion auf drei Nachkommastellen gekürzt.<br />
+In den nachfolgenden beiden <code>print</code>-Befehlen sehen Sie eine typische Konstruktion, wie Dateitestoperatoren, die nur "wahr" oder "falsch" zurückgeben, angewendet werden. Zum Einsatz kommt in beiden Fällen eine <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen#Einfache_Entweder-Oder-Abfrage" title="Perl/Bedingte Anweisungen">einfache Entweder-Oder-Abfrage</a>. Im ersten Fall wird mit dem Dateitestoperator <code>-d</code> abgefragt, ob die unbekannte Datei ohne Endung ein Verzeichnis ist oder eine normale Datei. Im zweiten Fall wird mit <code>-e</code> abgefragt, ob die Perl-Datei existiert oder nicht.<br />
+</p>
+Das letzte Beispiel zeigt, wie ein Dateitestoperator in eine <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen#Nachgestellte_Bedingungen" title="Perl/Bedingte Anweisungen">nachgestellte bedingte Anweisung</a> eingebaut wird - ebenfalls eine typische Konstruktion. Das Beispiel ermittelt mit Hilfe des Dateitestoperators <code>-z</code>, ob die Datei leer ist oder nicht. Wenn sie nicht leer ist, wird eine Meldung ausgegeben, dass es Zugriffe gegeben hat.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Dateitestoperatoren können auch vergebene Datei-Handles anstelle von direkten Dateiangaben verarbeiten. Wenn Sie beispielsweise mit <code>open(FILE,"&lt;datei.htm")</code> eine Datei zum Lesen öffnen, können Sie mit <code>-s FILE</code> die Größe der Datei ermitteln.</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Tabelle der Dateitestoperatoren">Bearbeiten</a>]</span> <span class="mw-headline" id="Tabelle_der_Dateitestoperatoren"> Tabelle der Dateitestoperatoren </span></h3>
+<table class="wikitable">
+<tr>
+<th> Syntax
+</th>
+<th> Bemerkung
+</th>
+<th> Bedeutung
+</th>
+<th> Beispiel
+</th>
+<th> Erläuterung
+</th></tr>
+<tr>
+<td> <code>-A</code>
+</td>
+<td>
+</td>
+<td> ermittelt, wie lange seit Programmstart auf eine Datei zugegriffen wurde. Rückgabewert ist die Zeit in Tagen als Gleitpunktzahl.
+</td>
+<td> <code>printf("%.3f Tage<br />Zugriffszeit",-A $Datei);</code>
+</td>
+<td> Für die vom Script verarbeitete Datei <code>$Datei</code> wird ausgegeben, wie lange darauf zugegriffen wurde.
+</td></tr>
+<tr>
+<td> <code>-B</code>
+</td>
+<td>
+</td>
+<td> ermittelt, ob es sich um eine Binärdatei handelt.
+</td>
+<td> <code>binmode(FILE) if -B FILE;</code>
+</td>
+<td> Wenn die Datei des File-Handles FILE eine Binärdatei ist, wird <code>binmode</code> aufgerufen.
+</td></tr>
+<tr>
+<td> <code>-b</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob eine Gerätedatei blockorientiert ist.
+</td>
+<td> <code>exit(-1) unless -b "/cdrom";</code>
+</td>
+<td> Wenn "/cdrom" kein blockorientiertes Gerät ist, wird das Script beendet.
+</td></tr>
+<tr>
+<td> <code>-C</code>
+</td>
+<td>
+</td>
+<td> ermittelt die Inode-Veränderungszeit einer Datei seit Programmstart.<br />Rückgabewert ist die Zeit in Tagen als Gleitpunktzahl.
+</td>
+<td> <code>if(-C $Datei &gt; 10) {<br />print "Warnung!"; }</code>
+</td>
+<td> Wenn die Inode-Zeit der Datei <code>$Datei</code> größer als 10 Tage ist, wird "Warnung!" ausgegeben.
+</td></tr>
+<tr>
+<td> <code>-c</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob eine Gerätedatei zeichenorientiert ist.
+</td>
+<td> <code>exit(-1) if -c "/cdrom";</code>
+</td>
+<td> Wenn "/cdrom" zeichenorientiert ist, wird das Script beendet.
+</td></tr>
+<tr>
+<td> <code>-d</code>
+</td>
+<td>
+</td>
+<td> ermittelt, ob es sich um ein Verzeichnis handelt.
+</td>
+<td> <code>chdir("texte") if -d "texte";</code>
+</td>
+<td> Wenn "texte" ein Verzeichnis ist, wird in das Verzeichnis gewechselt.
+</td></tr>
+<tr>
+<td> <code>-e</code>
+</td>
+<td>
+</td>
+<td> ermittelt, ob ein Verzeichniseintrag existiert.
+</td>
+<td> <code>print "text.txt existiert!"<br />if -e "text.txt";</code>
+</td>
+<td> Wenn die Datei "text.txt" existiert, wird dies ausgegeben.
+</td></tr>
+<tr>
+<td> <code>-f</code>
+</td>
+<td>
+</td>
+<td> ermittelt, ob es sich um eine normale Datei (keine Gerätedatei, kein Verzeichnis usw.) handelt.
+</td>
+<td> <code>Verarbeiten() if -f "text.txt";</code>
+</td>
+<td> Wenn die Datei "text.txt" eine normale Datei ist, wird eine Subroutine aufgerufen.
+</td></tr>
+<tr>
+<td> <code>-g</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob bei einer Datei das <i>setgid</i>-Bit (set-group-ID-Bit) gesetzt ist.<br />
+</td>
+<td> <code>chmod 02771, "daten"<br />
+<p>unless -g "daten";</code>
+</p>
+</td>
+<td> Wenn das Verzeichnis "daten" kein <i>setgid</i>-Bit besitzt, werden die entsprechenden Rechte gesetzt.
+</td></tr>
+<tr>
+<td> <code>-k</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob bei einer Datei das <i>Sticky</i>-Bit gesetzt ist (Bit z.B. für die Anweisung, Code eines Programms nach dessen Ausführung im Speicher zu behalten, weil es voraussichtlich öfter ausgeführt wird).
+</td>
+<td> <code>print "test.pl ist sticky"<br />if -k "test.pl";</code>
+</td>
+<td> Wenn die Datei "text.pl" das <i>Sticky</i>-Bit gesetzt hat, wird dies ausgegeben.
+</td></tr>
+<tr>
+<td> <code>-l</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob es sich um einen symbolischen Link handelt.
+</td>
+<td> <code>print readlink("text.txt")<br />if -l "text.txt";</code>
+</td>
+<td> Wenn die Datei "text.txt" ein symbolischer Link ist, wird dessen Wert ausgegeben.
+</td></tr>
+<tr>
+<td> <code>-M</code>
+</td>
+<td>
+</td>
+<td> ermittelt, wie lange eine Datei seit Programmstart nicht geändert wurde. Rückgabewert ist die Zeit in Tagen als Gleitpunktzahl.
+</td>
+<td> <code>printf("seit&#160;%.3f Tagen<br />nicht modifiziert",<br />-M $Datei);</code>
+</td>
+<td> Für die Datei <code>$Datei</code> wird ausgegeben, wie lange sie nicht mehr verändert wurde.
+</td></tr>
+<tr>
+<td> <code>-o</code>/<code>-O</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob die Datei der <i>effektiven UID</i> (<code>-o</code>) bzw. der <i>realen UID</i> (<code>-O</code>) gehört.<br />
+</td>
+<td> <code>Verarbeiten()<br />if -o "text.txt";</code>
+</td>
+<td> Wenn die Datei "text.txt" der effektiven UID gehört, wird eine Subroutine aufgerufen.
+</td></tr>
+<tr>
+<td> <code>-r</code>/<code>-R</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob die <i>effektive UID/GID</i> (<code>-r</code>) bzw. die <i>reale UID/GID</i> (<code>-R</code>) Leserecht für die Datei besitzt.
+</td>
+<td> <code>open(FILE,"&lt;text.txt")<br />if -r "text.txt";</code>
+</td>
+<td> Wenn die effektive UID/GID Leserecht auf die Datei "text.txt" hat, wird sie zum Lesen geöffnet.
+</td></tr>
+<tr>
+<td> <code>-p</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob es sich um eine <i>named pipe</i> (FIFO) handelt.
+</td>
+<td> <code>print "pipe" if -p "myprog";</code>
+</td>
+<td> Wenn die Datei "myprog" eine named pipe ist, wird dies ausgegeben.
+</td></tr>
+<tr>
+<td> <code>-S</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob die Datei eine <i>Socket</i>-Datei ist (wird von Client-Server-Prozessen, die auf einem Rechner laufen, als Schnittstelle benutzt).
+</td>
+<td> <code>next if -S $_;</code>
+</td>
+<td> Wenn die aktuelle Datei innerhalb einer angenommenen Schleife zur Überprüfung von allen Verzeichniseinträgen ein Socket ist, startet der nächste Schleifendurchgang.
+</td></tr>
+<tr>
+<td> <code>-s</code>
+</td>
+<td>
+</td>
+<td> ermittelt die Dateigröße in Bytes.
+</td>
+<td> <code>print -s $DirEintrag<br />if not -d $DirEintrag;</code>
+</td>
+<td> Wenn der Verzeichniseintrag <code>$DirEintrag</code> kein Verzeichnis ist, wird die Dateigröße ausgegeben.
+</td></tr>
+<tr>
+<td> <code>-T</code>
+</td>
+<td>
+</td>
+<td> ermittelt, ob es sich um eine Textdatei handelt.
+</td>
+<td> <code>Verarbeiten() if -T "text.txt";</code>
+</td>
+<td> Wenn die Datei "text.txt" eine Textdatei ist, wird eine Subroutine aufgerufen.
+</td></tr>
+<tr>
+<td> <code>-t</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob der Verzeichniseintrag ein <i>tty</i>, d.h. ein angeschlossenes Gerät (Terminal) ist (unter Unix werden Peripheriegeräte als Dateien behandelt).
+</td>
+<td> <code>print "STDIN ist tty"<br />if -t "STDIN";</code>
+</td>
+<td> Wenn der Standardeingabekanal tty ist, wird dies ausgegeben.
+</td></tr>
+<tr>
+<td> <code>-u</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob bei einer Datei das <i>setuid</i>-Bit (Set-User-ID-Bit) gesetzt ist.
+</td>
+<td> <code>die "kein uid-Bit"<br />if not -u "text.pl";</code>
+</td>
+<td> Wenn bei der Datei "text.pl" kein <i>setuid</i>-Bit gesetzt ist, wird das Script mit einer Fehlermeldung beendet.
+</td></tr>
+<tr>
+<td> <code>-w</code>/<code>-W</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob die <i>effektive UID/GID</i> (<code>-w</code>) bzw. die <i>reale UID/GID</i> (<code>-W</code>) Schreibrecht für die Datei besitzt.<br />
+</td>
+<td> <code>open(FILE,"&gt;text.txt")<br />if -W "text.txt";</code>
+</td>
+<td> Wenn die reale UID/GID für die Datei "text.txt" Schreibrechte besitzt, wird sie zum Schreiben geöffnet.
+</td></tr>
+<tr>
+<td> <code>-x</code>/<code>-X</code>
+</td>
+<td> Unix-<br />spezifisch
+</td>
+<td> ermittelt, ob die <i>effektive UID/GID</i> (<code>-x</code>) bzw. die <i>reale UID/GID</i> (<code>-X</code>) Ausführrecht für die Datei besitzt.
+</td>
+<td> <code>system("myprog")<br />if -x "myprog";</code>
+</td>
+<td> Wenn die effektive UID/GID für die Datei "myprog" Rechte zum Ausführen der Datei besitzt, wird sie über einen <code>system</code>-Aufruf ausgeführt.
+</td></tr>
+<tr>
+<td> <code>-z</code>
+</td>
+<td>
+</td>
+<td> ermittelt, ob eine Datei leer ist, also 0 Bytes hat.
+</td>
+<td> <code>open(FILE,"&lt;text.txt")<br />if not -z "text.txt"</code>
+</td>
+<td> Wenn die Datei "text.txt" nicht leer ist, wird sie zum Lesen geöffnet.
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: chdir - Verzeichnis wechseln">Bearbeiten</a>]</span> <span class="mw-headline" id="chdir_-_Verzeichnis_wechseln"> <span id="chdir"></span> chdir - Verzeichnis wechseln </span></h2>
+<p>Macht ein Verzeichnis zum aktuellen Arbeitsverzeichnis. So ist es möglich, nach dem Wechseln in ein Verzeichnis dort abgelegte Dateien zu öffnen, ohne sich um Pfadnamen kümmern zu müssen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a> des Verzeichnisses, zu dem gewechselt werden soll. Es kann sich um eine relative oder eine absolute Pfadangabe handeln.<br />
+</li></ol>
+<p>Es ist auch möglich, keinen Parameter zu übergeben. In diesem Fall wechselt die Funktion in das Verzeichnis, das in der Umgebungsvariablen <var>HOME</var> gespeichert ist.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/txt/rfc&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">open</span><span class="br0">&#40;</span>DATEI<span class="sy0">,</span><span class="st0">&quot;&lt;rfc1867.txt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Zeilen</span> <span class="sy0">=</span> <span class="re4">&lt;DATEI&gt;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>DATEI<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;@Zeilen&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispielscript wechselt mit <code>chdir</code> in das Verzeichnis <code>/usr/local/txt/rfc</code>, also in ein bestimmtes Unterverzeichnis ab Wurzelverzeichnis gerechnet. Dort wird dann eine Datei geöffnet, eingelesen und wieder geschlossen (Erläuterungen zu diesen Befehlen siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#open" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">open</a>). Anschließend wird HTML-Code erzeugt. Dabei werden die Zeilen der eingelesenen Datei ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: chmod - Datei-/Verzeichnisrechte ändern">Bearbeiten</a>]</span> <span class="mw-headline" id="chmod_-_Datei-.2FVerzeichnisrechte_.C3.A4ndern"> <span id="chmod"></span> chmod - Datei-/Verzeichnisrechte ändern </span></h2>
+<p>Setzt die Rechte zum Lesen, Schreiben und Ausführen einer oder mehrerer Dateien für Benutzer, Benutzergruppe und Rest der Welt (Unix-spezifisch).
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine <a href="#Rechteangaben_f.C3.BCr_Dateien_und_Verzeichnisse">Rechteangabe</a>. Der Wert muss numerisch oktal übergeben werden, nicht als Zeichenkette!
+</li><li> bis <b>n.</b> eine oder mehrere Dateien/Verzeichnisse, für die diese Rechte gesetzt werden sollen, wenn nötig mit <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a>.
+</li></ol>
+<p>Gibt die Anzahl der vorgenommenen Änderungen zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Verzeichnis</span> <span class="sy0">=</span> <span class="st0">&quot;/usr/web/docs/cgi-bin&quot;</span><span class="sy0">;</span>
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="re0">$Verzeichnis</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Dateien</span> <span class="sy0">=</span> <span class="kw3">glob</span><span class="br0">&#40;</span><span class="st0">&quot;*.pl&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Datei</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="re0">$Datei</span> <span class="br0">&#40;</span><span class="re0">@Dateien</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">chmod</span><span class="br0">&#40;</span>0755<span class="sy0">,</span><span class="re0">$Datei</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Datei auf 0755 gesetzt&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel setzt alle Perl-Dateien eines CGI-Verzeichnisses auf die Rechte <code>0755</code> - auf vielen Servern eine sinnvolle Einstellung für CGI-Scripts. Zu diesem Zweck werden alle Dateien des Verzeichnisses <code>$Verzeichnis</code> (dem CGI-Verzeichnis) mit <a href="#glob">glob</a> ausgewählt. Die Liste <code>@Dateien</code>, in der die ausgewählten Dateien anschließend stehen, wird daraufhin in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#foreach" title="Perl/Schleifen">foreach-Schleife</a> abgearbeitet. Mit <code>chmod(0755,$Datei)</code> wird die jeweils aktuelle Perl-Datei mit den gewünschten Rechten versehen. Zur Kontrolle gibt das Beispielscript aus, welche Dateien geändert wurden.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: chown - Besitzer und Besitzergruppe von Dateien ändern">Bearbeiten</a>]</span> <span class="mw-headline" id="chown_-_Besitzer_und_Besitzergruppe_von_Dateien_.C3.A4ndern"> <span id="chown"></span> chown - Besitzer und Besitzergruppe von Dateien ändern </span></h2>
+<p>Jede Datei unter Unix hat einen Eigentümer, der durch zwei Zahlen identifiziert wird: die persönliche User-ID (UID) und die zugehörige Gruppen-ID (GID). Die Funktion ändert Besitzer und Besitzergruppe von einer oder mehreren Dateien. Auf den meisten Unix-Systemen ist dazu eine Root-Kennung erforderlich.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die <b>numerische</b> UID (User-ID des Besitzers),
+</li><li> die <b>numerische</b> GID (Gruppen-ID der Besitzergruppe),
+</li><li> bis <b>n.</b> eine oder mehrere Dateien, für die die angegebenen UID und GID gelten sollen, wenn nötig mit <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a>.
+</li></ol>
+<p>Gibt die Anzahl der vorgenommenen Änderungen zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+&#160;
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/data/web/htdocs&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">opendir</span><span class="br0">&#40;</span>DIR<span class="sy0">,</span> <span class="st0">&quot;/usr/data/web/htdocs&quot;</span><span class="br0">&#41;</span> <span class="sy0">||</span> <span class="kw3">die</span> <span class="st0">&quot;$!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Eintraege</span> <span class="sy0">=</span> <span class="kw3">readdir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">closedir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@Eintraege</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="kw3">chown</span><span class="br0">&#40;</span><span class="nu0">1034</span><span class="sy0">,</span> <span class="nu0">518</span><span class="sy0">,</span> <span class="co5">$_</span><span class="br0">&#41;</span> <span class="kw1">if</span> <span class="sy0">-</span>f <span class="co5">$_</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ändert für alle regulären Dateien des angenommenen Verzeichnisses <code>/usr/data/web/htdocs</code> die Besitzerschaft auf den Benutzer mit der User-ID 1034 und der Gruppen-ID 518.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: chroot - Wurzelverzeichnis für Pfadnamen ändern">Bearbeiten</a>]</span> <span class="mw-headline" id="chroot_-_Wurzelverzeichnis_f.C3.BCr_Pfadnamen_.C3.A4ndern"> <span id="chroot"></span> chroot - Wurzelverzeichnis für Pfadnamen ändern </span></h2>
+<p>Bestimmt ein neues Verzeichnis als "virtuelles" Wurzelverzeichnis. Absolute Pfadangaben, die mit <code>/</code> beginnen, beziehen sich anschließend darauf. Auf den meisten Unix-Systemen ist zum Anwenden dieser Funktion eine Root-Kennung erforderlich.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a> des Verzeichnisses, das zum Wurzelverzeichnis werden soll. Es kann sich um eine relative oder eine absolute Pfadangabe handeln.<br />
+</li></ol>
+<p>Es ist auch möglich, keinen Parameter zu übergeben. In diesem Fall wird der Inhalt der <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten Variablen</a> <code>$_</code> als Pfadnamen des gewünschten Verzeichnisses interpretiert.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+&#160;
+<span class="kw3">chroot</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/local/web/domains/eidideldum&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="st0">&quot;/&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">opendir</span><span class="br0">&#40;</span>DIR<span class="sy0">,</span> <span class="st0">&quot;.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Eintraege</span> <span class="sy0">=</span> <span class="kw3">readdir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">closedir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@Eintraege</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$_<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel setzt den Pfad <code>/usr/local/web/domains/eidideldum</code> als neues Wurzelverzeichnis. Anschließend wechselt das Script mit <a href="#chdir">chdir</a> in das neue Wurzelverzeichnis <code>("/")</code>. Zur Kontrolle liest das Script das aktuelle Verzeichnis <code>(".")</code> ein und listet die eingelesenen Verzeichniseinträge anschließend auf (Erläuterungen zu diesen Befehlen siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#opendir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">opendir</a>).</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: glob - Dateien mit Wildcards auswählen">Bearbeiten</a>]</span> <span class="mw-headline" id="glob_-_Dateien_mit_Wildcards_ausw.C3.A4hlen"> <span id="glob"></span> glob - Dateien mit Wildcards auswählen </span></h2>
+<p>Wählt aus einem Verzeichnis alle Dateien aus, die einem bestimmten Dateinamenmuster entsprechen. Das ist wesentlich einfacher als das Operieren mit den Funktionen <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#opendir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">opendir</a>, <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#readdir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">readdir</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#closedir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">closedir</a>. Der Nachteil von <code>glob</code> ist allerdings, dass diese Funktion eine Unix-Shell startet, um an ihr Ergebnis zu kommen. Die Funktion ist daher nur auf Unix-Systemen verfügbar, und ausführbar ist sie auch nur, wenn das Script ausreichende Rechte zum Starten der Shell besitzt. Es gibt jedoch bei den <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule#Module_f.C3.BCr_Dateiverwaltung" title="Perl/Module/Standardmodule">Standardmodulen für Dateiverwaltung</a> ein Modul, das den <code>glob</code>-Algorithmus komplett in Perl ausführt.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> Das Dateinamenmuster, wenn nötig mit <a href="#Pfadnamen_und_Verzeichnisse">Pfadangabe</a>.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@HTML_Dateien</span> <span class="sy0">=</span> <span class="kw3">glob</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/web/docroot/*.htm&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@HTML_Dateien</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$_&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispielscript wählt im Verzeichnis <code>/usr/web/docroot</code> alle Dateien aus, die auf <code>htm</code> enden. Zur Kontrolle gibt das Script HTML-Code mit allen eingelesenen Dateien aus.
+<p>Die folgende Tabelle enthält Beispiele für Dateimuster:
+</p>
+<table class="wikitable">
+<tr>
+<th> Dateimuster
+</th>
+<th> Bedeutung
+</th></tr>
+<tr>
+<td> <code>*</code>
+</td>
+<td> wählt alle Dateien und Verzeichnisse aus, auch solche, die keine Endung haben.
+</td></tr>
+<tr>
+<td> <code>*.*</code>
+</td>
+<td> wählt alle Dateien und Verzeichnisse aus, die aus Namen und Endung bestehen.
+</td></tr>
+<tr>
+<td> <code>*.gif</code>
+</td>
+<td> wählt alle GIF-Dateien aus
+</td></tr>
+<tr>
+<td> <code>index.*</code>
+</td>
+<td> wählt alle Dateien aus, die <code>index</code> als Namen haben, unabhängig von der Endung.
+</td></tr>
+<tr>
+<td> <code>???.*</code>
+</td>
+<td> wählt alle Dateien aus, deren Name aus drei Zeichen besteht, unabhängig von der Endung.
+</td></tr>
+<tr>
+<td> <code>????.txt</code>
+</td>
+<td> wählt alle TXT-Dateien aus, deren Name aus vier Zeichen besteht.
+</td></tr></table></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: link - neue Datei als Link auf vorhandene erzeugen">Bearbeiten</a>]</span> <span class="mw-headline" id="link_-_neue_Datei_als_Link_auf_vorhandene_erzeugen"> <span id="link"></span> link - neue Datei als Link auf vorhandene erzeugen </span></h2>
+<p>Die link-Funktion, die dem Unix-Befehl <code>ln</code> entspricht, legt aus Sicht des Benutzers eine Kopie einer Datei an. Es handelt sich jedoch intern nach wie vor nur um eine einzige Datei, die lediglich nunmehr unter zwei verschiedenen Namen (und gegebenenfalls an zwei Stellen im Verzeichnisbaum) zu finden ist. Wird die Datei an einer dieser Stellen, an denen sie repräsentiert wird, geändert, gilt die Änderung auch für die anderen Stellen, an denen die Datei repräsentiert wird. Wird eine der Dateien gelöscht (z.B. mit <a href="#unlink">unlink</a>), so bleiben andere Repräsentationen der Datei davon unberührt. Erst wenn die letzte Repräsentation der Datei gelöscht ist, ist die Datei endgültig gelöscht.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die bereits existierende Datei, von der eine neue Repräsentation erzeugt werden soll, wenn nötig mit <a href="#Pfadnamen_und_Verzeichnisse">Pfadangabe</a>,
+</li><li> die neu zu erzeugende Repräsentation der Datei, wenn nötig mit Pfadangabe.
+</li></ol>
+<p>Gibt <code>1</code> zurück, wenn die Operation erfolgreich war, und <code>0</code>, wenn sie nicht erfolgreich war (z.B. weil im Zielverzeichnis kein Schreibrecht besteht).
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Erfolg</span> <span class="sy0">=</span> <span class="kw3">link</span><span class="br0">&#40;</span><span class="st0">&quot;single.txt&quot;</span><span class="sy0">,</span><span class="st0">&quot;../double.txt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="re0">$Erfolg</span> <span class="sy0">?</span> <span class="kw3">print</span> <span class="st0">&quot;Erfolg&quot;</span> <span class="sy0">:</span> <span class="kw3">print</span> <span class="st0">&quot;kein Erfolg&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel wendet die Funktion <code>link</code> an, um von der Datei <code>single.txt</code> im aktuellen Verzeichnis eine neue Repräsentation zu erzeugen, die im Verzeichnis oberhalb (<code>../</code>) unter dem Namen <code>double.txt</code> erscheint. Der Rückgabewert wird in dem Skalar <code>$Erfolg</code> gespeichert. Zur Kontrolle erzeugt das Beispiel HTML-Code und gibt dabei mit Hilfe einer <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen#Einfache_Entweder-Oder-Abfrage" title="Perl/Bedingte Anweisungen">einfachen Entweder-Oder-Abfrage</a> den Erfolgsstatus der Operation an.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: lstat - Eigenschaften einer Link-Datei">Bearbeiten</a>]</span> <span class="mw-headline" id="lstat_-_Eigenschaften_einer_Link-Datei"> <span id="lstat"></span> lstat - Eigenschaften einer Link-Datei </span></h2>
+<p>Diese Funktion leistet das gleiche wie die Funktion <a href="#stat">stat</a>. Nähere Beschreibung und Beispiel siehe dort.
+</p><p>Im Unterschied zu <code>stat</code> ermittelt <code>lstat</code> nicht die Eigenschaften einer Datei, sondern die einer Dateiverknüpfung, eines so genannten symbolischen Links. Wenn es sich nicht um eine Repräsentation einer Datei handelt (also wenn die Datei nur einmal im Verzeichnisbaum erscheint), wird beim Aufruf von <code>lstat</code> intern automatisch ein normaler Aufruf von <code>stat</code> gestartet. <code>lstat</code> erfasst also im Gegensatz zu <code>stat</code> auch Dateirepräsentationen und wird deshalb in der Praxis eher eingesetzt als <code>stat</code>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: mkdir - Verzeichnis erstellen">Bearbeiten</a>]</span> <span class="mw-headline" id="mkdir_-_Verzeichnis_erstellen"> <span id="mkdir"></span> mkdir - Verzeichnis erstellen </span></h2>
+<p>Legt ein neues Verzeichnis an und ermöglicht es, für das neue Verzeichnis die Rechte für Lesen, Schreiben und Ausführen zu vergeben (nur bei Unix-Systemen wirksam).
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen des neuen Verzeichnisses, wenn nötig <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a>.
+</li><li> eine <a href="#Rechteangaben_f.C3.BCr_Dateien_und_Verzeichnisse">Rechteangabe</a>. Der Wert muss numerisch oktal übergeben werden, nicht als Zeichenkette! Zum Ermitteln der gewünschten Oktalzahl können Sie den <a rel="nofollow" class="external text" href="http://de.selfhtml.org/helferlein/chmod.htm">Unix-Dateirechte-Setzer</a> bei den kleinen Helferlein verwenden.<br />
+</li></ol>
+<p>Auf Systemen, die keine Unix-Rechteverwaltung kennen, also z.B. unter Windows, ist der zweite Parameter bedeutungslos.
+</p><p>Gibt <code>1</code> bzw. <code>TRUE</code> zurück, wenn die Operation erfolgreich war, und <code>0</code> bzw. <code>FALSE</code>, wenn das Anlegen des Verzeichnisses nicht möglich war (z.B. weil in dem Verzeichnis, in dem das Unterverzeichnis angelegt werden sollte, kein Schreibrecht besteht). Der genaue Fehlertext kann in diesem Fall über die <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierte Variable</a> <code>$!</code> ermittelt werden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Verzeichnisbaum</span> <span class="sy0">=</span> <span class="br0">&#40;</span>
+<span class="st0">&quot;texte&quot;</span><span class="sy0">,</span>
+<span class="st0">&quot;texte/briefe&quot;</span><span class="sy0">,</span>
+<span class="st0">&quot;texte/rechnungen&quot;</span><span class="sy0">,</span>
+<span class="st0">&quot;texte/rechnungen/alt&quot;</span><span class="sy0">,</span>
+<span class="st0">&quot;texte/rechnungen/neu&quot;</span><span class="sy0">,</span>
+<span class="st0">&quot;grafiken&quot;</span><span class="sy0">,</span>
+<span class="st0">&quot;grafiken/fotos&quot;</span><span class="sy0">,</span>
+<span class="st0">&quot;grafiken/fotos/fremde&quot;</span><span class="sy0">,</span>
+<span class="st0">&quot;grafiken/cliparts&quot;</span><span class="sy0">,</span>
+<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="st0">&quot;/temp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@Verzeichnisbaum</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">mkdir</span><span class="br0">&#40;</span><span class="co5">$_</span><span class="sy0">,</span>0777<span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Unterverzeichnis &lt;strong&gt;$_&lt;/strong&gt; angelegt&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert eine Liste namens <code>@Verzeichnisbaum</code>. Darin werden Einträge gespeichert, die eine anzulegende Unterverzeichnisstruktur darstellen. Weiter unten im Beispielscript wird diese Liste in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#foreach" title="Perl/Schleifen">foreach-Schleife</a> abgearbeitet. Dabei wird jedes einzelne der Verzeichnisse mit <code>mkdir</code> angelegt. Das jeweils aktuelle Verzeichnis der Liste steht innerhalb der Schleife in <code>$_</code>. Als zweiter Parameter wird die Oktalzahl <code>0777</code> übergeben. Damit erhalten alle Benutzer der Verzeichnisse alle Rechte. Das Beispielscript erzeugt HTML-Code und gibt für jedes angelegte Verzeichnis einen entsprechenden Satz aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: readlink - Wert einer Link-Datei auslesen">Bearbeiten</a>]</span> <span class="mw-headline" id="readlink_-_Wert_einer_Link-Datei_auslesen"> <span id="readlink"></span> readlink - Wert einer Link-Datei auslesen </span></h2>
+<p>Liest den Wert einer symbolischen Link-Datei aus. Das sind Link-Dateien, die z.B. mit Hilfe von <a href="#symlink">symlink</a> erzeugt wurden.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen der symbolischen Link-Datei, wenn nötig mit <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a>.<br />
+</li></ol>
+<p>Es ist auch möglich, keinen Parameter zu übergeben. In diesem Fall wird der Inhalt der <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten Variablen</a> <code>$_</code> verwendet.
+</p><p>Gibt den vollständigen Pfad der Datei aus, auf die sich die Link-Datei bezieht. Im Fehlerfall gibt die Funktion <code>undef</code> zurück und schreibt den Fehlertext in die vordefinierte Variable <code>$!</code>. Auf Betriebssystemen, die keine symbolischen Links kennen, also z.B. unter Windows, produziert der Aufruf dieser Funktion einen schweren Fehler.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="st0">&quot;/tmp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">symlink</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/local/webdocs/index.htm&quot;</span><span class="sy0">,</span><span class="st0">&quot;webindex.sym&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Inhalt</span> <span class="sy0">=</span> <span class="kw3">readlink</span><span class="br0">&#40;</span><span class="st0">&quot;webindex.sym&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Inhalt der symbolischen Datei: $Inhalt<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispielscript wechselt zunächst mit <a href="#chdir">chdir</a> ins Verzeichnis <code>/tmp</code>. Dort legt es mit <code>symlink</code> eine symbolische Link-Datei namens <code>webindex.sym</code> an, die ein symbolischer Link zu der Datei <code>/usr/local/webdocs/index.htm</code> ist. Mit <code>readlink</code> wird anschließend der Wert ausgelesen, der der symbolischen Datei zugeordnet ist. Zur Kontrolle erzeugt das Beispielscript HTML-Code. Dabei wird der <code>webindex.sym</code> zugeordnete Pfadnamen zur verlinkten Datei ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: rename - Datei/Verzeichnis umbenennen">Bearbeiten</a>]</span> <span class="mw-headline" id="rename_-_Datei.2FVerzeichnis_umbenennen"> <span id="rename"></span> rename - Datei/Verzeichnis umbenennen </span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen der umzubenennenden Datei oder des umzubenennenden Verzeichnisses, wenn nötig mit <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a>.
+</li><li> den neuen Namen der Datei oder des Verzeichnisses, wenn nötig mit neuem Pfadnamen.<br />
+</li></ol>
+<p>Wenn der erste Parameter eine Datei ist und der zweite Parameter der Name eines anderen Verzeichnisses, wird die Datei in das andere Verzeichnis verschoben. Es ist jedoch mit dieser Funktion nicht möglich, als ersten und zweiten Parameter zwei unterschiedliche Verzeichnisse anzugeben, um das erste Verzeichnis in das zweite zu verschieben.<br />
+Es ist außerdem nicht möglich, Dateien auf eine andere Partition zu verschieben. Abhilfe schafft hierbei die Funktion <code>move</code> aus dem <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>File::Copy</code>.
+</p><p>Gibt <code>true</code> zurück, wenn die Operation erfolgreich war, ansonsten <code>false</code>.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="st0">&quot;/htmldocs&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">opendir</span><span class="br0">&#40;</span>DIR<span class="sy0">,</span><span class="st0">&quot;.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Eintraege</span> <span class="sy0">=</span> <span class="kw3">readdir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">closedir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Eintrag</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Name</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$NeuerEintrag</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="re0">$Eintrag</span> <span class="br0">&#40;</span><span class="re0">@Eintraege</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Eintrag</span> <span class="sy0">=~</span> <span class="co2">/(.+)\.htm/</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="re0">$Name</span> <span class="sy0">=</span> <span class="co3">$1</span><span class="sy0">;</span>
+   <span class="re0">$NeuerEintrag</span> <span class="sy0">=</span> <span class="re0">$Name</span><span class="sy0">.</span><span class="st0">&quot;.html&quot;</span><span class="sy0">;</span>
+   <span class="kw3">rename</span><span class="br0">&#40;</span><span class="re0">$Eintrag</span><span class="sy0">,</span><span class="re0">$NeuerEintrag</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw3">print</span> <span class="st0">&quot;$Eintrag in $NeuerEintrag umbenannt&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel bewirkt, dass alle Dateien eines Verzeichnisses, die auf die Endung <code>.htm</code> enden, in gleichnamige Dateien mit der Endung <code>.html</code> umbenannt werden.<br />
+Das Script wechselt zunächst mit <a href="#chdir">chdir</a> in das Verzeichnis <code>/htmldocs</code>. Anschließend liest es dieses aktuelle Verzeichnis (<code>"."</code>) in die Liste <code>@Eintraege</code> ein (Erläuterungen zu diesen Befehlen siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#opendir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">opendir</a>). Das Beispielscript erstellt HTML-Code. Dabei werden die Einträge des eingelesenen Verzeichnisses in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#foreach" title="Perl/Schleifen">foreach-Schleife</a> abgearbeitet. Bei jedem Eintrag wird geprüft, ob es sich um eine Datei mit der Endung <code>.htm</code> handelt. Wenn ja, wird der "Vorname" der Datei in <code>$Name</code> gespeichert und ein neuer Dateiname aus dem Wert von <code>$Name</code> und der Endung <code>.html</code> definiert. Anschließend wird die Funktion <code>rename</code> aufgerufen. Dabei wird der bisherige Eintrag, also eine Datei <code>.htm</code>, in den neuen Eintrag, also eine Datei mit gleichem Vornamen, nur mit der Endung <code>.html</code>, umbenannt. Zur Kontrolle listet das Script alle Umbenennungen auf.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: rmdir - Verzeichnis löschen">Bearbeiten</a>]</span> <span class="mw-headline" id="rmdir_-_Verzeichnis_l.C3.B6schen"> <span id="rmdir"></span> rmdir - Verzeichnis löschen </span></h2>
+<p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen des zu löschenden Verzeichnisses, wenn nötig den <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a>.<br />
+</li></ol>
+<p>Das Verzeichnis muss leer sein, andernfalls kann es mit dieser Funktion nicht gelöscht werden. Nicht leere Verzeichnisse lassen sich mit der Funktion <code>rmtree</code> aus dem <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>File::Path</code> löschen.
+</p><p>Gibt <code>1</code> zurück, wenn das Verzeichnis gelöscht wurde. Falls ein Fehler aufgetreten ist, wird <code>0</code> zurückgegeben, und in der <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten Variablen</a> <code>$!</code> steht die Fehlermeldung.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Verzeichnis</span> <span class="sy0">=</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Ergebnis</span> <span class="sy0">=</span> <span class="kw3">rmdir</span><span class="br0">&#40;</span><span class="re0">$Verzeichnis</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$Ergebnis</span> <span class="sy0">==</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Verzeichnis gel&amp;ouml;scht!&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="br0">&#123;</span>
+ <span class="kw3">print</span> <span class="st0">&quot;$!&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script erwartet einen Übergabeparameter, der beim Aufruf über einen URI hinter einem Fragezeichen notiert wird. Der Übergabeparameter besteht in der Pfadangabe des zu löschenden Verzeichnisses. Beispiel:<br />
+<p><code>/mydocs/texte/schrott</code>.<br />
+Das Script versucht, das übergebene Verzeichnis zu löschen. Der Rückgabewert des Versuchs wird in dem Skalar <code>$Ergebnis</code> gespeichert.<br />
+</p>
+Anschließend erzeugt das Script HTML-Code. Dabei wird ausgegeben, ob das übergebene Verzeichnis erfolgreich gelöscht wurde oder nicht. Wenn nicht, wird die erzeugte Fehlermeldung ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: stat - Eigenschaften einer Datei ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="stat_-_Eigenschaften_einer_Datei_ermitteln"> <span id="stat"></span> stat - Eigenschaften einer Datei ermitteln </span></h2>
+<p>Ermittelt diverse Eigenschaften einer Datei auf einmal in Listenform. Die meisten dieser Eigenschaften sind Unix-spezifisch. Einige Eigenschaften lassen sich zwar auch auf anderen Plattformen abfragen, doch dazu ist es eigentlich einfacher, die [[#-[x]|Dateitestoperatoren für Dateien/Verzeichnisse]] zu verwenden. Die Funktion <code>stat</code> lässt sich im Gegensatz zu <a href="#lstat">lstat</a> nicht auf Dateirepräsentanzen (symbolische links), sondern nur auf "Originale" von Dateien anwenden.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen der gewünschten Datei, wenn nötig mit <a href="#Pfadnamen_und_Verzeichnisse">Pfadnamen</a>. Alternativ kann auch der Name eines Datei-Handles übergeben werden.
+</li></ol>
+<p>Gibt eine Liste mit mehreren Elementen zurück. Jedes Element enthält eine bestimmte ermittelte Datei-Eigenschaft.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Datei</span> <span class="sy0">=</span> <span class="st0">&quot;/usr/webperldoc/index.html&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Info</span> <span class="sy0">=</span> <span class="kw3">stat</span><span class="br0">&#40;</span><span class="re0">$Datei</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Datei:&lt;/strong&gt;                      $Datei<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Geraetenummer:&lt;/strong&gt;              $Info[0]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Inode-Nummer:&lt;/strong&gt;               $Info[1]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">printf</span> <span class="st0">&quot;&lt;strong&gt;Zugriffsrechte:&lt;/strong&gt;            &#160;%o<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$Info</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Anzahl Links auf Datei:&lt;/strong&gt;     $Info[3]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;User-ID des Besitzers:&lt;/strong&gt;      $Info[4]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Gruppen-ID des Besitzers:&lt;/strong&gt;   $Info[5]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Raw-Geraetenummer:&lt;/strong&gt;          $Info[6]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Dateigroesse:&lt;/strong&gt;               $Info[7]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Letzte Zugriffszeit:&lt;/strong&gt;        $Info[8]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Letzte Aenderungsszeit:&lt;/strong&gt;     $Info[9]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Inode-Aenderungsszeit:&lt;/strong&gt;      $Info[10]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Ideale Blockgroesse:&lt;/strong&gt;        $Info[11]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;strong&gt;Anzahl belegter Blocks:&lt;/strong&gt;     $Info[12]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt für eine bestimmte Datei (/usr/data/artikel.zip) mit <code>stat</code> die verfügbaren Datei-Eigenschaften. Der Rückgabewert der Funktion wird in einer Liste <code>@Info</code> gespeichert. Das Beispiel erzeugt HTML-Code und listet darin alle 13 Einzeleigenschaften, abrufbar über <code>$Info[0]</code> bis <code>$Info[12]</code>, auf. Die folgende Tabelle enthält nähere Informationen über die einzelnen Eigenschaften.
+<table class="wikitable">
+<tr>
+<th> Indexnr.:
+</th>
+<th> Erläuterung:
+</th></tr>
+<tr>
+<td> <code>[0]</code>
+</td>
+<td> <b>Gerätenummer:</b> die systemweit eindeutige Gerätenummer des Dateisystems, auf dem sich die Datei befindet.
+</td></tr>
+<tr>
+<td> <code>[1]</code>
+</td>
+<td> <b>Inode-Nummer:</b> Die dateisystemweit eindeutige Nummer der Datei innerhalb des Dateisystems mit der Gerätenummer aus [0].
+</td></tr>
+<tr>
+<td> <code>[2]</code>
+</td>
+<td> <b>Dateityp/Zugriffsrechte:</b> Der zurückgegebene Wert muss als Oktalzahl interpretiert werden (daher im obigen Beispiel auch die Ausgabe mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#printf" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">printf</a> als Oktalzahl). Die oktale Bewertung der Zahl zeigt zwar eine einzige Zahl, die jedoch aus zwei Teilen besteht. Die letzten drei Ziffern bedeuten die <a href="#Rechteangaben_f.C3.BCr_Dateien_und_Verzeichnisse">Rechteangaben</a> zur Datei, und die Ziffern davor bedeuten den Dateityp. Die entsprechenden Nummern werden auf Unix-Systemen in der Datei <code>sys/stat.h</code> definiert.
+</td></tr>
+<tr>
+<td> <code>[3]</code>
+</td>
+<td> <b>Anzahl Links auf Datei:</b> Anzahl physikalisch existierender Repräsentationen der Datei, also mindestens 1. Bei gesetzten Links, wie es in Perl z.B. mit der Funktion <a href="#link">link</a> möglich ist, erhöht sich die Anzahl.
+</td></tr>
+<tr>
+<td> <code>[4]</code>
+</td>
+<td> <b>User-ID des Besitzers:</b> Die Nummer des Datei-Eigentümers.
+</td></tr>
+<tr>
+<td> <code>[5]</code>
+</td>
+<td> <b>Gruppen-ID des Besitzers:</b> Die Nummer der Gruppe, zu der der Datei-Eigentümer gehört.
+</td></tr>
+<tr>
+<td> <code>[6]</code>
+</td>
+<td> <b>Raw-Gerätenummer:</b> Nur bei Gerätedateien interessant.
+</td></tr>
+<tr>
+<td> <code>[7]</code>
+</td>
+<td> <b>Dateigröße:</b> Die logische Größe der Datei in Bytes.
+</td></tr>
+<tr>
+<td> <code>[8]</code>
+</td>
+<td> <b>Letzte Zugriffszeit:</b> Zeitstempel des letzten lesenden oder schreibenden Zugriffs auf die Datei. Die zurückgegebene Zahl bedeutet die Anzahl Sekunden seit dem 1.1.1970 bis zum Augenblick des letzten Zugriffs.
+</td></tr>
+<tr>
+<td> <code>[9]</code>
+</td>
+<td> <b>Letzte Änderungszeit:</b> Zeitstempel des letzten schreibenden Zugriffs auf die Datei. Die zurückgegebene Zahl bedeutet die Anzahl Sekunden seit dem 1.1.1970 bis zum Augenblick des letzten Zugriffs.
+</td></tr>
+<tr>
+<td> <code>[10]</code>
+</td>
+<td> <b>Inode-Änderungszeit:</b> Zeitstempel des letzten Zugriffs auf die Datei, der eine Änderung der Inode-Nummer bewirkte. Die zurückgegebene Zahl bedeutet die Anzahl Sekunden seit dem 1.1.1970 bis zum Augenblick der letzten Inode-Änderung.
+</td></tr>
+<tr>
+<td> <code>[11]</code>
+</td>
+<td> <b>Ideale Blockgröße:</b> Die optimale Anzahl Bytes zum blockweisen Lesen oder Schreiben der Datei - in Perl mit Funktionen wie <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#sysread" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">sysread</a> oder <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#syswrite" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">syswrite</a>.
+</td></tr>
+<tr>
+<td> <code>[12]</code>
+</td>
+<td> <b>Anzahl belegter Blöcke:</b> Die Anzahl der vom Betriebssystem benutzen Speicherblöcke, um die Datei zu speichern.
+</td></tr></table></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: symlink - neue Datei als symbolischen Link auf vorhandene erzeugen">Bearbeiten</a>]</span> <span class="mw-headline" id="symlink_-_neue_Datei_als_symbolischen_Link_auf_vorhandene_erzeugen"> <span id="symlink"></span> symlink - neue Datei als symbolischen Link auf vorhandene erzeugen </span></h2>
+<p>Erzeugt einen symbolischen Link auf eine anderswo gespeicherte Datei. Der erzeugte Verzeichniseintrag erscheint jedoch im Gegensatz zu einem Eintrag, der mit <a href="#link">link</a> erzeugt wurde, nicht als tatsächliche Repräsentation der anderen Datei, sondern nur als Verknüpfung zu der anderen Datei (Unix-spezifisch).
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die existierende Datei, zu der ein symbolischer Link erzeugt werden soll, wenn nötig mit <a href="#Pfadnamen_und_Verzeichnisse">Pfadangabe</a>,
+</li><li> die neu zu erzeugende, symbolische Link-Datei, wenn nötig mit Pfadangabe.
+</li></ol>
+<p>Gibt <code>1</code> zurück, wenn die Operation erfolgreich war, und <code>0</code>, wenn sie nicht erfolgreich war. Auf Betriebssystemen, die keine symbolischen Links kennen, kann diese Funktion zu einem schweren Fehler beim Ausführen des Scripts führen!
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$symlink_exists</span> <span class="sy0">=</span> <span class="kw3">eval</span> <span class="br0">&#123;</span> <span class="kw3">symlink</span><span class="br0">&#40;</span><span class="st0">&quot;&quot;</span><span class="sy0">,</span><span class="st0">&quot;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="nu0">1</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$symlink_exists</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">symlink</span><span class="br0">&#40;</span><span class="st0">&quot;/usr/local/people/stefan.htm&quot;</span><span class="sy0">,</span><span class="st0">&quot;/usr/local/links/stefan.link&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">opendir</span><span class="br0">&#40;</span>DIR<span class="sy0">,</span> <span class="st0">&quot;/u/web/teamon/temp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Dateien</span> <span class="sy0">=</span> <span class="kw3">readdir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">closedir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@Dateien</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$_&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel überprüft zunächst mit Hilfe der Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_die_Kontrolle_des_laufenden_Scripts#eval" title="Perl/Funktionen für die Kontrolle des laufenden Scripts">eval</a>, ob auf dem Betriebssystem, unter dem das Script ausgeführt wird, symbolische Links möglich sind. Benutzen Sie zu einer solchen Überprüfung den Befehl wie im Beispiel notiert. In dem Rückgabewert, der im Beispiel in dem Skalar <code>$symlink_exists</code> gespeichert wird, steht der Wert 1 (true), falls symbolische Links möglich sind. Mit der Konstruktion <code>if($symlink_exists)</code> ist dann die bedingte Ausführung von <code>symlink</code> möglich. Im Beispiel wird eine Link-Datei namens <code>stefan.link</code> erzeugt, die auf die Originaldatei <code>stefan.htm</code> in einem anderen Verzeichnis zeigt. Das Beispiel liest zur Kontrolle das Verzeichnis, in dem die symbolische Link-Datei erzeugt wurde, ein (Erläuterungen zu diesen Befehlen siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#opendir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">opendir</a>) und gibt entsprechenden HTML-Code aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: umask - Umask des laufenden Prozesses ändern">Bearbeiten</a>]</span> <span class="mw-headline" id="umask_-_Umask_des_laufenden_Prozesses_.C3.A4ndern"> <span id="umask"></span> umask - Umask des laufenden Prozesses ändern </span></h2>
+<p>Diese Funktion ist nur für Unix-Systeme relevant. Wenn unter Unix eine neue Datei geschrieben wird, werden die dabei vergebenen Zugriffsrechte durch die <b>Umask</b> des aktuell laufenden Prozesses (z.B. das laufende Perl-Script, das die Datei erzeugt) beeinflusst. Durch Aufruf der <b>Funktion</b> <code>umask</code> können Sie die Umask des laufenden Prozesses ändern und dadurch deren Wirkung auf die Zugriffsrechte neu erzeugter Dateien beeinflussen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine Bitmaske für eine <a href="#Rechteangaben_f.C3.BCr_Dateien_und_Verzeichnisse">Rechteangabe</a>. Der Wert muss oktal übergeben werden. Jedes gesetzte Bit in der Bitmaske bewirkt, dass das entsprechende Bit in einer vom laufenden Prozess erzeugten Datei <b>ausgeschaltet</b> wird.
+</li></ol>
+<p>Gibt den alten Umask-Wert zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> Fcntl<span class="sy0">;</span>
+<span class="kw3">sysopen</span><span class="br0">&#40;</span>DATEI<span class="sy0">,</span><span class="st0">&quot;/usr/web/temp/test.txt&quot;</span><span class="sy0">,</span> O_CREAT<span class="sy0">,</span>0666<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">umask</span><span class="br0">&#40;</span>0077<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">sysopen</span><span class="br0">&#40;</span>DATEI2<span class="sy0">,</span><span class="st0">&quot;/usr/web/temp/test2.txt&quot;</span><span class="sy0">,</span> O_CREAT<span class="sy0">,</span>0666<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">open</span><span class="br0">&#40;</span>LS<span class="sy0">,</span><span class="st0">&quot;ls -la /usr/web/temp |&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="kw1">while</span><span class="br0">&#40;</span><span class="re4">&lt;LS&gt;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>DATEI<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>DATEI2<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">close</span><span class="br0">&#40;</span>LS<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erzeugt mit zwei Aufrufen von <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#sysopen" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">sysopen</a> zwei Dateien namens <code>test.txt</code> und <code>test2.txt</code>. Bei beiden Dateien wird als gewünschte Rechteangabe <code>0666</code> angegeben. Zwischen den beiden Aufrufen von <code>sysopen</code> steht jedoch ein Aufruf von <code>umask</code>. Der Funktion wird dabei <code>077</code> als Oktalzahl mit führender <code>0</code> übergeben. Dies bewirkt, dass bei der Datei <code>test2.txt</code> die tatsächlichen Zugriffsrechte auf <code>0600</code> gesetzt werden. Zur Kontrolle gibt das Script das Ergebnis des Unix-Kommandos <code>ls</code> für das Verzeichnis, in dem die beiden Dateien erzeugt wurden, aus.
+<p>Die Wirkungsweise von <code>umask</code> lässt sich besser verstehen, wenn man das Bitmuster der Oktalzahl aufschlüsselt und mit der Zeichenkettenschreibweise von Zugriffsrechten vergleicht.<br />
+Das Bitmuster der Oktalzahl <code>077</code> lautet: <code>000111111</code> (eine 7 ist 111 binär!).<br />
+Die Zeichenkettenschreibweise von <code>0666</code> lautet: <code>rw-rw-rw-</code>.<br />
+Es stehen sich also 9 Bits und 9 Zeichen gegenüber. Jedes gesetzte Bit (<code>1</code>) der Oktalzahl setzt das analoge Zeichen an der gleichen Stelle auf <code>-</code>, sofern dort vorher <code>r</code>, <code>w</code> oder <code>x</code> stand.<br />
+</p>
+Das Bitmuster <code>000111111</code> bewirkt also bei einem Recht <code>rw-rw-rw-</code>, dass alle hinteren 6 Zeichen auf <code>-</code> gesetzt werden, sodass <code>rw-------</code> herauskommt (was wiederum oktal <code>0600</code> entspricht).</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: unlink - Dateien löschen">Bearbeiten</a>]</span> <span class="mw-headline" id="unlink_-_Dateien_l.C3.B6schen"> <span id="unlink"></span> unlink - Dateien löschen </span></h2>
+<p>Löscht eine oder mehrere Dateien gleichzeitig. Verzeichnisse können mit diesem Befehl nicht gelöscht werden, dazu steht die Funktion <a href="#rmdir">rmdir</a> zur Verfügung.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> eine Liste von Dateien, die gelöscht werden sollen.
+</li></ol>
+<p>Gibt die Anzahl der erfolgreich gelöschten Dateien zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="st0">&quot;/tmp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">opendir</span><span class="br0">&#40;</span>DIR<span class="sy0">,</span><span class="st0">&quot;.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Eintraege</span> <span class="sy0">=</span> <span class="kw3">readdir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">closedir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Anzahl</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">@Eintraege</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="kw1">unless</span><span class="br0">&#40;</span> <span class="sy0">-</span>d <span class="co5">$_</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="re0">$Anzahl</span><span class="sy0">+=</span> <span class="kw3">unlink</span><span class="br0">&#40;</span><span class="co5">$_</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Anzahl Dateien entfernt!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Mit <a href="#chdir">chdir</a> wechselt das Beispielscript zunächst in das Verzeichnis, in dem etwas gelöscht werden soll. Anschließend wird das Verzeichnis mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#opendir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">opendir</a>, <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#readdir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">readdir</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#closedir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">closedir</a> eingelesen. Die Verzeichniseinträge stehen anschließend in der Liste <code>@Eintraege</code>. In einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#foreach" title="Perl/Schleifen">foreach</a>-Schleife wird die Liste sodann abgearbeitet. Mit <code>unless( -d $_)</code> wird abgefragt, ob der aktuelle Eintrag kein Verzeichnis ist. Wenn das der Fall ist, wird der Eintrag, also eine Datei, mit <code>unlink</code> gelöscht. Beim erfolgreichen Löschen wird die Variable <code>$Anzahl</code> um 1 erhöht. Am Ende gibt das Script HTML-Code mit der Anzahl der gelöschten Dateien aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: utime - Zeitstempel von Dateien/Verzeichnissen ändern">Bearbeiten</a>]</span> <span class="mw-headline" id="utime_-_Zeitstempel_von_Dateien.2FVerzeichnissen_.C3.A4ndern"> <span id="utime"></span> utime - Zeitstempel von Dateien/Verzeichnissen ändern </span></h2>
+<p>Ändert den Zeitstempel für den letzten Lesezugriff und den letzten Schreibzugriff von einer oder mehreren Dateien.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> Eine Zeitangabe für den letzten Lesezugriff. Es muss sich um eine Sekundenangabe seit dem 1.1.1970 handeln, so wie ihn beispielsweise die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datum_und_Uhrzeit#time" title="Perl/Funktionen für Datum und Uhrzeit">time</a> zurückgibt.
+</li><li> Eine Zeitangabe für den letzten Schreibzugriff. Auch dabei muss es sich um eine Sekundenangabe seit dem 1.1.1970 handeln.
+</li><li> eine Liste von Dateien, deren Zeitstempel geändert werden soll.
+</li></ol>
+<p>Gibt die Anzahl der erfolgreich "berührten" Dateien zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Datei</span> <span class="sy0">=</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="st_h">'QUERY_STRING'</span><span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Jetzt</span> <span class="sy0">=</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">utime</span><span class="br0">&#40;</span><span class="re0">$Jetzt</span><span class="sy0">,</span><span class="re0">$Jetzt</span><span class="sy0">,</span><span class="re0">$Datei</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Zeitstempel von $Datei wurde aktualisiert!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Script aktualisiert den Zeitstempel einer Datei. Beim Aufruf erwartet es einen Übergabeparameter, der beim URI hinter einem Fragezeichen notiert wird. Der Übergabeparameter besteht in der Pfadangabe einer Datei, deren Zeitstempel aktualisiert werden soll. Beispiel:<br />
+<p><code><a rel="nofollow" class="external free" href="http://localhost/cgi-bin/test.pl?/mydocs/texte/wichtig.txt">http://localhost/cgi-bin/test.pl?/mydocs/texte/wichtig.txt</a></code>.<br />
+Den übergebenen Parameter speichert das Script in dem Skalar <code>$Datei</code>. Um den aktuellen Zeitpunkt zu ermitteln, wird die Funktion <code>time</code> aufgerufen. Sie liefert die Anzahl der Sekunden seit dem 1.1.1970 zurück, also genau die Form, die <code>utime</code> erwartet. Der Rückgabewert wird in <code>$Jetzt</code> gespeichert. Nun kann das Script die <code>utime</code>-Funktion aufrufen und ihr die gewünschten Parameter übergeben. Wenn Sie mehr als eine Datei auf einmal verarbeiten möchten, geben Sie alle gewünschten Dateien durch Kommata getrennt an.<br />
+</p>
+Anschließend erzeugt das Script HTML-Code. Dabei wird das "Berühren" der Datei bestätigt.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Nicht alle Betriebssysteme unterscheiden wie Unix zwei verschiedene Zeitstempel. Unter Windows beispielsweise gibt es keinen Zeitstempel für den letzten Lesezugriff, nur für den letzten Schreibzugriff. Übergeben Sie <code>utime</code> dennoch immer beide Parameter. Unter Windows wird dann nur der eine vorhandene Zeitstempel geändert.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1303/1000000
+Post‐expand include size: 79140/2097152 bytes
+Template argument size: 73636/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3103-0!*!0!!de-formal!*!* and timestamp 20150301151027 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;oldid=13958">http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;oldid=13958</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FFunktionen+f%C3%BCr+Datei-+und+Verzeichnis-Management" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Datei-_und_Verzeichnis-Management&amp;oldid=13958" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FFunktionen_für_Datei-2D_und_Verzeichnis-2DManagement" title="Spezial:Durchsuchen/Perl-2FFunktionen für Datei-2D und Verzeichnis-2DManagement">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 16. September 2012 um 19:26 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.095-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.114 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

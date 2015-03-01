@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/strict_mode by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/strict mode – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/strict_mode","wgTitle":"JavaScript/strict mode","wgCurRevisionId":21056,"wgArticleId":4768,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["ToDo"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/strict_mode","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/strict mode" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/strict_mode&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_strict_mode skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/strict mode</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/JavaScript" title="JavaScript">JavaScript</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>In JavaScript gibt es aufgrund der bewegten <a href="http://wiki.selfhtml.org/wiki/JavaScript/Hintergrundwissen/Entstehung_und_Standardisierung" title="JavaScript/Hintergrundwissen/Entstehung und Standardisierung">Geschichte</a> mit vielen proprietären Methoden und der sehr einfachen Möglichkeit globale Variablen einzuführen viele potentielle Fehlerquellen. Deshalb wurde mit ECMA5 der <b>Strenge Modus (strict mode)</b> eingeführt, der ein standardisiertes, um Fehlerquellen bereinigtes, Subset der Programmiersprache aktiviert.
+</p>
+<ul class="siconset smetadaten"><li class="bricon sicon sicon_ie"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="IE 8"><img alt="IE 8" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a><span class="version">8</span></li><li class="bricon sicon sicon_fx"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Firefox 4"><img alt="Firefox 4" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a><span class="version">4</span></li><li class="bricon sicon sicon_chr"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Chrome 13"><img alt="Chrome 13" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a><span class="version">13</span></li><li class="bricon sicon sicon_saf"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Safari 5"><img alt="Safari 5" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a><span class="version">5</span></li><li class="bricon sicon sicon_op"><a href="http://wiki.selfhtml.org/wiki/Datei:Iconset.png" class="image" title="Opera 11.6"><img alt="Opera 11.6" src="http://wiki.selfhtml.org/images/d/d8/Iconset.png" width="776" height="342" /></a><span class="version">11.6</span></li></ul><div class="visualClear"></div>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Aktivierung_des_strict_mode"><span class="tocnumber">1</span> <span class="toctext">Aktivierung des strict mode</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Auswirkungen_des_strict_mode"><span class="tocnumber">2</span> <span class="toctext">Auswirkungen des strict mode</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Variablen_m.C3.BCssen_deklariert_werden"><span class="tocnumber">2.1</span> <span class="toctext">Variablen müssen deklariert werden</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Fehler_werden_sichtbar"><span class="tocnumber">2.2</span> <span class="toctext">Fehler werden sichtbar</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#arguments"><span class="tocnumber">2.3</span> <span class="toctext">arguments</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Funktionsaufrufe"><span class="tocnumber">2.4</span> <span class="toctext">Funktionsaufrufe</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#this"><span class="tocnumber">2.5</span> <span class="toctext">this</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#with"><span class="tocnumber">2.6</span> <span class="toctext">with</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Empfehlungen_f.C3.BCr_die_Praxis"><span class="tocnumber">3</span> <span class="toctext">Empfehlungen für die Praxis</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Weblinks"><span class="tocnumber">4</span> <span class="toctext">Weblinks</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Aktivierung des strict mode">Bearbeiten</a>]</span> <span class="mw-headline" id="Aktivierung_des_strict_mode">Aktivierung des strict mode</span></h2>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Wie aktiviere ich den strict mode?
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="st0">&quot;use strict&quot;</span><span class="sy0">;</span>
+x <span class="sy0">=</span> <span class="nu0">42</span><span class="sy0">;</span> <span class="co1">//</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Normalerweise würde aus dieser Zuweisung eine globale Variable entstehen, die dann in anderen Teilen des Programms zu unerwünschten Konsequenzen führen kann.
+<p>Durch die Deklaration von <code>"use strict";</code> wissen die Browser, dass sie einen strengeren Maßstab anlegen müssen und geben einen Fehler ('Reference Error') zurück, da die Variable nicht deklariert ist. Ältere Browser sehen in <code>"use strict";</code> nur einen reinen String, den sie ignorieren.
+</p>
+<div class="note-box note-box-recommendation-text"><strong>Empfehlung:</strong> 
+<p>Verwenden Sie immer den Strengen Modus mit <code>"use strict";</code>!
+</p>
+Deklarieren Sie globale Variablen am Anfang des Scripts mit <code>var....</code>!</div></div>
+</div>
+<p>Wenn Sie nicht komplette Programme in den Strengen Modus versetzen wollen, können Sie ihn nur auf einzelne Funktionen beschränken:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Wie aktiviere ich den strict mode?
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">x <span class="sy0">=</span> <span class="nu0">42</span><span class="sy0">;</span>                             
+       <span class="co1">// Zuweisung wird zu einer globalen Variable</span>
+&#160;
+<span class="kw1">function</span> zuweisungName<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="st0">&quot;use strict&quot;</span><span class="sy0">;</span>
+    <span class="kw1">var</span> name <span class="sy0">=</span> <span class="st0">&quot;Arthur Dent&quot;</span><span class="sy0">;</span>        
+<span class="br0">&#125;</span>      <span class="co1">//Zuweisung innerhalb einer Variable im &quot;Strict Mode&quot;</span>
+&#160;
+<span class="kw1">function</span> zuweisungName2<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="kw1">var</span> name <span class="sy0">=</span> <span class="st0">&quot;Zaphod Beeblebrox&quot;</span><span class="sy0">;</span>  
+<span class="br0">&#125;</span>      <span class="co1">//Zuweisung innerhalb einer Variable, aber kein &quot;Strict Mode&quot;</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Auswirkungen des strict mode">Bearbeiten</a>]</span> <span class="mw-headline" id="Auswirkungen_des_strict_mode">Auswirkungen des strict mode</span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Variablen müssen deklariert werden">Bearbeiten</a>]</span> <span class="mw-headline" id="Variablen_m.C3.BCssen_deklariert_werden">Variablen müssen deklariert werden</span></h3>
+<p>Zuweisungen ohne var werden in JavaScript (wie im oberen Codebeispiel) zu globalen Variablen. Auch ein reiner Tippfehler führt zu einer neuen globalen Variable:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: globale Variable durch Tippfehler
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"> <span class="kw1">var</span> variableX <span class="sy0">=</span> <span class="nu0">42</span><span class="sy0">;</span>                             
+       <span class="co1">// Zuweisung als globale Variable</span>
+&#160;
+<span class="kw1">function</span> zuweisungZahl<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    varaibleX <span class="sy0">=</span> prompt<span class="br0">&#40;</span><span class="st0">&quot;Geben Sie eine neue Zahl ein&quot;</span><span class="sy0">,</span> <span class="st0">&quot;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>      
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Durch die falsche Schreibweise von <code>variableX</code> wird der Wert nicht überschrieben, sondern eine neue globale Variable angelegt.
+Im "strict mode" würde es einen 'reference error' anzeigen.</div>
+</div>
+<p>Globale Variablen können später unerwünschte Konsequenzen auslösen. So können sie in anderen Funktionen alte Werte übergeben oder überschrieben werden. Da diese Rechenfehler keine Syntaxfehler sind, kann man sie nur sehr schwer <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Debuggen_für_Anfänger" title="JavaScript/Tutorials/Debuggen für Anfänger">debuggen</a>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Fehler werden sichtbar">Bearbeiten</a>]</span> <span class="mw-headline" id="Fehler_werden_sichtbar">Fehler werden sichtbar</span></h3>
+<p>JavaScript war als anfängerfreundliche Sprache konzipiert, die bei Fehlern nicht sofort abbrechen sollte. So werden bei einigen Programmierfehlern die Fehlermeldungen unterdrückt. Während dies manchmal einen Abbruch des Programms verhindert, entstehen teilsweise schwerwiegendere Fehler, die erst später sichtbar werden.
+</p><p>Im strict mode werden Meldungen für diese Fehler in der <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Debuggen_für_Anfänger" title="JavaScript/Tutorials/Debuggen für Anfänger">Konsole</a> ausgegeben. 
+</p>
+<div class="note-box note-box-todo"><p class="note-box-title">ToDo:&#160;&#160;&#160;&#160;<span class="note-box-more small">(<a href="http://wiki.selfhtml.org/wiki/Kategorie:ToDo" title="Kategorie:ToDo"><span style="color:#eef;text-decoration:underline">weitere ToDos</span></a>)</span></p><div class="note-box-text">Beispiele.--<a href="http://wiki.selfhtml.org/wiki/Benutzer:Scharwies" title="Benutzer:Scharwies">Matthias Scharwies</a> (<a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:Scharwies" title="Benutzer Diskussion:Scharwies">Diskussion</a>) 11:16, 28. Aug. 2014 (CEST)</div></div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: arguments">Bearbeiten</a>]</span> <span class="mw-headline" id="arguments">arguments</span></h3>
+<div class="note-box note-box-todo"><p class="note-box-title">ToDo:&#160;&#160;&#160;&#160;<span class="note-box-more small">(<a href="http://wiki.selfhtml.org/wiki/Kategorie:ToDo" title="Kategorie:ToDo"><span style="color:#eef;text-decoration:underline">weitere ToDos</span></a>)</span></p><div class="note-box-text">der Artikel muss fertiggestellt werden.--<a href="http://wiki.selfhtml.org/wiki/Benutzer:Scharwies" title="Benutzer:Scharwies">Matthias Scharwies</a> (<a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:Scharwies" title="Benutzer Diskussion:Scharwies">Diskussion</a>) 08:36, 30. Aug. 2014 (CEST)</div></div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Funktionsaufrufe">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionsaufrufe">Funktionsaufrufe</span></h3>
+<div class="note-box note-box-todo"><p class="note-box-title">ToDo:&#160;&#160;&#160;&#160;<span class="note-box-more small">(<a href="http://wiki.selfhtml.org/wiki/Kategorie:ToDo" title="Kategorie:ToDo"><span style="color:#eef;text-decoration:underline">weitere ToDos</span></a>)</span></p><div class="note-box-text">der Artikel muss fertiggestellt werden.--<a href="http://wiki.selfhtml.org/wiki/Benutzer:Scharwies" title="Benutzer:Scharwies">Matthias Scharwies</a> (<a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:Scharwies" title="Benutzer Diskussion:Scharwies">Diskussion</a>) 08:36, 30. Aug. 2014 (CEST)</div></div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: this">Bearbeiten</a>]</span> <span class="mw-headline" id="this">this</span></h3>
+<p>Wenn man innerhalb eines Funktionsaufrufs neue Methoden und Eigenschaften für <a href="http://wiki.selfhtml.org/wiki/JavaScript/Konzepte#Auf_aktuelles_Objekt_Bezug_nehmen_.28this.29" title="JavaScript/Konzepte">this</a> definiert, sind diese globale Variablen.
+</p><p>Im strict mode ist <b>this</b> <code>undefined</code>. So müssen deshalb neue Eigenschaften und Methoden immer mit <code>new</code> eingeleitet werden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: with">Bearbeiten</a>]</span> <span class="mw-headline" id="with">with</span></h3>
+<p>Mit dem <a href="http://wiki.selfhtml.org/wiki/JavaScript/Konzepte#Mehrere_Anweisungen_mit_einem_Objekt_ausf.C3.BChren_.28with.29" title="JavaScript/Konzepte"><b>with-Statement</b></a> können Sie mehrere Anweisungen in Folge notieren, die alle mit dem gleichen Objekt arbeiten.
+</p><p>Allerdings kann dies schwere Nebenwirkungen haben. Deshalb  ist das <b>with-Statement</b> im strict mode verboten und erzeugt einen Syntaxfehler.
+</p>
+<ul><li><a rel="nofollow" class="external free" href="http://www.yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/">http://www.yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/</a>
+</li></ul>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Empfehlungen für die Praxis">Bearbeiten</a>]</span> <span class="mw-headline" id="Empfehlungen_f.C3.BCr_die_Praxis">Empfehlungen für die Praxis</span></h2>
+<div class="note-box note-box-recommendation-text"><strong>Empfehlung:</strong> 
+<p>Verwenden Sie <code>"use strict";</code>!
+</p><p><code>"use strict";</code> führt dazu, dass Programmierer ...
+</p>
+<ul><li> Fehler beim Entwickeln früher erkennen 
+</li><li> Scripts leichter <a href="http://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Debuggen_für_Anfänger" title="JavaScript/Tutorials/Debuggen für Anfänger">debuggen</a> können
+</li><li> sich mehr Gedanken um den Geltungsbereich von Variablen machen 
+</li><li> letztendlich eine bessere Strukturierung und Kapselung der Scripts erreichen
+</li></ul>
+<p>Dieser Zwang zu mehr Disziplin ist insbesondere dann wichtig, wenn Code aus der Hand gegeben oder in Teamarbeit entwickelt wird. 
+</p>
+Peter Kroener empfiehlt, <code>"use strict";</code> beim Entwickeln zu verwenden und dann zu entfernen, um ältere Browser (und künftige Bugs) zu berücksichtigen. Allerdings setzt dies voraus, in der Programmierung auf Methoden, die im stengen Modus anders arbeiten, zu verzichten.</div>
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Weblinks">Bearbeiten</a>]</span> <span class="mw-headline" id="Weblinks">Weblinks</span></h2>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode</a>
+</li><li><a rel="nofollow" class="external free" href="http://www.peterkroener.de/ecmascript-5-die-nachste-version-von-javascript-teil-2-der-strict-mode/">http://www.peterkroener.de/ecmascript-5-die-nachste-version-von-javascript-teil-2-der-strict-mode/</a>
+</li><li><a rel="nofollow" class="external free" href="http://www.mediaevent.de/javascript/strict-mode.html">http://www.mediaevent.de/javascript/strict-mode.html</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 652/1000000
+Post‐expand include size: 12377/2097152 bytes
+Template argument size: 6478/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4768-0!*!0!!de-formal!2!* and timestamp 20150301144716 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;oldid=21056">http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;oldid=21056</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:ToDo" title="Kategorie:ToDo">ToDo</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2Fstrict+mode" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/strict_mode"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:JavaScript/strict_mode&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/JavaScript/strict_mode" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/JavaScript/strict_mode" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/JavaScript/strict_mode" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/strict_mode&amp;oldid=21056" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/JavaScript-2Fstrict_mode" title="Spezial:Durchsuchen/JavaScript-2Fstrict mode">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 30. August 2014 um 07:50 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 515-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.085 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/strict_mode by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:53 GMT -->
+</html>

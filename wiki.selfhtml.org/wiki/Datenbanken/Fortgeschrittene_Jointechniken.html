@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Datenbanken/Fortgeschrittene_Jointechniken by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Datenbanken/Fortgeschrittene Jointechniken – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Datenbanken/Fortgeschrittene_Jointechniken","wgTitle":"Datenbanken/Fortgeschrittene Jointechniken","wgCurRevisionId":23687,"wgArticleId":507,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["DBMS und SQL"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Datenbanken/Fortgeschrittene_Jointechniken","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-sql {line-height: normal;}
+.source-sql li, .source-sql pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for sql
+ * CSS class: source-sql, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.sql.source-sql .de1, .sql.source-sql .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.sql.source-sql  {font-family:monospace;}
+.sql.source-sql .imp {font-weight: bold; color: red;}
+.sql.source-sql li, .sql.source-sql .li1 {font-weight: normal; vertical-align:top;}
+.sql.source-sql .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.sql.source-sql .li2 {font-weight: bold; vertical-align:top;}
+.sql.source-sql .kw1 {color: #993333; font-weight: bold;}
+.sql.source-sql .co1 {color: #808080; font-style: italic;}
+.sql.source-sql .coMULTI {color: #808080; font-style: italic;}
+.sql.source-sql .es0 {color: #000099; font-weight: bold;}
+.sql.source-sql .br0 {color: #66cc66;}
+.sql.source-sql .sy0 {color: #66cc66;}
+.sql.source-sql .st0 {color: #ff0000;}
+.sql.source-sql .nu0 {color: #cc66cc;}
+.sql.source-sql .ln-xtra, .sql.source-sql li.ln-xtra, .sql.source-sql div.ln-xtra {background-color: #ffc;}
+.sql.source-sql span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Datenbanken/Fortgeschrittene Jointechniken" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Datenbanken/Fortgeschrittene_Jointechniken&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Datenbanken_Fortgeschrittene_Jointechniken skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Datenbanken/Fortgeschrittene Jointechniken</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Der vorliegende Artikel sieht sich als Ergänzung und gleichzeitig Fortführung zur <a href="http://wiki.selfhtml.org/wiki/Artikel:DBMS_und_SQL/Einführung_in_Joins" title="Artikel:DBMS und SQL/Einführung in Joins" class="mw-redirect">Einführung in Joins</a>. Die dort vermittelten Kenntnisse werden hier vorausgesetzt. Zielgruppe beider Artikel sind Quereinsteiger sowie Anfänger im Umgang mit relationalen Datenbanken. Hostingangebote mit Datenbankunterstützung sind bereits seit mehreren Jahren Standard geworden, seit Jahren gibt es sogar Gratishosting mit Datenbankunterstützung. Entsprechend zahlreich sind die Anfragen im <a rel="nofollow" class="external text" href="http://forum.de.selfhtml.org/">SELFHTML-Forum</a> zu dieser Thematik.
+</p><p>Zwei Schwerpunkte werden behandelt: zum einen die Verknüpfung von mehr als zwei Tabellen, die sogenannten Mehrfachjoins, und zum anderen nichtalltägliche Spezialfälle wie der Selfjoin und der Thetajoin. Die vorgestellten Beispiele zeigen, dass in vielen Fällen etwas Logik (und grundlegende SQL-Kenntnisse) ausreichend sind, um viele Aufgaben zu lösen. Andererseits werden auch Fallstricke aufgezeigt, in denen man sich nach Möglichkeit nicht verheddern sollte.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Die_Beispieldatenbank"><span class="tocnumber">1</span> <span class="toctext">Die Beispieldatenbank</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Tabellen"><span class="tocnumber">1.1</span> <span class="toctext">Tabellen</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Erl.C3.A4uterung"><span class="tocnumber">1.2</span> <span class="toctext">Erläuterung</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Besonderheiten"><span class="tocnumber">1.3</span> <span class="toctext">Besonderheiten</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Der_Selfjoin"><span class="tocnumber">2</span> <span class="toctext">Der Selfjoin</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#1._Schritt_-_SELFJOIN"><span class="tocnumber">2.1</span> <span class="toctext">1. Schritt - SELFJOIN</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#2._Schritt_-_SELFJOIN_mit_einschr.C3.A4nkender_WHERE-Klausel"><span class="tocnumber">2.2</span> <span class="toctext">2. Schritt - SELFJOIN mit einschränkender WHERE-Klausel</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Abschlussbemerkung"><span class="tocnumber">2.3</span> <span class="toctext">Abschlussbemerkung</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Mehrere_Tabellen_mit_JOIN_verkn.C3.BCpfen_-_gleiche_Joinspalten"><span class="tocnumber">3</span> <span class="toctext">Mehrere Tabellen mit JOIN verknüpfen - gleiche Joinspalten</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Ein_einfaches_Beispiel"><span class="tocnumber">3.1</span> <span class="toctext">Ein einfaches Beispiel</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Ein_etwas_komplexerer_Fall"><span class="tocnumber">3.2</span> <span class="toctext">Ein etwas komplexerer Fall</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Variation_der_Reihenfolge_und_Joinspalte"><span class="tocnumber">3.3</span> <span class="toctext">Variation der Reihenfolge und Joinspalte</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Zusammenfassung"><span class="tocnumber">3.4</span> <span class="toctext">Zusammenfassung</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Mehrere_Tabellen_mit_JOIN_verkn.C3.BCpfen_-_unterschiedliche_Joinspalten"><span class="tocnumber">4</span> <span class="toctext">Mehrere Tabellen mit JOIN verknüpfen - unterschiedliche Joinspalten</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Unterschiedliche_Join-Spalten_nutzen"><span class="tocnumber">4.1</span> <span class="toctext">Unterschiedliche Join-Spalten nutzen</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Ein_Beispiel_mit_LEFT_JOIN"><span class="tocnumber">4.2</span> <span class="toctext">Ein Beispiel mit LEFT JOIN</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Thetajoin"><span class="tocnumber">5</span> <span class="toctext">Thetajoin</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Die Beispieldatenbank">Bearbeiten</a>]</span> <span class="mw-headline" id="Die_Beispieldatenbank"> Die Beispieldatenbank </span></h2>
+<p>Die Beispiele in diesem Artikel beziehen sich alle auf die Tabellen der Beispieldatenbank, die hier vorgestellt wird. Die Beispieldatenbank ist weder vollständig, noch in sich geschlossen; am besten stellen Sie sich die Beispieldatenbank als Ausschnitt einer größeren Datenbank vor. Die Daten in den Tabellen sind sämtlich frei erfunden (mit Ausnahme der Kreditkartenanbieter - ist hier ein Hinweis auf Markenrechte erforderlich?), Ähnlichkeiten mit realen Daten können nur durch Zufall entstanden sein. Die Beispieldaten orientieren sich am Artikel <a href="http://wiki.selfhtml.org/wiki/Artikel:DBMS_und_SQL/Einführung_in_Joins" title="Artikel:DBMS und SQL/Einführung in Joins" class="mw-redirect">Einführung in Joins</a>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Tabellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Tabellen"> Tabellen </span></h3>
+<table border="1">
+<caption> Tabelle Kunden
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>Nachname
+</th>
+<th>Vorname
+</th>
+<th>Strasse
+</th>
+<th>PLZ
+</th>
+<th>Ort
+</th></tr>
+<tr>
+<td>123456
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr>
+<tr>
+<td>123457
+</td>
+<td>Musterfrau
+</td>
+<td>Katrin
+</td>
+<td>Musterstraße 7
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td></tr>
+<tr>
+<td>123459
+</td>
+<td>Schmidt
+</td>
+<td>Hans
+</td>
+<td>Hauptstraße 2
+</td>
+<td>98765
+</td>
+<td>Anderswo
+</td></tr>
+<tr>
+<td>123460
+</td>
+<td>Becker
+</td>
+<td>Heinz
+</td>
+<td>Mustergasse 4
+</td>
+<td>12543
+</td>
+<td>Musterdorf
+</td></tr></table>
+<p><br />
+</p>
+<table border="1">
+<caption> Tabelle Kreditkarten
+</caption>
+<tr style="text-align:left;">
+<th>KartenNr
+</th>
+<th>Firma
+</th>
+<th>KndNr
+</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>12345
+</td>
+<td>VISA
+</td>
+<td>123457
+</td>
+<td>05/2011
+</td></tr>
+<tr>
+<td>12346
+</td>
+<td>Mastercard
+</td>
+<td>123459
+</td>
+<td>01/2012
+</td></tr>
+<tr>
+<td>12347
+</td>
+<td>American Express
+</td>
+<td>123459
+</td>
+<td>01/2011
+</td></tr>
+<tr>
+<td>12348
+</td>
+<td>Diners Club
+</td>
+<td>123458
+</td>
+<td>03/2012
+</td></tr>
+<tr>
+<td>12349
+</td>
+<td>VISA
+</td>
+<td>123458
+</td>
+<td>07/2011
+</td></tr></table>
+<p><br />
+</p>
+<table border="1">
+<caption> Tabelle Bestellungen_Oktober
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>BestellungsNr
+</th>
+<th>Datum
+</th></tr>
+<tr>
+<td>123456
+</td>
+<td>987654
+</td>
+<td>2009-10-15
+</td></tr>
+<tr>
+<td>123456
+</td>
+<td>987655
+</td>
+<td>2009-10-16
+</td></tr>
+<tr>
+<td>123457
+</td>
+<td>987656
+</td>
+<td>2009-10-16
+</td></tr></table>
+<p><br />
+</p>
+<table border="1">
+<caption> Tabelle Positionen
+</caption>
+<tr style="text-align:left;">
+<th>PositionsNr
+</th>
+<th>BestellungsNr
+</th>
+<th>Artikel
+</th>
+<th>Anzahl
+</th>
+<th>Preis
+</th></tr>
+<tr>
+<td>10241
+</td>
+<td>987654
+</td>
+<td>CD-Player
+</td>
+<td>2
+</td>
+<td>49.95
+</td></tr>
+<tr>
+<td>10242
+</td>
+<td>987654
+</td>
+<td>DVD-Player
+</td>
+<td>3
+</td>
+<td>59.95
+</td></tr>
+<tr>
+<td>10243
+</td>
+<td>987654
+</td>
+<td>CD xyz
+</td>
+<td>10
+</td>
+<td>15.95
+</td></tr>
+<tr>
+<td>10244
+</td>
+<td>987654
+</td>
+<td>DVD abc
+</td>
+<td>5
+</td>
+<td>9.95
+</td></tr>
+<tr>
+<td>10245
+</td>
+<td>987655
+</td>
+<td>CD-Player
+</td>
+<td>1
+</td>
+<td>51.20
+</td></tr>
+<tr>
+<td>10246
+</td>
+<td>987655
+</td>
+<td>CD xyz extra
+</td>
+<td>20
+</td>
+<td>16.25
+</td></tr>
+<tr>
+<td>10247
+</td>
+<td>987656
+</td>
+<td>DVD-Player
+</td>
+<td>1
+</td>
+<td>64.95
+</td></tr></table>
+<p><br />
+</p>
+<table border="1">
+<caption> Tabelle Vorteilsclub
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>ClubNr
+</th>
+<th>Kategorie
+</th></tr>
+<tr>
+<td>123458
+</td>
+<td>1214
+</td>
+<td>3
+</td></tr>
+<tr>
+<td>123456
+</td>
+<td>1415
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>123460
+</td>
+<td>1616
+</td>
+<td>1
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Erläuterung">Bearbeiten</a>]</span> <span class="mw-headline" id="Erl.C3.A4uterung"> Erläuterung </span></h3>
+<p>Die vorliegenden Tabellen seien der Ausschnitt aus der Verwaltung eines Unternehmens: 
+</p>
+<ul><li> Die Tabelle 'Kunden' ist die zentrale Tabelle, in der Details zu den Kunden gespeichert sind.
+</li><li> In der Tabelle 'Kreditkarte' werden alle dem Unternehmen bekannten Kreditkarteninformationen abgelegt, man denke z.B. an Amazon.com, so dass bei einem zukünftigen Einkauf die Informationen als Vorbefüllung des Bestellformulares genutzt werden können.
+</li><li> Die Tabelle 'Bestellungen_Oktober' umfaßt nur einen Monat und ordnet einer bestimmte Bestellung den Kunden und das Datum zu.
+</li><li> Die Tabelle 'Vorteilsclub' enthält Informationen über die Mitglieder des Vorteilsclubs, der bei Bestellungen zu Sonderkonditionen berechtigt. Diese sind von der Kategorie, in der sich der Kunde befindet, abhängig.
+</li><li> Sämtliche Tabellen können über die Spalte KndNr, die Kundennummer, zusammengeführt werden.
+</li><li> Die Tabelle 'Positionen' enthält Detailinformationen zu den Bestellungen, sie kann mit der Tabelle 'Bestellungen_Oktober' über die Spalte BestellungsNr verknüpft werden.
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Besonderheiten">Bearbeiten</a>]</span> <span class="mw-headline" id="Besonderheiten"> Besonderheiten </span></h3>
+<p>Nicht jeder Kunde muss über eine Kreditkarte verfügen, aber Kunden können Kreditkarten mehrerer Institute angeben. Entsprechend muss nicht von jedem Kunden im Oktober eine Bestellung vorliegen, nicht jeder Kunde ist Mitglied im Vorteilsclub.
+</p><p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Der Selfjoin">Bearbeiten</a>]</span> <span class="mw-headline" id="Der_Selfjoin"> Der Selfjoin </span></h2>
+<p>Sie können eine Tabelle auch mit sich selbst verknüpfen, diesen Typ des Joins nennt man Selfjoin.
+</p><p>Sie möchten z.B. für eine spezielle Marketingaktion wissen, welche Kunden sowohl über eine Mastercard als auch eine Kreditkarte von American Express verfügen. Ein Selfjoin kann Ihnen helfen, die gewünschten Daten zu erhalten.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: 1. Schritt - SELFJOIN">Bearbeiten</a>]</span> <span class="mw-headline" id="1._Schritt_-_SELFJOIN"> 1. Schritt - SELFJOIN </span></h3>
+<p>Im ersten Schritt verknüpfen Sie die Tabelle mit sich selbst, als Verknüpfungsfeld wählen Sie KdnNr, die Kundennummer:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: für einen Selfjoin
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    KK1<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    KK1<span class="sy0">.</span>Firma<span class="sy0">,</span>
+    KK2<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    KK2<span class="sy0">.</span>Firma
+<span class="kw1">FROM</span>
+    Kreditkarten KK1
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span>
+    Kreditkarten KK2
+<span class="kw1">ON</span>
+    KK1<span class="sy0">.</span>KndNr <span class="sy0">=</span> KK2<span class="sy0">.</span>KndNr</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Abfrageergebnis Selfjoin
+</caption>
+<tr style="text-align:left;">
+<th>KK1.KndNr
+</th>
+<th>KK1.Firma
+</th>
+<th>KK2.KndNr
+</th>
+<th>KK2.Firma
+</th></tr>
+<tr>
+<td>123457
+</td>
+<td>VISA
+</td>
+<td>123457
+</td>
+<td>VISA
+</td></tr>
+<tr>
+<td>123459
+</td>
+<td>Mastercard
+</td>
+<td>123459
+</td>
+<td>Mastercard
+</td></tr>
+<tr>
+<td>123459
+</td>
+<td>American Express
+</td>
+<td>123459
+</td>
+<td>Mastercard
+</td></tr>
+<tr>
+<td>123459
+</td>
+<td>Mastercard
+</td>
+<td>123459
+</td>
+<td>American Express
+</td></tr>
+<tr>
+<td>123459
+</td>
+<td>American Express
+</td>
+<td>123459
+</td>
+<td>American Express
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Diners Club
+</td>
+<td>123458
+</td>
+<td>Diners Club
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>VISA
+</td>
+<td>123458
+</td>
+<td>Diners Club
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Diners Club
+</td>
+<td>123458
+</td>
+<td>VISA
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>VISA
+</td>
+<td>123458
+</td>
+<td>VISA
+</td></tr></table>
+(9 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung</b>:
+Sie greifen hier zweimal auf die gleiche Tabelle zu, die über die Spalte KndNr verknüpft sind. Um die beiden "Tabellen" voneinander zu unterscheiden verwenden Sie dazu Aliasnamen in der FROM- und JOIN-Klausel. Diese ermöglichen es Ihnen, in der Feldliste und in den Bedingungen die Herkunft der Daten anzugeben. Bei Kunden mit mehr als einer Kreditkarte werden alle möglichen Kombinationen angegeben - dies ist vergleichbar mit dem CROSS JOIN, siehe Einführung in Joins.</div>
+<div class="note-box-text note-box-example-comment">Im nächsten Schritt werden wir zusätzlich die Ergebnismenge filtern, um die gewünschten Datensätze zu erhalten:</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: 2. Schritt - SELFJOIN mit einschränkender WHERE-Klausel">Bearbeiten</a>]</span> <span class="mw-headline" id="2._Schritt_-_SELFJOIN_mit_einschr.C3.A4nkender_WHERE-Klausel"> 2. Schritt - SELFJOIN mit einschränkender WHERE-Klausel </span></h3>
+<p>Nun möchten Sie nicht alle möglichen Kombinationen von Kundennummern und zugehörigen Kreditkarten haben, sondern wissen, wer sowohl eine 'Mastercard' und eine 'American Express' hat. Dazu nutzen Sie die WHERE-Klausel.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: mit einschränkender WHERE-Klausel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    KK1<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    KK1<span class="sy0">.</span>Firma<span class="sy0">,</span>
+    KK2<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    KK2<span class="sy0">.</span>Firma
+<span class="kw1">FROM</span>
+    Kreditkarten KK1
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span>
+    Kreditkarten KK2
+<span class="kw1">ON</span>
+    KK1<span class="sy0">.</span>KndNr <span class="sy0">=</span> KK2<span class="sy0">.</span>KndNr
+<span class="kw1">WHERE</span>
+    KK1<span class="sy0">.</span>Firma <span class="sy0">=</span> <span class="st0">'Mastercard'</span> <span class="kw1">AND</span> KK2<span class="sy0">.</span>Firma <span class="sy0">=</span> <span class="st0">'American Express'</span></pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Abfrageergebnis Selfjoin mit WHERE-Klausel
+</caption>
+<tr style="text-align:left;">
+<th>KK1.KndNr
+</th>
+<th>KK1.Firma
+</th>
+<th>KK2.KndNr
+</th>
+<th>KK2.Firma
+</th></tr>
+<tr>
+<td>123459
+</td>
+<td>Mastercard
+</td>
+<td>123459
+</td>
+<td>American Express
+</td></tr></table>
+(1 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung</b>:
+Die WHERE-Klausel filtert aus der Vereinigungstabelle genau die Datensätze aus, die Sie haben möchten. Es bleibt genau ein Datensatz übrig, der Kunde mit der KndNr 123459. Wenn Sie Details zu diesem Kunden haben möchten, so benötigen Sie einen weiteren JOIN  mit der Kundentabelle. JOINs über mehrere Tabellen werden im folgenden Abschnitt behandelt.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Abschlussbemerkung">Bearbeiten</a>]</span> <span class="mw-headline" id="Abschlussbemerkung"> Abschlussbemerkung </span></h3>
+<p>Der Selfjoin kann unperformant sein, insbesondere wenn es in den Join-Spalten viele Werte gibt, die mehrfach auftreten. Spalten, deren Werte man nicht benötigt, sollte man normalerweise nicht in der Spaltenliste aufführen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Mehrere Tabellen mit JOIN verknüpfen - gleiche Joinspalten">Bearbeiten</a>]</span> <span class="mw-headline" id="Mehrere_Tabellen_mit_JOIN_verkn.C3.BCpfen_-_gleiche_Joinspalten"> Mehrere Tabellen mit JOIN verknüpfen - gleiche Joinspalten </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Ein einfaches Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Ein_einfaches_Beispiel"> Ein einfaches Beispiel </span></h3>
+<p>Im vorhergehenden Abschnitt haben Sie für Ihre Marketingabteilung die Kundennummern der Kunden herausgefunden, die sowohl über eine 'Mastercard' als auch eine 'American Express' verfügen. Nun möchte die Marketingabteilung wissen, um welche Person es sich handelt, d.h. Nachname, Vorname, Anschrift, … Diese Aufgabe können Sie mit einer SQL-Anweisung lösen, indem Sie einen Mehrfachjoin verwenden:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    KK1<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    Nachname<span class="sy0">,</span>
+    Vorname<span class="sy0">,</span>
+    Strasse<span class="sy0">,</span>
+    PLZ<span class="sy0">,</span>
+    Ort
+<span class="kw1">FROM</span> <span class="br0">&#40;</span>
+    Kreditkarten KK1
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Kreditkarten KK2
+<span class="kw1">ON</span> 
+    KK1<span class="sy0">.</span>KndNr <span class="sy0">=</span> KK2<span class="sy0">.</span>KndNr
+<span class="br0">&#41;</span>
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Kunden
+<span class="kw1">ON</span> 
+    KK1<span class="sy0">.</span>KndNr <span class="sy0">=</span> Kunden<span class="sy0">.</span>KndNr
+<span class="kw1">WHERE</span> 
+    KK1<span class="sy0">.</span>Firma <span class="sy0">=</span> <span class="st0">'Mastercard'</span> <span class="kw1">AND</span> KK2<span class="sy0">.</span>Firma <span class="sy0">=</span> <span class="st0">'American Express'</span></pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Abfrageergebnis mit Detailangaben
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>Nachname
+</th>
+<th>Vorname
+</th>
+<th>Strasse
+</th>
+<th>PLZ
+</th>
+<th>Ort
+</th></tr>
+<tr>
+<td>123459
+</td>
+<td>Schmidt
+</td>
+<td>Hans
+</td>
+<td>Hauptstraße 2
+</td>
+<td>98765
+</td>
+<td>Anderswo
+</td></tr></table>
+(1 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung</b>:
+Aus der Anweisung vom vorhergehenden Beispiel wurden die nicht benötigten Spalten (2x Firma, KK2.KndNr) gestrichen, siehe auch die dortige Abschlussbemerkung. Durch den zweiten <code>INNER JOIN</code> wird das Ergebnis der ersten JOIN-Operation mit der Tabelle "Kunden" verknüpft. Wiederum dient die Spalte KndNr zur Verknüpfung. Ihre Marketingabteilung ist glücklich, sie hat genau die benötigten Daten für das geplante Mailing.</div>
+</div>
+<p><b>Beachten Sie:</b>
+</p><p>Die SQL-Syntax weist klare Richtlinien für die Reihenfolge der einzelnen Klauseln auf. Die <code>WHERE</code>-Klausel kommt (lange) nach der <code>JOIN</code>-Klausel. Deswegen kann die zweite JOIN-Klausel nicht einfach an die bisherige Anweisung angehängt werden.
+</p><p>Bei beiden JOIN-Operationen im vorliegenden Beispiel handelt es sich jeweils um einen INNER JOIN. Wie Sie dem Grundlagenartikel von Rouven Thimm entnehmen können, ist beim INNER JOIN die Reihenfolge der Operanden, d.h. der am JOIN beteiligten Tabellen irrelevant. D.h. statt <code>FROM (Kreditkarten AS KK1 INNER JOIN Kreditkarten AS KK2) INNER JOIN Kunden</code> hätte man genausogut <code>FROM Kunden INNER JOIN (Kreditkarten AS KK1 INNER JOIN Kreditkarten KK2)</code> schreiben können, ON-Klausel mal vernachlässigt. Da KK1.KndNr den gleichen Wert besitzt wie KK2.KndNr ist es auch unwichtig, welche dieser beiden Spalten für die äußere JOIN-Bedingung verwendet wird. Die Klammern (hinter FROM und nach der ersten ON-Klausel) legen die Reihenfolge der JOIN-Operationen fest. Verzichten Sie auf Klammern, so entscheidet das Datenbankmanagementsystem (DBMS), in welcher Reihenfolge es die JOINs abarbeitet.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Ein etwas komplexerer Fall">Bearbeiten</a>]</span> <span class="mw-headline" id="Ein_etwas_komplexerer_Fall"> Ein etwas komplexerer Fall </span></h3>
+<p>Die Marketingabteilung hat schon wieder einen Auftrag für Sie: Diesmal benötigt sie die Adressen von allen Kunden, von den Kreditkarteninhabern zusätzlich die Kreditkarteninformationen aber nur, wenn sie Mitglied im Vorteilsclub sind. Ihnen ist klar, dass Sie für die Lösung dieser Aufgabe die Tabellen 'Kunden', 'Kreditkarten' und 'Vorteilsclub' miteinander verknüpfen müssen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 2 - erster Zwischenschritt
+</div>
+<div class="note-box-text note-box-example-comment">In einem ersten Zwischenschritt ermitteln Sie die Kreditkarteninformationen der Mitglieder des Vorteilsclub:</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    Kreditkarten<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    Firma<span class="sy0">,</span>
+    KartenNr<span class="sy0">,</span>
+    Ablaufdatum
+<span class="kw1">FROM</span> 
+    Kreditkarten  
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Vorteilsclub
+<span class="kw1">ON</span> 
+    Kreditkarten<span class="sy0">.</span>KndNr <span class="sy0">=</span> Vorteilsclub<span class="sy0">.</span>KndNr</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Kreditkarteninformationen der Mitglieder des Vorteilsclub
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>Firma
+</th>
+<th>KartenNr
+</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>123458
+</td>
+<td>Diners Club
+</td>
+<td>12348
+</td>
+<td>03/2012
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>VISA
+</td>
+<td>12349
+</td>
+<td>07/2011
+</td></tr></table>
+(2 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung</b>:
+Der Kunde muss über eine Kreditkarte verfügen, somit seine Kundennummer in der Tabelle "Kreditkarten" aufgeführt sein; gleiches gilt für den Vorteilsclub. Somit liefert der INNER JOIN dieser beiden Tabellen die Kreditkarteninformationen der Mitglieder im Vorteilsclub. In diesem Fall ist es ein einziger Kunde, der über zwei Kreditkarten verfügt.</div>
+<div class="note-box-text note-box-example-comment">Beachten Sie: Obwohl Sie überhaupt keine Spalte aus der Tabelle "Vorteilsclub" in der Ergebnistabelle verwenden, wird die Ergebnismenge durch den JOIN bereits eingeschränkt.</div>
+</div>
+<p><b>Resultierende Abfrage</b>
+</p><p>Das Ergebnis dieses Zwischenschrittes müssen Sie nun noch auf geeignete Weise mit der Tabelle "Kunden" verknüpfen. Da sie von sämtlichen Kunden die Detaildaten von "Kunden" benötigen, auch wenn keine Entsprechungen in der Menge der Kreditkarteninformationen (der Vorteilsclubmitglieder) vorliegen, können Sie diese Aufgabe z.B. mit einem LEFT JOIN der Tabellen "Kunden" und dem Zwischenergebnis lösen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    Kunden<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    Nachname<span class="sy0">,</span>
+    Vorname<span class="sy0">,</span>
+    Strasse<span class="sy0">,</span>
+    PLZ<span class="sy0">,</span>
+    Ort<span class="sy0">,</span>
+    Firma<span class="sy0">,</span>
+    KartenNr<span class="sy0">,</span>
+    Ablaufdatum
+<span class="kw1">FROM</span> 
+    Kunden
+<span class="kw1">LEFT</span> <span class="kw1">JOIN</span> <span class="br0">&#40;</span>
+    Kreditkarten  
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Vorteilsclub
+<span class="kw1">ON</span> 
+    Kreditkarten<span class="sy0">.</span>KndNr <span class="sy0">=</span> Vorteilsclub<span class="sy0">.</span>KndNr
+<span class="br0">&#41;</span>
+<span class="kw1">ON</span> 
+    Kunden<span class="sy0">.</span>KndNr <span class="sy0">=</span> Kreditkarten<span class="sy0">.</span>KndNr</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Kunden und Kreditkarteninformationen der Vorteilsclubmitglieder
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>Nachname
+</th>
+<th>Vorname
+</th>
+<th>Straße
+</th>
+<th>PLZ
+</th>
+<th>Ort
+</th>
+<th>Firma
+</th>
+<th>KartenNr
+</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>123456
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr>
+<tr>
+<td>123457
+</td>
+<td>Musterfrau
+</td>
+<td>Katrin
+</td>
+<td>Musterstraße 7
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td>
+<td>Diners Club
+</td>
+<td>12348
+</td>
+<td>03/2012
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td>
+<td>VISA
+</td>
+<td>12349
+</td>
+<td>07/2011
+</td></tr>
+<tr>
+<td>123459
+</td>
+<td>Schmidt
+</td>
+<td>Hans
+</td>
+<td>Hauptstraße 2
+</td>
+<td>98765
+</td>
+<td>Anderswo
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr>
+<tr>
+<td>123460
+</td>
+<td>Becker
+</td>
+<td>Heinz
+</td>
+<td>Mustergasse 4
+</td>
+<td>12543
+</td>
+<td>Musterdorf
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr></table>
+(6 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung</b>
+Im ersten Schritt erhalten Sie durch den INNER JOIN der Tabellen "Kreditkarten" und "Vorteilsclub" eine Tabelle derjenigen Kunden (genauer Kundennummern der Kunden), die sowohl Kreditkarteninhaber sind als auch dem Vorteilsclub angehören. Die Aufgabe, die Adressdaten aller Kunden, die Kreditkarteninformationen nur des gewünschten Kundenkreises auszugeben, wird vom äußeren LEFT JOIN der Tabelle "Kunden" mit dem Ergebnis der inneren Verknüpfung erledigt.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Variation der Reihenfolge und Joinspalte">Bearbeiten</a>]</span> <span class="mw-headline" id="Variation_der_Reihenfolge_und_Joinspalte"> Variation der Reihenfolge und Joinspalte </span></h3>
+<p>Sobald ein LEFT oder RIGHT JOIN im Spiel ist, ist die Reihenfolge der Tabellen, die Auswahl der Joinspalten, ja sogar der Join-Operationen von Relevanz. Zur Illustration dieser Tatsache werden nun Variationen der gleichen Join-Operationen vorgestellt, die alle eines gemeinsam haben: sie liefern nicht das gewünschte Ergebnis.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 3
+</div>
+<div class="note-box-text note-box-example-comment">Eine einfache Vertauschung der beiden "Partner" des äußeren LEFT JOIN führt dazu, dass viele gewünschte Datensätze verloren gehen:</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    Kunden<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    Nachname<span class="sy0">,</span>
+    Vorname<span class="sy0">,</span>
+    Strasse<span class="sy0">,</span>
+    PLZ<span class="sy0">,</span>
+    Ort<span class="sy0">,</span>
+    Firma<span class="sy0">,</span>
+    KartenNr<span class="sy0">,</span>
+    Ablaufdatum
+<span class="kw1">FROM</span> <span class="br0">&#40;</span>
+    Kreditkarten  
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Vorteilsclub
+<span class="kw1">ON</span> 
+    Kreditkarten<span class="sy0">.</span>KndNr <span class="sy0">=</span> Vorteilsclub<span class="sy0">.</span>KndNr
+<span class="br0">&#41;</span>
+<span class="kw1">LEFT</span> <span class="kw1">JOIN</span> 
+    Kunden
+<span class="kw1">ON</span> 
+    Kunden<span class="sy0">.</span>KndNr <span class="sy0">=</span> Kreditkarten<span class="sy0">.</span>KndNr</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Abfrageergebnis
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>Nachname
+</th>
+<th>Vorname
+</th>
+<th>Straße
+</th>
+<th>PLZ
+</th>
+<th>Ort
+</th>
+<th>Firma
+</th>
+<th>KartenNr
+</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td>
+<td>Diners Club
+</td>
+<td>12348
+</td>
+<td>03/2012
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td>
+<td>VISA
+</td>
+<td>12349
+</td>
+<td>07/2011
+</td></tr></table>
+(2 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung:</b>
+Das Verhalten des LEFT JOIN ist hier im Mehrfachjoin ganz analog zum Verhalten beim einfachen LEFT JOIN, wie in Rouven Thimms Artikel beschrieben. Beim LEFT JOIN spielt die Reihenfolge der beteiligten Tabellen eine Rolle. Dies gilt auch dann, wenn eine der beteiligten Tabellen das Ergebnis einer weiteren JOIN-Operation ist.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 4
+</div>
+<div class="note-box-text note-box-example-comment">Im nächsten Beispiel wird die Reihenfolge der Operationen verändert: zuerst ein LEFT JOIN von "Kunden" und "Kreditkarten", anschließend ein INNER JOIN mit dem Vorteilsclub.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    Kunden<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    Nachname<span class="sy0">,</span>
+    Vorname<span class="sy0">,</span>
+    Strasse<span class="sy0">,</span>
+    PLZ<span class="sy0">,</span>
+    Ort<span class="sy0">,</span>
+    Firma<span class="sy0">,</span>
+    KartenNr<span class="sy0">,</span>
+    Ablaufdatum
+<span class="kw1">FROM</span> <span class="br0">&#40;</span>
+    Kunden
+<span class="kw1">LEFT</span> <span class="kw1">JOIN</span> 
+    Kreditkarten  
+<span class="kw1">ON</span> 
+    Kunden<span class="sy0">.</span>KndNr <span class="sy0">=</span> Kreditkarten<span class="sy0">.</span>KndNr<span class="br0">&#41;</span>
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Vorteilsclub
+<span class="kw1">ON</span> 
+    Kreditkarten<span class="sy0">.</span>KndNr <span class="sy0">=</span> Vorteilsclub<span class="sy0">.</span>KndNr</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Abfrageergebnis
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>Nachname
+</th>
+<th>Vorname
+</th>
+<th>Straße
+</th>
+<th>PLZ
+</th>
+<th>Ort
+</th>
+<th>Firma
+</th>
+<th>KartenNr
+</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td>
+<td>Diners Club
+</td>
+<td>12348
+</td>
+<td>03/2012
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td>
+<td>VISA
+</td>
+<td>12349
+</td>
+<td>07/2011
+</td></tr></table>
+(2 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung:</b>
+Das Ergebnis ist das gleiche wie im vorhergenden Beispiel, was an den vorhandenen Daten liegt. Im allgemeinen Fall können aus beiden Abfragen unterschiedliche Ergebnistabellen resultieren. Zuerst werden jedem Kunden Kreditkarteninformationen zugeordnet, so welche vorhanden sind. Der INNER JOIN filtert die Kombinationen aus, die auch Mitglied im Vorteilsclub sind.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 5
+</div>
+<div class="note-box-text note-box-example-comment">Im nächsten Beispiel ändern wir nur ein Detail gegenüber dem vorhergehenden: Statt die Kundennummer der Tabelle "Kreditkarten" für den INNER JOIN zu verwenden, wird die Spalte der Tabelle "Kunden" verwendet:</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    Kunden<span class="sy0">.</span>KndNr<span class="sy0">,</span>
+    Nachname<span class="sy0">,</span>
+    Vorname<span class="sy0">,</span>
+    Strasse<span class="sy0">,</span>
+    PLZ<span class="sy0">,</span>
+    Ort<span class="sy0">,</span>
+    Firma<span class="sy0">,</span>
+    KartenNr<span class="sy0">,</span>
+    Ablaufdatum
+<span class="kw1">FROM</span> <span class="br0">&#40;</span>
+    Kunden
+<span class="kw1">LEFT</span> <span class="kw1">JOIN</span> 
+    Kreditkarten  
+<span class="kw1">ON</span> 
+    Kunden<span class="sy0">.</span>KndNr <span class="sy0">=</span> Kreditkarten<span class="sy0">.</span>KndNr
+<span class="br0">&#41;</span>
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Vorteilsclub
+<span class="kw1">ON</span> 
+    Kunden<span class="sy0">.</span>KndNr <span class="sy0">=</span> Vorteilsclub<span class="sy0">.</span>KndNr</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Kunden und Kreditkarteninformationen der Vorteilsclubmitglieder
+</caption>
+<tr style="text-align:left;">
+<th>KndNr
+</th>
+<th>Nachname
+</th>
+<th>Vorname
+</th>
+<th>Straße
+</th>
+<th>PLZ
+</th>
+<th>Ort
+</th>
+<th>Firma
+</th>
+<th>KartenNr
+</th>
+<th>Ablaufdatum
+</th></tr>
+<tr>
+<td>123456
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td>
+<td>Diners Club
+</td>
+<td>12348
+</td>
+<td>03/2012
+</td></tr>
+<tr>
+<td>123458
+</td>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>Beispielweg 3
+</td>
+<td>23987
+</td>
+<td>Irgendwo
+</td>
+<td>VISA
+</td>
+<td>12349
+</td>
+<td>07/2011
+</td></tr>
+<tr>
+<td>123460
+</td>
+<td>Becker
+</td>
+<td>Heinz
+</td>
+<td>Mustergasse 4
+</td>
+<td>12543
+</td>
+<td>Musterdorf
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr></table>
+(4 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung:</b>
+Bei der Verwendung eines LEFT/RIGHT JOIN und Weiternutzung des Zwischenergebnisses dieser Operation in einem weiteren JOIN  mit gemeinsamer JOIN-Spalte ist es von Belang, welche der beiden Spalten man für den weiteren JOIN nutzt. Sinnvollerweise nutzt man in solchen Fällen die Spalte, die keine NULL-Werte enthalten.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Zusammenfassung">Bearbeiten</a>]</span> <span class="mw-headline" id="Zusammenfassung"> Zusammenfassung </span></h3>
+<p>Mehrfachjoins sind nützliche Techniken in Datenbankanwendungen. Dieser Abschnitt zeigte die grundlegende Vorgehensweise zum Verständnis des Mehrfachjoins auf. Zerlegen Sie das Problem in einzelne JOIN-Operationen. Da das Ergebnis einer JOIN-Operation wiederum eine Tabelle ist, verwenden Sie ein solches Ergebnis wie eine Tabelle in einer weiteren JOIN-Operation.
+</p><p>Sobald LEFT oder RIGHT JOINs in einem Mehrfachjoin auftreten, ist die Reihenfolge von Relevanz. Dies wurde an ausgewählten Beispielen demonstriert. Bereits bei nur drei beteiligten Tabellen mit gemeinsamer JOIN-Spalte und nur den Operationen INNER JOIN und LEFT JOIN gibt es insgesamt 45 verschiedene Möglichkeiten einen Mehrfachjoin zu formulieren mit 16 verschiedenen Ergebnissen. Diese im einzelnen auch nur aufzuführen, würde den Rahmen dieses Artikels sprengen, die ständige Wiederholung fast gleicher SQL-Anweisungen wäre ebenso anstrengend wie langweilig. 
+</p><p>Die Analyse der Aufgabenstellung, d.h. welche Datensätze sollen zurückgegeben werden, führt jedoch meist schnell zum richtigen Ergebnis, wie die ersten beiden Beispiele in diesem Abschnitt aufzeigen. In vielen Fällen sind beim Mehrfachjoin die Tabellen nicht über eine einzige gemeinsame Spalte verknüpft, sondern über unterschiedliche Spalten. Der nächste Abschnitt beschäftigt sich mit dieser Aufgabenstellung.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Mehrere Tabellen mit JOIN verknüpfen - unterschiedliche Joinspalten">Bearbeiten</a>]</span> <span class="mw-headline" id="Mehrere_Tabellen_mit_JOIN_verkn.C3.BCpfen_-_unterschiedliche_Joinspalten"> Mehrere Tabellen mit JOIN verknüpfen - unterschiedliche Joinspalten </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Unterschiedliche Join-Spalten nutzen">Bearbeiten</a>]</span> <span class="mw-headline" id="Unterschiedliche_Join-Spalten_nutzen"> Unterschiedliche Join-Spalten nutzen </span></h3>
+<p>Ihr Chef will eine Übersicht über die im Monat Oktober bestellten Artikel haben, mit den Detailinformationen zu den Kunden, die diese Bestellungen getätigt haben. Die benötigten Daten verteilen sich auf die Tabellen 'Kunden', 'Bestellungen_Oktober' und 'Positionen'. Diese drei Tabellen sind über unterschiedliche Spalten miteinander verknüpft: 'Kunden' und 'Bestellungen_Oktober' über die Spalte 'KndNr', 'Bestellungen_Oktober' und Positionen über die Spalte 'BestellungsNr'. Somit gibt es nur zwei mögliche Reihenfolgen, die Sie in Betracht ziehen können:
+</p>
+<ul><li> Erst die Tabellen 'Kunden' und 'Bestellungen_Oktober' miteinander verknüpfen, anschließend das Resultat mit 'Positionen',
+</li><li> erst 'Positionen' mit 'Bestellungen_Oktober' verknüpfen, dann das Resultat mit 'Kunden'.
+</li></ul>
+<p>Sie sehen, es macht die Aufgabe einfacher, wenn die Joinspalten unterschiedlich sind.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Lösung der Aufgabe
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    Artikel<span class="sy0">,</span>
+    Anzahl<span class="sy0">,</span>
+    Preis<span class="sy0">,</span>
+    Datum<span class="sy0">,</span>
+    Nachname<span class="sy0">,</span>
+    Vorname<span class="sy0">,</span>
+    Strasse<span class="sy0">,</span>
+    PLZ<span class="sy0">,</span>
+    Ort
+<span class="kw1">FROM</span> 
+    Positionen 
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> <span class="br0">&#40;</span>
+    Bestellungen_Oktober
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Kunden
+<span class="kw1">ON</span> 
+    Bestellungen_Oktober<span class="sy0">.</span>KndNr <span class="sy0">=</span> Kunden<span class="sy0">.</span>KndNr
+<span class="br0">&#41;</span>
+<span class="kw1">ON</span>  
+    Positionen<span class="sy0">.</span>BestellungsNr <span class="sy0">=</span> Bestellungen_Oktober<span class="sy0">.</span>BestellungsNr</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Bestellungen im Oktober mit Kundendetails
+</caption>
+<tr style="text-align:left;">
+<th>Artikel
+</th>
+<th>Anzahl
+</th>
+<th>Preis
+</th>
+<th>Datum
+</th>
+<th>Nachname
+</th>
+<th>Vorname
+</th>
+<th>Strasse
+</th>
+<th>PLZ
+</th>
+<th>Ort
+</th></tr>
+<tr>
+<td>CD-Player
+</td>
+<td>2
+</td>
+<td>49.95
+</td>
+<td>2009-10-15
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr>
+<tr>
+<td>DVD-Player
+</td>
+<td>3
+</td>
+<td>59.95
+</td>
+<td>2009-10-15
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr>
+<tr>
+<td>CD xyz
+</td>
+<td>10
+</td>
+<td>15.95
+</td>
+<td>2009-10-15
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr>
+<tr>
+<td>DVD abc
+</td>
+<td>5
+</td>
+<td>9.95
+</td>
+<td>2009-10-15
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr>
+<tr>
+<td>CD-Player
+</td>
+<td>1
+</td>
+<td>51.20
+</td>
+<td>2009-10-16
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr>
+<tr>
+<td>CD xyz extra
+</td>
+<td>20
+</td>
+<td>16.25
+</td>
+<td>2009-10-16
+</td>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>Musterweg 1
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr>
+<tr>
+<td>DVD-Player
+</td>
+<td>1
+</td>
+<td>64.95
+</td>
+<td>2009-10-16
+</td>
+<td>Musterfrau
+</td>
+<td>Katrin
+</td>
+<td>Musterstraße 7
+</td>
+<td>12345
+</td>
+<td>Musterstadt
+</td></tr></table>
+(7 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung:</b>
+Da Sie die Bestellpositionen aller im Oktober bestellten Artikel benötigen, käme für die Verknüpfung zwischen 'Bestellungen_Oktober' und 'Positionen' neben dem hier verwendeten INNER JOIN auch ein LEFT JOIN in Frage. Bestellungen ohne Bestellpositionen sind jedoch uninteressant (würden Sie eine Bestellung, bei der nichts bestellt wird, bearbeiten?), deswegen verlieren Sie durch den INNER JOIN keine Informationen. Ebenso uninteressant sind Bestellungen ohne Besteller, deswegen wird auch für diese Verknüpfung der INNER JOIN verwendet. Bei einer Abfrage, die nur INNER JOINs verwendet, spielt die Reihenfolge der JOIN-Operationen für das Endergebnis keine Rolle. In dieser Hinsicht können Sie somit keinen Fehler machen.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Ein Beispiel mit LEFT JOIN">Bearbeiten</a>]</span> <span class="mw-headline" id="Ein_Beispiel_mit_LEFT_JOIN"> Ein Beispiel mit LEFT JOIN </span></h3>
+<p>Nun möchte Ihr Chef eine Übersicht über alle Kunden mit den Artikeln, die diese bestellt haben. Auch Kunden ohne Bestellungen sollen mit Vor- und Nachname aufgeführt werden; diese Spalten sollen vorne stehen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Erweiterte Aufgabe mit LEFT JOIN
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    Nachname<span class="sy0">,</span>
+    Vorname<span class="sy0">,</span>
+    Artikel<span class="sy0">,</span>
+    Anzahl<span class="sy0">,</span>
+    Preis<span class="sy0">,</span>
+    Datum
+<span class="kw1">FROM</span> 
+    Kunden 
+<span class="kw1">LEFT</span> <span class="kw1">JOIN</span> <span class="br0">&#40;</span>
+    Bestellungen_Oktober
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Positionen
+<span class="kw1">ON</span> 
+    Positionen<span class="sy0">.</span>BestellungsNr <span class="sy0">=</span> Bestellungen_Oktober<span class="sy0">.</span>BestellungsNr
+<span class="br0">&#41;</span>
+<span class="kw1">ON</span> 
+    Kunden<span class="sy0">.</span>KndNr <span class="sy0">=</span> Bestellungen_Oktober<span class="sy0">.</span>KndNr</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Alle Kunden, ggf. mit bestellten Artikeln
+</caption>
+<tr style="text-align:left;">
+<th>Nachname
+</th>
+<th>Vorname
+</th>
+<th>Artikel
+</th>
+<th>Anzahl
+</th>
+<th>Preis
+</th>
+<th>Datum
+</th></tr>
+<tr>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>CD-Player
+</td>
+<td>2
+</td>
+<td>49.95
+</td>
+<td>2009-10-15
+</td></tr>
+<tr>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>DVD-Player
+</td>
+<td>3
+</td>
+<td>59.95
+</td>
+<td>2009-10-15
+</td></tr>
+<tr>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>CD xyz
+</td>
+<td>10
+</td>
+<td>15.95
+</td>
+<td>2009-10-15
+</td></tr>
+<tr>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>DVD abc
+</td>
+<td>5
+</td>
+<td>9.95
+</td>
+<td>2009-10-15
+</td></tr>
+<tr>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>CD-Player
+</td>
+<td>1
+</td>
+<td>51.20
+</td>
+<td>2009-10-16
+</td></tr>
+<tr>
+<td>Mustermann
+</td>
+<td>Max
+</td>
+<td>CD xyz extra
+</td>
+<td>20
+</td>
+<td>16.25
+</td>
+<td>2009-10-16
+</td></tr>
+<tr>
+<td>Musterfrau
+</td>
+<td>Katrin
+</td>
+<td>DVD-Player
+</td>
+<td>1
+</td>
+<td>64.95
+</td>
+<td>2009-10-16
+</td></tr>
+<tr>
+<td>Müller
+</td>
+<td>Lieschen
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr>
+<tr>
+<td>Schmidt
+</td>
+<td>Hans
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr>
+<tr>
+<td>Becker
+</td>
+<td>Heinz
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td>
+<td>NULL
+</td></tr></table>
+(10 row(s) affected)</div>
+<div class="note-box-text note-box-example-wiki"><b>Erläuterung:</b>
+Wenn Sie aus einer Tabelle alle Datensätze benötigen, so ist diese Tabelle ein guter Kandidat für die äußere Verknüpfung, d.h. den JOIN, der als letzter abgearbeitet wird. Da Sie alle Datensätze benötigen, auch wenn es keine Entsprechungen in anderen Tabellen gibt, bietet sich die Verwendung des LEFT JOIN an. Die weitere Argumentation ist die gleiche wie beim vorhergehenden Beispiel, da sich diese Aufgabe nur in diesem Punkt von diesem unterscheidet.</div>
+</div>
+<p><b>Zusammenfassung</b>
+</p><p>Diese Variante des Mehrfachjoins ist sehr häufig. Die meisten aktuellen relationalen DBMS können n:m-Beziehungen zwischen zwei Tabellen nur mit Hilfe einer Verknüpfungstabelle, also nicht direkt darstellen. In unserem Fall: Ein Kunde kann mehrere Artikel bestellen, der gleiche Artikel kann von mehreren Kunden bestellt werden. Das Auflösen solcher Verknüpfungstabellen erfolgt typischerweise über zwei Joins, die unterschiedliche Spalten verwenden. Sie haben gesehen, dass solche Fälle meist einfacher zu handhaben sind als Mehrfachjoins, die nur eine einzige gemeinsame Spalte nutzen.
+</p><p>Noch komplexere Verknüpfungen von mehr als drei Tabellen lassen sich prinzipiell auf die gleiche Methode lösen, indem Sie das Gesamtproblem schrittweise in einzelne JOIN-Operationen zerlegen. Bedenken Sie aber auch, dass sich nicht jede Aufgabenstellung mit einer einzigen Anweisung lösen lassen muss.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: Thetajoin">Bearbeiten</a>]</span> <span class="mw-headline" id="Thetajoin"> Thetajoin </span></h2>
+<p>Bisher haben wir in allen Beispielen in der JOIN-Bedingung nur den Gleichheitsoperator "=" verwendet. Der Thetajoin ist eine Verallgemeinerung dieses Falles, als Bedingung können auch andere Operatoren, z.B. die Vergleichsoperatoren verwendet werden. Der Equijoin (Bedingung: Gleichheit) ist ein Spezialfall des Thetajoins.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 1: Eine Einfachrunde
+</div>
+<div class="note-box-text note-box-example-comment">Sie haben eine Tabelle mit Teams und möchten diese in einer Einfachrunde gegeneinander antreten lassen (Das Heimrecht sei irrelevant). Ein Thetajoin liefert Ihnen alle Begegnungen:</div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Tabelle Teams
+</caption>
+<tr style="text-align:left;">
+<th>T_ID
+</th>
+<th>Team
+</th></tr>
+<tr>
+<td>1
+</td>
+<td>Hamburg
+</td></tr>
+<tr>
+<td>2
+</td>
+<td>München
+</td></tr>
+<tr>
+<td>3
+</td>
+<td>Berlin
+</td></tr>
+<tr>
+<td>4
+</td>
+<td>Köln
+</td></tr></table></div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    h<span class="sy0">.</span>Team <span class="kw1">AS</span> Heim<span class="sy0">,</span>
+    g<span class="sy0">.</span>Team <span class="kw1">AS</span> Gast
+<span class="kw1">FROM</span> 
+    Teams h
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Teams g
+<span class="kw1">ON</span> 
+    h<span class="sy0">.</span>T_ID <span class="sy0">&gt;</span> g<span class="sy0">.</span>T_ID</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Abfrage der Begegnungen
+</caption>
+<tr style="text-align:left;">
+<th>Heim
+</th>
+<th>Gast
+</th></tr>
+<tr>
+<td>München
+</td>
+<td>Hamburg
+</td></tr>
+<tr>
+<td>Berlin
+</td>
+<td>Hamburg
+</td></tr>
+<tr>
+<td>Köln
+</td>
+<td>Hamburg
+</td></tr>
+<tr>
+<td>Berlin
+</td>
+<td>München
+</td></tr>
+<tr>
+<td>Köln
+</td>
+<td>München
+</td></tr>
+<tr>
+<td>Köln
+</td>
+<td>Berlin
+</td></tr></table>
+(6 row(s) affected)</div>
+<div class="note-box-text note-box-example-comment">Genauso wie Sie Aliasnamen für Tabellen anlegen können, wie im Abschnitt Selfjoin  vorgestellt, können Sie mit AS unterschiedliche Spaltenüberschriften erzeugen. Dies ist insbesondere dann nützlich, wenn zweimal auf gleichnamige Spalten zugegriffen wird. Der Selfjoin ermöglicht die Auswahl beider am Spiel beteiligten Mannschaften aus der Tabelle "Teams"; der Vergleichsoperator &gt; sorgt dafür, dass es nicht zu Begegnungen einer Mannschaft mit sich selbst kommt und jede Mannschaft nur einmal auf einen bestimmten Gegner trifft.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: 2: Doppelrunde
+</div>
+<div class="note-box-text note-box-example-comment">Für eine Doppelrunde mit Hin- und Rückspiel nehmen Sie einfach den Ungleichheitsoperator &lt;&gt;:</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SELECT</span>
+    h<span class="sy0">.</span>Team <span class="kw1">AS</span> Heim<span class="sy0">,</span>
+    g<span class="sy0">.</span>Team <span class="kw1">AS</span> Gast
+<span class="kw1">FROM</span> 
+    Teams h
+<span class="kw1">INNER</span> <span class="kw1">JOIN</span> 
+    Teams g
+<span class="kw1">ON</span> 
+    h<span class="sy0">.</span>T_ID <span class="sy0">&lt;&gt;</span> g<span class="sy0">.</span>T_ID</pre></div></div></div>
+<div class="note-box-text note-box-example-wiki">
+<table border="1">
+<caption> Doppelrunde
+</caption>
+<tr style="text-align:left;">
+<th>Heim
+</th>
+<th>Gast
+</th></tr>
+<tr>
+<td>München
+</td>
+<td>Hamburg
+</td></tr>
+<tr>
+<td>Berlin
+</td>
+<td>Hamburg
+</td></tr>
+<tr>
+<td>Köln
+</td>
+<td>Hamburg
+</td></tr>
+<tr>
+<td>Hamburg
+</td>
+<td>München
+</td></tr>
+<tr>
+<td>Berlin
+</td>
+<td>München
+</td></tr>
+<tr>
+<td>Köln
+</td>
+<td>München
+</td></tr>
+<tr>
+<td>Hamburg
+</td>
+<td>Berlin
+</td></tr>
+<tr>
+<td>München
+</td>
+<td>Berlin
+</td></tr>
+<tr>
+<td>Köln
+</td>
+<td>Berlin
+</td></tr>
+<tr>
+<td>Hamburg
+</td>
+<td>Köln
+</td></tr>
+<tr>
+<td>München
+</td>
+<td>Köln
+</td></tr>
+<tr>
+<td>Berlin
+</td>
+<td>Köln
+</td></tr></table>
+(12 row(s) affected)</div>
+</div>
+<p><b>Abschließende Bemerkung:</b>
+</p><p>Thetajoins sind selten. Wenn sie auftreten, dann häufig wie hier in den Beispielen in Kombination mit dem Selfjoin.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 1288/1000000
+Post‐expand include size: 57828/2097152 bytes
+Template argument size: 53502/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:507-0!*!0!!de-formal!*!* and timestamp 20150301050720 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;oldid=23687">http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;oldid=23687</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:DBMS_und_SQL" title="Kategorie:DBMS und SQL">DBMS und SQL</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Datenbanken%2FFortgeschrittene+Jointechniken" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Datenbanken/Fortgeschrittene_Jointechniken"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="http://wiki.selfhtml.org/wiki/Diskussion:Datenbanken/Fortgeschrittene_Jointechniken"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Datenbanken/Fortgeschrittene_Jointechniken" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Datenbanken/Fortgeschrittene_Jointechniken" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Datenbanken/Fortgeschrittene_Jointechniken" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/Fortgeschrittene_Jointechniken&amp;oldid=23687" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Datenbanken-2FFortgeschrittene_Jointechniken" title="Spezial:Durchsuchen/Datenbanken-2FFortgeschrittene Jointechniken">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 31. Oktober 2014 um 10:14 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 48.491-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.086 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Datenbanken/Fortgeschrittene_Jointechniken by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:24 GMT -->
+</html>

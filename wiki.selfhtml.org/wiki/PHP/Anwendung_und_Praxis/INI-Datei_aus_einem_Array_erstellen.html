@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>PHP/Anwendung und Praxis/INI-Datei aus einem Array erstellen – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen","wgTitle":"PHP/Anwendung und Praxis/INI-Datei aus einem Array erstellen","wgCurRevisionId":24340,"wgArticleId":3812,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-php {line-height: normal;}
+.source-php li, .source-php pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for php
+ * CSS class: source-php, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.php.source-php .de1, .php.source-php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.php.source-php  {font-family:monospace;}
+.php.source-php .imp {font-weight: bold; color: red;}
+.php.source-php li, .php.source-php .li1 {font-weight: normal; vertical-align:top;}
+.php.source-php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php.source-php .li2 {font-weight: bold; vertical-align:top;}
+.php.source-php .kw1 {color: #b1b100;}
+.php.source-php .kw2 {color: #000000; font-weight: bold;}
+.php.source-php .kw3 {color: #990000;}
+.php.source-php .kw4 {color: #009900; font-weight: bold;}
+.php.source-php .co1 {color: #666666; font-style: italic;}
+.php.source-php .co2 {color: #666666; font-style: italic;}
+.php.source-php .co3 {color: #0000cc; font-style: italic;}
+.php.source-php .co4 {color: #009933; font-style: italic;}
+.php.source-php .coMULTI {color: #666666; font-style: italic;}
+.php.source-php .es0 {color: #000099; font-weight: bold;}
+.php.source-php .es1 {color: #000099; font-weight: bold;}
+.php.source-php .es2 {color: #660099; font-weight: bold;}
+.php.source-php .es3 {color: #660099; font-weight: bold;}
+.php.source-php .es4 {color: #006699; font-weight: bold;}
+.php.source-php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php.source-php .es6 {color: #009933; font-weight: bold;}
+.php.source-php .es_h {color: #000099; font-weight: bold;}
+.php.source-php .br0 {color: #009900;}
+.php.source-php .sy0 {color: #339933;}
+.php.source-php .sy1 {color: #000000; font-weight: bold;}
+.php.source-php .st0 {color: #0000ff;}
+.php.source-php .st_h {color: #0000ff;}
+.php.source-php .nu0 {color: #cc66cc;}
+.php.source-php .nu8 {color: #208080;}
+.php.source-php .nu12 {color: #208080;}
+.php.source-php .nu19 {color:#800080;}
+.php.source-php .me1 {color: #004000;}
+.php.source-php .me2 {color: #004000;}
+.php.source-php .re0 {color: #000088;}
+.php.source-php .ln-xtra, .php.source-php li.ln-xtra, .php.source-php div.ln-xtra {background-color: #ffc;}
+.php.source-php span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="PHP/Anwendung und Praxis/INI-Datei aus einem Array erstellen" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-PHP_Anwendung_und_Praxis_INI-Datei_aus_einem_Array_erstellen skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">PHP/Anwendung und Praxis/INI-Datei aus einem Array erstellen</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/PHP" title="PHP">PHP</a> | <a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis" title="PHP/Anwendung und Praxis">Anwendung und Praxis</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p><b>Hinweis: Die Funktionen funktionieren erst mit PHP-Version &gt;= 5.3.0!</b>
+</p><p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Sinn_der_Funktion"><span class="tocnumber">1</span> <span class="toctext">Sinn der Funktion</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Format_der_Ini-Datei"><span class="tocnumber">2</span> <span class="toctext">Format der Ini-Datei</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Lesefunktion"><span class="tocnumber">3</span> <span class="toctext">Lesefunktion</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Schreibfunktion"><span class="tocnumber">4</span> <span class="toctext">Schreibfunktion</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Funktionen_testen"><span class="tocnumber">5</span> <span class="toctext">Funktionen testen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Erl.C3.A4uterungen"><span class="tocnumber">6</span> <span class="toctext">Erläuterungen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Rekursion"><span class="tocnumber">6.1</span> <span class="toctext">Rekursion</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Anonyme_Funktion"><span class="tocnumber">6.2</span> <span class="toctext">Anonyme Funktion</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Lesen.2C_.C3.84ndern.2C_Schreiben"><span class="tocnumber">6.3</span> <span class="toctext">Lesen, Ändern, Schreiben</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#To_do.27s"><span class="tocnumber">7</span> <span class="toctext">To do's</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Sinn der Funktion">Bearbeiten</a>]</span> <span class="mw-headline" id="Sinn_der_Funktion"> Sinn der Funktion </span></h2>
+<p>PHP bietet den Dateityp "Ini-Datei" an und stellt dafür zwei Lesefunktionen zur Verfügung, mit deren Hilfe man die Datei einlesen kann. Leider gibt es noch keine fertige Funktion für das Schreiben (Erstellen) einer Ini-Datei. Daher stelle ich hier eine solche Funktion vor.
+</p><p>Die Funktion erstellt eine INI-Datei aus einem Array. Das Array darf mehrere Ebenen haben. PHP kann allerdings nur mit maximal 3 Ebenen in den Lesefunktionen umgehen. Daher ist das Funktionsargument "depth" auf den Wert 3 voreingestellt.
+Die Funktion <code>ini_write()</code> kann im Prinzip Arrays mit beliebiger Tiefe verarbeiten. Die maximale Tiefe ist nur von der maximal zulässigen Rekursionstiefe und dem verfügbaren Hauptspeicher und der Größe des Stacks abhängig. PHP empfiehlt, eine Rekursionstiefe von 100 nicht zu überschreiten.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Format der Ini-Datei">Bearbeiten</a>]</span> <span class="mw-headline" id="Format_der_Ini-Datei"> Format der Ini-Datei </span></h2>
+<ul><li> Die INI-Datei kann Sektionen enthalten. Diese werden durch <code>[section_name]</code> eingeleitet.
+</li><li> Kommentare beginnen mit einem Semikolon.
+</li><li> Pro Zeile steht ein Name-Value-Pärchen
+</li><li> Werte werden üblicherweise in einfachen oder doppelten Anführungszeichen eingeschlossen.
+</li><li> Das als Textbegrenzer gewählte Anführungszeichen geht beim Einlesen verloren, wenn es im Text ebenfalls enthalten ist.
+</li><li> Arrays dürfen maximal eine Tiefe von zwei Ebenen haben, hinzu kommt dann ggf. noch die Ebene der Sektion, sodass sich eine maximale Gesamttiefe von drei Ebenen ergibt. 
+</li><li> In den Bezeichnern des Keystrings sind die Zeichen <code>?{}|&amp;~![]()^"=</code> nicht getattet. 
+</li><li> Array-Elementbezeichner werden - anders als im Programm - ohne Quotierungen notiert
+</li></ul>
+<p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel-Datei
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="sy0">;</span><span class="co2">### ini_file.dat ### 2014-05-20 13:12:11 ### utf-8 ### ÄÖÜäöü
+</span>
+param1 <span class="sy0">=</span> <span class="st_h">'eins'</span>
+param2 <span class="sy0">=</span> <span class="st_h">'zwei'</span>
+param3 <span class="sy0">=</span> <span class="st_h">'drei'</span>
+&#160;
+<span class="br0">&#91;</span>meta<span class="br0">&#93;</span>
+calls <span class="sy0">=</span> <span class="st_h">'9'</span>
+&#160;
+<span class="br0">&#91;</span>active<span class="br0">&#93;</span>
+<span class="nu0">0</span> <span class="sy0">=</span> <span class="st_h">'braun'</span>
+<span class="nu0">1</span> <span class="sy0">=</span> <span class="st_h">'rot'</span>
+<span class="nu0">2</span> <span class="sy0">=</span> <span class="st_h">'grau'</span>
+<span class="nu0">3</span> <span class="sy0">=</span> <span class="st_h">'blau'</span>
+<span class="nu0">4</span> <span class="sy0">=</span> <span class="st_h">'violett'</span>
+<span class="nu0">5</span> <span class="sy0">=</span> <span class="st_h">'grün'</span>
+<span class="nu0">6</span> <span class="sy0">=</span> <span class="st_h">'orange'</span>
+<span class="nu0">7</span> <span class="sy0">=</span> <span class="st_h">'gold'</span>
+&#160;
+<span class="br0">&#91;</span>reserve<span class="br0">&#93;</span>
+<span class="nu0">0</span> <span class="sy0">=</span> <span class="st_h">'weiß'</span>
+<span class="nu0">1</span> <span class="sy0">=</span> <span class="st_h">'silber'</span>
+<span class="nu0">2</span> <span class="sy0">=</span> <span class="st_h">'schwarz'</span>
+<span class="nu0">3</span> <span class="sy0">=</span> <span class="st_h">'gelb'</span>
+&#160;
+<span class="br0">&#91;</span>tom<span class="br0">&#93;</span>
+alter <span class="sy0">=</span> <span class="st_h">'56'</span>
+wohnung<span class="br0">&#91;</span>plz<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'34444'</span>
+wohnung<span class="br0">&#91;</span>ort<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Sankt Andreasberg'</span>
+wohnung<span class="br0">&#91;</span>strasse<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'Mühlenstraße'</span>
+wohnung<span class="br0">&#91;</span>hausnummer<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'19'</span>
+tel<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'05582/999378'</span>
+tel<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st_h">'05582/999xxx'</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Lesefunktion">Bearbeiten</a>]</span> <span class="mw-headline" id="Lesefunktion"> Lesefunktion </span></h2>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: ini_read()
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1">&#160;
+<span class="co2">#===================================================================================================
+</span><span class="kw2">function</span> ini_read<span class="br0">&#40;</span><span class="re0">$fp</span><span class="br0">&#41;</span>	
+<span class="br0">&#123;</span>	
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">is_resource</span><span class="br0">&#40;</span><span class="re0">$fp</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="br0">&#40;</span><span class="re0">$_fstat</span> <span class="sy0">=</span> <span class="sy0">@</span><span class="kw3">fstat</span><span class="br0">&#40;</span><span class="re0">$fp</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span> 	
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="br0">&#40;</span><span class="re0">$cont</span> <span class="sy0">=</span> <span class="kw3">fread</span><span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="re0">$_fstat</span><span class="br0">&#91;</span><span class="st_h">'size'</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="br0">&#40;</span><span class="re0">$_data</span> <span class="sy0">=</span> <span class="sy0">@</span>parse_ini_string<span class="br0">&#40;</span><span class="re0">$cont</span><span class="sy0">,</span> <span class="kw4">true</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">return</span> <span class="re0">$_data</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="co2">#===================================================================================================</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Schreibfunktion">Bearbeiten</a>]</span> <span class="mw-headline" id="Schreibfunktion"> Schreibfunktion </span></h2>
+<pre>
+$fp         Ressourcenkennung der geöffneten Datei
+$_data      zu verarbeitende Daten (Array)
+$filename   Dateiname, ausschließlich zur textlichen Verwendung innerhalb der Datei (Kopfzeile)
+$maxdepth   Maximale Verarbeitungstiefe für das Datenarray. 
+</pre>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: ini_write()
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="co2">#===================================================================================================
+</span><span class="kw2">function</span> ini_write<span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="re0">$_data</span><span class="sy0">,</span> <span class="re0">$filename</span><span class="sy0">,</span> <span class="re0">$maxdepth</span><span class="sy0">=</span><span class="nu0">3</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+&#160;
+    <span class="co2">#--private Funktion -------------------------------------------------------------------------
+</span>    <span class="re0">$writeparams</span> <span class="sy0">=</span> <span class="kw2">function</span> <span class="br0">&#40;</span><span class="re0">$_values</span><span class="sy0">,</span> <span class="re0">$arraykey</span><span class="sy0">,</span> <span class="re0">$depth</span><span class="br0">&#41;</span> <span class="kw2">use</span> <span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="re0">$maxdepth</span><span class="sy0">,</span> <span class="sy0">&amp;</span><span class="re0">$writeparams</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+	<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$_values</span> <span class="kw1">as</span> <span class="re0">$key</span> <span class="sy0">=&gt;</span> <span class="re0">$param</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$depth</span> <span class="sy0">&gt;=</span> <span class="nu0">1</span><span class="br0">&#41;</span>
+	    <span class="br0">&#123;</span>
+		<span class="re0">$arraykeytxt</span> <span class="sy0">=</span> <span class="re0">$arraykey</span> <span class="sy0">.</span> <span class="st0">&quot;[<span class="es4">$key</span>]&quot;</span><span class="sy0">;</span>
+	    <span class="br0">&#125;</span>	
+	    <span class="kw1">else</span>
+	    <span class="br0">&#123;</span>   
+		<span class="re0">$arraykeytxt</span> <span class="sy0">=</span> <span class="re0">$key</span><span class="sy0">;</span>
+	    <span class="br0">&#125;</span>
+&#160;
+	    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">is_array</span><span class="br0">&#40;</span><span class="re0">$param</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+	    <span class="br0">&#123;</span>
+		<span class="re0">$depth</span><span class="sy0">++;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$depth</span> <span class="sy0">&lt;</span> <span class="re0">$maxdepth</span><span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+	            <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="re0">$writeparams</span> <span class="br0">&#40;</span><span class="re0">$param</span><span class="sy0">,</span> <span class="re0">$arraykeytxt</span><span class="sy0">,</span> <span class="re0">$depth</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>	
+	    <span class="br0">&#125;</span>
+	    <span class="kw1">else</span>
+	    <span class="br0">&#123;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="sy0">@</span><span class="kw3">fwrite</span> <span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es4">$arraykeytxt</span> = '<span class="es4">$param</span>'&quot;</span> <span class="sy0">.</span> PHP_EOL<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>	
+	    <span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+&#160;
+	<span class="kw1">return</span> <span class="kw4">true</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span><span class="sy0">;</span>
+    <span class="co2">#------------------------------------------------------------------------------------------
+</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="nu0">0</span> <span class="sy0">!==</span> <span class="sy0">@</span><span class="kw3">fseek</span><span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> SEEK_SET<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="sy0">@</span><span class="kw3">fwrite</span> <span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="st_h">';### '</span> <span class="sy0">.</span> <span class="kw3">basename</span><span class="br0">&#40;</span><span class="re0">$filename</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">' ### '</span> <span class="sy0">.</span> 
+        <span class="kw3">date</span><span class="br0">&#40;</span><span class="st_h">'Y-m-d H:i:s'</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">' ### utf-8 ### ÄÖÜäöü'</span> <span class="sy0">.</span> PHP_EOL <span class="sy0">.</span> PHP_EOL<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+&#160;
+    <span class="re0">$depth</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    <span class="re0">$arraykey</span> <span class="sy0">=</span> <span class="st_h">''</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$_data</span> <span class="kw1">as</span> <span class="re0">$section</span> <span class="sy0">=&gt;</span> <span class="re0">$_value</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">is_array</span><span class="br0">&#40;</span><span class="re0">$_value</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="sy0">@</span><span class="kw3">fwrite</span> <span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> PHP_EOL <span class="sy0">.</span> <span class="st0">&quot;[<span class="es4">$section</span>]&quot;</span> <span class="sy0">.</span> PHP_EOL<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+&#160;
+            <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$depth</span> <span class="sy0">&lt;</span> <span class="re0">$maxdepth</span><span class="br0">&#41;</span> 
+            <span class="br0">&#123;</span>
+	    	<span class="re0">$writeparams</span> <span class="br0">&#40;</span><span class="re0">$_value</span><span class="sy0">,</span> <span class="re0">$section</span><span class="sy0">,</span> <span class="re0">$depth</span><span class="br0">&#41;</span><span class="sy0">;</span> 
+	    <span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>	
+	<span class="kw1">else</span>
+        <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="sy0">@</span><span class="kw3">fwrite</span> <span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es4">$section</span> = '<span class="es4">$_value</span>'&quot;</span> <span class="sy0">.</span> PHP_EOL<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>	
+        <span class="br0">&#125;</span>		
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="br0">&#40;</span><span class="re0">$len</span> <span class="sy0">=</span> <span class="sy0">@</span><span class="kw3">ftell</span><span class="br0">&#40;</span><span class="re0">$fp</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="sy0">@</span><span class="kw3">ftruncate</span><span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="re0">$len</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw4">false</span><span class="sy0">;</span>
+&#160;
+    <span class="kw1">return</span> <span class="kw4">true</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="co2">#===================================================================================================</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Funktionen testen">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionen_testen"> Funktionen testen </span></h2>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: php unit test
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="php source-php"><pre class="de1"><span class="kw2">&lt;?php</span>   <span class="co2">### parse_ini_file.php ### Ini-File auslesen und zurückschreiben ### utf-8 ### ÄÖÜäöü
+</span>
+    <span class="co2">### only for testing
+</span>    <span class="kw3">header</span><span class="br0">&#40;</span><span class="st_h">'Content-Type: text/html; Charset=utf-8'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$source</span> <span class="sy0">=</span> <span class="st_h">'ini_file.dat'</span><span class="sy0">;</span>	<span class="co2">## Dateiname für die Datendatei
+</span>
+&#160;
+    <span class="kw1">echo</span> <span class="st0">&quot;&lt;pre&gt;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+    <span class="co2">### Datei öffnen ###
+</span>    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="br0">&#40;</span><span class="re0">$fp</span> <span class="sy0">=</span> <span class="sy0">@</span><span class="kw3">fopen</span><span class="br0">&#40;</span><span class="re0">$source</span><span class="sy0">,</span> <span class="st_h">'rb+'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="kw3">print_r</span><span class="br0">&#40;</span><span class="kw3">error_get_last</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+        <span class="kw3">exit</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="co2">### Datei zum Lesen und Schreiben sperren ###
+</span>    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">flock</span><span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> LOCK_EX<span class="br0">&#41;</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="kw3">print_r</span><span class="br0">&#40;</span><span class="kw3">error_get_last</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+        <span class="kw3">exit</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&#160;
+&#160;
+    <span class="co2">### Datei einlesen
+</span>    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="br0">&#40;</span><span class="re0">$_data</span> <span class="sy0">=</span> ini_read<span class="br0">&#40;</span><span class="re0">$fp</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> 
+    <span class="br0">&#123;</span>
+        <span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="kw3">print_r</span><span class="br0">&#40;</span><span class="kw3">error_get_last</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">else</span> 
+    <span class="br0">&#123;</span>
+	<span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="kw3">print_r</span><span class="br0">&#40;</span><span class="re0">$_data</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+        <span class="co2">### hier können die Daten in $_data geändert werden
+</span>        <span class="re0">$_data</span><span class="br0">&#91;</span><span class="st_h">'meta'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="st_h">'calls'</span><span class="br0">&#93;</span> <span class="sy0">++</span> <span class="sy0">;</span>
+&#160;
+        <span class="co2">### Datei zurückschreiben. 
+</span>        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> ini_write<span class="br0">&#40;</span><span class="re0">$fp</span><span class="sy0">,</span> <span class="re0">$_data</span><span class="sy0">,</span> <span class="re0">$target</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">&#41;</span><span class="br0">&#41;</span> 
+            <span class="kw1">echo</span> <span class="kw3">htmlspecialchars</span><span class="br0">&#40;</span><span class="kw3">print_r</span><span class="br0">&#40;</span><span class="kw3">error_get_last</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>	
+&#160;
+    <span class="kw1">echo</span> <span class="st0">&quot;&lt;/pre&gt;<span class="es1">\r</span><span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+    <span class="kw3">fclose</span><span class="br0">&#40;</span><span class="re0">$fp</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="sy1">?&gt;</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Erläuterungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Erl.C3.A4uterungen"> Erläuterungen </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Rekursion">Bearbeiten</a>]</span> <span class="mw-headline" id="Rekursion"> Rekursion </span></h3>
+<p>Das Ini-Format ist etwas "eigenwillig" aufgebaut, dafür aber sehr leicht von Menschen mit einem simplen Texteditor lesbar und auch schreibbar. Durch die ggf. vorangestellten [Sektionsbezeichner] müssen wir beim Erstellen aus dem Array zunächst prüfen, ob das Array-Element selber wieder eine Liste (ein Array) beinhaltet. Nur dann wird ein [Sektionsbezeichner] geschrieben.
+</p><p>Außerdem müssen wir prüfen, in welcher Ebene der Ausgabe wir uns befinden, da der Name immer mit einem ungeklammerten Bezeichner beginnt. Erst ab der nächsten Ebene wird, wie bei PHP-Arrays üblich, der Elementbezeichner in eckigen Klammern angegeben. 
+</p><p>Um Parameternamen mit bliebiger Tiefe verarbeiten zu können, werden Subarrays des Datenarrays <code>$_data</code> rekursiv verarbeitet. Hierzu benutzen wir die anonyme Funktion, die der Variable <code>$writeparams</code> zugewiesen wurde.  Wenn die vorgegebene Schachtelungstiefe <code>$maxdepth</code> überschritten wird, wird die Ausgabe der Wertzuweisung unterdrückt. Die für die Lesefunktionen <code>parse_ini_file()</code> und <code>parse_ini_string()</code> zulässige Schachtelungstiefe beträgt Drei.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Anonyme Funktion">Bearbeiten</a>]</span> <span class="mw-headline" id="Anonyme_Funktion"> Anonyme Funktion </span></h3>
+<p>Da die für die Rekursion benötigte Funktion nur speziell für die Hauptfunktion geeignet ist und für andere Zwecke nicht brauchbar wäre, habe ich eine anonyme Funktion dafür gewählt. Außerdem wollte ich auch einmal damit herumspielen&#160;:-)
+</p><p>Die Funktion wird mit dem Funktionskopf
+</p>
+<pre>
+$writeparams = function ($_values, $arraykey, $depth) use ($fp, $maxdepth, &amp;$writeparams)
+</pre>
+<p>deklariert. Die Funktionsargumente stehen für
+</p>
+<ul><li> <b>$_values</b>       der zu verarbeitende Teil des Datenarrays
+</li><li> <b>$arraykey</b>      der im Verarbeiungszweig bisher aufgelaufene Bezeichnertext
+</li><li> <b>$depth</b>         die aktuelle Verarbeitungstiefe
+</li></ul>
+<p>Durch <code>use ($fp, $maxdepth, &amp;$writeparams)</code> werden der Funktion die benötigten Kontext-Werte bekannt gemacht.
+</p>
+<ul><li> <b>$fp</b>            der Dateizeiger der geöffneten Datendatei
+</li><li> <b>$maxdepth</b>      die vorgegebene maximale Schachtelungstiefe
+</li><li> <b>&amp;$writeparams</b>  die <u>Referenz</u> auf die Funktion selbst. Ohne diese Angabe würde die Funktion sich in der nächsten Rekursionsebene selber nicht mehr kennen. Bitte auf das <b>&amp;</b> für die <u>Referenz</u> achten.
+</li></ul>
+<p>Im Funktionskörper <code>{ ... };</code> wird die Funktion, wie üblich definiert. Einziger Unterschied zu "normalen" Funktionen ist, dass der Funktionsblock hier mit einem Semikolon abgeschlossen werden muss, da die gesamte Funktionsdeklaration und -definition quasi <u>in einer einzigen Programmanweisung</u> stattfinden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Lesen, Ändern, Schreiben">Bearbeiten</a>]</span> <span class="mw-headline" id="Lesen.2C_.C3.84ndern.2C_Schreiben"> Lesen, Ändern, Schreiben </span></h3>
+<p>Bei beiden Funktionen (ini_read() und ini_write()) arbeiten wir ganz bewusst mit einer Datei-Ressourcekennung ($fp) und nicht mit einem Dateinamen. Dies hat den Sinn, dass die Ressourcekennung von einer Funktion an die andere weitergegeben werden kann und damit der gesamte Prozess auch atomar gekapselt werden kann:
+</p>
+<ul><li> Datei öffnen
+</li><li> Datei <u>exclusiv</u> sperren
+</li><li> Datei lesen
+</li><li> Daten ändern
+</li><li> Dateizeiger passend positionieren (hier: zurücksetzen auf Anfang)
+</li><li> Daten schreiben
+</li><li> Datei passend einkürzen (eigentlich nur notwendig, wenn sie kürzer geworden ist)
+</li><li> Datei schließen
+<ul><li> beinhaltet Datenpuffer flushen, 
+</li><li> Datei schließen 
+</li><li> Datei entsperren
+</li></ul>
+</li></ul>
+<p>Das Einkürzen wird bewusst erst am Ende des Vorganges durchgeführt, da dadurch bei einem Fehler (Stromausfall) ggf. die Datei noch rettbar bleibt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: To do's">Bearbeiten</a>]</span> <span class="mw-headline" id="To_do.27s"> To do's </span></h2>
+<ul><li> Verbotene Zeichen im Name-Parameter verhindern
+</li><li> passende Quotierung auswählen (je nachdem, welche Quotes im Wert-Parameter schon vorhanden sind)
+</li><li> Sicherstellen, dass ein CRLF oder LF im Wert-Parameter keinen Fehler verursacht
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 213/1000000
+Post‐expand include size: 1924/2097152 bytes
+Template argument size: 1240/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3812-0!*!*!!de-formal!*!* and timestamp 20150301111401 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;oldid=24340">http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;oldid=24340</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=PHP%2FAnwendung+und+Praxis%2FINI-Datei+aus+einem+Array+erstellen" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen&amp;oldid=24340" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/PHP-2FAnwendung_und_Praxis-2FINI-2DDatei_aus_einem_Array_erstellen" title="Spezial:Durchsuchen/PHP-2FAnwendung und Praxis-2FINI-2DDatei aus einem Array erstellen">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 18. November 2014 um 11:56 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.360-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.081 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/PHP/Anwendung_und_Praxis/INI-Datei_aus_einem_Array_erstellen by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

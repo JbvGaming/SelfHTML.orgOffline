@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Javascript/Auto-Footnoter by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Javascript/Auto-Footnoter – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Javascript/Auto-Footnoter","wgTitle":"Javascript/Auto-Footnoter","wgCurRevisionId":22120,"wgArticleId":1435,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Javascript/Auto-Footnoter","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-html4strict {line-height: normal;}
+.source-html4strict li, .source-html4strict pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for html4strict
+ * CSS class: source-html4strict, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.html4strict.source-html4strict .de1, .html4strict.source-html4strict .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.html4strict.source-html4strict  {font-family:monospace;}
+.html4strict.source-html4strict .imp {font-weight: bold; color: red;}
+.html4strict.source-html4strict li, .html4strict.source-html4strict .li1 {font-weight: normal; vertical-align:top;}
+.html4strict.source-html4strict .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.html4strict.source-html4strict .li2 {font-weight: bold; vertical-align:top;}
+.html4strict.source-html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict.source-html4strict .kw3 {color: #000066;}
+.html4strict.source-html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict.source-html4strict .br0 {color: #66cc66;}
+.html4strict.source-html4strict .sy0 {color: #66cc66;}
+.html4strict.source-html4strict .st0 {color: #ff0000;}
+.html4strict.source-html4strict .nu0 {color: #cc66cc;}
+.html4strict.source-html4strict .sc-2 {color: #404040;}
+.html4strict.source-html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict.source-html4strict .sc0 {color: #00bbdd;}
+.html4strict.source-html4strict .sc1 {color: #ddbb00;}
+.html4strict.source-html4strict .sc2 {color: #009900;}
+.html4strict.source-html4strict .ln-xtra, .html4strict.source-html4strict li.ln-xtra, .html4strict.source-html4strict div.ln-xtra {background-color: #ffc;}
+.html4strict.source-html4strict span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-css {line-height: normal;}
+.source-css li, .source-css pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for css
+ * CSS class: source-css, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.css.source-css .de1, .css.source-css .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.css.source-css  {font-family:monospace;}
+.css.source-css .imp {font-weight: bold; color: red;}
+.css.source-css li, .css.source-css .li1 {font-weight: normal; vertical-align:top;}
+.css.source-css .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.css.source-css .li2 {font-weight: bold; vertical-align:top;}
+.css.source-css .kw1 {color: #000000; font-weight: bold;}
+.css.source-css .kw2 {color: #993333;}
+.css.source-css .co1 {color: #a1a100;}
+.css.source-css .co2 {color: #ff0000; font-style: italic;}
+.css.source-css .coMULTI {color: #808080; font-style: italic;}
+.css.source-css .es0 {color: #000099; font-weight: bold;}
+.css.source-css .es2 {color: #000099; font-weight: bold;}
+.css.source-css .br0 {color: #00AA00;}
+.css.source-css .sy0 {color: #00AA00;}
+.css.source-css .st0 {color: #ff0000;}
+.css.source-css .nu0 {color: #cc66cc;}
+.css.source-css .re0 {color: #cc00cc;}
+.css.source-css .re1 {color: #6666ff;}
+.css.source-css .re2 {color: #3333ff;}
+.css.source-css .re3 {color: #933;}
+.css.source-css .ln-xtra, .css.source-css li.ln-xtra, .css.source-css div.ln-xtra {background-color: #ffc;}
+.css.source-css span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Javascript/Auto-Footnoter" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Javascript/Auto-Footnoter&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Javascript_Auto-Footnoter skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Javascript/Auto-Footnoter</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>Fußnoten gehören nicht zu den typischen Elementen des reinen Webdesigns. Das hat mehrere Gründe.
+</p>
+<ol><li> Webseiten sind nicht unterteilt (paginiert).
+</li><li> Mit den heutigen Möglichkeiten des dynamischen HTMLs kann kurzfristig Anzuzeigendes am Ort eingeblendet werden.
+</li><li> In typischen Webinhalten ist das Dokumentieren von Quellen weit weniger verbreitet als in der wissenschaftlichen Literatur.
+</li><li> Software zur Herstellung von Webseiten ist nicht auf Fußnoten vorbereitet.
+</li></ol>
+<p>Dennoch kann es geschehen, dass Fußnoten gefragt sind. Immer häufiger werden gedruckte Werke auch online publiziert. Dabei müssen die Fußnoten aus den Druckwerken übernommen werden.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Fu.C3.9Fnoten_mittels_JavaScript_generieren"><span class="tocnumber">1</span> <span class="toctext">Fußnoten mittels JavaScript generieren</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#JavaScript"><span class="tocnumber">2</span> <span class="toctext">JavaScript</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Kompatibilit.C3.A4t"><span class="tocnumber">2.1</span> <span class="toctext">Kompatibilität</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#HTML"><span class="tocnumber">3</span> <span class="toctext">HTML</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#CSS"><span class="tocnumber">4</span> <span class="toctext">CSS</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#CSS-Kompatibilit.C3.A4t"><span class="tocnumber">4.1</span> <span class="toctext">CSS-Kompatibilität</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Live-Beispiel"><span class="tocnumber">5</span> <span class="toctext">Live-Beispiel</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Fußnoten mittels JavaScript generieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Fu.C3.9Fnoten_mittels_JavaScript_generieren">Fußnoten mittels JavaScript generieren</span></h2>
+<p>Das händische Generieren von Fußnoten im Web ist aufwändig und fehleranfällig. 
+Hier möchte ich eine Lösung zeigen, welche mittels JavaScript Elemente mit einer definierten Klasse als Fußnoteninhalte erkennt, diese zusammenträgt und an einem definierten Ort ausgibt. Dabei soll eine bidirektionale Verlinkung erstellt werden.
+Weil im Web das Einblenden von Inhalten in diesem Fall günstig ist, werden zusätzlich auf Wunsch Hovernotes generiert, wie das auch bei besseren Textverarbeitungen der Fall ist.
+</p><p>Diese Methode erlaubt Ihnen, im Original Notizen im Kontext zu schreiben. Sie haben dabei die Schwierigkeit und Freiheit, semantisch sinnvolles Markup zu erzeugen. 
+Falls Javascript deaktiviert ist, verbleiben jedoch die Notizen in diesem Kontext.
+Sie können mit Hilfe einer Klasse auch bei deaktiviertem JavaScript solche Inhalte etwas absetzen, zum Beispiel durch eine etwas kleinere oder ausgegrauten Schrift oder etwa einem farbigen Hintergrund.
+</p><p>Das beiliegende CSS macht ihnen einen Vorschlag, wie Fußnoten bei deaktiviertem JavaScript angezeigt werden können.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: JavaScript">Bearbeiten</a>]</span> <span class="mw-headline" id="JavaScript">JavaScript</span></h2>
+<p>Der folgende JavaScript-Code besteht im Wesentlichen aus zwei Funktionen: Eine Funktion generiert die Fußnoten, die andere erzeugt Hovernoten.
+</p><p><b>autoFootNoter.js</b> wird am Ende des HTML-<code>body</code> eingebunden.
+Sie können die zwei Funktionen aber auch ganz einfach in Ihre Library integrieren.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-comment">Die erste Funktion muss am Ende einmal aufgerufen werden.
+<p>Sie beginnt mit einem Konfigurationsabschnitt mit hoffentlich selbstsprechenden Variablen.
+</p>
+Die Variable <code>footnotifyElementsByCssSelector</code> enthält einen CSS-Selector, wie Sie Ihn auch in einem CSS-File notieren würden. Er wird der Methode <a href="Objekte/DOM/document/querySelectorAll.html" title="JavaScript/Objekte/DOM/document/querySelectorAll">querySelectorAll()</a> übergeben.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> autoFootNoter<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+   <span class="coMULTI">/* START KONFIGURTATION */</span>
+   <span class="kw1">var</span> footnotifyElementsByCssSelector <span class="sy0">=</span> <span class="st0">&quot;body .fn&quot;</span><span class="sy0">,</span>
+      appendFootnoteCollectionToElementById <span class="sy0">=</span> <span class="st0">&quot;examplecontent&quot;</span><span class="sy0">,</span>
+      footnoteCollectionId <span class="sy0">=</span> <span class="st0">&quot;footnotes&quot;</span><span class="sy0">,</span>
+      footnoteCollectionHeadingAsHTML <span class="sy0">=</span> <span class="st0">&quot;&lt;h3&gt;Fussnoten&lt;/h3&gt;&quot;</span><span class="sy0">,</span>
+      footnoteAnchorIdPrefix <span class="sy0">=</span> <span class="st0">&quot;fna&quot;</span><span class="sy0">,</span>
+      footnoteIdPrefix <span class="sy0">=</span> <span class="st0">&quot;fn&quot;</span><span class="sy0">,</span>
+      showHovernotes <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+   <span class="coMULTI">/* END KONFIGURTATION */</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Der folgende Scriptabschnitt sammelt alle Elemente der definierten Klasse. 
+Zum Einsatz kommt die neue DOM-Methode querySelectorAll(), welche eine statische Node-Liste zurückgibt. Diese Methode wird bereits von MSIE 8 unterstützt und ist damit kompatibler als etwa <a href="Objekte/DOM/document/getElementsByClassName.html" title="JavaScript/Objekte/DOM/document/getElementsByClassName">getElementsByClassName</a>.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">   <span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span>document.<span class="me1">querySelector</span><span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="kw1">return</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+   <span class="kw1">var</span> f <span class="sy0">=</span> document.<span class="me1">querySelectorAll</span><span class="br0">&#40;</span>footnotifyElementsByCssSelector<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Es wird ein Element für die Fußnoten-Sammlung kreiert. An dieses wird auch die Fußnoten-Überschrift angehängt.
+<p>Zusätzlich wird ein Element erzeugt, das später als Hovernote dienen soll. Es wird dem body-Element angehängt.
+</p>
+Es ist wichtig, dass wir hier ein Element via DOM-Methoden erzeugen und anhängen, und nicht etwa via innerHTML. Letzteres war für den Entwickler Anlass aufwändiger Fehlersuche.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">   <span class="kw1">if</span><span class="br0">&#40;</span>f<span class="br0">&#41;</span><span class="br0">&#123;</span>
+      <span class="kw1">var</span> col <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span><span class="st0">&quot;div&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+         col.<span class="me1">id</span> <span class="sy0">=</span> footnoteCollectionId<span class="sy0">;</span>
+         col.<span class="me1">innerHTML</span> <span class="sy0">=</span> footnoteCollectionHeadingAsHTML<span class="sy0">;</span>
+      <span class="kw1">var</span> hnote <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span><span class="st0">&quot;div&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+         hnote.<span class="me1">id</span><span class="sy0">=</span><span class="st0">&quot;hovernote&quot;</span><span class="sy0">;</span>
+         document.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span><span class="st0">&quot;body&quot;</span><span class="br0">&#41;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>hnote<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Es wird nun jedes Element der statischen Node-Liste behandelt.
+<p>Bei einer statischen Nodeliste iterieren wir im Falle der Entfernung von Nodes anders, als wir das bei live-Nodelisten tun.
+</p><p>Der Fußnoten-Sammlung wird der Inhalt mit einem Backlink angehängt. Dabei wird das ursprüngliche Element in der Original-Fußnote zugunsten eines neutralen <code>div</code>-Elements getilgt.
+</p>
+Anschließend wird der Anker-Link mit id generiert. Er soll anschließend die originale Fußnote der Collection ersetzen.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">      <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">,</span> j<span class="sy0">=</span><span class="nu0">1</span><span class="sy0">;</span> i<span class="sy0">&lt;</span> f.<span class="me1">length</span><span class="sy0">;</span> i<span class="sy0">++,</span> j<span class="sy0">++</span> <span class="br0">&#41;</span><span class="br0">&#123;</span>
+         col.<span class="me1">innerHTML</span> <span class="sy0">+=</span> <span class="st0">'&lt;div&gt;&lt;a href=&quot;#'</span> <span class="sy0">+</span> footnoteAnchorIdPrefix <span class="sy0">+</span> j
+            <span class="sy0">+</span> <span class="st0">'&quot; id=&quot;'</span> <span class="sy0">+</span> footnoteIdPrefix <span class="sy0">+</span> j <span class="sy0">+</span> <span class="st0">'&quot;&gt;'</span> <span class="sy0">+</span> j <span class="sy0">+</span> <span class="st0">'&lt;/a&gt; &lt;div&gt;'</span>
+            <span class="sy0">+</span> f<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">innerHTML</span><span class="sy0">+</span><span class="st0">'&lt;/div&gt;&lt;/div&gt;'</span><span class="sy0">;</span>
+         <span class="kw1">var</span> a <span class="sy0">=</span> document.<span class="me1">createElement</span><span class="br0">&#40;</span><span class="st0">&quot;a&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+            a.<span class="me1">id</span> <span class="sy0">=</span> footnoteAnchorIdPrefix<span class="sy0">+</span>j<span class="sy0">;</span>
+            a.<span class="me1">href</span> <span class="sy0">=</span> <span class="st0">'#'</span><span class="sy0">+</span>footnoteIdPrefix<span class="sy0">+</span>j<span class="sy0">;</span>
+            a.<span class="me1">innerHTML</span><span class="sy0">=</span>j<span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Falls Hovernoten erwünscht sind, werden dem erzeugten Anker drei Eventhandler angehängt. Zwei Handler sind nur für das Verbergen zuständig.
+Der onclick-Handler ist wegen einem Bug in Opera notwendig.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">         <span class="kw1">if</span><span class="br0">&#40;</span>showHovernotes<span class="br0">&#41;</span><span class="br0">&#123;</span>
+            a.<span class="me1">title</span> <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span> <span class="co1">// Opera title stört bei Hovernotes</span>
+            a.<span class="me1">onmouseover</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span>event<span class="br0">&#41;</span><span class="br0">&#123;</span> hoverNote<span class="br0">&#40;</span><span class="kw1">this</span><span class="sy0">,</span>event<span class="br0">&#41;</span><span class="sy0">;</span><span class="br0">&#125;</span><span class="sy0">;</span>
+            a.<span class="me1">onclick</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span> hoverNote<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+            a.<span class="me1">onmouseout</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span> hoverNote<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span><span class="sy0">;</span>
+         <span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Zuletzt wird die originale Fußnote durch den erzeugten Link ersetzt. Anders als bei einer Live-Nodeliste wird bei einer statischen Nodeliste durch replace.Child nicht der Knoten aus der Liste gelöscht, sondern es wird nur das DOM verändert. 
+Die gesamte Fußnotensammlung wird nun an das definierte Element angehängt.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">         f<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">parentNode</span>.<span class="me1">replaceChild</span><span class="br0">&#40;</span>a<span class="sy0">,</span> f<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+      document.<span class="me1">getElementById</span><span class="br0">&#40;</span>appendFootnoteCollectionToElementById<span class="br0">&#41;</span>.<span class="me1">appendChild</span><span class="br0">&#40;</span>col<span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Die zweite Funktion wird durch die den Fußnotenankern angehängten Handler aufgerufen.
+<p>Wie immer muss das event-Objekt browserübergreifend abgefragt werden.
+</p>
+Die Position des Hovernote-Elements nahe dem Eventereignis im Fußnoten-Ankerlink bedingt, dass die Hovernote via CSS fixiert positioniert ist.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> hoverNote<span class="br0">&#40;</span> el<span class="sy0">,</span> evt <span class="br0">&#41;</span><span class="br0">&#123;</span>
+   <span class="kw1">var</span> h <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'hovernote'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span>evt<span class="br0">&#41;</span> evt <span class="sy0">=</span> window.<span class="me1">event</span><span class="sy0">;</span>
+   <span class="kw1">if</span><span class="br0">&#40;</span>el<span class="br0">&#41;</span><span class="br0">&#123;</span>
+      <span class="kw1">var</span> i <span class="sy0">=</span> el.<span class="me1">hash</span>.<span class="me1">substr</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span>el.<span class="me1">hash</span>.<span class="me1">length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+      h.<span class="me1">innerHTML</span> <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span>.<span class="me1">parentNode</span>.<span class="me1">innerHTML</span><span class="sy0">;</span>
+      h.<span class="me1">style</span>.<span class="me1">display</span><span class="sy0">=</span><span class="st0">&quot;block&quot;</span><span class="sy0">;</span>
+      h.<span class="me1">style</span>.<span class="me1">left</span><span class="sy0">=</span><span class="br0">&#40;</span>evt.<span class="me1">clientX</span><span class="sy0">*</span><span class="nu0">0.7</span><span class="sy0">-</span><span class="nu0">10</span><span class="br0">&#41;</span><span class="sy0">+</span><span class="st0">'px'</span><span class="sy0">;</span>
+      h.<span class="me1">style</span>.<span class="me1">top</span><span class="sy0">=</span><span class="br0">&#40;</span>evt.<span class="me1">clientY</span><span class="sy0">+</span><span class="nu0">15</span><span class="br0">&#41;</span><span class="sy0">+</span><span class="st0">'px'</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+   <span class="kw1">else</span><span class="br0">&#123;</span>
+      h.<span class="me1">style</span>.<span class="me1">display</span><span class="sy0">=</span><span class="st0">&quot;none&quot;</span><span class="sy0">;</span>
+      h.<span class="me1">innerHTML</span> <span class="sy0">=</span><span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Zuletzt rufen wir die Funktion einmal auf.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">autoFootNoter<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Kompatibilität">Bearbeiten</a>]</span> <span class="mw-headline" id="Kompatibilit.C3.A4t">Kompatibilität</span></h3>
+<p>Die Methode querySelectorAll wird von Internet Explorer 8, Firefox 3, Opera 10 und Safari 4 unterstützt. Sie ist damit besser geeignet als getElementsByClassName.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: HTML">Bearbeiten</a>]</span> <span class="mw-headline" id="HTML">HTML</span></h2>
+<p>Beim HTML handelt es sich um ein übliches (X)HTML-Dokument.
+Es soll hier gezeigt werden, wie im HTML nun Fußnoten definiert werden.
+</p><p>Die zu verarbeitenden Fußnoten werden durch den der querySelectorAll-Methode übergebenen CSS-Selector gefunden. Sie sind also nicht auf eine bestimmte Klasse für Fußnoten beschränkt. Es ist jedoch gut, allen Fußnoten im Originaltext eine einheitliche Klasse zu geben.
+</p><p>Sie können  Whitespace vor und nach der Fußnote verwenden, um ihr Markup übersichtlich zu halten. Whitespace zwischen einem Stichwort und dem nachfolgenden erzeugten Anker wird durch CSS durch negative margins kompensiert.
+</p>
+<pre>
+&lt;p&gt;hier ist das Fußnoten-Stichwort
+  &lt;span class=&quot;fn&quot;&gt;Fussnoteninhalt&lt;/span&gt;
+gefolgt von weiterem Text.&lt;/p&gt;
+</pre>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-comment">Die Freiheit bezüglich dem Fußnotenelement gehorcht der Angabe des CSS-Selectors, den Sie im Javascript definieren. Am Besten verwenden Sie eine Klasse und behalten so Freiheit über das im Moment angemessene semantisch korrekte Fußnoten-Element.
+In den folgenden Beispielen wird die Klasse <code>class="fn"</code> verwendet.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dies ist eine Fußnoten-Demo zum autoFootNoter.js
+<span class="sc2">&lt;<span class="kw2">small</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fn&quot;</span>&gt;</span>
+ It's free as in <span class="sc2">&lt;<span class="kw2">em</span>&gt;</span>free beer<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span> and <span class="sc2">&lt;<span class="kw2">em</span>&gt;</span>free speech<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span>.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">small</span>&gt;</span>.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Sie haben vollkommene Freiheit, welche Elemente Sie verwenden.
+Im obigen Beispiel wurde ein <code>small</code>-Element verwendet.</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="html4strict source-html4strict"><pre class="de1"><span class="sc2">&lt;<span class="kw2">div</span>&gt;</span>Fussnoten können auch Tabellen enthalten: Dieses Mini Sudoku
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fn&quot;</span>&gt;</span>
+Dieses abgespeckte Mini-Sudoku zeigt das Prinzip.
+<span class="sc2">&lt;<span class="kw2">table</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;border:1px solid black; width:100px; text-align:center&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:red&quot;</span>&gt;</span>1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:red&quot;</span>&gt;</span>2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:blue&quot;</span>&gt;</span>3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:blue&quot;</span>&gt;</span>4<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:red&quot;</span>&gt;</span>3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:red&quot;</span>&gt;</span>4<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:blue&quot;</span>&gt;</span>2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:blue&quot;</span>&gt;</span>1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:green&quot;</span>&gt;</span>4<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:green&quot;</span>&gt;</span>3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:black&quot;</span>&gt;</span>1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:black&quot;</span>&gt;</span>2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:green&quot;</span>&gt;</span>2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:green&quot;</span>&gt;</span>1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:black&quot;</span>&gt;</span>4<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:black&quot;</span>&gt;</span>3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">table</span>&gt;</span>
+Vertikalen, Horizontalen und Binnenquadrate müssen jeweils 
+die Ziffern 1 bis 4 einmalig beinhalten<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span><span class="sc-1">&lt;!-- end .fn --&gt;</span> 
+ist korrekt<span class="sc2">&lt;<span class="kw2">br</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im obgen Beispiel wurde eine ganze Tabelle innerhalb der Fußnote notiert.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: CSS">Bearbeiten</a>]</span> <span class="mw-headline" id="CSS">CSS</span></h2>
+<p>Das CSS zeigt eine typische Fußnoten-Gestaltung.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="css source-css"><pre class="de1"><span class="coMULTI">/* Fussnotenspezifisch Anweisungen */</span>
+&#160;
+<span class="coMULTI">/* Original-Fussnoten, falls nicht mit JS ersetzt */</span>
+<span class="re1">.fn</span> <span class="br0">&#123;</span>
+   <span class="kw1">font-size</span><span class="sy0">:</span><span class="re3">12px</span><span class="sy0">;</span> 
+   <span class="kw1">display</span><span class="re2">:inline-</span>block<span class="sy0">;</span> 
+   <span class="kw1">vertical-align</span><span class="sy0">:</span><span class="kw1">top</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="coMULTI">/* die zu erzeugenden Fußnotenanker */</span>
+a<span class="br0">&#91;</span>id<span class="sy0">^=</span><span class="st0">&quot;fna&quot;</span><span class="br0">&#93;</span><span class="br0">&#123;</span>
+   <span class="kw1">vertical-align</span><span class="sy0">:</span><span class="kw1">top</span><span class="sy0">;</span>
+   <span class="kw1">font-size</span><span class="sy0">:</span><span class="re3">12px</span><span class="sy0">;</span> 
+   <span class="kw1">padding</span><span class="sy0">:</span><span class="nu0">0</span> <span class="re3">2px</span> <span class="nu0">0</span> <span class="nu0">0</span><span class="sy0">;</span>
+   <span class="kw1">margin-left</span><span class="sy0">:</span><span class="re3">-3px</span><span class="sy0">;</span>   <span class="coMULTI">/* kompensiere Whitespace vor der Fußnote */</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="coMULTI">/* Die Fußnoten in der Sammlung */</span>
+<span class="re0">#footnotes</span> <span class="br0">&#123;</span> 
+   <span class="kw1">margin-top</span><span class="sy0">:</span><span class="re3">1em</span><span class="sy0">;</span> 
+   <span class="kw1">font-size</span><span class="sy0">:</span><span class="re3">14px</span><span class="sy0">;</span> 
+<span class="br0">&#125;</span>
+<span class="re0">#footnotes</span> h3 <span class="br0">&#123;</span> 
+   <span class="kw1">margin</span><span class="sy0">:</span><span class="nu0">0</span><span class="sy0">;</span>
+   <span class="kw1">font-size</span><span class="sy0">:</span><span class="re3">16px</span><span class="sy0">;</span>
+   <span class="kw1">line-height</span><span class="sy0">:</span><span class="nu0">2</span><span class="sy0">;</span>
+   <span class="kw1">width</span><span class="sy0">:</span><span class="re3">20em</span><span class="sy0">;</span> 
+   <span class="kw1">border-top</span><span class="sy0">:</span><span class="re3">1px</span> <span class="kw2">solid</span> <span class="re0">#ccc</span><span class="sy0">;</span> 
+<span class="br0">&#125;</span>
+<span class="re0">#footnotes</span> <span class="sy0">&gt;</span> div<span class="br0">&#123;</span>
+   <span class="kw1">padding</span><span class="sy0">:</span><span class="nu0">0</span> <span class="nu0">0</span> <span class="re3">5px</span> <span class="re3">40px</span><span class="sy0">;</span>
+   <span class="kw1">text-indent</span><span class="sy0">:</span><span class="re3">-40px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re0">#footnotes</span> <span class="sy0">&gt;</span> div <span class="sy0">&gt;</span> <span class="sy0">*</span><span class="br0">&#123;</span>
+   <span class="kw1">text-indent</span><span class="sy0">:</span><span class="nu0">0</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re0">#footnotes</span> <span class="sy0">&gt;</span> div <span class="sy0">&gt;</span> a<span class="re2">:first-child</span><span class="br0">&#123;</span>
+   <span class="kw1">display</span><span class="re2">:inline-</span>block<span class="sy0">;</span>
+   <span class="kw1">width</span><span class="sy0">:</span><span class="re3">30px</span><span class="sy0">;</span>
+   <span class="kw1">font-size</span><span class="sy0">:</span><span class="re3">12px</span><span class="sy0">;</span> 
+   <span class="kw1">vertical-align</span><span class="sy0">:</span><span class="kw1">top</span><span class="sy0">;</span>
+   <span class="kw1">text-align</span><span class="sy0">:</span><span class="kw1">right</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re0">#footnotes</span> <span class="sy0">&gt;</span> div <span class="sy0">&gt;</span> div<span class="br0">&#123;</span>
+   <span class="kw1">width</span><span class="sy0">:</span><span class="kw2">auto</span><span class="sy0">;</span>
+   <span class="kw1">display</span><span class="re2">:inline-</span>block<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="coMULTI">/* Die hovernote */</span>
+<span class="re0">#hovernote</span><span class="br0">&#123;</span> 
+   <span class="kw1">position</span><span class="sy0">:</span><span class="kw2">fixed</span><span class="sy0">;</span> 
+   <span class="kw1">display</span><span class="sy0">:</span><span class="kw2">none</span><span class="sy0">;</span> 
+   <span class="kw1">padding</span><span class="sy0">:</span><span class="re3">5px</span><span class="sy0">;</span> 
+   <span class="kw1">font-size</span><span class="sy0">:</span><span class="re3">14px</span><span class="sy0">;</span> 
+   <span class="kw1">background</span><span class="sy0">:</span><span class="re0">#fff</span><span class="sy0">;</span>
+   -moz-box-shadow<span class="sy0">:</span> <span class="re3">2px</span> <span class="re3">4px</span> <span class="re3">10px</span> <span class="re0">#666</span><span class="sy0">;</span>
+   -webkit-box-shadow<span class="sy0">:</span> <span class="re3">2px</span> <span class="re3">4px</span> <span class="re3">10px</span> <span class="re0">#666</span><span class="sy0">;</span>
+   box-shadow<span class="sy0">:</span> <span class="re3">2px</span> <span class="re3">4px</span> <span class="re3">10px</span> <span class="re0">#666</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: CSS-Kompatibilität">Bearbeiten</a>]</span> <span class="mw-headline" id="CSS-Kompatibilit.C3.A4t">CSS-Kompatibilität</span></h3>
+<p>Wir haben für Internet Explorer 7 und älter damit zu rechnen, dass Fußnoten nicht konvertiert werden. In diesem Fall ist für diese Browser die originale Fußnote zu stylen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Live-Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Live-Beispiel">Live-Beispiel</span></h2>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+<a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Javascript_Autofootnotes.html">ansehen …</a></div>
+<div class="note-box-text note-box-example-comment">...(Link oben rechts)...</div>
+<div class="note-box-footer"><a class="beispiel_url" href="http://wiki.selfhtml.org/extensions/Selfhtml/example.php/Beispiel:Javascript_Autofootnotes.html">ansehen …</a></div></div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 417/1000000
+Post‐expand include size: 19020/2097152 bytes
+Template argument size: 17134/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1435-0!*!0!!de-formal!*!* and timestamp 20150301155521 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;oldid=22120">http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;oldid=22120</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Javascript%2FAuto-Footnoter" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Auto-Footnoter.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="../Diskussion_Javascript/Auto-Footnoter.html"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Auto-Footnoter.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/Javascript/Auto-Footnoter.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/Javascript/Auto-Footnoter.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Javascript/Auto-Footnoter&amp;oldid=22120" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/Javascript-2FAuto-2DFootnoter.html" title="Spezial:Durchsuchen/Javascript-2FAuto-2DFootnoter">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 7. Oktober 2014 um 03:57 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 3.328-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.072 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Javascript/Auto-Footnoter by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:04 GMT -->
+</html>

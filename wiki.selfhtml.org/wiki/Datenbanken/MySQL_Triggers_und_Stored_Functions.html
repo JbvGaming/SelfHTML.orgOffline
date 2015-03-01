@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Datenbanken/MySQL_Triggers_und_Stored_Functions by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Datenbanken/MySQL Triggers und Stored Functions – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Datenbanken/MySQL_Triggers_und_Stored_Functions","wgTitle":"Datenbanken/MySQL Triggers und Stored Functions","wgCurRevisionId":23691,"wgArticleId":3863,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Datenbanken/MySQL_Triggers_und_Stored_Functions","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-sql {line-height: normal;}
+.source-sql li, .source-sql pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for sql
+ * CSS class: source-sql, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.sql.source-sql .de1, .sql.source-sql .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.sql.source-sql  {font-family:monospace;}
+.sql.source-sql .imp {font-weight: bold; color: red;}
+.sql.source-sql li, .sql.source-sql .li1 {font-weight: normal; vertical-align:top;}
+.sql.source-sql .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.sql.source-sql .li2 {font-weight: bold; vertical-align:top;}
+.sql.source-sql .kw1 {color: #993333; font-weight: bold;}
+.sql.source-sql .co1 {color: #808080; font-style: italic;}
+.sql.source-sql .coMULTI {color: #808080; font-style: italic;}
+.sql.source-sql .es0 {color: #000099; font-weight: bold;}
+.sql.source-sql .br0 {color: #66cc66;}
+.sql.source-sql .sy0 {color: #66cc66;}
+.sql.source-sql .st0 {color: #ff0000;}
+.sql.source-sql .nu0 {color: #cc66cc;}
+.sql.source-sql .ln-xtra, .sql.source-sql li.ln-xtra, .sql.source-sql div.ln-xtra {background-color: #ffc;}
+.sql.source-sql span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Datenbanken/MySQL Triggers und Stored Functions" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Datenbanken_MySQL_Triggers_und_Stored_Functions skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Datenbanken/MySQL Triggers und Stored Functions</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Trigger"><span class="tocnumber">1</span> <span class="toctext">Trigger</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Was_sind_Trigger.3F"><span class="tocnumber">1.1</span> <span class="toctext">Was sind Trigger?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Testtabelle_anlegen"><span class="tocnumber">1.2</span> <span class="toctext">Testtabelle anlegen</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Vorgesehene_Aufgaben_f.C3.BCr_unsere_Triggers"><span class="tocnumber">1.3</span> <span class="toctext">Vorgesehene Aufgaben für unsere Triggers</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Einen_Trigger_einrichten"><span class="tocnumber">1.4</span> <span class="toctext">Einen Trigger einrichten</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#M.C3.B6gliche_Konstrukte_in_Triggers"><span class="tocnumber">1.5</span> <span class="toctext">Mögliche Konstrukte in Triggers</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Variablen_deklarieren_und_belegen"><span class="tocnumber">1.5.1</span> <span class="toctext">Variablen deklarieren und belegen</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Bedingungen"><span class="tocnumber">1.5.2</span> <span class="toctext">Bedingungen</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Schleifen"><span class="tocnumber">1.5.3</span> <span class="toctext">Schleifen</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Funktionsaufrufe"><span class="tocnumber">1.5.4</span> <span class="toctext">Funktionsaufrufe</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Exceptions_in_Triggers.2C_Functions_oder_Procedures_formulieren"><span class="tocnumber">1.6</span> <span class="toctext">Exceptions in Triggers, Functions oder Procedures formulieren</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Der_.22Academic-Lock.22-Trigger"><span class="tocnumber">1.7</span> <span class="toctext">Der "Academic-Lock"-Trigger</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Warum_update_count_.2B_1.3F"><span class="tocnumber">1.7.1</span> <span class="toctext">Warum update_count + 1?</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Formulierung_f.C3.BCr_den_Client"><span class="tocnumber">1.7.2</span> <span class="toctext">Formulierung für den Client</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Mehrere_.C3.9Cberpr.C3.BCfungen_in_Triggern"><span class="tocnumber">1.8</span> <span class="toctext">Mehrere Überprüfungen in Triggern</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#es_gibt_nur_den_einen_Trigger"><span class="tocnumber">1.8.1</span> <span class="toctext">es gibt nur den einen Trigger</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Stored_Functions"><span class="tocnumber">2</span> <span class="toctext">Stored Functions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Was_sind_stored_Functions.3F"><span class="tocnumber">2.1</span> <span class="toctext">Was sind stored Functions?</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#eine_einfache_Umwandlungsfunktion"><span class="tocnumber">2.2</span> <span class="toctext">eine einfache Umwandlungsfunktion</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Aufruf_von_stored_Functions_in_Triggers"><span class="tocnumber">2.3</span> <span class="toctext">Aufruf von stored Functions in Triggers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Stored_Procedures"><span class="tocnumber">3</span> <span class="toctext">Stored Procedures</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#was_sind_Stored_Procedures.3F"><span class="tocnumber">3.1</span> <span class="toctext">was sind Stored Procedures?</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#.C3.9Cbergabewerte.2C_R.C3.BCckgabewerte"><span class="tocnumber">3.2</span> <span class="toctext">Übergabewerte, Rückgabewerte</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Eine_.22Select-Kontrolle.22_aufbauen"><span class="tocnumber">3.3</span> <span class="toctext">Eine "Select-Kontrolle" aufbauen</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Vertikale_Zugriffsrechte"><span class="tocnumber">3.4</span> <span class="toctext">Vertikale Zugriffsrechte</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#Stored_Routines"><span class="tocnumber">4</span> <span class="toctext">Stored Routines</span></a>
+<ul>
+<li class="toclevel-2 tocsection-27"><a href="#die_Komponenten_von_Stored_Routines"><span class="tocnumber">4.1</span> <span class="toctext">die Komponenten von Stored Routines</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Stored_Routines_als_Trennschicht_zwischen_Datenbank_und_API"><span class="tocnumber">4.2</span> <span class="toctext">Stored Routines als Trennschicht zwischen Datenbank und API</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Tools"><span class="tocnumber">5</span> <span class="toctext">Tools</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#putty"><span class="tocnumber">5.1</span> <span class="toctext">putty</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#MySql-Client"><span class="tocnumber">5.2</span> <span class="toctext">MySql-Client</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#MySql-Workbench"><span class="tocnumber">5.3</span> <span class="toctext">MySql-Workbench</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Heidi-SQL"><span class="tocnumber">5.4</span> <span class="toctext">Heidi-SQL</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Trigger">Bearbeiten</a>]</span> <span class="mw-headline" id="Trigger"> Trigger </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Was sind Trigger?">Bearbeiten</a>]</span> <span class="mw-headline" id="Was_sind_Trigger.3F"> Was sind Trigger? </span></h3>
+<p>Trigger kann man übersetzen als "Auslöser". Den JavaScript-Programmierern sind diese auch bekannt, als "Events", wie z. B. "onLoad", "onChange" usw. Bei MySQL versteckt sich hinter dem Trigger gleich noch die komplette Handlungsanweisung. Sie ist fest mit dem Auslöser verbunden.
+</p><p>Pro Tabelle sind folgende Trigger möglich:
+</p>
+<ul><li> Before Insert
+</li><li> Before Update
+</li><li> Before Delete
+</li><li> After Insert
+</li><li> After Update
+</li><li> After Delete
+</li></ul>
+<p>Wird z.B. ein Trigger <code>BEFORE UPDATE ON `tablename`</code> definiert und nun ein <code>update `tablename`</code>" veranlasst, springt der Trigger an. Die hinterlegten Handlungsanweisungen werden (sofern sie keine Fehler enthalten) ausgeführt. Scheitert der Trigger, scheitert auch das Update.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Testtabelle anlegen">Bearbeiten</a>]</span> <span class="mw-headline" id="Testtabelle_anlegen"> Testtabelle anlegen </span></h3>
+<p>Wie man leicht erkennen kann, wird unsere Testtabelle geeignet sein, ein ganz einfaches kleines Forum damit aufzubauen.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Testtabelle anlegen
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="st0">`postings`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">BIGINT</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span>
+    <span class="st0">`posting`</span> VARBINARY<span class="br0">&#40;</span><span class="nu0">254</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> COMMENT <span class="st0">'Binary segmented key for sort order'</span><span class="sy0">,</span>
+    <span class="st0">`update_count`</span> <span class="kw1">BIGINT</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">DEFAULT</span> <span class="st0">'0'</span><span class="sy0">,</span>
+    <span class="st0">`subject`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">500</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+    <span class="st0">`bodytext`</span> MEDIUMTEXT <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+    <span class="st0">`notinmenue`</span> TINYINT<span class="br0">&#40;</span><span class="nu0">4</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">DEFAULT</span> <span class="st0">'0'</span> COMMENT <span class="st0">'Not listed, blocked, or similar'</span><span class="sy0">,</span>
+    <span class="st0">`start`</span> DATETIME <span class="kw1">NOT</span> <span class="kw1">NULL</span> COMMENT <span class="st0">'Anzeigen ab'</span><span class="sy0">,</span>
+    <span class="st0">`stop`</span> DATETIME <span class="kw1">NOT</span> <span class="kw1">NULL</span> COMMENT <span class="st0">'Anzeigen bis'</span><span class="sy0">,</span>
+    <span class="st0">`id_creator`</span> <span class="kw1">BIGINT</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> COMMENT <span class="st0">'Anleger'</span><span class="sy0">,</span>
+    <span class="st0">`id_owner`</span> <span class="kw1">BIGINT</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> COMMENT <span class="st0">'Eigentümer'</span><span class="sy0">,</span>
+    <span class="st0">`creator_ip`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">15</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+    <span class="st0">`create_date`</span> DATETIME <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+    <span class="st0">`update_date`</span> <span class="kw1">TIMESTAMP</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">DEFAULT</span> <span class="kw1">CURRENT_TIMESTAMP</span> <span class="kw1">ON</span> <span class="kw1">UPDATE</span> <span class="kw1">CURRENT_TIMESTAMP</span><span class="sy0">,</span>
+    <span class="st0">`id_update_user`</span> <span class="kw1">BIGINT</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">DEFAULT</span> <span class="st0">'0'</span> COMMENT <span class="st0">'Last updated by'</span><span class="sy0">,</span>
+    <span class="st0">`update_ip`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">15</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+     <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span><span class="sy0">,</span>
+     <span class="kw1">UNIQUE</span> <span class="kw1">INDEX</span> <span class="st0">`posting`</span> <span class="br0">&#40;</span><span class="st0">`posting`</span><span class="br0">&#41;</span>
+<span class="br0">&#41;</span>
+<span class="kw1">COLLATE</span><span class="sy0">=</span><span class="st0">'utf8_general_ci'</span>
+ENGINE<span class="sy0">=</span>MyISAM
+<span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">1</span>;</pre></div></div></div>
+</div>
+<p>Anhand der Testtabelle wollen wir ein paar Konzepte für Triggers, Functions, Procedures und Routines ausprobieren.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Vorgesehene Aufgaben für unsere Triggers">Bearbeiten</a>]</span> <span class="mw-headline" id="Vorgesehene_Aufgaben_f.C3.BCr_unsere_Triggers"> Vorgesehene Aufgaben für unsere Triggers </span></h3>
+<ul><li> Beim Insert automatisch das Create_Date eintragen
+</li><li> Beim Insert automatisch die Spalte `posting` berechnen. 
+</li><li> Beim Insert automatisch den Owner auf den Wert des Creators setzen, wenn Owner nicht angegeben wurde
+</li></ul>
+<ul><li> Beim Update darauf achten, dass zwischenzeitlich kein Update eines anderen Users stattgefunden hat
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Einen Trigger einrichten">Bearbeiten</a>]</span> <span class="mw-headline" id="Einen_Trigger_einrichten"> Einen Trigger einrichten </span></h3>
+<p><b>Gültig ab MySQL-Version &gt;= 5.5</b>
+</p><p>Um Trigger einzururichten oder zu löschen bnötigt der angemeldete User das <code>Trigger-Recht</code>
+[<a rel="nofollow" class="external text" href="http://dev.mysql.com/doc/refman/5.5/en/grant.html%7C">MySQL-Manual: GRANT</a>]
+</p><p>Als ersten Trigger richten wir uns einen Insert-Trigger auf unsere Tabelle ein, der immer dann aktiv wird, wenn ein neuer Datensatz eingefügt wird.  Solange MySQL noch keine Funktionen als Defalut-Werte unterstützt, ist es z.B. 
+eine sinnvolle Aufgabe für einen solchen Insert-Trigger, das Erstellungsdatum des Datensatzes in die Spalte <code>create_date</code> einzutragen.
+</p><p>Bevor wir aber einen neuen Insert-Trigger definieren, müssen wir einen eventuell schon vorhandenen löschen. Für jede Tabelle können nur je ein "Before-Trigger" und ein "After-Trigger" pro Insert, Update oder Delete definiert werden.
+</p><p>Wenn wir den Trigger über den MySQL-Client oder eine API einrichten (zu Heidi kommen wir später), müssen wir die Delimiters für Statements beachten. Da der Trigger <u>nachher</u> aus mehreren Statements besteht, müssen diese für die Einrichtung gebunden werden. Wir weisen die Schnittstelle daher mit der Anweisung <code>DELIMITER $$</code> an, für den Codeblock des Triggers während des Einrichtungs-Statements <u>nicht</u> den normalen Statement-Begrenzer zu beachten, sondern <b>$$</b>. Welcher Delimiter hier gewählt wird, ist nahezu unerheblich. Er darf nur nicht im Trigger-Code selbst enthalten sein.
+</p><p>Nachdem wir mit dem Trigger-Statement fertig sind, schalten wir den Delimiter wieder zurück. 
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Trigger einrichten
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">DROP</span> <span class="kw1">TRIGGER</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> <span class="st0">`postings_before_insert`</span>;
+DELIMITER $$
+&#160;
+<span class="kw1">CREATE</span> DEFINER<span class="sy0">=</span><span class="st0">`root`</span>@<span class="st0">`localhost`</span> <span class="kw1">TRIGGER</span> <span class="st0">`postings_before_insert`</span> <span class="kw1">BEFORE</span> <span class="kw1">INSERT</span> <span class="kw1">ON</span> <span class="st0">`postings`</span> 
+<span class="kw1">FOR</span> EACH <span class="kw1">ROW</span> 
+&#160;
+<span class="kw1">BEGIN</span>
+&#160;
+    <span class="kw1">SET</span> <span class="kw1">NEW</span><span class="sy0">.</span>create_date <span class="sy0">=</span> now<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+&#160;
+<span class="kw1">END</span>$$
+&#160;
+DELIMITER&#160;;</pre></div></div></div>
+</div>
+<p>Mit <code>FOR EACH ROW</code> aktiviert der Trigger für jede veränderte Zeile der Tabelle seine zugeordnete Prozedur. Lässt man die Anweisung weg, hat man einen "Statement-Trigger" vorliegen, der nur einmal für das (übergeordnete) Statement ausgeführt wird, auch wenn mehrere Zeilen der Tabelle betroffen sind. 
+</p><p>In der Variablen "NEW.&lt;varname&gt;" steht der neue Wert für die Spalte. Wurde im Insert-Statement ein Spaltenwert angegeben, steht dieser innerhalb des Triggers in dieser Variable zur Verfügung. Wir belegen die Variable aber hier mit dem Wert der Funktion <code>now()</code> und überschreiben dadurch ggf. einen im Insert-Statement übergebenen Wert.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Mögliche Konstrukte in Triggers">Bearbeiten</a>]</span> <span class="mw-headline" id="M.C3.B6gliche_Konstrukte_in_Triggers"> Mögliche Konstrukte in Triggers </span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Variablen deklarieren und belegen">Bearbeiten</a>]</span> <span class="mw-headline" id="Variablen_deklarieren_und_belegen"> Variablen deklarieren und belegen </span></h4>
+<p>Ohne Variablen geht meistens nichts. In Triggers, Functions und Procedures müssen Variablen deklariert werden, bevor sie benutzt werden können.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Variablen deklarieren und belegen
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">DECLARE</span> <span class="sy0">&lt;</span>variable1<span class="sy0">,</span> variable2<span class="sy0">,</span> <span class="sy0">...&gt;</span> <span class="sy0">&lt;</span>type<span class="sy0">&gt;</span>;
+&#160;
+<span class="kw1">DECLARE</span> counter <span class="kw1">INT</span> <span class="kw1">DEFAULT</span> <span class="nu0">4711</span>;
+&#160;
+<span class="kw1">SET</span> <span class="sy0">&lt;</span>variable1<span class="sy0">&gt;</span> <span class="sy0">=</span> <span class="sy0">&lt;</span>value1<span class="sy0">&gt;</span>;
+<span class="kw1">SET</span> <span class="sy0">&lt;</span>variable2<span class="sy0">&gt;</span> <span class="sy0">=</span> <span class="sy0">&lt;</span>value2<span class="sy0">&gt;</span>;</pre></div></div></div>
+</div>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Bedingungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Bedingungen"> Bedingungen </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Bedingungen
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">IF</span> <span class="sy0">&lt;</span>bedingung <span class="sy0">&gt;</span> <span class="kw1">THEN</span> 
+   <span class="sy0">&lt;</span>Anweisung<span class="sy0">&gt;</span>;
+ESLEIF
+   <span class="sy0">&lt;</span>Anweisung<span class="sy0">&gt;</span>;
+   <span class="sy0">&lt;</span>Anweisung<span class="sy0">&gt;</span>;
+<span class="kw1">ELSE</span>
+   <span class="sy0">&lt;</span>Anweisung<span class="sy0">&gt;</span>;
+<span class="kw1">END</span> <span class="kw1">IF</span>;</pre></div></div></div>
+</div>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Schleifen">Bearbeiten</a>]</span> <span class="mw-headline" id="Schleifen"> Schleifen </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Schleifen definieren
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="co1">-- Simple While Loop --</span>
+&#160;
+WHILE <span class="sy0">&lt;</span>Bedingung<span class="sy0">&gt;</span> DO
+    <span class="sy0">&lt;</span>Anweisungen<span class="sy0">&gt;</span>;
+<span class="kw1">END</span> WHILE;
+&#160;
+&#160;
+&#160;
+<span class="co1">-- Labled While Loop, similar to &quot;break&quot; --</span>
+&#160;
+<span class="sy0">&lt;</span>label<span class="sy0">&gt;</span>: WHILE <span class="sy0">&lt;</span>Bedingung<span class="sy0">&gt;</span> DO
+    <span class="sy0">&lt;</span>Anweisung<span class="sy0">&gt;</span>;
+    <span class="kw1">IF</span> <span class="sy0">&lt;</span>Bedingung<span class="sy0">&gt;</span> <span class="kw1">THEN</span>
+        LEAVE <span class="sy0">&lt;</span>label<span class="sy0">&gt;</span>;
+    <span class="kw1">END</span> <span class="kw1">IF</span>;
+<span class="kw1">END</span> WHILE <span class="sy0">&lt;</span>label<span class="sy0">&gt;</span>;
+&#160;
+&#160;
+&#160;
+<span class="co1">-- labled While Loop, similar to &quot;continue&quot;</span>
+&#160;
+<span class="sy0">&lt;</span>label<span class="sy0">&gt;</span>: WHILE <span class="sy0">&lt;</span>Bedingung <span class="nu0">1</span><span class="sy0">&gt;</span> DO 
+    <span class="sy0">&lt;</span>Anweisung <span class="nu0">1</span><span class="sy0">&gt;</span>;
+    <span class="sy0">&lt;</span>Anweisung <span class="nu0">2</span><span class="sy0">&gt;</span>;
+&#160;
+    <span class="kw1">IF</span> <span class="sy0">&lt;</span>Bedingung <span class="nu0">2</span><span class="sy0">&gt;</span> <span class="kw1">THEN</span>
+        ITERATE <span class="sy0">&lt;</span>label<span class="sy0">&gt;</span>;  <span class="co1">-- Rücksprung zu &lt;label&gt;:</span>
+    <span class="kw1">END</span> <span class="kw1">IF</span>;
+&#160;
+    <span class="sy0">&lt;</span>Anweisung <span class="nu0">3</span><span class="sy0">&gt;</span>;
+    <span class="sy0">&lt;</span>Anweisung <span class="nu0">4</span><span class="sy0">&gt;</span>;
+<span class="kw1">END</span> WHILE <span class="sy0">&lt;</span>label<span class="sy0">&gt;</span>;</pre></div></div></div>
+</div>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Funktionsaufrufe">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionsaufrufe"> Funktionsaufrufe </span></h4>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Funktionen aufrufen
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">SET</span> <span class="sy0">&lt;</span>variable<span class="sy0">&gt;</span> <span class="sy0">=</span> <span class="kw1">FUNCTION</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Exceptions in Triggers, Functions oder Procedures formulieren">Bearbeiten</a>]</span> <span class="mw-headline" id="Exceptions_in_Triggers.2C_Functions_oder_Procedures_formulieren"> Exceptions in Triggers, Functions oder Procedures formulieren </span></h3>
+<p>Seit MySQL 5.5(?) wird ein Signalling System für Messages, Warnings und Exceptions in Triggers, Functions und Procedures bereitgestellt. Die Anwendung ist allerdings etwas gewöhnungsbedürftig:
+</p><p>Der Aufruf findet über
+</p><p><b> SIGNAL sqlstate 'CCFFF'; </b>
+</p><p>statt. wobei CC = Signal-Klasse und FFF eine beliebige nicht wirklich allgemeingültig festgelegte Fehlernummer darstellt. Jeder Datenbankentwickler hat hierzu eigene Ideen. Eine kleine gemeinsame Menge findet man in den ANSI-Vereinbarungen.
+</p><p>(siehe Anhang A)
+</p><p>SQL-States:
+</p>
+<pre> * Class = '00' (success);
+   Illegal. SQLSTATE values that begin with '00' indicate success and are not valid for SIGNAL. 
+
+ * Class = '01' (warning);
+   The value of the warning_count system variable goes up. SHOW WARNINGS shows the signal. 
+   SQLWARNING handlers catch the signal. If the signal is unhandled in a function, statements do not end. 
+
+ * Class = '02' (not found);
+   NOT FOUND handlers catch the signal. There is no effect on cursors. If the signal is unhandled 
+   in a function, statements end. 
+</pre>
+<pre> * Class &gt; '02' (exception);
+   SQLEXCEPTION handlers catch the signal. If the signal is unhandled in a function, statements end. 
+</pre>
+<pre> * Class = '40';
+   Treated as an ordinary exception. 
+</pre>
+<p><br />
+bis Class 44 sind die Codes belegt von irgendjemand, 45 ist tatsächlich die erste freie Klasse, 
+danach folgen irgendann wieder belegte.	Das ist alles nur irgendwie festgelegt...
+</p><p>Error: 1644 SQLSTATE: HY000 (ER_SIGNAL_EXCEPTION).
+</p><p>HY000 = MySQL-Error not mapped to SQL-STATES, also eine "Dummy-SqlState".
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Exceptions im Trigger einrichten
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="sql source-sql"><pre class="de1"><span class="kw1">DROP</span> <span class="kw1">TRIGGER</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> <span class="st0">`posting_before_update`</span>;
+delimiter $$
+&#160;
+<span class="kw1">CREATE</span> DEFINER<span class="sy0">=</span><span class="st0">`root`</span>@<span class="st0">`localhost`</span> <span class="kw1">TRIGGER</span> <span class="st0">`postings_before_update`</span> <span class="kw1">BEFORE</span> <span class="kw1">UPDATE</span> <span class="kw1">ON</span> <span class="st0">`postings`</span> 
+<span class="kw1">FOR</span> EACH <span class="kw1">ROW</span> 
+&#160;
+<span class="kw1">BEGIN</span>
+&#160;
+    <span class="kw1">DECLARE</span> msg <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">255</span><span class="br0">&#41;</span>;
+&#160;
+    <span class="kw1">IF</span> <span class="kw1">NEW</span><span class="sy0">.</span>update_count <span class="sy0">&lt;&gt;</span> <span class="br0">&#40;</span><span class="kw1">OLD</span><span class="sy0">.</span>update_count <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span>  <span class="kw1">THEN</span>
+        <span class="kw1">SET</span> msg <span class="sy0">=</span> concat<span class="br0">&#40;</span><span class="st0">'9001: Record has been updated in the meantime: '</span><span class="sy0">,</span> <span class="kw1">CAST</span><span class="br0">&#40;</span><span class="kw1">OLD</span><span class="sy0">.</span>update_count <span class="kw1">AS</span> <span class="kw1">CHAR</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+        SIGNAL sqlstate <span class="st0">'45001'</span> <span class="kw1">SET</span> message_text <span class="sy0">=</span> msg;
+    ELSEIF <span class="kw1">MOD</span><span class="br0">&#40;</span><span class="kw1">LENGTH</span><span class="br0">&#40;</span><span class="kw1">NEW</span><span class="sy0">.</span>posting<span class="br0">&#41;</span><span class="sy0">,</span> <span class="nu0">2</span><span class="br0">&#41;</span> <span class="sy0">&lt;&gt;</span> <span class="nu0">0</span> <span class="kw1">THEN</span>
+        <span class="kw1">SET</span> msg <span class="sy0">=</span> concat<span class="br0">&#40;</span><span class="st0">'9002: Wrong format for `posting`: '</span><span class="br0">&#41;</span>;
+        SIGNAL sqlstate <span class="st0">'45002'</span> <span class="kw1">SET</span> message_text <span class="sy0">=</span> msg;
+    <span class="kw1">ELSE</span>
+        <span class="kw1">SET</span> <span class="kw1">NEW</span><span class="sy0">.</span>update_count <span class="sy0">=</span> <span class="kw1">OLD</span><span class="sy0">.</span>update_count <span class="sy0">+</span> <span class="nu0">1</span>;
+    <span class="kw1">END</span> <span class="kw1">IF</span>;
+&#160;
+<span class="kw1">END</span>$$
+&#160;
+delimiter&#160;;</pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Der &quot;Academic-Lock&quot;-Trigger">Bearbeiten</a>]</span> <span class="mw-headline" id="Der_.22Academic-Lock.22-Trigger"> Der "Academic-Lock"-Trigger </span></h3>
+<p>Die Bezeichnung "Academic" ist eine kleine Anleihe auf das "ct" von Vorlesungen und akademischen Veranstaltungen. Ich übersetze es hier mal mit "mit Zeitverzögerung". Die Datensatzsperre findet also nicht physisch statt, sondern logisch. Sie wirkt erst mit Zeitverzögerung.
+</p><p>Bei abgesicherten Lese-Schreibvorgängen (Updates) muss ein Datensatz vor dem Lesen gegen Veränderung gesperrt werden und darf erst nach dem Schreiben wieder freigegeben werden. Im Webumfeld liegen zwischen dem Lesen und dem Schreiben oft mehrere Roundturns und damit eine lange Zeit. Außerdem ist es nicht möglich, in einem zustandslosen Protokoll einen Datensatz auf Filesystem/Datenebankebene tatsächlich vom Lesebeginn bis zum Schreibende für einen User zu sperren, da es keine Möglichkeit gibt festzustellen, ob der User nach dem Sperren und Lesen überhaupt noch da ist. Man würde also Gefahr laufen, "Lost Locks" (verlorene Sperren) zu produzieren.
+</p><p>Wir haben daher einen Merker im Datenmodell untergebracht: <code>`update_count`</code>.
+</p><p>Mit jedem Update wird nun der Merker um eins hochgezählt. Nur, wenn der im Update-Statement vorgegebene Wert für <code>`update_count`</code> mit dem erwarteten übreinstimmt, wird das Update durchgeführt. Anderenfalls hat vermutlich schon ein anderer Teilnehmer eine Schreiboperation durchgeführt.
+</p><p>Wir überwachen diesen Wert mit einem Trigger, und im Fehlerfall löst unser überwachender Trigger dann eine Exception aus und verhindert das Update.
+</p><p><br />
+</p>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Warum update count + 1?">Bearbeiten</a>]</span> <span class="mw-headline" id="Warum_update_count_.2B_1.3F"> Warum update_count + 1? </span></h4>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Formulierung für den Client">Bearbeiten</a>]</span> <span class="mw-headline" id="Formulierung_f.C3.BCr_den_Client"> Formulierung für den Client </span></h4>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Mehrere Überprüfungen in Triggern">Bearbeiten</a>]</span> <span class="mw-headline" id="Mehrere_.C3.9Cberpr.C3.BCfungen_in_Triggern"> Mehrere Überprüfungen in Triggern </span></h3>
+<h4><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: es gibt nur den einen Trigger">Bearbeiten</a>]</span> <span class="mw-headline" id="es_gibt_nur_den_einen_Trigger"> es gibt nur den einen Trigger </span></h4>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: Stored Functions">Bearbeiten</a>]</span> <span class="mw-headline" id="Stored_Functions"> Stored Functions </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Was sind stored Functions?">Bearbeiten</a>]</span> <span class="mw-headline" id="Was_sind_stored_Functions.3F"> Was sind stored Functions? </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: eine einfache Umwandlungsfunktion">Bearbeiten</a>]</span> <span class="mw-headline" id="eine_einfache_Umwandlungsfunktion"> eine einfache Umwandlungsfunktion </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: Aufruf von stored Functions in Triggers">Bearbeiten</a>]</span> <span class="mw-headline" id="Aufruf_von_stored_Functions_in_Triggers"> Aufruf von stored Functions in Triggers </span></h3>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: Stored Procedures">Bearbeiten</a>]</span> <span class="mw-headline" id="Stored_Procedures"> Stored Procedures </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: was sind Stored Procedures?">Bearbeiten</a>]</span> <span class="mw-headline" id="was_sind_Stored_Procedures.3F"> was sind Stored Procedures? </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: Übergabewerte, Rückgabewerte">Bearbeiten</a>]</span> <span class="mw-headline" id=".C3.9Cbergabewerte.2C_R.C3.BCckgabewerte"> Übergabewerte, Rückgabewerte </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: Eine &quot;Select-Kontrolle&quot; aufbauen">Bearbeiten</a>]</span> <span class="mw-headline" id="Eine_.22Select-Kontrolle.22_aufbauen"> Eine "Select-Kontrolle" aufbauen </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=25" title="Abschnitt bearbeiten: Vertikale Zugriffsrechte">Bearbeiten</a>]</span> <span class="mw-headline" id="Vertikale_Zugriffsrechte"> Vertikale Zugriffsrechte </span></h3>
+<p>In einem gemeinsamen Datenbestand gibt es meistens einen umfangreichen Bedarf an Benutzerrechten. Horizontale Benutzerrechte lassen sich problemlos in der Datenbank konfigurieren. Welcher User hat auf welche Spalte welche Rechte?
+</p><p>Vertikale Rechte - welcher User darf mit welchem Datensatz was tun - können wir mit stored Procedures einrichten und überprüfen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=26" title="Abschnitt bearbeiten: Stored Routines">Bearbeiten</a>]</span> <span class="mw-headline" id="Stored_Routines"> Stored Routines </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=27" title="Abschnitt bearbeiten: die Komponenten von Stored Routines">Bearbeiten</a>]</span> <span class="mw-headline" id="die_Komponenten_von_Stored_Routines"> die Komponenten von Stored Routines </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=28" title="Abschnitt bearbeiten: Stored Routines als Trennschicht zwischen Datenbank und API">Bearbeiten</a>]</span> <span class="mw-headline" id="Stored_Routines_als_Trennschicht_zwischen_Datenbank_und_API"> Stored Routines als Trennschicht zwischen Datenbank und API </span></h3>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=29" title="Abschnitt bearbeiten: Tools">Bearbeiten</a>]</span> <span class="mw-headline" id="Tools"> Tools </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=30" title="Abschnitt bearbeiten: putty">Bearbeiten</a>]</span> <span class="mw-headline" id="putty"> putty </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=31" title="Abschnitt bearbeiten: MySql-Client">Bearbeiten</a>]</span> <span class="mw-headline" id="MySql-Client"> MySql-Client </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=32" title="Abschnitt bearbeiten: MySql-Workbench">Bearbeiten</a>]</span> <span class="mw-headline" id="MySql-Workbench"> MySql-Workbench </span></h3>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;section=33" title="Abschnitt bearbeiten: Heidi-SQL">Bearbeiten</a>]</span> <span class="mw-headline" id="Heidi-SQL"> Heidi-SQL </span></h3>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 403/1000000
+Post‐expand include size: 3503/2097152 bytes
+Template argument size: 2320/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3863-0!*!*!!de-formal!*!* and timestamp 20150301151403 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;oldid=23691">http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;oldid=23691</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Datenbanken%2FMySQL+Triggers+und+Stored+Functions" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Datenbanken/MySQL_Triggers_und_Stored_Functions"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Datenbanken/MySQL_Triggers_und_Stored_Functions" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Datenbanken/MySQL_Triggers_und_Stored_Functions" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Datenbanken/MySQL_Triggers_und_Stored_Functions" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Datenbanken/MySQL_Triggers_und_Stored_Functions&amp;oldid=23691" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Datenbanken-2FMySQL_Triggers_und_Stored_Functions" title="Spezial:Durchsuchen/Datenbanken-2FMySQL Triggers und Stored Functions">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 31. Oktober 2014 um 10:15 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.987-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.085 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Datenbanken/MySQL_Triggers_und_Stored_Functions by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:24 GMT -->
+</html>

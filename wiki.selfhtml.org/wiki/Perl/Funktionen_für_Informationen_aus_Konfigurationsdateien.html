@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Funktionen für Informationen aus Konfigurationsdateien – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien","wgTitle":"Perl/Funktionen für Informationen aus Konfigurationsdateien","wgCurRevisionId":13960,"wgArticleId":3105,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Funktionen für Informationen aus Konfigurationsdateien" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Funktionen_für_Informationen_aus_Konfigurationsdateien skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Funktionen für Informationen aus Konfigurationsdateien</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_diesen_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu diesen Funktionen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Konfigurationsdatei:_.2Fetc.2Fgroup"><span class="tocnumber">1.1</span> <span class="toctext">Konfigurationsdatei: /etc/group</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Konfigurationsdatei:_.2Fetc.2Fhosts"><span class="tocnumber">1.2</span> <span class="toctext">Konfigurationsdatei: /etc/hosts</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Konfigurationsdatei:_.2Fetc.2Fnetworks"><span class="tocnumber">1.3</span> <span class="toctext">Konfigurationsdatei: /etc/networks</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Konfigurationsdatei:_.2Fetc.2Fpasswd"><span class="tocnumber">1.4</span> <span class="toctext">Konfigurationsdatei: /etc/passwd</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Konfigurationsdatei:_.2Fetc.2Fprotocols"><span class="tocnumber">1.5</span> <span class="toctext">Konfigurationsdatei: /etc/protocols</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Konfigurationsdatei:_.2Fetc.2Fservices"><span class="tocnumber">1.6</span> <span class="toctext">Konfigurationsdatei: /etc/services</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#endgrent_-_zum_Ende_von_.2Fetc.2Fgroups_springen"><span class="tocnumber">2</span> <span class="toctext">endgrent - zum Ende von /etc/groups springen</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#endhostent_-_zum_Ende_von_.2Fetc.2Fhosts_springen"><span class="tocnumber">3</span> <span class="toctext">endhostent - zum Ende von /etc/hosts springen</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#endnetent_-_zum_Ende_von_.2Fetc.2Fnetworks_springen"><span class="tocnumber">4</span> <span class="toctext">endnetent - zum Ende von /etc/networks springen</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#endprotoent_-_zum_Ende_von_.2Fetc.2Fprotocols_springen"><span class="tocnumber">5</span> <span class="toctext">endprotoent - zum Ende von /etc/protocols springen</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#endpwent_-_zum_Ende_von_.2Fetc.2Fpasswd_springen"><span class="tocnumber">6</span> <span class="toctext">endpwent - zum Ende von /etc/passwd springen</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#endservent_-_zum_Ende_von_.2Fetc.2Fservices_springen"><span class="tocnumber">7</span> <span class="toctext">endservent - zum Ende von /etc/services springen</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#getgrent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fgroups_ermitteln"><span class="tocnumber">8</span> <span class="toctext">getgrent - nächsten Eintrag von /etc/groups ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#getgrgid_-_Eintrag_mit_bestimmter_Gruppen-ID_aus_.2Fetc.2Fgroups_ermitteln"><span class="tocnumber">9</span> <span class="toctext">getgrgid - Eintrag mit bestimmter Gruppen-ID aus /etc/groups ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#getgrnam_-_Eintrag_mit_bestimmtem_Gruppennamen_aus_.2Fetc.2Fgroups_ermitteln"><span class="tocnumber">10</span> <span class="toctext">getgrnam - Eintrag mit bestimmtem Gruppennamen aus /etc/groups ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#gethostbyaddr_-_Eintrag_mit_bestimmter_IP_aus_.2Fetc.2Fhosts_ermitteln"><span class="tocnumber">11</span> <span class="toctext">gethostbyaddr - Eintrag mit bestimmter IP aus /etc/hosts ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#gethostbyname_-_Eintrag_mit_bestimmtem_Hostnamen_aus_.2Fetc.2Fhosts_ermitteln"><span class="tocnumber">12</span> <span class="toctext">gethostbyname - Eintrag mit bestimmtem Hostnamen aus /etc/hosts ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#gethostent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fhosts_ermitteln"><span class="tocnumber">13</span> <span class="toctext">gethostent - nächsten Eintrag von /etc/hosts ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#getlogin_-_Namen_des_aktuellen_Benutzers_ermitteln"><span class="tocnumber">14</span> <span class="toctext">getlogin - Namen des aktuellen Benutzers ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#getnetbyaddr_-_Eintrag_mit_bestimmter_IP_aus_.2Fetc.2Fnetworks_ermitteln"><span class="tocnumber">15</span> <span class="toctext">getnetbyaddr - Eintrag mit bestimmter IP aus /etc/networks ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#getnetbyname_-_Eintrag_mit_bestimmtem_Netzwerknamen_aus_.2Fetc.2Fnetworks_ermitteln"><span class="tocnumber">16</span> <span class="toctext">getnetbyname - Eintrag mit bestimmtem Netzwerknamen aus /etc/networks ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#getnetent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fnetworks_ermitteln"><span class="tocnumber">17</span> <span class="toctext">getnetent - nächsten Eintrag von /etc/networks ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#getprotobyname_-_Eintrag_mit_bestimmtem_Protokollnamen_aus_.2Fetc.2Fprotocols_ermitteln"><span class="tocnumber">18</span> <span class="toctext">getprotobyname - Eintrag mit bestimmtem Protokollnamen aus /etc/protocols ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#getprotobynumber_-_Eintrag_mit_bestimmter_Protokollnummer_aus_.2Fetc.2Fprotocols_ermitteln"><span class="tocnumber">19</span> <span class="toctext">getprotobynumber - Eintrag mit bestimmter Protokollnummer aus /etc/protocols ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#getprotoent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fprotocols_ermitteln"><span class="tocnumber">20</span> <span class="toctext">getprotoent - nächsten Eintrag von /etc/protocols ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#getpwent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fpasswd_ermitteln"><span class="tocnumber">21</span> <span class="toctext">getpwent - nächsten Eintrag von /etc/passwd ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#getpwnam_-_Eintrag_mit_bestimmtem_Benutzernamen_aus_.2Fetc.2Fpasswd_ermitteln"><span class="tocnumber">22</span> <span class="toctext">getpwnam - Eintrag mit bestimmtem Benutzernamen aus /etc/passwd ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#getpwuid_-_Eintrag_mit_bestimmter_Benutzernummer_aus_.2Fetc.2Fpasswd_ermitteln"><span class="tocnumber">23</span> <span class="toctext">getpwuid - Eintrag mit bestimmter Benutzernummer aus /etc/passwd ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#getservbyname_-_Eintrag_mit_bestimmtem_Portnamen_aus_.2Fetc.2Fservices_ermitteln"><span class="tocnumber">24</span> <span class="toctext">getservbyname - Eintrag mit bestimmtem Portnamen aus /etc/services ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#getservbyport_-_Eintrag_mit_bestimmter_Portnummer_aus_.2Fetc.2Fservices_ermitteln"><span class="tocnumber">25</span> <span class="toctext">getservbyport - Eintrag mit bestimmter Portnummer aus /etc/services ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#getservent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fservices_ermitteln"><span class="tocnumber">26</span> <span class="toctext">getservent - nächsten Eintrag von /etc/services ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#setgrent_-_zum_Anfang_von_.2Fetc.2Fgroups_springen"><span class="tocnumber">27</span> <span class="toctext">setgrent - zum Anfang von /etc/groups springen</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#sethostent_-_zum_Anfang_von_.2Fetc.2Fhosts_springen"><span class="tocnumber">28</span> <span class="toctext">sethostent - zum Anfang von /etc/hosts springen</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#setnetent_-_zum_Anfang_von_.2Fetc.2Fnetworks_springen"><span class="tocnumber">29</span> <span class="toctext">setnetent - zum Anfang von /etc/networks springen</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="#setprotoent_-_zum_Anfang_von_.2Fetc.2Fprotocols_springen"><span class="tocnumber">30</span> <span class="toctext">setprotoent - zum Anfang von /etc/protocols springen</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="#setpwent_-_zum_Anfang_von_.2Fetc.2Fpasswd_springen"><span class="tocnumber">31</span> <span class="toctext">setpwent - zum Anfang von /etc/passwd springen</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="#setservent_-_zum_Anfang_von_.2Fetc.2Fservices_springen"><span class="tocnumber">32</span> <span class="toctext">setservent - zum Anfang von /etc/services springen</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu diesen Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_diesen_Funktionen"> Allgemeines zu diesen Funktionen </span></h2>
+<p>Die hier versammelten Funktionen dienen dazu, Einträge aus System-Konfigurationsdateien zu ermitteln. Es handelt sich dabei ausschließlich um Konfigurationsdaten von Unix-Systemen. Der Vorteil der hier beschriebenen Funktionen gegenüber dem direkten Auslesen jener Dateien ist, dass sie rechnerunabhängig sind, d.h. die Befehle funktionieren auch dann, wenn ein Unix-System anders als im Normalfall konfiguriert ist und die entsprechenden Dateien an anderen Orten liegen.
+</p><p>Die relevanten Konfigurationsdateien werden im folgenden kurz vorgestellt. Die Pfadnamen entsprechen der üblichen Ablage.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Konfigurationsdatei: /etc/group">Bearbeiten</a>]</span> <span class="mw-headline" id="Konfigurationsdatei:_.2Fetc.2Fgroup"> Konfigurationsdatei: <var>/etc/group</var> </span></h3>
+<p>In dieser Datei werden Berechtigungsgruppen und deren Mitglieder gespeichert. Eine Berechtigungsgruppe kann bestimmte Rechte an Dateien und Verzeichnissen besitzen, die einem ihrer Mitglieder gehören. Neben Einträgen für "menschliche" Berechtigungsgruppen enthält die Datei auch solche für reservierte, rechnereigene Berechtigungsgruppen, wie beispielsweise <code>mail</code>, <code>bin</code> oder <code>tty</code>. Passwörter sind in dieser Datei nur verschlüsselt gespeichert.<br />
+Typische Daten (Beispiel):
+</p>
+<pre>
+  root  x  0    root
+  bin   x  1    root bin daemon
+  sys   x  101  root bin sys
+</pre>
+<p>Jede Zeile der Datei enthält den Namen einer Berechtigungsgruppe, dahinter (verschlüsselt) deren Passwort, dahinter die Gruppennummer (GID) und dahinter die Liste der Mitglieder der Gruppe.<br />
+Funktionen zu dieser Datei sind <a href="#endgrent">endgrent</a>&#160;<a href="#getgrent">getgrent</a>&#160;<a href="#getgrgid">getgrgid</a>&#160;<a href="#getgrnam">getgrnam</a>&#160;<a href="#setgrent">setgrent</a><br />
+Im Beispiel zur Funktion <a href="#getgrent">getgrent</a> wird gezeigt, wie Sie die komplette Datei <var>/etc/groups</var> ausgeben können. Dadurch gewinnen Sie einen vollständigen Überblick über den Inhalt der Datei.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Konfigurationsdatei: /etc/hosts">Bearbeiten</a>]</span> <span class="mw-headline" id="Konfigurationsdatei:_.2Fetc.2Fhosts"> Konfigurationsdatei: <var>/etc/hosts</var> </span></h3>
+<p>In dieser Datei werden IP-Adressen und Domain-Namen oder Rechnernamen zugeordnet, die der Rechner selber auflösen muss.<br />
+Typische Daten (Beispiel):
+</p>
+<pre>
+  127.0.0.1       localhost
+  192.168.10.101  sonne.galaxis.de     sonne
+  192.168.85.1    zeus.edu.saxedu.de   zeus
+</pre>
+<p>Jede Zeile der Datei enthält eine IP-Adresse, dahinter den offiziellen Domain-Namen und dahinter wahlweise den internen Rechnernamen, jeweils durch Leerzeichen oder Tabulatoren getrennt. Hinter dem internen Rechnernamen kann wahlweise auch noch ein Aliasname folgen.<br />
+Funktionen zu dieser Datei sind <a href="#endhostent">endhostent</a>&#160;<a href="#gethostbyaddr">gethostbyaddr</a>&#160;<a href="#gethostbyname">gethostbyname</a>&#160;<a href="#gethostent">gethostent</a>&#160;<a href="#sethostent">sethostent</a><br />
+Im Beispiel zur Funktion <a href="#gethostent">gethostent</a> wird gezeigt, wie Sie die komplette Datei <var>/etc/hosts</var> ausgeben können. Dadurch gewinnen Sie einen vollständigen Überblick über den Inhalt der Datei.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Konfigurationsdatei: /etc/networks">Bearbeiten</a>]</span> <span class="mw-headline" id="Konfigurationsdatei:_.2Fetc.2Fnetworks"> Konfigurationsdatei: <var>/etc/networks</var> </span></h3>
+<p>In dieser Datei werden Netzwerknamen und zugehörige IP-Adressen einander zugeordnet. Dabei wird oft auch der Adresstyp und die Netznummer angegeben.<br />
+Typische Daten (Beispiel):
+</p>
+<pre>
+  loopback  127.0.0.0  2  2130706432
+</pre>
+<p>Jede Zeile der Datei enthält einen Netzwerknamen, die zugehörige Netzwerk-IP-Adresse, den Adresstyp und die Netznummer.<br />
+Funktionen zu dieser Datei sind <a href="#endnetent">endnetent</a>&#160;<a href="#getnetbyaddr">getnetbyaddr</a>&#160;<a href="#getnetbyname">getnetbyname</a>&#160;<a href="#getnetent">getnetent</a>&#160;<a href="#setnetent">setnetent</a><br />
+Im Beispiel zur Funktion <a href="#getnetent">getnetent</a> wird gezeigt, wie Sie die komplette Datei <var>/etc/networks</var> ausgeben können. Dadurch gewinnen Sie einen vollständigen Überblick über den Inhalt der Datei.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Konfigurationsdatei: /etc/passwd">Bearbeiten</a>]</span> <span class="mw-headline" id="Konfigurationsdatei:_.2Fetc.2Fpasswd"> Konfigurationsdatei: <var>/etc/passwd</var> </span></h3>
+<p>In dieser Datei werden alle wichtigen Daten aller Benutzer gespeichert, die Zugang zum Rechner haben. Dazu gehören z.B. die Benutzernamen, ihre Passwörter, die Benutzernummern (UIDs) und die Heimatverzeichnisse der Anwender. Neben Einträgen für normale Benutzer enthält die Datei auch solche für reservierte Benutzer, wie beispielsweise <code>root</code> (auf emanzipierten Rechnern auch <code>ruth</code>), <code>daemon</code> oder <code>ftp</code> (für den anonymen FTP-Zugang). Passwörter sind in dieser Datei nur verschlüsselt gespeichert.<br />
+Typische Daten (Beispiel):
+</p>
+<pre>
+  root      x  0  0    root       /root               /bin/mysh
+  bin       x  1  1    bin        /bin                /bin/mysh
+  customer  x  29  29  Kunde      /usr/lib/kunde      /bin/mysh
+</pre>
+<p>Jede Zeile der Datei enthält den Benutzernamen, das zugehörige Passwort (verschlüsselt), die zugehörige Benutzernummer (UID), die Nummer seiner Berechtigungsgruppe (GID), beschreibende Angaben zum Benutzer, sein Heimatverzeichnis auf dem Rechner, seine Shell (Instanz des Kommando-Interpreters), und gegebenenfalls Angaben zum Verfallsdatum der Gültigkeit des Eintrags.<br />
+Funktionen zu dieser Datei sind <a href="#endpwent">endpwent</a>&#160;<a href="#getpwent">getpwent</a>&#160;<a href="#getpwnam">getpwnam</a>&#160;<a href="#getpwuid">getpwuid</a>&#160;<a href="#setpwent">setpwent</a><br />
+Im Beispiel zur Funktion <a href="#getpwent">getpwent</a> wird gezeigt, wie Sie die komplette Datei <var>/etc/passwd</var> ausgeben können. Dadurch gewinnen Sie einen vollständigen Überblick über den Inhalt der Datei.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Konfigurationsdatei: /etc/protocols">Bearbeiten</a>]</span> <span class="mw-headline" id="Konfigurationsdatei:_.2Fetc.2Fprotocols"> Konfigurationsdatei: <var>/etc/protocols</var> </span></h3>
+<p>In dieser Datei sind die Protokollnamen und Protokollnummern der Transportprotokolle eingetragen, die das System unterstützt.<br />
+Typische Daten (Beispiel):
+</p>
+<pre>
+  ip    IP    0
+  icmp  ICMP  1
+  igmp  IGMP  2
+  ggp   GGP   3
+  tcp   TCP   6
+</pre>
+<p>Jede Zeile der Datei enthält den Namen des Transportprotokolls, die Protokollnummer und den Aliasnamen des Protokolls.<br />
+Funktionen zu dieser Datei sind <a href="#endprotoent">endprotoent</a>&#160;<a href="#getprotobyname">getprotobyname</a>&#160;<a href="#getprotobynumber">getprotobynumber</a>&#160;<a href="#getprotoent">getprotoent</a>&#160;<a href="#setprotoent">setprotoent</a><br />
+Im Beispiel zur Funktion <a href="#getprotoent">getprotoent</a> wird gezeigt, wie Sie die komplette Datei <var>/etc/protocols</var> ausgeben können. Dadurch gewinnen Sie einen vollständigen Überblick über den Inhalt der Datei.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Konfigurationsdatei: /etc/services">Bearbeiten</a>]</span> <span class="mw-headline" id="Konfigurationsdatei:_.2Fetc.2Fservices"> Konfigurationsdatei: <var>/etc/services</var> </span></h3>
+<p>In dieser Datei werden die Namen von Netzwerkdiensten sowie die zugehörigen Portnummern und Protokollnamen gespeichert.<br />
+Typische Daten (Beispiel):
+</p>
+<pre>
+  ftp                 21  tcp
+  telnet              23  tcp
+  smtp  mail          25  tcp
+  whois  nicname      43  tcp
+  domain  nameserver  53  tcp
+  gopher              70  tcp
+  finger              79  tcp
+  www  http           80  tcp
+  www                 80  udp
+</pre>
+<p>Funktionen zu dieser Datei sind <a href="#endservent">endservent</a>&#160;<a href="#getservbyname">getservbyname</a>&#160;<a href="#getservbyport">getservbyport</a>&#160;<a href="#getservent">getservent</a>&#160;<a href="#setservent">setservent</a><br />
+Im Beispiel zur Funktion <a href="#getservent">getservent</a> wird gezeigt, wie Sie die komplette Datei <var>/etc/services</var> ausgeben können. Dadurch gewinnen Sie einen vollständigen Überblick über den Inhalt der Datei.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: endgrent - zum Ende von /etc/groups springen">Bearbeiten</a>]</span> <span class="mw-headline" id="endgrent_-_zum_Ende_von_.2Fetc.2Fgroups_springen"> <span id="endgrent"></span> endgrent - zum Ende von <var>/etc/groups</var> springen </span></h2>
+<p>Springt an das Ende der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fgroup.3C.2Fvar.3E">/etc/group</a> und beendet den Zugriff darauf.
+</p><p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getgrent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">endgrent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt mit <a href="#getgrent">getgrent</a> den ersten Eintrag aus <var>/etc/groups</var>, gibt den ermittelten Wert aus und springt dann ans Ende der Datei.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: endhostent - zum Ende von /etc/hosts springen">Bearbeiten</a>]</span> <span class="mw-headline" id="endhostent_-_zum_Ende_von_.2Fetc.2Fhosts_springen"> <span id="endhostent"></span> endhostent - zum Ende von <var>/etc/hosts</var> springen </span></h2>
+<p>Springt an das Ende der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fhosts.3C.2Fvar.3E">/etc/hosts</a> und beendet den Zugriff darauf.
+</p><p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">gethostent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">endhostent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt mit <a href="#gethostent">gethostent</a> den ersten Eintrag aus <var>/etc/hosts</var>, gibt den ermittelten Wert aus und springt dann ans Ende der Datei.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: endnetent - zum Ende von /etc/networks springen">Bearbeiten</a>]</span> <span class="mw-headline" id="endnetent_-_zum_Ende_von_.2Fetc.2Fnetworks_springen"> <span id="endnetent"></span> endnetent - zum Ende von <var>/etc/networks</var> springen </span></h2>
+<p>Springt an das Ende der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fnetworks.3C.2Fvar.3E">/etc/networks</a> und beendet den Zugriff darauf.
+</p><p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getnetent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">endnetent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt mit <a href="#getnetent">getnetent</a> den ersten Eintrag aus <var>/etc/networks</var>, gibt den ermittelten Wert aus und springt dann ans Ende der Datei.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: endprotoent - zum Ende von /etc/protocols springen">Bearbeiten</a>]</span> <span class="mw-headline" id="endprotoent_-_zum_Ende_von_.2Fetc.2Fprotocols_springen"> <span id="endprotoent"></span> endprotoent - zum Ende von <var>/etc/protocols</var> springen </span></h2>
+<p>Springt an das Ende der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fprotocols.3C.2Fvar.3E">/etc/protocols</a> und beendet den Zugriff darauf.
+</p><p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getprotoent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+endprotent<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt mit <a href="#getprotoent">getprotoent</a> den ersten Eintrag aus <var>/etc/protocols</var>, gibt den ermittelten Wert aus und springt dann ans Ende der Datei.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: endpwent - zum Ende von /etc/passwd springen">Bearbeiten</a>]</span> <span class="mw-headline" id="endpwent_-_zum_Ende_von_.2Fetc.2Fpasswd_springen"> <span id="endpwent"></span> endpwent - zum Ende von <var>/etc/passwd</var> springen </span></h2>
+<p>Springt an das Ende der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fpasswd.3C.2Fvar.3E">/etc/passwd</a> und beendet den Zugriff darauf.
+</p><p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getpwent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">endpwent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt mit <a href="#getpwent">getpwent</a> den ersten Eintrag aus <var>/etc/passwd</var>, gibt den ermittelten Wert aus und springt dann ans Ende der Datei.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: endservent - zum Ende von /etc/services springen">Bearbeiten</a>]</span> <span class="mw-headline" id="endservent_-_zum_Ende_von_.2Fetc.2Fservices_springen"> <span id="endservent"></span> endservent - zum Ende von <var>/etc/services</var> springen </span></h2>
+<p>Springt an das Ende der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fservices.3C.2Fvar.3E">/etc/services</a> und beendet den Zugriff darauf.
+</p><p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getservent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">endservent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt mit <a href="#getservent">getnetent</a> den ersten Eintrag aus <var>/etc/services</var>, gibt den ermittelten Wert aus und springt dann ans Ende der Datei.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: getgrent - nächsten Eintrag von /etc/groups ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getgrent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fgroups_ermitteln"> <span id="getgrent"></span> getgrent - nächsten Eintrag von <var>/etc/groups</var> ermitteln </span></h2>
+<p>Ermittelt im skalaren Kontext den jeweils nächsten Eintrag aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fgroup.3C.2Fvar.3E">/etc/group</a> oder den Listenkontext einer Liste mit vier Elementen.
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt je nach Kontext entweder den nächsten Dateieintrag oder die Liste zurück. Bei Dateiende wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getgrent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Liste</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Liste[0]]  $Liste[1]  $Liste[2]  $Liste[3]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getgrent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie alle Einträge der Datei <var>/etc/groups</var> mit einem CGI-Script ausgeben lassen können. Zunächst wird <code>getgrent</code> erstmals aufgerufen. Der Rückgabewert wird als Listenkontext interpretiert und im Array <code>@Liste</code> gespeichert. Solange die Liste einen Inhalt enthält - <code>while(@Liste)</code> - werden die vier Elemente des Arrays ausgegeben, und <code>getgrent</code> wird für den nächsten Schleifendurchgang aufgerufen. Die vier Elemente des Arrays, die von der Funktion zurückgegeben werden, sind:<br />
+<p><code>$Liste[0]</code> = Name der Berechtigungsgruppe,<br />
+<code>$Liste[1]</code> = Passwort der Berechtigungsgruppe (verschlüsselt),<br />
+<code>$Liste[2]</code> = Nummer der Berechtigungsgruppe (GID),<br />
+</p>
+<code>$Liste[3]</code> = Mitgliedernamen der Berechtigungsgruppe</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: getgrgid - Eintrag mit bestimmter Gruppen-ID aus /etc/groups ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getgrgid_-_Eintrag_mit_bestimmter_Gruppen-ID_aus_.2Fetc.2Fgroups_ermitteln"> <span id="getgrgid"></span> getgrgid - Eintrag mit bestimmter Gruppen-ID aus <var>/etc/groups</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fgroup.3C.2Fvar.3E">/etc/group</a> den zugehörigen Eintrag zu einer bestimmten Gruppen-ID (GID). Im skalaren Kontext wird dabei der zugehörige Gruppenname ermittelt, im Listenkontext der gesamte Eintrag zur GID.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die gewünschte GID.
+</li></ol>
+<p>Gibt je nach Kontext entweder den Gruppennamen oder die Liste zurück. Wenn die angegebene GID nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="br0">&#40;</span><span class="re0">$Name</span><span class="sy0">,</span><span class="re0">$Passwort</span><span class="sy0">,</span><span class="re0">$Gid</span><span class="sy0">,</span><span class="re0">$Mitglieder</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">getgrgid</span><span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h3&gt;Listenkontext:&lt;/h3&gt;&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;pre&gt;$Name<span class="es0">\n</span>$GrPasswort<span class="es0">\n</span>$Gid<span class="es0">\n</span>$Mitglieder&lt;/pre&gt;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h3&gt;Skalarer Kontext:&lt;/h3&gt;&lt;pre&gt;&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getgrgid</span><span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;pre&gt;$Wert&lt;/pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ruft insgesamt zweimal die Funktion <code>getgrgid</code> auf, zuerst im Listenkontext, später im skalaren Kontext. In beiden Fällen wird <code>2</code> als gesuchte Gruppennummer (GID) übergeben. Im Listenkontext wird der gesamte gefundene Eintrag, bestehend aus Gruppenname, Gruppenpasswort (verschlüsselt), Gruppennummer und Mitgliedernamen, vom Script ausgegeben. Im skalaren Kontext wird nur der zur Gruppennummer gehörige Gruppenname ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: getgrnam - Eintrag mit bestimmtem Gruppennamen aus /etc/groups ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getgrnam_-_Eintrag_mit_bestimmtem_Gruppennamen_aus_.2Fetc.2Fgroups_ermitteln"> <span id="getgrnam"></span> getgrnam - Eintrag mit bestimmtem Gruppennamen aus <var>/etc/groups</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fgroup.3C.2Fvar.3E">/etc/group</a> den zugehörigen Eintrag zu einem bestimmten Gruppennamen. Im skalaren Kontext wird dabei die Gruppen-ID (GID) des angegebenen Namens ermittelt, im Listenkontext der gesamte Eintrag zu dem Gruppennamen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den gewünschten Gruppennamen.
+</li></ol>
+<p>Gibt je nach Kontext entweder die zugehörige Gruppennummer (GID) oder die Liste zurück. Wenn der angegebene Gruppenname nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$Name</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Passwort</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Gid</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$Mitglieder</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">getgrnam</span><span class="br0">&#40;</span><span class="st0">&quot;mail&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h3&gt;Listenkontext:&lt;/h3&gt;&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;pre&gt;$Name<span class="es0">\n</span>$Passwort<span class="es0">\n</span>$Gid<span class="es0">\n</span>$Mitglieder&lt;/pre&gt;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h3&gt;Skalarer Kontext:&lt;/h3&gt;&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getgrnam</span><span class="br0">&#40;</span><span class="st0">&quot;mail&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;pre&gt;$Wert&lt;/pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ruft insgesamt zweimal die Funktion <code>getgrnam</code> auf, zuerst im Listenkontext, später im skalaren Kontext. In beiden Fällen wird <code>"mail"</code> als gesuchter Gruppenname übergeben. Im Listenkontext wird der gesamte gefundene Eintrag, bestehend aus Gruppenname, Gruppenpasswort (verschlüsselt), Gruppennummer und Mitgliedernamen, vom Script ausgegeben. Im skalaren Kontext wird nur die zum Gruppennamen gehörige Gruppennummer (GID) ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: gethostbyaddr - Eintrag mit bestimmter IP aus /etc/hosts ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="gethostbyaddr_-_Eintrag_mit_bestimmter_IP_aus_.2Fetc.2Fhosts_ermitteln"> <span id="gethostbyaddr"></span> gethostbyaddr - Eintrag mit bestimmter IP aus <var>/etc/hosts</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fhosts.3C.2Fvar.3E">/etc/hosts</a> den Hostnamen zu einer bestimmten IP-Adresse.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die gewünschte IP-Adresse, und zwar numerisch in binärer Schreibweise.
+</li><li> den Adresstyp der IP-Adresse (numerisch).
+</li></ol>
+<p>Gibt den zugehörigen Hostnamen zurück. Wenn die angegebene IP-Adresse nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> Socket<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$addr</span> <span class="sy0">=</span> inet_aton<span class="br0">&#40;</span><span class="st0">&quot;127.0.0.1&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span>  <span class="sy0">=</span> <span class="kw3">gethostbyaddr</span><span class="br0">&#40;</span><span class="re0">$addr</span><span class="sy0">,</span> AF_INET<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie den Hostnamen zu einer IP-Adresse auf dem Rechner ermitteln können. Um die etwas komplizierte Parameterversorgung der Funktion <code>gethostbyaddr</code> sicherzustellen, wird das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>Socket</code> verwendet. Durch Aufruf der Modul-Funktion <code>inet_aton</code> wird eine in üblicher Schreibweise notierte, übergebene IP-Adresse in die erforderliche binäre Form umgewandelt. Das Ergebnis wird in dem Skalar <code>$addr</code> gespeichert. Das Modul <code>Socket</code> stellt auch Konstanten für den Adresstyp zur Verfügung. Die korrekte Konstante für den zweiten Parameter von <code>gethostbyaddr</code> ist <code>AF_INET</code>. Durch Übergabe von <code>$addr</code> und <code>AF_INET</code> wird <code>gethostbyaddr</code> richtig versorgt und gibt den Hostnamen zur Beispieladresse <code>127.0.0.1</code> aus (üblicherweise <code>localhost</code>).</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: gethostbyname - Eintrag mit bestimmtem Hostnamen aus /etc/hosts ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="gethostbyname_-_Eintrag_mit_bestimmtem_Hostnamen_aus_.2Fetc.2Fhosts_ermitteln"> <span id="gethostbyname"></span> gethostbyname - Eintrag mit bestimmtem Hostnamen aus <var>/etc/hosts</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fhosts.3C.2Fvar.3E">/etc/hosts</a> die IP-Adresse zu einem bestimmten Hostnamen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den gewünschten Hostnamen.
+</li></ol>
+<p>Gibt die zugehörige IP-Adresse zurück, allerdings binär numerisch.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> Socket<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$addr</span>  <span class="sy0">=</span> <span class="kw3">gethostbyname</span><span class="br0">&#40;</span><span class="st0">&quot;localhost&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> inet_ntoa<span class="br0">&#40;</span><span class="re0">$addr</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie die IP-Adresse zu einem Hostnamen auf dem Rechner ermitteln können. Dazu wird das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>Socket</code> verwendet. Damit lässt sich der binär numerische Rückgabewert von <code>gethostbyname</code>, der im Beispiel in dem Skalar <code>$addr</code> gespeichert wird, bequem in die übliche Schreibweise konvertieren. Durch Aufruf der Modul-Funktion <code>inet_ntoa</code> wird <code>$addr</code> in die übliche Schreibweise umgewandelt. Das Ergebnis der Konvertierung wird im Beispiel in dem Skalar <code>$Wert</code> gespeichert. Anschließend wird die IP-Adresse zu dem Hostnamen <code>localhost</code> ausgegeben (üblicherweise <code>127.0.0.1</code>).</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: gethostent - nächsten Eintrag von /etc/hosts ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="gethostent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fhosts_ermitteln"> <span id="gethostent"></span> gethostent - nächsten Eintrag von <var>/etc/hosts</var> ermitteln </span></h2>
+<p>Ermittelt im skalaren Kontext den jeweils nächsten Eintrag aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fhosts.3C.2Fvar.3E">/etc/hosts</a> oder im Listenkontext eine Liste mit fünf und mehr Elementen.
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt je nach Kontext entweder den nächsten Dateieintrag oder die Liste zurück. Bei Dateiende wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">gethostent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Liste</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Liste[0]   $Liste[1]   $Liste[2]&quot;</span><span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span> <span class="sy0">&lt;</span> <span class="re0">$Liste</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$a</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$b</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$c</span><span class="sy0">,</span> <span class="kw1">my</span> <span class="re0">$d</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">unpack</span><span class="br0">&#40;</span><span class="st_h">'C4'</span><span class="sy0">,</span><span class="re0">$Liste</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="sy0">+</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw3">print</span> <span class="st0">&quot;  $a.$b.$c.$d&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">gethostent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie alle Einträge der Datei <var>/etc/hosts</var> mit einem CGI-Script ausgeben lassen können. Zunächst wird <code>gethostent</code> erstmals aufgerufen. Der Rückgabewert wird als Listenkontext interpretiert und im Array <code>@Liste</code> gespeichert. Solange die Liste einen Inhalt enthält - <code>while(@Liste)</code> - werden die Elemente der Liste ausgegeben, und <code>getgrent</code> wird für den nächsten Schleifendurchgang aufgerufen. Die Liste enthält als letztes Listenelement wiederum eine Liste, sodass eine weitere innere <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for" title="Perl/Schleifen">for-Schleife</a> nötig ist, um alle Elemente zu ermitteln.
+<p>Die Elemente der Liste, die von der Funktion zurückgegeben wird, sind:<br />
+<code>$Liste[0]</code> = Hostname,<br />
+<code>$Liste[1]</code> = Aliasnamen des Hostnamens,<br />
+<code>$Liste[2]</code> = Adresstyp,<br />
+<code>$Liste[3]</code> = Anzahl der noch folgenden Listenelemente<br />
+<code>$Liste[4]</code> und weitere = zugeordnete IP-Adressen<br />
+</p>
+Die zugeordneten IP-Adressen sind binär gespeichert. Um die übliche Vier-Zahlen-Darstellung zu erhalten, muss die binäre Schreibweise erst konvertiert werden. Das ist durch Anwendung der Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#unpack" title="Perl/Funktionen für Zeichenketten">unpack</a> mit <code>C4</code> als erstem Parameter möglich, so wie im obigen Beispiel. Dort werden auf diese Weise die vier Einzelzahlen der IP-Adresse ermittelt und in den Skalaren <code>$a</code>, <code>$b</code>, <code>$c</code> und <code>$d</code> gespeichert.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: getlogin - Namen des aktuellen Benutzers ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getlogin_-_Namen_des_aktuellen_Benutzers_ermitteln"> <span id="getlogin"></span> getlogin - Namen des aktuellen Benutzers ermitteln </span></h2>
+<p>Erwartet keine Parameter.
+</p><p>Gibt den Loginnamen des aktuellen Benutzers zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getlogin</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt den Loginnamen mit <code>getlogin</code>, speichert ihn in dem Skalar <code>$Wert</code> und gibt diesen zur Kontrolle aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: getnetbyaddr - Eintrag mit bestimmter IP aus /etc/networks ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getnetbyaddr_-_Eintrag_mit_bestimmter_IP_aus_.2Fetc.2Fnetworks_ermitteln"> <span id="getnetbyaddr"></span> getnetbyaddr - Eintrag mit bestimmter IP aus <var>/etc/networks</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fnetworks.3C.2Fvar.3E">/etc/networks</a> den Netzwerknamen zu einer bestimmten IP-Adresse.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die gewünschte IP-Adresse, und zwar numerisch in binärer Schreibweise.
+</li><li> den Adresstyp der IP-Adresse (numerisch).
+</li></ol>
+<p>Gibt den zugehörigen Netzwerknamen zurück. Wenn die angegebene IP-Adresse nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> Socket<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$addr</span> <span class="sy0">=</span> inet_aton<span class="br0">&#40;</span><span class="st0">&quot;127.0.0.0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span>  <span class="sy0">=</span> <span class="kw3">getnetbyaddr</span><span class="br0">&#40;</span><span class="re0">$addr</span><span class="sy0">,</span> AF_INET<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie den Netzwerknamen zu einer IP-Adresse auf dem Rechner ermitteln können. Um die etwas komplizierte Parameterversorgung der Funktion <code>getnetbyaddr</code> sicherzustellen, wird das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>Socket</code> verwendet. Durch Aufruf der Modul-Funktion <code>inet_aton</code> wird eine in üblicher Schreibweise notierte, übergebene IP-Adresse in die erforderliche binäre Form umgewandelt. Das Ergebnis wird in dem Skalar <code>$addr</code> gespeichert. Das Modul <code>Socket</code> stellt auch Konstanten für den Adresstyp zur Verfügung. Die korrekte Konstante für den zweiten Parameter von <code>gethostbyaddr</code> ist <code>AF_INET</code>. Durch Übergabe von <code>$addr</code> und <code>AF_INET</code> wird <code>getnetbyaddr</code> richtig versorgt und gibt den Netzwerknamen zur Beispieladresse <code>127.0.0.0</code> aus (üblicherweise <code>loopback</code>).</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: getnetbyname - Eintrag mit bestimmtem Netzwerknamen aus /etc/networks ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getnetbyname_-_Eintrag_mit_bestimmtem_Netzwerknamen_aus_.2Fetc.2Fnetworks_ermitteln"> <span id="getnetbyname"></span> getnetbyname - Eintrag mit bestimmtem Netzwerknamen aus <var>/etc/networks</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fhosts.3C.2Fvar.3E">/etc/networks</a> die IP-Adresse zu einem bestimmten Netzwerknamen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den gewünschten Netzwerknamen.
+</li></ol>
+<p>Gibt die zugehörige IP-Adresse zurück, allerdings binär numerisch.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">use</span> Socket<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$addr</span>  <span class="sy0">=</span> <span class="kw3">getnetbyname</span><span class="br0">&#40;</span><span class="st0">&quot;loopback&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> inet_ntoa<span class="br0">&#40;</span><span class="re0">$addr</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie die IP-Adresse zu einem Netzwerknamen auf dem Rechner ermitteln können. Dazu wird das <a href="http://wiki.selfhtml.org/wiki/Perl/Module/Standardmodule" title="Perl/Module/Standardmodule">Standardmodul</a> <code>Socket</code> verwendet. Damit lässt sich der binär numerische Rückgabewert von <code>getnetbyname</code>, der im Beispiel in dem Skalar <code>$addr</code> gespeichert wird, bequem in die übliche Schreibweise konvertieren. Durch Aufruf der Modul-Funktion <code>inet_ntoa</code> wird <code>$addr</code> in die übliche Schreibweise umgewandelt. Das Ergebnis der Konvertierung wird im Beispiel in dem Skalar <code>$Wert</code> gespeichert. Anschließend wird die IP-Adresse zu dem Netzwerknamen <code>loopback</code> ausgegeben (üblicherweise <code>127.0.0.0</code>).</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: getnetent - nächsten Eintrag von /etc/networks ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getnetent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fnetworks_ermitteln"> <span id="getnetent"></span> getnetent - nächsten Eintrag von <var>/etc/networks</var> ermitteln </span></h2>
+<p>Ermittelt im skalaren Kontext den jeweils nächsten Eintrag aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fnetworks.3C.2Fvar.3E">/etc/networks</a> oder im Listenkontext eine Liste mit vier Elementen.
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt je nach Kontext entweder den nächsten Dateieintrag oder die Liste zurück. Bei Dateiende wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getnetent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Liste</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Liste[0]  $Liste[1]  $Liste[2]  $Liste[3]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getnetent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie alle Einträge der Datei <var>/etc/networks</var> mit einem CGI-Script im Browser ausgeben können. Zunächst wird <code>getnetent</code> erstmals aufgerufen. Der Rückgabewert wird als Listenkontext interpretiert und im Array <code>@Liste</code> gespeichert. Solange die Liste einen Inhalt enthält - <code>while(@Liste)</code> - werden die vier Elemente der Liste ausgegeben, und <code>getnetent</code> wird für den nächsten Schleifendurchgang aufgerufen. Die vier Elemente der Liste, die von der Funktion zurückgegeben wird, sind:<br />
+<p><code>$Liste[0]</code> = Name des Netzwerks,<br />
+<code>$Liste[1]</code> = Aliasnamen des Netzwerks,<br />
+<code>$Liste[2]</code> = Adresstyp,<br />
+</p>
+<code>$Liste[3]</code> = Nummer des Netzwerks</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: getprotobyname - Eintrag mit bestimmtem Protokollnamen aus /etc/protocols ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getprotobyname_-_Eintrag_mit_bestimmtem_Protokollnamen_aus_.2Fetc.2Fprotocols_ermitteln"> <span id="getprotobyname"></span> getprotobyname - Eintrag mit bestimmtem Protokollnamen aus <var>/etc/protocols</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fprotocols.3C.2Fvar.3E">/etc/protocols</a> die Protokollnummer zu einem bestimmten Protokollnamen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den gewünschten Protokollnamen.
+</li></ol>
+<p>Gibt die zugehörige Protokollnummer zurück. Wenn der übergebene Protokollname nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getprotobyname</span><span class="br0">&#40;</span><span class="st0">&quot;tcp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt die Protokollnummer zum Protokoll <code>tcp</code>. Dazu dient der Aufruf <code>getprotobyname("tcp")</code>, dessen Rückgabewert im Skalar <code>$Wert</code> gespeichert wird. Zur Kontrolle wird der Wert ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=25" title="Abschnitt bearbeiten: getprotobynumber - Eintrag mit bestimmter Protokollnummer aus /etc/protocols ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getprotobynumber_-_Eintrag_mit_bestimmter_Protokollnummer_aus_.2Fetc.2Fprotocols_ermitteln"> <span id="getprotobynumber"></span> getprotobynumber - Eintrag mit bestimmter Protokollnummer aus <var>/etc/protocols</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fprotocols.3C.2Fvar.3E">/etc/protocols</a> den Protokollnamen zu einer bestimmten Protokollnummer.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die gewünschte Protokollnummer.
+</li></ol>
+<p>Gibt den zugehörigen Protokollnamen zurück. Wenn die übergebene Protokollnummer nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getprotobynumber</span><span class="br0">&#40;</span><span class="nu0">17</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt den Protokollnamen zur Protokollnummer <code>17</code>. Dazu dient der Aufruf <code>getprotobynumber(17)</code>, dessen Rückgabewert im Skalar <code>$Wert</code> gespeichert wird. Zur Kontrolle wird der Wert ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=26" title="Abschnitt bearbeiten: getprotoent - nächsten Eintrag von /etc/protocols ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getprotoent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fprotocols_ermitteln"> <span id="getprotoent"></span> getprotoent - nächsten Eintrag von <var>/etc/protocols</var> ermitteln </span></h2>
+<p>Ermittelt im skalaren Kontext den jeweils nächsten Eintrag aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fprotocols.3C.2Fvar.3E">/etc/protocols</a> oder im Listenkontext eine Liste mit drei Elementen.
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt je nach Kontext entweder den nächsten Dateieintrag oder die Liste zurück. Bei Dateiende wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getprotoent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Liste</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Liste[0]  $Liste[1]  $Liste[2]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getprotoent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie alle Einträge der Datei <var>/etc/protocols</var> mit einem CGI-Script ausgeben lassen können. Zunächst wird <code>getprotoent</code> erstmals aufgerufen. Der Rückgabewert wird als Listenkontext interpretiert und im Array <code>@Liste</code> gespeichert. Solange die Liste einen Inhalt enthält - <code>while(@Liste)</code> - werden die vier Elemente der Liste ausgegeben, und <code>getnetent</code> wird für den nächsten Schleifendurchgang aufgerufen. Die drei Elemente der Liste, die von der Funktion zurückgegeben wird, sind:<br />
+<p><code>$Liste[0]</code> = Protokollname,<br />
+<code>$Liste[1]</code> = Protokollnummer,<br />
+</p>
+<code>$Liste[2]</code> = Aliasname des Protokolls</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=27" title="Abschnitt bearbeiten: getpwent - nächsten Eintrag von /etc/passwd ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getpwent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fpasswd_ermitteln"> <span id="getpwent"></span> getpwent - nächsten Eintrag von <var>/etc/passwd</var> ermitteln </span></h2>
+<p>Ermittelt im skalaren Kontext den jeweils nächsten Eintrag aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fpasswd.3C.2Fvar.3E">/etc/passwd</a> oder im Listenkontext eine Liste mit bis zu neun Elementen.
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt je nach Kontext entweder den nächsten Dateieintrag oder die Liste zurück. Bei Dateiende wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getpwent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Liste</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Liste[0]  $Liste[1]  $Liste[2]  $Liste[3]  $Liste[4]  $Liste[5]  $Liste[6]  $Liste[7]  $Liste[8]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getpwent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie alle Einträge der Datei <var>/etc/passwd</var> mit einem CGI-Script ausgeben lassen können. Zunächst wird <code>getpwent</code> erstmals aufgerufen. Der Rückgabewert wird als Listenkontext interpretiert und im Array <code>@Liste</code> gespeichert. Solange die Liste einen Inhalt enthält - <code>while(@Liste)</code> - werden die neun Elemente der Liste ausgegeben, und <code>getpwent</code> wird für den nächsten Schleifendurchgang aufgerufen. Die neun Elemente der Liste, die von der Funktion zurückgegeben wird, sind:<br />
+<p><code>$Liste[0]</code> = Benutzername,<br />
+<code>$Liste[1]</code> = Benutzerpasswort(verschlüsselt),<br />
+<code>$Liste[2]</code> = Benutzernummer (UID),<br />
+<code>$Liste[3]</code> = Nummer der zugehörigen Berechtigungsgruppe (GID),<br />
+<code>$Liste[4]</code> = beschreibende Angaben,<br />
+<code>$Liste[5]</code> = beschreibende Angaben,<br />
+<code>$Liste[6]</code> = Heimatverzeichnis des Benutzers,<br />
+<code>$Liste[7]</code> = Shell des Benutzers,<br />
+</p>
+<code>$Liste[8]</code> = (optional) Verfallszeitpunkt der Gültigkeit des Eintrags</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=28" title="Abschnitt bearbeiten: getpwnam - Eintrag mit bestimmtem Benutzernamen aus /etc/passwd ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getpwnam_-_Eintrag_mit_bestimmtem_Benutzernamen_aus_.2Fetc.2Fpasswd_ermitteln"> <span id="getpwnam"></span> getpwnam - Eintrag mit bestimmtem Benutzernamen aus <var>/etc/passwd</var> ermitteln </span></h2>
+<p>Ermittelt zu einem bestimmten Benutzernamen den Eintrag aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fpasswd.3C.2Fvar.3E">/etc/passwd</a> den zugehörigen Eintrag. Im skalaren Kontext wird die Benutzernummer (UID) ermittelt, im Listenkontext eine Liste mit bis zu neun Elementen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den gewünschten Benutzernamen.
+</li></ol>
+<p>Gibt im skalaren Kontext die zugehörige Benutzernummer (UID) und im Listenkontext eine Liste mit allen Daten des Eintrags zurück. Wenn der Benutzername nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getpwnam</span><span class="br0">&#40;</span><span class="st0">&quot;uucp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Liste[0]  $Liste[1]  $Liste[2]  $Liste[3]  $Liste[4]  $Liste[5]  $Liste[6]  $Liste[7]  $Liste[8]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getpwnam</span><span class="br0">&#40;</span><span class="st0">&quot;uucp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt für den Benutzernamen <code>uucp</code>, der der Funktion <code>getpwnam</code> übergeben wird, den zugehörigen Eintrag - zuerst im Listenkontext, und beim zweiten Aufruf im skalaren Kontext. Im Listenkontext werden alle neun Elemente des Eintrags ermittelt und im Array <code>@Liste</code> gespeichert, im skalaren Kontext nur die Benutzernummer (UID), gespeichert im Skalar <code>$Wert</code>. Das Beispiel gibt beide Aufrufergebnisse zur Kontrolle aus. Zur Bedeutung der Array-Elemente siehe Funktion <a href="#getpwent">getpwent</a>.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=29" title="Abschnitt bearbeiten: getpwuid - Eintrag mit bestimmter Benutzernummer aus /etc/passwd ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getpwuid_-_Eintrag_mit_bestimmter_Benutzernummer_aus_.2Fetc.2Fpasswd_ermitteln"> <span id="getpwuid"></span> getpwuid - Eintrag mit bestimmter Benutzernummer aus <var>/etc/passwd</var> ermitteln </span></h2>
+<p>Ermittelt zu einer bestimmten Benutzernummer (UID) den Eintrag aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fpasswd.3C.2Fvar.3E">/etc/passwd</a> den zugehörigen Eintrag. Im skalaren Kontext wird der Benutzername ermittelt, im Listenkontext eine Liste mit bis zu neun Elementen.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die gewünschte Benutzernummer (UID).
+</li></ol>
+<p>Gibt im skalaren Kontext den zugehörigen Benutzernamen und im Listenkontext eine Liste mit allen Daten des Eintrags zurück. Wenn die Benutzernummer nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getpwuid</span><span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Liste[0]  $Liste[1]  $Liste[2]  $Liste[3]  $Liste[4]  $Liste[5]  $Liste[6]  $Liste[7]  $Liste[8]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getpwuid</span><span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt für die Benutzernummer <code>2</code>, der der Funktion <code>getpwuid</code> übergeben wird, den zugehörigen Eintrag - zuerst im Listenkontext, und beim zweiten Aufruf im skalaren Kontext. Im Listenkontext werden alle neun Elemente des Eintrags ermittelt und im Array <code>@Liste</code> gespeichert, im skalaren Kontext nur der Benutzername, gespeichert im Skalar <code>$Wert</code>. Das Beispiel gibt beide Aufrufergebnisse zur Kontrolle aus. Zur Bedeutung der Listenelemente siehe Funktion <a href="#getpwent">getpwent</a>.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=30" title="Abschnitt bearbeiten: getservbyname - Eintrag mit bestimmtem Portnamen aus /etc/services ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getservbyname_-_Eintrag_mit_bestimmtem_Portnamen_aus_.2Fetc.2Fservices_ermitteln"> <span id="getservbyname"></span> getservbyname - Eintrag mit bestimmtem Portnamen aus <var>/etc/services</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fservices.3C.2Fvar.3E">/etc/services</a> die Portnummer zu einem bestimmten Netzwerkdienst.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Namen des gewünschten Netzwerkdienstes,
+</li><li> den Namen des gewünschten Protokolls.
+</li></ol>
+<p>Gibt die zugehörige Portnummer zurück. Wenn der übergebene Netzwerkname oder das Protokoll nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getservbyname</span><span class="br0">&#40;</span><span class="st0">&quot;www&quot;</span><span class="sy0">,</span><span class="st0">&quot;tcp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt die Portnummer zum Netzwerkdienst <code>www</code> auf dem Netzwerkprotokoll <code>tcp</code>. Dazu dient der Aufruf <code>getservbyname("www","tcp")</code>, dessen Rückgabewert im Skalar <code>$Wert</code> gespeichert wird. Zur Kontrolle wird der Wert ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=31" title="Abschnitt bearbeiten: getservbyport - Eintrag mit bestimmter Portnummer aus /etc/services ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getservbyport_-_Eintrag_mit_bestimmter_Portnummer_aus_.2Fetc.2Fservices_ermitteln"> <span id="getservbyport"></span> getservbyport - Eintrag mit bestimmter Portnummer aus <var>/etc/services</var> ermitteln </span></h2>
+<p>Ermittelt aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fservices.3C.2Fvar.3E">/etc/services</a> den Namen eines Netzwerkdienstes zu einer bestimmten Portnummer.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die gewünschten Portnummer,
+</li><li> den Namen des gewünschten Protokolls.
+</li></ol>
+<p>Gibt den Namen des zugehörigen Netzwerkdienstes zurück. Wenn die übergebene Portnummer oder das Protokoll nicht gefunden wurde, wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getservbyport</span><span class="br0">&#40;</span><span class="nu0">80</span><span class="sy0">,</span><span class="st0">&quot;tcp&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt den Namen des Netzwerkdienstes mit der Portnummer <code>80</code> auf dem Netzwerkprotokoll <code>tcp</code>. Dazu dient der Aufruf <code>getservbyport(80,"tcp")</code>, dessen Rückgabewert im Skalar <code>$Wert</code> gespeichert wird. Zur Kontrolle wird der Wert ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=32" title="Abschnitt bearbeiten: getservent - nächsten Eintrag von /etc/services ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="getservent_-_n.C3.A4chsten_Eintrag_von_.2Fetc.2Fservices_ermitteln"> <span id="getservent"></span> getservent - nächsten Eintrag von <var>/etc/services</var> ermitteln </span></h2>
+<p>Ermittelt im skalaren Kontext den jeweils nächsten Eintrag aus der Datei <a href="#Konfigurationsdatei:_.2Fetc.2Fservices.3C.2Fvar.3E">/etc/services</a> oder im Listenkontext eine Liste mit vier Elementen.
+</p><p>Erwartet keine Parameter.
+</p><p>Gibt je nach Kontext entweder den nächsten Dateieintrag oder die Liste zurück. Bei Dateiende wird <code>undef</code> zurückgegeben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getservent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Liste</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Liste[0]  $Liste[1]  $Liste[2]  $Liste[3]<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="re0">@Liste</span> <span class="sy0">=</span> <span class="kw3">getservent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Sie alle Einträge der Datei <var>/etc/services</var> mit einem CGI-Script ausgeben lassen können. Zunächst wird <code>getservent</code> erstmals aufgerufen. Der Rückgabewert wird als Listenkontext interpretiert und im Array <code>@Liste</code> gespeichert. Solange die Liste einen Inhalt enthält - <code>while(@Liste)</code> - werden die vier Elemente der Liste ausgegeben, und <code>getservent</code> wird für den nächsten Schleifendurchgang aufgerufen. Die vier Elemente der Liste, die von der Funktion zurückgegeben wird, sind:<br />
+<p><code>$Liste[0]</code> = Name des Netzwerkdienstes,<br />
+<code>$Liste[1]</code> = Aliasname des Netzwerkdienstes,<br />
+<code>$Liste[2]</code> = Portnummer des Netzwerkdienstes,<br />
+</p>
+<code>$Liste[3]</code> = Name des zugehörigen Protokolls</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=33" title="Abschnitt bearbeiten: setgrent - zum Anfang von /etc/groups springen">Bearbeiten</a>]</span> <span class="mw-headline" id="setgrent_-_zum_Anfang_von_.2Fetc.2Fgroups_springen"> <span id="setgrent"></span> setgrent - zum Anfang von <var>/etc/groups</var> springen </span></h2>
+<p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">setgrent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getgrent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel springt mit <code>setgrent</code> zum Anfang der Datei. Anschließend liest es mit <a href="#getgrent">getgrent</a> den nächsten, in dem Fall den ersten Eintrag der Datei aus. Der Rückgabewert, der im Skalar <code>$Wert</code> gespeichert ist, wird zur Kontrolle ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=34" title="Abschnitt bearbeiten: sethostent - zum Anfang von /etc/hosts springen">Bearbeiten</a>]</span> <span class="mw-headline" id="sethostent_-_zum_Anfang_von_.2Fetc.2Fhosts_springen"> <span id="sethostent"></span> sethostent - zum Anfang von <var>/etc/hosts</var> springen </span></h2>
+<p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">sethostent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">gethostent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel springt mit <code>sethostent</code> zum Anfang der Datei. Anschließend liest es mit <a href="#gethostent">gethostent</a> den nächsten, in dem Fall den ersten Eintrag der Datei aus. Der Rückgabewert, der im Skalar <code>$Wert</code> gespeichert ist, wird zur Kontrolle ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=35" title="Abschnitt bearbeiten: setnetent - zum Anfang von /etc/networks springen">Bearbeiten</a>]</span> <span class="mw-headline" id="setnetent_-_zum_Anfang_von_.2Fetc.2Fnetworks_springen"> <span id="setnetent"></span> setnetent - zum Anfang von <var>/etc/networks</var> springen </span></h2>
+<p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">setnetent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getnetent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel springt mit <code>setnetent</code> zum Anfang der Datei. Anschließend liest es mit <a href="#getnetent">getnetent</a> den nächsten, in dem Fall den ersten Eintrag der Datei aus. Der Rückgabewert, der im Skalar <code>$Wert</code> gespeichert ist, wird zur Kontrolle ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=36" title="Abschnitt bearbeiten: setprotoent - zum Anfang von /etc/protocols springen">Bearbeiten</a>]</span> <span class="mw-headline" id="setprotoent_-_zum_Anfang_von_.2Fetc.2Fprotocols_springen"> <span id="setprotoent"></span> setprotoent - zum Anfang von <var>/etc/protocols</var> springen </span></h2>
+<p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">setprotoent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getprotoent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel springt mit <code>setprotoent</code> zum Anfang der Datei. Anschließend liest es mit <a href="#getprotoent">getprotoent</a> den nächsten, in dem Fall den ersten Eintrag der Datei aus. Der Rückgabewert, der im Skalar <code>$Wert</code> gespeichert ist, wird zur Kontrolle ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=37" title="Abschnitt bearbeiten: setpwent - zum Anfang von /etc/passwd springen">Bearbeiten</a>]</span> <span class="mw-headline" id="setpwent_-_zum_Anfang_von_.2Fetc.2Fpasswd_springen"> <span id="setpwent"></span> setpwent - zum Anfang von <var>/etc/passwd</var> springen </span></h2>
+<p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">setpwent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getpwent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel springt mit <code>setpwent</code> zum Anfang der Datei. Anschließend liest es mit <a href="#getpwent">getpwent</a> den nächsten, in dem Fall den ersten Eintrag der Datei aus. Der Rückgabewert, der im Skalar <code>$Wert</code> gespeichert ist, wird zur Kontrolle ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;section=38" title="Abschnitt bearbeiten: setservent - zum Anfang von /etc/services springen">Bearbeiten</a>]</span> <span class="mw-headline" id="setservent_-_zum_Anfang_von_.2Fetc.2Fservices_springen"> <span id="setservent"></span> setservent - zum Anfang von <var>/etc/services</var> springen </span></h2>
+<p>Erwartet keine Parameter.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">setservent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Wert</span> <span class="sy0">=</span> <span class="kw3">getservent</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wert<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel springt mit <code>setservent</code> zum Anfang der Datei. Anschließend liest es mit <a href="#getservent">getservent</a> den nächsten, in dem Fall den ersten Eintrag der Datei aus. Der Rückgabewert, der im Skalar <code>$Wert</code> gespeichert ist, wird zur Kontrolle ausgegeben.</div>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 2198/1000000
+Post‐expand include size: 82421/2097152 bytes
+Template argument size: 74330/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3105-0!*!0!!de-formal!*!* and timestamp 20150301151029 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;oldid=13960">http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;oldid=13960</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FFunktionen+f%C3%BCr+Informationen+aus+Konfigurationsdateien" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Informationen_aus_Konfigurationsdateien&amp;oldid=13960" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FFunktionen_für_Informationen_aus_Konfigurationsdateien" title="Spezial:Durchsuchen/Perl-2FFunktionen für Informationen aus Konfigurationsdateien">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 16. September 2012 um 19:26 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.739-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.195 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Informationen_aus_Konfigurationsdateien by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:19 GMT -->
+</html>

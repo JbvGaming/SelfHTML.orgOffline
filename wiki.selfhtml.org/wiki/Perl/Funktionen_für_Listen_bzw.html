@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Funktionen für Listen bzw. Arrays und Hashes – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes","wgTitle":"Perl/Funktionen für Listen bzw. Arrays und Hashes","wgCurRevisionId":13917,"wgArticleId":1885,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Funktionen für Listen bzw. Arrays und Hashes" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Funktionen_für_Listen_bzw_Arrays_und_Hashes skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Funktionen für Listen bzw. Arrays und Hashes</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Allgemeines_zu_diesen_Funktionen"><span class="tocnumber">1</span> <span class="toctext">Allgemeines zu diesen Funktionen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#delete_-_Elementpaar_aus_Hash_l.C3.B6schen"><span class="tocnumber">2</span> <span class="toctext">delete - Elementpaar aus Hash löschen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#each_-_n.C3.A4chstes_Elementpaar_aus_Hash_ermitteln"><span class="tocnumber">3</span> <span class="toctext">each - nächstes Elementpaar aus Hash ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#exists_-_Ermitteln_ob_ein_Hash-Name_existiert"><span class="tocnumber">4</span> <span class="toctext">exists - Ermitteln ob ein Hash-Name existiert</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#grep_-_Teilliste_aus_Liste_durch_Bedingung_extrahieren"><span class="tocnumber">5</span> <span class="toctext">grep - Teilliste aus Liste durch Bedingung extrahieren</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#join_-_Liste_in_Zeichenkette_verwandeln"><span class="tocnumber">6</span> <span class="toctext">join - Liste in Zeichenkette verwandeln</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#keys_-_Alle_Namen_eines_Hashes_ermitteln"><span class="tocnumber">7</span> <span class="toctext">keys - Alle Namen eines Hashes ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#map_-_Befehle_auf_alle_Listenelemente_anwenden"><span class="tocnumber">8</span> <span class="toctext">map - Befehle auf alle Listenelemente anwenden</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#pop_-_letztes_Element_eines_Arrays_l.C3.B6schen"><span class="tocnumber">9</span> <span class="toctext">pop - letztes Element eines Arrays löschen</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#push_-_Elemente_an_einen_Array_anh.C3.A4ngen"><span class="tocnumber">10</span> <span class="toctext">push - Elemente an einen Array anhängen</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#reverse_-_Reihenfolge_der_Listenelemente_umkehren"><span class="tocnumber">11</span> <span class="toctext">reverse - Reihenfolge der Listenelemente umkehren</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#shift_-_erstes_Element_eines_Arrays_l.C3.B6schen"><span class="tocnumber">12</span> <span class="toctext">shift - erstes Element eines Arrays löschen</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#sort_-_Listenelemente_sortieren"><span class="tocnumber">13</span> <span class="toctext">sort - Listenelemente sortieren</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#splice_-_Elemente_innerhalb_eines_Arrays_l.C3.B6schen.2C_hinzuf.C3.BCgen.2C_ersetzen"><span class="tocnumber">14</span> <span class="toctext">splice - Elemente innerhalb eines Arrays löschen, hinzufügen, ersetzen</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#undef_-_Wert_aus_Hash_oder_Array_entfernen"><span class="tocnumber">15</span> <span class="toctext">undef - Wert aus Hash oder Array entfernen</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#unshift_-_Elemente_am_Anfang_eines_Arrays_hinzuf.C3.BCgen"><span class="tocnumber">16</span> <span class="toctext">unshift - Elemente am Anfang eines Arrays hinzufügen</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#values_-_Alle_Werte_eines_Hashes_ermitteln"><span class="tocnumber">17</span> <span class="toctext">values - Alle Werte eines Hashes ermitteln</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#qw.28Liste.29_Queryword_Operator"><span class="tocnumber">18</span> <span class="toctext">qw(Liste) Queryword Operator</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Allgemeines zu diesen Funktionen">Bearbeiten</a>]</span> <span class="mw-headline" id="Allgemeines_zu_diesen_Funktionen"> Allgemeines zu diesen Funktionen </span></h2>
+<p>Um die hier versammelten Funktionen zu verstehen, müssen Sie wissen, welche Bedeutung Listen, Arrays und Hashes in Perl haben, wie sie definiert werden, und welche Besonderheiten sie aufweisen. Dies wird in den Abschnitten über <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Listen</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hashes</a> behandelt.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: delete - Elementpaar aus Hash löschen">Bearbeiten</a>]</span> <span class="mw-headline" id="delete_-_Elementpaar_aus_Hash_l.C3.B6schen"> <span id="delete"></span> delete - Elementpaar aus Hash löschen</span></h2>
+<p>Löscht ein beliebiges Elementpaar aus einem Hash. Im Gegensatz zur Funktion <a href="#undef">undef</a>, die nur den Wert löscht, das Elementpaar jedoch stehen lässt, entfernt <code>delete</code> das gesamte Elementpaar.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Schlüssel des zu löschenden Elementes.
+</li></ol>
+<p>Gibt den Wert des gelöschten Elementpaars zurück, oder <code>undef</code>, falls nichts gelöscht wurde.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">%hash</span><span class="sy0">=</span><span class="br0">&#40;</span> a <span class="sy0">=&gt;</span> <span class="st0">&quot;Wert A&quot;</span><span class="sy0">,</span> b <span class="sy0">=&gt;</span> <span class="st0">&quot;Wert B&quot;</span><span class="sy0">,</span> c <span class="sy0">=&gt;</span> <span class="st0">&quot;Wert C&quot;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$return_1</span> <span class="sy0">=</span> <span class="kw3">delete</span> <span class="re0">$hash</span><span class="br0">&#123;</span>a<span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$return_2</span> <span class="sy0">=</span> <span class="kw3">delete</span> <span class="re0">$hash</span><span class="br0">&#123;</span>a<span class="br0">&#125;</span><span class="sy0">;</span>
+   <span class="kw3">delete</span> <span class="re0">$hash</span><span class="br0">&#123;</span>a<span class="br0">&#125;</span> <span class="kw1">if</span> <span class="kw3">exists</span> hash<span class="br0">&#123;</span>a<span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@slice</span> <span class="sy0">=</span> <span class="kw3">delete</span> <span class="re0">@hash</span><span class="br0">&#123;</span><span class="kw3">qw</span><span class="br0">&#40;</span>b c<span class="br0">&#41;</span><span class="br0">&#125;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;END&quot;;
+Content-type:text/plain
+&#160;
+Return 1 (erwartet &quot;Wert A&quot;)   &#160;: $return_1 
+Return 2 (erwartet undef)      &#160;: $return_2 
+Slice (erwartet &quot;Wert B,Wert C&quot;): @slice
+END</span>
+<span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Hash mit vier Elementen. 
+<p>Mit Hilfe der Funktion <code>delete</code> wird anschließend 
+</p>
+<ol><li>ein einzelnes Element gelöscht und der Rückgabewert gespeichert.
+</li><li>das gleiche Element nochmals gelöscht und der Rückgabewert gespeichert. Hierbei sollte der Rückgabewert <code>undef</code> sein und einen Fehler erzeugen. Ein solcher Fehler lässt sich mit einer zusätzlichen <code>exists</code>-Abfrage vermeiden.
+</li><li> ein Hashslice gelöscht und die Rückgabewerte in einem Array gespeichert.
+</li></ol>
+Anschließend werden die Rückgabewerte zur Kontrolle ausgegeben. Der Rückgabewert von delete ist der Wert des gelöschten Hashelementes.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Sie können <code>delete</code> auch auf vordefinierte Hashes wie <code>%ENV</code> anwenden. Dabei werden die Umgebungsvariablen geändert.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/delete.html">http://perldoc.perl.org/functions/delete.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: each - nächstes Elementpaar aus Hash ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="each_-_n.C3.A4chstes_Elementpaar_aus_Hash_ermitteln"> <span id="each"></span> each - nächstes Elementpaar aus Hash ermitteln</span></h2>
+<p>Ermittelt das jeweils nächste Elementpaar eines Hashes und ist daher vor allem geeignet, alle Elementpaare in einer Schleife zu verarbeiten.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Hash.
+</li></ol>
+<p>Gibt je nach Wunsch entweder eine 2-Element-Liste mit dem Namen und dem Wert des nächsten Elementpaars zurück, oder einen Skalar mit dem Namen des nächsten Elementpaars.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">%EMail</span> <span class="sy0">=</span> <span class="br0">&#40;</span>
+       <span class="st0">&quot;Sender&quot;</span>  <span class="sy0">=&gt;</span> <span class="st0">&quot;tabaluga<span class="es0">\@</span>example.org&quot;</span><span class="sy0">,</span>
+       <span class="st0">&quot;Received&quot;</span> <span class="sy0">=&gt;</span><span class="st0">&quot;from smtp<span class="es0">\@</span>mailout.de&quot;</span><span class="sy0">,</span>
+       <span class="st0">&quot;Date&quot;</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;Sat, 01 Apr 2000 01:45:35 +0200&quot;</span><span class="sy0">,</span>
+       <span class="st0">&quot;X-Mailer&quot;</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;Mozilla 4.72 [en] (WinNT; U)&quot;</span><span class="sy0">,</span>
+       <span class="st0">&quot;To&quot;</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;beispiel<span class="es0">\@</span>example.org&quot;</span><span class="sy0">,</span>
+       <span class="st0">&quot;Content-Type&quot;</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;text/plain; charset=us-ascii&quot;</span>
+    <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$out</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span> <span class="kw1">my</span> <span class="br0">&#40;</span><span class="re0">$Name</span><span class="sy0">,</span> <span class="re0">$Wert</span><span class="br0">&#41;</span> <span class="sy0">=</span> <span class="kw3">each</span> <span class="re0">%EMail</span> <span class="br0">&#41;</span><span class="br0">&#123;</span>
+   <span class="re0">$out</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st0">&quot;%s:&#160;%s<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$Name</span><span class="sy0">,</span> <span class="re0">$Wert</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="re0">$out</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Hash mit Elementpaaren, die typische Kopfdaten einer E-Mail darstellen. Anschließend wird HTML-Code, in dem alle Elementpaare des Hashes zeilenweise ausgegeben werden, erzeugt. Dazu werden die Elementpaare in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#while-Schleifen" title="Perl/Schleifen">while-Schleife</a> mit <code>each</code> abgearbeitet. Der Rückgabewert von <code>each</code> wird im Beispiel in einer 2-Element-Liste <code>my ($Name, $Wert)</code> gespeichert. Würde dort nur ein Skalar stehen, also etwa <code>$NextElement</code>, dann würde darin nur der Name des nächsten Elements gespeichert, also etwa <code>Sender</code>, nicht der zugehörige Wert (<code>tabaluga@example.org</code>).</div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/each.html">http://perldoc.perl.org/functions/each.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: exists - Ermitteln ob ein Hash-Name existiert">Bearbeiten</a>]</span> <span class="mw-headline" id="exists_-_Ermitteln_ob_ein_Hash-Name_existiert"> <span id="exists"></span> exists - Ermitteln ob ein Hash-Name existiert</span></h2>
+<p>Ermittelt, ob ein Name in einem Hash vorkommt und wird daher normalerweise in Verbindung mit einer <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen#Bedingte_Anweisungen_mit_if.2C_else_und_elsif" title="Perl/Bedingte Anweisungen">if-Abfrage</a> verwendet.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Elementnamen.
+</li></ol>
+<p>Gibt <code>true</code> zurück, wenn der Elementname im Hash vorkommt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">%Angestellte</span> <span class="sy0">=</span><span class="br0">&#40;</span>
+   name <span class="sy0">=&gt;</span> <span class="st0">&quot;Mustermann&quot;</span><span class="sy0">,</span>
+   vorname <span class="sy0">=&gt;</span> <span class="st0">&quot;Hans&quot;</span><span class="sy0">,</span>
+   geschlecht <span class="sy0">=&gt;</span> <span class="st0">&quot;m&quot;</span><span class="sy0">,</span>
+   funktion <span class="sy0">=&gt;</span> <span class="st0">&quot;Stellvertreter&quot;</span><span class="sy0">,</span>
+   abteilung <span class="sy0">=&gt;</span> <span class="st0">&quot;Dokumentation&quot;</span><span class="sy0">,</span>
+   eintritt <span class="sy0">=&gt;</span> <span class="st0">&quot;11.11.2011&quot;</span><span class="sy0">,</span>
+<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> Vorstellungstext<span class="br0">&#123;</span>
+  <span class="kw1">my</span> <span class="re0">%Angestellter</span> <span class="sy0">=</span> <span class="co5">@_</span><span class="sy0">;</span>
+&#160;
+  <span class="kw3">exists</span> <span class="re0">$Angestellter</span><span class="br0">&#123;</span>austritt<span class="br0">&#125;</span>
+    <span class="kw1">and</span> <span class="kw3">defined</span> <span class="re0">$Angestellter</span><span class="br0">&#123;</span>austritt<span class="br0">&#125;</span>
+    <span class="kw1">and</span> <span class="kw3">return</span> <span class="kw3">undef</span><span class="sy0">;</span>
+&#160;
+  <span class="kw1">if</span><span class="br0">&#40;</span><span class="kw1">not</span> <span class="kw3">exists</span> <span class="re0">$Angestellter</span><span class="br0">&#123;</span>vorname<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="re0">$Angestellter</span><span class="br0">&#123;</span>vorname<span class="br0">&#125;</span> <span class="sy0">=</span>
+      <span class="br0">&#40;</span> <span class="re0">$Angestellter</span><span class="br0">&#123;</span>geschlecht<span class="br0">&#125;</span> <span class="kw1">eq</span> <span class="st0">&quot;m&quot;</span> <span class="sy0">?</span> <span class="st0">&quot;Herr&quot;</span> <span class="sy0">:</span> <span class="st0">&quot;Frau&quot;</span> <span class="br0">&#41;</span>
+  <span class="br0">&#125;</span>
+  <span class="kw3">return</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st0">&quot;%s&#160;%s arbeitet seit dem&#160;%s als&#160;%s in der Abteilung&#160;%s.&quot;</span><span class="sy0">,</span>
+     <span class="re0">$Angestellter</span><span class="br0">&#123;</span>vorname<span class="br0">&#125;</span><span class="sy0">,</span>
+     <span class="re0">$Angestellter</span><span class="br0">&#123;</span>name<span class="br0">&#125;</span><span class="sy0">,</span>
+     <span class="re0">$Angestellter</span><span class="br0">&#123;</span>eintritt<span class="br0">&#125;</span> <span class="sy0">||</span> <span class="st_h">'(Datum unbekannt)'</span><span class="sy0">,</span>
+     <span class="re0">$Angestellter</span><span class="br0">&#123;</span>funktion<span class="br0">&#125;</span> <span class="sy0">||</span> <span class="st_h">'Reservist'</span><span class="sy0">,</span>
+     <span class="re0">$Angestellter</span><span class="br0">&#123;</span>abteilung<span class="br0">&#125;</span> <span class="sy0">||</span> <span class="st_h">'Aussendienst'</span><span class="sy0">,</span>
+  <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$report</span> <span class="sy0">=</span> Vorstellungstext<span class="br0">&#40;</span><span class="re0">%Angestellter</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type:text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="re0">$report</span> <span class="kw1">and</span> <span class="kw3">print</span> <span class="re0">$report</span><span class="sy0">,</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel zeigt, wie Personaldaten aus einem Hash in einen Text eingebaut werden. Hierbei werden Bedingungen abgefragt.
+<p><code><b>exists</b> $Angestellter{austritt} and defined $Angestellter{austritt} and return undef;</code> bewirkt die Rückkehr aus der Subroutine, wenn ein definiertes Austrittsdatum vorliegt. Hierbei wird <code>undef</code> als Wert zurückgegeben.
+</p><p><code>if(not <b>exists</b> $Angestellter{vorname}){...}</code> ergänzt dieses Hashelement mit einem geeigneten Eintrag entsprechend dem Geschlecht.
+</p><p>Zuletzt werden die Hashelemente in einen formatierten String eingebaut. Hierbei werden allenfalls fehlende Schlüssel noch alternativ mit Standardeinträgen versehen. Der formatierte Text wird zurückgegeben.
+</p><p>Im Anschluss wird die Subfunktion aufgerufen und im Erfolgsfall ausgegeben.
+</p>
+Der Text lautet: "Hans Mustermann arbeitet seit dem 11.11.2011 als Stellvertreter in der Abteilung Dokumentation."</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Wenn Sie auf ein nicht existierendes Hashelement zugreifen, dann wird dieses erzeugt mit dem Wert <code>undef</code>.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/exists.html">http://perldoc.perl.org/functions/exists.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: grep - Teilliste aus Liste durch Bedingung extrahieren">Bearbeiten</a>]</span> <span class="mw-headline" id="grep_-_Teilliste_aus_Liste_durch_Bedingung_extrahieren"> <span id="grep"></span> grep - Teilliste aus Liste durch Bedingung extrahieren</span></h2>
+<p>Extrahiert bestimmte Elemente aus einer Liste, und zwar solche, die einer bestimmten Bedingung genügen, also etwa alle ungeraden Zahlen aus einer Liste mit Zahlen, oder alle Dateien ab einer bestimmten Größe aus einer Liste mit Dateien. Die extrahierten Elemente werden in einer eigenen neuen Liste gespeichert.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die Bedingung, der zu extrahierende Elemente der Liste genügen sollen. Es kann sich beispielsweise um einen regulären Ausdruck handeln, aber auch um einen vergleichenden Ausdruck.
+</li><li> die Liste, aus der extrahiert werden soll.
+</li></ol>
+<p>Gibt eine Liste mit extrahierten Elementen zurück, die der Bedingung genügen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">opendir</span><span class="br0">&#40;</span>DIR<span class="sy0">,</span> <span class="st0">&quot;/var/www/selfhtml/dokumente&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Eintraege</span> <span class="sy0">=</span> <span class="kw3">readdir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">closedir</span><span class="br0">&#40;</span>DIR<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">chdir</span><span class="br0">&#40;</span><span class="st0">&quot;/var/www/selfhtml/dokumente&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="co1"># Extrahieren</span>
+<span class="kw1">my</span> <span class="re0">@HTML_Dateien</span> <span class="sy0">=</span> <span class="kw3">grep</span><span class="br0">&#40;</span> <span class="kw3">m</span><span class="sy0">~</span>\<span class="sy0">.</span>x<span class="sy0">?</span>htm<span class="sy0">~,</span> <span class="re0">@Eintraege</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Grosse_Dateien</span> <span class="sy0">=</span> <span class="kw3">grep</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="kw3">s</span> <span class="sy0">&gt;</span> <span class="nu0">50</span> <span class="sy0">*</span> <span class="nu0">1024</span><span class="sy0">,</span> <span class="re0">@Eintraege</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="co1"># Ausgabe vorbereiten</span>
+<span class="kw1">my</span><span class="br0">&#40;</span> <span class="re0">$HTML_Dateien</span><span class="sy0">,</span> <span class="re0">$Grosse_Dateien</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@HTML_Dateien</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+   <span class="re0">$HTML_Dateien</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;&lt;li&gt;&lt;a href='%s'&gt;%s&lt;/a&gt;&lt;/li&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="co5">$_</span><span class="sy0">,</span> <span class="co5">$_</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@Grosse_Dateien</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+   <span class="re0">$Grosse_Dateien</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;&lt;li&gt;&lt;a href='%s'&gt;%s&lt;/a&gt;&lt;/li&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="co5">$_</span><span class="sy0">,</span> <span class="co5">$_</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;END&quot;;
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;h2&gt;HTML-Dateien im Verzeichnis&lt;/h2&gt;
+&lt;ul&gt; $HTML_Dateien &lt;/ul&gt;
+&lt;h2&gt;Dateien groesser 50KB im Verzeichnis&lt;/h2&gt;
+&lt;ul&gt; $Grosse_Dateien &lt;/ul&gt;
+&lt;/body&gt;&lt;/html&gt;
+END</span>
+<span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird ein Verzeichnis eingelesen. Die Dateien werden in der Liste <code>@Eintraege</code> gespeichert (zum Einlesen von Dateien siehe <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Ein-/Ausgabe_und_Lesen/Schreiben_von_Daten#readdir" title="Perl/Funktionen für Ein-/Ausgabe und Lesen/Schreiben von Daten">readdir</a>). Anschließend wird mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management#chdir" title="Perl/Funktionen für Datei- und Verzeichnis-Management">chdir</a> in das zuvor eingelesene Verzeichnis gewechselt, weil der zweite der nachfolgenden <code>grep</code>-Aufrufe erfordert, dass das eingelesene Verzeichnis das aktuelle Verzeichnis ist.
+<p>Der erste der beiden Aufrufe von <code>grep</code> ermittelt mittels dem <a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">regulären Ausdruck</a> <code>m~\.x?htm~</code> aus der eingelesenen Liste <code>@Eintraege</code> alle Einträge des Typs <i>htm</i>, <i>html</i> oder <i>xhtml</i>,also alle HTML-Dateien der Liste. Die gefundenen Dateien werden in der zurückgegebenen Liste <code>@HTML_Dateien</code> gespeichert.
+</p><p>Beim zweiten Aufruf wird eine vergleichende Bedingung, ähnlich wie man sie etwa aus <a href="http://wiki.selfhtml.org/wiki/Perl/Bedingte_Anweisungen#Bedingte_Anweisungen_mit_if.2C_else_und_elsif" title="Perl/Bedingte Anweisungen">bedingte Anweisungen mit if/unless/else/elsif</a> kennt, angewendet. Im Beispiel werden alle Einträge extrahiert, bei denen die Dateigröße mehr als 50 Kilobyte (50*1024 Byte) beträgt. Dabei kommt der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Datei-_und_Verzeichnis-Management#-.5Bx.5D" title="Perl/Funktionen für Datei- und Verzeichnis-Management">Dateitestoperator</a> <code>-s</code> zum Einsatz. Die gefundenen Dateien werden in der zurückgegebenen Liste <code>@Grosse_Dateien</code> gespeichert.
+</p>
+Das obige Beispiel gibt anschließend HTML-Code mit den beiden ermittelten Listen für HTML-Dateien und Dateien größer 50 Kilobyte aus.</div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/grep.html">http://perldoc.perl.org/functions/grep.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: join - Liste in Zeichenkette verwandeln">Bearbeiten</a>]</span> <span class="mw-headline" id="join_-_Liste_in_Zeichenkette_verwandeln"> <span id="join"></span> join - Liste in Zeichenkette verwandeln</span></h2>
+<p>Bindet die Elemente einer Liste zu einer Zeichenkette zusammen. In der Zeichenkette werden die ehemaligen Listenelemente durch ein bestimmtes Zeichen oder eine bestimmte Zeichenfolge voneinander getrennt.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> das Zeichen oder die Zeichenfolge, die zur Trennung der Listenelemente dienen soll,
+</li><li> die Liste.
+</li></ol>
+<p>Gibt eine Zeichenkette zurück, in der alle Elemente der übergebenen Liste nacheinander notiert sind, getrennt durch das angegebene Zeichen oder die Zeichenfolge zur Trennung.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Werte</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span><span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">&lt;</span><span class="nu0">16</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="re0">$Werte</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">2</span> <span class="sy0">**</span> <span class="br0">&#40;</span><span class="re0">$i</span><span class="sy0">+</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">my</span> <span class="re0">$Wertekette</span> <span class="sy0">=</span> <span class="kw3">join</span><span class="br0">&#40;</span><span class="st0">&quot;;&quot;</span><span class="sy0">,</span><span class="re0">@Werte</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;$Wertekette<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel erzeugt in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for-Schleifen" title="Perl/Schleifen">for-Schleife</a> eine Liste namens <code>@Werte</code>. Darin werden alle Ergebnisse der Operationen von 2<sup>1</sup> bis 2<sup>16</sup> gespeichert (dazu dient der <a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren#Berechnungsoperatoren" title="Perl/Operatoren">Berechnungsoperator</a> <code>**</code>). Anschließend wird diese Liste der Funktion <code>join</code> übergeben. Als Trennzeichen wird ein Semikolon (<code>;</code>) bestimmt. Das Ergebnis wird in dem Skalar <code>$Wertekette</code> gespeichert, einer einfachen Zeichenkette. Zur Kontrolle wird HTML-Code mit dem Ergebnis ausgegeben.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Umkehrfunktion zum Erzeugen einer Liste aus einer Zeichenkette mit Trennzeichen und Werten ist <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#split" title="Perl/Funktionen für Zeichenketten">split</a>.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/join.html">http://perldoc.perl.org/functions/join.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: keys - Alle Namen eines Hashes ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="keys_-_Alle_Namen_eines_Hashes_ermitteln"> <span id="keys"></span> keys - Alle Namen eines Hashes ermitteln</span></h2>
+<p>Speichert alle Namen von Elementpaaren eines Hashes in einer Liste.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Hash.
+</li></ol>
+<p>Gibt eine Liste mit den Namen der Elementpaare zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$ausgabe</span><span class="sy0">;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span> <span class="kw3">sort</span> <span class="kw3">keys</span> <span class="re0">%ENV</span> <span class="br0">&#41;</span><span class="br0">&#123;</span>
+   <span class="re0">$ausgabe</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;&lt;dt&gt;%s&lt;/dt&gt;&lt;dl&gt;%s&lt;/dl&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="co5">$_</span><span class="sy0">,</span> <span class="re0">$ENV</span><span class="br0">&#123;</span><span class="co5">$_</span><span class="br0">&#125;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Umgebungsvariablen&lt;/h1&gt;
+&lt;dt&gt; $ausgabe &lt;/dt&gt;
+&lt;/body&gt;&lt;/html&gt;
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt alle Namen des <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten</a> Hashes <code>%ENV</code> in der Liste <code>@Umgebungsvariablen</code>. Dabei wird über die sortierte Liste aller Schlüssel des Hashes iteriert, um dann einen formatierten Ausgabestring zu erzeugen.
+Zur Kontrolle wird HTML-Code erzeugt, in dem alle Umgebungsvariablen aufgelistet werden.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Funktion, um nur die Werte, nicht die Namen eines Hashs zu ermitteln, ist <a href="#values">values</a>.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/keys.html">http://perldoc.perl.org/functions/keys.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: map - Befehle auf alle Listenelemente anwenden">Bearbeiten</a>]</span> <span class="mw-headline" id="map_-_Befehle_auf_alle_Listenelemente_anwenden"> <span id="map"></span> map - Befehle auf alle Listenelemente anwenden</span></h2>
+<p>Wendet Befehle auf alle Elemente einer Liste an. Praktisch, um eine <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for-Schleifen" title="Perl/Schleifen">for</a>- oder <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#foreach-Schleifen" title="Perl/Schleifen">foreach</a>-Schleife zu vermeiden.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> einen Befehl, der auf alle Listenelemente angewendet werden soll. Es kann sich um eine Funktion handeln, aber auch um eine ganze Folge von Anweisungen, die dann zu einem Block zusammengefasst werden (das aktuelle Listenelement steht dann in Form der Variable <code>$_</code> zur Verfügung).
+</li><li> die Liste, auf die der Befehl angewendet werden soll.
+</li></ol>
+<p>Gibt die bearbeitete Liste zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Dateien</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Index.htm&quot;</span><span class="sy0">,</span><span class="st0">&quot;ACDC.html&quot;</span><span class="sy0">,</span><span class="st0">&quot;acdc.jpg&quot;</span><span class="sy0">,</span><span class="st0">&quot;oasis.htm&quot;</span><span class="sy0">,</span><span class="st0">&quot;Oasis.jpg&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">@Dateien</span> <span class="sy0">=</span> <span class="kw3">map</span><span class="br0">&#40;</span><span class="kw3">lc</span><span class="sy0">,</span> <span class="re0">@Dateien</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@Dateien</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$_&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird eine Liste mit Dateinamen definiert. Die Dateinamen enthalten zum Teil auch Großbuchstaben. Anschließend wird die Funktion <code>map</code> auf die Liste angewendet. Dabei wird die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#lc" title="Perl/Funktionen für Zeichenketten">lc</a> auf alle Elemente der Liste angewendet, die eine Kleinschreibung aller Zeichen erzwingt. Zur Kontrolle gibt das Beispiel HTML-Code mit den Elementen der bearbeiteten Liste aus.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: pop - letztes Element eines Arrays löschen">Bearbeiten</a>]</span> <span class="mw-headline" id="pop_-_letztes_Element_eines_Arrays_l.C3.B6schen"> <span id="pop"></span> pop - letztes Element eines Arrays löschen</span></h2>
+<p>Entfernt aus einem Array das letzte Element. Der Array wird um ein Element verkürzt.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Array.
+</li></ol>
+<p>Gibt das gelöschte Element zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Zeichen</span> <span class="sy0">=</span> <span class="kw3">split</span><span class="br0">&#40;</span><span class="sy0">//,</span> <span class="st0">&quot;Was du heute kannst besorgen das verschiebe nicht auf morgen&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Spiegelverkehrt</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Zeichen</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+   <span class="kw3">print</span> <span class="re0">@Zeichen</span><span class="sy0">,</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+   <span class="re0">$Spiegelverkehrt</span> <span class="sy0">.=</span> <span class="kw3">pop</span><span class="br0">&#40;</span><span class="re0">@Zeichen</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$Spiegelverkehrt</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Satz und splittet diesen an jedem Zeichen in einen Array. 
+<p>In einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#while-Schleifen" title="Perl/Schleifen">while-Schleife</a>, wird einerseits der Array ausgegeben, dann aber das letztes Array-Element mit <code>pop</code> gelöscht. Da dieses Zeichen der Rückgabewert ist, wird es einem String angehängt. Die Schleife wird solange durchlaufen, wie @Zeichen nicht leer ist.
+</p>
+Zuletzt wird der spiegelverkehrte Satz nochmals ausgegeben.</div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/pop.html">http://perldoc.perl.org/functions/pop.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: push - Elemente an einen Array anhängen">Bearbeiten</a>]</span> <span class="mw-headline" id="push_-_Elemente_an_einen_Array_anh.C3.A4ngen"> <span id="push"></span> push - Elemente an einen Array anhängen</span></h2>
+<p>Fügt ein oder mehrere neue Elemente an das Ende eines Arrays an.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Array, an den das Element angehängt werden soll,
+</li><li> ein oder mehrere anzuhängende Elemente.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Orte</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span>Wien Madrid Rom Stockholm Riga<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@NeueOrte</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span>Bern Basel Genf<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@Orte</span><span class="sy0">,</span> <span class="st0">&quot;London&quot;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@Orte</span><span class="sy0">,</span> <span class="st0">&quot;Amsterdam&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Kairo&quot;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@Orte</span><span class="sy0">,</span> <span class="kw3">qw</span><span class="br0">&#40;</span>Paris Lissabon Sofia<span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">push</span><span class="br0">&#40;</span><span class="re0">@Orte</span><span class="sy0">,</span> <span class="re0">@NeueOrte</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="re0">@Orte</span> <span class="sy0">=</span> <span class="kw3">join</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="kw3">sort</span><span class="br0">&#40;</span><span class="re0">@Orte</span><span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/plain
+&#160;
+@Orte
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel werden zwei Listen <code>@Orte</code> und <code>@NeueOrte</code> definiert. 
+<p>Danach wird <code>push</code> mehrmals angewendet.
+</p>
+Mit Hilfe der Funktion <a href="#sort">sort</a> wird die neue Ergebnis-Liste mit allen Orten dann noch "asciibetisch" (nach der Reihenfolge der Zeichen in der ASCII-Codetabelle) sortiert. und ausgegeben</div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/push.html">http://perldoc.perl.org/functions/push.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: reverse - Reihenfolge der Listenelemente umkehren">Bearbeiten</a>]</span> <span class="mw-headline" id="reverse_-_Reihenfolge_der_Listenelemente_umkehren"> <span id="reverse"></span> reverse - Reihenfolge der Listenelemente umkehren</span></h2>
+<p>Im Listen-Kontext: Dreht eine Liste so um, dass das erste Element hinterher das letzte ist, das zweite das zweitletzte usw.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> die gewünschte Liste.
+</li></ol>
+<p>Gibt die bearbeitete Liste zurück.
+</p><p>Im Scalar-Kontext: Dreht die Zeichenfolge des ersten Arguments um.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Zahlen</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span><span class="nu0">1</span> <span class="nu0">5</span> <span class="nu0">3</span> <span class="nu0">4</span> <span class="nu0">6</span> <span class="nu0">2</span> <span class="nu0">7</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Aufsteigend</span> <span class="sy0">=</span> <span class="kw3">sort</span> <span class="br0">&#123;</span> <span class="re0">$a</span><span class="sy0">&lt;=&gt;</span><span class="re0">$b</span> <span class="br0">&#125;</span> <span class="re0">@Zahlen</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Absteigend</span> <span class="sy0">=</span> <span class="kw3">reverse</span><span class="br0">&#40;</span> <span class="re0">@Aufsteigend</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$spiegelschrift</span> <span class="sy0">=</span> <span class="kw3">reverse</span><span class="br0">&#40;</span> <span class="st0">&quot;Spiegelschrift&quot;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/plain
+&#160;
+Aufsteigend sortiert: @Aufsteigend
+Absteigend sortiert: @Absteigend
+&#160;
+Aus &quot;Spiegelschrift&quot; wird &quot;$spiegelschrift&quot;
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert eine Liste mit Zahlen von 1 bis 7.
+<p>Zuerst sortieren wir diesen Array aufsteigend von 1 bis 7.
+</p><p>Die umgekehrte Sortierung lässt sich durch <code>reverse</code> über die aufsteigende Liste realisieren.
+</p>
+Mit <code>reverse</code> können sie auch einen String spiegeln, so dass aus <b>Spiegelschrift</b> <b>tfirhcslegeipS</b> wird.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Funktion ist auch auf <a href="http://wiki.selfhtml.org/wiki/Perl/Hashes" title="Perl/Hashes">Hashes</a> anwendbar. Beispiel:<br />
+<p><code>%Mailheader = reverse(%Mailheader);</code><br />
+</p>
+Dabei werden die Schlüssel und Werte der Elemente miteinander vertauscht. Dies ist jedoch dann problematisch, wenn ein Hash mehrere gleiche Werte besitzt. In diesem Fall wird im bearbeiteten Hash nur noch einer der Werte (der nun als Schlüssel dient) berücksichtigt.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/reverse.html">http://perldoc.perl.org/functions/reverse.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: shift - erstes Element eines Arrays löschen">Bearbeiten</a>]</span> <span class="mw-headline" id="shift_-_erstes_Element_eines_Arrays_l.C3.B6schen"> <span id="shift"></span> shift - erstes Element eines Arrays löschen</span></h2>
+<p>Entfernt das erste Element eines Arrays. Das zweite ist anschließend das erste usw. Der Array wird um ein Element kürzer.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den zu bearbeitenden Array.
+</li></ol>
+<p>Gibt das gelöschte Element zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Zustaende</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span>Angst Melancholie Trauer Wut Zwiespalt Hass<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">@Zustaende</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;Jetzt herrsch&quot;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="re0">@Zustaende</span> <span class="sy0">&gt;</span> <span class="nu0">1</span><span class="sy0">?</span><span class="st0">&quot;en&quot;</span><span class="sy0">:</span><span class="st0">&quot;t&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="st0">&quot; noch &quot;</span><span class="sy0">,</span> 
+    <span class="kw3">join</span><span class="br0">&#40;</span><span class="st_h">', '</span><span class="sy0">,</span><span class="re0">@Zustaende</span><span class="br0">&#41;</span> <span class="sy0">,</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="kw3">shift</span><span class="br0">&#40;</span><span class="re0">@Zustaende</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Und jetzt herrscht Friede!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Array, der die Namen unangenehmer seelischer Zustände auflistet. Innerhalb des HTML-Codes ist eine <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#while-Schleifen" title="Perl/Schleifen">while-Schleife</a> notiert. Sie wird so oft durchlaufen, wie der ursprüngliche Array Elemente hat. 
+<p>Bei jedem Schleifendurchgang wird ausgegeben, welche der unangenehmen Seelenzustände noch herrschen. 
+Bei jedem Schleifendurchgang wird aber die erste dieser Befindlichkeiten aus dem Array mit <code>shift</code> gelöscht. Dadurch reduziert sich der Array um jeweils ein Element. 
+</p>
+Am Ende ist die Seelenwelt wieder in Ordnung. Dann wird auch die Schleife beendet, und es wird noch ein triumphierender Satz ausgegeben.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Die Funktion <code>shift</code> wird in der Praxis auch gerne dazu verwendet, innerhalb von Subroutinen übergebene Parameter "abzuarbeiten". Ein Beispiel finden Sie im Abschnitt über <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen#Subroutinen_mit_Parametern_aufrufen" title="Perl/Subroutinen">Subroutinen mit Parametern aufrufen</a>.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/shift.html">http://perldoc.perl.org/functions/shift.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: sort - Listenelemente sortieren">Bearbeiten</a>]</span> <span class="mw-headline" id="sort_-_Listenelemente_sortieren"> <span id="sort"></span> sort - Listenelemente sortieren</span></h2>
+<p>Sortiert die Elemente einer Liste. Dabei gibt es zwei Möglichkeiten. Entweder Sie sortieren die Liste nach dem vorgegebenen Sortier-Algorithmus. Dieser sortiert alphabetisch, genauer gesagt, "asciibetisch" (nach der Reihenfolge der Zeichen in der ASCII-Codetabelle). Oder Sie erzwingen einen eigenen Sortier-Algorithmus. Dazu definieren Sie beispielsweise eine <a href="http://wiki.selfhtml.org/wiki/Perl/Subroutinen" title="Perl/Subroutinen">Subroutine</a>, die den entsprechenden Algorithmus leistet. Wichtig ist dies etwa, um Listenelemente numerisch zu sortieren.
+</p><p>Erwartet als Parameter:<br />
+<b>entweder:</b><br />
+</p>
+<ol><li> die zu sortierende Liste.
+</li></ol>
+<p><b>oder:</b><br />
+</p>
+<ol><li> die Anweisung oder den Namen der Subroutine mit dem Sortier-Algorithmus,
+</li><li> die zu sortierende Liste. 
+</li></ol>
+<p>Gibt die sortierte Liste zurück. Wichtig ist, dass der Rückgabewert in einer anderen Liste gespeichert wird als in der Liste, die als Parameter übergeben wird.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@unsorted</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span> e c a b d <span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@sorted_default</span> <span class="sy0">=</span> <span class="kw3">sort</span><span class="br0">&#40;</span><span class="re0">@unsorted</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@sorted_compare</span> <span class="sy0">=</span> <span class="kw3">sort</span><span class="br0">&#123;</span><span class="re0">$a</span> <span class="kw1">cmp</span> <span class="re0">$b</span><span class="br0">&#125;</span> <span class="re0">@unsorted</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@sorted_compare_reverse</span> <span class="sy0">=</span> <span class="kw3">sort</span><span class="br0">&#123;</span><span class="re0">$b</span> <span class="kw1">cmp</span> <span class="re0">$a</span><span class="br0">&#125;</span> <span class="re0">@unsorted</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@sorted_default_reverse</span> <span class="sy0">=</span> <span class="kw3">reverse</span> <span class="kw3">sort</span><span class="br0">&#40;</span><span class="re0">@unsorted</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span>
+  <span class="re0">@sorted_default</span><span class="sy0">,</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+  <span class="re0">@sorted_compare</span><span class="sy0">,</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+  <span class="re0">@sorted_compare_reverse</span><span class="sy0">,</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+  <span class="re0">@sorted_default_reverse</span><span class="sy0">,</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Dieses Beispiel zeigt die einfache standardmäßige Sortierung. Ausgangspunkt ist eine unsortierte Liste von Buchstaben.
+<p>Zuerst wird die Standardsortierung angewendet.
+Diese ist identisch mit dem zweiten Fall <code>{$a cmp $b}</code>.
+<code>{$b cmp $b}</code> dreht die Reihenfolge um.
+Dies ist identisch mit einem zusätzlichen <code>reverse</code> auf <code>sort</code>.
+</p>
+Die Standardsortierung ist die alphabetisch aufsteigende <i>compare</i>-Sortierung. Sie ist nicht geeignet zur Sortierung von numerischen Werten.</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@HighscoreListe</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="nu0">9834</span><span class="sy0">,</span><span class="nu0">9837</span><span class="sy0">,</span><span class="nu0">5989</span><span class="sy0">,</span><span class="nu0">4509</span><span class="sy0">,</span><span class="nu0">4329</span><span class="sy0">,</span><span class="nu0">6509</span><span class="sy0">,</span><span class="nu0">2837</span><span class="sy0">,</span><span class="nu0">8289</span><span class="sy0">,</span><span class="nu0">10845</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@SortierteListe</span> <span class="sy0">=</span> <span class="kw3">sort</span><span class="br0">&#40;</span>NummernSort <span class="re0">@HighscoreListe</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="re0">@SortierteListe</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$_&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw2">sub</span> NummernSort <span class="br0">&#123;</span>
+ <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">&lt;</span> <span class="re0">$b</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span> <span class="kw3">return</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+ <span class="kw1">elsif</span><span class="br0">&#40;</span><span class="re0">$a</span> <span class="sy0">==</span> <span class="re0">$b</span><span class="br0">&#41;</span>
+  <span class="br0">&#123;</span> <span class="kw3">return</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+ <span class="kw1">else</span>
+  <span class="br0">&#123;</span> <span class="kw3">return</span> <span class="nu0">1</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das zweite Beispiel definiert eine Liste namens <code>@HighscoreListe</code>. Anschließend wird die Liste mit Hilfe von <code>sort</code> sortiert. Da es sich um numerische Werte handelt, wird eine Funktion benutzt, die den numerischen Sortier-Algorithmus bereitstellt. Denn "asciibetisch" betrachtet würde der letzte Wert 10845 in der aufsteigend sortierten Liste zuerst erscheinen, was er aber nicht soll, da er ja der höchste Wert ist, der zuletzt auftauchen soll. Dem Aufruf von <code>sort</code> wird deswegen zuerst der Name des Unterprogramms für die Sortierung übergeben, und dann, durch ein Leerzeichen getrennt (nicht durch Komma!), die zu sortierende Liste. Die zurückgegebene Liste wird im Beispiel in der neuen Liste <code>@SortierteListe</code> gespeichert. Zur Kontrolle wird HTML-Code mit der sortierten Liste ausgegeben.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Das im Beispiel notierte Unterprogramm <code>NummernSort</code> ist allgemein geschrieben und leistet eine einfache numerische Sortierung, so, wie es die <code>sort</code>-Funktion erwartet. Dieses Unterprogramm können Sie also immer verwenden, wenn Sie Listen numerisch sortieren möchten.</div>
+<p>Um eine absteigende Sortierung zu erzwingen, können Sie beispielsweise nach Anwendung von <code>sort</code> noch die Funktion <a href="#reverse">reverse</a> auf die Liste anwenden.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: splice - Elemente innerhalb eines Arrays löschen, hinzufügen, ersetzen">Bearbeiten</a>]</span> <span class="mw-headline" id="splice_-_Elemente_innerhalb_eines_Arrays_l.C3.B6schen.2C_hinzuf.C3.BCgen.2C_ersetzen"> <span id="splice"></span> splice - Elemente innerhalb eines Arrays löschen, hinzufügen, ersetzen</span></h2>
+<p>Entfernt eines oder mehrere Elemente aus einem Array und kann außerdem an der gleichen Stelle eines oder mehrere Elemente einfügen. <code>splice</code> ist daher eine Art Universalfunktion zur Manipulation von Listen, die unter anderem alles ermöglicht, was die Einzelfunktionen <code>pop</code>, <code>push</code>, <code>shift</code> und <code>unshift</code> leisten, darüber hinaus aber noch mehr kann.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den zu bearbeitenden Array,
+</li><li> Indexnummer des Elements, ab dem gelöscht werden soll (wobei bei 0 für das erste Listenelement zu zählen begonnen wird),
+</li><li> (optional) Anzahl der zu löschenden Elemente. Wenn nicht angegeben, werden alle Elemente bis zum Listenende gelöscht! Um kein Element zu löschen, also nur einzufügen, muss an dieser Stelle 0 übergeben werden.
+</li><li> ein bis n Elemente, die (anstelle der gelöschten Elemente) eingefügt werden sollen. 
+</li></ol>
+<p>Gibt eine Liste mit gelöschten Elementen zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Datensatz</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Heinrich&quot;</span><span class="sy0">,</span><span class="st0">&quot;Loewe&quot;</span><span class="sy0">,</span><span class="st0">&quot;Burgstr.1&quot;</span><span class="sy0">,</span><span class="st0">&quot;01234 Regentenstadt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h2&gt;E-Mail-Adresse und Webadresse neu:&lt;/h2&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">splice</span><span class="br0">&#40;</span><span class="re0">@Datensatz</span><span class="sy0">,</span><span class="nu0">2</span><span class="sy0">,</span><span class="nu0">0</span><span class="sy0">,</span><span class="st0">&quot;hdl<span class="es0">\@</span>example.org&quot;</span><span class="sy0">,</span><span class="st0">&quot;http://www.example.org/hdl/&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Feld</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="re0">$Feld</span> <span class="br0">&#40;</span><span class="re0">@Datensatz</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Feld&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;h2&gt;Adresse neu:&lt;/h2&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">splice</span><span class="br0">&#40;</span><span class="re0">@Datensatz</span><span class="sy0">,</span><span class="nu0">4</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">splice</span><span class="br0">&#40;</span><span class="re0">@Datensatz</span><span class="sy0">,-</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">1</span><span class="sy0">,</span><span class="st0">&quot;Postfach 1234, GERMANY&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="re0">$Feld</span> <span class="br0">&#40;</span><span class="re0">@Datensatz</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;$Feld&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">! Anweisung mit <code>splice</code>
+<p>! entspricht folgender anderer Anweisung
+</p>
+! siehe auch</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: undef - Wert aus Hash oder Array entfernen">Bearbeiten</a>]</span> <span class="mw-headline" id="undef_-_Wert_aus_Hash_oder_Array_entfernen"> <span id="undef"></span> undef - Wert aus Hash oder Array entfernen</span></h2>
+<p>Löscht den Wert eines Scalars, Hash- oder Arrayelements. Das Element selbst bleibt dabei erhalten. Der Wert wird lediglich auf den Wert <code>undef</code> gesetzt.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> bei einem Hash den Elementnamen, und bei einem Array die Angabe dazu, das wievielte Element gemeint ist.
+</li></ol>
+<p>Gibt in jedem Fall <code>undef</code> zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Spieler</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Richard&quot;</span><span class="sy0">,</span><span class="st0">&quot;Anita&quot;</span><span class="sy0">,</span><span class="st0">&quot;Fred&quot;</span><span class="sy0">,</span><span class="st0">&quot;Miriam&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">%Spielstaende</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Richard&quot;</span><span class="sy0">,</span><span class="st0">&quot;350&quot;</span><span class="sy0">,</span><span class="st0">&quot;Anita&quot;</span><span class="sy0">,</span><span class="st0">&quot;400&quot;</span><span class="sy0">,</span><span class="st0">&quot;Fred&quot;</span><span class="sy0">,</span><span class="st0">&quot;150&quot;</span><span class="sy0">,</span><span class="st0">&quot;Miriam&quot;</span><span class="sy0">,</span><span class="st0">&quot;700&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="co1"># Wir resetten Fred</span>
+<span class="kw3">undef</span><span class="br0">&#40;</span><span class="re0">$Spielstaende</span><span class="br0">&#123;</span><span class="re0">$Spieler</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">undef</span><span class="br0">&#40;</span><span class="re0">$Spieler</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Teilnehmer</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@Spieler</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw3">defined</span> <span class="co5">$_</span> <span class="kw1">and</span> <span class="re0">$Teilnehmer</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;&lt;li&gt;%s&lt;/li&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="co5">$_</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Spielstaende</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">foreach</span><span class="br0">&#40;</span> <span class="kw3">sort</span> <span class="kw3">keys</span> <span class="re0">%Spielstaende</span> <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">defined</span> <span class="re0">$Spielstaende</span><span class="br0">&#123;</span><span class="co5">$_</span><span class="br0">&#125;</span> 
+     <span class="kw1">and</span> <span class="re0">$Spielstaende</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;&lt;li&gt;%s:&#160;%5d Punkte&lt;/li&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="co5">$_</span> <span class="sy0">,</span><span class="re0">$Spielstaende</span><span class="br0">&#123;</span><span class="co5">$_</span><span class="br0">&#125;</span> <span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;Folgende Spieler nehmen teil:&lt;/p&gt;
+&lt;ul&gt; $Teilnehmer &lt;/ul&gt;
+&lt;p&gt;Folgende Spielst&amp;auml;nde sind aktuell:&lt;/p&gt;
+&lt;ul&gt; $Spielstaende &lt;/ul&gt;
+&lt;/body&gt;&lt;/html&gt;
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Array namens <code>@Spieler</code> und einen Hash namens <code>%Spielstaende</code>. 
+<p>Der Spieler Fred, der sich aus dem Spiel ausklinkt, wird aus beiden Datenstrukturen mit <code>undef</code> entfernt. Dabei bleiben jedoch das Array-Element für Fred und das entsprechende Elementpaar im Hash erhalten. Im Array wird durch <code>undef</code> der Wert, also der Name entfernt, und im Hash bleibt der Schlüssel <code>Fred</code> erhalten, nur dessen zugeordneter Wert <code>150</code> wird entfernt. "Entfernt" bedeutet in beiden Fällen, dass der Wert auf <code>undef</code> gesetzt wird. 
+</p><p>Es werden nun Ausgaben vorbereitet. Während der Iteration über die Liste bzw. die Hash-Keys wird mit <code>defined</code> geprüft, ob das Element definiert ist. 
+Würde ein undefiniertes Element zugewiesen, würde dies eine Fehlermeldung erzeugen.
+</p>
+Anschliessend erfolgt eine HTML-Ausgabe.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Um in einem Hash ein Elementpaar vollständig zu löschen, gibt es die Funktion <a href="#delete">delete</a>. Um ein Element aus einem Array vollständig zu löschen, stehen die Funktionen <a href="#pop">pop</a>, <a href="#shift">shift</a> und <a href="#splice">splice</a> zur Verfügung.</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/undef.html">http://perldoc.perl.org/functions/undef.html</a>
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: unshift - Elemente am Anfang eines Arrays hinzufügen">Bearbeiten</a>]</span> <span class="mw-headline" id="unshift_-_Elemente_am_Anfang_eines_Arrays_hinzuf.C3.BCgen"> <span id="unshift"></span> unshift - Elemente am Anfang eines Arrays hinzufügen</span></h2>
+<p>Fügt ein oder mehrere neue Elemente am Anfang eines Arrays an. Der Array wird entsprechend länger.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den gewünschten Array,
+</li><li> das oder die vorne einzufügenden Elemente.
+</li></ol>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Links</span><span class="sy0">=</span><span class="br0">&#40;</span><span class="st0">&quot;&lt;a href=<span class="es0">\&quot;</span>http://www.willy-online.de/<span class="es0">\&quot;</span>&gt;willy-online.de&lt;/a&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;&lt;a href=<span class="es0">\&quot;</span>http://www.suedelbien.de/<span class="es0">\&quot;</span>&gt;suedelbien.de&lt;/a&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;&lt;a href=<span class="es0">\&quot;</span>http://www.sagmal.de/<span class="es0">\&quot;</span>&gt;sagmal.de&lt;/a&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">unshift</span><span class="br0">&#40;</span><span class="re0">@Links</span><span class="sy0">,</span><span class="st0">&quot;&lt;a href=<span class="es0">\&quot;</span>http://www.ganze-kerle.de/<span class="es0">\&quot;</span>&gt;ganze-kerle.de&lt;/a&gt;&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;@Links&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel definiert einen Array mit drei WWW-Links, fertig notiert als HTML-Verweise. Bevor der Array mit den Links ausgegeben wird, wird dem Array mit <code>unshift</code> vorne ein neues Element angefügt. Anschließend wird der gesamte Array mit nunmehr vier Verweisen ausgegeben, wobei der hinzugefügte Verweis der erste ist.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: values - Alle Werte eines Hashes ermitteln">Bearbeiten</a>]</span> <span class="mw-headline" id="values_-_Alle_Werte_eines_Hashes_ermitteln"> <span id="values"></span> values - Alle Werte eines Hashes ermitteln</span></h2>
+<p>Speichert alle Werte von Elementpaaren eines Hashes in einer Liste.
+</p><p>Erwartet als Parameter:
+</p>
+<ol><li> den Hash.
+</li></ol>
+<p>Gibt eine Liste mit den Werten der Elementpaare zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Umgebungswerte</span> <span class="sy0">=</span> <span class="kw3">values</span><span class="br0">&#40;</span><span class="re0">%ENV</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Umgebungsvariablen</span> <span class="sy0">=</span> <span class="kw3">keys</span><span class="br0">&#40;</span><span class="re0">%ENV</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@Umgebung</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">my</span> <span class="re0">$i</span><span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$i</span> <span class="sy0">&lt;</span> <span class="re0">@Umgebungswerte</span><span class="sy0">;</span> <span class="re0">$i</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="re0">$Umgebung</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="re0">$Umgebungsvariablen</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="sy0">.</span><span class="st0">&quot; = &quot;</span><span class="sy0">.</span><span class="re0">$Umgebungswerte</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re0">@Umgebung</span> <span class="sy0">=</span> <span class="kw3">sort</span><span class="br0">&#40;</span><span class="re0">@Umgebung</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/html<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;'</span><span class="sy0">,</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Test-Ausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;p&gt;Folgende Umgebungswerte sind definiert:&lt;/p&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;ul&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@Umgebung</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot;&lt;li&gt;$_&lt;/li&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/ul&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel ermittelt mit <code>values</code> alle Werte des <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten</a> Hashes <code>%ENV</code> in der Liste <code>@Umgebungswerte</code>. Mit Hilfe der Funktion <a href="#keys">keys</a> wird eine entsprechende Liste <code>@Umgebungsvariablen</code> für die Elementnamen des Hashes erzeugt. Anschließend wird eine neue Liste <code>@Umgebung</code> erzeugt. In dieser Liste werden die beiden separaten Listen für die Namen und Werte in einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#for-Schleifen" title="Perl/Schleifen">for-Schleife</a> zusammengeführt. Jeder Listeneintrag der Liste <code>@Umgebung</code> besteht aus dem jeweiligen Namen einer Umgebungsvariablen, einem Gleichheitszeichen und dem zugehörigen Wert (siehe auch: <a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren#Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung" title="Perl/Operatoren">Zeichenketten zusammenfügen</a>). Diese neue Liste wird mit Hilfe der Funktion <a href="#sort">sort</a> sortiert. Anschließend wird HTML-Code mit der sortierten Liste ausgegeben.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: qw(Liste) Queryword Operator">Bearbeiten</a>]</span> <span class="mw-headline" id="qw.28Liste.29_Queryword_Operator"> <span id="qw"></span> qw(Liste) Queryword Operator</span></h2>
+<p>Der <code>qw</code>Operator extrahiert aus einem String eine Liste von None-Whitespace-Worten.
+</p><p>Erwartet einen String
+Gibt eine Liste zurück.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Tage</span> <span class="sy0">=</span> <span class="kw3">qw</span><span class="br0">&#40;</span>
+  Mo Montag 
+  Di Dienstag
+  Mi Mittwoch
+  Do Donnerstag 
+  Fr Freitag
+  Sa Samstag
+  So Sonntag
+<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$Anzahl_Elemente</span> <span class="sy0">=</span> <span class="kw3">scalar</span> <span class="re0">@Tage</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$out</span> <span class="sy0">=</span> <span class="st0">&quot;Abk. Name<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">while</span><span class="br0">&#40;</span> <span class="re0">@Tage</span> <span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="re0">$out</span> <span class="sy0">.=</span> <span class="kw3">sprintf</span><span class="br0">&#40;</span> <span class="st0">&quot;%2s: &#160;%s<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="kw3">shift</span> <span class="re0">@Tage</span><span class="sy0">,</span> <span class="kw3">shift</span> <span class="re0">@Tage</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;&quot;ENDE&quot;;
+Content-type:text/plain
+&#160;
+Die Liste \@Tage enthält $Anzahl_Elemente Elemente
+$out
+ENDE</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Mit dem qw-Operator wird eine Liste sparsam und nett formatiert erstellt.
+<p>Es wird die Anzahl der Elemente abgefragt und anschliessen eine Liste erstellt, wobei der Array wie ein Hash behandelt wird.
+</p>
+Zur Kontrolle wird die Anzahl der Elemente (14) und die erzeugte Liste ausgegeben.</div>
+</div>
+<p>Siehe auch <a rel="nofollow" class="external free" href="http://perldoc.perl.org/perlop.html#Quote-and-Quote-like-Operators">http://perldoc.perl.org/perlop.html#Quote-and-Quote-like-Operators</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 1526/1000000
+Post‐expand include size: 60958/2097152 bytes
+Template argument size: 53613/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1885-0!*!0!!de-formal!*!* and timestamp 20150301194259 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;oldid=13917">http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;oldid=13917</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FFunktionen+f%C3%BCr+Listen+bzw.+Arrays+und+Hashes" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Funktionen_f%C3%BCr_Listen_bzw._Arrays_und_Hashes&amp;oldid=13917" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FFunktionen_für_Listen_bzw._Arrays_und_Hashes" title="Spezial:Durchsuchen/Perl-2FFunktionen für Listen bzw. Arrays und Hashes">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 13. September 2012 um 10:16 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 4.461-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.085 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Funktionen_für_Listen_bzw._Arrays_und_Hashes by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

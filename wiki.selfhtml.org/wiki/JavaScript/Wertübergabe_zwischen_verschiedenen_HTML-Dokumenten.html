@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Javascript/Wertübergabe_zwischen_verschiedenen_HTML-Dokumenten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Javascript/Wertübergabe zwischen verschiedenen HTML-Dokumenten – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Javascript/Wertübergabe_zwischen_verschiedenen_HTML-Dokumenten","wgTitle":"Javascript/Wertübergabe zwischen verschiedenen HTML-Dokumenten","wgCurRevisionId":24250,"wgArticleId":4125,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Javascript/Wertübergabe_zwischen_verschiedenen_HTML-Dokumenten","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+		<link rel="alternate" type="application/rdf+xml" title="Javascript/Wertübergabe zwischen verschiedenen HTML-Dokumenten" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Javascript_Wertübergabe_zwischen_verschiedenen_HTML-Dokumenten skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Javascript/Wertübergabe zwischen verschiedenen HTML-Dokumenten</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><div class="note-box note-box-autor">
+<p class="note-box-title">Informationen zur Autorin:</p>
+<div class="note-box-text">
+  <div>
+    <div class="note-box-autor-text">Name:</div>
+    <div class="note-box-autor-info">Mathias Schäfer</div>
+    <div class="note-box-autor-text" style="">E-Mail:</div>
+    <div class="note-box-autor-info" style=""><a rel="nofollow" class="external text" href="mailto:zapperlott@gmail.com">zapperlott@gmail.com</a></div>
+    <div class="note-box-autor-text" style="display:none;">Homepage:</div>
+    <div class="note-box-autor-info" style="display:none;">(keine)</div>
+  </div>
+</div>
+</div>
+<p>Der folgende Artikel ist lediglich eine Zusammenführung und Überarbeitung zweier älterer Artikel, die ihrerseits Hatto von Hatzfeld und Stefan Puff verfasst haben. Dank geht auch an Torsten Anacker, dessen Code zur Zerlegung des Querystrings Pate gestanden hat, sowie Thomas Fischer, der einst Anregungen zur Verwendung von window.name gab.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problemstellung"><span class="tocnumber">1</span> <span class="toctext">Problemstellung</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Wert.C3.BCbergabe_mittels_URL"><span class="tocnumber">2</span> <span class="toctext">Wertübergabe mittels URL</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#L.C3.B6sungsansatz_mit_window.name"><span class="tocnumber">3</span> <span class="toctext">Lösungsansatz mit window.name</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Anwendungsgebiete_und_Risiken"><span class="tocnumber">3.1</span> <span class="toctext">Anwendungsgebiete und Risiken</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Ausblick_auf_Super-Cookies_und_die_.C3.9Cbergabe_komplexer_Daten"><span class="tocnumber">4</span> <span class="toctext">Ausblick auf Super-Cookies und die Übergabe komplexer Daten</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Problemstellung">Bearbeiten</a>]</span> <span class="mw-headline" id="Problemstellung">Problemstellung</span></h2>
+<p>Oft möchten Javascript-Programmierer <a href="Variable.html" title="JavaScript/Variable">Variablen</a>, die sie in einem Dokument definiert haben, auch in einem anderen Dokument, das anschließend im selben Browserfenster geladen wird, verfügbar haben. Üblicherweise werden für diesen Zweck <a href="Anwendung_und_Praxis/cookies.html" title="JavaScript/Anwendung und Praxis/cookies"> Cookies</a> verwendet. Doch nicht immer haben Nutzer Cookies zugelassen oder wollen sie nur nach Einzelbestätigung akzeptieren.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Wertübergabe mittels URL">Bearbeiten</a>]</span> <span class="mw-headline" id="Wert.C3.BCbergabe_mittels_URL">Wertübergabe mittels URL</span></h2>
+<p>Ein weiterer Lösungsansatz nutzt die Adresse des empfangenden Dokuments, um die gewünschten Daten als Abfrageparameter zu übergeben. Dabei wird der URL ein sogenannter Query String angehängt, welcher nach einem Fragezeichen die Daten in einer kodierten Form enthält. Ein Query String mit mehreren Parameter/Wert-Paaren ist nach dem Schema <code>?name1=wert1&amp;name2=wert2&amp;name3=wert3&amp;...</code> aufgebaut. Dieser Mechanismus wird unter anderem bei der Übergabe von Formulardaten über die HTTP-Methode GET genutzt. Im empfangenden Dokument können die URL-Parameter über die JavaScript-Objekteigenschaft <a href="Objekte/window/location/search.html" title="JavaScript/Objekte/window/location/search"> location.search</a> ausgelesen, getrennt und dekodiert werden.
+</p><p>Ein großer Nachteil dieser Variante ist allerdings, dass das empfangende Dokument neu vom Server angefordert werden muss, selbst wenn es bereits im Cache (Zwischenspeicher) des Browsers oder eines Proxy-Servers liegen. Dies führt auch dazu, dass der Offline-Modus der meisten Browser im Zusammenhang mit der Wertübergabe über die URL nicht funktioniert.
+</p><p>Um die Daten über die URL übergeben zu können, müssen sie vorher URL-kodiert werden, das heißt für die Übertragung vorbereit werden. Dabei lässt sich die vordefinierte Methode <a href="Deprecated.html#escape.28.29" title="JavaScript/Deprecated">escape()</a> verwenden, mit welcher Sonder- und Steuerzeichen in Parameternamen und Wertstrings maskiert werden können.
+</p><p>Während es bei der zuvor beschriebenen Framelösung möglich ist, alle möglichen Objekte bzw. Variablen gleich welchen Typs auf einfache Weise weiterzugeben, sind bei der Übergabe mittels URL letztlich nur <a href="Objekte/String.html" title="JavaScript/Objekte/String">String-Variablen</a> möglich. Bei Variablen des Types <a href="Objekte/Boolean.html" title="JavaScript/Objekte/Boolean"> Boolean</a> und <a href="Objekte/Number.html" title="JavaScript/Objekte/Number">Number</a> ist dies unproblematisch, da JavaScript sie automatisch in String-Variablen umwandeln kann, ohne dass Informationen verloren gehen. Bei komplexeren Datenstrukturen wie <a href="Objekte/Array.html" title="JavaScript/Objekte/Array">Arrays</a> oder <a href="Konzepte.html#Eigene_Objekte_definieren" title="JavaScript/Konzepte">eigenen Objekten</a> hingegen sind aufwendigere Techniken notwendig, um die Array-Elemente bzw. Objekteigenschaften jeweils in Parameter/Wert-Paare umzuwandeln. Im Folgenden wird ein Weg zur Übergabe von einfachen Variablen beschrieben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Weg zur Übergabe von einfachen Variablen
+</div>
+<div class="note-box-text note-box-example-code">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Wertübergabe mittels URL - Sendendes Dokument&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form method=&quot;GET&quot; action=&quot;querystring-empfangen.htm&quot;&gt;
+  &lt;p&gt;Wie heißen Sie?&lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for=&quot;vorname&quot;&gt;Vorname:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;vorname&quot; id=&quot;vorname&quot; size=&quot;25&quot;&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for=&quot;nachname&quot;&gt;Nachname:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;nachname&quot; id=&quot;nachname&quot; size=&quot;25&quot;&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Senden&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</div>
+<p><br />
+Das Eingabeformular kennen wir bereits. Geändert hat sich das action-Attribut, in dem die URL des empfangenden Dokuments angegeben wird. Auch wenn GET die Standard-Methode zum Übertragen von Formulardaten ist, geben wir zur Verdeutlichung zusätzlich method="GET" an.
+</p><p><br />
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: Beispiel – empfangendes Dokument
+</div>
+<div class="note-box-text note-box-example-code">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Wertübergabe mittels URL - Empfangendes Dokument&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function Werteliste (querystring) {
+  if (querystring == '') return;
+  var wertestring = querystring.slice(1);
+  var paare = wertestring.split(&quot;&amp;&quot;);
+  var paar, name, wert;
+  for (var i = 0; i &lt; paare.length; i++) {
+    paar = paare[i].split(&quot;=&quot;);
+    name = paar[0];
+    wert = paar[1];
+    name = unescape(name).replace(&quot;+&quot;, &quot; &quot;);
+    wert = unescape(wert).replace(&quot;+&quot;, &quot; &quot;);
+    this[name] = wert;
+  }
+}
+var liste = new Werteliste(location.search);
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Übergebene Daten&lt;/h1&gt;
+
+&lt;table border=&quot;1&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Feldname&lt;/th&gt;
+    &lt;td&gt;Eintrag&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  for (var eigenschaft in liste) {
+    document.write(
+      &quot;&lt;tr&gt;&lt;td&gt;&quot; + eigenschaft + &quot;&lt;/td&gt;&quot; +
+      &quot;&lt;td&gt;&lt;code&gt;&quot; + liste[eigenschaft] + &quot;&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&quot;
+    );
+  }
+  &lt;/script&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</div>
+<p>Zuerst werden die Formulardaten mittels <code>location.search</code> aus der URL extrahiert und der Funktion <code>Werteliste()</code> übergeben. Dessen Aufruf mit dem new-Operator erzeugt ein <a href="Konzepte.html#Eigene_Objekte_definieren" title="JavaScript/Konzepte">eigenes Objekt</a>. <code>Werteliste</code> tritt als Konstruktor-Funktion auf und gibt die erzeugte Objekt-Instanz zurück, die in der Variable <code>liste</code> gespeichert wird.
+</p><p>In der Funktion <code>Werteliste()</code> werden zuerst die Datenpaare, bestehend aus Parametername und Wert, und anschließend jedes Wertepaar getrennt. Die Trennung der Datenpaare erfolgt mithilfe der <a href="Objekte/String/split.html" title="JavaScript/Objekte/String/split">split</a>-Methode. Sie gibt einen Array zurück, der anschließend mit einer for-Schleife durchlaufen wird. Jedes Element dieses Array steht für ein Datenpaar-String nach dem Schema name=wert. Mit erneuter Anwendung von <code>split()</code> wird der String in Name und Wert getrennt, die in den Variablen <code>name</code> bzw. <code>wert</code> zwischengespeichert werden.
+</p><p>Danach folgt die Dekodierung mit der Methode <a href="Deprecated.html#unescape.28.29" title="JavaScript/Deprecated">unescape()</a>. Zusätzlich wird das Zeichen + mittels <a href="Objekte/window/location/replace.html" title="JavaScript/Objekte/window/location/replace">replace()</a> durch ein Leerzeichen ersetzt, denn <code>unescape()</code> lässt diese notwendige Dekodierung aus.
+</p><p>Die ausgelesenen und dekodierten Werte werden schließlich mit <code>this[name] = wert</code> als Eigenschaften am neu erzeugten Objekt gespeichert.
+</p><p>Das Ergebnis der Dekodierung steht in der Variable <code>liste</code> in Form eines Objekts mit mehreren Eigenschaften zur Verfügung. (Sollten keine Werte übergeben werden, z.B. wenn die Seite direkt aufgerufen wird, hat das Objekt einfach keine Eigenschaften.) Das liste-Objekt verhält sich wie ein <a href="Objekte/Array.html#Assoziative_Arrays" title="JavaScript/Objekte/Array">assoziativer Array</a>: Wenn einen Datenpaar mit dem Namen <code>»vorname«</code> übergeben wurde, können wir dessen Wert mit der Schreibweise <code>liste.vorname</code> auslesen. Wenn der Name Leerzeichen oder Sonderzeichen enthält, z.B. <code>»Name des Haustiers«</code>, müssen wir uns der Alternativ-Schreibweise zum Zugriff auf Objekteigenschaften bedienen: <code>liste["Name des Haustiers"]</code>.
+</p><p>Im Dokumentkörper des Beispiels wird mittels JavaScript eine Tabelle generiert, in der die Daten aus dem liste-Objekt ausgegeben werden. Ein solches Objekt muss mit einer <a href="Schleifen.html#Schleifen_mit_.22for.22" title="JavaScript/Schleifen"> for-in-Schleife</a> durchlaufen werden.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Lösungsansatz mit window.name">Bearbeiten</a>]</span> <span class="mw-headline" id="L.C3.B6sungsansatz_mit_window.name">Lösungsansatz mit window.name</span></h2>
+<p>Das window-Objekt kennt die Eigenschaft <a href="Objekte/window/name.html" title="JavaScript/Objekte/window/name">name</a>. Sie bleibt über die ganze&#160;»Lebensdauer«&#160;des Browserfensters erhalten und kann durch eine Javascript-Zuweisung geändert werden. So bietet es sich an, diese Eigenschaft zur Sicherung von Daten zu nutzen, die einen Wechsel des Fensterinhaltes überstehen sollen.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: sendendes Dokument
+</div>
+<div class="note-box-text note-box-example-code">&lt;!doctype html&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Wertübergabe mittels window.name - Sendendes Dokument&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;storage.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function sichern () {
+	storage.set(&quot;vorname&quot;, document.forms.formular.elements.vorname.value);
+	storage.set(&quot;nachname&quot;, document.forms.formular.elements.nachname.value);
+	location.href = &quot;window-name-empfaenger.html&quot;;
+}
+&lt;/script&gt;
+
+&lt;form name=&quot;formular&quot; action=&quot;&quot; onsubmit=&quot;sichern(); return false;&quot;&gt;
+  &lt;p&gt;Wie heißen Sie?&lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for=&quot;vorname&quot;&gt;Vorname:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;vorname&quot; id=&quot;vorname&quot; size=&quot;25&quot;&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for=&quot;nachname&quot;&gt;Nachname:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;nachname&quot; id=&quot;nachname&quot; size=&quot;25&quot;&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Senden&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: sendendes Dokument
+</div>
+<div class="note-box-text note-box-example-code">Quelltext von storage.js
+
+var storage = new function () {
+	/* --------- Private Properties --------- */
+
+	var dataContainer = {};
+
+	/* --------- Private Methods --------- */
+
+	function linearize () {
+		var string = &quot;&quot;, name, value;
+		for (name in dataContainer) {
+			name = encodeURIComponent(name);
+			value = encodeURIComponent(dataContainer[name]);
+			string += name + &quot;=&quot; + value + &quot;&amp;&quot;;
+		}
+		if (string != &quot;&quot;) {
+			string = string.substring(0, string.length - 1);
+		}
+		return string;
+	}
+
+	function read () {
+		if (window.name == '' || window.name.indexOf(&quot;=&quot;) == -1) {
+			return;
+		}
+		var pairs = window.name.split(&quot;&amp;&quot;);
+		var pair, name, value;
+		for (var i = 0; i &lt; pairs.length; i++) {
+			if (pairs[i] == &quot;&quot;) {
+				continue;
+			}
+			pair = pairs[i].split(&quot;=&quot;);
+			name = decodeURIComponent(pair[0]);
+			value = decodeURIComponent(pair[1]);
+			dataContainer[name] = value;
+		}
+	}
+
+	function write () {
+		window.name = linearize();
+	}
+
+	/* --------- Public Methods --------- */
+
+	this.set = function (name, value) {
+		dataContainer[name] = value;
+		write();
+	};
+
+	this.get = function (name) {
+		var returnValue = dataContainer[name];
+		return returnValue;
+	};
+
+	this.getAll = function () {
+		return dataContainer;
+	};
+
+	this.remove = function (name) {
+		if (typeof(dataContainer[name]) != undefined) {
+			delete dataContainer[name];
+		}
+		write();
+	};
+
+	this.removeAll = function () {
+		dataContainer = {};
+		write();
+	};
+
+	/* --------- Construction --------- */
+
+	read();
+};</div>
+</div>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: empfangendes Dokument
+</div>
+<div class="note-box-text note-box-example-code">&lt;!doctype html&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Wertübergabe mittels window.name - Empfangendes Dokument&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;storage.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var liste = storage.getAll();
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Übergebene Daten&lt;/h1&gt;
+
+&lt;table border=&quot;1&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Feldname&lt;/th&gt;
+    &lt;th&gt;Eintrag&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  for (var eigenschaft in liste) {
+    document.write(
+      &quot;&lt;tr&gt;&lt;td&gt;&quot; + eigenschaft + &quot;&lt;/td&gt;&quot; +
+      &quot;&lt;td&gt;&lt;code&gt;&quot; + liste[eigenschaft] + &quot;&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&quot;
+    );
+  }
+  &lt;/script&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</div>
+<p>Um das Schreiben und Auslesen von Daten über <code>window.name</code> zu erleichern, wird ein eigenes Objekt namens <code>storage</code> eingeführt. Dessen Definition finden wir in in der externen JavaScript-Datei <code>storage.js</code>, die im sendenden und im empfangenden Dokument eingebunden wird (siehe <a href="Einf%c3%bchrung.html#JavaScript-Dateien_in_HTML_referenzieren" title="JavaScript/Einführung">JavaScript in separaten Dateien</a>). Die Nutzung dieses Fertigscriptes ist denkbar einfach – zum Verständnis der internen Umsetzung ist jedoch grundlegendes Wissen über objektorientierte Programmierung notwendig. Wenn Sie die folgenden Erklärungen nicht auf Anhieb verstehen, so ist das nicht schlimm.
+</p><p>Das eigene Objekt storage wird <code>new function () { ... }</code> definiert. Das bedeutet, es wird eine Instanz der folgenden Funktion erzeugt. Lassen Sie sich nicht verwirren, dies ist nichts anderes als das Instantiieren von Objekten nach dem bekannten Schema <code>var instanz = new Konstruktor()</code>. Das Besondere hier ist lediglich, dass die Konstruktor-Funktion anonym notiert wurde, also keinen Namen hat. Wir könnten ebenso schreiben:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!doctype html&quot;&gt;
+function storageConstructor () {
+	/* ...*/
+}
+var storage = new storageConstructor();
+</div>
+</div>
+<p>Allerdings wird durch die Kurzschreibweise mit der anonymen Funktion die überflüssige globale Variable <code>storageConstructor</code> vermieden.
+</p><p>In dieser anonymen Konstruktor-Funktion befindet sich jedenfalls die gesamte Logik:
+</p>
+<ul><li>Es gibt eine private Eigenschaft namens <code>dataContainer</code>. Dies Object in welchem alle Namen/Werte-Paare gespeichert werden.
+</li><li>Es gibt drei private, nur für die interne Verarbeitung benötigte Methoden.
+<ul><li><code>linearize()</code> erzeugt aus den Daten im <code>dataContainer</code> einen String, der dann in <code>window.name</code> gespeichert werden kann. Als Kodierungsformat wird die bekannte URL-Kodierung verwendet (name1=wert1&amp;name2=wert2&amp;...).
+</li><li><code>read()</code> liest <code>window.name</code> aus, dekodiert die darin gespeicherten Daten und legt sie als JavaScript-Objekte im <code>dataContainer</code> ab.
+</li><li><code>write()</code> ruft die Linearisierungsfunktion auf und schreibt deren Rückgabewert in <code>window.name</code>.
+</li></ul>
+</li><li>Es gibt fünf öffentliche Methoden, die über <code>storage.methodenName()</code> aufgerufen werden können:
+<ul><li><code>set(name, value)</code> speichert einen Wert unter einem bestimmten Namen. Erwartet dazu den Namen und den Wert als Parameter.
+</li><li><code>get(name)</code> liefert den gespeicherten Wert mit dem angegebenen Namen zurück. Erwartet dazu den Namen als Parameter.
+</li><li><code>getAll()</code> liefert alle gespeicherten Werte als Object zurück. Erwartet keine Parameter.
+</li><li><code>remove(name)</code> entfernt den gespeicherten Wert mit dem angegebenen Namen. Erwartet dazu den Namen als Parameter.
+</li><li><code>removeAll()</code> entfernt alle gespeicherten Werte. Erwartet keine Parameter.
+</li></ul>
+</li></ul>
+<p>Schließlich wird in der Konstruktor-Funktion einmalig die private Methode <code>read()</code> aufgerufen, um beim Laden des Dokuments die in <code>window.name</code> gespeicherten Daten auszulesen und sie später bereitstellen zu können.
+</p><p>Im sendenden Dokument befindet sich das bekannte Namens-Formular. Beim Absenden (onbsubmit) wird eine Funktion aufgerufen, die die Formulardaten mittels <code>storage</code> in <code>window.name</code> speichert. Dazu wird einfach die set-Methode aufgerufen und ihr wird der Wert des Formularfeldes übergeben:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code">&lt;!doctype html&quot;&gt;
+storage.set(&quot;vorname&quot;, document.forms.formular.elements.vorname.value);
+storage.set(&quot;nachname&quot;, document.forms.formular.elements.nachname.value);
+</div>
+</div>
+<p>Danach wird mit <code>location.href</code> zur empfangenden Seite weitergeleitet. Diese liest mittels <code>storage.getAll()</code> alle gespeicherten Werte aus. Im Dokumentkörper wird das zurückgelieferte Objekt durchlaufen und deren Name/Wert-Paare ausgegeben – wir kennen auch dies bereits aus dem vorigen Lösungsansatz. Möchten wir nur einen einzigen gespeicherten Wert auslesen, so nutzen wir get():
+</p><p><code>var vorname = storage.get("vorname");</code>
+</p><p>Mit dem vorgestellten storage-Objekt lassen sich komfortabel einfache Daten zwischen verschiedenen, nacheinander geladenen Dokumenten austauschen. Eine rigide Größenbeschränkung von <code>window.name</code> scheint nicht zu existieren, selbst eine Zeichenkette von mehreren 100 Kilobyte wird erfolgreich verarbeitet. Es dürfte jedoch geraten sein, in der regelmäßigen Verwendung nicht über einige Kilobyte hinauszugehen. Sie sollten ebenfalls beachten, dass der Zugriff auf das Fenster über dessen Namen durch den&#160;»Missbrauch«&#160;von <code>window.name</code> erschwert, wenn nicht unmöglich werden.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Anwendungsgebiete und Risiken">Bearbeiten</a>]</span> <span class="mw-headline" id="Anwendungsgebiete_und_Risiken">Anwendungsgebiete und Risiken</span></h3>
+<p>Mittlerweile gibt es <a rel="nofollow" class="external text" href="http://www.quirksmode.org/js/cookies.html">Helferscripte</a>, die das Lesen und Setzen von Cookies über <a href="Objekte/DOM/document/cookie.html" title="JavaScript/Objekte/DOM/document/cookie">document.cookie</a> vereinfachen. Trotzdem bleibt immer das Risiko, dass der Browser bzw. der Anwender Cookies ablehnt oder sie durch einen Proxy schon im vorhinein ausgefiltert werden. Der Lösungsansatz mit <code>window.name</code> kann in dem Fall eine Alternative sein.
+</p><p>Ob <code>document.cookie</code> oder <code>window.name</code>: Clientseitige Lösungen haben ähnliche Nachteile und sind nur in bestimmten Fällen geeignet. Die meisten dynamischen Webanwendungen setzen auf sogenannte Sessions (Sitzungen), eine serverseitige Lösung zum vorübergehenden Speichern von Daten. Clientseitig wird dann nur die Session-ID, die eindeutige Kennung der Sitzung gespeichert –- üblicherweise in einem Cookie, der aber nicht mit JavaScript, sondern ganz einfach HTTP gesetzt wird. Eine Beispielumsetzung in PHP stellt der Artikel <a href="../Technische_Erg%c3%a4nzungen/Loginsystem.html" title="Technische Ergänzungen/Loginsystem" class="mw-redirect"> Sessionbasiertes Loginsystem</a> vor. Für serverseitig dynamische Webseiten wie etwa Foren, Communities, Online-Shops ist diese Lösung ist zuverlässiger und sicherer als eine eventuelle JavaScript-Lösung.
+</p><p>JavaScript-Wertübergabe ist also kein Ersatz für Sessions, sondern deckt andere Problemstellungen ab. Wenn Sie sowieso JavaScript voraussetzen können oder optionale Zusatz-Features mit JavaScript entwickeln, dann ist <code>window.name</code> ideal, um kleinere Einstellungen zu speichern. Ein Beispiel ist ein Script, dass die individuelle Anpassung der Schriftgröße erlaubt.
+</p><p>Wichtiger Sicherheitshinweis: Cookies können nur von der Webseite ausgelesen werden können, die sie auch gesetzt hat. Dieses grundlegende und entscheidend wichtige Sicherheitskonzept nennt sich Same Origin Policy. Demgegenüber müssen Sie sich unbedingt im Klaren darüber sein, dass <code>window.name</code> auch für fremde Webseite lesbar ist, die später im selben Fenster angezeigt werden. Für <code>window.name</code> gilt keine Same Origin Policy! Deshalb sollten Sie darin niemals vertrauliche Daten speichern, ansonsten ist im schlimmsten Fall <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Session-Hijacking">Session Hijacking</a> und <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Identitätsdiebstahl">Identitätsdiebstahl</a> Tür und Tor geöffnet.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Ausblick auf Super-Cookies und die Übergabe komplexer Daten">Bearbeiten</a>]</span> <span class="mw-headline" id="Ausblick_auf_Super-Cookies_und_die_.C3.9Cbergabe_komplexer_Daten">Ausblick auf Super-Cookies und die Übergabe komplexer Daten</span></h2>
+<p>Neben <code>document.cookie</code> und <code>window.name</code> gibt es in HTML5 mit <a href="API/Web_Storage.html" title="JavaScript/API/Web Storage">localStorage</a> eine weitere Technik, die komfortable Methoden zum Speichern und Lesen von Werten bereits mitbringt. Mit diesem DOM Storage wird das clientseitige Speichern damit denkbar einfach:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel: DOM Storage
+</div>
+<div class="note-box-text note-box-example-code">
+sessionStorage.vorname = &quot;Stefan&quot;; // Nur für die Browser-Session speichern
+globalStorage['selfhtml.org'].vorname = &quot;Stefan&quot;; // für unbestimmte Zeit speichern
+</div>
+</div>
+<p>Schließlich sei eine Alternative zur Linearisierung von JavaScript-Daten nach dem Schema <code>?name1=wert1&amp;name2=wert2&amp;name3=wert3&amp;...</code> genannt. Wie gesagt unterstützen die vorgestellten Funktionen nur die Übermittlung von einfachen JavaScript-Werten, das heißt vor allem String-, Number- und Boolean-Werte. Komplexe Datentypen wie Arrays, Objects und reguläre Ausdrücke werden nicht korrekt kodiert und werden bei der Übertragung verstümmelt. Eine bessere Lösung wäre die Nutzung des Formates <a href="JSON.html" title="JavaScript/JSON">JSON</a> und den Funktionen <a href="JSON.html#JSON.stringify.28.29" title="JavaScript/JSON">JSON.stringify()</a> und <a href="JSON.html#JSON.parse.28.29" title="JavaScript/JSON">JSON.parse()</a>. Das vorgestellte Script <code>storage.js</code> kann einfach abgeändert werden, sodass die Daten mit JSON kodiert und dekodiert werden.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 372/1000000
+Post‐expand include size: 4593/2097152 bytes
+Template argument size: 2694/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:4125-0!*!0!!de-formal!*!* and timestamp 20150301203254 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;oldid=24250">http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;oldid=24250</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Javascript%2FWert%C3%BCbergabe+zwischen+verschiedenen+HTML-Dokumenten" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Wert%c3%bcbergabe_zwischen_verschiedenen_HTML-Dokumenten.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Wert%c3%bcbergabe_zwischen_verschiedenen_HTML-Dokumenten.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/Javascript/Wert%c3%bcbergabe_zwischen_verschiedenen_HTML-Dokumenten.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/Javascript/Wert%c3%bcbergabe_zwischen_verschiedenen_HTML-Dokumenten.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Javascript/Wert%C3%BCbergabe_zwischen_verschiedenen_HTML-Dokumenten&amp;oldid=24250" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/Javascript-2FWert%c3%bcbergabe_zwischen_verschiedenen_HTML-2DDokumenten.html" title="Spezial:Durchsuchen/Javascript-2FWertübergabe zwischen verschiedenen HTML-2DDokumenten">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 12. November 2014 um 01:05 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 1.046-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.086 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Javascript/Wertübergabe_zwischen_verschiedenen_HTML-Dokumenten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:20 GMT -->
+</html>

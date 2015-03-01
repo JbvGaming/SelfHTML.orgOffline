@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Reguläre Ausdrücke – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Reguläre_Ausdrücke","wgTitle":"Perl/Reguläre Ausdrücke","wgCurRevisionId":23631,"wgArticleId":3724,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Perl"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Reguläre_Ausdrücke","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Reguläre Ausdrücke" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Reguläre_Ausdrücke skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Reguläre Ausdrücke</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p><b>Reguläre Ausdrücke</b> (oder kurz: <i>Regexps</i> von engl. <i>regular expressions</i>) stellen in der Programmierung verallgemeinerte Suchmuster dar. Mithilfe dieser Suchmuster können Sie beispielsweise Variableninhalte durchsuchen und bestimmte Inhalte daraus herausziehen oder ersetzen. So können Sie mit regulären Ausdrücken etwa beim Einlesen von Dateien (z.B. einer Datei mit Einträgen eines Gästebuchs) anhand der Konventionen, nach denen die Datei aufgebaut ist, die einzelnen Einträge geordnet einlesen und als HTML-Code an den aufrufenden Browser übertragen lassen. Reguläre Ausdrücke sind auch ein mächtiges Mittel, um große Datenbestände nach komplexen Suchausdrücken zu durchforsten. Beispielsweise könnten alle Begriffe gesammelt werden, die mit „A“ beginnen und auf „tion“ oder „tung“ enden, was mit gewöhnlichen Stringfunktionen nur mühselig zu bewerkstelligen wäre. Der Webcomic xkcd liefert ein eindrucksvolles und motivierendes Beispiel für diese vielzitierte Mächtigkeit der regulären Ausdrücke, siehe <a rel="nofollow" class="external text" href="http://xkcd.com/208/">xkcd #208</a>.
+</p><p>Reguläre Ausdrücke sind allerdings für Neulinge, die nicht aus der Unix-Welt kommen, sehr ungewohnt und der Hauptgrund dafür, warum in manchen Scripts ziemlich merkwürdige, kryptisch anmutende Zeichenfolgen vorkommen. Wer allerdings mit Unix-Befehlen wie <code>grep</code> oder <code>sed</code> vertraut ist, kommt auch schnell mit den regulären Ausdrücken in Perl, Python, <a href="http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp" title="JavaScript/Objekte/RegExp">Javascript</a>, PHP etc. zurecht, da sich die Regexp-Implementierungen (auch <i>Regexp-Engines</i> genannt) ähneln.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Einf.C3.BChrende_Beispiele"><span class="tocnumber">1</span> <span class="toctext">Einführende Beispiele</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Einfaches_Beispiel"><span class="tocnumber">1.1</span> <span class="toctext">Einfaches Beispiel</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Anspruchsvolleres_Beispiel"><span class="tocnumber">1.2</span> <span class="toctext">Anspruchsvolleres Beispiel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Begrifflichkeiten"><span class="tocnumber">2</span> <span class="toctext">Begrifflichkeiten</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen"><span class="tocnumber">3</span> <span class="toctext">Reguläre Ausdrücke für einzelne Zeichen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_Zeichenketten"><span class="tocnumber">4</span> <span class="toctext">Reguläre Ausdrücke für Zeichenketten</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Maskierung_von_Zeichen_in_regul.C3.A4ren_Ausdr.C3.BCcken"><span class="tocnumber">5</span> <span class="toctext">Maskierung von Zeichen in regulären Ausdrücken</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Wie_arbeiten_Regexp-Engines.3F"><span class="tocnumber">6</span> <span class="toctext">Wie arbeiten Regexp-Engines?</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Regul.C3.A4re_Ausdr.C3.BCcke_mit_Alternativen"><span class="tocnumber">7</span> <span class="toctext">Reguläre Ausdrücke mit Alternativen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Beispiel"><span class="tocnumber">7.1</span> <span class="toctext">Beispiel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Quantoren_I"><span class="tocnumber">8</span> <span class="toctext">Quantoren I</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Teilausdr.C3.BCcke_gruppieren_oder_merken_durch_Klammerung"><span class="tocnumber">9</span> <span class="toctext">Teilausdrücke gruppieren oder merken durch Klammerung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Beispiel_2"><span class="tocnumber">9.1</span> <span class="toctext">Beispiel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig"><span class="tocnumber">10</span> <span class="toctext">Quantoren II - genügsam, gierig, gefräßig</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Beispiel_3"><span class="tocnumber">10.1</span> <span class="toctext">Beispiel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Rangfolge_in_regul.C3.A4ren_Ausdr.C3.BCcken"><span class="tocnumber">11</span> <span class="toctext">Rangfolge in regulären Ausdrücken</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Modifiers"><span class="tocnumber">12</span> <span class="toctext">Modifiers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Beispiel_f.C3.BCr_die_Anwendung_des_.2Fi-Modifiers"><span class="tocnumber">12.1</span> <span class="toctext">Beispiel für die Anwendung des /i-Modifiers</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Beispiel_f.C3.BCr_die_Anwendung_des_.2Fg-Modifiers"><span class="tocnumber">12.2</span> <span class="toctext">Beispiel für die Anwendung des /g-Modifiers</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Beispiel_f.C3.BCr_die_Anwendung_des_.2Fx-Modifiers"><span class="tocnumber">12.3</span> <span class="toctext">Beispiel für die Anwendung des /x-Modifiers</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Beispiel_f.C3.BCr_die_Anwendung_des_.2Fs-Modifiers"><span class="tocnumber">12.4</span> <span class="toctext">Beispiel für die Anwendung des /s-Modifiers</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Beispiel_f.C3.BCr_die_Anwendung_des_.2Fm-_und_des_.2Fc-Modifiers"><span class="tocnumber">12.5</span> <span class="toctext">Beispiel für die Anwendung des /m- und des /c-Modifiers</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Beispiel_f.C3.BCr_die_Anwendung_des_.2Fo-Modifiers"><span class="tocnumber">12.6</span> <span class="toctext">Beispiel für die Anwendung des /o-Modifiers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Einbeziehung_des_Kontexts_via_Assertions"><span class="tocnumber">13</span> <span class="toctext">Einbeziehung des Kontexts via Assertions</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Suchen_und_Ersetzen_mit_regul.C3.A4ren_Ausdr.C3.BCcken"><span class="tocnumber">14</span> <span class="toctext">Suchen und Ersetzen mit regulären Ausdrücken</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Beispiel_4"><span class="tocnumber">14.1</span> <span class="toctext">Beispiel</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Beispiel_5"><span class="tocnumber">14.2</span> <span class="toctext">Beispiel</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Beispiel_6"><span class="tocnumber">14.3</span> <span class="toctext">Beispiel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Transliteration"><span class="tocnumber">15</span> <span class="toctext">Transliteration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#Beispiel_7"><span class="tocnumber">15.1</span> <span class="toctext">Beispiel</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Tabelle_der_m.C3.B6glichen_Meta-Character"><span class="tocnumber">15.2</span> <span class="toctext">Tabelle der möglichen Meta-Character</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#Anmerkungen"><span class="tocnumber">16</span> <span class="toctext">Anmerkungen</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Einführende Beispiele">Bearbeiten</a>]</span> <span class="mw-headline" id="Einf.C3.BChrende_Beispiele"> Einführende Beispiele </span></h2>
+<p>Zwei kleine einführende Beispiele sollen zeigen, in welchen Situationen reguläre Ausdrücke typischerweise zum Einsatz kommen.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Einfaches Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Einfaches_Beispiel"> Einfaches Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">@Orte</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Madrid&quot;</span><span class="sy0">,</span><span class="st0">&quot;London&quot;</span><span class="sy0">,</span><span class="st0">&quot;Mailand&quot;</span><span class="sy0">,</span><span class="st0">&quot;Paris&quot;</span><span class="sy0">,</span><span class="st0">&quot;Rom&quot;</span><span class="sy0">,</span><span class="st0">&quot;München&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="re0">@Orte</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw1">if</span><span class="br0">&#40;</span><span class="co5">$_</span> <span class="sy0">=~</span> <span class="co2">/^M/</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="kw3">print</span> <span class="st0">&quot;$_ fängt mit M an<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel deklariert ein  <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Array</a> namens <code>@Orte</code> mit sechs Städtenamen. Dann geht es die Einträge des Arrays mit einer <a href="http://wiki.selfhtml.org/wiki/Perl/Schleifen#foreach" title="Perl/Schleifen">foreach-Schleife</a> der Reihe nach durch. Im Schleifenblock wird überprüft, ob der Städtename im aktuellen Schleifendurchlauf mit <code>M</code> anfängt. Dazu wird die <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierte Variable</a> <code>$_</code>, in der in einer <code>foreach</code>-Schleife der aktuelle Wert enthalten ist, mit dem Operator <code>=~</code> an einen regulären Ausdruck gebunden. Der Operator <code>=~</code> ist in Perl speziell für reguläre Ausdrücke gedacht. Der reguläre Ausdruck selbst steht per Voreinstellung in Slashes. Innerhalb der Slashes wird ein Suchmuster definiert. Das Suchmuster <code>^M</code> im Beispiel bedeutet soviel wie "fängt mit <code>M</code> an".
+<p>Die ganze Anweisung <code>if($_ =~ /^M/)</code> ist also so zu lesen: wenn die Bedingung erfüllt ist, dass der Wert des aktuellen Schleifeninhalts mit einem <code>M</code> anfängt ...
+</p><p>Genau genommen können Sie die Zeichenfolge <code>$_ =~</code> auch weglassen, da der reguläre Ausdruck dann automatisch an die vordefinierte Variable <code>$_</code> gebunden wird. Später in diesem Abschnitt wird erklärt, dass sogar die Schleife nicht explizit notiert werden muss. Um eine bessere Verständlichkeit zu erhalten, wurde hier die ausführliche Notation gewählt.
+</p>
+Das Beispiel gibt in diesem Fall den Schleifeninhalt aus. Am Ende werden also aus dem Array <code>@Orte</code> die drei Städte ausgegeben, die mit <code>M</code> beginnen.</div>
+</div>
+<p>Das folgende Beispiel ist etwas anspruchsvoller.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Anspruchsvolleres Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Anspruchsvolleres_Beispiel"> Anspruchsvolleres Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$cgi</span> <span class="sy0">=</span> <span class="kw2">new</span> CGI<span class="sy0">;</span>
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">header</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">start_html</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Zeile</span> <span class="sy0">=</span> <span class="st0">&quot;{link:http://wiki.selfhtml.org/{SELFHTML-Seiten}}&quot;</span><span class="sy0">;</span>
+<span class="re0">$Zeile</span> <span class="sy0">=~</span> <span class="co2">/\{link:(.*)\{(.*)\}\}/</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Link</span> <span class="sy0">=</span> <span class="co3">$1</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Linktext</span> <span class="sy0">=</span> <span class="co3">$2</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;&lt;a href=<span class="es0">\&quot;</span>$Link<span class="es0">\&quot;</span>&gt;$Linktext&lt;/a&gt;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="re0">$cgi</span><span class="sy0">-&gt;</span><span class="me1">end_html</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">In diesem Script gibt es eine Variable namens <code>$Zeile</code>, die als Wert eine Zeichenkette speichert, welche eine bestimmte Struktur hat. Die Zeichenkette steht in geschweiften Klammern. Zuerst ist <code>link:</code> notiert, dann folgt ein URI und dann folgt, nochmals in geschweiften Klammern gesetzt, ein Text. Diese Struktur mit den geschweiften Klammern ist jetzt frei erfunden. Doch fast die gesamte EDV besteht daraus, Daten nach irgendwelchen für Computer wiedererkennbaren Strukturen oder Konventionen zu speichern. Reguläre Ausdrücke sind dafür geeignet, aus solchen Strukturen etwas Bestimmtes herauszufiltern. Im Beispiel filtert das Script mithilfe eines regulären Ausdrucks aus der Zeichenkette den URI und den Text in der zweiten, inneren geschweiften Klammer heraus und bastelt aus diesen beiden Teilwerten einen HTML-Verweis, den es am Ende mit <code>print</code> ausgibt.
+<p>Mit der Anweisung <code>$Zeile =~ /\{link:(.*)\{(.*)\}\}/;</code> wird der reguläre Ausdruck, der zwischen den beiden Slashes steht, auf den Wert der Variable <code>$Zeile</code> angewendet. Um die fürchterliche Ansammlung von Zeichen erst einmal etwas zu entwirren, seien zunächst die Backslashes <code>\</code> darin erwähnt. Diese dienen zur Maskierung des jeweils nachfolgenden Zeichens und bedeuten, dass es literal gemeint ist, das heißt einfach nur: Das nächste Zeichen soll als das Zeichen behandelt werden, das da steht. Also <code>\{</code> heißt beispielsweise einfach nur: Das folgende Zeichen <code>{</code> bitte nicht anders interpretieren als es da steht.
+</p><p>Das, worauf der reguläre Ausdruck passen soll, soll also demnach mit der Zeichenfolge <code>{link:</code> anfangen. Danach kann erst mal kommen, was will. Ausgedrückt wird dies durch <code>.*</code>. Irgendwann soll dann noch einmal eine öffnende geschweifte Klammer <code>{</code> in dem durchsuchten Wert vorkommen. Dahinter kann wieder kommen was will, also <code>.*</code>, und am Ende sollen nochmals zwei schließende geschweifte Klammern vorkommen. So wird also ein "Muster" mithilfe des regulären Ausdrucks definiert, das auf den untersuchten Wert passt, aber einige Dinge variabel lässt.
+</p><p>Auch hier wurde der Verständlichkeit halber eine Vereinfachung gewählt. Der Teilausdruck <code>.*</code> funktioniert zwar bei diesem Beispiel, kann jedoch in ungünstigen Fällen aufgrund seiner <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">Gierigkeit</a> zuviel erkennen.
+</p><p>Die beiden variablen Bereiche, also jene, die durch <code>.*</code> markiert sind, werden im Beispiel jeweils in runde Klammern eingeschlossen. Die runden Klammern zeigen den Wunsch an, dass Perl sich das, was zwischen diesen Klammern steht, merken soll. Im Beispiel merkt es sich auf diese Weise zwei variable Bereiche:
+</p>
+<pre>{link:<b>http://www.selfhtml.org/</b>{<b>SELFHTML-Seiten</b>}}
+</pre>
+<p>Die fett dargestellten Bereiche sind nun in den beiden runden Klammern gespeichert.
+</p><p>Um an die gespeicherten Werte heranzukommen, stellt Perl die vordefinierte Variablen <code>$1</code>, <code>$2</code>, <code>$3</code> usw. zur Verfügung. In <code>$1</code> ist der Inhalt der ersten runden Klammer im regulären Ausdruck gespeichert, in <code>$2</code> der Inhalt der zweiten runden Klammer. Das Beispiel-Script deklariert zwei Variablen namens <code>$Link</code> und <code>$Linktext</code>, denen es die beiden in den runden Klammern gespeicherten Werte zuweist.
+</p>
+Der Rest ist dann nicht mehr schwer: in einer <code>print</code>-Anweisung, die den Code für einen HTML-Verweis ausgibt, werden die beiden Variablen <code>$Link</code> und <code>$Linktext</code> an den Stellen eingefügt, wo ihre Werte hingehören.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Begrifflichkeiten">Bearbeiten</a>]</span> <span class="mw-headline" id="Begrifflichkeiten"> Begrifflichkeiten </span></h2>
+<p>Durch reguläre Ausdrücke, deren Ursprung in der theoretischen Informatik im Bereich der formalen Sprachen angesiedelt ist, können regelrechte Grammatiken definiert und damit Sprachen konstruiert werden. An dieser Stelle sei auf den <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Regexp">Wikipedia-Artikel über reguläre Ausdrücke</a> verwiesen, der diesen Hintergrund näher beleuchtet. Ein Grund, warum reguläre Ausdrücke so kompliziert erscheinen, ist die hohe Komprimierung in der Notation.
+</p><p>Wie in vielen Bereichen der Informatik werden auch bei den regulären Ausdrücken gerne einige englische Fachbegriffe (teilweise eingedeutscht) übernommen, was es zudem erleichtert, englischsprachige Dokumentationen zu verstehen. Bei den regulären Ausdrücken taucht beispielsweise immer wieder der praktische Begriff <i>matchen</i> auf, der sich je nach Kontext mit <i>auf etwas passen</i> oder <i>finden</i> übersetzen lässt. Ein regulärer Ausdruck wird auch als <i>Pattern (Muster)</i> bezeichnet; Teile davon als <i>Subpattern</i>. So matcht also das Pattern <code>/Gras.*rosa/</code> beim String <code>'Das Gras ist nicht rosa!'</code> den Teilstring <code>'Gras ist nicht rosa'</code>. Dabei matcht das Subpattern <code>.*</code> den Teilstring <code>'ist nicht'</code>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Reguläre Ausdrücke für einzelne Zeichen">Bearbeiten</a>]</span> <span class="mw-headline" id="Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen"> Reguläre Ausdrücke für einzelne Zeichen </span></h2>
+<p>Sie können in einer Zeichenkette
+</p>
+<ul><li> nach einem bestimmten Zeichen suchen,
+</li><li> nach einem Zeichen aus einer bestimmten Zeichenklasse suchen.
+</li></ul>
+<p>Solche Ausdrücke eignen sich weniger zur Mustererkennung als dazu, herauszufinden, ob in einer Zeichenkette bestimmte, z.B. unerlaubte Zeichen vorkommen. Die Pattern in den folgenden beiden Tabellen matchen also jeweils immer nur maximal ein Zeichen, unabhängig davon wie lang der zu durchsuchende String ist. In der ersten Tabelle werden jeweils Ausdrücke für feste Zeichen angegeben. Die zweite Tabelle gibt Beispiele für Zeichenklassen an.
+</p>
+<dl><dt>Tabelle - Zeichenbeispiele für reguläre Ausdrücke
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Nr.
+</th>
+<th> Regulärer Ausdruck
+</th>
+<th> passt auf eine Zeichenkette, die (mindestens)
+</th></tr>
+<tr>
+<th> 1.
+</th>
+<td> <code>/a/</code>
+</td>
+<td> ein 'a' enthält
+</td></tr>
+<tr>
+<th> 2.
+</th>
+<td> <code>/\x61/</code>
+</td>
+<td> ein 'a' enthält – genau wie Beispiel (<b>1.</b>), allerdings in hexadezimaler Regexp-Notation
+</td></tr>
+<tr>
+<th> 3.
+</th>
+<td> <code>/\x{20AC}/</code>
+</td>
+<td> ein Euro-Symbol '<a rel="nofollow" class="external text" href="http://aktuell.de.selfhtml.org/extras/bezahlen.htm">€</a>' enthält, ebenfalls in hexadezimaler Notation
+</td></tr>
+<tr>
+<th> 4.
+</th>
+<td> <code>/\N{EURO SIGN}/</code>
+</td>
+<td> ein Euro-Symbol '€' enthält, wobei die Unicode-Bezeichnung verwendet wird
+</td></tr>
+<tr>
+<th> 5.
+</th>
+<td> <code>/\077/</code>
+</td>
+<td> ein Fragezeichen enthält, in oktaler Notation
+</td></tr>
+<tr>
+<th> 6.
+</th>
+<td> <code>/\r/</code>
+</td>
+<td> ein Steuerzeichen für den Wagenrücklauf (carriage return) enthält
+</td></tr>
+<tr>
+<th> 7.
+</th>
+<td> <code>/\n/</code>
+</td>
+<td> ein Steuerzeichen für den Zeilenvorschub (line feed) enthält
+</td></tr>
+<tr>
+<th> 8.
+</th>
+<td> <code>/\t/</code>
+</td>
+<td> ein Steuerzeichen für den Tabulator enthält
+</td></tr>
+<tr>
+<th> 9.
+</th>
+<td> <code>/\f/</code>
+</td>
+<td> ein Steuerzeichen für den Seitenvorschub enthält
+</td></tr>
+<tr>
+<th> 10.
+</th>
+<td> <code>/\cK/</code>
+</td>
+<td> ein Steuerzeichen enthält, das mit Control+K erzeugt wird
+</td></tr>
+<tr>
+<th> 11.
+</th>
+<td> <code>/\e/</code>
+</td>
+<td> ein Escape-Zeichen enthält
+</td></tr>
+<tr>
+<th> 12.
+</th>
+<td> <code>/\a/</code>
+</td>
+<td> ein Steuerzeichen Bell (Glocke) enthält
+</td></tr></table>
+<p>Wenn Sie mit einem regulären Ausdruck prüfen wollen, ob in einer Zeichenkette ein bestimmtes Zeichen vorkommt, genügt es, dieses Zeichen innerhalb der Begrenzer (hier: Slashes) zu notieren, so wie in den Beispielen (<b>1.-12.</b>). Wenn das gesuchte Zeichen innerhalb von regulären Ausdrücken ein reserviertes Meta-Zeichen (engl. <i>meta character</i>) ist wie beispielsweise ein <code>+</code>, müssen Sie es normalerweise mit einem Backslash maskieren (<code>\+</code>). Meta-Zeichen sind auf jeden Fall <code>+?.*^$()[]{}|\</code>. Genaueres wird im Abschnitt <a href="#Maskierung_von_Zeichen_in_regul.C3.A4ren_Ausdr.C3.BCcken">Maskierung von Zeichen in regulären Ausdrücken</a> erklärt.
+</p><p>Sie können jedes Zeichen auch über seinen Hexadezimalwert mit <code>\x<i>nn</i></code> bzw. <code>\x{<i>nnnn</i>}</code> oder seinen Oktalwert mit <code>\0<i>nn</i></code> eingeben wie in den Beispielen (<b>2.-3.</b>) bzw. (<b>5.</b>). Es ist auch möglich, Zeichen aus dem riesigen Unicode-Zeichenvorrat zu matchen, wie die Beispiele (<b>2.-4.</b>) verdeutlichen. Für häufig verwendete Steuerzeichen bieten darüber hinaus einige Regexp-Engines die in den Beispielen (<b>6.-12.</b>) angegebenen Abkürzungen.
+</p>
+<dl><dt>Hinweis</dt><dd> Wenn Sie allerdings wirklich nur das Vorkommen eines festen Zeichens oder einer festen Zeichenkette überprüfen wollen, sind meistens die gewöhnlichen Stringfunktionen die effizientere Wahl.
+</dd></dl>
+<p>Für reguläre Ausdrücke interessanter sind Fälle, in denen Sie prüfen wollen, ob ein Zeichen einer Auswahl von verschiedenen Zeichen vorkommt, wie in den Beispielen (<b>13.-31.</b>). Dafür gibt es innerhalb der regulären Ausdrücke die sogenannten Zeichenklassen, die nun in der zweiten Tabelle beispielhaft präsentiert werden.
+</p>
+<dl><dt>Tabelle - Zeichenklassenbeispiele für reguläre Ausdrücke
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Nr.
+</th>
+<th> Regulärer Ausdruck
+</th>
+<th> passt auf eine Zeichenkette, die (mindestens)
+</th></tr>
+<tr>
+<th> 13.
+</th>
+<td> <code>/[ab]/</code>
+</td>
+<td> ein 'a' oder ein 'b' enthält
+</td></tr>
+<tr>
+<th> 14.
+</th>
+<td> <code>/[A-Z]/</code>
+</td>
+<td> einen Großbuchstaben enthält (passt nicht auf Umlaute)
+</td></tr>
+<tr>
+<th> 15.
+</th>
+<td> <code>/[0-9]/</code>
+</td>
+<td> eine Ziffer enthält
+</td></tr>
+<tr>
+<th> 16.
+</th>
+<td> <code>/\d/</code>
+</td>
+<td> eine Ziffer enthält - genau wie Beispiel (15.)
+</td></tr>
+<tr>
+<th> 17.
+</th>
+<td> <code>/\D/</code>
+</td>
+<td> ein Zeichen enthält, das keine Ziffer ist
+</td></tr>
+<tr>
+<th> 18.
+</th>
+<td> <code>/[-\d]/</code>
+</td>
+<td> eine Ziffer oder ein Minuszeichen enthält
+</td></tr>
+<tr>
+<th> 19.
+</th>
+<td> <code>/[[\]]/</code>
+</td>
+<td> eine eckige Klammer enthält (die schließende Klammer muss maskiert werden.)
+</td></tr>
+<tr>
+<th> 20.
+</th>
+<td> <code>/[a-zA-Z0-9_]/</code>
+</td>
+<td> ein Zeichen vom Typ Buchstabe (ohne Umlaute), vom Typ Ziffer oder einen Unterstrich enthält
+</td></tr>
+<tr>
+<th> 21.
+</th>
+<td> <code>/\w/</code>
+</td>
+<td> ein Zeichen vom Typ Buchstabe, vom Typ Ziffer oder einen Unterstrich enthält - (fast) genau wie Beispiel (10.); ob Umlaute erkannt werden können, hängt von der Systemkonfiguration ab
+</td></tr>
+<tr>
+<th> 22.
+</th>
+<td> <code>/\W/</code>
+</td>
+<td> ein Zeichen enthält, was weder Buchstabe noch Ziffer noch Unterstrich ist; ob Umlaute ausgeschlossen werden können, hängt von der Systemkonfiguration ab
+</td></tr>
+<tr>
+<th> 23.
+</th>
+<td> <code>/\s/</code>
+</td>
+<td> ein Leerzeichen oder ein Steuerzeichen aus Beispielen (6.-9.), also whitespace, enthält
+</td></tr>
+<tr>
+<th> 24.
+</th>
+<td> <code>/\S/</code>
+</td>
+<td> ein Zeichen enthält, das kein Leerzeichen oder Steuerzeichen aus Beispielen (6.-9.) ist
+</td></tr>
+<tr>
+<th> 25.
+</th>
+<td> <code>/[^äöüÄÖÜ]/</code>
+</td>
+<td> ein Zeichen enthält, was kein deutscher Umlaut (in der entsprechenden Zeichenkodierung) ist
+</td></tr>
+<tr>
+<th> 26.
+</th>
+<td> <code>/[^a-zA-Z]/</code>
+</td>
+<td> ein Zeichen enthält, welches kein Buchstabe ist (ohne Umlaute)
+</td></tr>
+<tr>
+<th> 27.
+</th>
+<td> <code>/[a-ZA-Z[:digit:]_]/</code>
+</td>
+<td> ein Zeichen vom Typ Buchstabe (ohne Umlaute), vom Typ Ziffer oder einen Unterstrich enthält, genau wie Beispiel (20.), allerdings mit POSIX-Notation für Ziffern
+</td></tr>
+<tr>
+<th> 28.
+</th>
+<td> <code>/[[:^digit:]]/</code>
+</td>
+<td> ein Zeichen enthält, das keine Ziffer ist - genau wie Beispiel (19.), allerdings in POSIX-Notation
+</td></tr>
+<tr>
+<th> 29.
+</th>
+<td> <code>/\p{IsDigit}/</code>
+</td>
+<td> eine Ziffer enthält - genau wie Beispiel (15.), allerdings in Unicode-Notation
+</td></tr>
+<tr>
+<th> 30.
+</th>
+<td> <code>/\p{Devanagari}/</code>
+</td>
+<td> ein Zeichen der indischen Schrift Devanagari enthält
+</td></tr>
+<tr>
+<th> 31.
+</th>
+<td> <code>/./</code>
+</td>
+<td> ein beliebiges Zeichen, das kein Zeilenumbruch ist
+</td></tr></table>
+<p>Eine Zeichenklasse wird meist innerhalb eckiger Klammern <code>[...]</code> notiert, wie in den Beispielen (<b>13.-15.</b>, <b>18.-20.</b> und <b>25.-28.</b>). Eine Zeichenklasse matcht immer genau ein Zeichen. Innerhalb dieser Zeichenklasse können Sie nun die verschiedenen Zeichen dieser Klasse aufzählen, indem Sie die Zeichen nacheinander notieren. Einige reservierte Meta-Zeichen müssen auch hierbei explizit mit einem Backslash maskiert werden wie in Beispiel (<b>19.</b>). Diese Zeichen sind <code>-]\^/$</code> (die öffnende eckige Klammer muss also nicht maskiert werden; genaueres siehe Abschnitt <a href="#Maskierung_von_Zeichen_in_regul.C3.A4ren_Ausdr.C3.BCcken">Maskierung von Zeichen in regulären Ausdrücken</a>). Wenn Sie einen größeren Zeichenbereich haben, der passen soll, können Sie diesen angeben, indem Sie das erste Zeichen des Bereichs notieren, danach ein gewöhnliches Bindestrichminuszeichen als Bis-Strich <code>-</code> und danach das letzte Zeichen des Bereichs, wie in den Beispielen (<b>14.</b>, <b>15.</b>, <b>20.</b> und <b>26.</b>). Wenn Sie den Bindestrich literal, also als wirkliches Zeichen meinen, notieren Sie ihn am Anfang oder am Ende der Zeichenklasse, wie in Beispiel (<b>18.</b>). Alternativ kann seine Meta-Bedeutung auch durch Maskierung mittels Backslash aufgehoben werden oder wenn er unmittelbar vor oder nach einer abgekürzten Zeichenklasse <code>\w</code>, <code>\W</code>, <code>\s</code>, <code>\S</code>, <code>\d</code> oder <code>\D</code> steht.
+</p><p>Für bestimmte häufig vorkommende Zeichenklassen gibt es Abkürzungen. So entspricht <code>[0-9]</code> dem kürzeren <code>\d</code> und <code>[ \r\n\t\f]</code> entspricht <code>\s</code>. Die Zeichenklasse <code>[a-zA-Z0-9_]</code> entspricht im Allgemeinen der Abkürzung <code>\w</code>, wobei <code>\w</code> je nach Einstellungen auch Umlaute, das Eszett oder andere regionale Schriftzeichen enthält. Sie können diese Abkürzungen auch innerhalb von Zeichenklassen verwenden, wie in Beispiel (<b>18.</b>). Mit dem Punkt <code>.</code>, wie er in Beispiel (<b>31.</b>) benutzt wird, existiert ein Platzhalter für ein beliebiges Zeichen (außer Zeilenumbrüchen). Bei Definitionen von Zeichenklassen, also innerhalb von eckigen Klammern <code>[]</code> hat der Punkt jedoch seine literale Bedeutung.
+</p><p>Sie können wie in den Beispielen (<b>25.</b> und <b>26.</b>) Zeichenklassen negieren, um festzulegen, dass jene ein Zeichen matchen sollen, dass <i>keinem</i> der angegebenen Zeichen entspricht. Dazu notieren Sie direkt nach der öffnenden eckigen Klammer <code>[</code> das Hütchensymbol <code>^</code>. Beachten Sie, dass für einen erfolgreichen Match dann mindestens ein Zeichen in der durchsuchten Zeichenkette vorhanden sein muss, auf das der reguläre Ausdruck nicht passt. Wenn Sie also Beispiel (<b>26.</b>) auf eine leere Zeichenkette anwenden, bekommen Sie als Ergebnis, dass der reguläre Ausdruck <i>nicht</i> passt, obwohl kein Buchstabe der Zeichenkette vorkommt. Um abgekürzte Zeichenklassen wie etwa <code>\s</code> oder <code>\d</code> zu negieren, ändern Sie einfach den "Namen" der Abkürzung in einen Großbuchstaben, also <code>\S</code> bzw. <code>\D</code>.
+</p><p>Für Zeichenklassen existiert auch eine POSIX-Norm. Dazu wird innerhalb der Zeichenklassen <code>[:<i>class</i>:]</code> notiert wie in den Beispielen (<b>27.-28.</b>). <i>class</i> kann dabei eine der Klassen <code>alpha, alnum, ascii, blank, cntrl, digit, graph, lower, print, punct, space, upper, word, xdigit</code> sein. Die genauen Bedeutungen dieser Zeichenklassen können Sie im Abschnitt <a rel="nofollow" class="external text" href="http://perldoc.perl.org/perlre.html">perlre im Perl-Manual</a> nachlesen.
+</p><p>Die Beispiele (<b>29.-30.</b>) demonstrieren, dass Perl Ihnen mittels <code>\p{}</code> sogar die Möglichkeit bietet, nach Zeichen bestimmter vordefinierter Unicode-Zeichenklassen zu suchen. Da es den Rahmen sprengen würde, hier alle diese Möglichkeiten aufzulisten, sei an dieser Stelle auf die Übersicht des Abschnitts <a rel="nofollow" class="external text" href="http://perldoc.perl.org/perlunicode.html">perlunicode im Perl-Manual</a> verwiesen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Reguläre Ausdrücke für Zeichenketten">Bearbeiten</a>]</span> <span class="mw-headline" id="Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_Zeichenketten"> Reguläre Ausdrücke für Zeichenketten </span></h2>
+<p>Sie können nach einer bestimmten Zeichenkette suchen und dabei verschiedene Vorgaben an die zu suchende Zeichenkette oder deren Umgebung vorgeben. Die im vorigen Abschnitt behandelten Ausdrücke, mit denen einzelne Zeichen gematcht werden, können kombiniert werden, um ganze Zeichenfolgen zu matchen. Dies ist dazu gedacht, um etwa in einer Variable nach dem Vorkommen einer beliebigen Teilzeichenkette oder allgemein nach einem Muster zu suchen.
+</p><p>Die nachfolgende Tabelle gibt einen ersten Überblick über einige häufig verwendete Ausdrücke.
+</p>
+<dl><dt>Tabelle - Beispiele für einfache reguläre Ausdrücke durch Kombination von Symbolen für einzelne Zeichen
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Nr.
+</th>
+<th> Regulärer Ausdruck
+</th>
+<th> Wirkung
+</th></tr>
+<tr>
+<th> 1.
+</th>
+<td> <code>/aus/</code>
+</td>
+<td> matcht 'aus' - auch in 'Haus' oder 'Mausi'
+</td></tr>
+<tr>
+<th> 2.
+</th>
+<td> <code>/a./</code>
+</td>
+<td> matcht 'ab' und 'an' (ein beliebiges Zeichen hinter 'a', außer <code>\n</code>)
+</td></tr>
+<tr>
+<th> 3.
+</th>
+<td> <code>/a[ul]s/</code>
+</td>
+<td> matcht 'aus' oder 'als' - auch in 'Haus', 'Mausi', 'Gralsuche' oder 'also'
+</td></tr>
+<tr>
+<th> 4.
+</th>
+<td> <code>/Ha.s/</code>
+</td>
+<td> matcht 'Haus' und 'Hans', aber keinen Teilstring von 'Hannes'
+</td></tr>
+<tr>
+<th> 5.
+</th>
+<td> <code>/Hans\b/</code>
+</td>
+<td> matcht 'Hans', aber nicht in 'Hansel' (Wortgrenze)
+</td></tr>
+<tr>
+<th> 6.
+</th>
+<td> <code>/\baus/</code>
+</td>
+<td> matcht 'aus' in 'auskratzen', aber nicht in 'Haus' (Wortgrenze)
+</td></tr>
+<tr>
+<th> 7.
+</th>
+<td> <code>/\baus\b/</code>
+</td>
+<td> matcht 'aus', aber nicht in 'Haus' und auch nicht 'auskratzen' (Wortgrenze)
+</td></tr>
+<tr>
+<th> 8.
+</th>
+<td> <code>/\baus\B/</code>
+</td>
+<td> matcht 'aus' in 'auskratzen', aber nicht in 'aus' und auch nicht in 'Haus' (Wortgrenze und Nicht-Wortgrenze)
+</td></tr>
+<tr>
+<th> 9.
+</th>
+<td> <code>/^Hans/</code>
+</td>
+<td> matcht 'Hans' nur am Anfang des zu durchsuchenden Bereichs, also z.B. nicht in 'Der Hans'.
+</td></tr>
+<tr>
+<th> 10.
+</th>
+<td> <code>/Hans$/</code>
+</td>
+<td> matcht 'Hans' nur am Ende des zu durchsuchenden Bereichs, wobei ein Newline-Zeichen noch Folgen darf.
+</td></tr>
+<tr>
+<th> 11.
+</th>
+<td> <code>/$Name/</code>
+</td>
+<td> interpretiert den Inhalt der Variable <code>$Name</code> als regulären Ausdruck
+</td></tr></table>
+<p>Wenn Sie in einem regulären Ausdruck nach einer bestimmten Zeichenkette suchen wollen, notieren Sie die Zeichenkette einfach zwischen den beiden Slashes des regulären Ausdrucks, so wie in Beispiel (<b>1.</b>). Allerdings gilt auch hier wie bei den <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">regulären Ausdrücken für einzelne Zeichen</a>: wenn Sie nach einer festen Zeichenfolge suchen, sind Sie mit den gewöhnlichen Stringfunktionen wie z.B. in Perl der Funktion  <a href="http://wiki.selfhtml.org/wiki/Perl/Zeichenketten#index" title="Perl/Zeichenketten">index</a> besser beraten.
+</p><p>Die Beispiele (<b>1.-4.</b>) zeigen, dass die im vorigen Abschnitt behandelten einzelnen Zeichen bzw. Zeichenklassen durch einfache Aneinanderkettung zu Ausdrücken für Zeichenketten werden. Beachten Sie, dass es diesen vier Beispielen schon genügt, wenn Teilzeichenketten dem jeweils vorgegebenen Muster entsprechen. Sie können jedoch auch nach Zeichenketten suchen, die nur dann gefunden werden, wenn sie am Anfang oder am Ende eines Wortes vorkommen. Auch die Umkehrung davon ist möglich: Sie können nach Zeichenketten suchen, die nur dann gefunden werden, wenn sie nicht am Anfang oder am Ende eines Wortes vorkommen.
+</p><p>Mit <code>\b</code> (word <b>b</b>oundary - Wortgrenze) vor einer Zeichenkette wird die Zeichenkette nur gematcht, wenn ein Wort damit anfängt.<br />
+Mit <code>\b</code> nach einer Zeichenkette wird die Zeichenkette nur gematcht, wenn ein Wort damit endet.<br />
+Mit <code>\B</code> vor einer Zeichenkette wird die Zeichenkette nur gefunden, wenn ein Wort nicht damit anfängt.<br />
+Mit <code>\B</code> nach einer Zeichenkette wird die Zeichenkette nur gefunden, wenn ein Wort nicht damit endet.
+</p><p>Zu diesen Möglichkeiten siehe Beispiele (<b>5.-8.</b>). Genau gesagt definiert <code>\b</code> die Grenze zwischen <code>\w</code> und <code>\W</code> (bzw. zwischen \w und Zeichenkettenanfang oder -ende).
+</p><p>Sie können auch Zeichenketten suchen, die nur dann gematcht werden, wenn sie am Anfang oder am Ende einer Zeile des zu durchsuchenden Bereichs vorkommen. Mit dem Zirkumflex <code>^</code> am Beginn des Suchausdrucks wird die Zeichenkette nur gefunden, wenn sie am Anfang des Bereichs steht.
+</p><p>Mit dem Dollarzeichen <code>$</code> am Ende des Suchausdrucks wird die Zeichenkette nur gematcht, wenn sie am Ende des Bereichs steht, wobei noch ein Zeilenumbruch folgen darf.
+</p><p>Zu diesen Möglichkeiten siehe Beispiele (<b>9.</b>) und (<b>10.</b>). Detaillierter wird auf diese <i>Anchors</i> im Abschnitt über die <a href="#Modifiers">Modifiers</a> eingegangen.
+</p><p>Innerhalb von regulären Ausdrücken können Sie auch Variablen verwenden. Auf diese Weise können Sie dynamische Daten als Suchmuster einsetzen. Im Zusammenhang mit CGI können Sie z.B. die Anwendereingabe aus einem Formularfeld in ein Suchmuster übernehmen. Siehe dazu Beispiel (<b>11.</b>).
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Maskierung von Zeichen in regulären Ausdrücken">Bearbeiten</a>]</span> <span class="mw-headline" id="Maskierung_von_Zeichen_in_regul.C3.A4ren_Ausdr.C3.BCcken"> Maskierung von Zeichen in regulären Ausdrücken </span></h2>
+<p>Da es bei regulären Ausdrücken einige <i>Meta-Zeichen</i> (engl. <i>Metacharacters</i>) mit Sonderbedeutung gibt, müssen Sie solche Zeichen <i>maskieren</i> (auch <i>escapen</i> oder engl. <i>quote</i>), wenn Sie nicht die Meta-Bedeutung des Zeichens meinen, sondern seine literale, normale Bedeutung, also einen Senkrechtstrich als Senkrechtstrich oder einen Punkt als Punkt meinen. Das Maskierungszeichen ist in fast allen Fällen der Backslash. Erschwerend kommt hinzu, dass je nach Kontext (z.B. inner- oder außerhalb einer Zeichenklasse) verschiedene Zeichen verschiedene Bedeutungen haben und somit auch unterschiedliche Zeichen maskiert werden müssen. Die folgendenen Tabellen sollen als Übersicht über die jeweils zu maskierenden Zeichen dienen. Zunächst werden die Zeichen aufgeführt, welche außerhalb von Zeichenklassendefinitionen maskiert werden müssen.
+</p>
+<dl><dt>Tabelle - Maskierung von Zeichen außerhalb eckiger Klammern (Zeichenklasse)
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Zeichen
+</th>
+<th> Maskierung
+</th>
+<th> Grund
+</th>
+<th> Beispiel
+</th></tr>
+<tr>
+<td> <code>/</code>
+</td>
+<td> <code>\/</code>
+</td>
+<td> Wenn der Slash den regulären Ausdruck begrenzt, muss er innerhalb davon maskiert werden.
+</td>
+<td> <code>/\/usr\/bin\/perl/</code>
+</td></tr>
+<tr>
+<td> <code>.</code>
+</td>
+<td> <code>\.</code>
+</td>
+<td> Der Punkt steht in regulären Ausdrücken ansonsten für ein beliebiges anderes Zeichen (außer Zeilenumbrüchen).
+</td>
+<td> <code>/Ende aus\./</code>
+</td></tr>
+<tr>
+<td> <code>+</code>
+</td>
+<td> <code>\+</code>
+</td>
+<td> Das Pluszeichen steht ansonsten für ein oder mehrmaliges Vorkommen des davorstehenden Zeichens/Subpatterns.
+</td>
+<td> <code>/\d\+\d/</code>
+</td></tr>
+<tr>
+<td> <code>*</code>
+</td>
+<td> <code>\*</code>
+</td>
+<td> Das Sternzeichen steht ansonsten für kein, ein oder mehrmaliges Vorkommen des davorstehenden Zeichens/Subpatterns.
+</td>
+<td> <code>/\*char/</code>
+</td></tr>
+<tr>
+<td> <code>?</code>
+</td>
+<td> <code>\?</code>
+</td>
+<td> Das Fragezeichen steht ansonsten für kein oder einmaliges Vorkommen des davorstehenden Zeichens/Subpatterns.
+</td>
+<td> <code>/Wie geht das\?/</code>
+</td></tr>
+<tr>
+<td> <code>^</code>
+</td>
+<td> <code>\^</code>
+</td>
+<td> Das Dach- oder Hütchensymbol kann ansonsten bei Zeichenketten angeben, dass das nachfolgende Suchmuster am Anfang des Suchbereichs vorkommen muss.
+</td>
+<td> <code>/ein \^ über dem Kopf/</code>
+</td></tr>
+<tr>
+<td> <code>$</code>
+</td>
+<td> <code>\$</code>
+</td>
+<td> Das Dollarzeichen kann eine Variable einleiten oder bei Zeichenketten angeben, dass das voranstehende Suchmuster am Ende des Suchbereichs vorkommen muss.
+</td>
+<td> <code>/Preis (US-Dollar): \d*\$/</code>
+</td></tr>
+<tr>
+<td> <code>@</code>
+</td>
+<td> <code>\@</code>
+</td>
+<td> Der Klammeraffe kann eine Variable einleiten.
+</td>
+<td> <code>/[a-z_0-9-]+\@localhost/</code>
+</td></tr>
+<tr>
+<td> <code>|</code>
+</td>
+<td> <code>\|</code>
+</td>
+<td> Der Senkrechtstrich kann ansonsten alternative Ausdrücke auseinanderhalten.
+</td>
+<td> <code>/find (.*) \| sort/</code>
+</td></tr>
+<tr>
+<td> <code>\</code>
+</td>
+<td> <code>\\</code>
+</td>
+<td> Das Backslash würde ansonsten das nachfolgende Zeichen maskieren.
+</td>
+<td> <code>/C:\\/</code>
+</td></tr>
+<tr>
+<td> <code>( )</code>
+</td>
+<td> <code>\( \)</code>
+</td>
+<td> Runde Klammern können ansonsten Teilausdrücke gruppieren und zum Merken einklammern.
+</td>
+<td> <code>/\(Hinweis: (.*)\)/</code>
+</td></tr>
+<tr>
+<td> <code>[</code>
+</td>
+<td> <code>\[</code>
+</td>
+<td> Öffnende eckige Klammern leiten ansonsten eine Zeichenklasse ein.
+</td>
+<td> <code>/\$(.*)\[\d+]/</code>
+</td></tr>
+<tr>
+<td> <code>{</code>
+</td>
+<td> <code>\{</code>
+</td>
+<td> Öffnende geschweifte Klammern leiten ansonsten eine Wiederholungs-Angabe ein.
+</td>
+<td> <code>/\\frac 5\{23}/</code>
+</td></tr></table>
+<p>Perl bietet fürs Maskieren dieser Zeichen (mit Ausnahme von <code>$</code>, <code>@</code> und dem Begrenzungssymbol <i>(Delimiter)</i>, meist <code>/</code>) noch eine Alternative, und zwar die Notation <code>\Q...\E</code>. Alles, was rechts von <code>\Q</code> (für <i>quote</i>) steht, wird literal verstanden, d.h. Metacharacters verlieren ihre Meta-Bedeutung. Dieses automatische Quoting läuft bis zum Ende des Regexp, es sei denn, es wird manuell vorher durch <code>\E</code> aufgehoben.
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="kw3">print</span> <span class="st_h">'match!'</span> <span class="kw1">if</span> <span class="st_h">'Beispiele für Regexp-Metacharacters sind .?([{}]).'</span><span class="sy0">=~/</span><span class="re0">\Q</span><span class="sy0">.?</span><span class="br0">&#40;</span><span class="br0">&#91;</span><span class="br0">&#123;</span><span class="br0">&#125;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">/;</span></pre></div></div>
+<p><code>\Q</code> ist auch hilfreich, um den Inhalt von Variablen nur literal interpretieren zu lassen. Wenn beispielsweise eine Variable <code>$suchausdruck = '.zip'</code> lautet, so würde
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="st_h">'unzip'</span><span class="sy0">=~/</span><span class="re0">$suchausdruck</span><span class="sy0">/</span></pre></div></div>
+<p><code>true</code> liefern, weil der Punkt in <code>'.zip'</code> als Meta-Zeichen interpretiert wird. Diese Interpretation kann man durch
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="st_h">'unzip'</span><span class="sy0">=~/</span><span class="re0">\Q</span><span class="re0">$suchausdruck</span><span class="sy0">/</span></pre></div></div>
+<p>verhindern. Insbesondere bei Usereingaben kann das sinnvoll sein, um zu verhindern, dass schädlicher ausführbarer Code eingeschleust wird.
+</p><p>Innerhalb von Zeichenklassendefinitionen müssen andere Zeichen maskiert werden:
+</p>
+<dl><dt>Tabelle - Maskierung von Zeichen innerhalb Zeichenklassendefinitionen
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Zeichen
+</th>
+<th> Maskierung
+</th>
+<th> Grund
+</th>
+<th> Beispiel
+</th></tr>
+<tr>
+<td> <code>/</code>
+</td>
+<td> <code>\/</code>
+</td>
+<td> Wenn der Slash den regulären Ausdruck begrenzt, muss er auch innerhalb von Zeichenklassen maskiert werden.
+</td>
+<td> <code>/[0-9\/]*/</code>
+</td></tr>
+<tr>
+<td> <code>-</code>
+</td>
+<td> <code>\-</code>
+</td>
+<td> Das Minus steht innerhalb Zeichenklassen für einen Bis-Strich, wenn es nicht am Anfang oder Ende der Zeichenklassendefinition steht. Am Anfang bzw. Ende muss es also nicht maskiert werden.
+</td>
+<td> <code>/[0\-a]/</code>
+</td></tr>
+<tr>
+<td> <code>^</code>
+</td>
+<td> <code>\^</code>
+</td>
+<td> Das Dach- oder Hütchensymbol bedeutet, wenn es zu Beginn der Zeichenklassendefinition steht, dass die Zeichenklasse negiert wird. An anderen Stellen innerhalb der Zeichenklassendefinition braucht es nicht maskiert zu werden.
+</td>
+<td> <code>/[\^0-9a-z+*\/-]/</code>
+</td></tr>
+<tr>
+<td> <code>$</code>
+</td>
+<td> <code>\$</code>
+</td>
+<td> Das Dollarzeichen kann eine Variable einleiten.
+</td>
+<td> <code>/[\@#\$][A-Za-z_]/</code>
+</td></tr>
+<tr>
+<td> <code>@</code>
+</td>
+<td> <code>\@</code>
+</td>
+<td> Der Klammeraffe kann eine Variable einleiten.
+</td>
+<td> <code>/[\@#\$][A-Za-z_]/</code>
+</td></tr>
+<tr>
+<td> <code>\</code>
+</td>
+<td> <code>\\</code>
+</td>
+<td> Das Backslash würde ansonsten das nachfolgende Zeichen maskieren.
+</td>
+<td> <code>/[a-z 0-9_\\]+/</code>
+</td></tr>
+<tr>
+<td> <code>]</code>
+</td>
+<td> <code>\]</code>
+</td>
+<td> Schließende eckige Klammern beenden ansonsten die Zeichenklassendefinition.
+</td>
+<td> <code>/[[\]]/</code>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Wie arbeiten Regexp-Engines?">Bearbeiten</a>]</span> <span class="mw-headline" id="Wie_arbeiten_Regexp-Engines.3F"> Wie arbeiten Regexp-Engines? </span></h2>
+<p>Nach den beiden vorigen Abschnitten ist es nun an der Zeit, kurz und vereinfacht die Arbeitsweise von Regexp-Engines kennenzulernen. Wenn Sie wissen, wie Regexp-Engines „denken“, können Sie sich besser in sie hineinversetzen und auch besser ihr Anliegen so strukturieren und formulieren, dass die Engines es effizient umsetzen.
+</p><p>Versuchen Sie sich nun also vorzustellen, Sie seien eine Regexp-Engine. Zieren Sie sich nicht, sondern stellen Sie es sich ganz fest vor. Sie sind nun eine Regexp-Engine, die überprüfen soll, ob der reguläre Ausdruck <code>/do.g/</code> bei der Zeichenkette <code>'ein ding dong doughnut'</code> matcht. Als Regexp-Engine sehen Sie nicht den String als ganzes, so wie es ein Mensch tut, sondern Sie werden einzeln mit den Zeichen gefüttert, beginnend mit dem ersten Zeichen, hier also <code>'e'</code>. Sie vergleichen dieses erste Zeichen mit dem ersten Symbol des regulären Ausdrucks <code>/d/</code> und sehen keine Übereinstimmung:
+</p>
+<pre>'ein ding dong doughnut'
+ ^
+/do.g/
+ ^
+</pre>
+<p>Deshalb wandern Sie in der Zeichenkette an die nächste Position zum <code>'i'</code> und sehen wieder keine Übereinstimmung mit <code>/d/</code>.
+</p>
+<pre>'ein ding dong doughnut'
+  ^
+/do.g/
+ ^
+</pre>
+<p>Das Gleiche passiert mit <code>'n'</code> und <code>' '</code>. Beim <code>'d'</code> (von <code>'ding'</code>) finden Sie endlich eine Übereinstimmung
+</p>
+<pre>'ein ding dong doughnut'
+     ^
+/do.g/
+ ^
+</pre>
+<p>und wandern nun sowohl in der Zeichenkette als auch im Regexp an die nächste Stelle. Sie vergleichen also <code>'i'</code> mit /o/.
+</p>
+<pre>'ein ding dong doughnut'
+      ^
+/do.g/
+  ^
+</pre>
+<p>Weil dies fehlschlägt, setzen Sie die aktuelle Position beim Regexp komplett zurück und schauen, ob vielleicht die erste Position <code>/d/</code> das Zeichen <code>'i'</code> matcht.
+</p>
+<pre>'ein ding dong doughnut'
+      ^
+/do.g/
+ ^
+</pre>
+<p>Da auch dies nicht funktioniert, wandern Sie in der Zeichenkette weiter und vergleichen <code>/d/</code> nacheinander vergeblich mit <code>'n'</code>, <code>'g'</code> und <code>' '</code>. Daraufhin erfolgt wieder ein Treffer, da <code>/d/</code> wunderbar <code>'d'</code> matcht.
+</p>
+<pre>'ein ding dong doughnut'
+          ^
+/do.g/
+ ^
+</pre>
+<p>Sodann kann wieder sowohl im Regexp als auch in der Zeichenkette zum nächsten Zeichen gesprungen werden:
+</p>
+<pre>'ein ding dong doughnut'
+           ^
+/do.g/
+  ^
+</pre>
+<p>Da auch <code>/o/</code> das Zeichen <code>'o'</code> matcht sowie <code>/./</code> das Zeichen <code>'n'</code> und letztlich <code>/g/</code> das Zeichen <code>'g'</code>
+</p>
+<pre>'ein ding dong doughnut'
+             ^
+/do.g/
+    ^
+</pre>
+<p>ist der Regexp komplett abgearbeitet und somit die Aufgabe mit positivem Ergebnis gelöst: <code>/do.g/</code> matcht <code>'dong'</code> in der Zeichenkette <code>'ein ding dong doughnut'</code>.
+</p><p>Grundsätzlich gilt: Wird zuerst der Regexp abgearbeitet, bedeutet das einen Treffer. Wird zuerst die Zeichenkette abgearbeitet, ohne dass der Regexp vollständig abgearbeitet worden ist, bedeutet das, dass kein Match erfolgen konnte.
+</p>
+<dl><dt>Übrigens</dt><dd> Dass <code>/do.g/</code> auch <code>'doug'</code> gematcht hätte, ist hier unerheblich, da in diesem Beispiel ein Treffer bereits genügt.
+</dd></dl>
+<p>Tipp: Die Stelle in der durchsuchten Zeichenkette, an der sich der Regexp-Zeiger aktuell befindet, lässt sich in Perl mittels der Funktion <code>pos($str)</code> verarbeiten. Beispiele dazu werden im Abschnitt über <a href="#modifiers">Modifiers</a> angegeben.
+</p><p>Sie dürfen nun aufhören, sich vorzustellen, eine RegExp-Engine zu sein. Es ist jedoch für die Konstruktion regulärer Ausdrücke sowie das weitere Lesen der Dokumentation und spätestens bei einer Fehlersuche in einem Pattern empfehlenswert, hin und wieder gedanklich in diese Rolle zu schlüpfen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Reguläre Ausdrücke mit Alternativen">Bearbeiten</a>]</span> <span class="mw-headline" id="Regul.C3.A4re_Ausdr.C3.BCcke_mit_Alternativen"> Reguläre Ausdrücke mit Alternativen </span></h2>
+<p>Sie können mehrere Suchausdrücke angeben und diese mit einem ODER-Symbol verknüpfen. Dann matcht der Ausdruck, sobald in einer Zeichenketten wenigstens eine der Alternativen vorkommt.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel"> Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Text</span> <span class="sy0">=</span> <span class="st_h">'Kaffee ohne Milch, aber mit Zucker.'</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;egal ob mit oder ohne<span class="es0">\n</span>&quot;</span> <span class="kw1">if</span> <span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">/mit|ohne/</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=</span> <span class="st_h">'Kaffee mit Milch'</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;sag ich doch: egal ob mit oder ohne<span class="es0">\n</span>&quot;</span> <span class="kw1">if</span> <span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">/mit|ohne/</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-Script deklariert eine Variable <code>$Text</code> mit dem Anfangswert <code>Kaffee ohne Milch</code>. Abhängig vom Erfolg des regulären Ausdrucks <code>/mit|ohne/</code>, der auf diese Variable angewendet wird, wird im aufrufenden Browser ausgegeben: <code>egal ob mit oder ohne</code>. Das Pipe-Symbol <code>|</code> teilt den regulären Ausdruck in zwei Alternativen auf, bei denen es reicht, wenn eine davon zutrifft. Da dies der Fall ist, wird der Satz im Browser ausgegeben. Zur Kontrolle wird der Text anschließend zu <code>Kaffee mit Milch</code> geändert. Der anschließend angewendete gleiche reguläre Ausdruck führt wieder zum Erfolg, und es wird <code>sag ich doch: egal ob mit oder ohne</code> ausgegeben.
+Interessant ist im Zusammenhang mit dem letzten Abschnitt über die Arbeitsweise von Regexp-Engines, ob der Regexp <code>/mit|ohne/</code> im String <code>'Kaffee ohne Milch, aber mit Zucker.'</code> nun den Teilstring <code>'mit'</code> oder den Teilstring <code>'ohne'</code> matcht. Die Antwort ist einfach, wenn man weiß, dass bei ODER-Verknüpfungen bei jedem Zeichen der Zeichenkette sukzessive alle Alternativen ausprobiert werden (und nicht umgekehrt für jede Alternative der komplette String abgearbeitet wird). D.h. im Beispiel wird <code>'ohne'</code> gematcht.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Quantoren I">Bearbeiten</a>]</span> <span class="mw-headline" id="Quantoren_I"> Quantoren I </span></h2>
+<p>Musterwiederholungen können Sie mit Quantoren (engl. <i>quantifiers</i>) kennzeichnen. Auch wenn in diesem Abschnitt nur auf Wiederholungen einzelner Zeichen eingegangen wird, sei an dieser Stelle bereits darauf hingewiesen, dass die hier vorgestellten Quantoren nicht nur auf einzelne Zeichen beschränkt sind, sondern auch auf Gruppierungen angewendet werden können, wie sie im nächsten Abschnitt vorgestellt werden.
+</p>
+<dl><dt>Tabelle - Beispiele für Quantoren
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Nr.
+</th>
+<th> Regulärer Ausdruck
+</th>
+<th> matcht
+</th></tr>
+<tr>
+<th> 1.
+</th>
+<td> <code>/x{10,20}/</code>
+</td>
+<td> 10 bis 20 'x' in Folge
+</td></tr>
+<tr>
+<th> 2.
+</th>
+<td> <code>/x{10}/</code>
+</td>
+<td> genau 10 'x' in Folge
+</td></tr>
+<tr>
+<th> 3.
+</th>
+<td> <code>/x{10,}/</code>
+</td>
+<td> mindestens 10 'x' in Folge
+</td></tr>
+<tr>
+<th> 4.
+</th>
+<td> <code>/aus?/</code>
+</td>
+<td> 'aus' usw. - aber auch 'au' z.B. in der Zeichenkette 'auf'
+</td></tr>
+<tr>
+<th> 5.
+</th>
+<td> <code>/a+/</code>
+</td>
+<td> 'a' und 'aa' und 'aaaaa' (ein oder mehr 'a')
+</td></tr>
+<tr>
+<th> 6.
+</th>
+<td> <code>/a*/</code>
+</td>
+<td> 'a', 'aa' und 'aaaaa', aber auch den Leerstring '' z.B. in der Zeichenkette 'b' (kein oder mehr 'a')
+</td></tr>
+<tr>
+<th> 7.
+</th>
+<td> <code>/Ha[enu]+s/</code>
+</td>
+<td> 'Haus', 'Hans' und 'Hannes', aber nicht 'Has' (ein oder mehr 'u', 'n' oder 'e')
+</td></tr>
+<tr>
+<th> 8.
+</th>
+<td> <code>/Ha[enu]*s/</code>
+</td>
+<td> 'Has', 'Haus', 'Hans' und 'Hannes' (beliebig viele Zeichen 'u', 'n' oder 'e')
+</td></tr>
+<tr>
+<th> 9.
+</th>
+<td> <code>/Ha[enu]?s/</code>
+</td>
+<td> 'Haus', 'Hans' und 'Has' z.B. in 'Mein Name ist Hase.'
+</td></tr>
+<tr>
+<th> 10.
+</th>
+<td> <code>/x.{2}y/</code>
+</td>
+<td> 'xxxy' oder 'xaby' usw. (zwei beliebige Zeichen zwischen 'x' und 'y', außer <code>\n</code>)
+</td></tr>
+<tr>
+<th> 11.
+</th>
+<td> <code>/^\s*$/</code>
+</td>
+<td> Zeilen, die nur aus Leerzeichen oder anderem Whitespace bestehen oder leer sind
+</td></tr></table>
+<p>Allgemein werden für Wiederholungen geschweifte Klammern nach dem Schema <code>{<i>n</i>, <i>m</i>}</code> verwendet, wobei <i>n</i> für die Mindestanzahl an Vorkommnissen und <i>m</i> die maximale Anzahl an Vorkommnissen bedeutet, siehe Beispiel (<b>1.</b>). Wird das <i>m</i> wie in Beispiel (<b>3.</b>) weggelassen, so bedeutet dies, dass keine maximale Anzahl vorgegeben wird, d.h. es müssen einfach mind. <i>n</i> Vorkommnisse (hintereinander) vorhanden sein. Möchten sie genau eine vorgegebene Anzahl an Wiederholungen matchen,, d.h. heißt <i>m=n</i>, so können Sie dafür die Syntax <code>{<i>n</i>}</code> wie in den Beispiel (<b>2.</b>) und (<b>10.</b>) verwenden. Für einige Kombinationen von <i>n</i> und <i>m</i> gibt es abkürzende Schreibweisen, wie aus der nachfolgenden Tabelle ersichtlich.
+</p>
+<dl><dt>Tabelle - gängige abkürzende Quantoren
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Klammerschreibweise
+</th>
+<th> Abkürzung
+</th></tr>
+<tr>
+<td> {0,1}
+</td>
+<td>&#160;?
+</td></tr>
+<tr>
+<td> {0,}
+</td>
+<td> *
+</td></tr>
+<tr>
+<td> {1,}
+</td>
+<td> +
+</td></tr></table>
+<p>Das Fragezeichen <code>?</code> bedeutet also in einem regulären Ausdruck: Das Zeichen (oder die Gruppe von Zeichen, siehe nächster Abschnitt) vor dem Fragezeichen oder auch nicht. Siehe dazu Beispiele (<b>4.</b>) und (<b>9.</b>).
+</p><p>Das Pluszeichen <code>+</code> bedeutet: Ein oder mehrere Vorkommnisse des Zeichens, das vor dem Pluszeichen steht. Siehe dazu Beispiele (<b>5.</b>) und (<b>7.</b>).
+</p><p>Das Sternzeichen <code>*</code> bedeutet: keines, eines oder mehrere Vorkommnisse des Zeichens, das vor dem Sternzeichen steht. Siehe dazu Beispiele (<b>6.</b>), (<b>8.</b>) und (<b>10.</b>).
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Teilausdrücke gruppieren oder merken durch Klammerung">Bearbeiten</a>]</span> <span class="mw-headline" id="Teilausdr.C3.BCcke_gruppieren_oder_merken_durch_Klammerung"> Teilausdrücke gruppieren oder merken durch Klammerung </span></h2>
+<p>Mithilfe von Klammerung einzelner Teile eines regulären Ausdrucks können Sie Teilmuster speichern <i>(capture buffers)</i> und an einer späteren Stelle wiederverwenden (<i>Rückreferenzierung</i> oder <i>back referencing</i>). Sie können aber die Klammern auch einfach zur Grupperierung von Teilausdrücken verwenden, um z.B. in Kombination mit dem Pipe-Symbol alternative Teilausdrücke zu bilden.
+</p><p>Die folgende Tabelle zeigt einige Möglichkeiten der Gruppierung sowie der Rückreferenzierung.
+</p>
+<dl><dt>Tabelle - Beispiele für einfache reguläre Ausdrücke mit Klammerung
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Nr.
+</th>
+<th> Regulärer Ausdruck
+</th>
+<th> Wirkung
+</th></tr>
+<tr>
+<th> 1.
+</th>
+<td> <code>/\d\d:\d\d:\d\d/</code>
+</td>
+<td> matcht 3 Zifferpaare, die durch Doppelpunkte separiert sind.
+</td></tr>
+<tr>
+<th> 2.
+</th>
+<td> <code>/(\d\d):\d\d:\1/</code>
+</td>
+<td> wie Beispiel 1., wobei das erste Ziffernpaar mit dem dritten identisch sein muss.
+</td></tr>
+<tr>
+<th> 3.
+</th>
+<td> <code>/(\d\d):\d\d:\g{1}/</code>
+</td>
+<td> wie Beispiel 2., aber mit alternativer Notation.
+</td></tr>
+<tr>
+<th> 4.
+</th>
+<td> <code>/((\d)\2):(\d)\3:\1/</code>
+</td>
+<td> wie Beispiel 1., aber mit der Einschränkung, dass die Ziffern dem Schema "xx:yy:xx" entsprechen müssen.
+</td></tr>
+<tr>
+<th> 5.
+</th>
+<td> <code>/((\d)\g{-1}):(\d)\g{-1}:\g{-3}/</code>
+</td>
+<td> wie Beispiel 4., aber mit alternativer Notation.
+</td></tr>
+<tr>
+<th style="vertical-align: top;"> 6.
+</th>
+<td> <code>/(?'erstespaar'(?'ersteziffer'\d)\k'ersteziffer'):</code><br /><code>(?'erstemittlereziffer'\d)\k'erstemittlereziffer':\k'erstespaar'/</code>
+</td>
+<td> wie Beispiel 4., aber mit weiterer, alternativer Notation.
+</td></tr>
+<tr>
+<th> 7.
+</th>
+<td> <code>/(\d\d:)+\d\d/</code>
+</td>
+<td> matcht eine Folge von Ziffernpaaren, die jeweils mit Doppelpunkten separiert sind.
+</td></tr>
+<tr>
+<th> 8.
+</th>
+<td> <code>/(?:\d\d:)+\d\d/</code>
+</td>
+<td> wie Beispiel 7., allerdings wird der geklammerte Ausdruck nicht zwischengespeichert.
+</td></tr></table>
+<p>Mit einfachen runden Klammern werden Teilausdrücke als solche gekennzeichnet und zudem die von ihnen gematchte Teilzeichenkette zwischengespeichert. Auf diese zwischengespeicherten Submatches können Sie standardmäßig mit <code>\1</code>, <code>\2</code>, <code>\3</code> usw. zugreifen; siehe Beispiele (<b>2.</b> und <b>4.</b>). Die Ordnung erfolgt dabei anhand der Reihenfolge der öffnenden Klammern. Einige moderne Regexp-Implementierungen wie beispielsweise die von Perl ab Version 5.10 bieten außerdem die Möglichkeit, die Teilzeichenketten zu bennenen <i>(named buffers)</i> wie in Beispiel (<b>6.</b>). Benannt werden Ausdrücke mit <code>(?&lt;<i>name</i>&gt;<i>ausdruck</i>)</code> oder <code>(?'<i>name</i>'<i>ausdruck</i>)</code>. Zugreifen können Sie dann mittels <code>\k&lt;<i>name</i>&gt;</code> bzw. <code>\k'<i>name</i>'</code> oder auch mit <code>\g{<i>name</i>}</code>. Die Namen unterliegen den gleichen Regeln wie andere Variablennamen. In Perl 5.10+ können Sie auch mit <code>\g{<i>n</i>}</code> auf die konventionellen nummerierten Submatches referenzieren wie in Beispiel (<b>3.</b>), wobei die Zahl <i>n</i> wie im Beispiel (<b>5.</b>) sogar negativ sein darf und dann die Rückreferenz relativ aufgefasst wird, sodass damit auf den <i>-n</i>-ten vorigen Submatch verwiesen wird.
+</p><p>In Beispiel (<b>7.</b>) werden Klammern mit einem Quantor kombiniert. Der Quantor bezieht sich hier also auf den kompletten eingeklammerten Ausdruck.  Wenn keine Rückreferenz benötigt wird, kann Perl dazu veranlasst werden, den eingeklammerten Ausdruck nicht zwischenzuspeichern, was laut Manual eine schnellere Ausführung zur Folge haben soll.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> Ein <i>non-capturing</i> Pattern wird einfach durch ein Fragezeichen und einen Doppelpunkt zu Beginn des Teilausdrucks gekennzeichnet, wie in Beispiel (<b>8.</b>). Sie sollten sich angewöhnen, immer non-capturing Patterns zu verwenden, wenn Sie keine Referenzen darauf erstellen möchten. Hauptgrund dafür ist, dass Sie vor allem bei komplexeren Ausdrücken auf diese Weise einen besseren Überblick über die wirklich benötigten zwischengespeicherten Teilzeichenketten behalten.
+</p><p>Das nächste Beispiel zeigt, dass man auch außerhalb der regulären Ausdrucks auf die zwischengespeicherten Strings zugreifen kann.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_2"> Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$satz</span> <span class="sy0">=</span> <span class="st_h">'Aus diesem Satz soll das Datum 20060606T05:23:42 extrahiert und aufgeschlüsselt werden.'</span><span class="sy0">;</span>
+<span class="re0">$satz</span> <span class="sy0">=~</span> <span class="co2">/(\d{4})(\d\d)(\d\d)T(\d\d):(\d\d):(\d\d)/</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$jahr</span> <span class="sy0">=</span> <span class="co3">$1</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$monat</span> <span class="sy0">=</span> <span class="co3">$2</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$tag</span> <span class="sy0">=</span> <span class="co3">$3</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$stunden</span> <span class="sy0">=</span> <span class="co3">$4</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$minuten</span> <span class="sy0">=</span> <span class="co3">$5</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$sekunden</span> <span class="sy0">=</span> <span class="co3">$6</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@monate</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st_h">'Januar'</span><span class="sy0">,</span> <span class="st_h">'Februar'</span><span class="sy0">,</span> <span class="st_h">'März'</span><span class="sy0">,</span> <span class="st_h">'April'</span><span class="sy0">,</span> <span class="st_h">'Mai'</span><span class="sy0">,</span> <span class="st_h">'Juni'</span><span class="sy0">,</span> <span class="st_h">'Juli'</span><span class="sy0">,</span> <span class="st_h">'August'</span><span class="sy0">,</span> <span class="st_h">'September'</span><span class="sy0">,</span> <span class="st_h">'Oktober'</span><span class="sy0">,</span> <span class="st_h">'November'</span><span class="sy0">,</span> <span class="st_h">'Dezember'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Das extrahierte Datum ist $stunden:$minuten:$sekunden Uhr am $tag. $monate{$monat} $jahr.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel wird zuerst die Variable <code>$satz</code> gesetzt. In <code>$satz</code> ist ein Datum enthalten, das in der darauffolgenden Anweisung von einem langen regulären Suchausdruck gematcht wird. Der reguläre Ausdruck versucht, das gesamte typische Datum-Uhrzeit-Muster nach ISO zu erfassen. Die Nutzdaten darin, also Jahr, Monatsname, Monatstag, Stunden, Minuten und Sekunden werden innerhalb des regulären Ausdrucks geklammert. Jeden Inhalt dieser Klammern merkt sich Perl und stellt ihn in den <a href="http://wiki.selfhtml.org/wiki/Perl/Vordefinierte_Variablen" title="Perl/Vordefinierte Variablen">vordefinierten Variablen</a> <code>$1</code>, <code>$2</code>, <code>$3</code> usw. zur Verfügung. Die anschließend deklarierten Variablen holen sich die Werte aus den Klammern, indem ihnen die entsprechenden vordefinierten Variablen zugewiesen werden.
+<p>Das Array <code>@monate</code> wird zum Zweck eines deutschsprachigen Datum-Uhrzeit-Formats verwendet. Das Script gibt am Ende aus:
+</p>
+ Das extrahierte Datum ist 05:23:42 Uhr am 06. Juni 2006.</div>
+</div>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Auch auf benannte Submatches können Sie außerhalb des regulären Ausdrucks zugreifen. Jene liegen in Form eines Hashes <code>%+</code> vor, sodass Sie mit <code>$+{''name&gt;''}</code> auf die jeweiligen Submatches zugreifen können.</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: Quantoren II - genügsam, gierig, gefräßig">Bearbeiten</a>]</span> <span class="mw-headline" id="Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig"> Quantoren II - genügsam, gierig, gefräßig </span></h2>
+<p>Sie haben bisher nur die konventionellen, sog. <i>gierigen</i> (engl. <i>greedy</i>) Regexps kennengelernt. Wenn Sie beispielsweise bei einem String wie <code>'Bruder Jakob, Bruder Jakob.'</code> den Regexp <code>/Bru.*kob/</code> anwenden, dann wird hier von <code>/.*/</code> der Teil <code>'der Jakob, Bruder Ja'</code> gematcht, also der längste mögliche String. Allerdings kommt es hin und wieder vor, dass man lieber nur den kürzest möglichen String matchen möchte, also im Beispiel <code>'der Ja'</code>. Dies ist mithilfe der <i>genügsamen</i> (engl. <i>non-greedy</i>) Quantoren möglich. Ein genügsamer Quantor ist einfach ein normaler Quantor, dem ein Fragezeichen angehängt wird; in unserem Beispiel also <code>/Bru.*?kob/</code>.
+</p><p>Und es existiert noch eine dritte Sorte, die <i>possessiven Quantoren</i> (engl. <i>possessive quantifiers</i>). Da jene allerdings bloß eine andere Schreibweise für <i>atomic grouping</i> darstellen, wird darauf erst im Abschnitt <a href="#Atomic_Grouping">#Atomic Grouping</a> eingegangen.
+</p>
+<dl><dt>Tabelle - Quantoren
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Klammerschreibweise
+</th>
+<th> Bedeutung
+</th></tr>
+<tr>
+<td> {n,m}
+</td>
+<td> mind. n, max. m Vorkommnisse (so viel wie möglich)
+</td></tr>
+<tr>
+<td> {n,m}?
+</td>
+<td> mind. n, max. m Vorkommnisse (so wenig wie möglich)
+</td></tr>
+<tr>
+<td> {n,m}+
+</td>
+<td> mind. n, max. m Vorkommnisse (so viel wie möglich, ohne gematchtes wieder freizugeben)
+</td></tr></table>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_3"> Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$HTML_Zeile</span> <span class="sy0">=</span> <span class="st0">&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Überschrift&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="re0">$HTML_Zeile</span> <span class="sy0">=~</span> <span class="co2">/(^&lt;.+&gt;)/</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$gierig</span> <span class="sy0">=</span> <span class="co3">$1</span><span class="sy0">;</span>
+<span class="re0">$HTML_Zeile</span> <span class="sy0">=~</span> <span class="co2">/(^&lt;.+?&gt;)/</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$genuegsam</span> <span class="sy0">=</span> <span class="co3">$1</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Gierige Version:   '$gierig'.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Genügsame Version: '$genuegsam'.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel-Script demonstriert die Gier regulärer Ausdrücke und zeigt auch, wie sich diese Gier unterbinden lässt. Eine Variable namens <code>$HTML_Zeile</code> wird deklariert und erhält als Anfangswert den Code einer kompletten kleinen HTML-Datei. Anschließend wird diese Variable mit einem regulären Ausdruck bewertet, der darin nach einem Muster <code>/(^&lt;.+&gt;)/</code> sucht. In runde Klammern eingeschlossen ist das gesamte Suchmuster, weil anschließend ausgegeben werden soll, was gefunden wurde. Das Suchergebnis wird in der Variable <code>$gierig</code> gespeichert. Anschließend wird die Prozedur noch einmal wiederholt. Diesmal ist der reguläre Ausdruck nur geringfügig anders: er enthält hinter dem Pluszeichen noch ein Fragezeichen.
+<p>Beide Suchergebnisse werden anschließend noch für die HTML-Ausgabe vorbereitet, und zwar werden die spitzen Klammern HTML-gerecht ersetzt (siehe dazu auch <a href="#Suchen_und_Ersetzen_mit_regul.C3.A4ren_Ausdr.C3.BCcken">Suchen und Ersetzen mit regulären Ausdrücken</a>).
+</p><p>Die Ausgabe von <code>$gierig</code> bewirkt:
+</p>
+<pre>&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Überschrift&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
+</pre>
+<p>Die Ausgabe von <code>$genuegsam</code> dagegen:
+</p>
+<pre>&lt;html&gt;
+</pre>
+Der Wildcard-Ausdruck <code>.+</code>, der "alles" bis zum Zeichen <code>&gt;</code> holen soll, macht nämlich nicht beim nächsten <code>&gt;</code> Stopp, sondern erst beim allerletzten. Durch das Anhängen des Fragezeichens, also durch Erweiterung auf <code>.+?</code>, beschränkt sich das Muster auf das Auffinden des nächstmöglichen <code>&gt;</code>-Zeichens.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: Rangfolge in regulären Ausdrücken">Bearbeiten</a>]</span> <span class="mw-headline" id="Rangfolge_in_regul.C3.A4ren_Ausdr.C3.BCcken"> Rangfolge in regulären Ausdrücken </span></h2>
+<p>Die Meta-Zeichen innerhalb von regulären Ausdrücken werden vom Perl-Interpreter nach einer bestimmten Rangfolge bewertet.
+</p>
+<ol><li> Rangstufe: Klammerung
+</li><li> Rangstufe: Quantoren
+</li><li> Rangstufe: Zeichen/Zeichenketten, ...
+</li><li> Rangstufe: Alternativen via <code>|</code>
+</li></ol>
+<p>Dadurch ist jeder reguläre Ausdruck eindeutig bewertbar. Wenn Sie in einem Ausdruck jedoch anders bewerten möchten, als es nach der Rangfolge geschieht, können Sie innerhalb des Ausdrucks Klammern setzen, um eine andere Bewertung zu erzwingen.
+</p>
+<dl><dt>Tabelle - Beispiele für kombinierte reguläre Ausdrücke mit Klammerung
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Nr.
+</th>
+<th> Regulärer Ausdruck
+</th>
+<th> Wirkung
+</th></tr>
+<tr>
+<th> 1.
+</th>
+<td> <code>/a|bc|d/</code>
+</td>
+<td> matcht 'a' oder 'bc' oder 'd'.
+</td></tr>
+<tr>
+<th> 2.
+</th>
+<td> <code>/(?:a|b)(?:c|d)/</code>
+</td>
+<td> matcht 'ac' oder 'ad' oder 'bc' oder 'bd'
+</td></tr>
+<tr>
+<th> 3.
+</th>
+<td> <code>/lecker (?:(?:zwetschgen|hunde|)kuchen|gerstenkaltschorle)/</code>
+</td>
+<td> matcht 'lecker zwetschgenkuchen', 'lecker hundekuchen', 'lecker gerstenkaltschorle', aber auch einfach 'lecker kuchen'
+</td></tr></table>
+<p>Laut der Rangfolge haben Zeichen bzw. Zeichenketten Vorrang vor dem Trennzeichen für Alternativen. Mithilfe von Klammern können Sie eine andere Bewertung erzwingen (siehe Beispiel <b>1.</b> und <b>2.</b>).
+</p><p>Wenn Sie sich die entsprechenden <a href="#Teilausdr.C3.BCcke_gruppieren_oder_merken_durch_Klammerung">Teilausdrücke merken</a> wollen, können Sie stattdessen einfache Klammern <code>(...)</code> benutzen statt <code>(?:...)</code>, im Beispiel (<b>2.</b>) wäre das <code>(a|b)(c|d)</code>.
+</p><p>In Beispiel (<b>3.</b>) sind zwei Klammerausdrücke verschachtelt. Im Subpattern <code>(?:zwetschgen|hunde|)</code> werden durch die Pipe-Symbole <code>|</code> tatsächlich drei Alternativen angegeben, nämlich 'zwetschgen', 'hunde' und '' also der leere String. Es handelt sich hierbei also um eine alternative Notation zu <code>(?:zwetschgen|hunde)?</code>.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: Modifiers">Bearbeiten</a>]</span> <span class="mw-headline" id="Modifiers"> Modifiers </span></h2>
+<p>Hinter dem beendenden Begrenzerzeichen (normalerweise: Slash) eines regulären Ausdrucks können noch ein oder mehrere Buchstaben notiert werden - sogenannte Modifiers oder manchmal auch Flags genannt. Damit können Sie das Verhalten der Suche zusätzlich beeinflussen. Mit einer Notation wie <code>/aus/i</code> suchen Sie beispielsweise unabhängig von Groß- und kleinschreibung nach dem Vorkommen von <code>aus</code>, <code>AuS</code> usw. Die folgende Tabelle listet die möglichen Modifiers auf.
+</p>
+<dl><dt>Tabelle - Modifiers von regulären Ausdrücken
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Modifier
+</th>
+<th> Eselsbrücke
+</th>
+<th> Bedeutung
+</th></tr>
+<tr>
+<td> <code>i</code>
+</td>
+<td> <i>case-<b>i</b>nsensitive</i>
+</td>
+<td> Groß-/Kleinschreibung ignorieren.
+</td></tr>
+<tr>
+<td> <code>m</code>
+</td>
+<td> <i><b>m</b>ulti-line</i>
+</td>
+<td> Interpretation des Strings als mehrere Zeilen. Die Anchors <code>^</code> und <code>$</code> matchen damit nicht mehr nur String-Anfange bzw. -Ende, sondern Zeilen-Anfang bzw. -Ende. Unabhängig vom /m-Modifer kann Ein String-Anfang stets mit <code>\A</code> und ein String-Ende mit <code>\z</code> gematcht werden. Zudem gibt es noch mit <code>\Z</code> die Möglichkeit, ein String-Ende oder die Position vor einem abschließenden Newline-Zeichen zu matchen.
+</td></tr>
+<tr>
+<td> <code>s</code>
+</td>
+<td> <i><b>s</b>ingle line</i>
+</td>
+<td> Punkt jedes Zeichen, auch Zeilenumbrüche(!), matchen lassen.
+</td></tr>
+<tr>
+<td> <code>e</code>
+</td>
+<td> <i><b>e</b>valuate</i>
+</td>
+<td> Evaluation von Code. Führt bei <a href="#Suchen_und_Ersetzen_mit_regul.C3.A4ren_Ausdr.C3.BCcken">Ersetzungen</a> die Ersatzzeichenkette als Perl-Code aus.
+</td></tr>
+<tr>
+<td> <code>o</code>
+</td>
+<td> <i>compile only <b>o</b>nce</i>
+</td>
+<td> Falls Variablen im Pattern vorkommen, werden jene nur einmal (statt jedes Mal) aufgelöst. Dies konnte in alten Perl-Versionen Schleifendurchläufe beschleunigen. Seit Perl 5.6 geschieht dies automatisch und der /o-Modifier hat keine geschwindigkeitsrelevante Aufgabe mehr und wird deswegen auch nicht mehr im Perl-RegExp-Manual erwähnt.
+</td></tr>
+<tr>
+<td> <code>x</code>
+</td>
+<td> <i>e<b>x</b>tend legibility</i>
+</td>
+<td> bessere Lesbarkeit zulassen durch Kommentare und Whitespace.
+</td></tr>
+<tr>
+<td> <code>g</code>
+</td>
+<td> <i><b>g</b>lobal</i>
+</td>
+<td> globales Matchen, d.h. alle Vorkommnisse finden.
+</td></tr>
+<tr>
+<td> <code>c</code>
+</td>
+<td> <i><b>c</b>urrent position</i>
+</td>
+<td> Bei einem auftretenden Fehler <i>nicht</i> die Suchposition zurücksetzen.
+</td></tr>
+<tr>
+<td> <code>p</code>
+</td>
+<td> <i><b>p</b>reserve</i>
+</td>
+<td> macht explizit den gematchten Teilstring <code>{$^MATCH}</code> sowie die beiden Reststrings (links <code>${^PREMATCH}</code> und rechts <code>${^POSTMATCH}</code> davon) für etwaige Verwendung nach dem eigentlichen Matching verfügbar.
+</td></tr>
+<tr>
+<td> <code>d</code>
+</td>
+<td> <i><b>d</b>efault</i> oder <i><b>d</b>epends</i>
+</td>
+<td> wendet Unicode-Regeln automatisch nur dann an, wenn sie erzwungen werden. (Seit Perl 5.14 vorhanden)
+</td></tr>
+<tr>
+<td> <code>u</code>
+</td>
+<td> <i><b>U</b>nicode</i>
+</td>
+<td> behandelt das Pattern nach Unicode-Regeln. (Seit Perl 5.14 vorhanden)
+</td></tr>
+<tr>
+<td> <code>a</code>
+</td>
+<td> <i><b>A</b>SCII</i>
+</td>
+<td> das Gleiche wie der u-Modifier, jedoch ohne Unicode-Regeln auf \d, \s, \w und die POSIX-Zeichenklassen anzuwenden. (Seit Perl 5.14 vorhanden)
+</td></tr>
+<tr>
+<td> <code>l</code>
+</td>
+<td> <i>current <b>l</b>ocale</i>
+</td>
+<td> benutzt die aktuellen <i>locale</i>-Einstellungen. (Seit Perl 5.14 vorhanden)
+</td></tr></table>
+<p>Neben der oben genannten Notation <code>/pattern/i</code> gibt es noch eine alternative, die es auch ermöglicht, nur auf Teile des Patterns begrenzt zu sein: <code>/(?i)pattern/</code> oder <code>/(?i:pattern)/</code>. Mithilfe dieser Notation ist es auch möglich, bestehende Modifiers für einen Teilbereich zu deaktivieren: <code>/pa(?-i:tt)ern/i</code> verlangt beispielsweise trotz des /i-modifiers, dass der Teilstring, der vom Subpattern <code>(?-i:tt)</code> gematcht wird, kleingeschrieben ist.
+</p><p>Die Modifiers können auch kombiniert werden. Einige Beispiele sollen die Funktionsweisen verdeutlichen. Bei den folgenden Beispielen werden verschiedene reguläre Ausdrücke stets auf denselben String angewendet.
+</p>
+<div class="note-box note-box-notice-text"><strong>Beachten Sie:</strong> Einige der Modifiers von Perl finden sich auch in den Regexp-Implementierungen anderer Sprachen, aber nicht alle. 
+<ul><li> In JavaScript gibt es mindestens die Modifiers m, i, g.
+</li><li> In PHP gibt es die Modifiers s, m, i, x, e, A, D, S, U, X, J, u.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> 
+</li><li> In Python werden sie <i>flags</i> genannt und werden als Funktionsparameter re.S, re.I, re.L, re.M, re.U, re.X notiert.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> 
+</li><li> In der Boost Library für C++ werden die <i>options</i> ganz anders notiert und können nur unter bestimmten Bedingungen benutzt werden.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> 
+</li><li> In Java werden die <i>flags</i> ebenfalls über Konstanten gesetzt.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></div>
+</li></ul>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Beispiel für die Anwendung des /i-Modifiers">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_f.C3.BCr_die_Anwendung_des_.2Fi-Modifiers"> Beispiel für die Anwendung des /i-Modifiers </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$str</span> <span class="sy0">=</span> <span class="st_h">'Gestern ist mir ein Waschlappen vom Haken gefallen.
+Daraufhin habe ich ihn wieder auf den Waschlappenhaken gehängt.'</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;/i-Modifier<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$counter</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="sy0">=~/</span><span class="br0">&#40;</span><span class="br0">&#91;</span>a<span class="sy0">-</span>z<span class="br0">&#93;</span><span class="br0">&#123;</span><span class="nu0">3</span><span class="br0">&#125;</span><span class="br0">&#41;</span> waschlappen<span class="sy0">/</span>i<span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot; '$1'<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>     
+  <span class="kw1">last</span> <span class="kw1">if</span> <span class="sy0">++</span><span class="re0">$counter</span><span class="sy0">&gt;</span><span class="nu0">4</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Output:
+<pre>/i-Modifier
+ 'ein'
+ 'ein'
+ 'ein'
+ 'ein'
+ 'ein'
+</pre>
+Dieses kleine Script gibt immer wieder den String "ein" aus, solange bis die Schleife nach dem fünften Durchlauf abgebrochen wird. Ohne Anwendung des /i-Modifiers würde die Schleife kein einziges Mal durchlaufen, da "waschlappen" (kleingeschrieben) nicht im durchsuchten String vorkommt.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: Beispiel für die Anwendung des /g-Modifiers">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_f.C3.BCr_die_Anwendung_des_.2Fg-Modifiers"> Beispiel für die Anwendung des /g-Modifiers </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$str</span> <span class="sy0">=</span> <span class="st_h">'Gestern ist mir ein Waschlappen vom Haken gefallen.
+Daraufhin habe ich ihn wieder auf den Waschlappenhaken gehängt.'</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;/g-Modifier<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="sy0">=~/</span><span class="br0">&#40;</span><span class="br0">&#91;</span>a<span class="sy0">-</span>z<span class="br0">&#93;</span><span class="br0">&#123;</span><span class="nu0">3</span><span class="br0">&#125;</span><span class="br0">&#41;</span> waschlappen<span class="sy0">/</span>ig<span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot; '$1' vor pos &quot;</span><span class="sy0">.</span><span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot; pos ist jetzt nicht mehr definiert.<span class="es0">\n</span>&quot;</span> <span class="kw1">if</span> <span class="kw1">not</span> <span class="kw3">defined</span> <span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Output:
+<pre>/g-Modifier
+ 'ein' vor pos 31
+ 'den' vor pos 101
+ pos ist jetzt nicht mehr definiert.
+</pre>
+Das Gleiche wie oben, jetzt mit zusätzlichem /g-Modifier. Die Schleife gibt <code>'ein' vor pos 31</code> und <code>'den' vor pos 101</code> aus. Ein Abbruch der Schleife erfolgt, sobald das Pattern nicht mehr matcht, d.h., wenn das Ende des Strings erreicht wird.</div>
+</div>
+<p>Die letzte Zeile demonstriert, dass die Suchposition <code>pos($str)</code> nach dem letzten Schleifendurchlauf, in dem ja kein Matching mehr stattfand, verworfen (d.h. auf <code>undef</code> gesetzt) wird. Verhindern können Sie dies durch Anwendung des /c-Modifiers, was in einem der nachfolgenden Beispiele demonstriert wird.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: Beispiel für die Anwendung des /x-Modifiers">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_f.C3.BCr_die_Anwendung_des_.2Fx-Modifiers"> Beispiel für die Anwendung des /x-Modifiers </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$str</span> <span class="sy0">=</span> <span class="st_h">'Gestern ist mir ein Waschlappen vom Haken gefallen.
+Daraufhin habe ich ihn wieder auf den Waschlappenhaken gehängt.'</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;/x-Modifier<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="sy0">=~/</span><span class="br0">&#40;</span><span class="br0">&#91;</span>a<span class="sy0">-</span>z<span class="br0">&#93;</span><span class="br0">&#123;</span><span class="nu0">3</span><span class="br0">&#125;</span><span class="br0">&#41;</span>  <span class="co1">#  drei Buchstaben</span>
+             \           <span class="co1">#  ein Leerzeichen</span>
+             waschlappen <span class="co1">#  der String &quot;waschlappen&quot;</span>
+             <span class="sy0">/</span>igx<span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot; '$1' vor pos &quot;</span><span class="sy0">.</span><span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot; pos ist jetzt nicht mehr definiert<span class="es0">\n</span>&quot;</span> <span class="kw1">if</span> <span class="kw1">not</span> <span class="kw3">defined</span> <span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Output:
+<pre>/x-Modifier
+ 'ein' vor pos 31
+ 'den' vor pos 101
+ pos ist jetzt nicht mehr definiert
+</pre>
+Das Gleiche wie im letzten Beispiel, allerdings noch mit zusätzlichem /x-Modifier. Die Schleife gibt wie oben <code>'ein' vor pos 31</code> und <code>'den' vor pos 101</code> aus. Durch den /x-Modifier können jetzt Kommentare innerhalb des Patterns bequem via <code>#</code> geschrieben werden. Whitespace wird ignoriert. Sollen eine literale Raute oder ein Whitespace-Zeichen wie hier im Beispiel das Leerzeichen gematcht werden, müssen Sie jene im Pattern maskieren.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: Beispiel für die Anwendung des /s-Modifiers">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_f.C3.BCr_die_Anwendung_des_.2Fs-Modifiers"> Beispiel für die Anwendung des /s-Modifiers </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$str</span> <span class="sy0">=</span> <span class="st_h">'Gestern ist mir ein Waschlappen vom Haken gefallen.
+Daraufhin habe ich ihn wieder auf den Waschlappenhaken gehängt.'</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;/s-Modifier<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot; ohne /s-modifier: Text erscheint nicht!<span class="es0">\n</span>&quot;</span> <span class="kw1">if</span> <span class="re0">$str</span><span class="sy0">=~/</span>waschlappen<span class="sy0">.</span><span class="re0">*waschlappen</span><span class="sy0">/</span>i<span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot; mit /s-modifier:  match!<span class="es0">\n</span>&quot;</span> <span class="kw1">if</span> <span class="re0">$str</span><span class="sy0">=~/</span>waschlappen<span class="sy0">.</span><span class="re0">*waschlappen</span><span class="sy0">/</span>si<span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Output:
+<pre>/s-Modifier
+ mit /s-modifier:  match!
+</pre>
+Beim ersten regulären Ausdruck, wird geprüft, ob in irgendeiner Zeile, das Wort "waschlappen" (kleingeschrieben) zwei mal vorkommt. Beim zweiten Regexp wird geprüft, ob im gesamten String zweimal das Wort vorkommt.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: Beispiel für die Anwendung des /m- und des /c-Modifiers">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_f.C3.BCr_die_Anwendung_des_.2Fm-_und_des_.2Fc-Modifiers"> Beispiel für die Anwendung des /m- und des /c-Modifiers </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$str</span> <span class="sy0">=</span> <span class="st_h">'Gestern ist mir ein Waschlappen vom Haken gefallen.
+Daraufhin habe ich ihn wieder auf den Waschlappenhaken gehängt.'</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;/m-Modifier<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="sy0">=~/^</span><span class="br0">&#40;</span><span class="br0">&#91;</span>a<span class="sy0">-</span>z<span class="br0">&#93;</span><span class="sy0">+</span><span class="br0">&#41;</span><span class="sy0">/</span>img<span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot; '$1' vor pos &quot;</span><span class="sy0">.</span><span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot; pos ist jetzt nicht definiert<span class="es0">\n</span>&quot;</span> <span class="kw1">if</span> <span class="kw1">not</span> <span class="kw3">defined</span> <span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;<span class="es0">\n</span>/ohne /m-, aber mit /c-modifier<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="sy0">=~/^</span><span class="br0">&#40;</span><span class="br0">&#91;</span>a<span class="sy0">-</span>z<span class="br0">&#93;</span><span class="sy0">+</span><span class="br0">&#41;</span><span class="sy0">/</span>igc<span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot; '$1' vor pos &quot;</span><span class="sy0">.</span><span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st_h">' pos ist jetzt '</span><span class="sy0">.</span> <span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;<span class="es0">\n</span>noch mal nur mit /m-Modifier<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">while</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="sy0">=~/^</span><span class="br0">&#40;</span><span class="br0">&#91;</span>a<span class="sy0">-</span>z<span class="br0">&#93;</span><span class="sy0">+</span><span class="br0">&#41;</span><span class="sy0">/</span>img<span class="br0">&#41;</span><span class="br0">&#123;</span>
+  <span class="kw3">print</span> <span class="st0">&quot; '$1' vor pos &quot;</span><span class="sy0">.</span><span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw3">print</span> <span class="st0">&quot; pos ist jetzt nicht definiert<span class="es0">\n</span>&quot;</span> <span class="kw1">if</span> <span class="kw1">not</span> <span class="kw3">defined</span> <span class="kw3">pos</span><span class="br0">&#40;</span><span class="re0">$str</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Output:
+<pre>/m-Modifier
+ 'Gestern' vor pos 7
+ 'Daraufhin' vor pos 61
+ pos ist jetzt nicht definiert
+
+/ohne /m-, aber mit /c-modifier
+ 'Gestern' vor pos 7
+ pos ist jetzt 7
+
+noch mal nur mit /m-Modifier
+ 'Daraufhin' vor pos 61
+ pos ist jetzt nicht definiert
+</pre>
+<p>Die erste Schleife gibt <code>'Gestern' vor pos 7</code> und <code>'Daraufhin' vor pos 61</code> aus. Anschließend wird wieder ausgegeben, dass <code>pos($str)</code> nicht mehr definiert ist.
+</p><p>Die zweite Schleife gibt <code>'Gestern' vor pos 7</code> aus und lässt den Regexp-Cursor hinter dem gematchten <code>Gestern</code>. Es wird nach der Schleife ausgegeben, dass <code>pos($str)</code> noch immer auf <code>7</code> steht.
+</p>
+Die dritte Schleife gibt nun, da <code>pos($str)</code> noch immer auf 7 steht, nur den zweiten Match aus, also <code>'Daraufhin' vor pos 61</code>. Da in der dritten Schleife der /c-Modifier nicht verwendet wird, ist nach der dritten Schleife <code>pos($str)</code> wieder verworfen.</div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: Beispiel für die Anwendung des /o-Modifiers">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_f.C3.BCr_die_Anwendung_des_.2Fo-Modifiers"> Beispiel für die Anwendung des /o-Modifiers </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$str</span> <span class="sy0">=</span> <span class="st_h">'Gestern ist mir ein Waschlappen vom Haken gefallen.
+Daraufhin habe ich ihn wieder auf den Waschlappenhaken gehängt.'</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;/o-Modifier<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$pattern</span> <span class="sy0">=</span> <span class="st_h">'gehängt'</span><span class="sy0">;</span>
+<span class="kw2">use</span> Time<span class="sy0">::</span><span class="me2">HiRes</span> <span class="kw3">qw</span><span class="br0">&#40;</span><span class="kw3">time</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$time</span> <span class="sy0">=</span> Time<span class="sy0">::</span><span class="me2">HiRes</span><span class="sy0">::</span><span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$str</span><span class="sy0">=~/</span><span class="re0">$pattern</span><span class="sy0">/</span>i <span class="kw1">for</span> <span class="nu0">0</span><span class="sy0">..</span><span class="nu0">10</span>_000_000<span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">@time_diff</span><span class="sy0">;</span>
+<span class="re0">$time_diff</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">=</span> Time<span class="sy0">::</span><span class="me2">HiRes</span><span class="sy0">::</span><span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">-</span><span class="re0">$time</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">' ohne /o-modifier: '</span><span class="sy0">.</span><span class="re0">$time_diff</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">.</span><span class="st0">&quot; sekunden.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="re0">$time</span> <span class="sy0">=</span> <span class="kw3">time</span><span class="sy0">;</span>
+<span class="re0">$str</span><span class="sy0">=~/</span><span class="re0">$pattern</span><span class="sy0">/</span>io <span class="kw1">for</span> <span class="nu0">0</span><span class="sy0">..</span><span class="nu0">10</span>_000_000<span class="sy0">;</span>
+<span class="re0">$time_diff</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> Time<span class="sy0">::</span><span class="me2">HiRes</span><span class="sy0">::</span><span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">-</span><span class="re0">$time</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">' mit /o-modifier:  '</span><span class="sy0">.</span><span class="re0">$time_diff</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">.</span><span class="st0">&quot; sekunden.<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">printf</span><span class="br0">&#40;</span><span class="st0">&quot; mit /o-modifier: &#160;%3.1f%% schneller.<span class="es0">\n</span>&quot;</span><span class="sy0">,</span> <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">-</span><span class="re0">$time_diff</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">/</span><span class="re0">$time_diff</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">*</span><span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Output (Perl 5.10.0):
+<pre>/o-Modifier
+ ohne /o-modifier: 6.69600605964661 sekunden.
+ mit /o-modifier:  6.55151700973511 sekunden.
+ mit /o-modifier:  2.2% schneller.
+</pre>
+In diesem Beispiel wird <code>Time::HiRes</code> eingebunden, um genauer als nur sekundengenau die verstrichene Zeit messen zu können. Seit Perl-Version 5.6 bewirkt der o-Modifier hier keine wirkliche Verbesserung mehr, da ab dieser Version reguläre Ausdrücke, die eine Variable enthalten, automatisch nur einmal kompiliert werden, wenn sich das Pattern nicht ändert.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=24" title="Abschnitt bearbeiten: Einbeziehung des Kontexts via Assertions">Bearbeiten</a>]</span> <span class="mw-headline" id="Einbeziehung_des_Kontexts_via_Assertions"> Einbeziehung des Kontexts via Assertions </span></h2>
+<p>Eine häufige Problemstellung, auf die jeder (sich mit regulären Ausdrücken beschäftigende) früher oder später trifft, bilden Fälle, in denen eine Teilzeichenkette A gesucht wird, der eine andere Teilzeichenkette B vorangeht oder folgt, wobei B aber selbst nicht im Suchergebnis enthalten sein soll. Wenn Sie bspw. in einem String alle Wörter finden wollen, die auf "lappen" enden, könnten Sie dies mit dem Ausdruck <code>/\w+lappen\b/i</code>, also z.B.
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1">  <span class="co1"># $str wird als gegebener String angenommen</span>
+  <span class="kw1">my</span> <span class="re0">@fundstellen</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="re0">$str</span><span class="sy0">=~/</span><span class="re0">\w</span><span class="sy0">+</span>lappen<span class="re0">\b</span><span class="sy0">/</span>gi<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>versuchen. Wenn jedoch Wörter mit Bindestrichen vorkommen können, dann würde obiger Regexp versagen, da z.B. "Waschlappen-Haken" nicht auf "lappen" endet, aber vom obigen Regexp gematcht würde. Sie könnten also einen nächsten Versuch mit <code>/\w+lappen\b[^-]/i</code> unternehmen. Mit diesem Regexp allerdings würde bei einem String, bei dem auf "lappen" nichts mehr folgt, dieses letzte Wort nicht gematcht werden, da wegen <code>/[^-]/</code> dahinter ein Zeichen verlangt wird, das kein Bindestrich ist. Um das Problem zu lösen, möchte man eigentlich gerne die Möglichkeit haben, per Regexp irgendwie auszudrücken, dass ein String gesucht wird, dem ein anderer String nicht folgt, im Beispiel: Gesucht wird "lappen", ohne dass das nächste Zeichen ein Buchstabe oder ein Bindestrich ist.
+</p><p>Und ebendies liefert ein Regexp-Konstrukt mit der schönen, kurzen, einprägsamen Bezeichnung <i>zero-width negative look-ahead assertion</i>. Der Regexp sähe damit so aus: <code>/\w+lappen(?![a-z-])/i</code>. Der Bestandteil <code>(?![a-z-])</code> ist die <i>Assertion</i>. Das Attribut <i>zero-width</i> bedeutet, dass das Pattern <code>/[a-z-]/</code> zwar als Regexp-Pattern ausgewertet wird, es jedoch keinen Einfluss auf den Positionszeiger im String hat, wie er im Abschnitt <a href="#Wie_arbeiten_Regexp-Engines.3F">Wie arbeiten Regexp-Engines?</a> beschrieben wurde. <i>negative</i> bedeutet, dass das Pattern <i>nicht</i> matchen soll. Und <i>look-ahead</i> bezieht sich lediglich auf die Leserichtung von Regexp-Engines, die glücklicherweise identisch mit der unsrigen ist. Somit ist <i>nach rechts</i> = <i>voraus</i> (engl. ahead) und <i>nach links</i> = <i>dahinterliegend</i> (engl. behind)
+Es gibt vier verschiedene Arten von Assertions:
+</p>
+<dl><dt>Tabelle - Modifiers von regulären Ausdrücken
+</dt></dl>
+<table class="wikitable">
+<tr>
+<th> Code
+</th>
+<th> Bezeichnung
+</th></tr>
+<tr>
+<td> <code>(?=...)</code>
+</td>
+<td> zero-width positive look-ahead assertion
+</td></tr>
+<tr>
+<td> <code>(?!...)</code>
+</td>
+<td> zero-width negative look-ahead assertion
+</td></tr>
+<tr>
+<td> <code>(?&lt;=...)</code>
+</td>
+<td> zero-width positive look-behind assertion
+</td></tr>
+<tr>
+<td> <code>(?&lt;!...)</code>
+</td>
+<td> zero-width negative look-behind assertion
+</td></tr></table>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=25" title="Abschnitt bearbeiten: Suchen und Ersetzen mit regulären Ausdrücken">Bearbeiten</a>]</span> <span class="mw-headline" id="Suchen_und_Ersetzen_mit_regul.C3.A4ren_Ausdr.C3.BCcken"> Suchen und Ersetzen mit regulären Ausdrücken </span></h2>
+<p>Reguläre Ausdrücke sind das Mittel, mit dem in Perl in Zeichenketten etwas gesucht und ersetzt wird.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=26" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_4"> Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+</div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Text</span> <span class="sy0">=</span> <span class="st0">&quot;Franz jagt im komplett verwahrlosten Taxi quer durch Bayern 1234567890&quot;</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/[a-z]| //gi</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;$Text<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div>
+<dl><dt>Erläuterung
+</dt></dl>
+<p>Das Schema für alle Suche-Ersetze-Vorgänge in Perl lautet:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="re0">$Zeichenkette</span> <span class="sy0">=~</span> <span class="kw3">s</span><span class="sy0">/</span><span class="st_h">''</span>Suchmuster<span class="st_h">''</span><span class="sy0">/</span><span class="st_h">''</span>Ersatzzeichenkette<span class="st_h">''</span><span class="sy0">/</span><span class="st_h">''</span>Flags<span class="st_h">''</span><span class="sy0">;</span></pre></div></div>
+<p><code>$Zeichenkette</code> ist eine Variable, in der eine Zeichenkette gespeichert ist, so wie etwa <code>$Text</code> im obigen Beispiel 1. Diese Variable wird mit dem Operator <code>=~</code> an die Ersetzung gebunden, d.h. der Suche-Ersetze-Vorgang gilt für den Inhalt der Variable. Dahinter notieren Sie die Ersetzung.  Sie wird durch ein kleines <code>s</code> eingeleitet. Nach dem <code>s</code> notieren Sie das erste Begrenzerzeichen (per Voreinstellung ein Slash), und danach das Suchmuster, das mit dem zweiten Begrenzerzeichen abgeschlossen wird. Danach folgen das Zeichen oder die Zeichenfolge, mit dem/mit der die Fundstellen ersetzt werden sollen, abgeschlossen wird dieses Ersetzungsmuster mit dem dritten Begrenzerzeichen.
+</p><p>Falls benötigt, notieren Sie nach dem letzten Begrenzerzeichen noch Flags für den Such-Ersetze-Vorgang. Im Beispiel wurden folgende Flags verwendet:
+</p>
+<ul><li> <code>g</code> sucht/ersetzt <i>alle</i> Fundstellen (ansonsten wird nur die erste Fundstelle ersetzt)
+</li><li> <code>i</code> sucht/ersetzt Buchstaben unabhängig davon, ob sie groß oder klein geschrieben sind (ansonsten wird Groß-/Kleinschreibung unterschieden).
+</li></ul>
+<p>Im obigen Beispiel werden aus der Variable <code>$Text</code> alle Buchstaben (groß und klein) und alle Leerzeichen entfernt. Es bleiben anschließend also nur noch die Ziffern am Ende stehen. Das Ergebnis wird zur Kontrolle ausgegeben.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=27" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_5"> Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+</div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Text</span> <span class="sy0">=</span> <span class="st0">&quot;In München steht ein Hofbräuhaus, dort gibt es Bier in Maßen&quot;</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/ä/&amp;auml;/g</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/ö/&amp;ouml;/g</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/ü/&amp;uuml;/g</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/Ä/&amp;Auml;/g</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/Ö/&amp;Ouml;/g</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/Ü/&amp;Uuml;/g</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/ß/&amp;szlig;/g</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;$Text<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div>
+<dl><dt>Erläuterung
+</dt></dl>
+<p>In diesem Beispiel werden in <code>$Text</code> alle deutschen Umlaute und scharfes S durch ihre HTML-gerechten Umschreibungen ersetzt. Das Ergebnis wird zur Kontrolle ausgegeben.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=28" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_6"> Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+</div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Text</span> <span class="sy0">=</span> <span class="st0">&quot;Dieses Script dreht alle Wörter um&quot;</span><span class="sy0">;</span>
+<span class="re0">$Text</span> <span class="sy0">=~</span> <span class="co2">s/(\w+)/reverse $1/ge</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;$Text<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div>
+<dl><dt>Erläuterung
+</dt></dl>
+<p>In diesem Beispiel werden in <code>$Text</code> alle Wörter mithilfe des <a href="#Modifiers">e-Modifiers</a> und der <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#reverse" title="Perl/Funktionen für Zeichenketten">reverse</a>-Funktion umgedreht. Das Ergebnis wird zur Kontrolle ausgegeben.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=29" title="Abschnitt bearbeiten: Transliteration">Bearbeiten</a>]</span> <span class="mw-headline" id="Transliteration"> Transliteration </span></h2>
+<p>Für "kleinere" Aufgaben wie Suchen und Ersetzen oder das Zählen von einzelnen Zeichen gibt es in Perl die Möglichkeit, ohne reguläre Ausdrücke zu arbeiten. Dafür gibt es eine spezielle Syntax, den Transliterationsoperator <code>tr</code>.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=30" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline" id="Beispiel_7"> Beispiel </span></h3>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> warnings<span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Prinzip</span> <span class="sy0">=</span> <span class="st0">&quot;abc&quot;</span><span class="sy0">;</span>
+<span class="re0">$Prinzip</span> <span class="sy0">=~</span> <span class="co2">tr/ac/xy/</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Prinzip = $Prinzip<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$chinesisch</span> <span class="sy0">=</span> <span class="st0">&quot;chinesisches Roulette rigoros&quot;</span><span class="sy0">;</span>
+<span class="re0">$chinesisch</span> <span class="sy0">=~</span> <span class="co2">tr/Rr/Ll/</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;chinesisch = $chinesisch<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Geschrei</span> <span class="sy0">=</span> <span class="st0">&quot;WIE GEHT DAS ALLES MIT PERL?&quot;</span><span class="sy0">;</span>
+<span class="re0">$Geschrei</span> <span class="sy0">=~</span> <span class="co2">tr/A-Z/a-z/</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Geschrei = $Geschrei<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Variablenname</span> <span class="sy0">=</span> <span class="st0">&quot;Sügümälüxümülä&quot;</span><span class="sy0">;</span>
+<span class="re0">$Variablenname</span> <span class="sy0">=~</span> <span class="co2">tr/A-Za-z_0-9/_/c</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Variablenname = $Variablenname<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$unsauber</span> <span class="sy0">=</span> <span class="st0">&quot;ein   Satz mit  überflüssigen    Leerzeichen&quot;</span><span class="sy0">;</span>
+<span class="re0">$unsauber</span> <span class="sy0">=~</span> <span class="co2">tr/ //s</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;unsauber = $unsauber<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$WSatz</span> <span class="sy0">=</span> <span class="st0">&quot;Wir Westerwälder Waschweiber wollen weiße Wäsche waschen&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$WZaehler</span> <span class="sy0">=</span> <span class="br0">&#40;</span><span class="re0">$WSatz</span> <span class="sy0">=~</span> <span class="kw3">tr</span><span class="sy0">/</span>Ww<span class="sy0">//</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;W/w kommt in WSatz $WZaehler mal vor!<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$AchtBitWort</span> <span class="sy0">=</span> <span class="st0">&quot;überschüssig&quot;</span><span class="sy0">;</span>
+<span class="re0">$AchtBitWort</span> <span class="sy0">=~</span> <span class="co2">tr/\200-\377/\000-\177/</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;AchtBitWort = $AchtBitWort<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$ROT13_Satz</span> <span class="sy0">=</span> <span class="st0">&quot;ihr seid ja solche Deppen da!&quot;</span><span class="sy0">;</span>
+<span class="re0">$ROT13_Satz</span> <span class="sy0">=~</span> <span class="co2">tr/a-zA-Z/n-za-mN-ZA-M/</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;ROT13_Satz = $ROT13_Satz<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Eine Transliteration besteht darin, einzelne Zeichen durch andere Zeichen zu ersetzen. Das Schema für eine Transliteration in Perl lautet:
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="re0">$Zeichenkette</span> <span class="sy0">=~</span> <span class="kw3">tr</span><span class="sy0">/</span>Suchmuster<span class="sy0">/</span>Ersetzmuster<span class="sy0">/</span><span class="br0">&#91;</span>Optionen<span class="br0">&#93;</span></pre></div></div>
+<p>Dabei sind sowohl das Such- als auch das Ersetzungsmuster keine Zeichenketten, sondern nur einzelne Zeichen oder Zeichenbereiche.  Die Muster sind sozusagen zwei Listen von Zeichen. Wenn in <code>$Zeichenkette</code> ein Zeichen gefunden wird, das in der Suchliste vorkommt, wird es mit dem Zeichen ersetzt, das an derselben Position in der Ersetzungsliste steht.
+</p><p>Alle Beispiele des obigen Scripts sind gleich aufgebaut. Es wird eine Variable mit einem "interessanten" Wert deklariert. Dann wird eine Transliteration auf diesen Wert angewendet, und anschließend wird das Ergebnis ausgegeben.
+</p><p>Im Fall von <code>$Prinzip</code> wird das Prinzip der Transliteration deutlich: in dem Beispiel wird <code>a</code> durch <code>x</code> ersetzt und <code>c</code> durch <code>y</code>. Die Ausgabe lautet daher:
+</p>
+<pre>Prinzip = xby
+</pre>
+<p>Im Fall von <code>$chinesisch</code> werden die Buchstaben <code>R</code> und <code>r</code> durch <code>L</code> und <code>l</code> ersetzt. Die Ausgabe lautet daher:
+</p>
+<pre>chinesisch = chinesisches Loulette ligolos
+</pre>
+<p>Im Fall von <code>$Geschrei</code> werden alle Großbuchstaben durch entsprechende Kleinbuchstaben ersetzt (entspricht etwa der Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#lc" title="Perl/Funktionen für Zeichenketten">lc</a>). Die Ausgabe lautet daher:
+</p>
+<pre>Geschrei = wie geht das alles mit perl?
+</pre>
+<p>Im Fall von <code>$Variablenname</code> werden alle Zeichen, die kein Buchstabe von A bis Z oder a bis z oder eine Ziffer oder ein Unterstrich sind, durch den Unterstrich <code>_</code> ersetzt. Die Ausgabe lautet daher:
+</p>
+<pre>Variablenname = S_g_m_l_x_m_l_
+</pre>
+<p>Im Fall von <code>$unsauber</code> werden alle doppelten oder mehrfachen Leerzeichen entfernt. Die Ausgabe lautet daher:
+</p>
+<pre>unsauber = ein Satz mit überflüssigen Leerzeichen
+</pre>
+<p>Im Fall von <code>$WSatz</code> wird sich der Rückgabewert einer Transliteration zu eigen gemacht. Der Variable <code>$WSatz</code> passiert dabei nichts weiter, aber der Rückgabewert ermittelt, wie oft die Buchstaben <code>W</code> oder <code>w</code> in dem Satz vorkommen. Die Ausgabe lautet daher:
+</p>
+<pre>W/w kommt in WSatz 9 mal vor!
+</pre>
+<p>Im Fall von <code>$AchtBitWort</code> werden alle Zeichen mit Zeichenwerten zwischen 128 und 255 in Zeichen mit entsprechenden Zeichenwerten zwischen 0 und 127 umgewandelt. Die Ausgabe lautet daher:
+</p>
+<pre>AchtBitWort = |berfl|ssig
+</pre>
+<p>Im Fall von <code>$ROT13_Satz</code> werden alle Zeichen des ersten Alphabethälfte in solche der zweiten verwandelt und umgekehrt (sie werden sozusagen um 13 Zeichenwerte rotiert). Die Ausgabe lautet:
+</p>
+<pre>ROT13_Satz = vue frvq wn fbypur Qrccra qn!
+</pre>
+(das ROT13-Prinzip wird in den Newsgroups manchmal angewendet, um Dinge zu sagen, die nicht jeder verstehen können soll).</div>
+</div>
+<p><br />
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=31" title="Abschnitt bearbeiten: Tabelle der möglichen Meta-Character">Bearbeiten</a>]</span> <span class="mw-headline" id="Tabelle_der_m.C3.B6glichen_Meta-Character"> Tabelle der möglichen Meta-Character </span></h3>
+<table class="wikitable">
+<tr>
+<th> Code             </th>
+<th> Bedeutung                         </th>
+<th> erklärt im Abschnitt
+</th></tr>
+<tr>
+<td> \000             </td>
+<td> octale Escape-Sequenz             </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \1               </td>
+<td> Backreference                     </td>
+<td> <a href="#Teilausdr.C3.BCcke_gruppieren_oder_merken_durch_Klammerung">#Teilausdrücke gruppieren oder merken durch Klammerung</a>
+</td></tr>
+<tr>
+<td> \a               </td>
+<td> Alarm/bell                        </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen </a>
+</td></tr>
+<tr>
+<td> \A               </td>
+<td> begin of string                   </td>
+<td> <a href="#Modifiers">#Modifiers</a>
+</td></tr>
+<tr>
+<td> \b               </td>
+<td> word boundary (backspace in einer zeichenklasse) </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_Zeichenketten">#Reguläre Ausdrücke für Zeichenketten </a>
+</td></tr>
+<tr>
+<td> \B               </td>
+<td> alles ausser word boundary                       </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_Zeichenketten">#Reguläre Ausdrücke für Zeichenketten </a>
+</td></tr>
+<tr>
+<td> \cX              </td>
+<td> control-X                         </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \C               </td>
+<td> single octet, even under UTF-8    </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \d               </td>
+<td> ziffer [0-9]                      </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \D               </td>
+<td> nicht-ziffer [^0-9]               </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \e               </td>
+<td> das Escape-Zeichen                </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \E               </td>
+<td> Deaktivieren von \Q, \L oder \U   </td>
+<td> <a href="#Maskierung_von_Zeichen_in_regul.C3.A4ren_Ausdr.C3.BCcken">#Maskierung von Zeichen in regulären Ausdrücken</a>
+</td></tr>
+<tr>
+<td> \f               </td>
+<td> form feed                         </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \g               </td>
+<td> named backreference               </td>
+<td> <a href="#Teilausdr.C3.BCcke_gruppieren_oder_merken_durch_Klammerung">#Teilausdrücke gruppieren oder merken durch Klammerung</a>
+</td></tr>
+<tr>
+<td> \G               </td>
+<td> Matcht bei pos()                  </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \h               </td>
+<td> horizontal whitespace             </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \H               </td>
+<td> not horizontal whitespace         </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \k               </td>
+<td> named backreference               </td>
+<td> <a href="#Teilausdr.C3.BCcke_gruppieren_oder_merken_durch_Klammerung">#Teilausdrücke gruppieren oder merken durch Klammerung</a>
+</td></tr>
+<tr>
+<td> \K               </td>
+<td> Keep the stuff left of the \K, don't include it in $&amp; </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \l               </td>
+<td> Lowercase next character          </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \L               </td>
+<td> Lowercase till \E                 </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \n               </td>
+<td> newline                           </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \N{}             </td>
+<td> Named (Unicode) character         </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \p{}, \pP        </td>
+<td> Character with a Unicode property </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \P{}, \PP        </td>
+<td> Character without a Unicode property </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \Q               </td>
+<td> Quotemeta till \E                 </td>
+<td> <a href="#Maskierung_von_Zeichen_in_regul.C3.A4ren_Ausdr.C3.BCcken">#Maskierung von Zeichen in regulären Ausdrücken</a>
+</td></tr>
+<tr>
+<td> \r               </td>
+<td> return                            </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \R               </td>
+<td> linebreak                         </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \s               </td>
+<td> whitespace                        </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \S               </td>
+<td> non-whitespace                    </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \t               </td>
+<td> tab                               </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \u               </td>
+<td> Titlecase next character          </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \U               </td>
+<td> Uppercase till \E                 </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \v               </td>
+<td> vertival whitespace               </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \w               </td>
+<td> Character class for word characters </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \W               </td>
+<td> Character class for non-word characters </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \x{}, \x00       </td>
+<td> Hexadecimal escape sequence       </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> \X               </td>
+<td> Extended Unicode "combining character sequence" </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \z               </td>
+<td> end of string                     </td>
+<td> <a href="#Modifiers">#Modifiers</a>
+</td></tr>
+<tr>
+<td> \Z               </td>
+<td> end of string or before newline   </td>
+<td> <a href="#Modifiers">#Modifiers</a>
+</td></tr>
+<tr>
+<td> ^                </td>
+<td> begin of line (or negate char class) </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> $                </td>
+<td> end of line or before newline     </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_Zeichenketten">#Reguläre Ausdrücke für Zeichenketten</a>
+</td></tr>
+<tr>
+<td> | </td>
+<td> or                              </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_mit_Alternativen">#Reguläre Ausdrücke mit Alternativen</a>
+</td></tr>
+<tr>
+<td> &amp;`           </td>
+<td>                                   </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> &amp;?           </td>
+<td>                                   </td>
+<td> fehlt noch
+</td></tr>
+<tr>
+<td> \                </td>
+<td> escaping char                     </td>
+<td> <a href="#Maskierung_von_Zeichen_in_regul.C3.A4ren_Ausdr.C3.BCcken">#Maskierung von Zeichen in regulären Ausdrücken</a>
+</td></tr>
+<tr>
+<td> .                </td>
+<td> non-newline (any char, when s-modifier is set) </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> {n}              </td>
+<td> n times, greedy                   </td>
+<td> <a href="#Quantoren_I">#Quantoren I</a>
+</td></tr>
+<tr>
+<td> {n}?             </td>
+<td> n times, non-greedy               </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> {n}+             </td>
+<td> n times, possessive               </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> {n,}             </td>
+<td> at least n times, greedy          </td>
+<td> <a href="#Quantoren_I">#Quantoren I</a>
+</td></tr>
+<tr>
+<td> {n,}?            </td>
+<td> at least n times, non-greedy      </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> {n,}+            </td>
+<td> at least n times, possessive      </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> {n,m}            </td>
+<td> at least n times, at most m times, greedy     </td>
+<td> <a href="#Quantoren_I">#Quantoren I</a>
+</td></tr>
+<tr>
+<td> {n,m}?           </td>
+<td> at least n times, at most m times, non-greedy </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> {n,m}+           </td>
+<td> at least n times, at most m times, possessive </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td>&#160;?                </td>
+<td> 0 or 1 time, greedy               </td>
+<td> <a href="#Quantoren_I">#Quantoren I</a>
+</td></tr>
+<tr>
+<td>&#160;??               </td>
+<td> 0 or 1 time, non-greedy           </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td>&#160;?+               </td>
+<td> 0 or 1 time, possessive           </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> +                </td>
+<td> at least 1 time, greedy           </td>
+<td> <a href="#Quantoren_I">#Quantoren I</a>
+</td></tr>
+<tr>
+<td> +?               </td>
+<td> at least 1 time, non-greedy       </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> ++               </td>
+<td> at least 1 time, possessive       </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> *                </td>
+<td> at least 0 times, greedy          </td>
+<td> <a href="#Quantoren_I">#Quantoren I</a>
+</td></tr>
+<tr>
+<td> *?               </td>
+<td> at least 0 times, non-greedy      </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> *+               </td>
+<td> at least 0 times, possessive      </td>
+<td> <a href="#Quantoren_II_-_gen.C3.BCgsam.2C_gierig.2C_gefr.C3.A4.C3.9Fig">#Quantoren II - genügsam, gierig, gefräßig</a>
+</td></tr>
+<tr>
+<td> []               </td>
+<td> Zeichenklasse                     </td>
+<td> <a href="#Regul.C3.A4re_Ausdr.C3.BCcke_f.C3.BCr_einzelne_Zeichen">#Reguläre Ausdrücke für einzelne Zeichen</a>
+</td></tr>
+<tr>
+<td> ()               </td>
+<td> Gruppierung                       </td>
+<td> <a href="#Teilausdr.C3.BCcke_gruppieren_oder_merken_durch_Klammerung">#Teilausdrücke gruppieren oder merken durch Klammerung</a>
+</td></tr>
+<tr>
+<td> (?:)             </td>
+<td> non-capturing grouping            </td>
+<td> <a href="#Teilausdr.C3.BCcke_gruppieren_oder_merken_durch_Klammerung">#Teilausdrücke gruppieren oder merken durch Klammerung</a>
+</td></tr>
+<tr>
+<td> (?imsx-imsx:)    </td>
+<td> modifier combined with non-capturing grouping </td>
+<td>
+</td></tr>
+<tr>
+<td> (?=)             </td>
+<td> zero-width positive look-ahead    </td>
+<td> <a href="#Einbeziehung_des_Kontexts_via_Assertions">#Einbeziehung des Kontexts via Assertions</a>
+</td></tr>
+<tr>
+<td> (?!)             </td>
+<td> zero-width negative look-ahead    </td>
+<td> <a href="#Einbeziehung_des_Kontexts_via_Assertions">#Einbeziehung des Kontexts via Assertions</a>
+</td></tr>
+<tr>
+<td> (?&lt;=)         </td>
+<td> zero-width positive look-behind   </td>
+<td> <a href="#Einbeziehung_des_Kontexts_via_Assertions">#Einbeziehung des Kontexts via Assertions</a>
+</td></tr>
+<tr>
+<td> (?&lt;!)         </td>
+<td> zero-width negative look-behind   </td>
+<td> <a href="#Einbeziehung_des_Kontexts_via_Assertions">#Einbeziehung des Kontexts via Assertions</a>
+</td></tr>
+<tr>
+<td> (?&gt;)          </td>
+<td> atomic grouping                   </td>
+<td>
+</td></tr>
+<tr>
+<td> (?#)             </td>
+<td> Kommentar                           </td>
+<td>
+</td></tr>
+<tr>
+<td> (?pimsx-imsx)    </td>
+<td> modifier                          </td>
+<td>
+</td></tr>
+<tr>
+<td> (?|) </td>
+<td> branch reset                 </td>
+<td>
+</td></tr>
+<tr>
+<td> (?'NAME')        </td>
+<td> benanntes Muster                    </td>
+<td>
+</td></tr>
+<tr>
+<td> (?&lt;NAME&gt;)  </td>
+<td> benanntes Muster                   </td>
+<td>
+</td></tr>
+<tr>
+<td> (?{code})        </td>
+<td> Code ausführen                   </td>
+<td>
+</td></tr>
+<tr>
+<td> (??{code})       </td>
+<td> postponed Code                    </td>
+<td>
+</td></tr>
+<tr>
+<td> (?(cond)y|n) </td>
+<td> conditional expression </td>
+<td>
+</td></tr>
+<tr>
+<td> (?P&lt;NAME&gt;) </td>
+<td> alias of (?&lt;NAME&gt;)          </td>
+<td>
+</td></tr>
+<tr>
+<td> (?P=NAME)        </td>
+<td> alias of \g{NAME}                 </td>
+<td>
+</td></tr>
+<tr>
+<td> (?P&gt;NAME)     </td>
+<td> alias of (?&amp;NAME)             </td>
+<td>
+</td></tr>
+<tr>
+<td> [:alpha:]        </td>
+<td> Buchstabe                         </td>
+<td>
+</td></tr>
+<tr>
+<td> [:alnum:]        </td>
+<td> Ziffer oder Buchstabe             </td>
+<td>
+</td></tr>
+<tr>
+<td> [:ascii:]        </td>
+<td> ascii-Zeichen                     </td>
+<td>
+</td></tr>
+<tr>
+<td> [:blank:]        </td>
+<td> Leerzeichen oder Tab              </td>
+<td>
+</td></tr>
+<tr>
+<td> [:cntrl:]        </td>
+<td> Steuerzeichen                     </td>
+<td>
+</td></tr>
+<tr>
+<td> [:digit:]        </td>
+<td> Ziffer 0-9                        </td>
+<td>
+</td></tr>
+<tr>
+<td> [:graph:]        </td>
+<td>                                   </td>
+<td>
+</td></tr>
+<tr>
+<td> [:lower:]        </td>
+<td> kleingeschriebener Buchstabe      </td>
+<td>
+</td></tr>
+<tr>
+<td> [:print:]        </td>
+<td>                                   </td>
+<td>
+</td></tr>
+<tr>
+<td> [:punct:]        </td>
+<td>                                   </td>
+<td>
+</td></tr>
+<tr>
+<td> [:space:]        </td>
+<td> \s oder \v                        </td>
+<td>
+</td></tr>
+<tr>
+<td> [:upper:]        </td>
+<td> großgeschriebener Buchstabe      </td>
+<td>
+</td></tr>
+<tr>
+<td> [:word:]         </td>
+<td> Buchstabe, Ziffer oder Unterstrich </td>
+<td>
+</td></tr>
+<tr>
+<td> [:xdigit:]       </td>
+<td>                                   </td>
+<td>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit&amp;section=32" title="Abschnitt bearbeiten: Anmerkungen">Bearbeiten</a>]</span> <span class="mw-headline" id="Anmerkungen"> Anmerkungen </span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">in der Dokumentation zu Perl 5.12.2 <a rel="nofollow" class="external text" href="http://perldoc.perl.org/perlre.html">perldoc perlre</a> ist zu lesen:
+<dl><dd><i>"Perl uses the same mechanism to produce $1, $2, etc, so you also pay a price for each pattern that contains capturing parentheses. (To avoid this cost while retaining the grouping behaviour, use the extended regular expression (?: ... ) instead.)"</i>
+</dd></dl>
+Dagegen wird im "Regular Expression HOWTO" Im Python-v2.7-Manual über das Modul re praktisch das Gegenteil gesagt:
+<dl><dd><i>"It should be mentioned that there’s no performance difference in searching between capturing and non-capturing groups; neither form is any faster than the other."</i><a rel="nofollow" class="external autonumber" href="http://docs.python.org/howto/regex.html#non-capturing-and-named-groups">[1]</a></span>
+</dd></dl>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://de.php.net/manual/en/reference.pcre.pattern.modifiers.php">PHP-Manual, PCRE, Abschnitt über Modifiers</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://docs.python.org/library/re.html#module-contents">Python Manual, Module re</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.boost.org/doc/libs/1_55_0/libs/regex/doc/html/boost_regex/ref/syntax_option_type/syntax_option_type_perl.html">C++ Boost Library - Options for Perl Regular Expressions</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/1.4.2/docs/api/java/util/regex/Pattern.html#field_summary">Java-Documentation</a></span>
+</li>
+</ol>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1294/1000000
+Post‐expand include size: 72138/2097152 bytes
+Template argument size: 67944/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:3724-0!*!0!!de-formal!*!* and timestamp 20150301085235 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;oldid=23631">http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;oldid=23631</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://wiki.selfhtml.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="http://wiki.selfhtml.org/wiki/Kategorie:Perl" title="Kategorie:Perl">Perl</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FRegul%C3%A4re+Ausdr%C3%BCcke" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="http://wiki.selfhtml.org/wiki/Diskussion:Perl/Reguläre_Ausdrücke"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Reguläre_Ausdrücke" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Reguläre_Ausdrücke" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Regul%C3%A4re_Ausdr%C3%BCcke&amp;oldid=23631" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FReguläre_Ausdrücke" title="Spezial:Durchsuchen/Perl-2FReguläre Ausdrücke">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 31. Oktober 2014 um 03:46 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 10.746-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.092 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

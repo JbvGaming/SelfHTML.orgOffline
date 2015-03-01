@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Zeichenketten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Perl/Zeichenketten – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Perl/Zeichenketten","wgTitle":"Perl/Zeichenketten","wgCurRevisionId":13752,"wgArticleId":1845,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Perl/Zeichenketten","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-perl {line-height: normal;}
+.source-perl li, .source-perl pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for perl
+ * CSS class: source-perl, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.perl.source-perl .de1, .perl.source-perl .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.perl.source-perl  {font-family:monospace;}
+.perl.source-perl .imp {font-weight: bold; color: red;}
+.perl.source-perl li, .perl.source-perl .li1 {font-weight: normal; vertical-align:top;}
+.perl.source-perl .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.perl.source-perl .li2 {font-weight: bold; vertical-align:top;}
+.perl.source-perl .kw1 {color: #b1b100;}
+.perl.source-perl .kw2 {color: #000000; font-weight: bold;}
+.perl.source-perl .kw3 {color: #000066;}
+.perl.source-perl .co1 {color: #666666; font-style: italic;}
+.perl.source-perl .co2 {color: #009966; font-style: italic;}
+.perl.source-perl .co3 {color: #0000ff;}
+.perl.source-perl .co4 {color: #cc0000; font-style: italic;}
+.perl.source-perl .co5 {color: #0000ff;}
+.perl.source-perl .coMULTI {color: #666666; font-style: italic;}
+.perl.source-perl .es0 {color: #000099; font-weight: bold;}
+.perl.source-perl .es_h {color: #000099; font-weight: bold;}
+.perl.source-perl .br0 {color: #009900;}
+.perl.source-perl .sy0 {color: #339933;}
+.perl.source-perl .st0 {color: #ff0000;}
+.perl.source-perl .st_h {color: #ff0000;}
+.perl.source-perl .nu0 {color: #cc66cc;}
+.perl.source-perl .me1 {color: #006600;}
+.perl.source-perl .me2 {color: #006600;}
+.perl.source-perl .re0 {color: #0000ff;}
+.perl.source-perl .re4 {color: #009999;}
+.perl.source-perl .ln-xtra, .perl.source-perl li.ln-xtra, .perl.source-perl div.ln-xtra {background-color: #ffc;}
+.perl.source-perl span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="Perl/Zeichenketten" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/Perl/Zeichenketten&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-Perl_Zeichenketten skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Perl/Zeichenketten</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="http://wiki.selfhtml.org/wiki/Perl" title="Perl">Perl</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Eigenschaften_von_Zeichenketten"><span class="tocnumber">1</span> <span class="toctext">Eigenschaften von Zeichenketten</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Regeln_beim_Notieren_von_Zeichenketten"><span class="tocnumber">2</span> <span class="toctext">Regeln beim Notieren von Zeichenketten</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Steuerzeichen_in_Zeichenketten"><span class="tocnumber">3</span> <span class="toctext">Steuerzeichen in Zeichenketten</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Maskierung_von_Zeichen_in_Zeichenketten"><span class="tocnumber">4</span> <span class="toctext">Maskierung von Zeichen in Zeichenketten</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Funktionszeichen_in_Zeichenketten"><span class="tocnumber">5</span> <span class="toctext">Funktionszeichen in Zeichenketten</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Numerische_Notation_von_Zeichen_in_Zeichenketten"><span class="tocnumber">6</span> <span class="toctext">Numerische Notation von Zeichen in Zeichenketten</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Operationen_und_Funktionen_f.C3.BCr_Zeichenketten"><span class="tocnumber">7</span> <span class="toctext">Operationen und Funktionen für Zeichenketten</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Eigenschaften von Zeichenketten">Bearbeiten</a>]</span> <span class="mw-headline" id="Eigenschaften_von_Zeichenketten"> Eigenschaften von Zeichenketten </span></h2>
+<p>Zeichenketten sind in Perl, anders als etwa in C, keine Arrays aus Zeichen, sondern ein einziges "Datum". Jede Zeichenkette ist potentiell unendlich groß und nur durch den verfügbaren Speicher in ihrer Größe begrenzt. Es ist also kein Problem, auch größere Datenmengen in einer Zeichenkette zu speichern.
+</p><p>Eine wichtige Eigenschaft von Zeichenketten in Perl ist auch, dass sie beliebige Zeichen enthalten können. Es gibt also keine reservierten Zeichen wie in C etwa das Zeichen mit dem Wert <code>0</code> zum Anzeigen des Endes der Zeichenkette. Auch andere Steuerzeichen, die andernorts als typische Endekennzeichen verwendet werden, etwa das Steuerzeichen für Zeilenumbruch, können innerhalb von Zeichenketten in Perl beliebig vorkommen. Zeichenketten in Perl können deshalb auch problemlos binäre Daten aufnehmen und verarbeiten.
+</p><p>Als Variablentyp zum Speichern einer einzelnen Zeichenkette sind <a href="http://wiki.selfhtml.org/wiki/Perl/Skalare" title="Perl/Skalare">Skalare</a> vorgesehen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Regeln beim Notieren von Zeichenketten">Bearbeiten</a>]</span> <span class="mw-headline" id="Regeln_beim_Notieren_von_Zeichenketten"> Regeln beim Notieren von Zeichenketten </span></h2>
+<p>Beim direkten Notieren von Zeichenketten können Sie die Zeichenkette wahlweise in einfache oder doppelte Anführungszeichen setzen oder die <code>q</code>- bzw. <code>qq</code>-Operatoren dazu nutzen. Für mehrzeilige Zeichenketten bieten sich die so genannten "Hier-Dokumente" an. Es gibt einige semantische Unterschiede zwischen den Notationen:
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="co4">&lt;&lt;'KOPF';
+Content-type: text/html
+&#160;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Testausgabe&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+KOPF</span>
+&#160;
+<span class="kw1">my</span> <span class="re0">$Name</span> <span class="sy0">=</span> <span class="st0">&quot;Methusalem&quot;</span><span class="sy0">;</span>
+<span class="kw1">my</span> <span class="re0">$Alter</span> <span class="sy0">=</span> <span class="nu0">625</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;$Name ist ein alter Mann, sehr alt. Er ist $Alter Jahre alt&lt;br&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'$Name ist ein alter Mann, sehr alt. Er ist $Alter Jahre alt&lt;br&gt;\n'</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="kw3">qq</span><span class="br0">&#40;</span><span class="re0">$Name</span> ist ein alter Mann<span class="sy0">,</span> sehr alt<span class="sy0">.</span> Er ist <span class="re0">$Alter</span> Jahre alt<span class="re4">&lt;br&gt;</span><span class="re0">\n</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="kw3">q</span><span class="br0">&#40;</span><span class="re0">$Name</span> ist ein alter Mann<span class="sy0">,</span> sehr alt<span class="sy0">.</span> Er ist <span class="re0">$Alter</span> Jahre alt<span class="re0">\n</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;&lt;/body&gt;&lt;/html&gt;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Im Beispiel werden der HTTP-Header sowie die ersten HTML-Zeilen mit Hilfe eines so genannten "Hier-Dokuments" ausgegeben. Hier-Dokumente haben etwa die gleiche Wirkung wie das <code>pre</code>-Element in HTML. Die Zeichenkette wird dabei so formatiert wie sie im Quelltext notiert ist. Ein Hier-Dokument beginnt mit dem einleitenden <code>&lt;&lt;</code> und dem Namen eines Endbegrenzers (im Beispiel: <code>KOPF</code>). Der Name kann in einfache oder doppelte Anführungszeichen eingeschlossen werden, welche den gleichen Effekt haben wie bei "normalen" Zeichenketten auch. Bei doppelten Anführungszeichen werden Variablen innerhalb des Hier-Dokuments interpoliert, bei einfachen nicht. Wenn Sie die Anführungszeichen ganz weglassen, nimmt Perl doppelte Anführungszeichen an. Zwischen dem <code>&lt;&lt;</code> und dem Namen darf kein Leerzeichen stehen. Beendet wird das Hier-Dokument durch den Endbegrenzer (ohne Anführungszeichen), der allein in einer Zeile ohne Leerzeichen davor oder dahinter stehen muss. Die Zeile muss unbedingt mit einem Zeilenumbruch abgeschlossen werden.
+<p>Im obigen Beispiel werden anschließend zwei Skalare <code>$Name</code> und <code>$Alter</code> deklariert und mit einem Anfangswert versehen. Dann wird mit <code>print</code>-Anweisungen mehrmals die gleiche Zeichenkette ausgegeben - zunächst einmal in doppelten Anführungszeichen, dann in einfachen Anführungszeichen. Beide Male enthält die Zeichenkette im Satz eingebettet die Skalare <code>$Name</code> und <code>$Alter</code>. Bei der Ausgabe wird sichtbar, dass bei Verwendung doppelter Anführungszeichen die Skalare <code>$Name</code> und <code>$Alter</code> durch ihren gespeicherten Wert ersetzt werden (Fachjargon: <b>Interpolation</b>), während bei Verwendung einfacher Anführungszeichen an den entsprechenden Stellen einfach die Zeichenfolgen <code>$Name</code> und <code>$Alter</code> ausgegeben werden. Ferner wird bei der Version mit den einfachen Anführungszeichen das abschließend notierte <a href="#Steuerzeichen_in_Zeichenketten">Steuerzeichen</a> <code>\n</code> ebenfalls so ausgegeben wie es als Zeichenfolge da steht, während das Steuerzeichen bei Verwendung doppelter Anführungszeichen interpretiert wird, also im ausgegebenen Text tatsächlich einen Zeilenumbruch erzeugt.
+</p><p>Das bedeutet also: verwenden Sie doppelte Anführungszeichen, wenn in einer Zeichenkette angegebene Variablen und Steuerzeichen interpretiert werden sollen, und verwenden Sie einfache Anführungszeichen, wenn genau das nicht geschehen soll.
+</p><p>Die beiden Operatoren <code>qq</code> und <code>q</code> entsprechen den doppelten bzw. einfachen Anführungszeichen. Bei <code>qq</code> werden Variablen und Steuerzeichen interpretiert, bei <code>q</code> dagegen nicht. Die Verwendung von <code>qq</code> und <code>q</code> ist nicht so gebräuchlich wie diejenige mit Anführungszeichen, doch sie kann Quelltext durchaus lesbarer machen. Im obigen Beispiel wurden runde Klammern gewählt, um den Inhalt von <code>qq</code> und <code>q</code> einzuschließen. Sie können jedoch auch andere Zeichen dazu verwenden. Bei Zeichen, die ein Gegenstück besitzen, etwa <code>&lt;</code> und <code>&gt;</code>, <code>{</code> und <code>}</code> oder <code>[</code> und <code>]</code>, wird dieses als Endbegrenzer erwartet. Perl achtet dann auf Verschachtelungen innerhalb der Zeichenkette. Derartige Klammern eignen sich somit hervorragend dafür, um beispielsweise Perl-Code innerhalb einer Zeichenkette darzustellen. Wenn Sie andere Zeichen als Begrenzer verwenden, achten Sie darauf, dass das Zeichen in der Zeichenkette nicht vorkommt.
+</p>
+Neben diesen Formen gibt es auch noch <code>qx</code> oder als Alternative dazu die so genannten <i>Backticks</i>. Damit erzeugen Sie Zeichenketten, die von Perl als Systemaufruf umgesetzt werden. Einzelheiten dazu im Abschnitt <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Betriebssystemaufrufe#qx" title="Perl/Funktionen für Betriebssystemaufrufe">qx(...) - Andere Programme/Scripts ausführen und STDOUT auffangen</a>.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Steuerzeichen in Zeichenketten">Bearbeiten</a>]</span> <span class="mw-headline" id="Steuerzeichen_in_Zeichenketten"> Steuerzeichen in Zeichenketten </span></h2>
+<p>Für die Notation einiger wichtiger Steuerzeichen stellt Perl eine spezielle Notationssyntax zur Verfügung, die sich an die Sprache C anlehnt. Solche Zeichen werden durch einen Backslash <code>\</code> eingeleitet. Dahinter folgt ein Buchstabe, der das Steuerzeichen bezeichnet. Diese Steuerzeichen werden nur innerhalb von Zeichenketten interpretiert, die in doppelten Anführungszeichen <code>"..."</code> oder in <code>qq(...)</code> stehen, und auch nur dann, wenn der Ausgabekanal entsprechende Möglichkeiten bietet. Folgende Steuerzeichen gibt es:
+</p>
+<table class="reftable" border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th style="white-space: nowrap;">Notation</th>
+<th style="white-space: nowrap;">Bedeutung</th>
+<th style="white-space: nowrap;">Beispiel</th>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\a</code></td>
+<td class="tabxpl">Alarmton (Beep)</td>
+<td class="code" style="white-space: nowrap;"><code>print "\a"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\b</code></td>
+<td class="tabxpl">Backspace-Zeichen</td>
+<td class="code" style="white-space: nowrap;"><code>print "meine\b"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\e</code></td>
+<td class="tabxpl">Escape-Zeichen zur Einleitung von Escape-Sequenzen</td>
+<td class="code" style="white-space: nowrap;"><code>print "\e[A"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\f</code></td>
+<td class="tabxpl">Steuerzeichen für Seitenvorschub</td>
+<td class="code" style="white-space: nowrap;"><code>print "Seitenende\fSeitenanfang"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\n</code></td>
+<td class="tabxpl">Steuerzeichen für Zeilenvorschub. Der genaue Zeichencode dafür ist betriebssystemabhängig. Unter Unix ist es beispielsweise der ASCII-Code <code>10</code>, während es auf Apple-Macintosh der ASCII-Code <code>13</code> und unter DOS eine Zeichenfolge aus ASCII <code>13</code> und <code>10</code> ist.</td>
+<td class="code" style="white-space: nowrap;"><code>print "Zeilenende\nZeilenanfang"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\r</code></td>
+<td class="tabxpl">Steuerzeichen für Wagenrücklauf. Der genaue Zeichencode dafür ist betriebssystemabhängig. Unter Unix und DOS ist es beispielsweise der ASCII-Code <code>13</code>, während es auf Apple-Macintosh der ASCII-Code <code>10</code> ist.</td>
+<td class="code" style="white-space: nowrap;"><code>print "Wagen\rWagenrücklauf"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\t</code></td>
+<td class="tabxpl">Steuerzeichen für Tabulator</td>
+<td class="code" style="white-space: nowrap;"><code>print "Alter:\t32"</code></td>
+</tr>
+</table>
+<p><br />&#160;
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Maskierung von Zeichen in Zeichenketten">Bearbeiten</a>]</span> <span class="mw-headline" id="Maskierung_von_Zeichen_in_Zeichenketten"> Maskierung von Zeichen in Zeichenketten </span></h2>
+<p>Jene Zeichen, die eine Zeichenkette einschließen, müssen Sie, falls das entsprechende Zeichen innerhalb der Zeichenkette vorkommt, maskieren. Dazu wird der Backslash <code>\</code> als Maskierungszeichen verwendet. Da nun dadurch auch der Backslash besondere Bedeutung erhält, muss er selber ebenfalls maskiert werden, falls er in einer Zeichenkette als Zeichen vorkommt.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Eine typische print-Ausgabe ist <span class="es0">\&quot;</span>Hallo Welt<span class="es0">\\</span>n<span class="es0">\&quot;</span>;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Eine typische print-Ausgabe ist 'Hallo Welt<span class="es0">\\</span>n';<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st_h">'Eine typische print-Ausgabe ist &quot;Hallo Welt\n&quot;;'</span><span class="sy0">,</span><span class="st0">&quot;<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st_h">'Eine typische print-Ausgabe ist <span class="es_h">\'</span>Hallo Welt\n<span class="es_h">\'</span>;'</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel sendet reinen Text und gibt dabei mit <code>print</code>-Anweisungen viermal den gleichen Satz aus. Bei den ersten beiden Anweisungen werden doppelte Anführungszeichen verwendet. Wie im Beispiel ersichtlich, muss dabei das Zeichen <code>"</code> durch <code>\"</code> maskiert werden. Ebenfalls maskiert werden muss der Backslash <code>\</code>, und zwar durch <code>\\</code>.<br />Die beiden unteren Anweisungen verwenden dagegen einfache Anführungszeichen. Dabei muss nur eben dieses Zeichen maskiert werden, wenn es vorkommt, und zwar durch <code>\'</code> - das ist in der letzten der Anweisungen der Fall.</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Funktionszeichen in Zeichenketten">Bearbeiten</a>]</span> <span class="mw-headline" id="Funktionszeichen_in_Zeichenketten"> Funktionszeichen in Zeichenketten </span></h2>
+<p>Perl stellt bestimmte eigene Steuerzeichen zur Verfügung, die funktionale Auswirkungen auf nachfolgend notierte Zeichen haben. Solche Zeichen werden durch einen Backslash <code>\</code> eingeleitet. Dahinter folgt ein Buchstabe, der das Funktionszeichen bezeichnet. Diese Funktionszeichen werden nur innerhalb von Zeichenketten interpretiert, die in doppelten Anführungszeichen <code>"..."</code> oder in <code>qq(...)</code> stehen. Folgende Funktionszeichen gibt es:
+</p>
+<table class="reftable" border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th style="white-space: nowrap;">Notation</th>
+<th style="white-space: nowrap;">Bedeutung</th>
+<th style="white-space: nowrap;">Beispiel</th>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\U</code></td>
+<td class="tabxpl">Großschreibung (<i>upper case</i>). Funktionsgleich mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#uc" title="Perl/Funktionen für Zeichenketten">uc</a>.</td>
+<td class="code" style="white-space: nowrap;"><code>print "\UGroßes Geschrei"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\L</code></td>
+<td class="tabxpl">Kleinschreibung (<i>lower case</i>). Funktionsgleich mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#lc" title="Perl/Funktionen für Zeichenketten">lc</a>.</td>
+<td class="code" style="white-space: nowrap;"><code>print "\LCp Dat1.TXT Dat2.TXT"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\u</code></td>
+<td class="tabxpl">Großschreibung des ersten Zeichens. Funktionsgleich mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#ucfirst" title="Perl/Funktionen für Zeichenketten">ucfirst</a>.</td>
+<td class="code" style="white-space: nowrap;"><code>print "\ugroß und klein"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\l</code></td>
+<td class="tabxpl">Kleinschreibung des ersten Zeichens. Funktionsgleich mit <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#lcfirst" title="Perl/Funktionen für Zeichenketten">lcfirst</a>.</td>
+<td class="code" style="white-space: nowrap;"><code>print "\lGroß und klein"</code></td>
+</tr>
+<tr>
+<td class="code" style="white-space: nowrap;"><code>\E</code></td>
+<td class="tabxpl">Endezeichen für <code>\U</code> und <code>\L</code>.</td>
+<td class="code" style="white-space: nowrap;"><code>print "\UAlles groß? \ENein, nicht alles"</code></td>
+</tr>
+</table>
+<p><br />&#160;
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Numerische Notation von Zeichen in Zeichenketten">Bearbeiten</a>]</span> <span class="mw-headline" id="Numerische_Notation_von_Zeichen_in_Zeichenketten"> Numerische Notation von Zeichen in Zeichenketten </span></h2>
+<p>Sie können beliebige Zeichen einer Zeichenkette auch mit ihrem numerischen Zeichenwert notieren. Erlaubt sind allerdings nur oktale und hexadezimale Angaben.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="perl source-perl"><pre class="de1"><span class="co1">#!/usr/bin/perl -w</span>
+&#160;
+<span class="kw2">use</span> strict<span class="sy0">;</span>
+<span class="kw2">use</span> CGI<span class="sy0">::</span><span class="me2">Carp</span> <span class="kw3">qw</span><span class="br0">&#40;</span>fatalsToBrowser<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;Content-type: text/plain<span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+&#160;
+<span class="kw3">print</span> <span class="st0">&quot;<span class="es0">\1</span>23<span class="es0">\1</span>64<span class="es0">\1</span>45<span class="es0">\1</span>46<span class="es0">\1</span>41<span class="es0">\1</span>56 oktal<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;<span class="es0">\x</span>53<span class="es0">\x</span>74<span class="es0">\x</span>65<span class="es0">\x</span>66<span class="es0">\x</span>61<span class="es0">\x</span>6E hexadezimal<span class="es0">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="kw3">print</span> <span class="st0">&quot;Stefan normal<span class="es0">\n</span>&quot;</span><span class="sy0">;</span></pre></div></div></div>
+<div class="note-box-text note-box-example-comment">Das Beispiel sendet reinen Text und gibt dabei mit <code>print</code>-Anweisungen dreimal das Wort <code>Stefan</code> und ein Zeilenumbruch-Zeichen aus. Bei der ersten Anweisung werden die Buchstaben des Namens in oktaler Schreibweise notiert, bei der zweiten Anweisung in hexadezimaler Schreibweise. Bei der oktalen Schreibweise beginnen so dargestellte Zeichen mit einem Backslash, gefolgt von der Zahl (erlaubt sind bei oktaler Schreibweise die Ziffern <code>0</code> bis <code>7</code>). Bei hexadezimaler Schreibweise beginnen Zeichen ebenfalls mit Backslash, gefolgt jedoch von einem <code>x</code> und dahinter der Zahl (erlaubt sind bei hexadezimaler Schreibweise die Ziffern <code>0</code> bis <code>9</code> und <code>A</code> bis <code>F</code>).</div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Operationen und Funktionen für Zeichenketten">Bearbeiten</a>]</span> <span class="mw-headline" id="Operationen_und_Funktionen_f.C3.BCr_Zeichenketten"> Operationen und Funktionen für Zeichenketten </span></h2>
+<p>Eine der Stärken von Perl ist das Manipulieren von Zeichenketten. Perl stellt daher etliche Operationen und Funktionen zur Zeichenkettenbearbeitung bereit.
+</p><p><b>Zeichenketten aneinanderhängen:</b><br />Ein wichtiger Operator für Zeichenketten ist der Punkt-Operator, der es erlaubt, eine Zeichenkette an eine andere anzuhängen. Siehe dazu <a href="http://wiki.selfhtml.org/wiki/Perl/Operatoren#Operator_f.C3.BCr_Zeichenkettenverkn.C3.BCpfung" title="Perl/Operatoren">Operator für Zeichenkettenverknüpfung</a>
+</p><p><b>Teile aus Zeichenketten extrahieren:</b><br />Oft ist es wichtig, aus einer Zeichenkette einen ganz bestimmten Teil zu extrahieren, so etwa aus einem URI den reinen Domainnamen. Perl bietet dazu folgende Funktionen an: <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#index" title="Perl/Funktionen für Zeichenketten">index</a> und <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#substr" title="Perl/Funktionen für Zeichenketten">substr</a>.
+</p><p><b>Suchen und Ersetzen in Zeichenketten:</b><br />Perl ermöglicht gezieltes Durchsuchen von Zeichenketten. Ebenfalls möglich ist Suchen und Ersetzen. Der Schlüssel dazu sind <a href="http://wiki.selfhtml.org/wiki/Perl/Reguläre_Ausdrücke" title="Perl/Reguläre Ausdrücke">reguläre Ausdrücke</a>.
+</p><p><b>Länge einer Zeichenkettenkette ermitteln:</b><br />Dazu gibt es in Perl die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#length" title="Perl/Funktionen für Zeichenketten">length</a>.
+</p><p><b>Zeichenketten in mehrere aufsplitten:</b><br />Viele Zeichenketten enthalten so genannte Trennzeichen, etwa bei eingelesenen Zeilen einer kommaseparierten Datei. In solchen Fällen macht es Sinn, aus der Zeichenkette eine <a href="http://wiki.selfhtml.org/wiki/Perl/Listen_bzw._Arrays" title="Perl/Listen bzw. Arrays">Liste</a> mit Einzelwerten zu machen. Dazu gibt es die Funktion <a href="http://wiki.selfhtml.org/wiki/Perl/Funktionen_für_Zeichenketten#split" title="Perl/Funktionen für Zeichenketten">split</a>.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 260/1000000
+Post‐expand include size: 23255/2097152 bytes
+Template argument size: 22586/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1845-0!*!0!!de-formal!*!* and timestamp 20150301113110 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;oldid=13752">http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;oldid=13752</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="http://wiki.selfhtml.org/wiki/Benutzer:178.203.200.214" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="http://wiki.selfhtml.org/wiki/Benutzer_Diskussion:178.203.200.214" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=Perl%2FZeichenketten" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Zeichenketten"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://wiki.selfhtml.org/index.php?title=Diskussion:Perl/Zeichenketten&amp;action=edit&amp;redlink=1"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://wiki.selfhtml.org/wiki/Perl/Zeichenketten" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://src.selfhtml.org/logo/S-110.png);" href="http://wiki.selfhtml.org/wiki/Startseite"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://wiki.selfhtml.org/wiki/Startseite" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="http://wiki.selfhtml.org/wiki/Referenzen" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="http://wiki.selfhtml.org/wiki/Glossar" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="http://wiki.selfhtml.org/wiki/Hilfe">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="http://wiki.selfhtml.org/wiki/Startseite">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="http://wiki.selfhtml.org/wiki/SELFHTML" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="http://wiki.selfhtml.org/wiki/Archiv_kompakt" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="http://wiki.selfhtml.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://wiki.selfhtml.org/wiki/Spezial:Linkliste/Perl/Zeichenketten" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="http://wiki.selfhtml.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/Perl/Zeichenketten" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="http://wiki.selfhtml.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=Perl/Zeichenketten&amp;oldid=13752" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="http://wiki.selfhtml.org/wiki/Spezial:Durchsuchen/Perl-2FZeichenketten" title="Spezial:Durchsuchen/Perl-2FZeichenketten">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="http://wiki.selfhtml.org/extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="http://wiki.selfhtml.org/wiki/SELFHTML:Flattr" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 15. August 2012 um 17:16 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 2.570-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="http://src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="http://src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="http://www.browser-statistik.de/browser.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="http://wiki.selfhtml.org/wiki/SELFHTML-Wiki/Lizenzvereinbarungen">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Datenschutz" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Über_SELFHTML-Wiki" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://wiki.selfhtml.org/wiki/SELFHTML:Impressum" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://wiki.selfhtml.org/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://wiki.selfhtml.org/extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.079 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/Perl/Zeichenketten by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:32:18 GMT -->
+</html>

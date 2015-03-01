@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="de-formal" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/JSON by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>JavaScript/JSON – SELFHTML-Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.23" />
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit" />
+<link rel="edit" title="Bearbeiten" href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit" />
+<link rel="shortcut icon" href="http://src.selfhtml.org/favicon2.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.selfhtml.org/opensearch_desc.php" title="SELFHTML-Wiki (de-formal)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.selfhtml.org/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/de/" />
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „SELFHTML-Wiki“" href="http://wiki.selfhtml.org/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=ext.geshi.local%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.selfhtml&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=styles&amp;skin=selfhtml&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: webwiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=startup&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaScript/JSON","wgTitle":"JavaScript/JSON","wgCurRevisionId":24163,"wgArticleId":1742,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["JavaScript"],"wgBreakFrames":false,"wgPageContentLanguage":"de-formal","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"JavaScript/JSON","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,100,110,120,130,140,180,190],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"sfgAutocompleteValues":[],"sfgAutocompleteOnAllChars":false,"sfgFieldProperties":[],"sfgDependentFields":[],"sfgShowOnSelect":[],"sfgScriptPath":"/extensions/SemanticForms","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"selfhtml","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"de-formal","language":"de-formal","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs110":true,"searchNs111":false,"searchNs120":true,"searchNs121":false,"searchNs130":true,"searchNs131":false,"searchNs140":true,"searchNs141":false,"searchNs180":true,"searchNs181":false,"searchNs190":true,"searchNs191":false,"searchNs202":false,"searchNs203":false,"searchNs206":false,"searchNs207":false,"searchNs208":false,"searchNs209":false});;},{},{});mw.
+loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: webwiki:resourceloader:filter:minify-js:7:b3c411f6995359b137cf90aee10cf1e1 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="JavaScript/JSON" href="http://wiki.selfhtml.org/index.php?title=Spezial:RDF_exportieren/JavaScript/JSON&amp;xmlmime=rdf" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/selfhtml/csshover.min.htc")}</style><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="mediawiki ltr sitedir-ltr capitalize-all-nouns ns-0 ns-subject page-JavaScript_JSON skin-selfhtml action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">JavaScript/JSON</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">Aus SELFHTML-Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"><span class="subpages">&lt; <a href="../JavaScript.html" title="JavaScript">JavaScript</a></span></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Wechseln zu: <a href="#mw-head">Navigation</a>,
+					<a href="#p-search">Suche</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="de-formal" dir="ltr" class="mw-content-ltr"><p>JSON steht für "<b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation" und definiert ein Datenformat, in dem Informationen wie <a href="Objekte.html" title="JavaScript/Objekte">Objekte</a>, <a href="../Glossar_Array.html" title="Glossar:Array">Arrays</a> und sonstige <a href="../Glossar_Variable.html" title="Glossar:Variable">Variablen</a> in lesbarer Form gespeichert werden können. In den meisten Sprachen gibt es Parser, die den JSON String in eine entsprechende Variable verwandeln. 
+</p><p>Die Notation von JSON weicht in einigen Punkten von der JavaScript-Syntax ab:
+</p>
+<ul><li> Alle Eigenschaftsnamen in einem Objekt müssen in doppelten Anführungszeichen notiert sein.
+</li><li> Führende  Kommas in Objekten und Arrays sind verboten.
+</li><li> Bei Zahlen sind führende Nullen verboten und einem Dezimalpunkt muss mindestens eine Ziffer folgen.
+</li><li> Strings müssen durch doppelte Anführungszeichen begrenzt sein. Es darf nur ein beschränktes Set von Zeichen <a href="../Glossar_Zeichen-Escaping.html" title="Glossar:Zeichen-Escaping">escaped</a> werden. Bestimmte Kontrollzeichen sind ganz verboten. Der Unicode Zeilen Separator (U+2028) und Paragraph Separator (U+2029) sind erlaubt.
+</li></ul>
+<p>JSON wird häufig in Verbindung mit <a href="Ajax.html" title="JavaScript/Ajax">Ajax</a> genutzt, um einfach Informationen zwischen dem <a href="../Glossar_Client.html" title="Glossar:Client">Clienten</a> und dem <a href="../Glossar_Server.html" title="Glossar:Server">Server</a> auszutauschen und ist eine praktische Alternative zu <a href="../XML.html" title="XML">XML</a>. 
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Inhaltsverzeichnis</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Datenstruktur_und_Notation"><span class="tocnumber">1</span> <span class="toctext">Datenstruktur und Notation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Objektorientierung_und_Vererbung_in_Javascript"><span class="tocnumber">2</span> <span class="toctext">Objektorientierung und Vererbung in Javascript</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Objektklassen"><span class="tocnumber">2.1</span> <span class="toctext">Objektklassen</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Javascript_und_Codeerzeugung_mit_Javascript"><span class="tocnumber">2.2</span> <span class="toctext">Javascript und Codeerzeugung mit Javascript</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Methoden"><span class="tocnumber">3</span> <span class="toctext">Methoden</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#JSON.parse.28.29"><span class="tocnumber">3.1</span> <span class="toctext">JSON.parse()</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#JSON.stringify.28.29"><span class="tocnumber">3.2</span> <span class="toctext">JSON.stringify()</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Einbindung"><span class="tocnumber">4</span> <span class="toctext">Einbindung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#PHP"><span class="tocnumber">4.1</span> <span class="toctext">PHP</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#JavaScript"><span class="tocnumber">4.2</span> <span class="toctext">JavaScript</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Quellen"><span class="tocnumber">5</span> <span class="toctext">Quellen</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Datenstruktur und Notation">Bearbeiten</a>]</span> <span class="mw-headline" id="Datenstruktur_und_Notation"> Datenstruktur und Notation  </span></h2>
+<p>Variablen, die mittels JSON gespeichert werden können verschiedene Typen haben: 
+</p>
+<ul><li> <code>Null</code>: Mit dem Schlüsselwort <b>null</b> kann einer Variable der Nullwert zugewiesen werden, mit welchem angezeigt werden kann, dass sich <b>kein</b> Wert in der Variable befindet. Dies ist ein Unterschied zum Zahlenwert <b>0</b> oder einem leeren String.
+</li><li> <code>Boolean</code>: Mittels den Schlüsselwörtern <b>true</b> und <b>false</b> kann der Variable ein boolescher Wert zugewiesen werden.
+</li><li> <code>Zahl</code>: Der Variable kann auch ein Zahlenwert zugewiesen werden. Die Zahl muss in einem Format vorliegen, bei dem diese nur aus den Ziffern 0-9 und, falls benötigt, einem - Vorzeichen und/oder einem Punkt besteht. Optional kann die Zahl um einen Exponenten erweitert werden. (Bsp: 1.3e+4)
+</li><li> <code>Zeichenkette</code>: Eine Zeichenkette (auch String genannt) wird zwischen zwei doppelten Anführungszeichen notiert.
+</li><li> <code>Array</code>: Um ein Array zu deklarieren werden beliebig viele Werte durch Kommas getrennt in eckigen Klammern ([]) notiert. Für jeden Eintrag im Array kann man einen beliebigen, für JSON zugelassenen Typ verwenden (Null, Boolean, Zahl, Zeichenkette, Array, Objekt).
+</li><li> <code>Objekt</code>: Ein Objekt wird in geschweiften Klammern ({}) eingeschlossen. Ebenso wie beim Array kann man in einem Objekt beliebig viele Werte speichern. Der Unterschied liegt darin, dass es für jeden Wert einen eindeutigen Schlüssel geben muss, über diesen auf den Wert zugegriffen werden kann. Dieser sollte von doppelten Anführungszeichen umgeben sein. Ein Schlüssel-Werte-Paar wird, durch einen Doppelpunkt getrennt, notiert ("Schlüssel": Wert) und mehrere dieser Paare werden mittels Komma getrennt. Wie beim Array kann der Wert ein beliebiger, für JSON zugelassener Datentyp sein.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="br0">&#123;</span>
+  <span class="st0">&quot;Name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Georg&quot;</span><span class="sy0">,</span>
+  <span class="st0">&quot;Alter&quot;</span><span class="sy0">:</span> <span class="nu0">47</span><span class="sy0">,</span>
+  <span class="st0">&quot;Verheiratet&quot;</span><span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+  <span class="st0">&quot;Beruf&quot;</span><span class="sy0">:</span> <span class="kw2">null</span><span class="sy0">,</span>
+  <span class="st0">&quot;Kinder&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+    <span class="br0">&#123;</span>
+      <span class="st0">&quot;Name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Lukas&quot;</span><span class="sy0">,</span>
+      <span class="st0">&quot;Alter&quot;</span><span class="sy0">:</span> <span class="nu0">19</span><span class="sy0">,</span>
+      <span class="st0">&quot;Schulabschluss&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Realschule&quot;</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    <span class="br0">&#123;</span>
+      <span class="st0">&quot;Name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Lisa&quot;</span><span class="sy0">,</span>
+      <span class="st0">&quot;Alter&quot;</span><span class="sy0">:</span> <span class="nu0">14</span><span class="sy0">,</span>
+      <span class="st0">&quot;Schulabschluss&quot;</span><span class="sy0">:</span> <span class="kw2">null</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#93;</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Objektorientierung und Vererbung in Javascript">Bearbeiten</a>]</span> <span class="mw-headline" id="Objektorientierung_und_Vererbung_in_Javascript"> Objektorientierung und Vererbung in Javascript  </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Objektklassen">Bearbeiten</a>]</span> <span class="mw-headline" id="Objektklassen"> Objektklassen </span></h3>
+<p>Objektklassen sollten in einzelnen Javascript-Dateien abgespeichert werden und diese werden dann über <code>&lt;script src="myclass.js"&gt;&lt;/script&gt;</code> eingebunden. In der Praxis führt dies jedoch zum dem Problem, dass der Browser zusätzliche Requests zum Laden der kompletten Webseite benötigt, was die Ladezeit negativ beeinflusst.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Javascript und Codeerzeugung mit Javascript">Bearbeiten</a>]</span> <span class="mw-headline" id="Javascript_und_Codeerzeugung_mit_Javascript"> Javascript und Codeerzeugung mit Javascript </span></h3>
+<p>Objektklassen, die ebenfalls die Vererbung von Klassen ermöglichen, können beispielsweise auch online erzeugt werden. Bei der Namensgebung der Methoden wird das Überschreiben von Methoden durch geeignete Namensgebung unter Berücksichtigung der Klassennamen automatisch generiert. Durch die Wahl der Bezeichnungen sollen Namenskonflikte bei den Methodendefinitionen vermieden werden.
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="http://mathematik.uni-landau.de/javascript/classgenerator/">Javascript Class Generator</a> ist eine HTML-Datei mit eingebettetem JavaScript-Code zur Codeerzeugung (Lizenz GPL V3)
+</li><li> Im Browser können Sie mit "Speichern unter ..." die HTML-Datei mit dem eingebetteten JavaScript-Code für die Code-Erzeugung in ihr lokales Dateisystem kopieren und diese Datei an Ihre Anforderungen anzupassen. 
+</li><li> Das folgende Beispiel zeigt die Definition einer Klasse "MyClass", die von einer Oberklasse "MySuperClass" abgeleitet wurde.
+</li></ul>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> MyClass <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">//--------------------------------------</span>
+	<span class="co1">//---Super Class------------------------</span>
+	<span class="kw1">this</span>.<span class="me1">SuperClass</span> <span class="sy0">=</span> MySuperClass<span class="sy0">;</span>
+	<span class="kw1">this</span>.<span class="me1">SuperClass</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="co1">//--------------------------------------</span>
+&#160;
+	<span class="co1">//---Attributes-------------------------</span>
+	<span class="kw1">this</span>.<span class="me1">attribut1</span> <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+	<span class="kw1">this</span>.<span class="me1">attribut2</span> <span class="sy0">=</span> <span class="st0">&quot;test&quot;</span><span class="sy0">;</span>
+	<span class="kw1">this</span>.<span class="me1">myArray</span>   <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="nu0">4</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+	<span class="co1">//---Methods----------------------------</span>
+	<span class="kw1">this</span>.<span class="me1">method1</span>	 <span class="sy0">=</span> method1_MyClass<span class="sy0">;</span>
+	<span class="kw1">this</span>.<span class="me1">my_method2</span>	 <span class="sy0">=</span> my_method2_MyClass<span class="sy0">;</span>
+&#160;
+	<span class="co1">//--------------------------------------</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>Die Methoden-Definitionen erhalten automatisch eine angehängte Klassenbezeichnung, um Namenskonflikte beim Überschreiben von Methoden (Vererbung) zu vermeiden.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">function</span> method1_MyClass<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+   <span class="co1">// ...    	</span>
+&#160;
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw1">function</span> my_method2_MyClass<span class="br0">&#40;</span>pParam1<span class="sy0">,</span>pParam2<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+  <span class="co1">// ...  	</span>
+<span class="br0">&#125;</span></pre></div></div></div>
+</div>
+<p>Der JavaScript Class Generator ist eine einzelne HTML-Datei mit eingebettetem Javascript und dient der Code-Erzeugung für Objektklassen in Javascript. Der Javascript-Code kann nach der Erzeugung aus einer Textarea in eine Javasript-Datei kopiert werden.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Methoden">Bearbeiten</a>]</span> <span class="mw-headline" id="Methoden">Methoden</span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: JSON.parse()">Bearbeiten</a>]</span> <span class="mw-headline" id="JSON.parse.28.29">JSON.parse()</span></h3>
+<p><code>JSON.parse()</code> parst einen String in JSON und erstellt ein Objekt.
+</p><p>Eine wichtige Einschränkung besteht: Das zu parsende Objekt darf keine Funktionen enthalten.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> jsonString <span class="sy0">=</span> <span class="st0">'{ &quot;foo&quot;: 1, &quot;bar&quot;: { &quot;baz&quot;&#160;: 1 } }'</span><span class="sy0">;</span>
+<span class="kw1">var</span> jsObject <span class="sy0">=</span> JSON.<span class="me1">parse</span><span class="br0">&#40;</span> jsonString <span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: JSON.stringify()">Bearbeiten</a>]</span> <span class="mw-headline" id="JSON.stringify.28.29">JSON.stringify()</span></h3>
+<p><code>JSON.stringify()</code> konvertiert ein Objekt in einen String.
+</p>
+<div class="note-box note-box-example vorlage_beispiel">
+<div class="note-box-title">Beispiel
+</div>
+<div class="note-box-text note-box-example-code"><div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw1">var</span> foo <span class="sy0">=</span> <span class="br0">&#123;</span> 
+     <span class="st0">&quot;foo&quot;</span> <span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span>
+     <span class="st0">&quot;bar&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span> <span class="st0">&quot;baz&quot;</span> <span class="sy0">:</span> <span class="nu0">1</span> <span class="br0">&#125;</span>
+   <span class="br0">&#125;</span><span class="sy0">;</span>
+<span class="kw1">var</span> jsonString <span class="sy0">=</span> JSON.<span class="me1">stringify</span><span class="br0">&#40;</span>foo<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div></div>
+</div>
+<p><br />
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Einbindung">Bearbeiten</a>]</span> <span class="mw-headline" id="Einbindung"> Einbindung  </span></h2>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: PHP">Bearbeiten</a>]</span> <span class="mw-headline" id="PHP"> PHP  </span></h3>
+<p>In PHP muss man den JSON-String der Funktion json_decode als Parameter mitgeben. Der Rückgabewert entspricht dem zum JSON passenden Wert.
+Die Funktion json_encode liefert die JSON-Repräsentation einer (fast) beliebigen Variable.
+</p>
+<h3><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: JavaScript">Bearbeiten</a>]</span> <span class="mw-headline" id="JavaScript"> JavaScript  </span></h3>
+<p>Anders als bei PHP kann man bei JavaScript den JSON-code direkt in den Programm-code einbinden (var json = {...}).
+</p><p>Sollte das JSON nur als String vorliegen kann man es bei den meisten Browsern mithilfe von <code>JSON.parse()</code> dekodieren.
+</p><p><code>JSON.stringify()</code> gibt die JSON-Repräsentation von einer Variable zurück.
+</p><p>Sollte die Möglichkeit mithilfe des JSON-Objektes nicht zur Verfügung stehen haben einige <a href="Frameworks.html" title="JavaScript/Frameworks">JavaScript-Frameworks</a> einen eigenen JSON-Parser integriert. Alternativ kann man auch die eval-Funktion benutzen, welche jedoch alle Art von JavaScript-Code ausführt und daher ein Sicherheitsrisiko birgt, sollte der JSON-String von einer fremden Quelle stammen.
+</p>
+<h2><span class="editsection">[<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Quellen">Bearbeiten</a>]</span> <span class="mw-headline" id="Quellen"> Quellen  </span></h2>
+<ul><li> <a rel="nofollow" class="external free" href="http://de.wikipedia.org/wiki/JSON">http://de.wikipedia.org/wiki/JSON</a> 
+</li><li> <a rel="nofollow" class="external free" href="http://de.wikipedia.org/wiki/Nullwert">http://de.wikipedia.org/wiki/Nullwert</a>
+</li><li> <a rel="nofollow" class="external free" href="http://www.php.net/manual/de/book.json.php">http://www.php.net/manual/de/book.json.php</a>
+</li><li> <a rel="nofollow" class="external free" href="http://json.org/js.html">http://json.org/js.html</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 225/1000000
+Post‐expand include size: 2265/2097152 bytes
+Template argument size: 1434/2097152 bytes
+Expensive parser function count: 0/100
+ExtLoops count: 0/100
+-->
+
+<!-- Saved in parser cache with key webwiki:pcache:idhash:1742-0!*!0!!de-formal!*!* and timestamp 20150301211209 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Von „<a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;oldid=24163">http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;oldid=24163</a>“				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Spezial_Kategorien.html" title="Spezial:Kategorien">Kategorie</a>: <ul><li><a href="../Kategorie_JavaScript.html" title="Kategorie:JavaScript">JavaScript</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Meine Werkzeuge</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="../Benutzer_178.203.200.html" class="new" title="Benutzerseite der IP-Adresse, von der aus Sie Änderungen durchführen [.]" accesskey=".">178.203.200.214</a></li>
+		<li id="pt-anontalk"><a href="../Benutzer_Diskussion_178.203.200.html" class="new" title="Diskussion über Änderungen von dieser IP-Adresse [n]" accesskey="n">Diskussionsseite dieser IP</a></li>
+		<li id="pt-anonlogin"><a href="http://wiki.selfhtml.org/index.php?title=Spezial:Anmelden&amp;returnto=JavaScript%2FJSON" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden / Benutzerkonto erstellen</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namensräume</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="JSON.html"  title="Seiteninhalt anzeigen [c]" accesskey="c">Seite</a></span></li>
+					<li  id="ca-talk"><span><a href="../Diskussion_JavaScript/JSON.html"  title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Varianten</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Ansichten</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="JSON.html" >Lesen</a></span></li>
+					<li id="ca-edit"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=edit"  title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Bearbeiten</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;action=history"  title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionsgeschichte</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Aktionen</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Suche</label></h5>
+	<form action="http://wiki.selfhtml.org/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="SELFHTML-Wiki durchsuchen [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Seite" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Suchen" title="Suche nach Seiten, die diesen Text enthalten" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Spezial:Suche"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../../../src.selfhtml.org/logo/S-110.png);" href="../Startseite.html"  title="Startseite"></a></div>
+				<!-- /logo -->
+				
+<!-- Übersicht -->
+<div class="portal" id='p-.C3.9Cbersicht'>
+	<h5>Übersicht</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Startseite.html" title="Startseite besuchen [z]" accesskey="z">Startseite</a></li>
+			<li id="n-Mitmachen.21"><a href="../SELFHTML_%c3%9cber.html">Mitmachen!</a></li>
+			<li id="n-Referenz"><a href="../Referenzen.html" title="der schnelle Überblick für erfahrene Anwender">Referenz</a></li>
+			<li id="n-Glossar"><a href="../Glossar.html" title="kürzeste Erläuterungen zu Fachbegriffen">Glossar</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Übersicht -->
+
+<!-- Hilfe -->
+<div class="portal" id='p-Hilfe'>
+	<h5>Hilfe</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Hilfe"><a href="../Hilfe.html">Hilfe</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Hilfe -->
+
+<!-- SELFHTML -->
+<div class="portal" id='p-SELFHTML'>
+	<h5>SELFHTML</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML"><a href="http://selfhtml.org/" rel="nofollow">SELFHTML</a></li>
+			<li id="n-Doku"><a href="../Startseite.html">Doku</a></li>
+			<li id="n-Forum"><a href="http://forum.de.selfhtml.org/" rel="nofollow">Forum</a></li>
+			<li id="n-Blog"><a href="http://blog.selfhtml.org/" rel="nofollow">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /SELFHTML -->
+
+<!-- Diverses -->
+<div class="portal" id='p-Diverses'>
+	<h5>Diverses</h5>
+	<div class="body">
+		<ul>
+			<li id="n-SELFHTML-e.V."><a href="../SELFHTML.html" title="Informationen zum Verein SELFHTML e.V.">SELFHTML e.V.</a></li>
+			<li id="n-Archiv-kompakt"><a href="../Archiv_kompakt.html" title="fachlich wertvolle Diskussionen aus dem SELFHTML-Forum">Archiv kompakt</a></li>
+			<li id="n-recentchanges"><a href="../Spezial_Letzte_%c3%84nderungen.html" title="Liste der letzten Änderungen in SELFHTML-Wiki [r]" accesskey="r">Letzte Änderungen</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Diverses -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Werkzeuge</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="../Spezial_Linkliste/JavaScript/JSON.html" title="Liste aller Seiten, die hierher verlinken [j]" accesskey="j">Links auf diese Seite</a></li>
+			<li id="t-recentchangeslinked"><a href="../Spezial_%c3%84nderungen_an_verlinkten_Seiten/JavaScript/JSON.html" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+			<li id="t-specialpages"><a href="../Spezial_Spezialseiten.html" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+			<li><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;printable=yes" rel="alternate">Druckversion</a></li>
+			<li id="t-permalink"><a href="http://wiki.selfhtml.org/index.php?title=JavaScript/JSON&amp;oldid=24163" title="Dauerhafter Link zu dieser Seitenversion">Permanenter Link</a></li>
+<li id="t-smwbrowselink"><a href="../Spezial_Durchsuchen/JavaScript-2FJSON.html" title="Spezial:Durchsuchen/JavaScript-2FJSON">Attribute anzeigen</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- Flattr -->
+<div class="portal" id='p-Flattr'>
+	<h5>Flattr</h5>
+	<div class="body">
+		<ul><li><a href="https://flattr.com/thing/68982/SELFHTML-Wiki"><img border="0" title="zur Flattr-Seite des SELFHTML-Wiki" alt="Flattr this" src="../../extensions/Flattr/flattr-100x17.png" /></a><br />Was ist <a href="../SELFHTML_Flattr.html" title="SELFHTML:Flattr">Flattr</a>?
+</li></ul>
+	</div>
+</div>
+
+<!-- /Flattr -->
+
+<!-- Soziale Netzwerke -->
+<div class="portal" id='p-Soziale_Netzwerke'>
+	<h5>Soziale Netzwerke</h5>
+	<div class="body">
+		<ul>
+			<li id="n-GitHub"><a href="https://github.com/selfhtml" rel="nofollow">GitHub</a></li>
+			<li id="n-Twitter"><a href="https://twitter.com/selfhtml" rel="nofollow">Twitter</a></li>
+			<li id="n-Flattr"><a href="https://flattr.com/thing/68982/SELFHTML-Wiki" rel="nofollow">Flattr</a></li>
+			<li id="n-Trello"><a href="https://trello.com/selfhtml" rel="nofollow">Trello</a></li>
+			<li id="n-spenden"><a href="http://selfhtml.org/spenden.html" rel="nofollow">spenden</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Soziale Netzwerke -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Diese Seite wurde zuletzt am 5. November 2014 um 21:45 Uhr geändert.</li>
+											<li id="footer-info-viewcount">Diese Seite wurde bisher 46.497-mal abgerufen.</li>
+											<li id="footer-info-copyright"><div id="selfhtml-sponsor">
+  <h2>Unterstützt durch</h2>
+  <ul>
+    <li><a href="http://www.eu.ntt.com/"><img src="../../../src.selfhtml.org/wiki/ntt-logo.png" alt="NTT Communications - Europe"></a></li>
+    <li><a href="http://www.manitu.de/"><img src="../../../src.selfhtml.org/wiki/manitu-logo.png" alt="Manitu - Menschlich. Einfach besser."></a><img src="../../../www.browser-statistik.de/browser33e5.png?style=0" width="1" height="1" style="border: 0px;" alt=""></li>
+  </ul>
+</div>
+<p>Die Inhalte des SELFHTML-Wikis unterliegen der <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA 3.0 (de)</a>.<br/>
+Nähere Informationen finden Sie unter <a href="../SELFHTML-Wiki/Lizenzvereinbarungen.html">SELFHTML-Wiki/Lizenzvereinbarungen</a>.</p></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../SELFHTML_Datenschutz.html" title="SELFHTML:Datenschutz">Datenschutz</a></li>
+											<li id="footer-places-about"><a href="../SELFHTML_%c3%9cber_SELFHTML-Wiki.html" title="SELFHTML:Über SELFHTML-Wiki">Über SELFHTML-Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="../SELFHTML_Impressum.html" title="SELFHTML:Impressum">Impressum</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img src="../../../src.selfhtml.org/cc-by-sa-88x31.png" alt="CC-BY-SA 3.0 (de)" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+						<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="../../extensions/SemanticMediaWiki/resources/images/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=skins.selfhtml%2Cvector&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script>
+<script src="http://wiki.selfhtml.org/load.php?debug=false&amp;lang=de-formal&amp;modules=site&amp;only=scripts&amp;skin=selfhtml&amp;*"></script>
+<!-- Served in 0.086 secs. -->
+	</body>
+
+<!-- Mirrored from wiki.selfhtml.org/wiki/JavaScript/JSON by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Mar 2015 22:28:28 GMT -->
+</html>
